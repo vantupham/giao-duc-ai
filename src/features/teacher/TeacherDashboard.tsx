@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { decodeSubmission } from '../worksheet/codec';
+import { codeFromHash, extractCode } from '../worksheet/submitLink';
 import { worksheets, getWorksheet } from '../worksheet/registry';
 import { aggregate, upsert, toCsv, submissionKey, type Store, type StoredSubmission } from './aggregate';
 import { loadJson, saveJson, isObject } from '../../lib/storage';
@@ -9,6 +10,8 @@ import './dashboard.css';
 
 const STORE_KEY = 'gdai.teacher.results';
 const isStore = (v: unknown): v is Store => isObject(v) && Object.values(v).every((x) => isObject(x) && typeof x.slug === 'string');
+/** Luôn đọc lại từ bộ nhớ: nhiều tab Tổng hợp phiếu (mở từ nhiều link) không ghi đè phiếu của nhau. */
+const readStore = (): Store => loadJson(STORE_KEY, {}, isStore);
 
 interface Toast {
   kind: 'ok' | 'bad';
@@ -23,7 +26,6 @@ export default function TeacherDashboard() {
   const [paste, setPaste] = useState('');
   const [lastKey, setLastKey] = useState<string | null>(null);
 
-  useEffect(() => setStore(loadJson(STORE_KEY, {}, isStore)), []);
 
   const classes = useMemo(() => [...new Set(Object.values(store).map((s) => s.className))].sort(), [store]);
 
@@ -32,7 +34,7 @@ export default function TeacherDashboard() {
   }, [classes, className]);
 
   const receive = (text: string) => {
-    const res = decodeSubmission(text);
+    const res = decodeSubmission(extractCode(text));
     if (!res.ok) {
       setToast({ kind: 'bad', text: res.error });
       return;
@@ -51,8 +53,9 @@ export default function TeacherDashboard() {
       return;
     }
     const sub: StoredSubmission = { ...res.data, className: res.data.className.toUpperCase(), receivedAt: Date.now() };
-    const existed = Boolean(store[submissionKey(sub)]);
-    const next = upsert(store, sub);
+    const current = readStore();
+    const existed = Boolean(current[submissionKey(sub)]);
+    const next = upsert(current, sub);
     setStore(next);
     if (!saveJson(STORE_KEY, next)) setToast({ kind: 'bad', text: 'Đã nhận phiếu nhưng trình duyệt không cho lưu. Hãy xuất CSV trước khi đóng trang.' });
     else setToast({ kind: 'ok', text: `${existed ? 'Cập nhật' : 'Đã nhận'}: ${sub.className} · số ${sub.studentNo}${sub.name ? ` · ${sub.name}` : ''} · Bài ${ws.lessonId}` });
@@ -60,6 +63,23 @@ export default function TeacherDashboard() {
     setSlug(sub.slug);
     setLastKey(submissionKey(sub));
   };
+
+  // mở từ link nộp phiếu (…/tong-hop-phieu/#nop=GDAI1:…): nhận phiếu rồi xóa mã khỏi thanh địa chỉ
+  useEffect(() => {
+    setStore(readStore());
+    const fromLink = codeFromHash(window.location.hash);
+    if (fromLink) {
+      receive(fromLink);
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    // phiếu nhận ở tab khác cũng hiện ngay ở tab này
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === STORE_KEY) setStore(readStore());
+    };
+    window.addEventListener('storage', onStorage);
+    return () => window.removeEventListener('storage', onStorage);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- chỉ chạy một lần khi mở trang
+  }, []);
 
   const ws = getWorksheet(slug);
   const subs = Object.values(store).filter((s) => s.className === className && s.slug === slug);
@@ -115,7 +135,7 @@ export default function TeacherDashboard() {
               setPaste('');
             }}
           >
-            <input value={paste} onChange={(e) => setPaste(e.target.value)} placeholder="Hoặc dán mã GDAI1:… vào đây" aria-label="Dán mã phiếu" />
+            <input value={paste} onChange={(e) => setPaste(e.target.value)} placeholder="Hoặc dán mã GDAI1:… hay link nộp phiếu vào đây" aria-label="Dán mã phiếu" />
             <button type="submit" className="btn" disabled={!paste.trim()}>
               Nhận
             </button>

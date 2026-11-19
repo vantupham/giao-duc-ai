@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import QRCode from 'qrcode';
 import type { Worksheet, WorksheetResult } from './types';
 import { MASTERY_LABEL } from './types';
+import { SubmitLinkBox } from './SubmitLinkBox';
 
 interface ResultPanelProps {
   ws: Worksheet;
@@ -72,7 +73,9 @@ export function ResultPanel({ ws, result, code, onRetry, hideMastery = false }: 
           {qr ? <img src={qr} alt="Mã QR chứa kết quả phiếu học tập" width={300} height={300} /> : <p className="muted">{qrError ?? 'Đang tạo mã QR…'}</p>}
         </div>
         <div>
-          <h4>Nộp phiếu cho thầy cô</h4>
+          <h4>
+            <span className="ws-link-tag">Cách 1</span> Đưa mã QR cho thầy cô quét
+          </h4>
           <ol className="small">
             <li>Tăng độ sáng màn hình.</li>
             <li>Đưa mã QR này lên trước camera của máy thầy cô (trang “Tổng hợp phiếu”).</li>
@@ -92,6 +95,7 @@ export function ResultPanel({ ws, result, code, onRetry, hideMastery = false }: 
           <p className="small muted">Mã chỉ chứa câu trả lời trong phiếu này, không chứa dữ liệu nào khác trên máy em.</p>
         </div>
       </div>
+      <SubmitLinkBox code={code} />
     </section>
   );
 }

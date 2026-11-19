@@ -4,7 +4,7 @@ Website tĩnh cho chuyên đề Giáo dục trí tuệ nhân tạo lớp 10–12
 
 - **36 bài học** chuyển tự động từ tài liệu học tập (.docx) và slide (.pptx).
 - **Mô phỏng chạy trên trình duyệt**: đèn giao thông dùng AI (10.4), trạm phân loại rác 3D và phòng huấn luyện webcam (10.11), nơ-ron giấy và mạng nơ-ron 3D (11.10).
-- **Phiếu học tập cuối bài** chấm theo mục tiêu; học sinh nộp bằng **mã QR**, giáo viên quét ở trang *Tổng hợp phiếu*.
+- **Phiếu học tập cuối bài** chấm theo mục tiêu; học sinh nộp bằng **mã QR** (giáo viên quét ở trang *Tổng hợp phiếu*) hoặc gửi **link nộp phiếu**: bấm vào link, trang *Tổng hợp phiếu* mở ở tab mới và tự nhận phiếu. Mã phiếu nằm sau dấu `#` nên không được gửi lên máy chủ.
 - **Chế độ giáo viên**: tiến trình 45 phút, slide, phiếu ra cửa.
 - **Bản đồ tuyến** 36 ga và **sổ tiến độ** của học sinh (chỉ lưu trên máy), thuật ngữ bấm xem nghĩa, phiếu làm từng bước.
 - Không tài khoản, không máy chủ, không thu thập dữ liệu. Mọi thứ lưu trong trình duyệt của người dùng.

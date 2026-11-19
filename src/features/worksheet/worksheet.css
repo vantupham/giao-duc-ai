@@ -413,3 +413,46 @@
     display: none;
   }
 }
+
+/* ---------- cách nộp thứ hai: link ---------- */
+.ws-link-tag {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--text);
+  color: var(--surface);
+  font-family: var(--f-mono, monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 2px;
+}
+.ws-link {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+}
+.ws-link h4 {
+  margin: 0 0 6px;
+}
+.ws-link-row input {
+  width: 100%;
+  font: inherit;
+  font-family: var(--f-mono, monospace);
+  font-size: 0.78rem;
+  padding: 9px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--muted);
+  text-overflow: ellipsis;
+}
+.ws-link .ws-actions a.btn {
+  text-decoration: none;
+}
+@media print {
+  .ws-link {
+    display: none;
+  }
+}

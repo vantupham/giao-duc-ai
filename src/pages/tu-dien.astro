@@ -1,33 +1,59 @@
 ---
 import Base from '../layouts/Base.astro';
-import { glossary, url } from '../lib/content';
+import PageHead from '../components/v2/PageHead.astro';
+import Icon from '../components/v2/Icon.astro';
+import { GRADES, glossary, url } from '../lib/content';
+import { foldVietnamese } from '../lib/text';
+import '../styles/v2/dict.css';
 
 const entries = glossary();
-const firstLetter = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'D')[0]?.toUpperCase() ?? '#';
+const firstLetter = (t: string) => foldVietnamese(t)[0]?.toUpperCase() ?? '#';
 const letters = [...new Set(entries.map((e) => firstLetter(e.term)))];
 ---
 
 <Base title="Từ điển AI" active="dict">
-  <div class="wrap read">
-    <h1 style="margin-top:32px">Từ điển AI</h1>
-    <p class="muted">{entries.length} thuật ngữ gom từ phần “Thuật ngữ của bài” trong cả ba khối. Bấm tên bài để xem thuật ngữ trong ngữ cảnh.</p>
-    <input id="dict-filter" class="dict-filter" type="search" placeholder="Tìm thuật ngữ, ví dụ: mô hình, dữ liệu, trọng số…" aria-label="Tìm thuật ngữ" />
+  <div class="v2-wrap dict">
+    <PageHead
+      kicker={`Từ điển AI · ${entries.length} thuật ngữ`}
+      title="Gặp từ lạ, tra ở đây"
+      lead="Gom từ phần “Thuật ngữ của bài” trong cả ba khối. Trong bài học, em cũng có thể bấm vào từ gạch chấm để xem nghĩa ngay."
+    />
+
+    <div class="dict-tools" role="search">
+      <label class="dict-search">
+        <Icon name="search" size={20} />
+        <input id="dict-filter" type="search" placeholder="Gõ có dấu hoặc không dấu: trong so, du lieu…" aria-label="Tìm thuật ngữ" autocomplete="off" />
+      </label>
+      <div class="dict-grades" role="group" aria-label="Lọc theo khối">
+        <button type="button" data-grade="" aria-pressed="true">Tất cả</button>
+        {
+          GRADES.map((g) => (
+            <button type="button" data-grade={g} aria-pressed="false" style={`--lc:var(--g${g})`}>
+              Lớp {g}
+            </button>
+          ))
+        }
+      </div>
+      <p class="mono dict-count" aria-live="polite"><span id="dict-count">{entries.length}</span> thuật ngữ</p>
+    </div>
+
     <nav class="dict-letters" aria-label="Chữ cái">
       {letters.map((l) => <a href={`#chu-${l}`}>{l}</a>)}
     </nav>
+
     {
       letters.map((l) => (
         <section id={`chu-${l}`} class="dict-group">
-          <h2>{l}</h2>
+          <h2 class="display">{l}</h2>
           <dl>
             {entries
               .filter((e) => firstLetter(e.term) === l)
               .map((e) => (
-                <div class="dict-entry" data-text={`${e.term} ${e.definition}`.toLowerCase()}>
+                <div class="dict-entry" data-text={foldVietnamese(`${e.term} ${e.definition}`)} data-g={e.lesson.grade} style={`--lc:var(--g${e.lesson.grade})`}>
                   <dt>{e.term}</dt>
-                  <dd>
-                    {e.definition}{' '}
-                    <a class="small" href={url(`bai/${e.lesson.slug}`)}>
+                  <dd>{e.definition}</dd>
+                  <dd class="dict-src">
+                    <a class="mono" href={url(`bai/${e.lesson.slug}`)}>
                       Bài {e.lesson.id}
                     </a>
                   </dd>
@@ -37,58 +63,39 @@ const letters = [...new Set(entries.map((e) => firstLetter(e.term)))];
         </section>
       ))
     }
+    <p class="dict-empty" id="dict-empty" hidden>Không tìm thấy thuật ngữ nào. Em thử từ ngắn hơn nhé.</p>
   </div>
 </Base>
 
 <script>
+  import { foldVietnamese } from '../lib/text';
+
   const input = document.getElementById('dict-filter') as HTMLInputElement | null;
-  input?.addEventListener('input', () => {
-    const q = input.value.trim().toLowerCase();
+  const count = document.getElementById('dict-count');
+  const empty = document.getElementById('dict-empty');
+  const gradeButtons = document.querySelectorAll<HTMLButtonElement>('[data-grade]');
+  let grade = '';
+
+  const apply = () => {
+    const q = foldVietnamese(input?.value.trim() ?? '');
+    let shown = 0;
     document.querySelectorAll<HTMLElement>('.dict-entry').forEach((el) => {
-      el.hidden = q !== '' && !(el.dataset.text ?? '').includes(q);
+      const ok = (q === '' || (el.dataset.text ?? '').includes(q)) && (grade === '' || el.dataset.g === grade);
+      el.hidden = !ok;
+      if (ok) shown += 1;
     });
     document.querySelectorAll<HTMLElement>('.dict-group').forEach((g) => {
       g.hidden = ![...g.querySelectorAll<HTMLElement>('.dict-entry')].some((e) => !e.hidden);
     });
-  });
+    if (count) count.textContent = String(shown);
+    if (empty) empty.hidden = shown > 0;
+  };
+  input?.addEventListener('input', apply);
+  gradeButtons.forEach((b) =>
+    b.addEventListener('click', () => {
+      grade = b.dataset.grade ?? '';
+      gradeButtons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      apply();
+    }),
+  );
 </script>
-
-<style>
-  .dict-filter {
-    width: 100%;
-    font: inherit;
-    padding: 10px 14px;
-    border-radius: 12px;
-    border: 1px solid var(--line);
-    background: var(--surface);
-    color: var(--text);
-  }
-
-  .dict-letters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin: 12px 0;
-  }
-
-  .dict-letters a {
-    padding: 2px 8px;
-    border-radius: 6px;
-    background: var(--surface-2);
-    text-decoration: none;
-    font-weight: 700;
-  }
-
-  .dict-entry {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .dict-entry dt {
-    font-weight: 700;
-  }
-
-  .dict-entry dd {
-    margin: 2px 0 0;
-  }
-</style>

@@ -16,11 +16,9 @@ import './lesson.css';
 
 interface Props {
   lesson: Lesson;
-  /** Đường dẫn của một bài trong bản mẫu (bài chưa có bản mẫu thì dùng trang cũ). */
-  hrefOf: (slug: string) => string;
 }
 
-const { lesson, hrefOf } = Astro.props;
+const { lesson } = Astro.props;
 const grade = getGrade(lesson.grade);
 const topic = grade.topics.find((t) => t.id === lesson.topicId);
 const { next } = neighbours(lesson.slug);
@@ -212,7 +210,7 @@ const terms = [...glossary()]
 
     {
       next && (
-        <a class="lx-next" href={hrefOf(next.slug)} style={`--nc:var(--g${next.grade})`}>
+        <a class="lx-next" href={url(`bai/${next.slug}`)} style={`--nc:var(--g${next.grade})`}>
           <span class="mono lx-next-label">Ga tiếp theo{next.grade !== lesson.grade ? ` · đổi sang tuyến ${next.grade}` : ''}</span>
           <span class="lx-next-id display">{next.id}</span>
           <span class="lx-next-title">{next.title}</span>

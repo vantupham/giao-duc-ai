@@ -6,6 +6,13 @@ const gradeModules = import.meta.glob<GradeData>('../content/generated/grades/*.
 
 export const GRADES = [10, 11, 12] as const;
 
+/** Một câu tóm tắt mỗi khối, dùng ở trang chủ và trang khối. */
+export const GRADE_TAGLINE: Record<number, string> = {
+  10: 'Làm chủ AI: con người, pháp luật, câu lệnh, dữ liệu.',
+  11: 'Dùng AI an toàn và nhìn vào bên trong hệ thống AI.',
+  12: 'Kiểm soát, đánh giá và hợp tác làm ra sản phẩm AI.',
+};
+
 export const lessons: Lesson[] = Object.values(lessonModules).sort((a, b) => a.grade - b.grade || a.num - b.num);
 
 export function getGrade(grade: number): GradeData {

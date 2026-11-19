@@ -276,3 +276,47 @@
     font-size: 0.86rem;
   }
 }
+
+/* ô thông tin học sinh trong phiếu từng bước */
+.wsx .ws-student {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.wsx .ws-student label {
+  display: grid;
+  gap: 4px;
+  font-family: var(--f-mono, monospace);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3, #777);
+}
+.wsx .ws-student input,
+.wsx textarea,
+.wsx .ws-field input {
+  font: inherit;
+  font-family: var(--f-body, inherit);
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 10px 12px;
+  border: 1.5px solid var(--rule);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--ink);
+  width: 100%;
+}
+.wsx .ws-student label:not(.ws-name) {
+  width: 110px;
+}
+.wsx .ws-student .ws-name {
+  flex: 1 1 200px;
+}
+.wsx .ws-student input:focus,
+.wsx textarea:focus,
+.wsx .ws-field input:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--marker);
+}

@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Inlines from '../../components/content/Inlines.astro';
+import PageHead from '../../components/v2/PageHead.astro';
 import { GRADES, getGrade, url } from '../../lib/content';
 
 export function getStaticPaths() {
@@ -13,10 +14,10 @@ const groups = [...new Set(sources.map((s) => s.group ?? 'Khác'))];
 ---
 
 <Base title={`Nguồn tham khảo lớp ${grade}`} active={String(grade)}>
-  <div class="wrap read content">
-    <p class="small" style="margin-top:24px"><a href={url(`lop-${grade}`)}>← Lớp {grade}</a></p>
-    <h1>Nguồn tham khảo · Lớp {grade}</h1>
-    <p class="muted">Các số trong ngoặc vuông, ví dụ [4], trong bài học dẫn tới mục tương ứng ở đây.</p>
+  <div class="v2-wrap src-page" style={`--lc:var(--g${grade})`}>
+    <PageHead kicker={`Tuyến ${grade} · ${sources.length} nguồn`} title={`Nguồn tham khảo lớp ${grade}`} lead="Các số trong ngoặc vuông, ví dụ [4], trong bài học dẫn tới mục tương ứng ở đây.">
+      <p class="src-back"><a href={url(`lop-${grade}`)}>← Về trang Lớp {grade}</a></p>
+    </PageHead>
     {
       groups.map((g) => (
         <section>
@@ -37,14 +38,37 @@ const groups = [...new Set(sources.map((s) => s.group ?? 'Khác'))];
 </Base>
 
 <style>
-  .sources-list li {
-    margin: 10px 0;
-    word-break: break-word;
+  .src-page {
+    max-width: 960px;
   }
-
+  .src-back {
+    margin: 16px 0 0;
+  }
+  .src-page h2 {
+    font-family: var(--f-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--lc);
+    margin: var(--s-6) 0 var(--s-2);
+  }
+  .sources-list {
+    padding-left: 2.6em;
+  }
+  .sources-list li {
+    padding: 10px 12px;
+    border-bottom: 1px dashed var(--rule);
+    word-break: break-word;
+    line-height: 1.6;
+    scroll-margin-top: 90px;
+  }
+  .sources-list li::marker {
+    font-family: var(--f-mono);
+    font-weight: 600;
+    color: var(--lc);
+  }
   .sources-list li:target {
-    background: var(--warn-soft);
-    border-radius: 8px;
-    padding: 4px 8px;
+    background: var(--marker);
+    border-radius: 6px;
   }
 </style>

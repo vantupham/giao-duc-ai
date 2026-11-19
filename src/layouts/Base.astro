@@ -1,6 +1,11 @@
 ---
+// Khung trang chung (giao diện v2 "Sổ tay kĩ sư").
 import '../styles/global.css';
-import { url } from '../lib/content';
+import '../styles/v2/tokens.css';
+import '../styles/v2/chrome.css';
+import Icon from '../components/v2/Icon.astro';
+import { url, lessons } from '../lib/content';
+import { lessonOrder } from '../features/progress/trackable';
 
 interface Props {
   title: string;
@@ -9,13 +14,13 @@ interface Props {
 }
 
 const { title, description = 'Học và dạy trí tuệ nhân tạo cho học sinh THPT: bài học, mô phỏng, phiếu học tập.', active } = Astro.props;
+const isLessonPage = Astro.url.pathname.includes('/bai/');
 const nav = [
-  { href: 'lop-10', label: 'Lớp 10', key: '10' },
-  { href: 'lop-11', label: 'Lớp 11', key: '11' },
-  { href: 'lop-12', label: 'Lớp 12', key: '12' },
-  { href: 'phong-thi-nghiem', label: 'Phòng thí nghiệm', key: 'lab' },
-  { href: 'tu-dien', label: 'Từ điển AI', key: 'dict' },
-  { href: 'giao-vien/tong-hop-phieu', label: 'Tổng hợp phiếu', key: 'teacher', teacher: true },
+  { href: 'lop-10', label: 'Lớp 10', key: '10', line: 'var(--g10)' },
+  { href: 'lop-11', label: 'Lớp 11', key: '11', line: 'var(--g11)' },
+  { href: 'lop-12', label: 'Lớp 12', key: '12', line: 'var(--g12)' },
+  { href: 'phong-thi-nghiem', label: 'Thí nghiệm', key: 'lab' },
+  { href: 'tu-dien', label: 'Từ điển', key: 'dict' },
 ];
 ---
 
@@ -23,66 +28,101 @@ const nav = [
 <html lang="vi">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title} · Giáo dục AI</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Roboto+Mono:wght@400;500;600&display=swap&subset=vietnamese"
+      rel="stylesheet"
+    />
     <script is:inline>
       try {
         const m = localStorage.getItem('gdai.mode');
         if (m === 'teacher') document.documentElement.dataset.mode = 'teacher';
+        const t = localStorage.getItem('gdai.theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
       } catch (e) {
-        /* bộ nhớ trình duyệt bị chặn: dùng chế độ học sinh */
+        /* bộ nhớ trình duyệt bị chặn: dùng mặc định */
       }
     </script>
   </head>
-  <body>
+  <body class="v2">
+    <script id="gdai-lesson-order" type="application/json" set:html={JSON.stringify(lessonOrder(lessons))} />
     <a class="sr-only" href="#main">Bỏ qua phần đầu trang</a>
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href={url()}>
-          <span class="brand-mark" aria-hidden="true">AI</span>
-          <span>Giáo dục AI</span>
+    <header class="v2-header">
+      <div class="v2-wrap">
+        <a class="v2-brand" href={url()}>
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+            <path d="M5 9h17a5 5 0 0 1 0 10H12a5 5 0 0 0 0 10h17" fill="none" stroke="var(--g10)" stroke-width="4" stroke-linecap="round" />
+            <path d="M22 19H12" stroke="var(--g11)" stroke-width="4" />
+            <path d="M12 29h17" stroke="var(--g12)" stroke-width="4" stroke-linecap="round" />
+            <circle cx="5" cy="9" r="3.6" fill="var(--card)" stroke="var(--ink)" stroke-width="2" />
+            <circle cx="29" cy="29" r="3.6" fill="var(--accent)" stroke="var(--ink)" stroke-width="2" />
+          </svg>
+          <span>Giáo dục AI<small>Tuyến 10 · 11 · 12</small></span>
         </a>
-        <nav class="nav" aria-label="Điều hướng chính">
+        <nav class="v2-nav" aria-label="Điều hướng chính">
           {
             nav.map((n) => (
-              <a href={url(n.href)} aria-current={active === n.key ? 'page' : undefined} class={n.teacher ? 'teacher-only' : undefined}>
+              <a href={url(n.href)} aria-current={active === n.key ? 'page' : undefined}>
+                {n.line && <span class="line-dot" style={`--lc:${n.line}`} />}
                 {n.label}
               </a>
             ))
           }
         </nav>
-        <div class="mode-switch" role="group" aria-label="Chế độ sử dụng">
-          <button type="button" data-set-mode="student">Học sinh</button>
-          <button type="button" data-set-mode="teacher">Giáo viên</button>
+        <div class="v2-tools">
+          <a class="icon-btn teacher-only" href={url('giao-vien/tong-hop-phieu')} aria-label="Tổng hợp phiếu học tập" title="Tổng hợp phiếu học tập" aria-current={active === 'teacher' ? 'page' : undefined}>
+            <Icon name="teacher" size={18} />
+          </a>
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Đổi giao diện sáng/tối">
+            <Icon name="moon" size={18} />
+          </button>
+          <div class="v2-mode" role="group" aria-label="Chế độ sử dụng">
+            <button type="button" data-set-mode="student">Học sinh</button>
+            <button type="button" data-set-mode="teacher">Giáo viên</button>
+          </div>
         </div>
       </div>
     </header>
+
     <main id="main">
       <slot />
     </main>
-    <footer class="site-footer">
-      <div class="wrap">
-        <p>
-          <strong>Tài liệu lưu hành nội bộ</strong> · Chuyên đề Giáo dục trí tuệ nhân tạo · Tổ Tin học, Trường THPT Hùng Vương, TP. Hồ Chí Minh.
-        </p>
-        <p class="small">
-          Website không dùng tài khoản, không thu thập dữ liệu cá nhân. Ảnh webcam, câu trả lời và kết quả phiếu học tập chỉ lưu trên máy của em.
-        </p>
+
+    <footer class="v2-footer">
+      <div class="v2-wrap">
+        <div>
+          <p><strong>Chuyên đề Giáo dục trí tuệ nhân tạo</strong> · Tổ Tin học, Trường THPT Hùng Vương, TP. Hồ Chí Minh.</p>
+          <p>Không tài khoản, không thu thập dữ liệu. Tiến độ, ảnh webcam và bài làm chỉ lưu trên máy của em.</p>
+        </div>
+        <span class="stamp">Tài liệu lưu hành nội bộ</span>
       </div>
     </footer>
+
+    <nav class="v2-tabbar" aria-label="Điều hướng nhanh">
+      <a href={url()} aria-current={active === 'home' ? 'page' : undefined}><Icon name="map" />Bản đồ</a>
+      <a href={url(`bai/${lessons[0].slug}`)} data-continue-link aria-current={isLessonPage ? 'page' : undefined}><Icon name="play" />Học tiếp</a>
+      <a href={url('phong-thi-nghiem')} aria-current={active === 'lab' ? 'page' : undefined}><Icon name="flask" />Thí nghiệm</a>
+      <a href={url('tu-dien')} aria-current={active === 'dict' ? 'page' : undefined}><Icon name="book" />Từ điển</a>
+    </nav>
+
     <script>
+      import { loadProgress } from '../features/progress/store';
+      import { lessonUrlBuilder } from '../features/progress/links';
+
       const root = document.documentElement;
-      const buttons = document.querySelectorAll<HTMLButtonElement>('[data-set-mode]');
-      const sync = () => {
+
+      // chế độ học sinh / giáo viên
+      const modeButtons = document.querySelectorAll<HTMLButtonElement>('[data-set-mode]');
+      const syncMode = () => {
         const mode = root.dataset.mode === 'teacher' ? 'teacher' : 'student';
-        buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.setMode === mode)));
+        modeButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.setMode === mode)));
       };
-      buttons.forEach((b) =>
+      modeButtons.forEach((b) =>
         b.addEventListener('click', () => {
           const mode = b.dataset.setMode === 'teacher' ? 'teacher' : 'student';
           if (mode === 'teacher') root.dataset.mode = 'teacher';
@@ -90,13 +130,32 @@ const nav = [
           try {
             localStorage.setItem('gdai.mode', mode);
           } catch {
-            /* không lưu được thì chỉ áp dụng cho lần xem này */
+            /* chỉ áp dụng cho lần xem này */
           }
           window.dispatchEvent(new CustomEvent('gdai:mode', { detail: mode }));
-          sync();
+          syncMode();
         }),
       );
-      sync();
+      syncMode();
+
+      // sáng / tối
+      const themeBtn = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+      themeBtn?.addEventListener('click', () => {
+        const isDark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        const next = isDark ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try {
+          localStorage.setItem('gdai.theme', next);
+        } catch {
+          /* chỉ áp dụng cho lần xem này */
+        }
+      });
+
+      // nút "Học tiếp" trỏ tới bài đang học dở
+      const continueLink = document.querySelector<HTMLAnchorElement>('[data-continue-link]');
+      const target = lessonUrlBuilder(loadProgress());
+      if (continueLink && target) continueLink.href = target;
+
     </script>
   </body>
 </html>

@@ -1,9 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import { lessons, url } from '../lib/content';
+import PageHead from '../components/v2/PageHead.astro';
+import LabGallery from '../features/labs/LabGallery.astro';
 import { LAB_PLACEMENTS } from '../features/labs/registry';
 
-const items = Object.entries(LAB_PLACEMENTS).flatMap(([slug, ls]) => ls.map((l) => ({ ...l, lesson: lessons.find((x) => x.slug === slug)! })));
+const count = Object.values(LAB_PLACEMENTS).flat().length;
 const PLANNED = [
   { lesson: '10.10', title: 'Gây “bệnh” cho dữ liệu', text: 'Thêm nhãn sai, làm lệch nhóm, xem độ chính xác tụt.' },
   { lesson: '10.12', title: 'Trạm rác “ba tháng sau”', text: 'Thanh trượt thời gian: bao bì mới xuất hiện, mô hình xuống phong độ.' },
@@ -13,64 +14,72 @@ const PLANNED = [
   { lesson: '12.5', title: 'Ma trận rủi ro', text: 'Kéo 12 tình huống vào ô hậu quả × khả năng, đề xuất cách hạ mức.' },
   { lesson: '12.9', title: '“Chính xác 95%” nghĩa là gì?', text: 'Ma trận nhầm lẫn, kéo ngưỡng, tách số liệu theo nhóm.' },
 ];
+const gradeOf = (id: string) => id.split('.')[0];
 ---
 
 <Base title="Phòng thí nghiệm" active="lab">
-  <div class="wrap">
-    <h1 style="margin-top:32px">Phòng thí nghiệm AI</h1>
-    <p class="muted read">Mọi mô phỏng chạy ngay trên trình duyệt, không cần cài đặt, không gửi dữ liệu đi đâu. Mỗi mô phỏng nằm trong bài học tương ứng để em đọc lí thuyết rồi thử ngay.</p>
-    <h2>Đã có</h2>
-    <div class="grid grid-2">
-      {
-        items.map((l) => (
-          <a class="card lab-card" href={url(`bai/${l.lesson.slug}#lab-${l.key}`)} style={`--gc:var(--g${l.lesson.grade})`}>
-            <span class="lab-card-lesson">
-              Bài {l.lesson.id} · {l.lesson.title}
-            </span>
-            <strong>{l.title}</strong>
-            <span class="small muted">{l.description}</span>
-          </a>
-        ))
-      }
-    </div>
-    <h2>Đang xây dựng</h2>
-    <div class="grid grid-3">
-      {
-        PLANNED.map((p) => (
-          <div class="card planned">
-            <span class="lab-card-lesson">Bài {p.lesson}</span>
-            <strong>{p.title}</strong>
-            <span class="small muted">{p.text}</span>
-          </div>
-        ))
-      }
-    </div>
+  <div class="v2-wrap">
+    <PageHead
+      kicker={`Phòng thí nghiệm · ${count} mô phỏng`}
+      title="Đọc lí thuyết xong, thử ngay"
+      lead="Mọi mô phỏng chạy ngay trên trình duyệt, không cần cài đặt, không gửi dữ liệu đi đâu. Mỗi mô phỏng nằm đúng chỗ trong bài học để em đọc rồi thử liền."
+    />
+    <LabGallery />
+
+    <section class="lab-planned" aria-labelledby="planned-h">
+      <p class="mono page-kicker">Bản vẽ · đang xây dựng</p>
+      <h2 id="planned-h" class="display">Sắp có</h2>
+      <ul>
+        {
+          PLANNED.map((p) => (
+            <li style={`--lc:var(--g${gradeOf(p.lesson)})`}>
+              <span class="mono">Bài {p.lesson}</span>
+              <strong>{p.title}</strong>
+              <span>{p.text}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
   </div>
 </Base>
 
 <style>
-  .lab-card,
-  .planned {
+  .lab-planned {
+    margin-top: var(--s-7);
+  }
+  .lab-planned h2 {
+    margin: 0 0 var(--s-4);
+    font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  }
+  .lab-planned ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: grid;
-    gap: 6px;
-    color: var(--text);
-    text-decoration: none;
-    border-top: 5px solid var(--gc, var(--line));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--s-3);
   }
-
-  .lab-card:hover {
-    border-color: var(--gc);
+  .lab-planned li {
+    display: grid;
+    gap: 4px;
+    padding: 16px 18px;
+    border: 1.5px dashed var(--lc);
+    border-radius: var(--r-2);
+    background:
+      linear-gradient(color-mix(in srgb, var(--lc) 10%, transparent) 1px, transparent 1px) 0 0 / 14px 14px,
+      linear-gradient(90deg, color-mix(in srgb, var(--lc) 10%, transparent) 1px, transparent 1px) 0 0 / 14px 14px;
   }
-
-  .lab-card-lesson {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--gc, var(--muted));
+  .lab-planned .mono {
+    color: var(--lc);
+    font-size: 0.68rem;
   }
-
-  .planned {
-    box-shadow: none;
-    background: transparent;
-    border-style: dashed;
+  .lab-planned strong {
+    line-height: 1.35;
+  }
+  .lab-planned li > span:last-child {
+    color: var(--ink-2);
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 </style>

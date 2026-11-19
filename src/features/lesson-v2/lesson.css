@@ -86,6 +86,12 @@
   background: var(--card);
   transition: background var(--dur), transform var(--dur) var(--ease);
 }
+/* mục không tính tiến độ (thuật ngữ): chấm nhỏ */
+.lx-toc a:not(.is-tracked):not(.lx-toc-lab):not(.lx-toc-end) .lx-toc-dot,
+.lx-sheet a:not(.is-tracked):not(.lx-toc-lab):not(.lx-toc-end) .lx-toc-dot {
+  transform: scale(0.55);
+  background: var(--lc);
+}
 .lx-toc a.is-read .lx-toc-dot,
 .lx-sheet a.is-read .lx-toc-dot {
   background: var(--lc);
@@ -718,4 +724,43 @@
   .lx {
     display: block;
   }
+}
+
+/* ---------- bảng công cụ giáo viên (bản vẽ kĩ thuật) ---------- */
+.lx-article .teacher-panel {
+  margin: 22px 0 0;
+  padding: 18px 20px 20px;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--r-3);
+  background:
+    linear-gradient(rgb(255 255 255 / 6%) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(90deg, rgb(255 255 255 / 6%) 1px, transparent 1px) 0 0 / 20px 20px,
+    #16203a;
+  color: #e7ecf6;
+  box-shadow: 6px 6px 0 var(--accent);
+}
+.lx-article .teacher-panel > strong {
+  font-family: var(--f-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffd75e;
+}
+.lx-article .teacher-panel .muted {
+  color: #aab3c7;
+}
+.lx-article .teacher-panel summary {
+  cursor: pointer;
+}
+.lx-article .teacher-panel .plan-bar {
+  border: 1.5px solid #e7ecf6;
+}
+.lx-article .teacher-panel .btn {
+  background: transparent;
+  color: #e7ecf6;
+  border-color: #e7ecf6;
+  box-shadow: 0 2px 0 #e7ecf6;
+}
+.lx-article .teacher-panel a:not(.btn) {
+  color: #ffd75e;
 }

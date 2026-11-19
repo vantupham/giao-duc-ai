@@ -3,9 +3,6 @@
 import { continueTarget, type Progress } from './progress';
 import type { LessonOrderItem } from './trackable';
 
-/** Các bài đã có bản mẫu giao diện mới. */
-const PROTO_LESSONS = new Set(['bai-11-10']);
-
 export function readLessonOrder(): LessonOrderItem[] {
   const el = document.getElementById('gdai-lesson-order');
   if (!el?.textContent) return [];
@@ -23,9 +20,7 @@ export function readLessonOrder(): LessonOrderItem[] {
 }
 
 export function lessonHref(slug: string): string {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-  const isProto = document.body.dataset.proto !== undefined;
-  return isProto && PROTO_LESSONS.has(slug) ? `${base}/ban-mau/${slug}/` : `${base}/bai/${slug}`;
+  return `${import.meta.env.BASE_URL.replace(/\/$/, '')}/bai/${slug}`;
 }
 
 /** Đường dẫn cho nút "Học tiếp", hoặc null nếu em chưa mở bài nào. */

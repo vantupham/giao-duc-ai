@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import { GRADES, getGrade, lessonsOfTopic, url, inlineText } from '../lib/content';
+import Icon from '../components/v2/Icon.astro';
+import { GRADES, GRADE_TAGLINE, getGrade, lessonsOfGrade, lessonsOfTopic, url, inlineText } from '../lib/content';
 import { labsFor } from '../features/labs/registry';
 import { getWorksheet } from '../features/worksheet/registry';
+import '../styles/v2/grade.css';
 
 export function getStaticPaths() {
   return GRADES.map((g) => ({ params: { grade: String(g) } }));
@@ -10,49 +12,99 @@ export function getStaticPaths() {
 
 const grade = Number(Astro.params.grade);
 const data = getGrade(grade);
+const gradeLessons = lessonsOfGrade(grade);
+const labCount = gradeLessons.reduce((n, l) => n + labsFor(l.slug).length, 0);
+const others = GRADES.filter((g) => g !== grade);
 ---
 
-<Base title={`Lớp ${grade}`} active={String(grade)}>
-  <div class="wrap">
-    <header class="grade-head" style={`--gc:var(--g${grade})`}>
-      <p class="section-kicker" style="margin-top:32px">Chuyên đề Giáo dục trí tuệ nhân tạo</p>
-      <h1>Lớp {grade}</h1>
-      <p class="muted">{data.topics.length} chuyên đề, 12 tiết. <a href={url(`nguon-tham-khao/lop-${grade}`)}>Nguồn tham khảo của khối {grade}</a></p>
+<Base title={`Lớp ${grade}`} description={GRADE_TAGLINE[grade]} active={String(grade)}>
+  <div class="v2-wrap gp" style={`--lc:var(--g${grade})`} data-grade-page>
+    <header class="gp-hero">
+      <div>
+        <p class="mono gp-kicker">Tuyến {grade} · {gradeLessons.length} ga · {data.topics.length} chuyên đề</p>
+        <h1 class="gp-title">Lớp {grade}</h1>
+        <p class="gp-tagline">{GRADE_TAGLINE[grade]}</p>
+        <p class="gp-links">
+          <a class="v2-btn v2-btn-primary" href={url(`bai/${gradeLessons[0].slug}`)} data-gp-continue>
+            <span data-gp-continue-label>Bắt đầu từ Bài {gradeLessons[0].id}</span> <Icon name="arrow" size={18} />
+          </a>
+          <a class="gp-src" href={url(`nguon-tham-khao/lop-${grade}`)}>Nguồn tham khảo của khối {grade}</a>
+        </p>
+      </div>
+      <aside class="gp-meter" aria-label="Tiến độ của em ở khối này">
+        <div class="gp-ring-wrap">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="gp-ring-bg" cx="60" cy="60" r="50" />
+            <circle class="gp-ring" cx="60" cy="60" r="50" pathLength="100" data-gp-ring />
+          </svg>
+          <div class="gp-ring-text">
+            <p class="gp-meter-num display"><span data-gp-done>0</span><small>/{gradeLessons.length}</small></p>
+            <p class="mono gp-meter-label">ga đã qua</p>
+          </div>
+        </div>
+        <ul class="gp-facts mono">
+          <li>{gradeLessons.length} tiết học</li>
+          {labCount > 0 && <li class="is-lab">◆ {labCount} mô phỏng</li>}
+        </ul>
+      </aside>
     </header>
+
+    <nav class="gp-topic-nav" aria-label="Các chuyên đề">
+      {
+        data.topics.map((t) => (
+          <a href={`#cd-${t.id.replace('.', '-')}`}>
+            <span class="mono">CĐ {t.id}</span>
+            {t.title}
+          </a>
+        ))
+      }
+    </nav>
 
     {
       data.topics.map((t) => (
-        <section class="topic" style={`--gc:var(--g${grade})`}>
-          <div class="topic-side">
-            <span class="topic-id">Chuyên đề {t.id}</span>
-            <h2>{t.title}</h2>
-            <p class="small muted">{t.info}</p>
-            {t.guidingQuestion && <p class="topic-q">“{t.guidingQuestion}”</p>}
+        <section class="gp-topic" id={`cd-${t.id.replace('.', '-')}`} aria-labelledby={`cd-${t.id.replace('.', '-')}-h`}>
+          <div class="gp-topic-side">
+            <p class="mono gp-topic-id">Chuyên đề {t.id}</p>
+            <h2 class="display" id={`cd-${t.id.replace('.', '-')}-h`}>
+              {t.title}
+            </h2>
+            <p class="gp-topic-info">{t.info}</p>
+            {t.guidingQuestion && (
+              <blockquote class="gp-question">
+                <span class="mono">Câu hỏi dẫn dắt</span>“{t.guidingQuestion}”
+              </blockquote>
+            )}
           </div>
-          <div class="topic-main">
-            <p>{t.description}</p>
-            <ol class="lesson-list">
+          <div class="gp-topic-main">
+            <p class="gp-topic-desc">{t.description}</p>
+            <ol class="gp-stations">
               {lessonsOfTopic(t.id).map((l) => {
                 const labs = labsFor(l.slug).length;
                 const ws = getWorksheet(l.slug);
                 return (
                   <li>
-                    <a href={url(`bai/${l.slug}`)}>
-                      <span class="ll-id">Bài {l.id}</span>
-                      <span class="ll-title">{l.title}</span>
-                      <span class="small muted">{t.lessonBlurbs[l.id] ?? inlineText(l.objectives[0] ?? [])}</span>
-                      <span class="ll-tags">
-                        {labs > 0 && <span class="chip chip-pilot">{labs} mô phỏng</span>}
-                        {ws && <span class="chip chip-pilot">Phiếu học tập</span>}
-                      </span>
+                    <a class="gp-st" href={url(`bai/${l.slug}`)} data-slug={l.slug}>
+                      <span class="gp-dot" aria-hidden="true" />
+                      <span class="mono gp-st-id">Bài {l.id}</span>
+                      <span class="gp-st-title">{l.title}</span>
+                      <span class="gp-st-blurb">{t.lessonBlurbs[l.id] ?? inlineText(l.objectives[0] ?? [])}</span>
+                      {(labs > 0 || ws) && (
+                        <span class="gp-st-tags mono">
+                          {labs > 0 && <span class="is-lab">◆ {labs} mô phỏng</span>}
+                          {ws && <span>▣ Phiếu học tập</span>}
+                        </span>
+                      )}
+                      <span class="gp-st-status mono" aria-hidden="true" />
                     </a>
                   </li>
                 );
               })}
             </ol>
             {t.outcomes.length > 0 && (
-              <details class="fold">
-                <summary>Học xong chuyên đề này, em có thể</summary>
+              <details class="gp-outcomes">
+                <summary>
+                  <span class="mono">Đích đến</span> Học xong chuyên đề này, em có thể…
+                </summary>
                 <ul>
                   {t.outcomes.map((o) => (
                     <li>{o}</li>
@@ -64,93 +116,46 @@ const data = getGrade(grade);
         </section>
       ))
     }
+
+    <nav class="gp-other" aria-label="Các khối khác">
+      {
+        others.map((g) => (
+          <a href={url(`lop-${g}`)} style={`--oc:var(--g${g})`}>
+            <span class="mono">Đổi tuyến</span>
+            <strong class="display">Lớp {g}</strong>
+            <span>{GRADE_TAGLINE[g]}</span>
+          </a>
+        ))
+      }
+    </nav>
   </div>
 </Base>
 
-<style>
-  .grade-head h1 {
-    font-size: clamp(2.6rem, 8vw, 4.4rem);
-    color: var(--gc);
-    margin: 0;
-  }
+<script>
+  import { PROGRESS_EVENT } from '../features/progress/store';
+  import { paintLessonStatus } from '../features/progress/paint';
+  import { lessonHref } from '../features/progress/links';
 
-  .topic {
-    display: grid;
-    gap: 16px 32px;
-    padding: 28px 0;
-    border-top: 1px solid var(--line);
-  }
-
-  @media (min-width: 900px) {
-    .topic {
-      grid-template-columns: 300px 1fr;
+  const root = document.querySelector<HTMLElement>('[data-grade-page]');
+  const paint = () => {
+    if (!root) return;
+    const { current, order } = paintLessonStatus(root);
+    const stations = [...root.querySelectorAll<HTMLElement>('.gp-st')];
+    const done = stations.filter((s) => s.classList.contains('is-done')).length;
+    root.querySelector('[data-gp-done]')!.textContent = String(done);
+    root.querySelector<SVGCircleElement>('[data-gp-ring]')!.style.strokeDashoffset = String(100 - (done / Math.max(1, stations.length)) * 100);
+    stations.forEach((s) => {
+      const label = s.querySelector('.gp-st-status')!;
+      label.textContent = s.classList.contains('is-current') ? 'học tiếp' : s.classList.contains('is-done') ? 'đã học' : s.classList.contains('is-started') ? 'đang học' : '';
+    });
+    // nút chính: bài nên học tiếp nếu nằm trong khối này
+    const here = stations.find((s) => s.classList.contains('is-current'));
+    const item = order.find((o) => o.slug === current);
+    if (here && item) {
+      root.querySelector<HTMLAnchorElement>('[data-gp-continue]')!.href = lessonHref(item.slug);
+      root.querySelector('[data-gp-continue-label]')!.textContent = `Học tiếp Bài ${item.id}`;
     }
-  }
-
-  .topic-id {
-    font-weight: 800;
-    color: var(--gc);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .topic h2 {
-    margin: 4px 0 6px;
-  }
-
-  .topic-q {
-    font-style: italic;
-    border-left: 3px solid var(--gc);
-    padding-left: 12px;
-  }
-
-  .topic-main > p:first-child {
-    margin-top: 0;
-  }
-
-  .lesson-list {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    gap: 10px;
-  }
-
-  .lesson-list a {
-    display: grid;
-    gap: 2px;
-    padding: 14px 16px;
-    border-radius: 14px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    color: var(--text);
-    text-decoration: none;
-    transition: border-color 0.15s, transform 0.15s;
-  }
-
-  .lesson-list a:hover {
-    border-color: var(--gc);
-    transform: translateX(4px);
-  }
-
-  .ll-id {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--gc);
-  }
-
-  .ll-title {
-    font-weight: 700;
-    font-size: 1.05rem;
-  }
-
-  .ll-tags {
-    display: flex;
-    gap: 6px;
-    margin-top: 4px;
-  }
-
-  .ll-tags:empty {
-    display: none;
-  }
-</style>
+  };
+  paint();
+  window.addEventListener(PROGRESS_EVENT, paint);
+</script>

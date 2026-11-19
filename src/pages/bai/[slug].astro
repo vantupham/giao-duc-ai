@@ -1,14 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Blocks from '../../components/content/Blocks.astro';
-import Inlines from '../../components/content/Inlines.astro';
-import TeacherPanel from '../../components/lesson/TeacherPanel.astro';
-import LabSlot from '../../features/labs/LabSlot.astro';
-import Worksheet from '../../features/worksheet/Worksheet';
-import { lessons, getGrade, neighbours, teaching, url, inlineText } from '../../lib/content';
-import { labsFor } from '../../features/labs/registry';
-import { getWorksheet } from '../../features/worksheet/registry';
-import type { Lesson, SectionKind } from '../../lib/types';
+import LessonV2 from '../../features/lesson-v2/LessonV2.astro';
+import { lessons, inlineText } from '../../lib/content';
+import type { Lesson } from '../../lib/types';
 
 export function getStaticPaths() {
   return lessons.map((lesson) => ({ params: { slug: lesson.slug }, props: { lesson } }));
@@ -19,127 +13,8 @@ interface Props {
 }
 
 const { lesson } = Astro.props;
-const grade = getGrade(lesson.grade);
-const topic = grade.topics.find((t) => t.id === lesson.topicId);
-const { prev, next } = neighbours(lesson.slug);
-const labs = labsFor(lesson.slug);
-const worksheet = getWorksheet(lesson.slug);
-const info = teaching[lesson.slug];
-
-const KICKER: Partial<Record<SectionKind, string>> = {
-  intro: 'Lưu ý',
-  warmup: 'Khởi động',
-  recall: 'Nhắc lại',
-  content: 'Kiến thức',
-  experience: 'Trải nghiệm',
-  remember: 'Ghi nhớ',
-  practice: 'Luyện tập',
-  apply: 'Vận dụng',
-  selfcheck: 'Tự đánh giá',
-  glossary: 'Thuật ngữ',
-};
-
-const labsAfter = (sectionId: string) => labs.filter((l) => sectionId.startsWith(l.afterSection));
-const placed = new Set(lesson.sections.flatMap((s) => labsAfter(s.id).map((l) => l.key)));
-const unplaced = labs.filter((l) => !placed.has(l.key));
-const gradeColor = `var(--g${lesson.grade})`;
 ---
 
 <Base title={`Bài ${lesson.id}. ${lesson.title}`} description={inlineText(lesson.objectives[0] ?? [])} active={String(lesson.grade)}>
-  <div class="wrap">
-    <div class="lesson-layout">
-      <nav class="toc" aria-label="Mục lục bài">
-        <p class="small muted" style="margin:16px 8px 4px">Trong bài này</p>
-        {
-          lesson.sections
-            .filter((s) => s.title && s.kind !== 'answers')
-            .map((s) => (
-              <>
-                <a href={`#${s.id}`}>{s.title}</a>
-                {labsAfter(s.id).map((l) => (
-                  <a class="toc-lab" href={`#lab-${l.key}`}>
-                    ▸ {l.title.split(':')[0]}
-                  </a>
-                ))}
-              </>
-            ))
-        }
-        {worksheet && <a class="toc-lab" href="#phieu-hoc-tap">▸ Phiếu học tập</a>}
-      </nav>
-
-      <article class="content read" style="max-width:none">
-        <header class="lesson-hero" style={`--gc:${gradeColor}`}>
-          <p class="small" style="margin:0">
-            <a href={url(`lop-${lesson.grade}`)}>Lớp {lesson.grade}</a>
-            {topic && <> › Chuyên đề {topic.id}: {topic.title}</>}
-          </p>
-          <h1>Bài {lesson.id}. {lesson.title}</h1>
-          <p style="margin:0 0 12px;display:flex;gap:6px;flex-wrap:wrap">
-            {lesson.period && <span class="chip">Tiết {lesson.period.index}/{lesson.period.total} của chuyên đề</span>}
-            {labs.length > 0 && <span class="chip">{labs.length} mô phỏng</span>}
-            {worksheet && <span class="chip">Có phiếu học tập</span>}
-          </p>
-          <strong>Sau bài học này, em sẽ</strong>
-          <ul class="objectives">
-            {
-              lesson.objectives.map((o) => (
-                <li>
-                  <Inlines inl={o} />
-                </li>
-              ))
-            }
-          </ul>
-          {lesson.keywords.length > 0 && <p class="small" style="margin:12px 0 0;opacity:.9">Từ khóa: {lesson.keywords.join(' · ')}</p>}
-        </header>
-
-        <TeacherPanel lesson={lesson} info={info} hasWorksheet={Boolean(worksheet)} />
-
-        {
-          lesson.sections.map((s) =>
-            s.kind === 'answers' ? (
-              <details class="fold" id={s.id}>
-                <summary>{s.title}</summary>
-                <Blocks blocks={s.blocks} grade={lesson.grade} />
-              </details>
-            ) : (
-              <section aria-labelledby={s.title ? `${s.id}-h` : undefined}>
-                {s.title && (
-                  <>
-                    <p class="section-kicker">{KICKER[s.kind] ?? ''}</p>
-                    <h2 id={s.id}>
-                      <span id={`${s.id}-h`}>{s.title}</span>
-                    </h2>
-                  </>
-                )}
-                <Blocks blocks={s.blocks} grade={lesson.grade} />
-                {labsAfter(s.id).map((lab) => (
-                  <LabSlot lab={lab} />
-                ))}
-              </section>
-            ),
-          )
-        }
-        {unplaced.map((lab) => <LabSlot lab={lab} />)}
-
-        <section id="phieu-hoc-tap" class="lab" aria-label="Phiếu học tập">
-          <div class="lab-body">
-            {
-              worksheet ? (
-                <Worksheet client:idle ws={worksheet} />
-              ) : (
-                <p class="muted">
-                  Phiếu học tập tương tác của bài này đang được biên soạn. Trong lúc chờ, em dùng phần Luyện tập và Tự đánh giá ở trên.
-                </p>
-              )
-            }
-          </div>
-        </section>
-
-        <nav class="pager" aria-label="Bài trước, bài sau">
-          {prev ? <a class="btn" href={url(`bai/${prev.slug}`)}>← Bài {prev.id}. {prev.title}</a> : <span />}
-          {next && <a class="btn" style="justify-content:flex-end;text-align:right" href={url(`bai/${next.slug}`)}>Bài {next.id}. {next.title} →</a>}
-        </nav>
-      </article>
-    </div>
-  </div>
+  <LessonV2 lesson={lesson} />
 </Base>

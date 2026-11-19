@@ -323,3 +323,58 @@ body.v2 .display {
   background: linear-gradient(transparent 55%, var(--marker) 55%, var(--marker) 92%, transparent 92%);
   padding: 0 2px;
 }
+
+/* ---------- đầu trang phụ ---------- */
+.page-head {
+  padding: clamp(32px, 6vw, 64px) 0 var(--s-5);
+  margin-bottom: var(--s-5);
+  border-bottom: 1.5px solid var(--ink);
+}
+.page-kicker {
+  margin: 0 0 8px;
+  color: var(--accent);
+}
+.page-title {
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  line-height: 0.98;
+  font-weight: 800;
+  text-wrap: balance;
+}
+.page-lead {
+  margin: 14px 0 0;
+  max-width: 60ch;
+  color: var(--ink-2);
+  font-size: 1.08rem;
+}
+
+/* thuộc tính hidden luôn thắng các kiểu display của thành phần */
+[hidden] {
+  display: none !important;
+}
+
+/* nút của hệ cũ (phiếu, mô phỏng, trang giáo viên) khoác kiểu v2 */
+body.v2 .btn {
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: 0 2px 0 var(--ink);
+  transition: transform 120ms var(--ease), box-shadow 120ms var(--ease);
+}
+body.v2 .btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 0 var(--ink);
+}
+body.v2 .btn:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 var(--ink);
+}
+body.v2 .btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+body.v2 .btn:disabled {
+  box-shadow: none;
+  border-color: var(--rule);
+}

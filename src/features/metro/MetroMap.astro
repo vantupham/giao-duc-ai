@@ -158,26 +158,14 @@ function twoLines(text: string, max = 30): string[] {
 </section>
 
 <script>
-  import { loadProgress, PROGRESS_EVENT } from '../progress/store';
-  import { continueTarget, lessonStatus } from '../progress/progress';
-  import { lessonHref, readLessonOrder } from '../progress/links';
+  import { PROGRESS_EVENT } from '../progress/store';
+  import { lessonStatus } from '../progress/progress';
+  import { paintLessonStatus } from '../progress/paint';
 
   const root = document.querySelector<HTMLElement>('[data-metro]');
   if (root) {
-    const order = readLessonOrder();
-    const total = (slug: string) => order.find((o) => o.slug === slug)?.sections ?? 0;
-
     const paint = () => {
-      const p = loadProgress();
-      const current = continueTarget(p, order);
-      root.querySelectorAll<HTMLElement | SVGElement>('[data-slug]').forEach((el) => {
-        const slug = el.dataset.slug!;
-        el.classList.remove('is-done', 'is-started', 'is-current');
-        const st = lessonStatus(p, slug, total(slug));
-        if (st !== 'new') el.classList.add(`is-${st}`);
-        if (slug === current) el.classList.add('is-current');
-        el.setAttribute('href', lessonHref(slug));
-      });
+      const { progress: p, order } = paintLessonStatus(root);
       // phần tuyến đã đi qua: tô đậm tới ga cuối cùng đã học của mỗi khối
       root.querySelectorAll<SVGPathElement>('[data-line]').forEach((path) => {
         const grade = path.dataset.line;

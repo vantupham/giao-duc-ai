@@ -28,8 +28,6 @@
   --radius: 14px;
   --shadow: 0 1px 2px rgb(20 20 40 / 6%), 0 6px 20px rgb(20 20 40 / 6%);
   --font: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --max: 1120px;
-  --read: 760px;
   color-scheme: light;
 }
 
@@ -132,16 +130,6 @@ button {
   outline-offset: 2px;
 }
 
-.wrap {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.read {
-  max-width: var(--read);
-}
-
 .muted {
   color: var(--muted);
 }
@@ -157,124 +145,6 @@ button {
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
-}
-
-/* ---------- Header / footer ---------- */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
-}
-
-.site-header .wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 60px;
-  flex-wrap: wrap;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  color: var(--text);
-  text-decoration: none;
-  margin-right: auto;
-}
-
-.brand-mark {
-  width: 32px;
-  height: 32px;
-  border-radius: 9px;
-  background: linear-gradient(135deg, var(--g10), var(--g11) 55%, var(--g12));
-  display: grid;
-  place-items: center;
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 800;
-}
-
-.nav {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-}
-
-.nav a {
-  padding: 6px 10px;
-  border-radius: 8px;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.nav a:hover,
-.nav a[aria-current='page'] {
-  background: var(--surface-2);
-}
-
-@media (max-width: 760px) {
-  .site-header {
-    position: static;
-  }
-
-  .site-header .wrap {
-    gap: 6px 10px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-  }
-
-  .nav {
-    order: 3;
-    width: 100%;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .nav a {
-    white-space: nowrap;
-    padding: 4px 8px;
-  }
-
-  .mode-switch button {
-    padding: 3px 9px;
-  }
-}
-
-.mode-switch {
-  display: inline-flex;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 3px;
-  background: var(--surface);
-}
-
-.mode-switch button {
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-}
-
-.mode-switch button[aria-pressed='true'] {
-  background: var(--primary);
-  color: var(--primary-ink);
-}
-
-.site-footer {
-  margin-top: 64px;
-  border-top: 1px solid var(--line);
-  padding: 24px 0 40px;
-  color: var(--muted);
-  font-size: 0.9rem;
 }
 
 html:not([data-mode='teacher']) .teacher-only {
@@ -323,28 +193,9 @@ html[data-mode='teacher'] .student-only {
   box-shadow: var(--shadow);
 }
 
-.chip {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 999px;
-  background: var(--surface-2);
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.chip-pilot {
-  background: var(--warn-soft);
-  color: var(--warn);
-}
-
 .grid {
   display: grid;
   gap: 16px;
-}
-
-.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .grid-2 {
@@ -352,20 +203,20 @@ html[data-mode='teacher'] .student-only {
 }
 
 /* ---------- Content blocks ---------- */
-.content p {
+.lx-body p {
   margin: 0.7em 0;
 }
 
-.content ul,
-.content ol {
+.lx-body ul,
+.lx-body ol {
   padding-left: 1.4em;
 }
 
-.content li {
+.lx-body li {
   margin: 0.25em 0;
 }
 
-.content li.lvl-1 {
+.lx-body li.lvl-1 {
   margin-left: 1.4em;
 }
 
@@ -496,92 +347,7 @@ figcaption,
   color: var(--text);
 }
 
-/* ---------- Lesson page ---------- */
-.lesson-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 32px;
-}
-
-@media (min-width: 1000px) {
-  .lesson-layout {
-    grid-template-columns: 240px minmax(0, 1fr);
-  }
-}
-
-.toc {
-  display: none;
-}
-
-@media (min-width: 1000px) {
-  .toc {
-    display: block;
-    position: sticky;
-    top: 80px;
-    align-self: start;
-    max-height: calc(100vh - 100px);
-    overflow: auto;
-    font-size: 0.88rem;
-  }
-}
-
-.toc a {
-  display: block;
-  padding: 4px 8px;
-  border-radius: 6px;
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.toc a:hover {
-  background: var(--surface-2);
-  color: var(--text);
-}
-
-.toc .toc-lab {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.lesson-hero {
-  border-radius: 20px;
-  padding: 24px;
-  color: #fff;
-  background: linear-gradient(135deg, var(--gc), color-mix(in srgb, var(--gc) 60%, #111));
-  margin: 16px 0 24px;
-}
-
-.lesson-hero a {
-  color: #fff;
-}
-
-.lesson-hero h1 {
-  margin: 6px 0 8px;
-}
-
-.lesson-hero .chip {
-  background: rgb(255 255 255 / 20%);
-  color: #fff;
-}
-
-.objectives {
-  margin: 0;
-  padding-left: 1.2em;
-}
-
-.section-kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--accent);
-  margin-top: 2.4em;
-}
-
-.section-kicker + h2 {
-  margin-top: 0.2em;
-}
-
+/* ---------- Gấp/mở, công cụ giáo viên, mô phỏng ---------- */
 details.fold {
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -650,22 +416,9 @@ details.fold > summary {
   padding: 18px;
 }
 
-.pager {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.pager a {
-  flex: 1 1 240px;
-}
-
 @media print {
-  .site-header,
-  .site-footer,
-  .toc,
+  .v2-header,
+  .v2-footer,
   .no-print {
     display: none !important;
   }

@@ -1,14 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/v2/PageHead.astro';
 import TeacherDashboard from '../../features/teacher/TeacherDashboard';
 ---
 
 <Base title="Tổng hợp phiếu học tập" active="teacher" description="Quét mã QR phiếu học tập của học sinh và xem mức đạt từng mục tiêu.">
-  <div class="wrap">
-    <h1 style="margin-top:32px">Tổng hợp phiếu học tập</h1>
-    <p class="muted read">
-      Học sinh làm phiếu ở cuối bài, rồi đưa mã QR lên trước camera của máy này. Website chấm theo từng mục tiêu, gom lỗi hiểu sai phổ biến và lưu kết quả ngay trong trình duyệt. Không có dữ liệu nào được gửi lên mạng.
-    </p>
+  <div class="v2-wrap">
+    <PageHead
+      kicker="Dành cho thầy cô · không gửi dữ liệu lên mạng"
+      title="Tổng hợp phiếu học tập"
+      lead="Học sinh làm phiếu ở cuối bài, rồi đưa mã QR lên trước camera của máy này. Website chấm theo từng mục tiêu, gom lỗi hiểu sai phổ biến và lưu kết quả ngay trong trình duyệt."
+    />
     <TeacherDashboard client:load />
   </div>
 </Base>

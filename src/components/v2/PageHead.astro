@@ -1,0 +1,16 @@
+---
+// Đầu trang dùng chung cho các trang phụ: dòng nhãn, tiêu đề lớn, đoạn dẫn.
+interface Props {
+  kicker: string;
+  title: string;
+  lead?: string;
+}
+const { kicker, title, lead } = Astro.props;
+---
+
+<header class="page-head">
+  <p class="mono page-kicker">{kicker}</p>
+  <h1 class="page-title">{title}</h1>
+  {lead && <p class="page-lead">{lead}</p>}
+  <slot />
+</header>

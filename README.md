@@ -6,6 +6,7 @@ Website tĩnh cho chuyên đề Giáo dục trí tuệ nhân tạo lớp 10–12
 - **Mô phỏng chạy trên trình duyệt**: đèn giao thông dùng AI (10.4), trạm phân loại rác 3D và phòng huấn luyện webcam (10.11), nơ-ron giấy và mạng nơ-ron 3D (11.10).
 - **Phiếu học tập cuối bài** chấm theo mục tiêu; học sinh nộp bằng **mã QR**, giáo viên quét ở trang *Tổng hợp phiếu*.
 - **Chế độ giáo viên**: tiến trình 45 phút, slide, phiếu ra cửa.
+- **Bản đồ tuyến** 36 ga và **sổ tiến độ** của học sinh (chỉ lưu trên máy), thuật ngữ bấm xem nghĩa, phiếu làm từng bước.
 - Không tài khoản, không máy chủ, không thu thập dữ liệu. Mọi thứ lưu trong trình duyệt của người dùng.
 
 Địa chỉ: https://vantupham.github.io/giao-duc-ai/
@@ -46,6 +47,10 @@ Chạy `npm test`: bộ kiểm thử tự kiểm tra phiếu đúng quy tắc bi
 
 Khai báo trong `src/features/labs/registry.ts` (bài nào, chèn sau mục nào) và thêm thành phần vào `src/features/labs/LabSlot.astro`.
 
+## Giao diện
+
+Hệ thiết kế "Sổ tay kĩ sư" nằm trong `src/styles/v2/`: `tokens.css` (màu, chữ, khoảng cách cho nền sáng và tối), `chrome.css` (đầu trang, thanh tab điện thoại, nút), và CSS riêng cho từng trang. Mỗi khối có một màu tuyến: `--g10`, `--g11`, `--g12`. Font: Bricolage Grotesque (tiêu đề), Be Vietnam Pro (thân bài), Roboto Mono (nhãn, số).
+
 ## Cấu trúc
 
 ```
@@ -54,7 +59,10 @@ src/content/generated/   nội dung bài (sinh tự động)
 src/content/worksheets/  phiếu học tập (soạn tay)
 src/features/worksheet/  phiếu: chấm theo mục tiêu, mã hóa QR (Base45 + nén)
 src/features/teacher/    trang tổng hợp phiếu cho giáo viên
-src/features/labs/       các mô phỏng
+src/features/labs/       các mô phỏng và bộ sưu tập áp phích
+src/features/lesson-v2/  trang bài: mục lục tuyến, thuật ngữ bấm được, theo dõi tiến độ đọc
+src/features/metro/      bản đồ tuyến 36 ga
+src/features/progress/   sổ tiến độ của học sinh (localStorage)
 src/pages/               các trang
 public/models/           mô hình MobileNet (Apache 2.0) cho phòng huấn luyện
 ```

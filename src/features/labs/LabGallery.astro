@@ -1,0 +1,49 @@
+---
+// Bộ sưu tập mô phỏng: áp phích động, mỗi thẻ dẫn thẳng tới mô phỏng trong bài học.
+import Icon from '../../components/v2/Icon.astro';
+import LabPoster from './LabPoster.astro';
+import { LAB_PLACEMENTS } from './registry';
+import { lessons, url } from '../../lib/content';
+import './gallery.css';
+
+const FEATURED = 'network-playground';
+const labs = Object.entries(LAB_PLACEMENTS).flatMap(([slug, list]) => list.map((l) => ({ ...l, lesson: lessons.find((x) => x.slug === slug)! })));
+const featured = labs.find((l) => l.key === FEATURED) ?? labs[0];
+const others = labs.filter((l) => l !== featured);
+const href = (l: (typeof labs)[number]) => url(`bai/${l.lesson.slug}#lab-${l.key}`);
+const shortTitle = (t: string) => t.split(': ')[1] ?? t;
+---
+
+<div class="h-bento">
+  {
+    featured && (
+      <a class="h-lab h-lab-featured" href={href(featured)} style={`--lc:var(--g${featured.lesson.grade})`}>
+        <div class="h-lab-poster">
+          <LabPoster lab={featured.key} />
+        </div>
+        <div class="h-lab-text">
+          <p class="mono h-lab-tag">Bài {featured.lesson.id} · Mô phỏng nổi bật</p>
+          <h3>{shortTitle(featured.title)}</h3>
+          <p>{featured.description}</p>
+          <span class="h-lab-go">
+            Mở trong bài <Icon name="arrow" size={16} />
+          </span>
+        </div>
+      </a>
+    )
+  }
+  {
+    others.map((l) => (
+      <a class="h-lab" href={href(l)} style={`--lc:var(--g${l.lesson.grade})`}>
+        <div class="h-lab-poster">
+          <LabPoster lab={l.key} />
+        </div>
+        <div class="h-lab-text">
+          <p class="mono h-lab-tag">Bài {l.lesson.id}</p>
+          <h3>{shortTitle(l.title)}</h3>
+          <p>{l.description}</p>
+        </div>
+      </a>
+    ))
+  }
+</div>

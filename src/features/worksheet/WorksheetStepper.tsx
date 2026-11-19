@@ -128,7 +128,7 @@ export default function WorksheetStepper({ ws }: { ws: WorksheetData }) {
             <div className="ws-student">
               <label>
                 Lớp
-                <input value={student.className} maxLength={12} onChange={(e) => updateStudent('className', e.target.value.toUpperCase())} placeholder="11A1" />
+                <input value={student.className} maxLength={12} onChange={(e) => updateStudent('className', e.target.value.toUpperCase())} placeholder={`${ws.lessonId.split('.')[0]}A1`} />
               </label>
               <label>
                 Số TT

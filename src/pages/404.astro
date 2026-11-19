@@ -1,11 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageHead from '../components/v2/PageHead.astro';
 import { url } from '../lib/content';
 ---
 
 <Base title="Không tìm thấy trang">
-  <div class="wrap read">
-    <h1 style="margin-top:48px">Không tìm thấy trang này</h1>
-    <p class="muted">Đường dẫn có thể đã đổi. Em quay về <a href={url()}>trang chủ</a> hoặc chọn khối lớp ở thanh đầu trang.</p>
+  <div class="v2-wrap">
+    <PageHead kicker="Lỗi 404 · lạc tuyến" title="Ga này không có trên bản đồ" lead="Đường dẫn có thể đã đổi. Em quay về bản đồ tuyến để chọn bài.">
+      <p style="margin-top:24px"><a class="v2-btn v2-btn-primary" href={url()}>Về bản đồ tuyến</a></p>
+    </PageHead>
   </div>
 </Base>

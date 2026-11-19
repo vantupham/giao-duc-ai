@@ -61,4 +61,10 @@ public/models/           mô hình MobileNet (Apache 2.0) cho phòng huấn luy�
 
 ## Triển khai
 
-Mỗi lần đẩy lên nhánh `main`, GitHub Actions chạy kiểm thử, build và đăng lên GitHub Pages (`.github/workflows/deploy.yml`).
+Website được phục vụ từ nhánh `gh-pages`. Hiện tại đăng thủ công:
+
+```bash
+bash scripts/deploy-gh-pages.sh   # kiểm thử, build, đẩy dist/ lên gh-pages
+```
+
+Có sẵn quy trình tự động `.github/workflows/deploy.yml` (kiểm thử + build + đăng mỗi lần đẩy lên `main`). Để dùng: cấp quyền `workflow` cho GitHub CLI (`gh auth refresh -h github.com -s workflow`), commit tệp này, rồi trong *Settings → Pages* đổi *Source* sang **GitHub Actions**.

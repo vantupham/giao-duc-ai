@@ -1,0 +1,2862 @@
+{
+ "id": "12.9",
+ "slug": "bai-12-09",
+ "grade": 12,
+ "num": 9,
+ "topicId": "12.3",
+ "title": "Hệ thống AI này tốt đến đâu?",
+ "meta": "Chuyên đề 12.3: Công cụ phát triển và đánh giá hiệu quả hệ thống AI (tiết 3 trong 3 tiết)",
+ "period": {
+  "index": 3,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nêu được "
+   },
+   {
+    "text": "ba nguyên tắc",
+    "b": true
+   },
+   {
+    "text": " khi đánh giá một hệ thống AI: thử bằng dữ liệu mới; đo theo mục tiêu; xem cả kết quả chung lẫn theo từng nhóm."
+   }
+  ],
+  [
+   {
+    "text": "Chọn được "
+   },
+   {
+    "text": "cách đánh giá",
+    "b": true
+   },
+   {
+    "text": " phù hợp cho hệ thống phân loại, dự đoán và tạo sinh."
+   }
+  ],
+  [
+   {
+    "text": "Đọc và tính",
+    "b": true
+   },
+   {
+    "text": " được số liệu thử nghiệm đơn giản, chỉ ra điểm yếu mà con số chung che mất."
+   }
+  ]
+ ],
+ "keywords": [
+  "đánh giá",
+  "dữ liệu thử",
+  "tỉ lệ đúng",
+  "bỏ sót",
+  "báo nhầm",
+  "độ lệch trung bình",
+  "quá khớp"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-chinh-xac-95-nghia-la-gi",
+   "title": "Khởi động: “Chính xác 95%” nghĩa là gì?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một tờ quảng cáo viết: "
+      },
+      {
+       "text": "“Ứng dụng nhận diện bệnh cây bằng AI. Chính xác 95%!”",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Trước khi tin con số này, em muốn hỏi những câu gì? Hãy viết ra ít nhất ba câu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một số câu hỏi hay:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "95% được đo "
+        },
+        {
+         "text": "trên những ảnh nào",
+         "b": true
+        },
+        {
+         "text": "? Có phải chính những ảnh đã dùng để dạy máy không?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "95% là "
+        },
+        {
+         "text": "của cái gì",
+         "b": true
+        },
+        {
+         "text": "? Của số ảnh, hay của số loại bệnh?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Với "
+        },
+        {
+         "text": "cây ở vùng mình",
+         "b": true
+        },
+        {
+         "text": ", giống mình trồng, có được 95% không?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "5% sai kia là sai "
+        },
+        {
+         "text": "kiểu gì",
+         "b": true
+        },
+        {
+         "text": ": báo cây khỏe thành bệnh, hay bỏ sót cây bệnh?"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một con số chỉ có nghĩa khi ta biết nó được đo thế nào. Bài học này cho em ba nguyên tắc để tự mình đo, và để đọc con số của người khác một cách tỉnh táo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-nguyen-tac-thu-nhat-thu-bang-du-lieu-moi",
+   "title": "1. Nguyên tắc thứ nhất: thử bằng dữ liệu mới",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em đã gặp nguyên tắc này trong chương trình ở Bài 12.8: trước khi cho máy học, ta "
+      },
+      {
+       "text": "để riêng",
+       "b": true
+      },
+      {
+       "text": " một phần dữ liệu, không cho máy xem, để thử."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image28.png",
+     "caption": "Hình 12.9.1. Chia dữ liệu trước khi huấn luyện. Phần dữ liệu thử phải được để riêng từ đầu, giống như đề kiểm tra mà học sinh chưa từng làm."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì sao? Em hãy nghĩ đến chuyện học và thi. Một bạn học thuộc lòng lời giải của mười bài tập. Thầy kiểm tra đúng mười bài ấy: bạn được 10 điểm. Điểm 10 đó cho biết bạn "
+      },
+      {
+       "text": "nhớ",
+       "b": true
+      },
+      {
+       "text": ", không cho biết bạn "
+      },
+      {
+       "text": "hiểu",
+       "b": true
+      },
+      {
+       "text": ". Muốn biết bạn có hiểu không, thầy phải ra bài mới."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Dữ liệu thử",
+         "b": true
+        },
+        {
+         "text": " là phần dữ liệu được để riêng, không dùng khi huấn luyện, chỉ dùng để đánh giá mô hình."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Quá khớp",
+         "b": true
+        },
+        {
+         "text": " là hiện tượng mô hình làm rất tốt với các ví dụ đã học nhưng làm kém với ví dụ mới, giống như học vẹt."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một hệ thống AI được quảng cáo với con số đo trên chính dữ liệu huấn luyện là một bài thi “trúng tủ”. Câu hỏi đầu tiên với mọi con số về độ chính xác: "
+      },
+      {
+       "text": "đo trên dữ liệu nào?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dữ liệu thử cũng phải "
+      },
+      {
+       "text": "giống với thực tế sử dụng",
+       "b": true
+      },
+      {
+       "text": ". Ở Bài 12.8, mô hình nhận dạng chữ số đạt 99,1% trên ảnh thử cùng loại với ảnh đã học. Nếu người dùng thật viết bằng bút khác, chụp bằng máy khác, thì bộ dữ liệu thử ấy chưa đại diện cho họ."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Thử càng nhiều lần trên cùng một bộ dữ liệu thử thì càng chắc.”",
+         "b": true
+        },
+        {
+         "text": " Nếu em sửa mô hình, thử, lại sửa, lại thử nhiều lần trên cùng một bộ dữ liệu thử, dần dần mô hình được “gọt” cho khớp với chính bộ đó. Nó không còn là “đề chưa làm” nữa. Người làm cẩn thận giữ thêm một phần dữ liệu chỉ dùng "
+        },
+        {
+         "text": "đúng một lần",
+         "b": true
+        },
+        {
+         "text": " ở cuối cùng."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-nguyen-tac-thu-hai-do-theo-muc-tieu",
+   "title": "2. Nguyên tắc thứ hai: đo theo mục tiêu",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mỗi loại hệ thống có cách đo riêng. Đo sai cách thì con số dù đẹp cũng không nói lên điều cần biết."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Loại hệ thống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách đánh giá",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cần xem thêm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân loại",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử với các ví dụ mới đã biết nhãn đúng; đếm số lần đúng; tính "
+          },
+          {
+           "text": "tỉ lệ đúng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử 100 ảnh rác, đúng 80: tỉ lệ đúng 80%"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tỉ lệ đúng của từng nhóm; nhóm nào hay bị nhầm sang nhóm nào"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So con số dự đoán với con số thực tế; tính "
+          },
+          {
+           "text": "độ lệch trung bình",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán 300 suất, thực tế 290: lệch 10"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ngày lệch nhiều nhất và lí do"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo sinh",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người đọc và chấm từng câu trả lời theo tiêu chí; tính "
+          },
+          {
+           "text": "tỉ lệ câu chấp nhận được",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi 50 câu về nội quy, 44 câu trả lời đạt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các câu sai là sai kiểu gì: bịa, lạc đề, hay từ chối không cần thiết"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.1. Với hệ thống phân loại: không phải lỗi nào cũng như nhau",
+     "id": "2-1-voi-he-thong-phan-loai-khong-phai-loi-nao-cung-nhu-nhau"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Xét ứng dụng nhận diện lá bệnh. Khi thử, mỗi tấm ảnh rơi vào một trong bốn ô."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image29.png",
+     "caption": "Hình 12.9.2. Bảng bốn ô của một hệ thống phân loại hai nhãn, với số liệu thử 100 ảnh lá. Hai ô nền trắng là đoán đúng; hai ô nền xám là hai kiểu sai khác nhau."
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bỏ sót:",
+         "b": true
+        },
+        {
+         "text": " thực tế là “có” (lá bệnh) nhưng máy báo “không” (lá khỏe)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Báo nhầm:",
+         "b": true
+        },
+        {
+         "text": " thực tế là “không” (lá khỏe) nhưng máy báo “có” (lá bệnh)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Từ bảng: tỉ lệ đúng = (42 + 45) / 100 = "
+      },
+      {
+       "text": "87%",
+       "b": true
+      },
+      {
+       "text": ". Nhưng 13 lần sai gồm hai kiểu rất khác nhau:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "8 lần bỏ sót:",
+         "b": true
+        },
+        {
+         "text": " cây bệnh không được phát hiện, bệnh lan sang cây khác."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "5 lần báo nhầm:",
+         "b": true
+        },
+        {
+         "text": " cây khỏe bị nghi bệnh, người trồng mất công kiểm tra lại, có thể phun thuốc không cần thiết."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kiểu sai nào đáng lo hơn? "
+      },
+      {
+       "text": "Tùy vào mục tiêu của hệ thống.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hệ thống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kiểu sai đáng lo hơn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vì sao",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sàng lọc bệnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bỏ sót"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người bệnh không được chữa; báo nhầm thì còn có bước khám lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lọc thư rác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Báo nhầm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thư quan trọng bị vứt vào thư rác; bỏ sót một thư rác chỉ gây phiền"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cảnh báo cháy"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bỏ sót"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hậu quả không đảo ngược được"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phát hiện “bài viết do AI tạo”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Báo nhầm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh trung thực bị kết luận oan"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì thế, người thiết kế phải quyết định trước: hệ thống này "
+      },
+      {
+       "text": "thà sai kiểu nào",
+       "b": true
+      },
+      {
+       "text": ". Đó là một quyết định về giá trị, do con người đưa ra (Bài 12.2)."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Tỉ lệ đúng cao thì hệ thống tốt.”",
+         "b": true
+        },
+        {
+         "text": " Giả sử cứ 100 lá thì có 2 lá bệnh. Một “hệ thống” lúc nào cũng trả lời “khỏe” sẽ đúng 98%, và hoàn toàn vô dụng: nó bỏ sót mọi lá bệnh. Khi một nhãn hiếm gặp, tỉ lệ đúng chung nói lên rất ít. Phải xem số lần bỏ sót."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.2. Với hệ thống dự đoán: lệch bao nhiêu, lệch khi nào",
+     "id": "2-2-voi-he-thong-du-doan-lech-bao-nhieu-lech-khi-nao"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Căn tin dùng mô hình dự đoán số suất ăn. Kết quả thử trong năm ngày (số liệu giả định):"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ngày",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thứ Hai",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thứ Ba",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thứ Tư",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thứ Năm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thứ Sáu",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "300"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "320"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "310"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "280"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "350"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thực tế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "290"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "325"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "300"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "285"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "250"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Độ lệch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "10"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "10"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "100"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Độ lệch trung bình = (10 + 5 + 10 + 5 + 100) / 5 = "
+      },
+      {
+       "text": "26 suất",
+       "b": true
+      },
+      {
+       "text": ". Con số này che đi một điều: bốn ngày đầu lệch rất ít (trung bình 7,5 suất), còn thứ Sáu lệch tới 100. Hỏi ra mới biết thứ Sáu khối 12 đi tham quan, điều mô hình không hề biết."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết luận đúng không phải là “mô hình lệch 26 suất mỗi ngày”, mà là: "
+      },
+      {
+       "text": "mô hình khá tốt vào ngày thường, và không biết về các sự kiện đặc biệt",
+       "b": true
+      },
+      {
+       "text": ". Từ đó có đề xuất cải tiến: cô quản lí căn tin xem lịch hoạt động của trường và điều chỉnh con số trước khi nấu."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.3. Với hệ thống tạo sinh: con người phải đọc",
+     "id": "2-3-voi-he-thong-tao-sinh-con-nguoi-phai-doc"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu trả lời của một trợ lí AI không có “nhãn đúng” để máy tự so. Phải có người đọc và chấm theo tiêu chí. Bốn tiêu chí thường dùng:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tiêu chí",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chính xác",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội dung có đúng không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có căn cứ",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu trả lời có dựa trên tài liệu được cung cấp, có chỉ ra nguồn không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "An toàn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có nội dung gây hại, không phù hợp không? Có biết từ chối, chuyển cho người thật khi cần không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhất quán",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi lại cùng câu, hoặc hỏi bằng cách khác, câu trả lời có mâu thuẫn không?"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với hệ thống tạo sinh, có một so sánh quan trọng: "
+      },
+      {
+       "text": "một câu trả lời sai mà tự tin nguy hiểm hơn một lần từ chối",
+       "b": true
+      },
+      {
+       "text": ". Chatbot nội quy trả lời “tôi chưa có thông tin, bạn hãy hỏi thầy cô” làm người dùng mất một chút thời gian. Chatbot bịa ra một quy định không có thật có thể khiến học sinh làm sai. Khi chấm, hai trường hợp này không được tính như nhau."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Chọn cách đo",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi hệ thống, cho biết nó thuộc loại nào, nên đo bằng gì, và kiểu sai nào đáng lo hơn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Ứng dụng nghe tiếng ho và báo “nên đi khám” hoặc “chưa cần”."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Công cụ ước tính số học sinh đăng kí câu lạc bộ bóng rổ năm tới."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Trợ lí trả lời câu hỏi của phụ huynh về quy định thu chi của trường."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Bộ lọc tự động ẩn bình luận xúc phạm trên trang của trường."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-nguyen-tac-thu-ba-xem-ca-chung-lan-tung-nhom",
+   "title": "3. Nguyên tắc thứ ba: xem cả chung lẫn từng nhóm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Quay lại ứng dụng nhận diện lá bệnh với tỉ lệ đúng chung 87%. Trong 100 ảnh thử, có 80 ảnh chụp ở vùng đồng bằng và 20 ảnh chụp ở miền núi. Chương trình sau tính tỉ lệ đúng chung và tỉ lệ đúng của từng vùng. Em đọc phần giải thích theo số dòng; không cần biết lập trình."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": " 1  # Mỗi dòng: (vùng trồng, nhãn đúng, máy dự đoán)\n 2  ket_qua = (\n 3      [(\"đồng bằng\", \"bệnh\", \"bệnh\")] * 38 +\n 4      [(\"đồng bằng\", \"bệnh\", \"khỏe\")] * 2 +\n 5      [(\"đồng bằng\", \"khỏe\", \"khỏe\")] * 37 +\n 6      [(\"đồng bằng\", \"khỏe\", \"bệnh\")] * 3 +\n 7      [(\"miền núi\", \"bệnh\", \"bệnh\")] * 4 +\n 8      [(\"miền núi\", \"bệnh\", \"khỏe\")] * 6 +\n 9      [(\"miền núi\", \"khỏe\", \"khỏe\")] * 8 +\n10      [(\"miền núi\", \"khỏe\", \"bệnh\")] * 2\n11  )\n12  \n13  def ti_le_dung(danh_sach):\n14      dung = 0\n15      for vung, nhan_dung, du_doan in danh_sach:\n16          if nhan_dung == du_doan:\n17              dung = dung + 1\n18      return round(100 * dung / len(danh_sach), 1)\n19  \n20  print(\"Chung:\", ti_le_dung(ket_qua), \"% trên\", len(ket_qua), \"ảnh\")\n21  \n22  for ten_vung in [\"đồng bằng\", \"miền núi\"]:\n23      nhom = [dong for dong in ket_qua if dong[0] == ten_vung]\n24      print(ten_vung + \":\", ti_le_dung(nhom), \"% trên\", len(nhom), \"ảnh\")\n25  \n26  bo_sot = [d for d in ket_qua if d[1] == \"bệnh\" and d[2] == \"khỏe\"]\n27  bao_nham = [d for d in ket_qua if d[1] == \"khỏe\" and d[2] == \"bệnh\"]\n28  print(\"Bỏ sót lá bệnh:\", len(bo_sot),\n29        \"| Báo nhầm lá khỏe:\", len(bao_nham))"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết quả khi chạy chương trình:"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chung: 87.0 % trên 100 ảnh\nđồng bằng: 93.8 % trên 80 ảnh\nmiền núi: 60.0 % trên 20 ảnh\nBỏ sót lá bệnh: 8 | Báo nhầm lá khỏe: 5"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dòng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc làm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2 đến 11"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bảng kết quả thử: mỗi phần tử là một ảnh, gồm vùng trồng, nhãn đúng và nhãn máy dự đoán. Ví dụ dòng 3: có 38 ảnh lá bệnh ở đồng bằng được máy đoán đúng là bệnh; dòng 4: có 2 ảnh lá bệnh ở đồng bằng bị đoán nhầm là khỏe"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "13 đến 18"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Định nghĩa cách tính tỉ lệ đúng: đếm số ảnh mà nhãn đúng trùng với dự đoán, chia cho tổng số ảnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "20"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tính và in tỉ lệ đúng trên toàn bộ 100 ảnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "22 đến 24"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Với từng vùng: lọc riêng các ảnh của vùng đó rồi tính tỉ lệ đúng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "26 đến 29"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đếm riêng hai kiểu sai: bỏ sót và báo nhầm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image30.png",
+     "caption": "Hình 12.9.3. Tỉ lệ đúng chung và tỉ lệ đúng theo từng vùng trồng. Con số chung 87% che đi việc hệ thống chỉ đúng 60% với ảnh chụp ở miền núi."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Con số chung là "
+      },
+      {
+       "text": "87%",
+       "b": true
+      },
+      {
+       "text": ", nghe khá tốt. Nhưng tách ra: đồng bằng "
+      },
+      {
+       "text": "93,8%",
+       "b": true
+      },
+      {
+       "text": ", miền núi chỉ "
+      },
+      {
+       "text": "60%",
+       "b": true
+      },
+      {
+       "text": ". Với bà con miền núi, cứ mười lần dùng thì bốn lần sai. Con số chung đã che mất điều đó, vì ảnh miền núi chỉ chiếm 20 trong 100 ảnh thử."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây chính là điều các nhà nghiên cứu đã làm trong nghiên cứu “Gender Shades” năm 2018: thay vì chỉ xem tỉ lệ đúng chung của các phần mềm đoán giới tính qua khuôn mặt, họ tách theo giới tính và màu da, và thấy tỉ lệ sai với nam giới da sáng cao nhất là 0,8%, còn với phụ nữ da sẫm màu lên tới 34,7% [10]. Sự thiếu công bằng chỉ lộ ra khi có người "
+      },
+      {
+       "text": "đo riêng từng nhóm",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một nhóm nghiên cứu ở Đại học Pennsylvania cho gần 1.000 học sinh trung học luyện Toán với trợ lí AI. Nếu chỉ đo kết quả "
+        },
+        {
+         "text": "trong lúc luyện tập",
+         "b": true
+        },
+        {
+         "text": ", nhóm dùng trợ lí trả lời trực tiếp làm bài tốt hơn 48% so với nhóm không dùng AI: một thành công rõ ràng. Nhưng khi đo đúng "
+        },
+        {
+         "text": "mục tiêu",
+         "b": true
+        },
+        {
+         "text": " của việc học, tức là kết quả bài kiểm tra không có AI, nhóm này lại kém hơn 17% [15]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cùng một công cụ, đo theo hai cách cho hai kết luận ngược nhau. Đo cái dễ đo (điểm luyện tập) thay cho cái cần đo (năng lực thật) là lỗi phổ biến nhất khi đánh giá."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Đọc số liệu thử nghiệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một bộ lọc thư rác được thử với 200 thư (số liệu giả định):"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Máy báo “rác”",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Máy báo “thường”",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thực tế là thư rác (60 thư)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "54"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thực tế là thư thường (140 thư)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "14"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "126"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Tính tỉ lệ đúng chung."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Có bao nhiêu lần bỏ sót, bao nhiêu lần báo nhầm? Với bộ lọc thư rác, kiểu sai nào đáng lo hơn?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Trong 14 thư thường bị báo nhầm, có 11 thư là thư viết bằng tiếng Việt không dấu. Em rút ra điều gì và đề xuất cải tiến gì?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-hieu-qua-khong-chi-la-do-chinh-xac",
+   "title": "4. Hiệu quả không chỉ là độ chính xác",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một hệ thống chính xác vẫn có thể không dùng được. Ngoài độ chính xác, người đánh giá còn xem:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mặt hiệu quả",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đo bằng",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tốc độ phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng chờ bao lâu?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thời gian từ lúc hỏi đến lúc có kết quả"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mức hài lòng của người dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng có thấy hữu ích, có quay lại không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khảo sát; tỉ lệ bấm “hữu ích”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công bằng giữa các nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả có đều giữa các nhóm người dùng không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tỉ lệ đúng theo từng nhóm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chi phí vận hành"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tốn bao nhiêu điện, thiết bị, công người?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chi phí mỗi tháng; số giờ công cập nhật"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Và một mặt mà ít bảng số liệu nào ghi: "
+      },
+      {
+       "text": "hệ thống có đạt được mục đích ban đầu không?",
+       "b": true
+      },
+      {
+       "text": " Ứng dụng gia sư có làm học sinh giỏi lên không? Mô hình dự đoán suất ăn có làm giảm thức ăn thừa không? Đây là câu hỏi của giai đoạn “giám sát” trong vòng đời (Bài 12.1), và chỉ trả lời được sau một thời gian sử dụng thật."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-viet-mot-nhan-dinh-trung-thuc",
+   "title": "5. Viết một nhận định trung thực",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sau khi có số liệu, em viết nhận định theo tám ý sau."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ý",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ với ứng dụng nhận diện lá bệnh",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Hệ thống thuộc loại nào, mục tiêu là gì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân loại; giúp người trồng phát hiện sớm lá bệnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Cách đánh giá"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử 100 ảnh mới đã có nhãn của cán bộ nông nghiệp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Con số chung"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tỉ lệ đúng 87%"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Kết quả theo từng nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đồng bằng 93,8%; miền núi 60%"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Điểm yếu bị con số chung che"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kém hẳn ở miền núi; bỏ sót 8 lá bệnh, trong đó 6 lá ở miền núi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Kết luận"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng được ở đồng bằng, có người kiểm tra lại. "
+          },
+          {
+           "text": "Chưa nên dùng",
+           "b": true
+          },
+          {
+           "text": " ở miền núi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7. Đề xuất cải tiến"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bổ sung ảnh lá ở miền núi vào dữ liệu huấn luyện; thử lại với ít nhất 100 ảnh miền núi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "8. Mặt hiệu quả cần đo thêm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có chạy được ở nơi sóng yếu không; người dùng có hiểu kết quả không"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết luận ở ý 6 có ba khả năng: "
+      },
+      {
+       "text": "nên dùng; dùng có điều kiện; chưa nên dùng",
+       "b": true
+      },
+      {
+       "text": ". Một nhận định trung thực nêu "
+      },
+      {
+       "text": "cả điểm mạnh lẫn điểm yếu",
+       "b": true
+      },
+      {
+       "text": ", và không chọn riêng con số đẹp nhất để báo cáo. Đây là yêu cầu của nguyên tắc minh bạch (Bài 12.4), và cũng là điều làm cho người khác tin em."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-do-mo-hinh-bang-du-lieu-moi",
+   "title": "Trải nghiệm: Đo mô hình bằng dữ liệu mới",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa học ba nguyên tắc đánh giá một hệ thống AI. Hãy dùng chúng để đo một mô hình em tự làm."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image13.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Teachable Machine"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " teachablemachine.withgoogle.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 8 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em huấn luyện một mô hình phân biệt ba loại đồ vật."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em thử mỗi loại với mười ảnh mới và ghi đúng, sai vào bảng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em tính độ chính xác chung và độ chính xác của từng loại."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Con số chung có che mất loại đồ vật nào bị đoán sai nhiều không?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Em chỉ chụp đồ vật."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image31.png",
+     "caption": "Sơ đồ tư duy Bài 12.9."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Ba nguyên tắc:",
+         "b": true
+        },
+        {
+         "text": " thử bằng "
+        },
+        {
+         "text": "dữ liệu mới",
+         "b": true
+        },
+        {
+         "text": "; đo theo "
+        },
+        {
+         "text": "mục tiêu",
+         "b": true
+        },
+        {
+         "text": " của hệ thống; xem cả kết quả "
+        },
+        {
+         "text": "chung lẫn từng nhóm",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phân loại: "
+        },
+        {
+         "text": "tỉ lệ đúng",
+         "b": true
+        },
+        {
+         "text": ", cùng số lần "
+        },
+        {
+         "text": "bỏ sót",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "báo nhầm",
+         "b": true
+        },
+        {
+         "text": ". Dự đoán: "
+        },
+        {
+         "text": "độ lệch trung bình",
+         "b": true
+        },
+        {
+         "text": " và ngày lệch nhiều nhất. Tạo sinh: con người chấm theo "
+        },
+        {
+         "text": "chính xác, có căn cứ, an toàn, nhất quán",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quá khớp:",
+         "b": true
+        },
+        {
+         "text": " giỏi với ví dụ đã học, kém với ví dụ mới."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con số chung có thể "
+        },
+        {
+         "text": "che mất",
+         "b": true
+        },
+        {
+         "text": " điểm yếu với một nhóm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhận định trung thực nêu cả điểm mạnh, điểm yếu và kết luận: nên dùng, dùng có điều kiện, hay chưa nên dùng."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Một bạn huấn luyện mô hình nhận biết ba loại rác bằng 150 ảnh, rồi thử lại bằng chính 150 ảnh đó và báo cáo “đúng 100%”. Em nhận xét gì? Bạn nên làm lại thế nào?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một hệ thống sàng lọc được thử với 1.000 người, trong đó có 20 người thật sự mắc bệnh. Hệ thống báo “không bệnh” cho tất cả. Tính tỉ lệ đúng. Hệ thống này có dùng được không? Vì sao?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Mô hình dự đoán số xe gửi ở bãi xe trường trong sáu ngày có độ lệch lần lượt là: 4, 6, 5, 3, 60, 6. Tính độ lệch trung bình của cả sáu ngày và của năm ngày còn lại nếu bỏ ngày lệch nhiều nhất. Em cần hỏi thêm điều gì về ngày đó?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Trong chương trình ở mục 3, nếu số ảnh miền núi tăng từ 20 lên 80 mà tỉ lệ đúng của mỗi vùng giữ nguyên, tỉ lệ đúng chung sẽ tăng hay giảm? Điều đó cho thấy gì về con số chung?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Viết lại câu quảng cáo “Chính xác 95%!” thành một câu trung thực hơn, có đủ thông tin để người đọc đánh giá được. (Em được tự đặt số liệu giả định.)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tự đánh giá một trợ lí AI em hay dùng, theo cách của hệ thống tạo sinh: soạn 10 câu hỏi về một chủ đề em nắm chắc (một chương của môn em học tốt nhất), trong đó có 2 câu “bẫy” hỏi về điều không có thật. Chấm từng câu trả lời theo bốn tiêu chí: chính xác, có căn cứ, an toàn, nhất quán. Tính tỉ lệ câu chấp nhận được. Với 2 câu bẫy, trợ lí từ chối hay bịa? Viết nhận định theo tám ý ở mục 5."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ba nguyên tắc đánh giá và giải thích từng nguyên tắc"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn cách đánh giá phù hợp cho ba loại hệ thống"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tính tỉ lệ đúng chung, theo nhóm; số lần bỏ sót, báo nhầm; độ lệch trung bình"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết nhận định trung thực, nêu điểm yếu bị con số chung che"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần dữ liệu để riêng, không dùng khi huấn luyện, chỉ để đánh giá"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tỉ lệ đúng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Số lần đoán đúng chia cho tổng số lần thử"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bỏ sót"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thực tế là “có” nhưng máy báo “không”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Báo nhầm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thực tế là “không” nhưng máy báo “có”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Độ lệch trung bình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trung bình của khoảng cách giữa con số dự đoán và con số thực tế"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quá khớp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình giỏi với ví dụ đã học nhưng kém với ví dụ mới"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Thử bằng chính dữ liệu đã học không cho biết mô hình có làm được với ảnh mới không; 100% có thể chỉ là “học vẹt”. Làm lại: để riêng khoảng 30 đến 40 ảnh ngay từ đầu, hoặc chụp thêm ảnh mới ở bối cảnh khác để thử."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Đúng 980 / 1.000 = 98%. Không dùng được: hệ thống bỏ sót toàn bộ 20 người bệnh, trong khi mục tiêu của sàng lọc là tìm ra người bệnh."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Cả sáu ngày: (4 + 6 + 5 + 3 + 60 + 6) / 6 = 14. Bỏ ngày thứ năm: (4 + 6 + 5 + 3 + 6) / 5 = 4,8. Cần hỏi hôm đó có gì đặc biệt (họp phụ huynh, ngày hội, mưa lớn) để biết mô hình thiếu thông tin gì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Giảm. Khi đó có 80 ảnh đồng bằng (đúng 75) và 80 ảnh miền núi (đúng 48): tỉ lệ đúng chung = 123 / 160, khoảng 76,9%. Con số chung phụ thuộc vào thành phần của bộ dữ liệu thử; cùng một mô hình có thể “đẹp” hay “xấu” tùy người ta thử với ai."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: “Thử với 500 ảnh lá lúa mới chụp tại ba tỉnh đồng bằng, ứng dụng nhận đúng 95%; bỏ sót 15 lá bệnh. Chưa thử với lúa nương và các cây trồng khác. Kết quả cần được cán bộ nông nghiệp xác nhận trước khi phun thuốc.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [10], [15] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

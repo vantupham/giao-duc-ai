@@ -1,0 +1,70 @@
+---
+import type { Lesson, TeachingInfo } from '../../lib/types';
+import { url } from '../../lib/content';
+
+interface Props {
+  lesson: Lesson;
+  info: TeachingInfo | undefined;
+  hasWorksheet: boolean;
+}
+
+const { lesson, info, hasWorksheet } = Astro.props;
+const COLORS = ['#1f6f8b', '#e07a2f', '#2e8b57', '#8a4fd0', '#c2416b'];
+const total = info?.plan.reduce((s, p) => s + p.minutes, 0) ?? 0;
+const slideHref = url(`slides/${lesson.slug}.pptx`);
+const absoluteSlide = new URL(slideHref, Astro.site).href;
+const viewer = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(absoluteSlide)}`;
+---
+
+<aside class="teacher-panel teacher-only no-print" aria-label="Công cụ cho giáo viên">
+  <strong>Dành cho giáo viên</strong>
+  {
+    info && info.plan.length > 0 && (
+      <>
+        <p class="small muted" style="margin:4px 0 0">Tiến trình {total} phút (theo slide bài giảng)</p>
+        <div class="plan-bar" role="list">
+          {info.plan.map((p, i) => (
+            <span role="listitem" style={`flex:${p.minutes};background:${COLORS[i % COLORS.length]}`} title={`${p.minutes}' · ${p.label}`}>
+              {p.minutes}' {p.label}
+            </span>
+          ))}
+        </div>
+      </>
+    )
+  }
+  {
+    info && info.exitTicket.length > 0 && (
+      <details>
+        <summary class="small">Câu hỏi phiếu ra cửa trên slide</summary>
+        <ol class="small">
+          {info.exitTicket.map((q) => (
+            <li>{q}</li>
+          ))}
+        </ol>
+      </details>
+    )
+  }
+  <div class="ws-actions" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+    <a class="btn" href={slideHref} download>Tải slide (.pptx, {info?.slideCount ?? '?'} trang)</a>
+    <button class="btn" type="button" data-viewer={viewer}>Xem slide trực tuyến</button>
+    {hasWorksheet && <a class="btn" href="#phieu-hoc-tap">Đến phiếu học tập</a>}
+    {hasWorksheet && <a class="btn" href={url('giao-vien/tong-hop-phieu')}>Mở trang tổng hợp phiếu</a>}
+  </div>
+  <div class="slide-viewer" hidden>
+    <iframe title={`Slide bài ${lesson.id}`} width="100%" height="480" style="border:0;border-radius:10px;margin-top:12px;background:#fff" loading="lazy"></iframe>
+    <p class="small muted">Trình xem của Microsoft Office chỉ hoạt động khi website đã đưa lên mạng. Nếu không hiện, hãy tải file về.</p>
+  </div>
+</aside>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-viewer]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const box = btn.closest('.teacher-panel')?.querySelector<HTMLDivElement>('.slide-viewer');
+      const frame = box?.querySelector('iframe');
+      if (!box || !frame) return;
+      if (!frame.src) frame.src = btn.dataset.viewer ?? '';
+      box.hidden = !box.hidden;
+      btn.textContent = box.hidden ? 'Xem slide trực tuyến' : 'Ẩn slide';
+    });
+  });
+</script>

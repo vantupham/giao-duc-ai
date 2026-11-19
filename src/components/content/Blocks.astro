@@ -1,0 +1,119 @@
+---
+// Hiển thị đệ quy các khối nội dung đã chuyển đổi từ tài liệu học tập.
+import type { Block, BoxKind } from '../../lib/types';
+import Inlines from './Inlines.astro';
+import { url } from '../../lib/content';
+
+interface Props {
+  blocks: Block[];
+  grade: number;
+}
+
+const { blocks, grade } = Astro.props;
+
+const BOX_META: Record<BoxKind, { icon: string; label: string }> = {
+  concept: { icon: '💡', label: 'Khái niệm' },
+  pitfall: { icon: '⚠️', label: 'Dễ nhầm' },
+  story: { icon: '📰', label: 'Câu chuyện có thật' },
+  didyouknow: { icon: '🔎', label: 'Em có biết?' },
+  activity: { icon: '✍️', label: 'Hoạt động' },
+  tool: { icon: '🧪', label: 'Công cụ trải nghiệm' },
+  note: { icon: '📌', label: '' },
+};
+
+/** Hộp "note" có đoạn đầu in đậm và ngắn thì coi đoạn đó là tiêu đề. */
+function splitNoteTitle(b: Extract<Block, { t: 'box' }>) {
+  const first = b.blocks[0];
+  if (b.kind !== 'note' || b.title || first?.t !== 'p') return { title: b.title, rest: b.blocks };
+  const text = first.inl.map((x) => x.text).join('');
+  const allBold = first.inl.every((x) => x.b);
+  if (allBold && text.length < 70) return { title: text, rest: b.blocks.slice(1) };
+  return { title: null, rest: b.blocks };
+}
+---
+
+{
+  blocks.map((b) => {
+    switch (b.t) {
+      case 'p':
+        return (
+          <p class={b.cls}>
+            <Inlines inl={b.inl} grade={grade} />
+          </p>
+        );
+      case 'h3':
+        return <h3 id={b.id}>{b.text}</h3>;
+      case 'question':
+        return (
+          <div class="question">
+            <span class="question-mark" aria-hidden="true">?</span>
+            <span>
+              <Inlines inl={b.inl} grade={grade} />
+            </span>
+          </div>
+        );
+      case 'list': {
+        const items = b.items.map((it) => (
+          <li class={it.level > 0 ? 'lvl-1' : undefined}>
+            <Inlines inl={it.inl} grade={grade} />
+          </li>
+        ));
+        return b.ordered ? <ol>{items}</ol> : <ul>{items}</ul>;
+      }
+      case 'figure':
+        return (
+          <figure>
+            <img src={url(b.src)} alt={b.caption ?? 'Hình minh họa trong tài liệu'} loading="lazy" decoding="async" />
+            {b.caption && <figcaption>{b.caption}</figcaption>}
+          </figure>
+        );
+      case 'table':
+        return (
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  {b.head.map((cell) => (
+                    <th scope="col">
+                      <Astro.self blocks={cell} grade={grade} />
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {b.rows.map((row) => (
+                  <tr>
+                    {row.map((cell) => (
+                      <td>
+                        <Astro.self blocks={cell} grade={grade} />
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      case 'box': {
+        const meta = BOX_META[b.kind];
+        const { title, rest } = splitNoteTitle(b);
+        const heading = title ?? meta.label;
+        return (
+          <aside class={`box box-${b.kind}`}>
+            {heading && (
+              <div class="box-title">
+                <span aria-hidden="true">{meta.icon}</span>
+                <span>{heading}</span>
+              </div>
+            )}
+            <div class="box-body">
+              <Astro.self blocks={rest} grade={grade} />
+            </div>
+          </aside>
+        );
+      }
+      default:
+        return null;
+    }
+  })
+}

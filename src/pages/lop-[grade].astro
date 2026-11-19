@@ -1,0 +1,156 @@
+---
+import Base from '../layouts/Base.astro';
+import { GRADES, getGrade, lessonsOfTopic, url, inlineText } from '../lib/content';
+import { labsFor } from '../features/labs/registry';
+import { getWorksheet } from '../features/worksheet/registry';
+
+export function getStaticPaths() {
+  return GRADES.map((g) => ({ params: { grade: String(g) } }));
+}
+
+const grade = Number(Astro.params.grade);
+const data = getGrade(grade);
+---
+
+<Base title={`Lớp ${grade}`} active={String(grade)}>
+  <div class="wrap">
+    <header class="grade-head" style={`--gc:var(--g${grade})`}>
+      <p class="section-kicker" style="margin-top:32px">Chuyên đề Giáo dục trí tuệ nhân tạo</p>
+      <h1>Lớp {grade}</h1>
+      <p class="muted">{data.topics.length} chuyên đề, 12 tiết. <a href={url(`nguon-tham-khao/lop-${grade}`)}>Nguồn tham khảo của khối {grade}</a></p>
+    </header>
+
+    {
+      data.topics.map((t) => (
+        <section class="topic" style={`--gc:var(--g${grade})`}>
+          <div class="topic-side">
+            <span class="topic-id">Chuyên đề {t.id}</span>
+            <h2>{t.title}</h2>
+            <p class="small muted">{t.info}</p>
+            {t.guidingQuestion && <p class="topic-q">“{t.guidingQuestion}”</p>}
+          </div>
+          <div class="topic-main">
+            <p>{t.description}</p>
+            <ol class="lesson-list">
+              {lessonsOfTopic(t.id).map((l) => {
+                const labs = labsFor(l.slug).length;
+                const ws = getWorksheet(l.slug);
+                return (
+                  <li>
+                    <a href={url(`bai/${l.slug}`)}>
+                      <span class="ll-id">Bài {l.id}</span>
+                      <span class="ll-title">{l.title}</span>
+                      <span class="small muted">{t.lessonBlurbs[l.id] ?? inlineText(l.objectives[0] ?? [])}</span>
+                      <span class="ll-tags">
+                        {labs > 0 && <span class="chip chip-pilot">{labs} mô phỏng</span>}
+                        {ws && <span class="chip chip-pilot">Phiếu học tập</span>}
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ol>
+            {t.outcomes.length > 0 && (
+              <details class="fold">
+                <summary>Học xong chuyên đề này, em có thể</summary>
+                <ul>
+                  {t.outcomes.map((o) => (
+                    <li>{o}</li>
+                  ))}
+                </ul>
+              </details>
+            )}
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</Base>
+
+<style>
+  .grade-head h1 {
+    font-size: clamp(2.6rem, 8vw, 4.4rem);
+    color: var(--gc);
+    margin: 0;
+  }
+
+  .topic {
+    display: grid;
+    gap: 16px 32px;
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  @media (min-width: 900px) {
+    .topic {
+      grid-template-columns: 300px 1fr;
+    }
+  }
+
+  .topic-id {
+    font-weight: 800;
+    color: var(--gc);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .topic h2 {
+    margin: 4px 0 6px;
+  }
+
+  .topic-q {
+    font-style: italic;
+    border-left: 3px solid var(--gc);
+    padding-left: 12px;
+  }
+
+  .topic-main > p:first-child {
+    margin-top: 0;
+  }
+
+  .lesson-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+  }
+
+  .lesson-list a {
+    display: grid;
+    gap: 2px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+
+  .lesson-list a:hover {
+    border-color: var(--gc);
+    transform: translateX(4px);
+  }
+
+  .ll-id {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--gc);
+  }
+
+  .ll-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+
+  .ll-tags {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .ll-tags:empty {
+    display: none;
+  }
+</style>

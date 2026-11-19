@@ -1,0 +1,2137 @@
+{
+ "id": "10.8",
+ "slug": "bai-10-08",
+ "grade": 10,
+ "num": 8,
+ "topicId": "10.3",
+ "title": "Một câu lệnh tốt cần những gì?",
+ "meta": "Chuyên đề 10.3: Ứng dụng AI và kĩ năng đặt câu lệnh (tiết 3 trong 4 tiết)",
+ "period": {
+  "index": 3,
+  "total": 4
+ },
+ "objectives": [
+  [
+   {
+    "text": "Mô tả được "
+   },
+   {
+    "text": "sáu yêu cầu",
+    "b": true
+   },
+   {
+    "text": " của một câu lệnh (prompt) phù hợp với mục tiêu: mục tiêu, bối cảnh, vai trò, ràng buộc, định dạng đầu ra, tiêu chí kiểm tra."
+   }
+  ],
+  [
+   {
+    "text": "Chỉ ra được yêu cầu còn thiếu trong một câu lệnh và dự đoán hậu quả."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được yêu cầu "
+   },
+   {
+    "text": "an toàn",
+    "b": true
+   },
+   {
+    "text": " khi viết câu lệnh."
+   }
+  ]
+ ],
+ "keywords": [
+  "câu lệnh (prompt)",
+  "mục tiêu",
+  "bối cảnh",
+  "vai trò",
+  "ràng buộc",
+  "định dạng đầu ra",
+  "tiêu chí kiểm tra"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-hai-cau-lenh-hai-ket-qua",
+   "title": "Khởi động: Hai câu lệnh, hai kết quả",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bạn Hân và bạn Phúc cùng chuẩn bị thuyết trình môn Địa lí về hiệu ứng nhà kính. Cả hai cùng dùng một trợ lí AI."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hân gõ:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Viết về hiệu ứng nhà kính."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hân nhận về một bài dài chừng 600 chữ, nhiều thuật ngữ chuyên ngành, có vài số liệu không rõ nguồn. Hân không biết dùng đoạn nào."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phúc gõ:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hãy đóng vai một giáo viên Địa lí. Em là học sinh lớp 10, đã học bài về khí quyển, đang chuẩn bị thuyết trình 2 phút. Hãy giải thích hiện tượng hiệu ứng nhà kính trong không quá 150 chữ, chỉ dùng kiến thức phổ thông, trình bày thành 3 gạch đầu dòng và 1 ví dụ gần gũi. Cuối cùng, nêu rõ ý nào em nên kiểm tra lại trong sách giáo khoa; nếu không chắc điều gì thì nói là không chắc."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phúc nhận về ba gạch đầu dòng ngắn, một ví dụ về chiếc ô tô đỗ ngoài nắng, và một lời nhắc “em nên kiểm tra lại số liệu về nhiệt độ trong sách”."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Cùng một công cụ, vì sao kết quả khác nhau đến thế? Câu của Phúc “nói” với AI những điều gì mà câu của Hân không nói?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai kết quả trên được mô tả để minh họa; kết quả thật mỗi lần chạy có thể khác.",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-cau-lenh-la-gi-va-vi-sao-no-quan-trong",
+   "title": "1. Câu lệnh là gì, và vì sao nó quan trọng?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Câu lệnh (prompt)",
+         "b": true
+        },
+        {
+         "text": " là chỉ dẫn, câu hỏi, dữ liệu hoặc ngữ cảnh do người dùng cung cấp để hệ thống AI tạo ra đầu ra tương ứng [1]."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy nghĩ đến việc em nhờ bạn đi mua đồ. Em nói “mua giúp mình cái gì ăn”. Bạn mang về ổ bánh mì, trong khi em đang muốn hộp sữa. Lỗi tại ai? Bạn không đọc được suy nghĩ của em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "AI cũng "
+      },
+      {
+       "text": "không đoán được điều em không nói",
+       "b": true
+      },
+      {
+       "text": ". Nó không biết em học lớp mấy, cần bài dài hay ngắn, dùng để làm gì. Khi thiếu thông tin, nó tự chọn một cách trả lời “trung bình” cho mọi người, và cách trả lời ấy hiếm khi vừa với em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì vậy, viết câu lệnh trước hết là "
+      },
+      {
+       "text": "nghĩ cho rõ mình cần gì",
+       "b": true
+      },
+      {
+       "text": ". Kĩ năng này có ích cả khi em nhờ một người thật."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-sau-yeu-cau-cua-mot-cau-lenh-tot",
+   "title": "2. Sáu yêu cầu của một câu lệnh tốt",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cùng “mổ” câu lệnh của Phúc ra từng phần."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Yêu cầu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trả lời câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trong câu lệnh của Phúc",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Mục tiêu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần AI làm việc gì, để phục vụ điều gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Giải thích hiện tượng hiệu ứng nhà kính… chuẩn bị thuyết trình 2 phút”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Bối cảnh",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mình là ai, đã biết gì, đang ở hoàn cảnh nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em là học sinh lớp 10, đã học bài về khí quyển”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Vai trò",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI nên trả lời như ai?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Hãy đóng vai một giáo viên Địa lí”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Ràng buộc",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giới hạn về độ dài, phạm vi, điều không được làm?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Không quá 150 chữ, chỉ dùng kiến thức phổ thông”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Định dạng đầu ra",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả trình bày thế nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“3 gạch đầu dòng và 1 ví dụ gần gũi”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Tiêu chí kiểm tra",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Làm sao để mình kiểm chứng được?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Nêu rõ ý nào em nên kiểm tra lại trong sách; nếu không chắc thì nói là không chắc”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bây giờ ta xem từng yêu cầu kĩ hơn."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.1. Mục tiêu: điều quan trọng nhất",
+     "id": "2-1-muc-tieu-dieu-quan-trong-nhat"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mục tiêu trả lời hai câu hỏi: "
+      },
+      {
+       "text": "làm gì",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "để làm gì",
+       "b": true
+      },
+      {
+       "text": ". Phần “để làm gì” hay bị bỏ quên, nhưng chính nó giúp AI chọn mức độ phù hợp. “Giải thích để thuyết trình 2 phút” khác hẳn “giải thích để viết báo cáo 5 trang”."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.2. Bối cảnh: cho AI biết em là ai",
+     "id": "2-2-boi-canh-cho-ai-biet-em-la-ai"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một bác sĩ giải thích bệnh cho đồng nghiệp khác với giải thích cho bệnh nhân. AI cũng cần biết người nghe là ai. Hãy cho biết: em học lớp mấy, đã biết gì, đang gặp khó ở đâu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bối cảnh còn có thể là "
+      },
+      {
+       "text": "tài liệu nguồn",
+       "b": true
+      },
+      {
+       "text": ". Nếu em dán vào một đoạn trong sách giáo khoa và dặn “chỉ dựa trên đoạn này”, khả năng AI bịa ra thông tin sẽ giảm đi."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.3. Vai trò: chọn “người” trả lời",
+     "id": "2-3-vai-tro-chon-nguoi-tra-loi"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giao vai giúp AI chọn giọng và góc nhìn: "
+      },
+      {
+       "text": "giáo viên",
+       "i": true
+      },
+      {
+       "text": " thì giải thích dễ hiểu; "
+      },
+      {
+       "text": "người phản biện",
+       "i": true
+      },
+      {
+       "text": " thì tìm chỗ yếu; "
+      },
+      {
+       "text": "người phỏng vấn",
+       "i": true
+      },
+      {
+       "text": " thì đặt câu hỏi. Không phải lúc nào cũng cần giao vai, nhưng khi cần một kiểu trả lời cụ thể thì rất hữu ích."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.4. Ràng buộc: đặt hàng rào",
+     "id": "2-4-rang-buoc-dat-hang-rao"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ràng buộc là những giới hạn: độ dài, phạm vi kiến thức, điều không được làm. Ví dụ: “không dùng thuật ngữ chưa giải thích”, “chỉ dùng kiến thức lớp 10”, “đừng đưa đáp án, chỉ gợi ý bước đầu tiên”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ràng buộc cuối cùng đặc biệt quan trọng với việc học: nó biến AI từ người làm thay thành người hướng dẫn."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.5. Định dạng đầu ra: hình dạng của câu trả lời",
+     "id": "2-5-dinh-dang-dau-ra-hinh-dang-cua-cau-tra-loi"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bảng, gạch đầu dòng, đoạn văn, số câu, số ý. Khi em cần so sánh, hãy xin bảng. Khi em cần ghi vào vở, hãy xin gạch đầu dòng ngắn."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.6. Tiêu chí kiểm tra: “chiếc dây an toàn”",
+     "id": "2-6-tieu-chi-kiem-tra-chiec-day-an-toan"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây là yêu cầu các bạn hay bỏ qua nhất, và là yêu cầu nối trực tiếp với Bài 10.7. Vì AI tạo sinh có thể sai mà vẫn tự tin, em hãy yêu cầu ngay trong câu lệnh:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Nêu rõ ý nào em nên kiểm tra lại.”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Nếu không chắc thì nói là không chắc.”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Chỉ ra em có thể tìm nội dung này ở phần nào của sách giáo khoa.”"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lưu ý: yêu cầu này "
+      },
+      {
+       "text": "giúp",
+       "b": true
+      },
+      {
+       "text": " em kiểm chứng dễ hơn, nhưng "
+      },
+      {
+       "text": "không thay",
+       "b": true
+      },
+      {
+       "text": " cho việc em tự mở sách ra đối chiếu."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Câu lệnh càng dài càng tốt.”",
+         "b": true
+        },
+        {
+         "text": " Không. Câu lệnh tốt là câu lệnh "
+        },
+        {
+         "text": "đủ",
+         "b": true
+        },
+        {
+         "text": " thông tin cần thiết. Một câu dài lan man có thể kém hơn một câu ngắn đủ ý."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Phải có đủ sáu phần mới được.”",
+         "b": true
+        },
+        {
+         "text": " Sáu yêu cầu là danh sách để soát, không phải công thức bắt buộc. Hỏi nghĩa một từ thì chỉ cần mục tiêu. Việc càng quan trọng thì càng nên đủ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mục tiêu hay định dạng?",
+         "b": true
+        },
+        {
+         "text": " “Viết 5 gạch đầu dòng” là "
+        },
+        {
+         "text": "định dạng",
+         "i": true
+        },
+        {
+         "text": ". Hãy hỏi tiếp: em cần 5 gạch đầu dòng đó "
+        },
+        {
+         "text": "để làm gì",
+         "b": true
+        },
+        {
+         "text": "? Câu trả lời mới là "
+        },
+        {
+         "text": "mục tiêu",
+         "i": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Đọc lại câu lệnh của Phúc. Dùng bút gạch chân và đánh số từ 1 đến 6 vào từng phần tương ứng với sáu yêu cầu. Nếu bỏ phần số 6, điều gì có thể xảy ra?"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image21.png",
+     "caption": "Hình 10.8.1. Sáu yêu cầu của một câu lệnh tốt, cùng yêu cầu an toàn ở trung tâm."
+    }
+   ]
+  },
+  {
+   "id": "3-yeu-cau-thu-bay-ma-em-khong-duoc-quen-an-toan",
+   "title": "3. Yêu cầu thứ bảy mà em không được quên: an toàn",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trước khi bấm gửi, hãy soát lại một lần nữa:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Không đưa vào câu lệnh",
+         "b": true
+        },
+        {
+         "text": " họ tên, số điện thoại, địa chỉ, hình ảnh, điểm số, thông tin sức khỏe "
+        },
+        {
+         "text": "của mình và của người khác",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lí do: nội dung em nhập vào một công cụ AI có thể được lưu lại. Em đã học ở Bài 10.3 rằng những thông tin ấy là dữ liệu cá nhân, và ở Bài 10.4 rằng đưa dữ liệu của người khác vào công cụ AI là một sự cố thuộc vùng đỏ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách làm rất đơn giản: thay thông tin riêng bằng "
+      },
+      {
+       "text": "mô tả chung",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thay vì viết",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hãy viết",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em là Nguyễn Minh Khang, lớp 10A3 trường…”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em là một học sinh lớp 10”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Bạn Lan lớp em hay bị điểm kém môn Toán…”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Một bạn học sinh đang gặp khó với môn Toán…”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-chan-doan-va-sua-mot-cau-lenh",
+   "title": "4. Chẩn đoán và sửa một câu lệnh",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bây giờ em thử làm “bác sĩ câu lệnh”. Mỗi câu dưới đây có vấn đề gì?"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu lệnh",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thiếu gì",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hậu quả có thể xảy ra",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Giải thích quang hợp.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bối cảnh, ràng buộc, định dạng, tiêu chí kiểm tra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả quá dài hoặc quá khó so với lớp 10"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Lập cho mình kế hoạch ôn thi.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục tiêu cụ thể, bối cảnh (môn nào, bao lâu, mỗi ngày bao nhiêu thời gian), định dạng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kế hoạch chung chung, không dùng được"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Cho mình số liệu dân số các tỉnh, viết thật dài và thật chi tiết.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bối cảnh, phạm vi, tiêu chí kiểm tra; “thật dài” không phải mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Số liệu có thể bị bịa, không rõ năm, không rõ nguồn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Sửa cùng nhau",
+     "id": "sua-cung-nhau"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lấy câu thứ hai: "
+      },
+      {
+       "text": "“Lập cho mình kế hoạch ôn thi.”",
+       "i": true
+      },
+      {
+       "text": " Ta lần lượt tự hỏi theo sáu yêu cầu:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Mục tiêu:",
+         "b": true
+        },
+        {
+         "text": " ôn cho kì kiểm tra cuối kì, để không bị dồn bài vào tuần cuối."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bối cảnh:",
+         "b": true
+        },
+        {
+         "text": " học sinh lớp 10; ba môn Toán, Vật lí, Ngữ văn; còn 2 tuần; yếu nhất phần hàm số."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Vai trò:",
+         "b": true
+        },
+        {
+         "text": " người hướng dẫn học tập."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ràng buộc:",
+         "b": true
+        },
+        {
+         "text": " mỗi ngày không quá 90 phút; có một ngày nghỉ mỗi tuần."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Định dạng:",
+         "b": true
+        },
+        {
+         "text": " bảng theo ngày."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Tiêu chí kiểm tra:",
+         "b": true
+        },
+        {
+         "text": " cuối bảng ghi tổng số phút từng ngày để em tự soát."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ghép lại:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hãy đóng vai người hướng dẫn học tập. Em là học sinh lớp 10, hai tuần nữa kiểm tra cuối kì ba môn Toán, Vật lí, Ngữ văn; em yếu nhất phần hàm số. Hãy lập kế hoạch ôn tập 14 ngày, mỗi ngày không quá 90 phút, có một ngày nghỉ mỗi tuần. Trình bày thành bảng theo ngày, cuối bảng ghi tổng số phút của từng ngày để em tự kiểm tra."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu lệnh này chưa chắc cho kết quả hoàn hảo ngay lần đầu. Ở bài sau, em sẽ học cách chạy thử, kiểm chứng và cải tiến."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Lấy câu yêu cầu em đã viết ở nhà sau Bài 10.7. Soát theo sáu yêu cầu và yêu cầu an toàn. Viết lại thành một câu lệnh tốt hơn. Đây có phải là dùng AI “để học” không?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-bang-kiem-truoc-khi-bam-gui",
+   "title": "5. Bảng kiểm trước khi bấm gửi",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em có thể chép bảng này vào bìa vở."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Mình đã nói rõ "
+        },
+        {
+         "text": "cần gì",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "để làm gì",
+         "b": true
+        },
+        {
+         "text": " chưa?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "AI đã biết "
+        },
+        {
+         "text": "mình là ai",
+         "b": true
+        },
+        {
+         "text": ", đang học gì chưa?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Có cần "
+        },
+        {
+         "text": "giao vai",
+         "b": true
+        },
+        {
+         "text": " cho AI không?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đã nêu "
+        },
+        {
+         "text": "giới hạn",
+         "b": true
+        },
+        {
+         "text": " về độ dài, phạm vi chưa?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đã nói muốn kết quả "
+        },
+        {
+         "text": "trình bày",
+         "b": true
+        },
+        {
+         "text": " thế nào chưa?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đã yêu cầu chỉ ra "
+        },
+        {
+         "text": "chỗ cần kiểm tra lại",
+         "b": true
+        },
+        {
+         "text": " chưa?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Có "
+        },
+        {
+         "text": "dữ liệu cá nhân",
+         "b": true
+        },
+        {
+         "text": " nào trong câu lệnh không?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đây là dùng "
+        },
+        {
+         "text": "để học",
+         "b": true
+        },
+        {
+         "text": " hay để "
+        },
+        {
+         "text": "làm thay",
+         "b": true
+        },
+        {
+         "text": "?"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có một điều em nên nhớ: viết câu lệnh giỏi "
+      },
+      {
+       "text": "không phải",
+       "b": true
+      },
+      {
+       "text": " là toàn bộ năng lực AI. Khung giáo dục AI của Bộ Giáo dục và Đào tạo nêu rõ rằng năng lực AI không đồng nhất với kĩ năng viết câu lệnh hay thao tác công cụ [1]. Câu lệnh chỉ là cách em nói rõ điều mình cần. Điều làm nên người dùng AI giỏi là biết mình cần gì, biết kiểm tra, và biết chịu trách nhiệm về kết quả."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-cau-lenh-cua-han-cau-lenh-cua-phuc",
+   "title": "Trải nghiệm: Câu lệnh của Hân, câu lệnh của Phúc",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em đã biết sáu yêu cầu của một câu lệnh tốt. Bây giờ em tự tay kiểm chứng xem chúng tạo ra khác biệt lớn đến đâu."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image12.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Gemini"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " gemini.google.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 7 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em cùng nhóm gửi câu lệnh của Hân: “Viết về hiệu ứng nhà kính”."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em gửi tiếp câu lệnh có đủ vai trò, bối cảnh, giới hạn 150 chữ, ba gạch đầu dòng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em so sánh hai kết quả theo Bảng kiểm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Yêu cầu nào trong sáu yêu cầu làm kết quả thay đổi nhiều nhất?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em đăng nhập bằng tài khoản nhà trường. Em không đưa thông tin cá nhân vào câu lệnh."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image22.png",
+     "caption": "Sơ đồ tư duy Bài 10.8."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Câu lệnh",
+         "b": true
+        },
+        {
+         "text": " là chỉ dẫn, câu hỏi, dữ liệu hoặc ngữ cảnh em đưa cho AI. AI không đoán được điều em không nói."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sáu yêu cầu: "
+        },
+        {
+         "text": "mục tiêu, bối cảnh, vai trò, ràng buộc, định dạng đầu ra, tiêu chí kiểm tra",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mục tiêu",
+         "b": true
+        },
+        {
+         "text": " gồm “làm gì” và “để làm gì”; là yêu cầu quan trọng nhất."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Tiêu chí kiểm tra",
+         "b": true
+        },
+        {
+         "text": " giúp em kiểm chứng dễ hơn nhưng không thay việc em tự đối chiếu."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Câu lệnh tốt là câu lệnh "
+        },
+        {
+         "text": "đủ",
+         "b": true
+        },
+        {
+         "text": ", không phải câu lệnh dài."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "An toàn:",
+         "b": true
+        },
+        {
+         "text": " không đưa dữ liệu cá nhân của mình và của người khác vào câu lệnh."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Viết câu lệnh là "
+        },
+        {
+         "text": "một phần",
+         "b": true
+        },
+        {
+         "text": " của năng lực AI, không phải tất cả."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Ghi tên yêu cầu (trong sáu yêu cầu) tương ứng với mỗi phần của câu lệnh sau:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Em là học sinh lớp 10 đang học về tế bào. (b) Hãy đóng vai bạn học cùng lớp giỏi môn Sinh. (c) Hãy đặt cho em 5 câu hỏi để tự kiểm tra bài “Cấu trúc tế bào” trước giờ kiểm tra miệng. (d) Mỗi câu hỏi không quá một dòng, chỉ hỏi trong phạm vi sách giáo khoa. (e) Đánh số từ 1 đến 5, để đáp án riêng ở cuối. (f) Với mỗi đáp án, ghi em có thể tìm ở mục nào của bài."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Mỗi câu lệnh sau thiếu yêu cầu nào? Nêu một hậu quả có thể xảy ra."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Tóm tắt bài này.” (kèm một bài báo dài)"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Viết đoạn văn về tình bạn, thật hay vào.”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“So sánh hai phương pháp học từ vựng.”"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Bạn Trâm viết: "
+      },
+      {
+       "text": "“Mình là Lê Ngọc Trâm lớp 10A5, số điện thoại 09xx. Bạn Huy tổ mình hay nộp bài trễ. Viết giúp mình tin nhắn nhắc bạn ấy.”",
+       "i": true
+      },
+      {
+       "text": " Câu lệnh này có vấn đề gì? Viết lại cho an toàn mà vẫn đạt mục đích."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Viết một câu lệnh có đủ các yêu cầu cần thiết cho nhiệm vụ: em vừa viết xong một đoạn văn tiếng Anh 80 từ giới thiệu trường mình, muốn AI giúp em "
+      },
+      {
+       "text": "tự sửa",
+       "b": true
+      },
+      {
+       "text": " chứ không sửa hộ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " “Chỉ cần viết câu lệnh giỏi là dùng AI giỏi.” Em có đồng ý không? Nêu hai điều khác mà một người dùng AI có trách nhiệm cần có."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Bảng kiểm của riêng em.",
+       "b": true
+      },
+      {
+       "text": " Từ bảng kiểm ở mục 5, viết lại bằng lời của em thành một câu dễ nhớ hoặc một từ ghép từ chữ cái đầu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Chuẩn bị cho bài thực hành.",
+       "b": true
+      },
+      {
+       "text": " Chọn một nhiệm vụ học tập có thật (ví dụ: tạo câu hỏi ôn một bài Lịch sử, lập kế hoạch ôn tập, so sánh hai khái niệm Sinh học). Viết câu lệnh hoàn chỉnh ra giấy và mang theo sách giáo khoa của môn đó đến Bài 10.9."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể tên sáu yêu cầu và mỗi yêu cầu trả lời câu hỏi gì"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra yêu cầu còn thiếu trong một câu lệnh"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết một câu lệnh đủ yêu cầu cho một việc học tập"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Soát và loại dữ liệu cá nhân khỏi câu lệnh"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu lệnh (prompt)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ dẫn, câu hỏi, dữ liệu hoặc ngữ cảnh do người dùng cung cấp để hệ thống AI tạo ra đầu ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc cần AI làm và điều việc đó phục vụ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bối cảnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông tin về người dùng, hoàn cảnh, tài liệu nguồn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vai trò"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Người” mà AI được yêu cầu đóng khi trả lời"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ràng buộc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giới hạn về độ dài, phạm vi, điều không được làm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Định dạng đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hình thức trình bày của kết quả"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tiêu chí kiểm tra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Yêu cầu giúp người dùng kiểm chứng được kết quả"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " (a) bối cảnh; (b) vai trò; (c) mục tiêu; (d) ràng buộc; (e) định dạng đầu ra; (f) tiêu chí kiểm tra."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Thiếu mục tiêu (tóm tắt để làm gì), ràng buộc độ dài, định dạng: bản tóm tắt có thể quá dài hoặc bỏ sót ý em cần. b) Thiếu bối cảnh, ràng buộc, định dạng; “thật hay” không phải tiêu chí rõ; và đây là cách dùng làm thay. c) Thiếu bối cảnh (cho ai, hai phương pháp nào), định dạng (nên là bảng), tiêu chí so sánh: kết quả lan man, khó so."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Câu lệnh chứa dữ liệu cá nhân của Trâm và của Huy. Viết lại: “Em là tổ trưởng một tổ học tập lớp 10. Một bạn trong tổ hay nộp bài trễ. Hãy gợi ý ba cách mở đầu một tin nhắn nhắc bạn ấy, giọng thân thiện, không trách móc, mỗi cách không quá hai câu.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: “Hãy đóng vai giáo viên tiếng Anh. Em là học sinh lớp 10, vừa viết đoạn văn 80 từ giới thiệu trường em (dán bên dưới). Đừng viết lại đoạn văn. Hãy chỉ ra tối đa 5 lỗi quan trọng nhất, mỗi lỗi ghi: câu có lỗi, loại lỗi, một gợi ý để em tự sửa. Trình bày thành bảng. Nếu có chỗ nào có nhiều cách viết đúng thì nói rõ.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Không đồng ý hoàn toàn. Còn cần: biết kiểm chứng kết quả bằng nguồn độc lập; biết khai báo và chịu trách nhiệm về sản phẩm; biết việc nào nên tự làm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

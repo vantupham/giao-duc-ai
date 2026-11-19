@@ -1,0 +1,94 @@
+---
+import Base from '../layouts/Base.astro';
+import { glossary, url } from '../lib/content';
+
+const entries = glossary();
+const firstLetter = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'D')[0]?.toUpperCase() ?? '#';
+const letters = [...new Set(entries.map((e) => firstLetter(e.term)))];
+---
+
+<Base title="Từ điển AI" active="dict">
+  <div class="wrap read">
+    <h1 style="margin-top:32px">Từ điển AI</h1>
+    <p class="muted">{entries.length} thuật ngữ gom từ phần “Thuật ngữ của bài” trong cả ba khối. Bấm tên bài để xem thuật ngữ trong ngữ cảnh.</p>
+    <input id="dict-filter" class="dict-filter" type="search" placeholder="Tìm thuật ngữ, ví dụ: mô hình, dữ liệu, trọng số…" aria-label="Tìm thuật ngữ" />
+    <nav class="dict-letters" aria-label="Chữ cái">
+      {letters.map((l) => <a href={`#chu-${l}`}>{l}</a>)}
+    </nav>
+    {
+      letters.map((l) => (
+        <section id={`chu-${l}`} class="dict-group">
+          <h2>{l}</h2>
+          <dl>
+            {entries
+              .filter((e) => firstLetter(e.term) === l)
+              .map((e) => (
+                <div class="dict-entry" data-text={`${e.term} ${e.definition}`.toLowerCase()}>
+                  <dt>{e.term}</dt>
+                  <dd>
+                    {e.definition}{' '}
+                    <a class="small" href={url(`bai/${e.lesson.slug}`)}>
+                      Bài {e.lesson.id}
+                    </a>
+                  </dd>
+                </div>
+              ))}
+          </dl>
+        </section>
+      ))
+    }
+  </div>
+</Base>
+
+<script>
+  const input = document.getElementById('dict-filter') as HTMLInputElement | null;
+  input?.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    document.querySelectorAll<HTMLElement>('.dict-entry').forEach((el) => {
+      el.hidden = q !== '' && !(el.dataset.text ?? '').includes(q);
+    });
+    document.querySelectorAll<HTMLElement>('.dict-group').forEach((g) => {
+      g.hidden = ![...g.querySelectorAll<HTMLElement>('.dict-entry')].some((e) => !e.hidden);
+    });
+  });
+</script>
+
+<style>
+  .dict-filter {
+    width: 100%;
+    font: inherit;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+  }
+
+  .dict-letters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 12px 0;
+  }
+
+  .dict-letters a {
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: var(--surface-2);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .dict-entry {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .dict-entry dt {
+    font-weight: 700;
+  }
+
+  .dict-entry dd {
+    margin: 2px 0 0;
+  }
+</style>

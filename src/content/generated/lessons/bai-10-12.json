@@ -1,0 +1,2680 @@
+{
+ "id": "10.12",
+ "slug": "bai-10-12",
+ "grade": 10,
+ "num": 12,
+ "topicId": "10.4",
+ "title": "Khi hệ thống AI gặp sự cố. Báo cáo ý tưởng",
+ "meta": "Chuyên đề 10.4: Dữ liệu và hệ thống AI (tiết 3 trong 3 tiết, tổng kết năm học)",
+ "period": {
+  "index": 3,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nêu được ví dụ về một số "
+   },
+   {
+    "text": "vấn đề phát sinh",
+    "b": true
+   },
+   {
+    "text": " khi vận hành hoặc tối ưu hóa hệ thống AI, và chỉ ra vấn đề liên quan đến thành phần nào."
+   }
+  ],
+  [
+   {
+    "text": "Trình bày được "
+   },
+   {
+    "text": "ý nghĩa",
+    "b": true
+   },
+   {
+    "text": " của việc khắc phục các vấn đề đó."
+   }
+  ],
+  [
+   {
+    "text": "Trình bày được hoàn chỉnh "
+   },
+   {
+    "text": "ý tưởng hệ thống AI",
+    "b": true
+   },
+   {
+    "text": " của nhóm."
+   }
+  ]
+ ],
+ "keywords": [
+  "vận hành",
+  "tối ưu hóa",
+  "sự cố",
+  "khắc phục",
+  "giám sát"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-ba-thang-sau-tram-phan-loai-rac-xuong-phong-do",
+   "title": "Khởi động: Ba tháng sau, trạm phân loại rác “xuống phong độ”",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em còn nhớ trạm phân loại rác ở căn tin. Tháng đầu, trạm chạy rất tốt. Ai cũng khen."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sang tháng thứ ba, mọi chuyện khác đi. Trạm báo sai nhiều hơn hẳn. Giờ ra chơi, học sinh phải xếp hàng vì trạm xử lí chậm. Có bạn bực mình bỏ rác đại vào một thùng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Điều lạ là: suốt ba tháng, "
+      },
+      {
+       "text": "không ai sửa gì vào hệ thống",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Không ai đụng vào, vậy vì sao trạm lại kém đi?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có thể em đoán: căn tin đổi loại li mới; có món ăn mới với bao bì lạ; ống kính camera bám bụi; học kì này đông học sinh hơn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em đoán đúng hướng rồi. Hệ thống không thay đổi, nhưng "
+      },
+      {
+       "text": "thế giới quanh nó thay đổi",
+       "b": true
+      },
+      {
+       "text": ". Một hệ thống AI không phải làm xong là xong. Khi đã đưa vào dùng, nó bước sang một giai đoạn mới với những vấn đề riêng: giai đoạn "
+      },
+      {
+       "text": "vận hành",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trạm phân loại rác là tình huống giả định dùng xuyên suốt chuyên đề này.",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-van-hanh-va-toi-uu-hoa-la-gi",
+   "title": "1. Vận hành và tối ưu hóa là gì?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Vận hành",
+         "b": true
+        },
+        {
+         "text": " là giai đoạn hệ thống AI đang được sử dụng thật: nhận đầu vào từ người dùng, tạo ra đầu ra, được con người theo dõi và chăm sóc."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Tối ưu hóa",
+         "b": true
+        },
+        {
+         "text": " là việc điều chỉnh hệ thống để nó tốt hơn theo một tiêu chí nào đó: nhanh hơn, chính xác hơn, tốn ít tài nguyên hơn."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy nghĩ đến một chiếc xe máy. Mua xe về chưa phải là hết việc. Xe cần được thay nhớt, bơm lốp, kiểm tra phanh. Đường sá thay đổi, người lái cũng phải thay đổi theo. Xe không được chăm sóc thì chiếc xe tốt nhất cũng thành nguy hiểm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở Bài 10.11, em đã biết năm thành phần của hệ thống AI: "
+      },
+      {
+       "text": "dữ liệu, thuật toán, mô hình, đầu ra, phản hồi",
+       "b": true
+      },
+      {
+       "text": ", tất cả do "
+      },
+      {
+       "text": "mục tiêu",
+       "b": true
+      },
+      {
+       "text": " chi phối. Bây giờ ta xem trong lúc vận hành, mỗi thành phần có thể “đổ bệnh” thế nào."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-sau-loai-van-de-thuong-gap-khi-van-hanh",
+   "title": "2. Sáu loại vấn đề thường gặp khi vận hành",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "h3",
+     "text": "2.1. Dữ liệu lỗi thời, bối cảnh thay đổi",
+     "id": "2-1-du-lieu-loi-thoi-boi-canh-thay-doi"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ:",
+       "i": true
+      },
+      {
+       "text": " căn tin đổi sang li giấy mới; trạm liên tục xếp sai loại li này. Một trợ lí hỏi đáp nội quy vẫn trả lời theo thời khóa biểu của học kì trước."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thành phần liên quan:",
+       "b": true
+      },
+      {
+       "text": " dữ liệu, mô hình. Mô hình vẫn “nhớ” thế giới cũ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khắc phục để:",
+       "b": true
+      },
+      {
+       "text": " giữ độ chính xác theo thời gian. Người phụ trách bổ sung dữ liệu mới, cho máy học lại hoặc cập nhật tài liệu."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.2. Đầu ra sai, thiên lệch với một nhóm",
+     "id": "2-2-dau-ra-sai-thien-lech-voi-mot-nhom"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ:",
+       "i": true
+      },
+      {
+       "text": " một ứng dụng chấm phát âm cho điểm thấp bất thường với học sinh nói giọng một số vùng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thành phần liên quan:",
+       "b": true
+      },
+      {
+       "text": " dữ liệu, mô hình, đầu ra."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khắc phục để:",
+       "b": true
+      },
+      {
+       "text": " bảo đảm an toàn và công bằng cho mọi người dùng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật: chatbot của hãng hàng không",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một hành khách ở Canada hỏi chatbot trên trang web của một hãng hàng không về giá vé ưu đãi cho người có tang. Chatbot trả lời rằng ông có thể mua vé trước rồi nộp đơn xin hoàn tiền sau. Thông tin này trái với quy định ghi ở một trang khác trên chính trang web ấy. Khi ông đòi quyền lợi, hãng từ chối và lập luận rằng chatbot nên được coi như một thực thể riêng, tự chịu trách nhiệm về việc nó làm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2024, cơ quan tài phán dân sự của tỉnh British Columbia bác bỏ lập luận đó: chatbot là một phần trang web của hãng, và hãng đã không bảo đảm đủ cẩn trọng để chatbot đưa thông tin chính xác. Hãng phải chịu trách nhiệm. [13]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài học: khi đầu ra của một hệ thống AI sai, "
+      },
+      {
+       "text": "người vận hành chịu trách nhiệm",
+       "b": true
+      },
+      {
+       "text": ", không thể đổ cho “cái máy”."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.3. Quá tải, phản hồi chậm",
+     "id": "2-3-qua-tai-phan-hoi-cham"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ:",
+       "i": true
+      },
+      {
+       "text": " giờ ra chơi, cả trăm học sinh dùng trạm cùng lúc, trạm xử lí không kịp. Sáng thứ Hai, hàng trăm học sinh cùng hỏi trợ lí về lịch học, hệ thống treo 10 phút."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thành phần liên quan:",
+       "b": true
+      },
+      {
+       "text": " phần vận hành của hệ thống (máy móc, đường truyền)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khắc phục để:",
+       "b": true
+      },
+      {
+       "text": " hệ thống dùng được vào đúng lúc người ta cần nó nhất."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.4. Bị dùng sai mục đích, bị lợi dụng",
+     "id": "2-4-bi-dung-sai-muc-dich-bi-loi-dung"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ:",
+       "i": true
+      },
+      {
+       "text": " trợ lí hỏi đáp nội quy bị một số bạn tìm cách bắt viết hộ bài văn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thành phần liên quan:",
+       "b": true
+      },
+      {
+       "text": " đầu ra, quy định sử dụng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật: chatbot “học hư” trong một ngày",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Tháng 3 năm 2016, một công ty công nghệ lớn đưa lên mạng xã hội một chatbot tên Tay, được làm ra để trò chuyện giải trí với giới trẻ. Trong vòng 24 giờ đầu tiên, một nhóm người đã phối hợp tấn công, lợi dụng một điểm yếu của Tay, khiến nó đăng những nội dung rất không phù hợp. Công ty phải đưa Tay ngừng hoạt động."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trong bài viết rút kinh nghiệm, công ty nhận hoàn toàn trách nhiệm vì đã không lường trước khả năng này, và viết rằng hệ thống AI học từ cả những tương tác tốt lẫn tương tác xấu của con người, nên thách thức không chỉ là kĩ thuật mà còn là xã hội. [14]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài học: người thiết kế phải nghĩ trước xem "
+      },
+      {
+       "text": "hệ thống có thể bị dùng sai thế nào",
+       "b": true
+      },
+      {
+       "text": ", và người vận hành phải theo dõi để dừng kịp thời."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khắc phục để:",
+       "b": true
+      },
+      {
+       "text": " giữ hệ thống đúng mục tiêu, không gây hại."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.5. Tối ưu chỉ số này làm hỏng chỉ số khác",
+     "id": "2-5-toi-uu-chi-so-nay-lam-hong-chi-so-khac"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ 1:",
+       "i": true
+      },
+      {
+       "text": " để giảm thời gian chờ, nhóm kĩ thuật cho trạm phân loại rác dùng một mô hình nhỏ hơn. Trạm chạy nhanh gấp đôi, nhưng sai nhiều hơn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ 2:",
+       "i": true
+      },
+      {
+       "text": " một ứng dụng video được chỉnh để người dùng xem lâu nhất có thể. Chỉ số “thời gian xem” tăng. Còn người dùng thì thức khuya hơn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thành phần liên quan:",
+       "b": true
+      },
+      {
+       "text": " mục tiêu, mô hình."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khắc phục để:",
+       "b": true
+      },
+      {
+       "text": " cân bằng giữa hiệu quả kĩ thuật với lợi ích thật của con người."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm: “Tối ưu hóa thì lúc nào cũng tốt.”",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Tối ưu hóa là làm cho một con số tốt lên. Nhưng "
+        },
+        {
+         "text": "con số nào? Tốt cho ai?",
+         "b": true
+        },
+        {
+         "text": " Ở ví dụ 2, ứng dụng được tối ưu rất thành công, theo tiêu chí của người làm ra nó. Mỗi lần nghe “hệ thống đã được tối ưu”, em hãy hỏi lại hai câu ấy."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.6. Kênh phản hồi không hoạt động",
+     "id": "2-6-kenh-phan-hoi-khong-hoat-dong"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ:",
+       "i": true
+      },
+      {
+       "text": " nút “Sai rồi” trên trạm phân loại rác vẫn bấm được, nhưng ba tháng nay không ai mở danh sách báo sai ra xem."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thành phần liên quan:",
+       "b": true
+      },
+      {
+       "text": " phản hồi."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây là vấn đề âm thầm nhất và nguy hiểm nhất, vì nó làm cho "
+      },
+      {
+       "text": "mọi vấn đề khác không bao giờ được phát hiện",
+       "b": true
+      },
+      {
+       "text": ". Ở Bài 10.11, em đã biết hệ thống AI là một vòng khép kín nhờ phản hồi. Vòng ấy đứt thì hệ thống chỉ còn đi xuống."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khắc phục để:",
+       "b": true
+      },
+      {
+       "text": " hệ thống tiếp tục được cải thiện."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bảng tổng hợp",
+     "id": "bang-tong-hop"
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vấn đề phát sinh",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thành phần liên quan",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dấu hiệu nhận biết",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Khắc phục để",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu lỗi thời, bối cảnh thay đổi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu, mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai tăng dần theo thời gian, nhất là với thứ mới"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giữ độ chính xác theo thời gian"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra sai, thiên lệch với một nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu, mô hình, đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một nhóm người dùng phàn nàn nhiều hơn hẳn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bảo đảm an toàn, công bằng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quá tải, phản hồi chậm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vận hành hệ thống"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chậm, treo vào giờ cao điểm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng được khi cần nhất"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bị dùng sai mục đích, bị lợi dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra, quy định sử dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xuất hiện yêu cầu, nội dung ngoài mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giữ đúng mục tiêu, tránh gây hại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tối ưu chỉ số này làm hỏng chỉ số khác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục tiêu, mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một con số đẹp lên, một điều khác xấu đi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cân bằng với lợi ích thật của con người"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kênh phản hồi không hoạt động"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có nút báo sai nhưng không ai xử lí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống tiếp tục được cải thiện"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trở lại phần Khởi động. Trạm phân loại rác tháng thứ ba đang gặp những loại vấn đề nào trong sáu loại trên? Với mỗi vấn đề, ai nên làm gì?"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image32.png",
+     "caption": "Hình 10.12.1. Sáu loại vấn đề khi vận hành và thành phần liên quan."
+    }
+   ]
+  },
+  {
+   "id": "3-vi-sao-phai-khac-phuc-y-nghia-cua-viec-cham-soc-he-thong",
+   "title": "3. Vì sao phải khắc phục? Ý nghĩa của việc “chăm sóc” hệ thống",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có bạn sẽ nghĩ: sai một chút thì đã sao. Hãy thử trả lời câu hỏi "
+      },
+      {
+       "text": "“nếu không sửa thì ai chịu thiệt, thiệt điều gì?”",
+       "b": true
+      },
+      {
+       "text": " cho từng vấn đề:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Trạm rác sai mãi: học sinh bỏ sai thùng, "
+        },
+        {
+         "text": "cả thùng tái chế bị hỏng",
+         "b": true
+        },
+        {
+         "text": "; rồi không ai tin trạm nữa, trạm thành đồ bỏ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Trợ lí trả lời theo lịch cũ: học sinh "
+        },
+        {
+         "text": "lỡ buổi kiểm tra",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ứng dụng chấm phát âm thiên lệch: học sinh một số vùng "
+        },
+        {
+         "text": "bị chấm oan",
+         "b": true
+        },
+        {
+         "text": ", nản học."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Chatbot hàng không trả lời sai: hành khách "
+        },
+        {
+         "text": "mất tiền",
+         "b": true
+        },
+        {
+         "text": ", hãng mất uy tín."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Việc khắc phục có bốn ý nghĩa:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "An toàn:",
+         "b": true
+        },
+        {
+         "text": " không để cái sai gây hại cho người dùng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Công bằng:",
+         "b": true
+        },
+        {
+         "text": " không để một nhóm người chịu thiệt mãi."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Tin cậy:",
+         "b": true
+        },
+        {
+         "text": " người dùng chỉ tiếp tục dùng thứ họ tin được."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Trách nhiệm:",
+         "b": true
+        },
+        {
+         "text": " người vận hành đã đưa hệ thống đến với người dùng thì phải chịu trách nhiệm về nó."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Các nhà cung cấp công cụ AI thường xuyên phát hành bản cập nhật, sửa lỗi sau khi người dùng phản ánh. Mỗi lần em bấm “báo cáo” hay “không đúng”, em đang tham gia vào quá trình ấy."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Sự cố là mất điện, hỏng máy.”",
+         "b": true
+        },
+        {
+         "text": " Những việc ấy có xảy ra, nhưng sự cố đặc thù của AI là: dữ liệu cũ đi, đầu ra sai mà vẫn tự tin, thiên lệch với một nhóm, bị dùng sai mục đích."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Nêu ra sự cố là thừa nhận ý tưởng mình dở.”",
+         "b": true
+        },
+        {
+         "text": " Ngược lại. Dự liệu được sự cố là dấu hiệu của một người thiết kế có trách nhiệm. Công ty làm ra chatbot Tay đã viết rằng họ chịu trách nhiệm vì "
+        },
+        {
+         "text": "không lường trước",
+         "b": true
+        },
+        {
+         "text": " [14]."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-mot-bang-su-co-mau",
+   "title": "4. Một “bảng sự cố” mẫu",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi hoàn thiện ý tưởng hệ thống AI của nhóm, em nên lập một bảng sự cố. Đây là bảng mẫu cho "
+      },
+      {
+       "text": "trợ lí hỏi đáp nội quy và lịch học",
+       "b": true
+      },
+      {
+       "text": " (tình huống giả định ở Bài 10.11)."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Sự cố có thể xảy ra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thành phần",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dấu hiệu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Khắc phục; ai làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nếu không sửa thì sao?",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trả lời theo lịch học cũ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhiều lượt bấm “chưa đúng” ở câu hỏi về lịch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người phụ trách cập nhật tài liệu mỗi khi có thông báo mới; hiển thị ngày cập nhật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh lỡ lịch; mất lòng tin"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bị dùng để làm hộ bài tập"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra, quy định sử dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xuất hiện nhiều câu hỏi ngoài nội quy"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đặt quy tắc: chỉ trả lời trong phạm vi tài liệu của trường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai mục tiêu; tiếp tay cho việc thiếu trung thực"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bịa ra một quy định không có trong nội quy"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình, đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh phản ánh; giáo viên kiểm tra thấy không có trong văn bản"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Yêu cầu trả lời kèm tên mục được trích; không tìm thấy thì nói “chưa có thông tin”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có bạn bị nhắc nhở theo một quy định không có thật"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Con người kiểm soát ở đâu?",
+       "b": true
+      },
+      {
+       "text": " Ở khâu cập nhật tài liệu; khâu xem danh sách phản hồi hằng tuần; và quyền tạm dừng trợ lí khi phát hiện trả lời sai nghiêm trọng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Lấy sơ đồ năm thành phần nhóm em đã làm ở Bài 10.11. Dự đoán hai sự cố có thể xảy ra khi hệ thống của nhóm được dùng thật, trong đó có ít nhất một sự cố thuộc khâu vận hành. Điền bảng sự cố theo mẫu trên."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-bao-cao-y-tuong-he-thong-ai-cua-nhom",
+   "title": "5. Báo cáo ý tưởng hệ thống AI của nhóm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây là lúc em ghép mọi thứ đã học trong chuyên đề thành một sản phẩm. Một bài báo cáo 2 phút nên có bốn ý:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ý",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nội dung",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em đã học ở",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Vấn đề và mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vấn đề có thật nào? Hệ thống nhận gì, đưa ra gì, phục vụ ai?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.6, 10.11"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Năm thành phần"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu, thuật toán, mô hình, đầu ra, phản hồi của hệ thống là gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.10, 10.11"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Một sự cố và cách khắc phục"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều gì có thể hỏng khi vận hành? Ai sửa, sửa thế nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.12"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Con người kiểm soát ở đâu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc nào AI làm, việc nào con người quyết định?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.1, 10.2"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vài lời khuyên khi báo cáo:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nói bằng lời của mình, đừng đọc nguyên văn tờ giấy."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mỗi ý một, hai câu. Hai phút trôi rất nhanh."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi nghe nhóm bạn, hãy đặt câu hỏi dạng “Nếu… thì nhóm bạn xử lí thế nào?”."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi nhận xét nhóm bạn, mỗi nhận xét kèm một dẫn chứng từ phần trình bày."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu nhóm em có dùng công cụ AI khi chuẩn bị, hãy nộp kèm Phiếu khai báo sử dụng AI."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6-nhin-lai-ca-nam-hoc",
+   "title": "6. Nhìn lại cả năm học",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mười hai bài học, bốn chuyên đề. Em hãy nhìn lại con đường mình đã đi."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chuyên đề",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều em mang theo",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "10.1. Con người làm chủ AI",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trong mọi hệ thống AI luôn có con người sử dụng, vận hành, tùy chỉnh. Con người phải giữ quyền kiểm soát vì an toàn, công bằng và quyền lợi con người. Pháp luật bảo vệ em trong không gian số."
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "10.2. Dùng AI đúng quy định, có đạo đức",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có ranh giới giữa việc được làm và không được làm. Bất cẩn vẫn phải chịu trách nhiệm. Khai báo là trung thực. Người làm ra AI có trách nhiệm đạo đức."
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "10.3. Ứng dụng AI và kĩ năng đặt câu lệnh",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI làm nhiều kiểu việc khác nhau. AI tạo sinh có thể sai mà vẫn tự tin. Nói rõ điều mình cần, và luôn kiểm chứng."
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "10.4. Dữ liệu và hệ thống AI",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu thế nào thì máy thế ấy. Hệ thống AI gồm năm thành phần do mục tiêu chi phối. Hệ thống cần được chăm sóc suốt đời."
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu phải gói cả năm vào một câu, có lẽ là câu này: "
+      },
+      {
+       "text": "AI là công cụ do con người làm ra, để phục vụ con người; em là người đặt mục tiêu, kiểm tra và chịu trách nhiệm.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lên lớp 11, em sẽ đi sâu hơn: xây dựng quy trình dùng AI an toàn, tìm hiểu bên trong các công nghệ AI, và tập thiết kế tổng thể một hệ thống."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-nhung-su-co-ai-co-that",
+   "title": "Trải nghiệm: Những sự cố AI có thật",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trên thế giới có một kho lưu trữ các sự cố do AI gây ra, giống như sổ ghi chép tai nạn. Em hãy xem các sự cố thật được ghi lại thế nào."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image33.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " AI Incident Database"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " incidentdatabase.ai (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em nghe thầy cô tóm tắt hai sự cố được chọn từ kho lưu trữ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em cùng nhóm xếp mỗi sự cố vào một trong sáu loại vấn đề vừa học."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em tìm xem trong mỗi sự cố, ai đã phát hiện và ai đã xử lí."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Vì sao người ta cần ghi lại các sự cố AI cho mọi người cùng đọc?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Trang này bằng tiếng Anh, thầy cô sẽ trình chiếu và tóm tắt."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image34.png",
+     "caption": "Sơ đồ tư duy Bài 10.12."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Hệ thống AI "
+        },
+        {
+         "text": "không phải làm xong là xong",
+         "b": true
+        },
+        {
+         "text": ". Thế giới thay đổi, người dùng thay đổi, nên khi vận hành luôn phát sinh vấn đề."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sáu loại vấn đề thường gặp: "
+        },
+        {
+         "text": "dữ liệu lỗi thời; đầu ra sai hoặc thiên lệch; quá tải; bị dùng sai mục đích; tối ưu chỉ số này làm hỏng chỉ số khác; kênh phản hồi không hoạt động",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mỗi vấn đề gắn với một hoặc vài "
+        },
+        {
+         "text": "thành phần",
+         "b": true
+        },
+        {
+         "text": " của hệ thống; tìm đúng thành phần thì biết ai sửa và sửa gì."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khắc phục có ý nghĩa giữ cho hệ thống "
+        },
+        {
+         "text": "an toàn, công bằng, đáng tin cậy",
+         "b": true
+        },
+        {
+         "text": ", và thể hiện "
+        },
+        {
+         "text": "trách nhiệm",
+         "b": true
+        },
+        {
+         "text": " của người vận hành."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi hệ thống AI gây hại, "
+        },
+        {
+         "text": "người vận hành chịu trách nhiệm",
+         "b": true
+        },
+        {
+         "text": ", không phải “cái máy”."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Tối ưu hóa",
+         "b": true
+        },
+        {
+         "text": " luôn cần câu hỏi: tốt hơn theo con số nào, và tốt cho ai?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dự liệu được sự cố là dấu hiệu của "
+        },
+        {
+         "text": "thiết kế có trách nhiệm",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Xếp mỗi sự cố vào một trong sáu loại vấn đề."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Sự cố",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Loại vấn đề",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "a"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống gợi ý sách của thư viện không bao giờ gợi ý những cuốn mới nhập năm nay"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "b"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ngày công bố điểm thi, cổng tra cứu có trợ lí AI bị treo suốt buổi sáng"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "c"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một ứng dụng học tập được chỉnh để gửi thật nhiều thông báo nhắc nhở; số lần mở ứng dụng tăng, nhưng nhiều học sinh thấy phiền và tắt hết thông báo"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "d"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hộp thư góp ý của một chatbot đầy thư nhưng địa chỉ nhận thư đã bị bỏ từ năm ngoái"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "e"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một số người dùng tìm cách khiến công cụ tạo ảnh vẽ hình giả mạo người nổi tiếng"
+          }
+         ]
+        }
+       ],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi sự cố ở Bài 1, cho biết thành phần nào của hệ thống liên quan và nêu một cách khắc phục."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Một hệ thống cảnh báo ngập quanh cổng trường hoạt động tốt suốt mùa mưa năm ngoái. Năm nay, thành phố vừa nâng cấp cống thoát nước ở hai con đường gần trường. Hãy dự đoán hệ thống sẽ gặp vấn đề gì, vì sao, và ai nên làm gì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Trong chuyện chatbot của hãng hàng không, hãng nói chatbot “tự chịu trách nhiệm về việc nó làm”. Dùng những gì em đã học ở Bài 10.1 và 10.2, hãy giải thích vì sao lập luận này không đứng vững."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Một nhóm bạn tự hào báo cáo: “Chúng em đã tối ưu trợ lí học tập để trả lời nhanh gấp ba lần.” Em hãy đặt cho nhóm ba câu hỏi để biết việc tối ưu này có thật sự tốt cho người học không."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Hoàn thiện sản phẩm của nhóm.",
+       "b": true
+      },
+      {
+       "text": " Ghép câu mục tiêu, sơ đồ năm thành phần và bảng sự cố thành một bản mô tả ý tưởng hoàn chỉnh. Tập báo cáo trong 2 phút theo bốn ý ở mục 5."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Bức thư gửi chính mình.",
+       "b": true
+      },
+      {
+       "text": " Viết 5 đến 7 câu cho chính em của năm lớp 11: sau năm học này, cách em nhìn và dùng AI đã thay đổi thế nào? Em muốn tìm hiểu thêm điều gì?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia-cuoi-nam",
+   "title": "Tự đánh giá cuối năm",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra vai trò của con người trong một hệ thống AI và giải thích vì sao cần kiểm soát AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể tên các luật bảo vệ em trong không gian số"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận ra khi nào dùng AI là vi phạm và biết khai báo sử dụng AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt AI tạo sinh với AI phân loại, dự đoán"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết câu lệnh rõ ràng và kiểm chứng kết quả AI trả về"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân tích ảnh hưởng của dữ liệu đến chất lượng AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô tả mục tiêu và năm thành phần của một hệ thống AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu sự cố có thể xảy ra khi vận hành và ý nghĩa của việc khắc phục"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vận hành"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giai đoạn hệ thống AI đang được sử dụng thật, có con người theo dõi và chăm sóc"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tối ưu hóa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều chỉnh hệ thống để tốt hơn theo một tiêu chí nào đó"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự cố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều gây hại hoặc làm hệ thống không đạt mục tiêu khi đang vận hành"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giám sát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Theo dõi kết quả của hệ thống và tiếp nhận phản hồi trong lúc vận hành"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khắc phục"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sửa nguyên nhân của sự cố và bù đắp hậu quả cho người bị ảnh hưởng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) dữ liệu lỗi thời; b) quá tải; c) tối ưu chỉ số này làm hỏng chỉ số khác; d) kênh phản hồi không hoạt động; e) bị dùng sai mục đích."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Dữ liệu, mô hình: cập nhật danh mục sách, cho hệ thống học lại định kì. b) Vận hành: tăng năng lực máy chủ vào ngày cao điểm, có trang tra cứu dự phòng. c) Mục tiêu: đổi tiêu chí từ “số lần mở” sang “học sinh có học được không”; cho người dùng chọn tần suất thông báo. d) Phản hồi: giao người chịu trách nhiệm đọc và xử lí góp ý. e) Đầu ra, quy định sử dụng: đặt giới hạn, gắn nhãn nội dung do AI tạo, theo dõi và chặn hành vi lợi dụng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Dữ liệu lỗi thời do bối cảnh thay đổi: mô hình học quy luật “mưa chừng này thì ngập” của năm ngoái, nay cống mới làm quy luật ấy khác đi, hệ thống sẽ cảnh báo ngập nhầm ở hai con đường đó. Người phụ trách cần thu số liệu mùa mưa năm nay, cho mô hình học lại; trong lúc chờ, ghi chú cho người dùng biết cảnh báo ở hai đường này có thể chưa chính xác."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: chatbot không tự sinh ra; hãng là người vận hành, đã đặt nó lên trang web của mình và hưởng lợi từ nó. Máy không thể giải thích, xin lỗi hay bồi thường; chỉ con người và tổ chức mới chịu trách nhiệm được. Đó cũng là kết luận của cơ quan tài phán."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: Sau khi nhanh hơn, tỉ lệ trả lời đúng có giảm không? Người học có hiểu bài hơn không, hay chỉ nhận đáp án nhanh hơn? Nhóm đã hỏi ý kiến người dùng chưa, và có nhóm người dùng nào bị ảnh hưởng xấu không?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [13], [14] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

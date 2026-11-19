@@ -1,0 +1,1827 @@
+{
+ "id": "10.3",
+ "slug": "bai-10-03",
+ "grade": 10,
+ "num": 3,
+ "topicId": "10.1",
+ "title": "Pháp luật bảo vệ em trong không gian số",
+ "meta": "Chuyên đề 10.1: Con người làm chủ AI (tiết 3 trong 3 tiết)",
+ "period": {
+  "index": 3,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Kể tên được một số luật có chức năng bảo vệ người dùng trong không gian số: "
+   },
+   {
+    "text": "Luật An ninh mạng, Luật Dữ liệu, Luật Bảo vệ dữ liệu cá nhân, Luật Trí tuệ nhân tạo",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được ở mức khái niệm mỗi luật bảo vệ em ở điểm nào."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được các bước nên làm khi quyền của mình trong không gian số bị xâm phạm."
+   }
+  ]
+ ],
+ "keywords": [
+  "không gian số",
+  "dữ liệu cá nhân",
+  "chủ thể dữ liệu",
+  "nội dung giả mạo do AI tạo ra",
+  "gắn nhãn"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-chuyen-cua-minh",
+   "title": "Khởi động: Chuyện của Minh",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Minh, học sinh lớp 10, có một tấm ảnh chân dung đăng trên mạng xã hội. Một tài khoản lạ lấy tấm ảnh ấy, dùng công cụ AI ghép vào một đoạn video quảng cáo. Đoạn video lan trong các nhóm chat. Bạn bè nhắn hỏi: “Cậu đi quảng cáo từ bao giờ thế?”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Minh vừa ngạc nhiên, vừa bực, vừa lo."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Minh có được pháp luật bảo vệ không? Em biết luật nào liên quan đến chuyện này?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có thể em biết chắc là “có luật”, nhưng chưa gọi được tên. Cuối bài học, em sẽ chỉ ra được ít nhất ba luật đang đứng về phía Minh."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-bon-tam-khien-trong-khong-gian-so",
+   "title": "1. Bốn “tấm khiên” trong không gian số",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em có thể hình dung không gian số như một thành phố. Ở thành phố thật có luật giao thông, có quy định về nhà cửa, về giấy tờ tùy thân. Thành phố số cũng có những luật riêng. Bốn luật dưới đây giống bốn tấm khiên, mỗi tấm che cho em ở một hướng."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "1.1. Luật An ninh mạng: giữ cho “đường phố” an toàn",
+     "id": "1-1-luat-an-ninh-mang-giu-cho-duong-pho-an-toan"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Luật An ninh mạng hiện hành là Luật số 116/2025/QH15, được Quốc hội thông qua ngày 10/12/2025 và có hiệu lực từ ngày 01/7/2026, thay cho Luật An ninh mạng năm 2018 và Luật An toàn thông tin mạng năm 2015 [7]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Luật này quan tâm đến việc giữ cho không gian mạng an toàn, lành mạnh. Hai điểm gần với em nhất:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Luật nghiêm cấm việc dùng AI hoặc công nghệ mới để "
+        },
+        {
+         "text": "giả mạo video, hình ảnh, giọng nói của người khác",
+         "b": true
+        },
+        {
+         "text": " trái pháp luật [7]."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Luật có quy định "
+        },
+        {
+         "text": "bảo vệ trẻ em trên không gian mạng",
+         "b": true
+        },
+        {
+         "text": ": trẻ em được bảo vệ thông tin cá nhân và đời sống riêng tư; các đơn vị cung cấp dịch vụ trực tuyến có trách nhiệm ngăn chặn, gỡ bỏ nội dung gây nguy hại cho trẻ em [7]."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nếu em bị bôi nhọ, giả mạo trong một nhóm chat:",
+         "b": true
+        },
+        {
+         "text": " đây là luật em nghĩ đến đầu tiên."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "1.2. Luật Dữ liệu: quy tắc chung cho dữ liệu số",
+     "id": "1-2-luat-du-lieu-quy-tac-chung-cho-du-lieu-so"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Luật Dữ liệu (Luật số 60/2024/QH15, được Quốc hội thông qua ngày 30/11/2024) đặt ra quy tắc chung cho việc thu thập, quản lí, xử lí, sử dụng và bảo vệ "
+      },
+      {
+       "text": "dữ liệu số",
+       "b": true
+      },
+      {
+       "text": ", cùng quyền và trách nhiệm của các bên đối với dữ liệu [8]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em có thể hiểu giản dị: bất kì ai thu thập và sử dụng dữ liệu, từ một cơ quan đến một ứng dụng trên điện thoại, đều phải làm theo quy tắc, không được tùy tiện."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "1.3. Luật Bảo vệ dữ liệu cá nhân: thông tin về em là của em",
+     "id": "1-3-luat-bao-ve-du-lieu-ca-nhan-thong-tin-ve-em-la-cua-em"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) có hiệu lực từ ngày 01/01/2026 [6]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dữ liệu cá nhân",
+       "b": true
+      },
+      {
+       "text": " là thông tin xác định hoặc giúp xác định một con người cụ thể [1]: họ tên, ngày sinh, hình ảnh, giọng nói, số điện thoại, địa chỉ, kết quả học tập, thông tin sức khỏe… Tấm ảnh chân dung của Minh là dữ liệu cá nhân."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Người có dữ liệu được gọi là "
+      },
+      {
+       "text": "chủ thể dữ liệu",
+       "b": true
+      },
+      {
+       "text": ". Luật trao cho chủ thể dữ liệu nhiều quyền, trong đó có [6]:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Quyền",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nghĩa là",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được biết"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Biết dữ liệu của mình đang được xử lí thế nào"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đồng ý hoặc không đồng ý; rút lại sự đồng ý"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc xử lí dữ liệu của mình cần có sự đồng ý của mình; đã đồng ý vẫn có thể đổi ý"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xem, chỉnh sửa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được xem dữ liệu của mình và yêu cầu sửa cho đúng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Yêu cầu cung cấp, xóa, hạn chế xử lí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được yêu cầu xóa dữ liệu của mình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phản đối"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được gửi yêu cầu phản đối việc xử lí dữ liệu của mình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khiếu nại, tố cáo, khởi kiện, yêu cầu bồi thường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khi quyền bị xâm phạm, được yêu cầu xử lí và bồi thường theo quy định"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm: Luật Dữ liệu và Luật Bảo vệ dữ liệu cá nhân",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hai tên gần giống nhau nên rất dễ lẫn."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Luật Dữ liệu",
+         "b": true
+        },
+        {
+         "text": " nói về dữ liệu số "
+        },
+        {
+         "text": "nói chung",
+         "b": true
+        },
+        {
+         "text": ": dữ liệu thời tiết, dữ liệu giao thông, dữ liệu của cơ quan, doanh nghiệp…"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Luật Bảo vệ dữ liệu cá nhân",
+         "b": true
+        },
+        {
+         "text": " nói "
+        },
+        {
+         "text": "riêng",
+         "b": true
+        },
+        {
+         "text": " về thông tin gắn với một con người cụ thể."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mẹo nhớ: thấy chữ “cá nhân” thì nghĩ ngay đến “thông tin về một người có tên, có mặt”."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "1.4. Luật Trí tuệ nhân tạo: em có quyền biết đâu là máy",
+     "id": "1-4-luat-tri-tue-nhan-tao-em-co-quyen-biet-dau-la-may"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Luật Trí tuệ nhân tạo (Luật số 134/2025/QH15) được Quốc hội thông qua ngày 10/12/2025 và có hiệu lực từ ngày 01/3/2026. Việt Nam là một trong số ít quốc gia có luật riêng về AI [5]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba điểm em nên biết:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Hệ thống AI được quản lí theo "
+        },
+        {
+         "text": "ba mức rủi ro",
+         "b": true
+        },
+        {
+         "text": ": cao, trung bình, thấp. Mức rủi ro càng cao thì yêu cầu càng chặt [5]."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hệ thống AI tương tác trực tiếp với con người phải được thiết kế, vận hành sao cho "
+        },
+        {
+         "text": "người sử dụng nhận biết được",
+         "b": true
+        },
+        {
+         "text": " mình đang tương tác với AI [5]."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nội dung mô phỏng, giả lập "
+        },
+        {
+         "text": "ngoại hình, giọng nói của người thật",
+         "b": true
+        },
+        {
+         "text": " hoặc tái hiện sự kiện có thật phải được "
+        },
+        {
+         "text": "gắn nhãn dễ nhận biết",
+         "b": true
+        },
+        {
+         "text": " để phân biệt với nội dung thật [5]."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Luật Trí tuệ nhân tạo cũng quy định việc đưa nội dung cơ bản về trí tuệ nhân tạo, tư duy tính toán, kĩ năng số và đạo đức công nghệ vào chương trình học bắt buộc [5]. Những bài học về AI em đang học năm nay có liên quan trực tiếp đến quy định ấy."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Nhìn lại bốn tấm khiên",
+     "id": "nhin-lai-bon-tam-khien"
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Luật",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bảo vệ em ở điểm nào (mức khái niệm)",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Luật An ninh mạng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "An toàn trên không gian mạng; cấm dùng AI giả mạo hình ảnh, giọng nói người khác trái pháp luật; bảo vệ trẻ em trên mạng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Luật Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quy tắc chung về thu thập, quản lí, sử dụng, bảo vệ dữ liệu số"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Luật Bảo vệ dữ liệu cá nhân"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông tin gắn với một con người cụ thể; quyền được biết, đồng ý, rút lại đồng ý, yêu cầu xóa"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Luật Trí tuệ nhân tạo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền được biết khi tương tác với AI; gắn nhãn nội dung do AI tạo ra mô phỏng người thật, sự kiện thật"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trở lại chuyện của Minh. Với mỗi luật trong bảng, em hãy thử trả lời: luật này có liên quan đến chuyện của Minh không? Liên quan ở chi tiết nào? (Gợi ý: tấm ảnh là gì của Minh? Đoạn video có gắn nhãn không? Việc phát tán ảnh hưởng gì đến Minh?)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image8.png",
+     "caption": "Hình 10.3.1. Bốn luật bảo vệ em trong không gian số."
+    }
+   ]
+  },
+  {
+   "id": "2-khi-co-chuyen-xay-ra-bon-buoc-ung-pho",
+   "title": "2. Khi có chuyện xảy ra: bốn bước ứng phó",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Biết tên luật là một chuyện. Biết mình phải làm gì khi gặp chuyện còn quan trọng hơn."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bốn bước ứng phó",
+         "b": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Dừng lại.",
+         "b": true
+        },
+        {
+         "text": " Không trả lời, không chuyển tiền, không chuyển tiếp nội dung."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Lưu bằng chứng.",
+         "b": true
+        },
+        {
+         "text": " Chụp màn hình, lưu đường dẫn, ghi lại thời gian."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Báo người lớn tin cậy.",
+         "b": true
+        },
+        {
+         "text": " Cha mẹ, thầy cô chủ nhiệm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Báo cáo.",
+         "b": true
+        },
+        {
+         "text": " Dùng chức năng báo cáo của nền tảng; với việc nghiêm trọng, cùng người lớn báo cơ quan chức năng."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với Minh: Minh không nên tự mình nhắn tin tranh cãi với tài khoản lạ. Minh chụp màn hình đoạn video và tên tài khoản, nói với cha mẹ và cô chủ nhiệm, rồi cùng người lớn báo cáo nội dung trên nền tảng và yêu cầu gỡ bỏ."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Câu chuyện có thật: cuộc gọi của “người thân”",
+     "id": "cau-chuyen-co-that-cuoc-goi-cua-nguoi-than"
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bộ Công an đã cảnh báo về thủ đoạn dùng công nghệ giả mạo hình ảnh, giọng nói (deepfake) để gọi video cho nạn nhân, giả làm người thân, bạn bè cần tiền gấp. Một số dấu hiệu được nêu: cuộc gọi rất ngắn; nét mặt ít cảm xúc, nói năng cứng nhắc; âm thanh không khớp với hình; cuộc gọi bị ngắt giữa chừng với lí do sóng yếu; và người gọi yêu cầu chuyển tiền vào một tài khoản không phải của chính họ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Khuyến cáo: giữ bình tĩnh; "
+        },
+        {
+         "text": "liên lạc với người thân qua một kênh khác",
+         "b": true
+        },
+        {
+         "text": " để kiểm tra; xem kĩ số tài khoản nhận tiền, nếu là tài khoản lạ thì không giao dịch. [9]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Công nghệ giả mạo ngày càng tinh vi, nên các dấu hiệu bằng mắt, bằng tai có thể không còn rõ. Cách phòng chắc chắn nhất vẫn là: "
+      },
+      {
+       "text": "xác minh qua một kênh khác",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "cảnh giác với mọi lời hối thúc chuyển tiền gấp",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em và bạn bên cạnh thống nhất một “câu hỏi bí mật” mà chỉ hai người biết câu trả lời (ví dụ: tên con mèo hồi lớp 6). Nếu một ngày em nhận được cuộc gọi lạ từ “bạn ấy”, em đã có cách kiểm tra. Hãy thử nghĩ cách tương tự cho gia đình mình."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-phap-luat-bao-ve-em-va-em-cung-phai-tuan-thu",
+   "title": "3. Pháp luật bảo vệ em, và em cũng phải tuân thủ",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có một điều các bạn hay quên: luật bảo vệ em thì cũng bảo vệ "
+      },
+      {
+       "text": "người khác khỏi em",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Ghép mặt bạn vào một tấm ảnh “cho vui” rồi đăng lên nhóm lớp: em đang dùng dữ liệu cá nhân của bạn mà chưa được đồng ý, và tạo ra nội dung giả mạo người thật."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Chuyển tiếp một “thông báo nghỉ học” chưa kiểm chứng: em có thể đang góp phần lan truyền thông tin sai."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dán danh sách lớp có họ tên, số điện thoại vào một công cụ AI: em đang đưa dữ liệu cá nhân của nhiều người đi mà họ không hề biết."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "“Em chỉ đùa thôi” không làm cho người bị ghép ảnh bớt tổn thương, và cũng không phải là lí do để được miễn trách nhiệm."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Trên mạng là ảo, ai xử lí được.”",
+         "b": true
+        },
+        {
+         "text": " Dấu vết số có thể lưu lại và dùng làm bằng chứng. Bốn bước ứng phó ở trên tồn tại chính vì việc xử lí là có thật."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Luật chỉ áp dụng cho người lớn, cho công ty.”",
+         "b": true
+        },
+        {
+         "text": " Luật áp dụng cho mọi người. Ở tuổi học sinh, em còn chịu thêm nội quy của nhà trường."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Phải thuộc điều khoản mới gọi là hiểu luật.”",
+         "b": true
+        },
+        {
+         "text": " Ở lớp 10, em cần nhớ "
+        },
+        {
+         "text": "tên luật",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "luật ấy bảo vệ điều gì",
+         "b": true
+        },
+        {
+         "text": ". Chi tiết thì tra văn bản gốc hoặc hỏi thầy cô."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-kiem-tra-mot-trang-web-truoc-khi-tin",
+   "title": "Trải nghiệm: Kiểm tra một trang web trước khi tin",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Pháp luật bảo vệ em, và Nhà nước cũng có những công cụ giúp em tự bảo vệ mình. Một trong số đó là trang tra cứu website lừa đảo."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image9.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " tinnhiemmang.vn"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " tinnhiemmang.vn/website-lua-dao (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em nhận ba tên miền mà thầy cô đưa ra."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em gõ từng tên miền vào ô tra cứu trên trang tinnhiemmang.vn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em ghi kết quả: trang an toàn, đáng ngờ hay đã bị cảnh báo lừa đảo."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Lần sau nhận được một đường dẫn lạ qua tin nhắn, em sẽ làm gì trước khi bấm vào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em chỉ gõ tên miền để tra cứu, không bấm vào đường dẫn đáng ngờ."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image10.png",
+     "caption": "Sơ đồ tư duy Bài 10.3."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Trong không gian số có nhiều luật bảo vệ người dùng. Bốn luật em cần kể tên được: "
+        },
+        {
+         "text": "Luật An ninh mạng, Luật Dữ liệu, Luật Bảo vệ dữ liệu cá nhân, Luật Trí tuệ nhân tạo",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Luật An ninh mạng:",
+         "b": true
+        },
+        {
+         "text": " an toàn trên mạng; cấm giả mạo hình ảnh, giọng nói bằng AI trái pháp luật; bảo vệ trẻ em."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Luật Dữ liệu:",
+         "b": true
+        },
+        {
+         "text": " quy tắc chung cho dữ liệu số."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Luật Bảo vệ dữ liệu cá nhân:",
+         "b": true
+        },
+        {
+         "text": " thông tin gắn với một người cụ thể; quyền được biết, đồng ý, rút lại đồng ý, yêu cầu xóa."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Luật Trí tuệ nhân tạo:",
+         "b": true
+        },
+        {
+         "text": " được biết khi tương tác với AI; nội dung AI mô phỏng người thật, sự kiện thật phải gắn nhãn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi có chuyện: "
+        },
+        {
+         "text": "dừng lại, lưu bằng chứng, báo người lớn, báo cáo",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Luật bảo vệ em và cũng yêu cầu em "
+        },
+        {
+         "text": "tôn trọng quyền của người khác",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi tình huống, ghi luật có liên quan (một tình huống có thể liên quan nhiều luật). Kí hiệu: ANM (An ninh mạng), DL (Dữ liệu), CN (Bảo vệ dữ liệu cá nhân), AI (Trí tuệ nhân tạo)."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tình huống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Luật",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "a"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một ứng dụng luyện nghe tiếng Anh tự thu thập vị trí và danh bạ mà không hỏi ý kiến người dùng"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "b"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lan trò chuyện 20 phút với “nhân viên tư vấn” trên một trang web rồi mới biết đó là chatbot, không hề được báo trước"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "c"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một đoạn ghi âm giả giọng một ca sĩ nổi tiếng kêu gọi mua hàng lan trên mạng, không có nhãn “do AI tạo”"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "d"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hoa muốn một trang web xóa tài khoản và toàn bộ thông tin của mình nhưng bị từ chối"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "e"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một tài khoản giả danh nhà trường nhắn tin yêu cầu phụ huynh nộp tiền"
+          }
+         ]
+        }
+       ],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Trong các thông tin sau, thông tin nào là dữ liệu cá nhân? (a) Ảnh thẻ học sinh của em; (b) nhiệt độ ngoài trời hôm nay; (c) giọng nói của em trong một bản ghi âm; (d) điểm trung bình của cả khối 10, không kèm tên; (e) bảng điểm có họ tên của lớp em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Em nhận được tin nhắn thoại đúng giọng mẹ: “Mẹ đang kẹt, con chuyển gấp 2 triệu vào số tài khoản này giúp mẹ.” Viết ra những việc em sẽ làm, theo thứ tự."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Bạn Đức định dùng một ứng dụng AI để tạo đoạn clip “thầy hiệu phó hát rap” chiếu trong buổi liên hoan lớp. Em sẽ nói gì với Đức? Nêu ít nhất hai luật có liên quan và một cách làm khác vẫn vui mà không vi phạm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Giải thích cho một em học sinh lớp 6 sự khác nhau giữa Luật Dữ liệu và Luật Bảo vệ dữ liệu cá nhân, trong không quá ba câu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Kiểm tra quyền riêng tư.",
+       "b": true
+      },
+      {
+       "text": " Mở phần cài đặt của một ứng dụng em hay dùng, tìm mục quyền riêng tư. Ứng dụng đang được phép truy cập những gì (vị trí, micro, danh bạ, ảnh)? Có quyền nào em thấy không cần thiết và muốn tắt?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Chuẩn bị cho bài sau.",
+       "b": true
+      },
+      {
+       "text": " Đọc bản "
+      },
+      {
+       "text": "Quy tắc sử dụng AI",
+       "i": true
+      },
+      {
+       "text": " của trường. Đánh dấu một điều em thấy khó thực hiện nhất và nghĩ xem vì sao."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể tên bốn luật bảo vệ người dùng trong không gian số"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu mỗi luật bảo vệ em ở điểm nào"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt Luật Dữ liệu với Luật Bảo vệ dữ liệu cá nhân"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu bốn bước ứng phó khi quyền của mình bị xâm phạm"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không gian số"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Môi trường hoạt động trên mạng và các thiết bị số"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu cá nhân"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông tin xác định hoặc giúp xác định một con người cụ thể"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chủ thể dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người mà dữ liệu cá nhân nói về"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội dung giả mạo do AI tạo ra (deepfake)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hình ảnh, âm thanh, video do AI tạo ra hoặc chỉnh sửa để mô phỏng người thật, sự kiện thật với độ chân thực cao"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gắn nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đánh dấu để người xem biết nội dung do AI tạo ra hoặc chỉnh sửa"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) CN, DL; b) AI; c) AI, ANM; d) CN; e) ANM. Chấp nhận cách ghi khác nếu em giải thích hợp lí."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " (a), (c), (e) là dữ liệu cá nhân. (b) và (d) không gắn với một người cụ thể."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Không chuyển tiền; gọi lại cho mẹ bằng số quen thuộc hoặc hỏi bố, người thân khác; xem số tài khoản có phải của mẹ không; lưu lại tin nhắn; báo cho người lớn và báo cáo tài khoản gửi tin."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: giọng nói, hình ảnh của thầy là dữ liệu cá nhân (Luật Bảo vệ dữ liệu cá nhân); giả mạo hình ảnh, giọng nói người khác bằng AI (Luật An ninh mạng); nội dung mô phỏng người thật phải gắn nhãn (Luật Trí tuệ nhân tạo). Cách khác: xin phép và mời thầy tham gia thật, hoặc dùng nhân vật hoạt hình không mô phỏng ai."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: Luật Dữ liệu là quy tắc cho mọi loại dữ liệu trên máy tính. Luật Bảo vệ dữ liệu cá nhân chỉ nói về thông tin của riêng một người, như tên, ảnh, giọng nói của em. Thông tin đó là của em, người khác muốn dùng phải hỏi em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [5], [6], [7], [8], [9] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

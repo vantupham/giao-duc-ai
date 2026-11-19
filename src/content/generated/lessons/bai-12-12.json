@@ -1,0 +1,2405 @@
+{
+ "id": "12.12",
+ "slug": "bai-12-12",
+ "grade": 12,
+ "num": 12,
+ "topicId": "12.4",
+ "title": "Báo cáo phương án và tổng kết",
+ "meta": "Chuyên đề 12.4: Giải pháp và hợp tác phát triển sản phẩm AI (tiết 3 trong 3 tiết)",
+ "period": {
+  "index": 3,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Trình bày được phương án của nhóm theo "
+   },
+   {
+    "text": "bố cục bốn ý",
+    "b": true
+   },
+   {
+    "text": " trong thời gian ngắn."
+   }
+  ],
+  [
+   {
+    "text": "Phản biện",
+    "b": true
+   },
+   {
+    "text": " và "
+   },
+   {
+    "text": "đánh giá",
+    "b": true
+   },
+   {
+    "text": " được phương án của nhóm bạn một cách có căn cứ."
+   }
+  ],
+  [
+   {
+    "text": "Nhìn lại và nối được những điều đã học về AI trong "
+   },
+   {
+    "text": "ba năm",
+    "b": true
+   },
+   {
+    "text": " trung học phổ thông."
+   }
+  ]
+ ],
+ "keywords": [
+  "báo cáo",
+  "phản biện",
+  "căn cứ",
+  "điểm yếu đã biết",
+  "tổng kết"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-ba-phut-de-thuyet-phuc",
+   "title": "Khởi động: Ba phút để thuyết phục",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhóm em đã có một hồ sơ dự án: phiếu ý tưởng (Bài 12.7), công cụ dự định dùng (Bài 12.8), cách đánh giá (Bài 12.9), bảng so sánh phương án (Bài 12.10) và bảng phân vai (Bài 12.11). Hôm nay nhóm có "
+      },
+      {
+       "text": "ba phút",
+       "b": true
+      },
+      {
+       "text": " để trình bày trước lớp, và "
+      },
+      {
+       "text": "một phút",
+       "b": true
+      },
+      {
+       "text": " để trả lời câu hỏi."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Nếu chỉ được nói ba phút, em sẽ nói những gì? Em sẽ bỏ đi những gì?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhiều nhóm dành hai phút rưỡi để tả công nghệ và hết giờ trước khi kịp nói vì sao chọn phương án này. Người nghe thì muốn biết điều ngược lại: "
+      },
+      {
+       "text": "vì sao",
+       "b": true
+      },
+      {
+       "text": " phương án này phù hợp, và "
+      },
+      {
+       "text": "con người",
+       "b": true
+      },
+      {
+       "text": " ở đâu trong đó. Một bố cục rõ ràng giúp em dùng ba phút cho đúng chỗ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-bo-cuc-bao-cao-bon-y",
+   "title": "1. Bố cục báo cáo bốn ý",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image37.png",
+     "caption": "Hình 12.12.1. Bố cục báo cáo bốn ý và nguồn của mỗi ý trong các bài đã học. Ý 2 và ý 4 là hai ý người nghe chú ý nhất."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ý",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nội dung",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thời gian",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lấy từ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Nhiệm vụ và phương án đã chọn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai cần, cần gì; phương án của nhóm nhận gì, làm gì, trả ra gì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "30 giây"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 12.7, 12.10"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Vì sao phương án này phù hợp",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Căn cứ theo tiêu chí; đã loại phương án nào và vì sao"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "60 giây"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 12.10"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Những vai trò cần có và cách phối hợp",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai làm gì; chỗ nối nào cần chú ý"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "30 giây"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 12.11"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Cách đánh giá hiệu quả và điểm con người kiểm soát",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đo gì thì coi là đạt; ai quyết định, ai chịu trách nhiệm; điểm yếu đã biết"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "60 giây"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 12.9, 12.1 đến 12.3"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài báo cáo mẫu (dự án nhận biết lá bệnh ở vườn trường, khoảng ba phút):",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Ý 1.",
+         "b": true
+        },
+        {
+         "text": " Đội vườn của trường là các bạn lớp 10, hay phát hiện lá bệnh muộn vì không phân biệt được với lá cháy nắng. Nhóm em chọn phương án: một ứng dụng nhận ảnh chụp chiếc lá và báo một trong ba nhãn “nghi bệnh”, “khỏe”, “không chắc”, kèm mức chắc chắn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Ý 2.",
+         "b": true
+        },
+        {
+         "text": " Nhóm em chọn phương án này vì kết quả cần có là một nhãn, và chúng em tự thu được khoảng 300 ảnh có thầy dạy Sinh gán nhãn. Nhóm đã loại hai phương án. Phương án dùng tờ hướng dẫn có ảnh mẫu thì đơn giản hơn, nhưng đội vườn đã thử và vẫn lúng túng. Phương án để ứng dụng tự gửi lệnh phun thuốc cho bác lao công thì bị loại, vì phun thuốc là việc khó đảo ngược, phải do người có chuyên môn quyết định."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Ý 3.",
+         "b": true
+        },
+        {
+         "text": " Nhóm có bốn bạn: Lan tìm hiểu nhu cầu và thiết kế màn hình; Minh lo dữ liệu; Khoa huấn luyện mô hình; Hà kiểm thử riêng. Thầy dạy Sinh là chuyên gia xác nhận nhãn. Chỗ nối chúng em chú ý nhất là giữa Minh và thầy: mọi ảnh đều phải được thầy xem."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Ý 4.",
+         "b": true
+        },
+        {
+         "text": " Hà sẽ thử bằng 60 ảnh mới, đo tỉ lệ đúng chung và riêng theo trời nắng, trời râm, và đếm số lần bỏ sót lá bệnh, vì với chúng em bỏ sót đáng lo hơn báo nhầm. Ứng dụng chỉ gợi ý; lá “nghi bệnh” hoặc “không chắc” đều được thầy xác nhận trước khi xử lí. Điểm yếu chúng em đã biết: mô hình chỉ học các cây trong vườn trường mình, và sang năm cần có người bổ sung ảnh. Chúng em đã viết một trang hướng dẫn để bàn giao cho khóa sau."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em để ý ba điều trong bài mẫu:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Không có tên công cụ nào ở ý 1 và ý 2.",
+         "b": true
+        },
+        {
+         "text": " Người nghe cần hiểu việc và lí do trước."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ý 2 nêu cả phương án đã loại.",
+         "b": true
+        },
+        {
+         "text": " Điều đó cho thấy nhóm đã cân nhắc chứ không chọn theo thói quen."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ý 4 tự nêu điểm yếu.",
+         "b": true
+        },
+        {
+         "text": " Phương án tốt không phải là phương án không có điểm yếu, mà là phương án biết rõ điểm yếu và có cách xử lí."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Báo cáo hay là báo cáo cho thấy sản phẩm hiện đại và không có khuyết điểm.”",
+         "b": true
+        },
+        {
+         "text": " Trong bài này, hai tiêu chí được chú ý nhất là: "
+        },
+        {
+         "text": "lí do lựa chọn có căn cứ",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "vai trò của con người rõ ràng",
+         "b": true
+        },
+        {
+         "text": ". Một nhóm trình bày một giải pháp không dùng AI (kiểu E) với lí do thuyết phục sẽ được đánh giá cao hơn một nhóm trình bày hệ thống tự động hoàn toàn mà không nói ai chịu trách nhiệm."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-phan-bien-hoi-de-giup-nhau-tot-len",
+   "title": "2. Phản biện: hỏi để giúp nhau tốt lên",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sau mỗi bài báo cáo, các nhóm khác có một phút đặt câu hỏi. Phản biện không phải là bắt bẻ. Một câu hỏi phản biện tốt giúp nhóm bạn "
+      },
+      {
+       "text": "nhìn thấy điều họ chưa thấy",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kho câu hỏi phản biện",
+       "b": true
+      },
+      {
+       "text": ", xếp theo các bài đã học:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hỏi về",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi mẫu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Từ bài",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhu cầu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Các bạn đã hỏi người sẽ dùng chưa? Họ nói gì?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.7"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách đơn giản hơn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Nếu không dùng AI thì làm việc này thế nào? Vì sao cách đó chưa đủ?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.7"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Dữ liệu lấy ở đâu? Có dữ liệu của ai mà chưa hỏi ý kiến không?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "11.5, 12.8"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đánh giá"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Các bạn thử bằng dữ liệu nào? Có đo riêng từng nhóm không?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.9"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểu sai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Với hệ thống này, bỏ sót hay báo nhầm đáng lo hơn?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.9"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rủi ro"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Nếu hệ thống sai thì ai bị ảnh hưởng, có sửa được không?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.5"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Ai là người quyết định cuối cùng? Người đó có đủ thông tin và thời gian để xem xét không?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.2"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải trình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Người dùng muốn phản ánh thì gửi cho ai?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.3"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Duy trì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Sang năm ai cập nhật? Nếu không ai cập nhật thì chuyện gì xảy ra?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "11.4, 12.10"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vai trò"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Ai kiểm thử? Người đó có phải là người làm ra mô hình không?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.11"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách trả lời khi bị hỏi đúng chỗ yếu:",
+       "b": true
+      },
+      {
+       "text": " đừng chống chế. Ba câu trả lời tốt:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Chúng mình đã nghĩ đến điều đó và xử lí như sau: …”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Đó là điểm yếu chúng mình đã biết; hiện chấp nhận vì …, và sẽ theo dõi bằng cách …”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Chúng mình chưa nghĩ đến. Cảm ơn bạn, nhóm sẽ bổ sung.”"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu thứ ba không làm nhóm em mất điểm. Nó cho thấy nhóm biết lắng nghe, và đó là kĩ năng hợp tác em học ở Bài 12.11."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Chuẩn bị và báo cáo",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Theo nhóm: viết bài báo cáo theo bốn ý, mỗi ý ba đến năm câu. Tập nói một lần có bấm giờ; nếu quá ba phút, cắt bớt ở ý 1 và ý 3, không cắt ý 2 và ý 4. Dự đoán hai câu hỏi nhóm có thể bị hỏi và chuẩn bị câu trả lời."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Khi nghe nhóm bạn: mỗi em ghi "
+        },
+        {
+         "text": "một điểm mạnh có dẫn chứng",
+         "b": true
+        },
+        {
+         "text": " (“nhóm bạn đã đo riêng theo điều kiện ánh sáng”) và "
+        },
+        {
+         "text": "một câu hỏi",
+         "b": true
+        },
+        {
+         "text": " lấy từ kho câu hỏi."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-danh-gia-phuong-an-cua-nhom-ban",
+   "title": "3. Đánh giá phương án của nhóm bạn",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi đánh giá, em dùng năm tiêu chí sau. Mỗi tiêu chí có ba mức."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tiêu chí",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cần hỗ trợ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đáp ứng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đáp ứng tốt",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Nhiệm vụ và phương án"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô tả chung chung"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu rõ ai cần, hệ thống nhận gì, trả ra gì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu cả việc hệ thống không làm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Lí do lựa chọn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn theo công nghệ hoặc cảm tính"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có căn cứ theo ít nhất ba tiêu chí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu phương án đã loại và sự đánh đổi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Vai trò và phối hợp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không đề cập hoặc phân vai chung chung"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mỗi vai có việc cụ thể"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có kiểm thử riêng và có người ngoài nhóm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Đánh giá hiệu quả, kiểm soát của con người"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không đề cập"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu cách đánh giá và một điểm con người kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đánh giá cả chung lẫn từng nhóm; có người chịu trách nhiệm rõ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Trình bày, phản biện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đọc nguyên văn, quá giờ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đúng giờ, đủ bốn ý"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trả lời thỏa đáng; đánh giá nhóm bạn có dẫn chứng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba lỗi chung hay gặp, em có thể tự soát trước khi báo cáo:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Chọn theo công nghệ:",
+         "b": true
+        },
+        {
+         "text": " bắt đầu bằng “nhóm em dùng công cụ X” thay vì bắt đầu bằng nhu cầu."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bỏ quên khâu vận hành:",
+         "b": true
+        },
+        {
+         "text": " nói rất kĩ đến lúc ra mắt, không nói gì về việc ai theo dõi và cập nhật sau đó."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thiếu vai kiểm thử:",
+         "b": true
+        },
+        {
+         "text": " người làm tự xác nhận sản phẩm đạt."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Các nhận xét trong bài học này dùng để giúp nhau tiến bộ. Theo Khung nội dung của Bộ Giáo dục và Đào tạo, nội dung giáo dục AI được đánh giá bằng nhận xét, không lấy điểm riêng [1]."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-nhin-lai-lop-12",
+   "title": "4. Nhìn lại lớp 12",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mười hai bài của năm nay xếp thành bốn chặng."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chuyên đề",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi lớn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều em mang theo",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.1. Quyền kiểm soát và trách nhiệm giải trình",
+           "b": true
+          },
+          {
+           "text": " (Bài 12.1 đến 12.3)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người kiểm soát và chịu trách nhiệm về AI bằng cách nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tám giai đoạn vòng đời; ba mức phân vai; sáu biểu hiện của trách nhiệm giải trình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.2. Đạo đức, rủi ro và trách nhiệm công dân",
+           "b": true
+          },
+          {
+           "text": " (Bài 12.4 đến 12.6)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thế nào là làm ra và dùng AI một cách tử tế?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sáu nguyên tắc đạo đức; thang ba mức rủi ro; bốn nội dung trách nhiệm công dân"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.3. Công cụ và đánh giá",
+           "b": true
+          },
+          {
+           "text": " (Bài 12.7 đến 12.9)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Từ một nhu cầu, làm sao có một công cụ và biết nó tốt đến đâu?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Năm kiểu ý tưởng; bốn bước huấn luyện; ba nguyên tắc đánh giá"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "12.4. Giải pháp và hợp tác",
+           "b": true
+          },
+          {
+           "text": " (Bài 12.10 đến 12.12)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn cách làm nào, và cần những ai?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Năm tiêu chí so sánh; các vai trò; báo cáo bốn ý"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-nhin-lai-ba-nam",
+   "title": "5. Nhìn lại ba năm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba mươi sáu bài học trong ba năm có thể tóm lại bằng ba động từ, đúng với ba mức phát triển năng lực trong khung năng lực AI cho học sinh của UNESCO: hiểu, áp dụng, sáng tạo [2]."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image38.png",
+     "caption": "Hình 12.12.2. Bản đồ ba năm học về AI. Mỗi lớp là một bậc; bốn mạch nội dung chạy xuyên suốt cả ba năm."
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lớp 10: Hiểu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lớp 11: Áp dụng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lớp 12: Thiết kế và chịu trách nhiệm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người và AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người ở đâu trong hệ thống AI; vì sao phải kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quy trình bảy bước; nâng cao năng lực hay làm thay"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vòng đời; phân vai; trách nhiệm giải trình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đạo đức và pháp luật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Pháp luật bảo vệ em; ranh giới khi dùng AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rủi ro và sự cố; bền vững, công bằng; quyền với dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sáu nguyên tắc; mức độ rủi ro; trách nhiệm công dân"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kĩ thuật và ứng dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các loại AI; câu lệnh tốt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI hỗ trợ việc học; câu lệnh nâng cao; công nghệ, nơ-ron, phân lớp, phân cụm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểu ý tưởng; công cụ; đánh giá hiệu quả"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế hệ thống"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu; năm thành phần; sự cố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sáu bước thiết kế và vận hành"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn phương án; vai trò và hợp tác; báo cáo"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu phải rút cả ba năm thành vài câu để mang theo, đó có thể là năm câu sau."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "AI là công cụ do con người làm ra, và nó có thể sai.",
+         "b": true
+        },
+        {
+         "text": " Nó học từ dữ liệu; dữ liệu thế nào thì nó thế ấy."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người đặt mục tiêu, con người kiểm tra, con người chịu trách nhiệm.",
+         "b": true
+        },
+        {
+         "text": " Việc càng hệ trọng, con người càng phải ở vị trí quyết định."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dùng AI để giỏi lên, không để khỏi phải nghĩ.",
+         "b": true
+        },
+        {
+         "text": " Phần cốt lõi của việc học, và của mọi quyết định về đời mình, là của em."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Một con số, một câu trả lời trôi chảy, một lời cam kết đều cần bằng chứng.",
+         "b": true
+        },
+        {
+         "text": " Hỏi: đo thế nào, dựa vào đâu, ai kiểm chứng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu của mình thì cân nhắc, của người thì phải hỏi.",
+         "b": true
+        },
+        {
+         "text": " Và khi thấy điều chưa đúng, hãy lên tiếng đúng kênh, đúng cách."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Công cụ các em dùng hôm nay sẽ đổi tên, đổi mặt, có thể biến mất trong vài năm tới. Năm câu này thì không cũ. Dù em theo ngành nào, làm nghề gì, em sẽ làm việc cùng AI và cùng những người làm ra AI. Mong rằng em sẽ là người "
+      },
+      {
+       "text": "hỏi đúng câu, làm đúng phần của mình, và giữ cho công nghệ phục vụ con người.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Lá thư cho mình năm năm sau",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Viết một lá thư ngắn (khoảng 150 chữ) gửi cho chính em năm năm sau. Trong thư, em trả lời ba câu hỏi:"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Trong ba năm học về AI, điều gì đã thay đổi nhiều nhất trong cách em dùng AI?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Trong năm câu ở trên, em muốn mình giữ được câu nào nhất? Vì sao?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Em đoán năm năm nữa AI sẽ khác thế nào, và em muốn mình đang làm gì với nó?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em giữ lá thư trong hồ sơ học tập. Nếu muốn, em có thể chia sẻ với thầy cô và cha mẹ."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image39.png",
+     "caption": "Sơ đồ tư duy Bài 12.12."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Báo cáo bốn ý:",
+         "b": true
+        },
+        {
+         "text": " nhiệm vụ và phương án đã chọn; vì sao phù hợp và đã loại gì; vai trò và cách phối hợp; cách đánh giá và điểm con người kiểm soát."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hai điều người nghe chú ý nhất: "
+        },
+        {
+         "text": "lí do lựa chọn có căn cứ",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "vai trò của con người",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phản biện",
+         "b": true
+        },
+        {
+         "text": " để giúp nhau tốt lên; bị hỏi đúng chỗ yếu thì nhận và bổ sung."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phương án tốt là phương án "
+        },
+        {
+         "text": "biết rõ điểm yếu và có cách xử lí",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba năm, ba bậc: "
+        },
+        {
+         "text": "hiểu, áp dụng, thiết kế và chịu trách nhiệm",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Một nhóm mở đầu báo cáo: “Nhóm em dùng công cụ Teachable Machine để làm một mô hình AI rất hiện đại.” Em viết lại câu mở đầu theo ý 1 của bố cục, tự đặt nội dung giả định."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Mỗi câu sau thuộc ý nào trong bốn ý? a) “Chúng em đã loại phương án nhận diện khuôn mặt vì cần thu dữ liệu cá nhân.” b) “Hà kiểm thử riêng, không tham gia huấn luyện.” c) “Đạt nếu tỉ lệ đúng với cả hai nhóm đều trên 85%.” d) “Cô thủ thư cần học sinh tự tra được vị trí sách.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Nhóm bạn báo cáo một chatbot trả lời câu hỏi về lịch thi, và nói: “Chatbot của chúng mình chính xác 100%.” Em chọn hai câu hỏi phản biện phù hợp nhất từ kho câu hỏi và giải thích vì sao chọn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Nhóm em bị hỏi: “Sang năm các bạn ra trường thì ai cập nhật?” và nhóm chưa nghĩ đến. Viết một câu trả lời trung thực và một việc nhóm sẽ bổ sung vào phương án."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Chọn một câu trong năm câu ở mục 5. Kể một tình huống có thật của em trong ba năm qua minh họa cho câu đó."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hoàn thiện "
+      },
+      {
+       "text": "Hồ sơ năng lực AI",
+       "b": true
+      },
+      {
+       "text": " của em sau ba năm, gồm ba phần, tổng cộng không quá hai trang. Phần 1: ba sản phẩm em tự hào nhất trong ba năm học về AI (một quy trình, một bản phân tích, một đề xuất, một phương án…), mỗi sản phẩm kèm một câu vì sao. Phần 2: bảng tự đánh giá theo bốn mạch nội dung ở mục 5, mỗi mạch một việc em làm được và một việc em muốn làm tốt hơn. Phần 3: lá thư cho mình năm năm sau. Hồ sơ này là của em; nó cũng là tư liệu để thầy cô viết nhận xét cuối năm."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trình bày phương án theo bốn ý trong ba phút"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu lí do lựa chọn có căn cứ và phương án đã loại"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đặt câu hỏi phản biện và trả lời phản biện một cách xây dựng"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nối được các nội dung đã học về AI trong ba năm"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Báo cáo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trình bày ngắn gọn, có bố cục về một phương án trước người nghe"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phản biện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đặt câu hỏi, nêu nhận xét có căn cứ để làm rõ và cải thiện một phương án"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Căn cứ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lí do, dữ kiện, tiêu chí làm chỗ dựa cho một lựa chọn hoặc nhận định"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm yếu đã biết"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hạn chế của phương án mà nhóm đã nhận ra và có cách xử lí"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hồ sơ năng lực"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tập hợp sản phẩm và tự đánh giá cho thấy điều một người làm được"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: “Các bạn trực nhật mỗi ngày mất mười phút phân loại rác ở căn tin vì nhiều bạn bỏ nhầm thùng. Nhóm em đề xuất một trạm nhận ảnh món rác và báo nên bỏ vào thùng nào trong ba thùng.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Ý 2. b) Ý 3. c) Ý 4. d) Ý 1."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " “Các bạn thử bằng dữ liệu nào?”: con số 100% rất đáng ngờ nếu thử bằng chính các câu hỏi đã dùng khi làm. “Sang năm ai cập nhật?”: lịch thi thay đổi từng học kì, chatbot trả lời theo lịch cũ thì sai. Có thể thêm: “Khi chatbot không biết thì nó làm gì?”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: “Chúng mình chưa nghĩ đến, cảm ơn bạn. Nhóm sẽ viết một trang hướng dẫn cập nhật và đề nghị câu lạc bộ Tin học nhận bàn giao; nếu không có người nhận, phương án sẽ chuyển về cách đơn giản hơn là biểu mẫu đăng kí.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Câu trả lời riêng của em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [2] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

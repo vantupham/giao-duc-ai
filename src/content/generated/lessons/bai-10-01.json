@@ -1,0 +1,1874 @@
+{
+ "id": "10.1",
+ "slug": "bai-10-01",
+ "grade": 10,
+ "num": 1,
+ "topicId": "10.1",
+ "title": "Con người ở đâu trong một hệ thống AI?",
+ "meta": "Chuyên đề 10.1: Con người làm chủ AI (tiết 1 trong 3 tiết)",
+ "period": {
+  "index": 1,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nêu được ba vai trò của con người đối với một hệ thống AI: "
+   },
+   {
+    "text": "sử dụng, vận hành, tùy chỉnh",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Xác định được ai giữ từng vai trò trong một hệ thống AI cụ thể và họ làm những việc gì."
+   }
+  ],
+  [
+   {
+    "text": "Chỉ ra được việc nào có thể giao cho AI, việc nào phải do con người quyết định."
+   }
+  ]
+ ],
+ "keywords": [
+  "hệ thống AI",
+  "người sử dụng",
+  "người vận hành",
+  "người tùy chỉnh",
+  "tác nhân AI"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-ai-dang-cam-lai",
+   "title": "Khởi động: Ai đang cầm lái?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tối qua, Khoa định xem “một video thôi” trước khi học bài. Xem xong, ứng dụng gợi ý ngay video tiếp theo, đúng thứ Khoa thích. Rồi video nữa. Lúc ngẩng lên đã quá mười giờ."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Ai đã quyết định Khoa xem những gì tối qua: Khoa, ứng dụng, hay những người làm ra ứng dụng?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu em trả lời “Khoa”, em đúng: Khoa là người bấm xem. Nếu em trả lời “ứng dụng”, em cũng đúng: nó đã chọn và xếp thứ tự các video. Nếu em trả lời “những người làm ra ứng dụng”, em vẫn đúng: họ đã thiết kế để ứng dụng gợi ý theo cách ấy."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cả ba câu trả lời đều đúng một phần, vì đằng sau mỗi sản phẩm AI luôn có nhiều con người, mỗi người một vai. Bài học đầu tiên của năm nay giúp em gọi đúng tên từng vai, và nhận ra chính mình đang đứng ở vai nào."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-bon-tu-em-se-gap-suot-nam-hoc",
+   "title": "1. Bốn từ em sẽ gặp suốt năm học",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trước khi bắt đầu, chúng ta thống nhất bốn từ sẽ dùng trong cả 12 bài. Em chưa cần hiểu sâu, chỉ cần nhận ra chúng [1]."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hiểu ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các ví dụ, thông tin dùng để dạy máy"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hàng triệu lượt xem, lượt thích video"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thuật toán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dãy các bước rõ ràng để giải quyết một nhiệm vụ; trong AI là cách máy học từ dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách máy tìm ra “người thích video này thường thích video nào”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ thu được sau khi máy học; nhận đầu vào và tạo ra đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bộ gợi ý đang chạy trong ứng dụng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI tạo sinh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Loại AI tạo ra nội dung mới: văn bản, hình ảnh, âm thanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trợ lí trò chuyện viết được một đoạn văn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Còn một từ nữa: "
+      },
+      {
+       "text": "hệ thống AI",
+       "b": true
+      },
+      {
+       "text": ". Khi ta nói “AI gợi ý video”, thứ ta đang dùng không phải một “bộ não” đơn lẻ, mà là một hệ thống gồm dữ liệu, mô hình, phần mềm, thiết bị, và con người. Theo định nghĩa mà nhiều nước tham khảo, hệ thống AI là một hệ thống dựa trên máy, vì những mục tiêu nhất định, suy luận từ đầu vào để tạo ra đầu ra như dự đoán, nội dung, khuyến nghị hoặc quyết định [1], [2]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mục tiêu ấy do ai đặt ra? Con người. Đó là điểm xuất phát của bài học này."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-ba-vai-tro-cua-con-nguoi",
+   "title": "2. Ba vai trò của con người",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy xét một ví dụ gần với em: "
+      },
+      {
+       "text": "một trợ lí AI hỗ trợ học tập mà lớp em được nhà trường cho dùng",
+       "b": true
+      },
+      {
+       "text": " (tình huống giả định)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thử trả lời ba câu hỏi:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Ai dùng nó hằng ngày để hỏi bài?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ai bảo đảm nó chạy được, cấp tài khoản, và sửa khi nó hỏng?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ai chỉnh để nó hợp với lớp mình, ví dụ nạp tài liệu môn học và dặn nó “gợi ý từng bước, đừng đưa đáp án ngay”?"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba câu hỏi, ba nhóm người khác nhau. Đó là ba vai trò."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Người sử dụng",
+         "b": true
+        },
+        {
+         "text": " đặt mục đích, đưa yêu cầu và thông tin đầu vào, kiểm tra kết quả, quyết định có dùng kết quả hay không."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Người vận hành",
+         "b": true
+        },
+        {
+         "text": " đưa hệ thống vào hoạt động, giám sát, xử lí sự cố, cập nhật, và chịu trách nhiệm trước người dùng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Người tùy chỉnh",
+         "b": true
+        },
+        {
+         "text": " điều chỉnh để hệ thống phù hợp với một nhu cầu cụ thể: thiết lập, bổ sung tài liệu, đặt quy tắc trả lời."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vai trò",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trong ví dụ trợ lí học tập",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nếu vắng vai trò này",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người sử dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh đặt câu hỏi, đối chiếu câu trả lời với sách giáo khoa, tự quyết định ghi gì vào bài"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không ai kiểm tra, cái sai của máy đi thẳng vào bài làm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người vận hành"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhà trường và nhà cung cấp: cấp tài khoản, theo dõi lỗi, tạm dừng khi có sự cố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống hỏng hoặc trả lời sai kéo dài mà không ai biết"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người tùy chỉnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giáo viên nạp tài liệu môn học, đặt quy tắc “gợi ý từng bước”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trợ lí trả lời chung chung, không hợp chương trình của lớp"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Một phép so sánh: chiếc xe buýt",
+     "id": "mot-phep-so-sanh-chiec-xe-buyt"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trên một chuyến xe buýt, "
+      },
+      {
+       "text": "hành khách",
+       "b": true
+      },
+      {
+       "text": " là người sử dụng: chọn tuyến, quyết định lên hay xuống. "
+      },
+      {
+       "text": "Tài xế và công ty xe",
+       "b": true
+      },
+      {
+       "text": " là người vận hành: giữ cho xe chạy an toàn, đúng giờ, xử lí khi xe hỏng. "
+      },
+      {
+       "text": "Người lập tuyến và lịch chạy",
+       "b": true
+      },
+      {
+       "text": " là người tùy chỉnh: quyết định xe ghé trạm nào, mấy phút một chuyến để hợp với khu vực này."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chiếc xe có hiện đại đến đâu thì vẫn cần cả ba. Hệ thống AI cũng vậy."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“AI tự chạy, có ai vận hành đâu.”",
+         "b": true
+        },
+        {
+         "text": " Em hãy tự hỏi: khi ứng dụng bị lỗi, ai sửa? Ai quyết định phát hành bản cập nhật? Luôn có người đứng sau."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Vận hành và tùy chỉnh là việc của lập trình viên.”",
+         "b": true
+        },
+        {
+         "text": " Không hẳn. Cô giáo nạp tài liệu và đặt quy tắc cho trợ lí học tập đang tùy chỉnh mà không viết một dòng mã nào."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Sử dụng và tùy chỉnh là một.”",
+         "b": true
+        },
+        {
+         "text": " Sử dụng là đặt yêu cầu cho "
+        },
+        {
+         "text": "từng lần",
+         "i": true
+        },
+        {
+         "text": ". Tùy chỉnh là thay đổi cách hệ thống hoạt động cho "
+        },
+        {
+         "text": "nhiều lần về sau",
+         "i": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Người dùng thì không có trách nhiệm gì.”",
+         "b": true
+        },
+        {
+         "text": " Ai nộp bài? Ai kí tên dưới bài làm? Người dùng quyết định dùng kết quả, nên chịu trách nhiệm về quyết định đó."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một người có thể giữ nhiều vai. Khi em vào phần cài đặt của một ứng dụng và tắt tính năng “tự phát video tiếp theo”, em vừa chuyển từ người sử dụng sang người tùy chỉnh."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Quay lại chuyện của Khoa. Hãy chỉ ra: ai là người sử dụng, ai vận hành, ai tùy chỉnh hệ thống gợi ý video? Khoa có thể tự làm một việc “tùy chỉnh” nào để lần sau không bị cuốn đi?"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image2.png",
+     "caption": "Hình 10.1.1. Ba vai trò của con người quanh một hệ thống AI."
+    }
+   ]
+  },
+  {
+   "id": "3-cau-chuyen-co-that-giao-thong-thanh-pho-ho-chi-minh",
+   "title": "3. Câu chuyện có thật: giao thông Thành phố Hồ Chí Minh",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em không cần tìm đâu xa để thấy ba vai trò này."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Theo Trung tâm Quản lý điều hành giao thông đô thị Thành phố Hồ Chí Minh, thành phố đã đưa AI vào việc theo dõi các điểm thường xuyên ùn ứ, tự động phát hiện sự cố như xe dừng hay tai nạn trong đường hầm sông Sài Gòn, và kết hợp dữ liệu lịch sử với dữ liệu thời gian thực để dự báo nơi có nguy cơ ùn tắc, từ đó tối ưu thời gian đèn tín hiệu. Hệ thống được triển khai trên các trục Võ Văn Kiệt, Mai Chí Thọ, Phạm Văn Đồng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Điều đáng chú ý: hệ thống "
+        },
+        {
+         "text": "cảnh báo",
+         "b": true
+        },
+        {
+         "text": " cho người quản lí và "
+        },
+        {
+         "text": "hỗ trợ",
+         "b": true
+        },
+        {
+         "text": " người vận hành biên tập, đăng tin trên bảng thông tin giao thông điện tử. Trung tâm điều hành là nơi nhận cảnh báo và xử lí tình huống. [15]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong câu chuyện này, AI làm phần việc mà nó làm tốt hơn người: theo dõi liên tục hàng trăm camera, cảm biến, không mệt, không lơ đễnh. Nhưng quyết định xử lí một vụ tai nạn, hay nội dung đăng lên bảng điện tử cho hàng vạn người đọc, vẫn nằm ở con người trong trung tâm điều hành."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với hệ thống giao thông ở trên, em hãy thử điền: Người sử dụng là ai? Người vận hành là ai? Người tùy chỉnh làm những việc gì (gợi ý: chọn nút giao nào được theo dõi, đặt ngưỡng nào thì cảnh báo)?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-viec-nao-giao-cho-ai-viec-nao-con-nguoi-phai-giu",
+   "title": "4. Việc nào giao cho AI, việc nào con người phải giữ?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba vai trò dẫn đến một câu hỏi thực tế: trong một hệ thống, "
+      },
+      {
+       "text": "ranh giới",
+       "b": true
+      },
+      {
+       "text": " giữa việc của máy và việc của người nằm ở đâu?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một cách nghĩ đơn giản:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Có thể giao cho AI",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Con người phải giữ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc lặp lại nhiều lần, cần nhanh và đều"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đặt mục tiêu: cần đạt điều gì"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Theo dõi, phát hiện, gợi ý, sắp xếp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm tra kết quả trước khi dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc mà nếu sai thì dễ sửa, ít hại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyết định ảnh hưởng đến sức khỏe, quyền lợi, danh dự của người khác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dừng hệ thống khi có bất thường; chịu trách nhiệm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Khi AI biết “tự làm”: tác nhân AI",
+     "id": "khi-ai-biet-tu-lam-tac-nhan-ai"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Gần đây xuất hiện những hệ thống gọi là "
+      },
+      {
+       "text": "tác nhân AI",
+       "b": true
+      },
+      {
+       "text": ": hệ thống có khả năng lập kế hoạch và tự thực hiện một chuỗi hành động để đạt mục tiêu do con người đặt ra [1]. Ví dụ, một tác nhân có thể tự tìm giờ trống của cả nhóm, soạn lời mời họp rồi gửi đi."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Càng tiện thì càng phải rõ ranh giới. Khung giáo dục AI của Bộ Giáo dục và Đào tạo nêu rõ: việc sử dụng tác nhân AI phải "
+      },
+      {
+       "text": "trong phạm vi nhiệm vụ được giao và chịu sự giám sát của con người",
+       "b": true
+      },
+      {
+       "text": " [1]. Trước khi giao việc cho một tác nhân, người sử dụng nên tự trả lời:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Việc nào nó được "
+        },
+        {
+         "text": "tự làm",
+         "b": true
+        },
+        {
+         "text": "? (Ví dụ: tìm và so sánh giá.)"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Việc nào nó phải "
+        },
+        {
+         "text": "dừng lại chờ mình đồng ý",
+         "b": true
+        },
+        {
+         "text": "? (Ví dụ: thanh toán, gửi tin nhắn đi, xóa tệp.)"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Quy tắc dễ nhớ: việc "
+      },
+      {
+       "text": "khó đảo ngược",
+       "b": true
+      },
+      {
+       "text": " thì phải có người bấm nút cuối cùng."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-con-em-em-dang-o-vai-nao",
+   "title": "5. Còn em, em đang ở vai nào?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khung năng lực AI cho học sinh của UNESCO đặt “tư duy lấy con người làm trung tâm” là phương diện đầu tiên trong bốn phương diện năng lực, trước cả kĩ thuật [3]. Lí do giản dị: công nghệ được tạo ra để phục vụ con người, nên con người phải là bên định hướng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở tuổi em, vai trò em giữ nhiều nhất là "
+      },
+      {
+       "text": "người sử dụng",
+       "b": true
+      },
+      {
+       "text": ". Vai này có ba quyền mà em nên dùng:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Quyền đặt mục đích:",
+         "b": true
+        },
+        {
+         "text": " mình mở ứng dụng này để làm gì, trong bao lâu?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quyền kiểm tra:",
+         "b": true
+        },
+        {
+         "text": " kết quả này có đúng không, mình đối chiếu ở đâu?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quyền nói không:",
+         "b": true
+        },
+        {
+         "text": " không làm theo gợi ý, tắt một tính năng, hoặc không dùng nữa."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giữ ba quyền này là cách em trả lời câu hỏi “ai đang cầm lái?” bằng hai chữ: "
+      },
+      {
+       "text": "em đấy",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-do-may-doan-hinh-em-ve",
+   "title": "Trải nghiệm: Đố máy đoán hình em vẽ",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa thấy hệ thống AI nào cũng có con người đứng sau. Hãy thử một trò chơi vẽ hình để tự tìm ra những con người đó."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image3.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Quick, Draw!"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " quickdraw.withgoogle.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em vẽ hình theo đề máy đưa ra, mỗi hình trong 20 giây."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em xem máy đoán đúng hay sai, và nếu sai thì máy nhầm thành gì."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em mở phần xem các hình vẽ khác: những nét vẽ đó do ai làm ra?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Máy đoán được hình em vẽ là nhờ ai? Trong trò chơi này, con người giữ những vai trò nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Em không vẽ hay viết tên, thông tin của mình lên hình."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image4.png",
+     "caption": "Sơ đồ tư duy Bài 10.1."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Thứ ta gọi là “AI” trong đời sống là một "
+        },
+        {
+         "text": "hệ thống AI",
+         "b": true
+        },
+        {
+         "text": ", và trong hệ thống ấy luôn có con người."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người có ba vai trò: "
+        },
+        {
+         "text": "sử dụng",
+         "b": true
+        },
+        {
+         "text": " (đặt yêu cầu, kiểm tra, quyết định dùng kết quả), "
+        },
+        {
+         "text": "vận hành",
+         "b": true
+        },
+        {
+         "text": " (giữ cho hệ thống chạy, xử lí sự cố), "
+        },
+        {
+         "text": "tùy chỉnh",
+         "b": true
+        },
+        {
+         "text": " (điều chỉnh cho hợp nhu cầu)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Một người có thể giữ nhiều vai; vận hành và tùy chỉnh không nhất thiết phải lập trình."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ở vai nào con người cũng là bên "
+        },
+        {
+         "text": "quyết định và chịu trách nhiệm",
+         "b": true
+        },
+        {
+         "text": "; AI là công cụ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Việc ảnh hưởng đến con người và khó đảo ngược phải do "
+        },
+        {
+         "text": "con người quyết định",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Với "
+        },
+        {
+         "text": "tác nhân AI",
+         "b": true
+        },
+        {
+         "text": ", cần xác định trước việc nào nó được tự làm, việc nào phải chờ người phê duyệt."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Một bệnh viện dùng phần mềm AI nhắc lịch tái khám cho bệnh nhân. Ghi SD (sử dụng), VH (vận hành) hoặc TC (tùy chỉnh) cho mỗi việc."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vai trò",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "a"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phòng công nghệ thông tin khởi động lại phần mềm khi nó ngừng gửi tin nhắn"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "b"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều dưỡng trưởng đặt quy tắc: nhắc trước 3 ngày, không nhắn sau 20 giờ"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "c"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bệnh nhân đọc tin nhắn và gọi lại để đổi ngày hẹn"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "d"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bác sĩ xem danh sách do phần mềm lập và gạch tên một bệnh nhân đã chuyển viện"
+          }
+         ]
+        }
+       ],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Chọn một ứng dụng có AI mà em dùng thường xuyên (bản đồ, dịch, nghe nhạc…). Lập bảng ba vai trò: ai giữ, họ làm gì. Em đã bao giờ làm một việc “tùy chỉnh” với ứng dụng đó chưa?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Bạn Vy nói: “Robot hút bụi nhà mình tự chạy, tự sạc, chẳng cần ai cả.” Em hãy chỉ ra ít nhất ba việc con người vẫn đang làm với chiếc robot ấy, và xếp mỗi việc vào một vai trò."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Em có một tác nhân AI giúp chuẩn bị chuyến dã ngoại của lớp. Xếp các việc sau vào hai nhóm “được tự làm” và “phải chờ em đồng ý”, và giải thích: (a) tìm ba địa điểm phù hợp; (b) so sánh giá xe; (c) chuyển tiền đặt cọc; (d) gửi thông báo đến nhóm phụ huynh; (e) lập bảng dự trù chi phí."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Vì sao nói “càng trao nhiều việc cho AI, vai trò của con người càng quan trọng chứ không giảm đi”? Trả lời trong 3 đến 4 câu, có một ví dụ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Quan sát một ngày.",
+       "b": true
+      },
+      {
+       "text": " Ghi lại một lần em "
+      },
+      {
+       "text": "đã kiểm tra lại",
+       "b": true
+      },
+      {
+       "text": " hoặc "
+      },
+      {
+       "text": "không làm theo",
+       "b": true
+      },
+      {
+       "text": " gợi ý của một ứng dụng có AI. Điều gì khiến em làm vậy? Em sẽ dùng ghi chép này ở bài sau."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Hỏi chuyện người lớn.",
+       "b": true
+      },
+      {
+       "text": " Hỏi một người thân xem trong công việc của họ có phần mềm, máy móc nào “tự động” không. Ai là người vận hành nó? Khi nó sai, ai xử lí?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ba vai trò của con người với hệ thống AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra ai giữ từng vai trong một hệ thống cụ thể"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt sử dụng với tùy chỉnh"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu việc nào phải do con người quyết định và vì sao"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống dựa trên máy, căn cứ vào mục tiêu, suy luận từ đầu vào để tạo ra dự đoán, nội dung, khuyến nghị hoặc quyết định"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người sử dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người đặt yêu cầu, kiểm tra và quyết định dùng kết quả của hệ thống"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người vận hành"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người, tổ chức giữ cho hệ thống hoạt động, giám sát và xử lí sự cố"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người tùy chỉnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người điều chỉnh hệ thống cho phù hợp với một nhu cầu cụ thể"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tác nhân AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống AI có khả năng lập kế hoạch và tự thực hiện một chuỗi hành động để đạt mục tiêu do con người đặt ra"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) VH; b) TC; c) SD; d) SD (bác sĩ kiểm tra và quyết định dùng kết quả)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: bấm cho robot chạy, quyết định lúc nào hút (sử dụng); đổ hộp bụi, thay chổi, cập nhật phần mềm (vận hành); đặt vùng cấm vào, hẹn giờ chạy lúc cả nhà đi vắng (tùy chỉnh)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Được tự làm: (a), (b), (e), vì chỉ là tìm kiếm, so sánh, tính toán, sai thì sửa dễ. Phải chờ đồng ý: (c) và (d), vì tiền đã chuyển và tin đã gửi thì khó lấy lại, và ảnh hưởng đến nhiều người."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: khi AI làm nhiều việc hơn, mỗi sai sót của nó lan nhanh và rộng hơn, nên càng cần người đặt mục tiêu đúng, kiểm tra và kịp thời dừng lại. Ví dụ: hệ thống điều hành giao thông theo dõi cả thành phố, nhưng quyết định xử lí sự cố vẫn ở trung tâm điều hành."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [2], [3], [15] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

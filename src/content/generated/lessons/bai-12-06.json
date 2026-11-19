@@ -1,0 +1,1967 @@
+{
+ "id": "12.6",
+ "slug": "bai-12-06",
+ "grade": 12,
+ "num": 6,
+ "topicId": "12.2",
+ "title": "Công dân có trách nhiệm trong hệ sinh thái AI",
+ "meta": "Chuyên đề 12.2: Đạo đức, rủi ro và trách nhiệm công dân trong xã hội có AI (tiết 3 trong 3 tiết)",
+ "period": {
+  "index": 3,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Phân tích được "
+   },
+   {
+    "text": "bốn nội dung",
+    "b": true
+   },
+   {
+    "text": " của trách nhiệm công dân trong xã hội có AI."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được "
+   },
+   {
+    "text": "quyền và trách nhiệm",
+    "b": true
+   },
+   {
+    "text": " của hai phía: người phát triển và người sử dụng AI."
+   }
+  ],
+  [
+   {
+    "text": "Viết được một "
+   },
+   {
+    "text": "bản góp ý",
+    "b": true
+   },
+   {
+    "text": " có căn cứ cho một quy định về sử dụng AI."
+   }
+  ]
+ ],
+ "keywords": [
+  "hệ sinh thái AI",
+  "trách nhiệm công dân",
+  "người phát triển",
+  "người sử dụng",
+  "góp ý chính sách"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-chuyen-cua-ai",
+   "title": "Khởi động: Chuyện của ai?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một video lan nhanh trong các nhóm trò chuyện của học sinh: một “bác sĩ nổi tiếng” khuyên uống một loại nước pha theo công thức lạ để “tăng trí nhớ trước kì thi”. Khuôn mặt và giọng nói trông rất thật. Thực ra video do AI tạo ra để bán hàng. Trong vòng hai ngày, hàng trăm học sinh đã xem; nhiều bạn chuyển tiếp cho bạn khác “cho vui”; vài bạn đặt mua."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Theo em, đây là “chuyện của ai”? Em liệt kê tất cả những người có phần trách nhiệm, kể cả phần nhỏ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Danh sách của em có thể gồm: người tạo video; công ti làm ra công cụ tạo video; nền tảng để video lan truyền; người bán hàng; và cả những bạn đã "
+      },
+      {
+       "text": "chuyển tiếp",
+       "b": true
+      },
+      {
+       "text": ". Có bạn sẽ thêm: những bạn biết video là giả mà "
+      },
+      {
+       "text": "im lặng",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong xã hội có AI, trách nhiệm không của riêng ai. Bài học này giúp em thấy mình đứng ở đâu trong bức tranh đó."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-he-sinh-thai-ai-ai-o-trong-do",
+   "title": "1. Hệ sinh thái AI: ai ở trong đó?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hệ sinh thái AI",
+         "b": true
+        },
+        {
+         "text": " là toàn bộ những người và tổ chức cùng tham gia vào việc tạo ra, cung cấp, quản lí, sử dụng AI và chịu ảnh hưởng từ AI, cùng các mối quan hệ giữa họ."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image19.png",
+     "caption": "Hình 12.6.1. Hệ sinh thái AI. Mũi tên liền: thứ được trao đi. Mũi tên nét đứt: tiếng nói phản hồi. Mỗi công dân có thể đứng ở nhiều vị trí cùng lúc."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thành phần",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Họ là ai",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc chính",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người phát triển",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công ti, nhóm nghiên cứu, lập trình viên làm ra hệ thống AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế, huấn luyện, thử nghiệm, cập nhật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bên triển khai",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trường học, bệnh viện, doanh nghiệp đưa AI vào hoạt động của mình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn công cụ, quy định cách dùng, giám sát"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người sử dụng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em, thầy cô, cha mẹ, mọi người dùng công cụ AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng, kiểm chứng, phản hồi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người bị ảnh hưởng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người không dùng nhưng chịu tác động: người có ảnh bị đưa vào AI, người bị một quyết định tự động ảnh hưởng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có quyền được biết, được bảo vệ, được lên tiếng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cơ quan quản lí",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhà nước; ở phạm vi nhỏ là nhà trường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ban hành quy định, kiểm tra, xử lí vi phạm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một người có thể đứng ở nhiều vị trí. Em là "
+      },
+      {
+       "text": "người sử dụng",
+       "b": true
+      },
+      {
+       "text": " khi nhờ AI giải thích bài. Em là "
+      },
+      {
+       "text": "người bị ảnh hưởng",
+       "b": true
+      },
+      {
+       "text": " khi bạn đăng ảnh có em lên một công cụ AI. Em gần với "
+      },
+      {
+       "text": "người phát triển",
+       "b": true
+      },
+      {
+       "text": " khi huấn luyện một mô hình nhỏ ở Bài 12.8. Và ở vị trí nào, em cũng là một "
+      },
+      {
+       "text": "công dân",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-quyen-va-trach-nhiem-cua-hai-phia",
+   "title": "2. Quyền và trách nhiệm của hai phía",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong hệ sinh thái này, mối quan hệ gần gũi nhất với em là giữa "
+      },
+      {
+       "text": "người phát triển",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "người sử dụng",
+       "b": true
+      },
+      {
+       "text": ". Mỗi phía đều có quyền, và đều có trách nhiệm."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Quyền",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trách nhiệm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người phát triển",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được sáng tạo, kinh doanh hợp pháp; được bảo vệ sản phẩm trí tuệ; được đặt điều khoản sử dụng hợp lí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bảo đảm an toàn; minh bạch về việc dùng AI và về giới hạn của hệ thống; bảo vệ dữ liệu người dùng; tiếp nhận phản ánh và sửa lỗi; tuân thủ pháp luật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người sử dụng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được biết mình đang tương tác với AI; được bảo vệ dữ liệu cá nhân; được an toàn; được phản ánh, khiếu nại; được chọn không dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng đúng điều khoản và đúng mục đích; kiểm chứng kết quả; không dùng AI gây hại cho người khác; tôn trọng dữ liệu của người khác; chịu trách nhiệm về việc mình làm với kết quả của AI"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy đọc bảng theo đường chéo: "
+      },
+      {
+       "text": "trách nhiệm của phía này chính là quyền của phía kia.",
+       "b": true
+      },
+      {
+       "text": " Người phát triển có trách nhiệm minh bạch vì người dùng có quyền được biết. Người dùng có trách nhiệm dùng đúng mục đích vì người phát triển, và những người dùng khác, có quyền không bị công cụ của mình biến thành phương tiện gây hại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một phần các quyền và trách nhiệm này đã thành luật. Theo nội dung đã công bố của Luật Trí tuệ nhân tạo, hệ thống AI tương tác trực tiếp với con người phải được thiết kế để người dùng nhận biết đó là AI; bên triển khai phải thông báo rõ khi công bố nội dung do AI tạo ra có thể gây nhầm lẫn về tính xác thực, và gắn nhãn dễ nhận biết với nội dung mô phỏng ngoại hình, giọng nói của người thật [6]. Luật Bảo vệ dữ liệu cá nhân quy định các quyền của mỗi người với dữ liệu của mình [7]."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Công cụ cho phép làm thì mình được làm; có gì sai là lỗi của người làm ra công cụ.”",
+         "b": true
+        },
+        {
+         "text": " Người phát triển có trách nhiệm ngăn việc lạm dụng ở mức có thể. Nhưng người bấm nút tạo video giả mạo, người đăng nó lên, là người sử dụng. Một con dao bán ở chợ không làm người bán chịu trách nhiệm thay cho người dùng nó sai mục đích. Cả hai phía đều có phần của mình, và phần của người dùng không biến mất vì công cụ “cho phép”."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Quyền hay trách nhiệm, của phía nào?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi câu, ghi “quyền” hoặc “trách nhiệm”, và “người phát triển” hoặc “người sử dụng”."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Ghi rõ “nội dung do AI tạo” khi đăng một tấm ảnh do AI vẽ có hình người thật."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Được yêu cầu xóa lịch sử trò chuyện của mình."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Thử nghiệm kĩ chatbot với các câu hỏi nhạy cảm trước khi cho học sinh dùng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Được từ chối cung cấp dịch vụ cho tài khoản dùng công cụ để lừa đảo."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Đọc và làm theo giới hạn độ tuổi của công cụ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "6. Có nơi để báo khi phát hiện công cụ trả lời sai nghiêm trọng."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-bon-noi-dung-cua-trach-nhiem-cong-dan",
+   "title": "3. Bốn nội dung của trách nhiệm công dân",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vượt lên trên vai trò người dùng của một công cụ cụ thể, em là công dân của một xã hội có AI. Trách nhiệm ấy gồm bốn nội dung, nhớ bằng bốn động từ: "
+      },
+      {
+       "text": "dùng đúng, tôn trọng, không gây hại, góp phần.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nội dung",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc nên làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc cần tránh",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Sử dụng AI an toàn, trung thực, có đạo đức",
+           "b": true
+          },
+          {
+           "text": " "
+          },
+          {
+           "text": "(dùng đúng)",
+           "i": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm chứng, khai báo; dùng công cụ đã được rà soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nộp bài do AI làm thay; gian dối trong hồ sơ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Tôn trọng quyền riêng tư và dữ liệu của người khác",
+           "b": true
+          },
+          {
+           "text": " "
+          },
+          {
+           "text": "(tôn trọng)",
+           "i": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xin phép trước khi dùng ảnh, giọng nói của người khác; bỏ thông tin định danh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đưa dữ liệu của bạn bè, thầy cô vào công cụ AI"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Không dùng AI để lan truyền thông tin sai lệch, gian lận, gây hại",
+           "b": true
+          },
+          {
+           "text": " "
+          },
+          {
+           "text": "(không gây hại)",
+           "i": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm tra trước khi chia sẻ; gắn nhãn nội dung do AI tạo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo, chuyển tiếp nội dung giả mạo; lừa đảo, bắt nạt bằng AI"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Đóng góp xây dựng môi trường số tích cực, công bằng, nhân văn",
+           "b": true
+          },
+          {
+           "text": " "
+          },
+          {
+           "text": "(góp phần)",
+           "i": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Báo cáo nội dung giả mạo; giúp người thân nhận biết lừa đảo; góp ý quy định"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Im lặng, thờ ơ; cổ vũ nội dung gây hại"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba nội dung đầu là về "
+      },
+      {
+       "text": "không làm điều xấu",
+       "b": true
+      },
+      {
+       "text": ". Nội dung thứ tư khác hẳn: nó là về "
+      },
+      {
+       "text": "chủ động làm điều tốt",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Quay lại video “bác sĩ” ở phần Khởi động. Bạn không chuyển tiếp video đã làm đúng nội dung 3. Nhưng bạn bấm “báo cáo” với nền tảng, nhắn vào nhóm lớp “video này là giả, đừng mua”, và về nhà nói với ông bà cách nhận ra video kiểu đó, mới là bạn làm đến nội dung 4."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bộ Công an đã nhiều lần cảnh báo về các cuộc gọi video giả mạo người thân bằng công nghệ AI, và nêu những dấu hiệu nhận biết như cuộc gọi rất ngắn, khuôn mặt thiếu cảm xúc, tiếng không khớp với hình, tài khoản nhận tiền không đúng tên người gọi [17]. Người lớn tuổi thường ít có cơ hội được nghe những cảnh báo này. Mỗi học sinh hiểu về AI và về nói lại với gia đình là một “kênh truyền thông” mà không chiến dịch nào thay được."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khung năng lực AI cho học sinh của UNESCO mô tả đích đến của giáo dục AI không chỉ là người dùng thành thạo, mà là những công dân có trách nhiệm, cùng góp phần định hình cách AI được phát triển và sử dụng [2]. Nội dung thứ tư chính là chỗ em bước từ “người dùng” sang “công dân”."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Mình không làm gì sai là đủ trách nhiệm rồi.”",
+         "b": true
+        },
+        {
+         "text": " Trong một nhóm lớp có video giả mạo về một bạn, bốn mươi người “không làm gì sai” vẫn để mặc cho bạn ấy bị tổn thương. Trách nhiệm công dân gồm cả việc lên tiếng đúng lúc, đúng cách."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-len-tieng-the-nao-cho-hieu-qua",
+   "title": "4. Lên tiếng thế nào cho hiệu quả?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "“Góp phần” không có nghĩa là phàn nàn trên mạng. Lên tiếng có hiệu quả cần "
+      },
+      {
+       "text": "đúng kênh",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "đúng cách",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "4.1. Các kênh góp ý, phản ánh",
+     "id": "4-1-cac-kenh-gop-y-phan-anh"
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc cần lên tiếng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kênh phù hợp",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội dung giả mạo, lừa đảo trên một nền tảng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nút “Báo cáo” của nền tảng; báo cha mẹ, thầy cô; với việc nghiêm trọng thì cơ quan công an"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ AI trả lời sai, thiên lệch, không an toàn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục góp ý, phản hồi của chính công cụ đó"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc dùng AI trong lớp, trong trường chưa hợp lí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giáo viên chủ nhiệm, giáo viên bộ môn; Đoàn trường; hộp thư góp ý; đối thoại với Ban Giám hiệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự thảo quy định, chính sách"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kênh lấy ý kiến do cơ quan soạn thảo công bố; ở trường là đợt lấy ý kiến về nội quy, quy tắc"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "4.2. Một góp ý tốt gồm những gì?",
+     "id": "4-2-mot-gop-y-tot-gom-nhung-gi"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "So sánh hai góp ý về cùng một điều trong Quy tắc sử dụng AI của một trường (ví dụ giả định): "
+      },
+      {
+       "text": "“Điều 4. Học sinh không được dùng AI trong mọi hoạt động học tập.”",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Góp ý chưa hiệu quả",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Góp ý hiệu quả",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Điều 4 quá vô lí, thời nào rồi còn cấm AI!”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Về Điều 4: chúng em hiểu mục đích là giữ trung thực trong học tập. Tuy nhiên, cấm hoàn toàn khó thực hiện và bỏ lỡ lợi ích, ví dụ nhờ AI giải thích lại bài chưa hiểu. Chúng em đề nghị sửa thành: ‘Học sinh được dùng AI theo hướng dẫn của giáo viên cho từng nhiệm vụ, và phải khai báo việc sử dụng.’ Đề nghị này phù hợp với tinh thần của Khung nội dung giáo dục AI của Bộ Giáo dục và Đào tạo về khai báo sử dụng AI.”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một góp ý hiệu quả có "
+      },
+      {
+       "text": "bốn phần",
+       "b": true
+      },
+      {
+       "text": ":"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nêu đúng điều đang góp ý",
+         "b": true
+        },
+        {
+         "text": " (điều mấy, câu nào)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ghi nhận mục đích",
+         "b": true
+        },
+        {
+         "text": " của quy định. Người soạn thảo có lí do của họ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nêu vấn đề kèm căn cứ:",
+         "b": true
+        },
+        {
+         "text": " một ví dụ thực tế, một quy định cấp trên, một nguyên tắc đã học."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đề xuất câu chữ thay thế",
+         "b": true
+        },
+        {
+         "text": " cụ thể."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lời lẽ tôn trọng không làm góp ý yếu đi. Nó làm góp ý "
+      },
+      {
+       "text": "được đọc",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Về căn cứ, em đã có sẵn nhiều công cụ từ các bài trước: sáu biểu hiện của trách nhiệm giải trình (Bài 12.3), sáu nguyên tắc đạo đức (Bài 12.4), thang ba mức rủi ro (Bài 12.5), năm quyền với dữ liệu cá nhân (Bài 11.5). Theo Khung nội dung của Bộ Giáo dục và Đào tạo, việc khai báo sử dụng AI một cách trung thực không tự động làm tăng hay giảm kết quả đánh giá của học sinh [1]; đây cũng là một căn cứ em có thể dẫn."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Viết một góp ý",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Dưới đây là hai điều trong một bản dự thảo Quy tắc sử dụng AI (giả định). Chọn một điều và viết góp ý đủ bốn phần."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Điều 6. Giáo viên có thể dùng phần mềm phát hiện bài viết do AI tạo. Bài bị phần mềm đánh dấu sẽ nhận điểm 0.”",
+         "i": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Điều 9. Nhà trường có thể sử dụng bài làm, hình ảnh của học sinh để huấn luyện các công cụ AI phục vụ dạy học.”",
+         "i": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Gợi ý: với Điều 6, nghĩ đến phân vai mức II, mức III và quyền được xem xét lại. Với Điều 9, nghĩ đến sự đồng ý và quyền rút lại sự đồng ý."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lưu ý: nếu nhà trường đã ban hành hoặc đang lấy ý kiến về Quy tắc sử dụng AI, thầy cô sẽ hướng dẫn em góp ý trên văn bản thật và gửi theo kênh chính thức.",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-tu-lop-hoc-ra-xa-hoi",
+   "title": "5. Từ lớp học ra xã hội",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chuyên đề 12.2 đã đi qua ba bài: sáu "
+      },
+      {
+       "text": "nguyên tắc đạo đức",
+       "b": true
+      },
+      {
+       "text": " của người thiết kế; cách xác định "
+      },
+      {
+       "text": "mức độ rủi ro",
+       "b": true
+      },
+      {
+       "text": " của người dùng; và "
+      },
+      {
+       "text": "trách nhiệm công dân",
+       "b": true
+      },
+      {
+       "text": " của tất cả chúng ta."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sau khi rời trường phổ thông, em sẽ gặp AI ở nơi làm việc, trong bệnh viện, khi làm thủ tục hành chính, khi bầu chọn và thảo luận chuyện chung. Sẽ có những quy định mới được đưa ra lấy ý kiến. Sẽ có những công cụ mới mà hôm nay chưa ai hình dung được. Những gì em mang theo không phải là tên của các công cụ, mà là bốn động từ: "
+      },
+      {
+       "text": "dùng đúng, tôn trọng, không gây hại, góp phần.",
+       "b": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-kiem-chung-truoc-khi-len-tieng",
+   "title": "Trải nghiệm: Kiểm chứng trước khi lên tiếng",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một công dân có trách nhiệm kiểm chứng thông tin trước khi chia sẻ hay góp ý. Có công cụ giúp em tìm xem một tin đồn đã được kiểm chứng chưa."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image20.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Google Fact Check Explorer"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " toolbox.google.com/factcheck/explorer (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em gõ một tin đồn về AI mà thầy cô đưa ra vào công cụ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em đọc kết luận của các tổ chức kiểm chứng thông tin."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em ghi lại nguồn đáng tin để dùng trong bản góp ý."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Trước khi chia sẻ hay góp ý về một vấn đề AI, em cần làm gì?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image21.png",
+     "caption": "Sơ đồ tư duy Bài 12.6."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Hệ sinh thái AI",
+         "b": true
+        },
+        {
+         "text": " gồm người phát triển, bên triển khai, người sử dụng, người bị ảnh hưởng và cơ quan quản lí. Một người có thể ở nhiều vị trí."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Người phát triển và người sử dụng "
+        },
+        {
+         "text": "đều có quyền và trách nhiệm",
+         "b": true
+        },
+        {
+         "text": "; trách nhiệm của phía này là quyền của phía kia."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bốn nội dung trách nhiệm công dân: "
+        },
+        {
+         "text": "dùng đúng; tôn trọng; không gây hại; góp phần",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Công dân có trách nhiệm không chỉ "
+        },
+        {
+         "text": "không làm điều xấu",
+         "b": true
+        },
+        {
+         "text": " mà còn "
+        },
+        {
+         "text": "chủ động góp phần",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Góp ý hiệu quả: "
+        },
+        {
+         "text": "đúng kênh",
+         "b": true
+        },
+        {
+         "text": ", và đủ bốn phần: điều góp ý; ghi nhận mục đích; vấn đề kèm căn cứ; đề xuất cụ thể."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Trong tình huống video “bác sĩ” ở phần Khởi động, mỗi người sau đứng ở vị trí nào trong hệ sinh thái AI và có trách nhiệm gì: a) công ti làm công cụ tạo video; b) người tạo và đăng video; c) học sinh chuyển tiếp video; d) vị bác sĩ thật bị giả mạo."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Mỗi việc sau thuộc nội dung nào trong bốn nội dung trách nhiệm công dân? a) Hỏi ý kiến cả nhóm trước khi tải ảnh nhóm lên AI; b) Dạy bà cách gọi lại bằng số điện thoại thường khi nhận cuộc gọi video đòi chuyển tiền; c) Ghi “có dùng AI để gợi ý dàn bài” ở cuối bài làm; d) Không chuyển tiếp một tin “sốc” khi chưa kiểm tra."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Bạn Tâm nói: “Mình chỉ là học sinh, góp ý thì ai nghe.” Em nêu hai lí do để Tâm nghĩ lại, và một kênh Tâm có thể dùng ngay trong trường."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Viết lại góp ý sau cho hiệu quả hơn: “Phần mềm điểm danh khuôn mặt của trường quá tệ, toàn nhận sai, bỏ đi!”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Chọn một nội dung trong bốn nội dung mà em thấy mình làm chưa tốt. Viết hai việc cụ thể em sẽ làm trong tháng này."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thực hiện một việc thuộc nội dung thứ tư (“góp phần”) trong tuần này và ghi lại. Em có thể chọn: hướng dẫn một người thân lớn tuổi ba dấu hiệu nhận biết cuộc gọi, video giả mạo; gửi một phản hồi có căn cứ cho một công cụ AI em đang dùng; hoặc cùng nhóm hoàn thiện bản góp ý ở Hoạt động 2 để gửi thầy cô. Sau đó viết ba dòng: em đã làm gì, người nhận phản ứng thế nào, em học được gì về cách lên tiếng."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể các thành phần của hệ sinh thái AI và vị trí của mình"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu quyền và trách nhiệm của người phát triển, người sử dụng"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân tích bốn nội dung trách nhiệm công dân, có việc làm cụ thể"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết một góp ý đủ bốn phần, đúng kênh"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ sinh thái AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Những người, tổ chức cùng tạo ra, cung cấp, quản lí, sử dụng AI và chịu ảnh hưởng từ AI"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người phát triển"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người, tổ chức làm ra hệ thống AI"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bên triển khai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tổ chức đưa hệ thống AI vào hoạt động của mình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người bị ảnh hưởng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người chịu tác động của AI dù không trực tiếp dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trách nhiệm công dân"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trách nhiệm của mỗi người với cộng đồng, vượt ra ngoài lợi ích của riêng mình"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Người phát triển: ngăn lạm dụng ở mức có thể, có cách đánh dấu nội dung do AI tạo, tiếp nhận báo cáo. b) Người sử dụng: chịu trách nhiệm chính về việc giả mạo và lừa đảo. c) Người sử dụng nền tảng: kiểm tra trước khi chia sẻ; chuyển tiếp là góp phần lan truyền. d) Người bị ảnh hưởng: có quyền yêu cầu gỡ bỏ và được bảo vệ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Tôn trọng. b) Góp phần. c) Dùng đúng. d) Không gây hại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: học sinh là người dùng AI nhiều và hiểu thực tế sử dụng trong lớp hơn ai hết, nên ý kiến có giá trị thật; quy định được góp ý bởi người chịu tác động thì dễ được thực hiện hơn. Kênh: giáo viên chủ nhiệm, Đoàn trường hoặc hộp thư góp ý."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: “Về phần mềm điểm danh bằng khuôn mặt: chúng em hiểu mục đích là tiết kiệm thời gian đầu giờ. Trong tuần qua, lớp em có 6 lượt bị nhận sai, chủ yếu vào buổi sáng trời tối và với các bạn đeo kính (có danh sách kèm theo). Chúng em đề nghị: cho phép giáo viên sửa điểm danh ngay tại lớp; có cách điểm danh khác cho bạn không muốn dùng khuôn mặt; và nhà trường cho biết ảnh được lưu ở đâu, trong bao lâu.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Câu trả lời riêng của em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [2], [6], [7], [17] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

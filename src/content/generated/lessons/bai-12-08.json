@@ -1,0 +1,2440 @@
+{
+ "id": "12.8",
+ "slug": "bai-12-08",
+ "grade": 12,
+ "num": 8,
+ "topicId": "12.3",
+ "title": "Công cụ mã nguồn mở, miễn phí để phát triển AI",
+ "meta": "Chuyên đề 12.3: Công cụ phát triển và đánh giá hiệu quả hệ thống AI (tiết 2 trong 3 tiết)",
+ "period": {
+  "index": 2,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Kể lại được "
+   },
+   {
+    "text": "bốn bước",
+    "b": true
+   },
+   {
+    "text": " huấn luyện một mô hình phân loại."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được tên và mục đích của một số "
+   },
+   {
+    "text": "công cụ mã nguồn mở hoặc miễn phí",
+    "b": true
+   },
+   {
+    "text": " dùng để thiết kế, huấn luyện, phát triển hệ thống AI."
+   }
+  ],
+  [
+   {
+    "text": "Phân biệt được "
+   },
+   {
+    "text": "mã nguồn mở",
+    "b": true
+   },
+   {
+    "text": " với "
+   },
+   {
+    "text": "miễn phí",
+    "b": true
+   },
+   {
+    "text": ", và nêu được "
+   },
+   {
+    "text": "bốn điều cần kiểm tra",
+    "b": true
+   },
+   {
+    "text": " trước khi dùng một công cụ."
+   }
+  ]
+ ],
+ "keywords": [
+  "huấn luyện mô hình",
+  "mã nguồn mở",
+  "miễn phí",
+  "giấy phép",
+  "thư viện lập trình",
+  "Teachable Machine",
+  "scikit-learn"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-day-may-nhan-ra-cay-but-trong-ba-phut",
+   "title": "Khởi động: Dạy máy nhận ra cây bút trong ba phút?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thầy giáo giơ lên một cây bút và một cục tẩy, rồi hỏi cả lớp:"
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Có thể dạy cho máy tính của thầy phân biệt được cây bút với cục tẩy qua webcam, ngay trong giờ học này, mà không viết một dòng lệnh nào không? Em đoán mất bao lâu?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhiều bạn đoán “vài ngày” hoặc “phải là kĩ sư mới làm được”. Thực tế, với một công cụ chạy trên trình duyệt, việc này mất chừng ba phút: giơ cây bút trước webcam cho máy chụp vài chục tấm, làm tương tự với cục tẩy, bấm nút huấn luyện, rồi thử."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mười năm trước, làm được điều đó cần một nhóm chuyên gia và máy tính đắt tiền. Hôm nay, rào cản để "
+      },
+      {
+       "text": "thử",
+       "b": true
+      },
+      {
+       "text": " đã thấp đến mức một học sinh làm được trong giờ ra chơi. Nhưng rào cản để "
+      },
+      {
+       "text": "làm tốt và làm có trách nhiệm",
+       "b": true
+      },
+      {
+       "text": " thì vẫn còn nguyên. Bài học này nói về cả hai."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-bon-buoc-huan-luyen-mot-mo-hinh-phan-loai",
+   "title": "1. Bốn bước huấn luyện một mô hình phân loại",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dù dùng công cụ nào, đơn giản hay phức tạp, việc huấn luyện một mô hình phân loại đều đi qua bốn bước."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image25.png",
+     "caption": "Hình 12.8.1. Bốn bước huấn luyện một mô hình phân loại. Mũi tên nét đứt: khi thử chưa tốt, quay lại bổ sung và sửa ví dụ rồi học lại."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bước",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Với ví dụ bút và tẩy",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Tạo các nhóm và đặt tên",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyết định máy cần phân biệt những gì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hai nhóm: “bút”, “tẩy”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Đưa ví dụ vào từng nhóm",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu thập ví dụ có nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vài chục ảnh cây bút, vài chục ảnh cục tẩy"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Cho máy học",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Máy điều chỉnh mô hình theo các ví dụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bấm nút “huấn luyện”, chờ vài chục giây"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Thử với ví dụ mới",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quan sát kết quả và mức chắc chắn; nếu chưa tốt thì bổ sung, sửa ví dụ rồi học lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giơ một cây bút khác màu; giơ một chiếc thước"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bốn bước này chính là điều em đã học ở Bài 11.11 dưới tên "
+      },
+      {
+       "text": "phân lớp",
+       "b": true
+      },
+      {
+       "text": ": học từ ví dụ có nhãn để gắn nhãn cho cái mới. Và bước 3 chính là “điều chỉnh trọng số” của Bài 11.10, chỉ khác là công cụ làm thay em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thử ở bước 4 cho em thấy những điều rất đáng nghĩ.",
+       "b": true
+      },
+      {
+       "text": " Giơ một chiếc thước, thứ máy chưa từng học: máy vẫn trả lời “bút” hoặc “tẩy”, có khi với mức chắc chắn rất cao. Vì mô hình "
+      },
+      {
+       "text": "chỉ biết các nhãn đã học",
+       "b": true
+      },
+      {
+       "text": "; nó không có lựa chọn “tôi không biết” trừ khi em tạo thêm một nhóm cho điều đó. Đổi phông nền phía sau: kết quả có thể đổi theo. Vì máy có thể đã học nhầm “phông nền có rèm cửa” là “bút”."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Bấm nút huấn luyện xong là có mô hình tốt.”",
+         "b": true
+        },
+        {
+         "text": " Bước 3 là bước dễ nhất và máy làm gần hết. Chất lượng mô hình được quyết định ở bước 2 (ví dụ có đủ đa dạng không) và được phát hiện ở bước 4 (có thử đủ kĩ không). Em sẽ học cách thử cho đúng ở Bài 12.9."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-mot-so-cong-cu-ma-nguon-mo-mien-phi",
+   "title": "2. Một số công cụ mã nguồn mở, miễn phí",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có rất nhiều công cụ. Em không cần nhớ hết. Em cần biết chúng xếp thành những "
+      },
+      {
+       "text": "tầng",
+       "b": true
+      },
+      {
+       "text": " khác nhau, từ không cần viết mã đến cần lập trình, và biết mỗi tầng dùng để làm gì."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image26.png",
+     "caption": "Hình 12.8.2. Các tầng công cụ phát triển AI. Càng lên cao càng linh hoạt, nhưng càng cần kĩ năng lập trình."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Công cụ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Là gì",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dùng để",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cần viết mã?",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Teachable Machine",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ miễn phí chạy trên trình duyệt, do Google Creative Lab phát hành năm 2019; huấn luyện mô hình nhận biết hình ảnh, âm thanh, tư thế bằng ví dụ [16]"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện mô hình phân loại; xuất mô hình để dùng trong trang web, ứng dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "MIT App Inventor",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ lập trình bằng cách kéo thả các khối lệnh để tạo ứng dụng điện thoại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo ứng dụng điện thoại có gắn mô hình AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kéo thả khối lệnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "ML5.js",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thư viện mã nguồn mở cho ngôn ngữ JavaScript, hướng đến người mới học"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đưa mô hình AI vào trang web với ít dòng lệnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có, mức cơ bản"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "TensorFlow.js",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thư viện mã nguồn mở cho JavaScript, chạy mô hình ngay trên trình duyệt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện và chạy mô hình trên web; linh hoạt hơn, phức tạp hơn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "scikit-learn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thư viện mã nguồn mở cho ngôn ngữ Python, gồm nhiều thuật toán học máy cổ điển"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học và thử nghiệm phân loại, dự đoán, phân cụm với dữ liệu dạng bảng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bốn công cụ đầu là những ví dụ được nêu trong Khung nội dung giáo dục AI của Bộ Giáo dục và Đào tạo [1]; scikit-learn được thêm vào vì gần với ngôn ngữ Python các em học trong môn Tin học. Các công cụ thay đổi nhanh: tên, giao diện, điều kiện sử dụng năm sau có thể đã khác. Thứ em cần giữ lại là "
+      },
+      {
+       "text": "cách phân loại và cách chọn",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chọn công cụ theo nhu cầu:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em muốn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nên bắt đầu với",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử ngay một ý tưởng phân loại ảnh, âm thanh, không viết mã"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Teachable Machine"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Làm một ứng dụng điện thoại đơn giản có dùng mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "MIT App Inventor"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đưa mô hình vào trang web của câu lạc bộ, đã biết chút JavaScript"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "ML5.js"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân tích một bảng số liệu, đã học Python"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "scikit-learn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Không có công cụ tốt nhất. Chỉ có công cụ "
+      },
+      {
+       "text": "phù hợp với mục đích và kĩ năng hiện có",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Ghép nhu cầu với công cụ",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi nhu cầu, em chọn một công cụ để bắt đầu và nêu lí do theo mục đích và kĩ năng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Đội vườn trường (chưa học lập trình) muốn thử ý tưởng nhận biết lá bệnh qua ảnh."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Một bạn đã học Python muốn tìm hiểu xem điểm kiểm tra của lớp có chia thành những nhóm nào."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Câu lạc bộ muốn làm ứng dụng điện thoại nhận biết ba loại rác cho ngày hội môi trường."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Một bạn muốn trang web của lớp có trò chơi điều khiển bằng cử chỉ tay qua webcam."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-ma-nguon-mo-va-mien-phi-co-giong-nhau-khong",
+   "title": "3. “Mã nguồn mở” và “miễn phí” có giống nhau không?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai từ này hay đi cùng nhau, nhưng nghĩa khác nhau."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Miễn phí",
+         "b": true
+        },
+        {
+         "text": " nghĩa là không phải trả tiền để dùng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mã nguồn mở",
+         "b": true
+        },
+        {
+         "text": " nghĩa là mã nguồn của phần mềm được công bố kèm một "
+        },
+        {
+         "text": "giấy phép",
+         "b": true
+        },
+        {
+         "text": " cho phép mọi người xem, dùng, sửa đổi và chia sẻ lại theo các điều kiện của giấy phép đó."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Miễn phí, không mở mã nguồn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mã nguồn mở",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có phải trả tiền?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không (ít nhất ở gói cơ bản)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thường là không"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có xem được bên trong hoạt động thế nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có được sửa và chia sẻ lại?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có, theo giấy phép"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nếu nhà cung cấp ngừng hoặc thu phí?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng phải chịu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cộng đồng có thể tiếp tục phát triển"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em “trả” bằng gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đôi khi bằng dữ liệu, bằng việc xem quảng cáo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bằng việc tuân thủ giấy phép"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì sao mã nguồn mở quan trọng với AI? Ở Bài 12.4, em đã học nguyên tắc "
+      },
+      {
+       "text": "minh bạch",
+       "b": true
+      },
+      {
+       "text": ". Với phần mềm mã nguồn mở, bất kì ai có chuyên môn cũng có thể đọc xem nó làm gì, tìm lỗi và sửa. Điều đó không tự động làm phần mềm an toàn, nhưng nó cho phép "
+      },
+      {
+       "text": "kiểm tra",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một lưu ý: “mở” có nhiều tầng. Một thư viện có thể mở mã nguồn, nhưng một "
+      },
+      {
+       "text": "mô hình đã huấn luyện sẵn",
+       "b": true
+      },
+      {
+       "text": " dùng trong thư viện đó lại được huấn luyện bằng dữ liệu không công bố. Khi nghe nói “AI mở”, em hỏi lại: mở cái gì, mã nguồn, mô hình, hay dữ liệu?"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Mã nguồn mở thì muốn dùng thế nào cũng được.”",
+         "b": true
+        },
+        {
+         "text": " Mã nguồn mở luôn đi kèm "
+        },
+        {
+         "text": "giấy phép",
+         "b": true
+        },
+        {
+         "text": ". Có giấy phép yêu cầu ghi tên tác giả; có giấy phép yêu cầu sản phẩm làm từ nó cũng phải mở mã nguồn. Dùng mà không theo giấy phép là vi phạm quyền tác giả."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-bon-dieu-can-kiem-tra-truoc-khi-dung-mot-cong-cu",
+   "title": "4. Bốn điều cần kiểm tra trước khi dùng một công cụ",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trước khi dùng bất kì công cụ nào để làm sản phẩm, nhất là khi đưa dữ liệu của mình và của bạn bè vào, em kiểm tra bốn điều."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều cần kiểm tra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Liên hệ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Điều kiện sử dụng và giấy phép",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mình được dùng vào việc gì? Có được dùng cho sản phẩm dự thi, sản phẩm chia sẻ công khai không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục 3 của bài"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Độ tuổi được phép",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ yêu cầu người dùng từ bao nhiêu tuổi? Có cần sự đồng ý của cha mẹ, nhà trường không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.1"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Dữ liệu được xử lí, lưu ở đâu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh, âm thanh mình đưa vào được xử lí ngay trên máy mình hay gửi lên máy chủ? Có bị giữ lại không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.5"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Tài khoản và chi phí",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có bắt tạo tài khoản không? Miễn phí đến mức nào, khi nào thì thu phí?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.4 (khả năng duy trì)"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Điều thứ ba đặc biệt quan trọng khi ví dụ huấn luyện là "
+      },
+      {
+       "text": "khuôn mặt, giọng nói của các bạn trong lớp",
+       "b": true
+      },
+      {
+       "text": ". Một số công cụ xử lí dữ liệu ngay trên trình duyệt của người dùng, một số gửi về máy chủ; em phải đọc phần giải thích của chính công cụ đó vào thời điểm dùng, vì điều này có thể thay đổi. Nguyên tắc an toàn: khi luyện tập, dùng "
+      },
+      {
+       "text": "đồ vật",
+       "b": true
+      },
+      {
+       "text": " làm ví dụ thay cho khuôn mặt người."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-nhin-vao-ben-trong-bon-buoc-viet-bang-ma-lenh",
+   "title": "5. Nhìn vào bên trong: bốn bước viết bằng mã lệnh",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Công cụ không cần viết mã che đi những gì diễn ra bên trong. Phần này cho em xem bốn bước ấy khi viết bằng ngôn ngữ Python với thư viện mã nguồn mở scikit-learn. "
+      },
+      {
+       "text": "Em không cần biết lập trình để đọc",
+       "b": true
+      },
+      {
+       "text": ": hãy đọc phần giải thích theo số dòng và đối chiếu với bốn bước."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chương trình dạy máy nhận dạng "
+      },
+      {
+       "text": "chữ số viết tay",
+       "b": true
+      },
+      {
+       "text": ", đúng bài toán mở đầu của Bài 11.10. Bộ dữ liệu đi kèm sẵn trong thư viện, gồm 1.797 ảnh chữ số nhỏ đã có nhãn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": " 1  # Dạy máy nhận dạng chữ số viết tay bằng thư viện mã nguồn mở scikit-learn\n 2  from sklearn.datasets import load_digits\n 3  from sklearn.model_selection import train_test_split\n 4  from sklearn.neighbors import KNeighborsClassifier\n 5  \n 6  # Bước 1 và 2: lấy 1797 ảnh chữ số đã có nhãn\n 7  du_lieu = load_digits()\n 8  anh, nhan = du_lieu.data, du_lieu.target\n 9  \n10  # Để riêng 25% số ảnh làm \"đề chưa làm\" cho bước thử\n11  anh_hoc, anh_thu, nhan_hoc, nhan_thu = train_test_split(\n12      anh, nhan, test_size=0.25, random_state=1)\n13  \n14  # Bước 3: cho máy học\n15  mo_hinh = KNeighborsClassifier(n_neighbors=3)\n16  mo_hinh.fit(anh_hoc, nhan_hoc)\n17  \n18  # Bước 4: thử với ảnh mới\n19  du_doan = mo_hinh.predict(anh_thu)\n20  so_dung = (du_doan == nhan_thu).sum()\n21  print(\"Số ảnh dùng để học:\", len(anh_hoc))\n22  print(\"Số ảnh dùng để thử:\", len(anh_thu))\n23  print(\"Đoán đúng:\", so_dung, \"ảnh\")\n24  print(\"Tỉ lệ đúng:\", round(100 * so_dung / len(anh_thu), 1), \"%\")"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết quả khi chạy chương trình:"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Số ảnh dùng để học: 1347\nSố ảnh dùng để thử: 450\nĐoán đúng: 446 ảnh\nTỉ lệ đúng: 99.1 %"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đọc chương trình theo bốn bước:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dòng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ứng với bước",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2 đến 4"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gọi ba thành phần của thư viện scikit-learn: bộ dữ liệu chữ số, hàm chia dữ liệu, và một thuật toán phân loại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuẩn bị công cụ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7 và 8"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lấy 1.797 ảnh (anh) và nhãn đúng của từng ảnh (nhan). Các nhóm ở đây là mười chữ số từ 0 đến 9"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bước 1 và 2"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "11 và 12"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chia dữ liệu làm hai phần: 75% để học, 25% "
+          },
+          {
+           "text": "để riêng ra, không cho máy xem",
+           "b": true
+          },
+          {
+           "text": ", dùng để thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuẩn bị cho bước 4"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "15"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn thuật toán “láng giềng gần nhất”: muốn biết một ảnh mới là số mấy, tìm 3 ảnh đã học giống nó nhất rồi xem đa số là số mấy"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bước 3"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "16"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lệnh fit: cho máy học từ 1.347 ảnh và nhãn của chúng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bước 3"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "19"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lệnh predict: đưa 450 ảnh máy chưa từng thấy, yêu cầu máy đoán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bước 4"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "20 đến 24"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So dự đoán với nhãn đúng, đếm số lần đúng, in kết quả"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bước 4"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba điều đáng chú ý:"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ nhất, cả chương trình chỉ có hai dòng “làm AI”:",
+       "b": true
+      },
+      {
+       "text": " dòng 16 (học) và dòng 19 (đoán). Phần còn lại là chuẩn bị dữ liệu và kiểm tra kết quả. Điều này đúng với cả các dự án lớn: phần lớn công sức nằm ở dữ liệu và ở việc thử."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ hai, dòng 11 và 12 là dòng quan trọng nhất về mặt trung thực.",
+       "b": true
+      },
+      {
+       "text": " Nếu thử bằng chính những ảnh máy đã học, con số sẽ đẹp nhưng vô nghĩa, giống như kiểm tra học sinh bằng đúng đề đã chữa. Bài 12.9 sẽ nói kĩ điều này."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ ba, 99,1% không có nghĩa là “gần như hoàn hảo” trong mọi hoàn cảnh.",
+       "b": true
+      },
+      {
+       "text": " Con số ấy đo trên những ảnh cùng loại với ảnh đã học: cùng cỡ, cùng cách chụp. Đưa cho mô hình này chữ số em viết bằng bút lông trên giấy kẻ ô và chụp bằng điện thoại, kết quả có thể kém hơn nhiều."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Thuật toán ở dòng 15 không phải là mạng nơ-ron. Nó thuộc nhóm thuật toán học máy “cổ điển”, đơn giản và dễ hiểu hơn nhiều. Với bài toán nhỏ này, nó đã cho kết quả rất cao. Đây cũng là một minh họa cho câu hỏi “có cách đơn giản hơn không?” ở Bài 12.7: không phải lúc nào cũng cần đến công cụ mạnh nhất."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Đọc mã lệnh như đọc một quy trình",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Không cần chạy chương trình, em trả lời dựa vào mã lệnh và bảng giải thích:"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Nếu đổi test_size=0.25 ở dòng 12 thành test_size=0.5, số ảnh dùng để học và số ảnh dùng để thử thay đổi thế nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Nếu xóa dòng 11 và 12, rồi cho máy học và thử trên cùng toàn bộ 1.797 ảnh, em dự đoán tỉ lệ đúng tăng hay giảm? Con số ấy có đáng tin không?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Chương trình này ứng với kiểu ý tưởng nào trong năm kiểu của Bài 12.7?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nếu trường có phòng máy cài Python và scikit-learn, em có thể gõ lại chương trình và thử trả lời câu a bằng cách chạy thật.",
+         "i": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6-lam-duoc-chua-phai-la-nen-lam",
+   "title": "6. Làm được chưa phải là nên làm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Công cụ càng dễ dùng, câu hỏi “có nên không” càng quan trọng. Trước khi huấn luyện một mô hình, em nhớ lại ba điều."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu của ai?",
+         "b": true
+        },
+        {
+         "text": " Ảnh, giọng nói của bạn bè là dữ liệu cá nhân của các bạn. Phải hỏi, và phải cho các bạn quyền nói không (Bài 11.5)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mô hình sẽ được dùng vào việc gì?",
+         "b": true
+        },
+        {
+         "text": " Một mô hình nhận biết đồ vật để phân loại rác khác hẳn một mô hình “nhận biết bạn nào đang không chú ý trong lớp”. Việc thứ hai là gắn nhãn con người, thuộc mức rủi ro cao (Bài 12.5)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ai chịu trách nhiệm khi nó sai?",
+         "b": true
+        },
+        {
+         "text": " Người huấn luyện mô hình, tức là em, là “người phát triển” trong hệ sinh thái ở Bài 12.6."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài học này yêu cầu em "
+      },
+      {
+       "text": "nêu được công cụ và mục đích",
+       "b": true
+      },
+      {
+       "text": " của chúng. Thực hành đầy đủ, từ thu thập dữ liệu đến làm sản phẩm, có thể được tổ chức ở Câu lạc bộ AI hoặc trong các dự án của môn Tin học."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image27.png",
+     "caption": "Sơ đồ tư duy Bài 12.8."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Bốn bước huấn luyện mô hình phân loại:",
+         "b": true
+        },
+        {
+         "text": " tạo nhóm và đặt tên; đưa ví dụ vào từng nhóm; cho máy học; thử với ví dụ mới và cải tiến."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mô hình "
+        },
+        {
+         "text": "chỉ biết các nhãn đã học",
+         "b": true
+        },
+        {
+         "text": "; chất lượng nằm ở ví dụ và ở việc thử."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Một số công cụ: "
+        },
+        {
+         "text": "Teachable Machine",
+         "b": true
+        },
+        {
+         "text": " (không viết mã); "
+        },
+        {
+         "text": "MIT App Inventor",
+         "b": true
+        },
+        {
+         "text": " (kéo thả); "
+        },
+        {
+         "text": "ML5.js, TensorFlow.js",
+         "b": true
+        },
+        {
+         "text": " (JavaScript); "
+        },
+        {
+         "text": "scikit-learn",
+         "b": true
+        },
+        {
+         "text": " (Python)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Miễn phí",
+         "b": true
+        },
+        {
+         "text": " là không trả tiền; "
+        },
+        {
+         "text": "mã nguồn mở",
+         "b": true
+        },
+        {
+         "text": " là được xem, sửa, chia sẻ theo giấy phép."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bốn điều cần kiểm tra:",
+         "b": true
+        },
+        {
+         "text": " điều kiện sử dụng và giấy phép; độ tuổi; dữ liệu được xử lí, lưu ở đâu; tài khoản và chi phí."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Sắp xếp các việc sau theo đúng bốn bước: a) giơ một cây bút màu khác để xem máy có nhận ra không; b) quyết định máy sẽ phân biệt “bút”, “tẩy”, “thước”; c) bấm nút huấn luyện; d) chụp 40 ảnh cho mỗi đồ vật ở nhiều góc."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một mô hình được huấn luyện để phân biệt “mèo” và “chó”. Em đưa cho nó ảnh một con thỏ. Chuyện gì xảy ra? Vì sao? Em sửa thế nào?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Một ứng dụng tạo ảnh “miễn phí” yêu cầu đăng nhập bằng tài khoản mạng xã hội và xin quyền truy cập danh sách bạn bè. Dùng bảng ở mục 3 và mục 4 để nhận xét: em đang “trả” bằng gì?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Nêu một lợi ích và một giới hạn của công cụ không cần viết mã so với thư viện lập trình."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Nhóm em muốn huấn luyện mô hình nhận biết cảm xúc qua khuôn mặt các bạn trong lớp để “làm sản phẩm dự thi”. Em nêu hai vấn đề cần cân nhắc trước khi bắt đầu, và đề xuất một đề tài thay thế dùng cùng kĩ thuật nhưng an toàn hơn."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu có máy tính và được thầy cô hoặc cha mẹ đồng ý, em thử huấn luyện một mô hình phân loại ba đồ vật trong nhà bằng một công cụ không cần viết mã (trước khi dùng, kiểm tra bốn điều ở mục 4). Ghi lại: mỗi nhóm bao nhiêu ví dụ; mô hình sai ở trường hợp nào khi em thử; em đã bổ sung ví dụ gì và kết quả thay đổi ra sao. Nếu không có điều kiện thực hành, em viết kế hoạch bốn bước cho mô hình ấy và dự đoán ba tình huống mô hình sẽ dễ sai."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể lại bốn bước huấn luyện mô hình phân loại"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu tên, mục đích của ít nhất ba công cụ và chọn công cụ theo nhu cầu"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt mã nguồn mở với miễn phí"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu bốn điều cần kiểm tra trước khi dùng một công cụ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mã nguồn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các dòng lệnh do con người viết ra để tạo nên phần mềm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mã nguồn mở"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mã nguồn được công bố kèm giấy phép cho xem, dùng, sửa, chia sẻ lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giấy phép"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Văn bản nêu điều kiện được dùng một phần mềm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thư viện lập trình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bộ mã lệnh viết sẵn để người lập trình dùng lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xuất mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lưu mô hình đã huấn luyện thành tệp để dùng trong ứng dụng khác"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " b, d, c, a."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Mô hình vẫn trả lời “mèo” hoặc “chó”, vì nó chỉ biết hai nhãn đã học và không có lựa chọn “không biết”. Sửa: thêm một nhóm thứ ba, ví dụ “con vật khác”, với nhiều ví dụ đa dạng; và hiển thị mức chắc chắn để người dùng thấy khi máy lưỡng lự."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Ứng dụng không thu tiền nhưng thu dữ liệu: thông tin tài khoản và danh sách bạn bè, trong đó có dữ liệu của người khác. Danh sách bạn bè không cần cho việc tạo ảnh. Nên từ chối quyền này hoặc chọn công cụ khác."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Lợi ích: bắt đầu nhanh, thấy kết quả ngay, không cần học lập trình. Giới hạn: chỉ làm được những kiểu bài toán công cụ cho sẵn; khó kiểm soát chi tiết cách chia dữ liệu, cách đo kết quả."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Vấn đề: khuôn mặt là dữ liệu cá nhân của các bạn, cần sự đồng ý của từng bạn (và cha mẹ); gắn nhãn cảm xúc cho con người dễ sai và dễ bị dùng để đánh giá, theo dõi. Đề tài thay thế: nhận biết kí hiệu tay cho trò chơi, phân loại rác, nhận biết lá cây trong vườn trường."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [16] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2169 @@
+{
+ "id": "10.4",
+ "slug": "bai-10-04",
+ "grade": 10,
+ "num": 4,
+ "topicId": "10.2",
+ "title": "Ranh giới: khi nào dùng AI là vi phạm?",
+ "meta": "Chuyên đề 10.2: Dùng AI đúng quy định, có đạo đức (tiết 1 trong 2 tiết)",
+ "period": {
+  "index": 1,
+  "total": 2
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nêu được ví dụ về "
+   },
+   {
+    "text": "hành vi",
+    "b": true
+   },
+   {
+    "text": " sử dụng AI vi phạm quy định của nhà trường hoặc pháp luật."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được ví dụ về "
+   },
+   {
+    "text": "sự cố",
+    "b": true
+   },
+   {
+    "text": " liên quan đến AI: không cố ý nhưng vẫn dẫn đến vi phạm."
+   }
+  ],
+  [
+   {
+    "text": "Biết cách "
+   },
+   {
+    "text": "khai báo việc sử dụng AI",
+    "b": true
+   },
+   {
+    "text": " trong sản phẩm học tập."
+   }
+  ]
+ ],
+ "keywords": [
+  "hành vi vi phạm",
+  "sự cố",
+  "trung thực học thuật",
+  "khai báo sử dụng AI",
+  "kiểm chứng"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-den-giao-thong",
+   "title": "Khởi động: Đèn giao thông",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy giơ thẻ trong đầu cho bốn việc sau. "
+      },
+      {
+       "text": "Xanh",
+       "b": true
+      },
+      {
+       "text": " là được làm. "
+      },
+      {
+       "text": "Vàng",
+       "b": true
+      },
+      {
+       "text": " là được làm nếu có điều kiện. "
+      },
+      {
+       "text": "Đỏ",
+       "b": true
+      },
+      {
+       "text": " là không được làm."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nhờ trợ lí AI giải thích lại một khái niệm em chưa hiểu."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhờ AI viết cả bài văn rồi nộp cho cô."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhờ AI gợi ý dàn ý, sau đó tự viết bài."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dùng AI ghép mặt bạn vào một tấm ảnh vui rồi đăng lên nhóm lớp."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Việc nào em chắc chắn? Việc nào em còn lưỡng lự? Em dựa vào đâu để quyết định?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu em và bạn bên cạnh giơ thẻ khác nhau ở việc số 3 hoặc số 4, đó là chuyện bình thường. Cảm nhận mỗi người một khác. Vì thế mới cần "
+      },
+      {
+       "text": "quy định",
+       "b": true
+      },
+      {
+       "text": " làm căn cứ chung. Bài học này giúp em tìm ranh giới dựa trên quy định, không dựa trên cảm tính."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-hai-tang-quy-dinh",
+   "title": "1. Hai tầng quy định",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi dùng AI, em đang đứng dưới hai “mái nhà” quy định cùng lúc."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tầng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Gồm những gì",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bảo vệ điều gì",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhà trường",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội quy; Quy tắc sử dụng AI; quy chế kiểm tra, đánh giá"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự trung thực trong học tập; an toàn của học sinh, giáo viên; sự công bằng giữa các bạn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Pháp luật",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Luật An ninh mạng, Luật Bảo vệ dữ liệu cá nhân, Luật Trí tuệ nhân tạo, Luật Sở hữu trí tuệ…"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền, danh dự, dữ liệu, tài sản, tác phẩm của mọi người"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một việc có thể chỉ vi phạm quy định của trường (nộp bài do AI làm thay), cũng có thể vi phạm cả hai tầng (ghép ảnh bạn để chế giễu)."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2023, UNESCO công bố hướng dẫn về AI tạo sinh trong giáo dục và nghiên cứu. Theo một khảo sát toàn cầu của UNESCO với hơn 450 trường học và trường đại học, chưa đến 10% có chính sách hoặc hướng dẫn chính thức về việc dùng AI tạo sinh [4]. Nói cách khác, khi ấy phần lớn học sinh trên thế giới phải tự mò ranh giới. Trường mình có Quy tắc sử dụng AI nghĩa là em có một tấm bản đồ để đi."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-ba-vung-xanh-vang-do",
+   "title": "2. Ba vùng: xanh, vàng, đỏ",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để dễ hình dung, ta chia việc dùng AI trong học tập thành ba vùng."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vùng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nghĩa là",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ thường gặp",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xanh",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ AI giải thích lại khái niệm; nhờ đặt câu hỏi để tự kiểm tra; tra nghĩa của từ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vàng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được dùng "
+          },
+          {
+           "text": "nếu",
+           "b": true
+          },
+          {
+           "text": " khai báo và theo hướng dẫn của giáo viên"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ gợi ý dàn ý rồi tự viết; nhờ góp ý bản nháp; dùng AI tạo hình minh họa có ghi rõ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đỏ",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không được làm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nộp sản phẩm do AI làm thay; dùng AI trong giờ kiểm tra khi không được phép; tạo nội dung giả mạo người khác; đưa dữ liệu cá nhân của người khác vào công cụ AI"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Các ví dụ trong bảng là ví dụ thường gặp. Ranh giới chính thức theo Quy tắc của trường và yêu cầu của từng thầy cô cho từng nhiệm vụ.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vùng vàng là vùng rộng nhất và cũng là vùng dễ trượt chân nhất. Điều biến một việc vùng vàng thành an toàn là hai chữ: "
+      },
+      {
+       "text": "khai báo",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "kiểm chứng",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Quay lại bốn việc ở phần Khởi động. Em xếp mỗi việc vào vùng nào? So với lúc đầu, em có đổi ý ở việc nào không?"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image11.png",
+     "caption": "Hình 10.4.1. Ba vùng khi dùng AI, từ được phép đến không được phép."
+    }
+   ]
+  },
+  {
+   "id": "3-hanh-vi-va-su-co-hai-con-duong-dan-den-vi-pham",
+   "title": "3. Hành vi và sự cố: hai con đường dẫn đến vi phạm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Không phải vi phạm nào cũng do cố ý."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Hành vi vi phạm",
+         "b": true
+        },
+        {
+         "text": " là việc người dùng "
+        },
+        {
+         "text": "cố ý",
+         "b": true
+        },
+        {
+         "text": " làm điều quy định không cho phép."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sự cố",
+         "b": true
+        },
+        {
+         "text": " là điều gây hại xảy ra khi người dùng "
+        },
+        {
+         "text": "không cố ý",
+         "b": true
+        },
+        {
+         "text": ", thường do bất cẩn hoặc do công cụ sai mà không được kiểm tra."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vi phạm quy định của trường",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vi phạm pháp luật",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hành vi (cố ý)",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nộp bài do AI làm thay mà không khai báo; lén dùng AI trong giờ kiểm tra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng AI tạo ảnh, giọng nói giả mạo người khác để bôi nhọ, lừa đảo"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự cố (không cố ý)",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đưa vào bài một “số liệu” do AI bịa ra vì không kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dán danh sách có họ tên, số điện thoại của nhiều người vào công cụ AI, làm lộ thông tin"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bất cẩn vẫn phải chịu trách nhiệm",
+     "id": "bat-can-van-phai-chiu-trach-nhiem"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em còn nhớ hai luật sư ở Bài 10.2 chứ? Họ không cố ý lừa tòa án. Họ tin công cụ và bỏ qua khâu kiểm tra. Họ vẫn bị phạt [12]. Thẩm phán không phạt vì họ dùng AI, mà vì họ nộp những thứ sai mà không kiểm chứng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với học sinh cũng thế. Nếu bài thuyết trình của em có một câu trích dẫn không có thật, cô giáo sẽ không hỏi “công cụ nào bịa ra”, mà hỏi “em đã kiểm tra chưa?”."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Em không cố ý thì không sao.”",
+         "b": true
+        },
+        {
+         "text": " Không cố ý thì mức độ khác, nhưng hậu quả với người khác vẫn có thật, và em vẫn là người chịu trách nhiệm về sản phẩm mình nộp."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Sửa vài chữ là thành bài của em.”",
+         "b": true
+        },
+        {
+         "text": " Hãy tự hỏi: "
+        },
+        {
+         "text": "ý tưởng và lập luận là của ai?",
+         "i": true
+        },
+        {
+         "text": " Việc khai báo tính theo phần AI đã đóng góp, không tính theo số chữ em đã đổi."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Trêu nhau thôi mà.”",
+         "b": true
+        },
+        {
+         "text": " Hãy đặt mình vào vị trí người bị ghép ảnh. Lời “đùa thôi” không làm tấm ảnh biến mất khỏi nhóm chat."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Dùng AI trong học tập lúc nào cũng là gian lận.”",
+         "b": true
+        },
+        {
+         "text": " Không đúng. Vùng xanh và vùng vàng tồn tại là vì có rất nhiều cách dùng AI giúp em học tốt hơn."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-sau-chuyen-sau-ranh-gioi",
+   "title": "4. Sáu chuyện, sáu ranh giới",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy đọc sáu tình huống sau (đều là tình huống giả định) và thử tự trả lời trước khi xem phần phân tích."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chuyện 1.",
+       "b": true
+      },
+      {
+       "text": " An nhờ chatbot viết toàn bộ bài nghị luận, đổi vài từ rồi nộp, không nói gì với cô. "
+      },
+      {
+       "text": "Vùng đỏ.",
+       "i": true
+      },
+      {
+       "text": " Vi phạm quy định về trung thực học thuật: AI làm thay, không khai báo. "
+      },
+      {
+       "text": "Cách đúng:",
+       "i": true
+      },
+      {
+       "text": " An tự lập dàn ý, tự viết, có thể nhờ AI góp ý bản nháp và khai báo điều đó."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chuyện 2.",
+       "b": true
+      },
+      {
+       "text": " Để “chọc vui”, Bình dùng ứng dụng AI ghép mặt Chi vào một tấm ảnh hài rồi gửi vào nhóm lớp. "
+      },
+      {
+       "text": "Vùng đỏ, cả hai tầng.",
+       "i": true
+      },
+      {
+       "text": " Hình ảnh của Chi là dữ liệu cá nhân; đây là nội dung giả mạo người thật. "
+      },
+      {
+       "text": "Cách đúng:",
+       "i": true
+      },
+      {
+       "text": " không tạo. Nếu đã gửi: gỡ ngay, xin lỗi Chi, báo với cô."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chuyện 3.",
+       "b": true
+      },
+      {
+       "text": " Lớp trưởng Dũng dán vào chatbot bảng danh sách lớp có họ tên, số điện thoại phụ huynh và điểm giữa kì để nhờ chia nhóm học tập. "
+      },
+      {
+       "text": "Vùng đỏ, là một sự cố.",
+       "i": true
+      },
+      {
+       "text": " Dũng có ý tốt, nhưng đã đưa dữ liệu cá nhân của cả lớp ra ngoài. "
+      },
+      {
+       "text": "Cách đúng:",
+       "i": true
+      },
+      {
+       "text": " xóa hết thông tin định danh (thay tên bằng số thứ tự) trước khi dùng, hoặc chia nhóm bằng cách khác."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chuyện 4.",
+       "b": true
+      },
+      {
+       "text": " Giang chưa hiểu bài hàm số. Bạn nhờ trợ lí AI giải thích lại bằng ví dụ khác, tự làm bài tập, đối chiếu đáp án với sách, rồi ghi vào phiếu khai báo. "
+      },
+      {
+       "text": "Vùng xanh.",
+       "i": true
+      },
+      {
+       "text": " Đây là mẫu của việc dùng AI đúng: để hiểu bài, tự làm, có kiểm chứng, có khai báo."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chuyện 5.",
+       "b": true
+      },
+      {
+       "text": " Hải nhận được đoạn ghi âm “giọng thầy hiệu trưởng” thông báo nghỉ học ngày mai. Thấy thú vị, Hải chuyển tiếp vào ba nhóm chat mà không kiểm tra. "
+      },
+      {
+       "text": "Vùng đỏ, là một sự cố.",
+       "i": true
+      },
+      {
+       "text": " Hải không tạo ra đoạn ghi âm, nhưng đã góp phần lan truyền thông tin sai. "
+      },
+      {
+       "text": "Cách đúng:",
+       "i": true
+      },
+      {
+       "text": " kiểm tra trên kênh chính thức của trường trước khi chia sẻ; báo cho thầy cô."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chuyện 6.",
+       "b": true
+      },
+      {
+       "text": " Trong giờ kiểm tra, Khoa lén dùng điện thoại chụp đề và hỏi chatbot. "
+      },
+      {
+       "text": "Vùng đỏ.",
+       "i": true
+      },
+      {
+       "text": " Vi phạm quy chế kiểm tra. Không có cách nào “làm cho đúng” ngoài việc không làm."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trong sáu chuyện trên, chuyện nào là "
+        },
+        {
+         "text": "hành vi cố ý",
+         "i": true
+        },
+        {
+         "text": ", chuyện nào là "
+        },
+        {
+         "text": "sự cố",
+         "i": true
+        },
+        {
+         "text": "? Chuyện nào vi phạm cả quy định của trường lẫn pháp luật?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-khai-bao-su-dung-ai-noi-that-ve-cach-minh-da-lam",
+   "title": "5. Khai báo sử dụng AI: nói thật về cách mình đã làm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khai báo là việc em cho thầy cô biết AI đã tham gia vào sản phẩm của em như thế nào. Phiếu khai báo sử dụng AI của trường có sáu mục:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mục khai báo",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi em cần trả lời",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ AI đã sử dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em dùng công cụ nào?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục đích sử dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em dùng để làm gì?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phạm vi AI hỗ trợ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI tham gia vào phần nào của sản phẩm?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần việc do em trực tiếp thực hiện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần nào là của em?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em đã đối chiếu với nguồn nào?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội dung đã chỉnh sửa sau khi kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em đã sửa những gì?"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Một phiếu khai báo mẫu",
+     "id": "mot-phieu-khai-bao-mau"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây là phiếu của bạn Giang ở Chuyện 4:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mục",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giang ghi",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trợ lí AI do trường cấp tài khoản"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục đích"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ giải thích lại khái niệm hàm số đồng biến, nghịch biến bằng ví dụ đời sống"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phạm vi AI hỗ trợ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần hiểu lí thuyết; AI không giải bài tập"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần em tự làm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Toàn bộ 5 bài tập trong sách giáo khoa"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So lời giải thích của AI với định nghĩa trong sách giáo khoa; so đáp án với phần đáp số cuối sách"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã chỉnh sửa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI dùng một kí hiệu khác sách; em đã viết lại theo kí hiệu của sách"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Điều quan trọng về khai báo",
+         "b": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Khung giáo dục AI của Bộ Giáo dục và Đào tạo nêu rõ: việc khai báo sử dụng AI là minh chứng về "
+        },
+        {
+         "text": "tính trung thực và trách nhiệm",
+         "b": true
+        },
+        {
+         "text": ", "
+        },
+        {
+         "text": "không phải",
+         "b": true
+        },
+        {
+         "text": " căn cứ để tự động tăng hoặc giảm kết quả đánh giá [1]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nói cách khác: khai báo không làm em bị trừ điểm. "
+        },
+        {
+         "text": "Giấu",
+         "b": true
+        },
+        {
+         "text": " mới là vi phạm."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6-ba-cau-tu-hoi-truoc-khi-dung-ai",
+   "title": "6. Ba câu tự hỏi trước khi dùng AI",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em không thể mang theo bản Quy tắc mọi lúc. Nhưng em có thể mang theo ba câu hỏi:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Việc này có được phép không?",
+         "b": true
+        },
+        {
+         "text": " (Theo Quy tắc của trường và yêu cầu của thầy cô cho nhiệm vụ này.)"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Có gây hại hay làm lộ thông tin của ai không?",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mình có kiểm chứng và khai báo không?",
+         "b": true
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu cả ba câu đều ổn, em đang ở vùng xanh hoặc vàng an toàn. Nếu vướng một câu, hãy dừng lại và hỏi thầy cô."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-dung-the-nay-co-duoc-khong",
+   "title": "Trải nghiệm: Dùng thế này có được không?",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ranh giới giữa dùng AI để học và dùng AI vi phạm quy định đôi khi rất mỏng. Em hãy cùng cả lớp thử đặt ranh giới với một ví dụ thật."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image12.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Gemini"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " gemini.google.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em quan sát thầy cô nhờ AI viết một đoạn cảm nhận văn học."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em đối chiếu với quy định sử dụng AI của trường: nộp đoạn này như bài của mình có được không?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em đề xuất một cách dùng AI được phép cho cùng bài tập, kèm một dòng ghi rõ đã dùng AI thế nào."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Cùng một công cụ, khi nào em đang học, khi nào em đang vi phạm?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Thầy cô sẽ trình chiếu trên tài khoản của nhà trường."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image13.png",
+     "caption": "Sơ đồ tư duy Bài 10.4."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Khi dùng AI, em chịu "
+        },
+        {
+         "text": "hai tầng quy định",
+         "b": true
+        },
+        {
+         "text": ": nhà trường và pháp luật."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Việc dùng AI có thể ở vùng "
+        },
+        {
+         "text": "xanh",
+         "b": true
+        },
+        {
+         "text": " (được), "
+        },
+        {
+         "text": "vàng",
+         "b": true
+        },
+        {
+         "text": " (được nếu khai báo và theo hướng dẫn), "
+        },
+        {
+         "text": "đỏ",
+         "b": true
+        },
+        {
+         "text": " (không được)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Vi phạm có thể do "
+        },
+        {
+         "text": "hành vi cố ý",
+         "b": true
+        },
+        {
+         "text": " hoặc do "
+        },
+        {
+         "text": "sự cố",
+         "b": true
+        },
+        {
+         "text": " vì bất cẩn. Bất cẩn vẫn phải chịu trách nhiệm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hai việc giữ em an toàn ở vùng vàng: "
+        },
+        {
+         "text": "kiểm chứng",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "khai báo",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khai báo là minh chứng của trung thực, "
+        },
+        {
+         "text": "không tự động làm tăng hay giảm kết quả",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba câu tự hỏi: có được phép không; có hại hay lộ thông tin của ai không; có kiểm chứng và khai báo không."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Xếp mỗi việc vào vùng xanh, vàng hoặc đỏ và giải thích ngắn gọn."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nhờ AI tạo 10 câu hỏi trắc nghiệm từ vở ghi của mình để tự ôn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhờ AI dịch nguyên một bài viết tiếng Anh trên mạng rồi nộp như bài tự viết."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhờ AI chỉ ra lỗi ngữ pháp trong đoạn văn tiếng Anh em tự viết, rồi em tự sửa."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Tải ảnh chụp cả lớp lên một ứng dụng lạ để “biến thành hoạt hình”."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi tình huống, cho biết đây là hành vi cố ý hay sự cố, và vi phạm tầng quy định nào."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Mai đưa vào bài báo tường một “câu nói của danh nhân” do chatbot cung cấp; sau đó cả lớp phát hiện danh nhân ấy chưa từng nói câu đó."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nam dùng AI tạo giọng nói giống một bạn trong lớp để gửi tin nhắn thoại trêu bạn khác."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Câu lạc bộ ghi âm buổi sinh hoạt rồi tải lên một công cụ AI để tóm tắt, không hỏi ý kiến ai."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Em vừa làm xong bài thuyết trình môn Địa lí. Em đã nhờ AI gợi ý bố cục, tự tìm số liệu trong sách và trên trang của cơ quan thống kê, tự viết nội dung, và nhờ AI tạo một hình minh họa. Hãy điền phiếu khai báo sáu mục cho bài này."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Bạn Linh nói: “Mình không khai báo đâu, khai ra cô lại trừ điểm.” Em sẽ nói gì với Linh?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Viết lại Chuyện 3 (lớp trưởng Dũng) thành một cách làm đúng: Dũng vẫn muốn nhờ AI chia nhóm học tập, vậy Dũng cần chuẩn bị dữ liệu thế nào?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Cam kết cá nhân.",
+       "b": true
+      },
+      {
+       "text": " Hoàn thành câu sau và dán vào bìa vở: “Trong học kì này, khi dùng AI để học, em cam kết …”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Hỏi cho rõ.",
+       "b": true
+      },
+      {
+       "text": " Trong tuần, với một nhiệm vụ học tập bất kì, em hãy hỏi thầy cô bộ môn: “Thưa thầy cô, với bài này em được dùng AI ở mức nào ạ?”. Ghi lại câu trả lời."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ví dụ hành vi dùng AI vi phạm quy định của trường, của pháp luật"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ví dụ sự cố do bất cẩn khi dùng AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xếp một việc dùng AI vào vùng xanh, vàng, đỏ và giải thích"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điền đủ sáu mục của phiếu khai báo sử dụng AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hành vi vi phạm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc cố ý làm điều quy định không cho phép"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự cố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều gây hại xảy ra do bất cẩn hoặc do công cụ sai mà không được kiểm tra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trung thực học thuật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sản phẩm học tập phản ánh đúng công sức và hiểu biết của người làm; ghi rõ phần nhận hỗ trợ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đối chiếu thông tin với nguồn độc lập, đáng tin cậy trước khi dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khai báo sử dụng AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cho biết công cụ, mục đích, phạm vi AI hỗ trợ, phần tự làm, cách kiểm chứng và chỉnh sửa"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Xanh: để tự ôn, dùng vở ghi của mình. b) Đỏ: AI làm thay và bài gốc là của người khác. c) Xanh hoặc vàng tùy yêu cầu của giáo viên: em tự viết, tự sửa; nên khai báo. d) Đỏ: hình ảnh của các bạn là dữ liệu cá nhân, ứng dụng chưa được kiểm tra."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Sự cố; quy định của trường (thông tin sai do không kiểm chứng). b) Hành vi cố ý; cả hai tầng (giả mạo giọng nói người khác). c) Sự cố; cả hai tầng (giọng nói là dữ liệu cá nhân, cần sự đồng ý)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: Mục đích: gợi ý bố cục và tạo một hình minh họa. Phạm vi: bố cục, một hình. Tự làm: tìm số liệu, viết nội dung, trình bày. Kiểm chứng: số liệu lấy từ sách và trang cơ quan thống kê, không lấy từ AI. Chỉnh sửa: đổi thứ tự hai phần so với gợi ý; ghi “hình do AI tạo” dưới hình minh họa."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: khai báo không tự động làm tăng hay giảm kết quả; nó cho thấy mình trung thực. Việc bị xử lí là giấu việc dùng AI. Nếu chưa rõ được dùng đến đâu thì hỏi cô trước khi làm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: thay họ tên bằng mã số (HS01, HS02…), bỏ số điện thoại, chỉ giữ thông tin cần cho việc chia nhóm (ví dụ môn mạnh, môn cần hỗ trợ); hoặc hỏi cô chủ nhiệm xem có nên dùng AI cho việc này không."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [4], [12] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

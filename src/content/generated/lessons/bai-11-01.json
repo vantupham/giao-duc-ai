@@ -1,0 +1,1965 @@
+{
+ "id": "11.1",
+ "slug": "bai-11-01",
+ "grade": 11,
+ "num": 1,
+ "topicId": "11.1",
+ "title": "Xây dựng quy trình sử dụng AI an toàn",
+ "meta": "Chuyên đề 11.1: Dùng AI an toàn để nâng cao năng lực bản thân (tiết 1 trong 3 tiết)",
+ "period": {
+  "index": 1,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Kể được "
+   },
+   {
+    "text": "bảy bước",
+    "b": true
+   },
+   {
+    "text": " của một quy trình sử dụng AI an toàn, chia theo ba giai đoạn: trước, trong và sau khi dùng."
+   }
+  ],
+  [
+   {
+    "text": "Giải thích được "
+   },
+   {
+    "text": "mỗi bước giúp em tránh điều gì",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Tự lập được quy trình cho "
+   },
+   {
+    "text": "một nhiệm vụ học tập cụ thể",
+    "b": true
+   },
+   {
+    "text": " của chính em."
+   }
+  ]
+ ],
+ "keywords": [
+  "quy trình",
+  "mục đích sử dụng",
+  "quyền truy cập",
+  "giám sát",
+  "kiểm chứng",
+  "khai báo sử dụng AI"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-ung-dung-chup-bai-la-co-loi-giai",
+   "title": "Khởi động: Ứng dụng “chụp bài là có lời giải”",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tối thứ Năm, Quân còn sáu bài tập Hóa. Một người bạn nhắn: “Tải cái này đi, chụp bài là có lời giải.” Quân tải ngay. Ứng dụng hỏi xin quyền dùng camera, xem toàn bộ thư viện ảnh, đọc danh bạ và biết vị trí. Quân bấm “Cho phép” cả bốn lần, vì đang vội. Mười lăm phút sau, sáu bài đã chép xong."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sáng hôm sau, cô giáo gọi Quân lên bảng làm lại bài 3. Quân không làm được. Tệ hơn, cô chỉ ra lời giải bài 5 trong vở Quân cân bằng sai phương trình. Đến chiều, điện thoại Quân bắt đầu nhận tin nhắn quảng cáo từ những số lạ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Trong câu chuyện trên, Quân đã “trượt” ở những chỗ nào? Em thử đếm xem có bao nhiêu chỗ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu em đếm được từ ba chỗ trở lên, em đã nhìn ra điều quan trọng nhất của bài: chuyện không hay xảy ra "
+      },
+      {
+       "text": "không phải ở một khoảnh khắc",
+       "b": true
+      },
+      {
+       "text": ", mà rải ra trước khi dùng, trong khi dùng và sau khi dùng. Vì thế, muốn an toàn thì cần một "
+      },
+      {
+       "text": "quy trình",
+       "b": true
+      },
+      {
+       "text": ", chứ một lời nhắc “hãy cẩn thận” là chưa đủ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nhac-lai-em-da-biet-gi-tu-lop-10",
+   "title": "Nhắc lại: Em đã biết gì từ lớp 10?",
+   "kind": "recall",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài học này dựa trên ba ý quen thuộc. Nếu chưa học hoặc đã quên, em đọc nhanh bảng sau."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ý cần nhớ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nội dung ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Xem lại ở tập Khối 10",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người chịu trách nhiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI tạo ra kết quả, nhưng người quyết định dùng kết quả đó và chịu trách nhiệm về nó là con người"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.1, 10.2"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI có thể sai một cách tự tin"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI tạo sinh có thể viết ra thông tin không có thật với giọng văn rất chắc chắn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.7, 10.9"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có ranh giới giữa dùng và lạm dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng AI để hiểu bài khác với nộp sản phẩm của AI như của mình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.4"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-vi-sao-can-mot-quy-trinh",
+   "title": "1. Vì sao cần một quy trình?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy nghĩ đến phòng thí nghiệm Hóa học. Trước khi làm thí nghiệm, em đeo kính, đọc nhãn hóa chất. Trong khi làm, em theo dõi phản ứng. Làm xong, em rửa dụng cụ và ghi kết quả. Không ai coi những việc ấy là rườm rà, vì bỏ một bước thì có thể trả giá bằng cả buổi học, thậm chí bằng sức khỏe."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dùng AI cũng vậy. Mỗi lần dùng, em đưa vào một thứ (câu hỏi, bài làm, hình ảnh), nhận về một thứ (câu trả lời, bản tóm tắt, lời giải), rồi dùng thứ nhận về vào một việc có thật (nộp bài, quyết định, chia sẻ). Ở cả ba chặng ấy đều có điều có thể trượt."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Quy trình sử dụng AI an toàn",
+         "b": true
+        },
+        {
+         "text": " là một chuỗi các bước được sắp theo thứ tự, thực hiện "
+        },
+        {
+         "text": "trước, trong và sau",
+         "b": true
+        },
+        {
+         "text": " khi dùng một công cụ AI, nhằm đạt được mục đích của mình mà không gây hại cho bản thân, cho người khác và không vi phạm quy định."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Quy trình có hai lợi ích. Thứ nhất, nó giúp em "
+      },
+      {
+       "text": "không phải nhớ bằng may rủi",
+       "b": true
+      },
+      {
+       "text": ": lúc vội, lúc mệt, em vẫn có một danh sách để dò. Thứ hai, nó giúp em "
+      },
+      {
+       "text": "nói được mình đã làm gì",
+       "b": true
+      },
+      {
+       "text": " khi thầy cô hoặc cha mẹ hỏi."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2023, UNESCO công bố bản hướng dẫn toàn cầu đầu tiên về AI tạo sinh trong giáo dục. Khi khảo sát hơn 450 trường học và trường đại học, UNESCO thấy chưa tới 10% đã có quy định hoặc hướng dẫn chính thức về việc dùng AI tạo sinh [3]. Nói cách khác, công cụ đến tay người học nhanh hơn nhiều so với các quy định. Trong lúc quy định còn đang được hoàn thiện, quy trình của riêng em chính là lớp bảo vệ gần em nhất."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-bay-buoc-ba-giai-doan",
+   "title": "2. Bảy bước, ba giai đoạn",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hình 11.1.1 cho em thấy toàn bộ quy trình trên một dòng thời gian. Em hãy nhìn hình trước, sau đó đọc từng giai đoạn."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image2.png",
+     "caption": "Hình 11.1.1. Quy trình bảy bước sử dụng AI an toàn. Mũi tên vòng phía dưới cho thấy: khi kiểm chứng phát hiện vấn đề, em quay lại bước 4 để đặt lại yêu cầu."
+    },
+    {
+     "t": "h3",
+     "text": "2.1. Trước khi dùng: ba bước chuẩn bị",
+     "id": "2-1-truoc-khi-dung-ba-buoc-chuan-bi"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 1. Xác định mục đích.",
+       "b": true
+      },
+      {
+       "text": " Em tự hỏi: "
+      },
+      {
+       "text": "Mình dùng AI để làm gì, và phần nào mình phải tự làm?",
+       "i": true
+      },
+      {
+       "text": " Câu trả lời nên viết được thành một dòng. Ví dụ: “Nhờ AI giải thích vì sao phải cân bằng phương trình, còn sáu bài tập thì mình tự giải.” Nếu không viết được dòng này, rất có thể em đang định nhờ AI làm thay."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 2. Kiểm tra công cụ.",
+       "b": true
+      },
+      {
+       "text": " Trước khi tin một công cụ, em xem ba điều:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dấu hiệu nên dè chừng",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ do ai làm ra, có điều khoản sử dụng không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không rõ nhà phát triển; không có điều khoản hoặc điều khoản không đọc được"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ xin những quyền gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xin quyền không liên quan đến chức năng (ứng dụng giải bài tập đòi đọc danh bạ)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ có phù hợp với tuổi của em và với quy định của trường không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Yêu cầu độ tuổi cao hơn tuổi của em; nhà trường không cho dùng trong nhiệm vụ này"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Về độ tuổi: bản hướng dẫn của UNESCO đề nghị các nước cân nhắc mức "
+      },
+      {
+       "text": "tối thiểu 13 tuổi",
+       "b": true
+      },
+      {
+       "text": " cho việc dùng AI tạo sinh trong lớp học [3]. Nhiều công cụ còn đặt mức tuổi riêng, và có công cụ yêu cầu sự đồng ý của cha mẹ với người dưới 18 tuổi. Em cần đọc điều khoản của chính công cụ mình định dùng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 3. Chuẩn bị đầu vào.",
+       "b": true
+      },
+      {
+       "text": " Em chọn những gì sẽ đưa cho AI và "
+      },
+      {
+       "text": "bỏ ra những gì không nên đưa",
+       "b": true
+      },
+      {
+       "text": ": họ tên đầy đủ, số điện thoại, địa chỉ, ảnh có mặt người khác, điểm số của bạn, ảnh giấy tờ. Quy tắc dễ nhớ: "
+      },
+      {
+       "text": "chỉ đưa vừa đủ để AI làm được việc",
+       "i": true
+      },
+      {
+       "text": ". Hỏi về một bài Hóa thì không cần chụp cả trang vở có tên và lớp."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.2. Trong khi dùng: hai bước điều khiển",
+     "id": "2-2-trong-khi-dung-hai-buoc-dieu-khien"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 4. Đặt yêu cầu rõ ràng.",
+       "b": true
+      },
+      {
+       "text": " Một câu lệnh tốt nêu được vai trò, nhiệm vụ, bối cảnh và dạng kết quả mong muốn (em sẽ học kĩ thuật nâng cao ở Bài 11.8). Câu lệnh rõ giúp kết quả đúng hướng hơn và giúp em dễ kiểm tra hơn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 5. Giám sát.",
+       "b": true
+      },
+      {
+       "text": " Em đọc kết quả "
+      },
+      {
+       "text": "ngay khi nó hiện ra",
+       "i": true
+      },
+      {
+       "text": " với thái độ của người kiểm tra, chứ chưa phải người chép. Em để ý: AI có đi lạc đề không? Có chỗ nào “nghe hay nhưng lạ” không? Nó có đang làm luôn phần em định tự làm không? Nếu có, em dừng lại và điều chỉnh yêu cầu."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.3. Sau khi dùng: hai bước khép lại",
+     "id": "2-3-sau-khi-dung-hai-buoc-khep-lai"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 6. Kiểm chứng.",
+       "b": true
+      },
+      {
+       "text": " Em so kết quả với một nguồn "
+      },
+      {
+       "text": "độc lập với AI",
+       "b": true
+      },
+      {
+       "text": ": sách giáo khoa, tài liệu thầy cô phát, trang chính thức của cơ quan có thẩm quyền, hoặc tự tính lại. Hỏi lại chính công cụ đó “có chắc không?” "
+      },
+      {
+       "text": "chưa phải là kiểm chứng",
+       "b": true
+      },
+      {
+       "text": ", vì nó có thể lặp lại cái sai với giọng còn chắc hơn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 7. Khai báo.",
+       "b": true
+      },
+      {
+       "text": " Em ghi lại mình đã dùng công cụ nào, dùng vào việc gì, giữ lại phần nào và tự làm phần nào, theo quy định của thầy cô và nhà trường. Theo Khung nội dung của Bộ Giáo dục và Đào tạo, việc khai báo trung thực không tự động làm tăng hay giảm kết quả đánh giá của em [1]. Khai báo là để người đọc hiểu đúng sản phẩm, và để em giữ được uy tín của mình."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Quy trình an toàn nghĩa là dùng AI thật ít.”",
+         "b": true
+        },
+        {
+         "text": " Không phải. Quy trình không đo em dùng nhiều hay ít. Nó giúp em dùng "
+        },
+        {
+         "text": "có chủ đích và kiểm soát được",
+         "b": true
+        },
+        {
+         "text": ". Một bạn dùng AI ba lần một tuần mà lần nào cũng chép nguyên kết quả thì kém an toàn hơn một bạn dùng hằng ngày nhưng đủ bảy bước."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-bo-mot-buoc-thi-sao",
+   "title": "3. Bỏ một bước thì sao?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách tốt nhất để hiểu một quy trình là thử bỏ từng bước và xem chuyện gì xảy ra."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bước bị bỏ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều dễ xảy ra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trong chuyện của Quân",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Mục đích"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ AI làm thay mà không nhận ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quân chép cả sáu bài"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Kiểm tra công cụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lộ dữ liệu, cài nhầm ứng dụng xấu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cho phép đọc danh bạ, thư viện ảnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Chuẩn bị đầu vào"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đưa thông tin riêng tư của mình và của người khác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh chụp có tên, lớp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Đặt yêu cầu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả chung chung, lệch hướng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ chụp và chờ lời giải"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Giám sát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không phát hiện AI lạc đề"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chép liền một mạch"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng thông tin sai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phương trình bài 5 cân bằng sai"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7. Khai báo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mất lòng tin, vi phạm trung thực học thuật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nộp như bài tự làm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2023, tại một tòa án liên bang ở New York (Hoa Kỳ), hai luật sư nộp một văn bản có trích dẫn sáu bản án. Cả sáu bản án đều "
+        },
+        {
+         "text": "không tồn tại",
+         "b": true
+        },
+        {
+         "text": ": chúng do một công cụ trò chuyện AI viết ra. Khi được hỏi lại, công cụ còn khẳng định các bản án ấy là có thật. Các luật sư đã không tra cứu ở một nguồn độc lập nào. Ngày 22/6/2023, tòa phạt họ 5.000 đô la Mỹ [11]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Những người trong câu chuyện là người có chuyên môn, không thiếu hiểu biết. Họ chỉ bỏ đúng "
+        },
+        {
+         "text": "bước 6",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Tìm bước bị bỏ",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Đọc ba tình huống giả định sau. Với mỗi tình huống, em ghi số của bước bị bỏ và viết một câu cho biết lẽ ra bạn ấy nên làm gì."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Ngân nhờ AI tóm tắt một chương Lịch sử rồi học thuộc bản tóm tắt. Trong bản tóm tắt có một mốc năm sai."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Để nhờ AI viết lời chúc sinh nhật, Phúc dán vào toàn bộ đoạn trò chuyện nhóm của lớp, trong đó có chuyện riêng của hai bạn khác."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Vy dùng một công cụ dịch để dịch đoạn văn tiếng Anh trong bài tập “tự dịch”, rồi nộp mà không nói gì."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-lap-quy-trinh-cho-nhiem-vu-cua-em",
+   "title": "4. Lập quy trình cho nhiệm vụ của em",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bảy bước ở trên là cái khung. Khi áp dụng, mỗi bước phải được viết thành "
+      },
+      {
+       "text": "việc cụ thể",
+       "b": true
+      },
+      {
+       "text": ". Dưới đây là một ví dụ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhiệm vụ:",
+       "b": true
+      },
+      {
+       "text": " Chuẩn bị bài thuyết trình 5 phút môn Địa lí về xâm nhập mặn ở Đồng bằng sông Cửu Long. Thầy cho phép dùng AI để tìm ý và góp ý dàn bài, không cho phép dùng AI viết lời thuyết trình."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bước",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc cụ thể của em",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Mục đích"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ AI gợi ý các ý chính và góp ý dàn bài. Tự viết lời thuyết trình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Công cụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng công cụ nhà trường cho phép; đã đọc mục tuổi và mục dữ liệu trong điều khoản"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Đầu vào"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ đưa đề bài và dàn ý nháp; không đưa tên nhóm, tên trường"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Yêu cầu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em là học sinh lớp 11. Hãy nêu 5 ý chính về nguyên nhân và hậu quả của xâm nhập mặn ở Đồng bằng sông Cửu Long, mỗi ý một dòng, và nói rõ ý nào cần số liệu để chứng minh.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Giám sát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đánh dấu các ý có số liệu; bỏ ý không liên quan đến đề"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đối chiếu từng số liệu với sách giáo khoa và trang của cơ quan khí tượng thủy văn; số nào không tìm được nguồn thì không dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7. Khai báo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ghi ở trang cuối: “Nhóm dùng AI để gợi ý ý chính và góp ý dàn bài. Số liệu lấy từ các nguồn sau… Lời thuyết trình do nhóm tự viết.”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em để ý: bước 1 và bước 7 “soi” vào nhau. Điều em định ra ở bước 1 chính là điều em khai báo ở bước 7. Nếu hai bước này không khớp, nghĩa là giữa chừng em đã để AI làm nhiều hơn dự định."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Quy trình của riêng em",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chọn một nhiệm vụ học tập em sẽ làm trong tuần này (soạn bài, ôn kiểm tra, làm sản phẩm nhóm). Kẻ bảng bảy bước như trên và điền việc cụ thể vào từng bước. Đổi bảng với bạn bên cạnh và trả lời giúp bạn một câu hỏi: "
+        },
+        {
+         "text": "bước nào bạn viết còn chung chung nhất?",
+         "i": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-quy-trinh-khong-thay-duoc-nguoi-dung",
+   "title": "5. Quy trình không thay được người dùng",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một danh sách bảy bước có thể bị làm cho có: đánh dấu đủ bảy ô mà không thật sự nghĩ. Vì thế, đằng sau quy trình là ba thói quen em cần giữ:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Chậm lại ở những chỗ có rủi ro.",
+         "b": true
+        },
+        {
+         "text": " Xin quyền, đưa dữ liệu, bấm “nộp” là những chỗ nên dừng vài giây."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hỏi khi không chắc.",
+         "b": true
+        },
+        {
+         "text": " Nếu không biết nhiệm vụ này có được dùng AI không, em hỏi thầy cô trước khi làm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhận phần của mình.",
+         "b": true
+        },
+        {
+         "text": " Khi kết quả sai, câu “tại AI” không giải quyết được gì. Người chọn dùng kết quả ấy là em."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong các chuẩn năng lực AI cho học sinh do UNESCO công bố năm 2024, năng lực về tư duy lấy con người làm trung tâm được đặt lên hàng đầu, trước cả kĩ thuật [2]. Quy trình bảy bước là một cách biến tinh thần ấy thành việc làm hằng ngày."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lưu ý: nhà trường có thể ban hành quy tắc riêng về sử dụng AI. Khi có, em thực hiện bước 2 và bước 7 theo đúng quy tắc đó.",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-di-du-bay-buoc-voi-mot-viec-that",
+   "title": "Trải nghiệm: Đi đủ bảy bước với một việc thật",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bảy bước nghe thì dễ, làm thật mới thấy mình hay bỏ qua bước nào. Em hãy thử với một nhiệm vụ học tập cụ thể."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image3.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Gemini"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " gemini.google.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 7 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em chọn một nhiệm vụ, ví dụ tóm tắt một bài trong sách giáo khoa."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em làm lần lượt bảy bước với chatbot, đánh dấu từng bước vào phiếu."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em ghi lại bước nào giúp em phát hiện ra một vấn đề."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Khi dùng AI một mình ở nhà, bước nào em hay bỏ qua nhất?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em đăng nhập bằng tài khoản nhà trường. Em không đưa thông tin cá nhân vào câu lệnh."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image4.png",
+     "caption": "Sơ đồ tư duy Bài 11.1."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Rủi ro khi dùng AI rải ra ở cả ba giai đoạn, nên cần một "
+        },
+        {
+         "text": "quy trình",
+         "b": true
+        },
+        {
+         "text": " chứ không chỉ một lời nhắc."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Trước:",
+         "b": true
+        },
+        {
+         "text": " xác định mục đích, kiểm tra công cụ, chuẩn bị đầu vào. "
+        },
+        {
+         "text": "Trong:",
+         "b": true
+        },
+        {
+         "text": " đặt yêu cầu rõ ràng, giám sát. "
+        },
+        {
+         "text": "Sau:",
+         "b": true
+        },
+        {
+         "text": " kiểm chứng, khai báo."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Kiểm chứng phải dùng "
+        },
+        {
+         "text": "nguồn độc lập với AI",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quy trình giúp em dùng AI "
+        },
+        {
+         "text": "có chủ đích và kiểm soát được",
+         "b": true
+        },
+        {
+         "text": ", không nhằm bắt em dùng ít đi."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Xếp mỗi việc sau vào đúng giai đoạn (trước, trong, sau) và ghi tên bước tương ứng: a) so số liệu AI đưa ra với sách giáo khoa; b) đọc mục “Chúng tôi thu thập những gì” của ứng dụng; c) xóa tên bạn bè khỏi đoạn văn trước khi dán vào; d) dừng AI lại vì nó bắt đầu viết luôn bài văn; e) ghi chú “phần dàn ý có tham khảo AI”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một ứng dụng luyện từ vựng xin bốn quyền: micro, thông báo, danh bạ, vị trí. Theo em, quyền nào hợp lí với chức năng, quyền nào đáng đặt câu hỏi? Vì sao?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Bạn Tú nói: “Mình đã hỏi lại AI hai lần, lần nào nó cũng trả lời giống nhau, vậy là kiểm chứng rồi.” Em hãy chỉ ra chỗ chưa đúng và đề xuất cách kiểm chứng phù hợp."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Viết lại bước 1 cho ba nhiệm vụ sau sao cho mỗi nhiệm vụ nêu rõ phần nhờ AI và phần tự làm: a) viết đoạn văn nghị luận 200 chữ; b) ôn công thức lượng giác; c) lập trình trò chơi đoán số."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Em chỉ được giữ lại ba trong bảy bước cho một lần dùng AI rất vội. Em giữ ba bước nào? Hãy bảo vệ lựa chọn của mình bằng hai, ba câu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong một tuần, mỗi lần dùng AI cho việc học, em ghi một dòng nhật kí gồm: ngày, nhiệm vụ, bước nào em làm tốt, bước nào em bỏ qua. Cuối tuần, em xem bước nào hay bị bỏ nhất và viết một cách nhắc mình (ví dụ: dán một mẩu giấy “Kiểm chứng chưa?” lên góc bàn học). Em có thể chia sẻ nhật kí với cha mẹ để cùng thống nhất cách dùng AI ở nhà."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể đúng bảy bước theo ba giai đoạn"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích mỗi bước giúp tránh điều gì"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra bước bị bỏ trong một tình huống"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lập quy trình cho một nhiệm vụ của mình"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quy trình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuỗi các bước được sắp theo thứ tự để làm một việc"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền truy cập"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự cho phép để ứng dụng dùng một bộ phận hoặc dữ liệu trên thiết bị (camera, micro, danh bạ, vị trí…)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giám sát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Theo dõi kết quả trong lúc AI làm việc để điều chỉnh kịp thời"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So kết quả với một nguồn độc lập, đáng tin cậy"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khai báo sử dụng AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ghi rõ đã dùng công cụ nào, vào việc gì, phần nào do mình làm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Sau, kiểm chứng. b) Trước, kiểm tra công cụ. c) Trước, chuẩn bị đầu vào. d) Trong, giám sát. e) Sau, khai báo."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Micro hợp lí nếu ứng dụng có luyện phát âm. Thông báo hợp lí để nhắc lịch học, nhưng em có thể tắt. Danh bạ và vị trí không cần cho việc học từ vựng, nên từ chối; nếu từ chối mà ứng dụng không chạy thì nên chọn ứng dụng khác."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Hỏi lại cùng một công cụ không phải là nguồn độc lập: công cụ có thể lặp lại cái sai. Tú cần đối chiếu với sách giáo khoa, tài liệu của thầy cô, nguồn chính thức, hoặc tự tính, tự suy luận lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý. a) Nhờ AI nhận xét dàn ý và chỉ ra chỗ lập luận yếu; tự viết đoạn văn. b) Nhờ AI ra câu hỏi kiểm tra nhanh và giải thích chỗ sai; tự học và tự làm. c) Nhờ AI giải thích thông báo lỗi; tự viết chương trình."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Không có đáp án duy nhất. Một lựa chọn dễ bảo vệ là bước 1 (để không nhờ làm thay), bước 3 (lộ dữ liệu thì khó lấy lại) và bước 6 (thông tin sai gây hậu quả trực tiếp). Điều quan trọng là em nêu được mình chấp nhận rủi ro nào khi bỏ bốn bước còn lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [2], [3], [11] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

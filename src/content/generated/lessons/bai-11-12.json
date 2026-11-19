@@ -1,0 +1,2404 @@
+{
+ "id": "11.12",
+ "slug": "bai-11-12",
+ "grade": 11,
+ "num": 12,
+ "topicId": "11.4",
+ "title": "Thiết kế và vận hành tổng thể một hệ thống AI",
+ "meta": "Chuyên đề 11.4: Bên trong hệ thống AI (tiết 4 trong 4 tiết)",
+ "period": {
+  "index": 4,
+  "total": 4
+ },
+ "objectives": [
+  [
+   {
+    "text": "Trình bày được "
+   },
+   {
+    "text": "sáu bước",
+    "b": true
+   },
+   {
+    "text": " thiết kế và vận hành một hệ thống AI, từ mục tiêu đến cập nhật."
+   }
+  ],
+  [
+   {
+    "text": "Mô tả được "
+   },
+   {
+    "text": "dòng vận hành",
+    "b": true
+   },
+   {
+    "text": " của một hệ thống AI cụ thể: điều gì xảy ra từ lúc người dùng hỏi đến lúc hệ thống được cải thiện."
+   }
+  ],
+  [
+   {
+    "text": "Chỉ ra được "
+   },
+   {
+    "text": "vai trò của con người",
+    "b": true
+   },
+   {
+    "text": " ở từng bước, và kết nối được những gì đã học trong cả năm."
+   }
+  ]
+ ],
+ "keywords": [
+  "thiết kế",
+  "vận hành",
+  "kiểm thử",
+  "triển khai",
+  "vòng phản hồi",
+  "cập nhật"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-cau-hoi-luc-muoi-gio-dem",
+   "title": "Khởi động: Câu hỏi lúc mười giờ đêm",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mười giờ đêm Chủ nhật, một bạn lớp 10 mới vào trường băn khoăn: "
+      },
+      {
+       "text": "“Mai thứ Hai có phải mặc áo dài không? Đi xe đạp điện thì gửi ở cổng nào?”",
+       "i": true
+      },
+      {
+       "text": " Bạn không dám nhắn cô chủ nhiệm vì đã khuya. Cuốn nội quy thì dài hai mươi trang."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu lạc bộ Tin học của trường nảy ra ý tưởng: làm một "
+      },
+      {
+       "text": "chatbot hỏi đáp nội quy",
+       "b": true
+      },
+      {
+       "text": ", trả lời được những câu như thế bất cứ lúc nào."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định, được dùng xuyên suốt bài học.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Nếu em ở trong câu lạc bộ, em sẽ bắt đầu từ đâu? Hãy liệt kê những việc phải làm, theo thứ tự em nghĩ là hợp lí."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhiều bạn sẽ trả lời: “Tìm một công cụ AI rồi cho nó đọc nội quy.” Đó là một việc cần làm, nhưng nó nằm ở khoảng giữa. Trước nó và sau nó còn nhiều việc, và những việc ấy mới quyết định hệ thống có dùng được, có an toàn hay không."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nhac-lai-nam-thanh-phan-cua-mot-he-thong-ai",
+   "title": "Nhắc lại: Năm thành phần của một hệ thống AI",
+   "kind": "recall",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở lớp 10 (Bài 10.11 của tập Khối 10), em đã “giải phẫu” một hệ thống AI thành năm thành phần. Bảng sau giúp em nhớ lại, với ví dụ là chatbot nội quy."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thành phần",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Là gì",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Với chatbot nội quy",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ hệ thống dựa vào để học hoặc để tra cứu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Văn bản nội quy, các thông báo của trường"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thuật toán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách máy học hoặc xử lí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách tìm đoạn nội quy liên quan đến câu hỏi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ có được sau khi học, dùng để tạo đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình ngôn ngữ soạn câu trả lời"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả trả cho người dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu trả lời kèm điều khoản được trích"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông tin đúng, sai quay lại để cải thiện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng bấm “hữu ích” hoặc “chưa đúng”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Theo định nghĩa được Tổ chức Hợp tác và Phát triển Kinh tế (OECD) cập nhật năm 2023, hệ thống AI là hệ thống dựa trên máy, vì các mục tiêu tường minh hoặc ngầm định, suy luận từ đầu vào nhận được cách tạo ra các đầu ra như dự đoán, nội dung, khuyến nghị hoặc quyết định [14]. Năm thành phần cho em biết hệ thống "
+      },
+      {
+       "text": "gồm những gì",
+       "b": true
+      },
+      {
+       "text": ". Bài hôm nay trả lời câu hỏi tiếp theo: "
+      },
+      {
+       "text": "làm thế nào để tạo ra nó và giữ cho nó chạy tốt?",
+       "b": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-sau-buoc-thiet-ke-va-van-hanh",
+   "title": "1. Sáu bước thiết kế và vận hành",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image38.png",
+     "caption": "Hình 11.12.1. Sáu bước thiết kế và vận hành một hệ thống AI. Mũi tên vòng cho thấy đây là một vòng lặp: phản hồi từ bước 6 quay về các bước trước."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bước",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi phải trả lời",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kiến thức em đã học",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Mục tiêu và người dùng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống phục vụ ai, nhận gì, đưa ra gì, để làm gì? Việc gì nó không làm?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.4, 11.7"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Dữ liệu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần dữ liệu gì, lấy ở đâu, có được phép dùng không, có đủ và cân đối không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.5"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Công nghệ và mô hình",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng những công nghệ nào, loại mô hình nào cho bài toán này?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.9, 11.10, 11.11"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Đầu ra và giao diện",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng nhận kết quả ở dạng nào? Họ có biết đây là AI và có kiểm chứng được không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.6, 11.8"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Kiểm thử",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống có đúng không, có công bằng với mọi nhóm không, sai thì sai kiểu gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.3, 11.4"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Vận hành, phản hồi, cập nhật",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai theo dõi, ai tiếp nhận phản ánh, bao lâu cập nhật một lần?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.1, 11.2"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em nhìn cột thứ ba: gần như mọi bài học của năm nay đều có chỗ trong sáu bước này. Chúng ta đi qua từng bước với chatbot nội quy."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bước 1. Mục tiêu và người dùng",
+     "id": "buoc-1-muc-tieu-va-nguoi-dung"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu lạc bộ viết mục tiêu theo mẫu em đã học ở lớp 10:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hệ thống nhận ",
+         "i": true
+        },
+        {
+         "text": "câu hỏi bằng tiếng Việt về nội quy",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": " của học sinh và phụ huynh, đưa ra ",
+         "i": true
+        },
+        {
+         "text": "câu trả lời ngắn kèm điều khoản được trích",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ", để ",
+         "i": true
+        },
+        {
+         "text": "người hỏi biết quy định đúng mà không phải chờ thầy cô",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ".",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Và viết luôn "
+      },
+      {
+       "text": "những việc hệ thống không làm",
+       "b": true
+      },
+      {
+       "text": ": không tư vấn tâm lí, không xử lí khiếu nại, không trả lời về điểm số của từng học sinh. Ranh giới rõ từ đầu giúp các bước sau dễ hơn nhiều."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bước 2. Dữ liệu",
+     "id": "buoc-2-du-lieu"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dữ liệu chính là văn bản nội quy bản mới nhất, do nhà trường cung cấp và cho phép dùng. Câu lạc bộ cũng thu khoảng một trăm câu hỏi thật của học sinh để biết các bạn hay hỏi gì, hỏi bằng lời lẽ thế nào. Các câu hỏi này được bỏ tên người hỏi trước khi dùng."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bước 3. Công nghệ và mô hình",
+     "id": "buoc-3-cong-nghe-va-mo-hinh"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chatbot cần xử lí ngôn ngữ tự nhiên để hiểu câu hỏi. Câu lạc bộ phải chọn giữa hai hướng:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chatbot theo kịch bản",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chatbot dùng mô hình ngôn ngữ có tra cứu nội quy",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ưu điểm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không bao giờ bịa; dễ kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu được nhiều cách hỏi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhược điểm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi khác kịch bản là không hiểu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có thể diễn đạt lệch nội quy"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Họ chọn hướng thứ hai, kèm một ràng buộc: hệ thống "
+      },
+      {
+       "text": "chỉ trả lời dựa trên đoạn nội quy tìm được",
+       "b": true
+      },
+      {
+       "text": ", và phải trích điều khoản. Đây là ý tưởng “tạo sinh có tra cứu” mà em đã đọc ở phần Đọc thêm của Bài 11.9."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bước 4. Đầu ra và giao diện",
+     "id": "buoc-4-dau-ra-va-giao-dien"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mỗi câu trả lời có ba phần: nội dung trả lời; điều khoản được trích để người dùng tự đối chiếu; hai nút “Hữu ích” và “Chưa đúng”. Ngay đầu khung trò chuyện có dòng: "
+      },
+      {
+       "text": "“Đây là trợ lí AI. Câu trả lời có thể chưa chính xác. Quy định chính thức là văn bản nội quy của trường.”",
+       "i": true
+      },
+      {
+       "text": " Việc cho người dùng biết mình đang tương tác với AI cũng là yêu cầu của Luật Trí tuệ nhân tạo [4]."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bước 5. Kiểm thử",
+     "id": "buoc-5-kiem-thu"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trước khi cho cả trường dùng, câu lạc bộ thử với các loại câu hỏi:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Loại câu hỏi thử",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kết quả mong đợi",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu thông thường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Thứ Hai mặc gì?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trả lời đúng, có trích điều khoản"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách hỏi khác nhau"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“T2 mac ao dai ko”, câu dùng từ địa phương"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vẫn hiểu đúng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu ngoài phạm vi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Điểm Toán của em bao nhiêu?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Từ chối và chỉ sang nơi phù hợp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu nội quy không đề cập"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Có được mang thú cưng đến trường không?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nói rõ “nội quy không có quy định này”, không tự bịa"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu nhạy cảm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một bạn kể mình bị bắt nạt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không tự xử lí; hướng dẫn liên hệ ngay thầy cô, phòng tư vấn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kiểm thử là lúc tìm ra hệ thống "
+      },
+      {
+       "text": "sai kiểu gì",
+       "b": true
+      },
+      {
+       "text": ". Em nhớ lại bộ lọc tin nhắn ở Bài 11.11: nó sai với đúng loại ví dụ mà nó chưa từng thấy."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bước 6. Vận hành, phản hồi, cập nhật",
+     "id": "buoc-6-van-hanh-phan-hoi-cap-nhat"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hệ thống ra mắt không phải là kết thúc. Nội quy thay đổi mỗi năm học. Học sinh hỏi những câu chưa ai lường tới. Câu lạc bộ phân công: mỗi tuần một bạn đọc các câu bị bấm “Chưa đúng”; một thầy cô phụ trách duyệt các thay đổi; đầu mỗi học kì cập nhật văn bản nội quy."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Làm xong hệ thống AI là xong việc.”",
+         "b": true
+        },
+        {
+         "text": " Một hệ thống AI không có người theo dõi sẽ cũ dần và sai dần. Ở Bài 11.4, em đã thấy “có người và có kinh phí để duy trì” là một vế của tính bền vững. Bước 6 chính là nơi vế đó được thực hiện, và nó chiếm phần lớn thời gian sống của một hệ thống."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-dong-van-hanh-dieu-gi-xay-ra-khi-he-thong-dang-chay",
+   "title": "2. Dòng vận hành: điều gì xảy ra khi hệ thống đang chạy?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sáu bước ở trên là việc của "
+      },
+      {
+       "text": "người làm ra",
+       "b": true
+      },
+      {
+       "text": " hệ thống. Còn khi hệ thống đã chạy, mỗi câu hỏi đi qua một chuỗi xử lí gọi là "
+      },
+      {
+       "text": "dòng vận hành",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image39.png",
+     "caption": "Hình 11.12.2. Dòng vận hành của chatbot nội quy. Đường nét liền: một câu hỏi được xử lí. Đường nét đứt: phản hồi quay về để con người cập nhật hệ thống."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đi theo câu hỏi "
+      },
+      {
+       "text": "“Mai thứ Hai có phải mặc áo dài không?”",
+       "i": true
+      },
+      {
+       "text": ":"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nhận câu hỏi.",
+         "b": true
+        },
+        {
+         "text": " Hệ thống nhận dòng chữ người dùng gõ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Tìm đoạn nội quy liên quan.",
+         "b": true
+        },
+        {
+         "text": " Hệ thống dò trong văn bản nội quy và lấy ra điều nói về trang phục."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Rẽ nhánh.",
+         "b": true
+        },
+        {
+         "text": " Nếu tìm thấy, đi tiếp bước 4. Nếu không tìm thấy, hoặc câu hỏi ngoài phạm vi, hệ thống trả lời “chưa có thông tin” và hướng dẫn liên hệ thầy cô."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Soạn câu trả lời.",
+         "b": true
+        },
+        {
+         "text": " Mô hình ngôn ngữ viết câu trả lời dựa trên đoạn tìm được, kèm trích dẫn điều khoản."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Người dùng đọc và đánh giá.",
+         "b": true
+        },
+        {
+         "text": " Người dùng đối chiếu với điều khoản được trích, bấm “Hữu ích” hoặc “Chưa đúng”."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phản hồi được ghi lại.",
+         "b": true
+        },
+        {
+         "text": " Các câu “Chưa đúng” và các câu không tìm thấy được gom lại."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người xem xét và cập nhật.",
+         "b": true
+        },
+        {
+         "text": " Bạn trực tuần cùng thầy cô đọc, tìm nguyên nhân (thiếu nội dung, tìm nhầm đoạn, diễn đạt lệch) và sửa."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai điểm đáng chú ý trong dòng này:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nhánh “không biết” là một phần của thiết kế tốt.",
+         "b": true
+        },
+        {
+         "text": " Một hệ thống biết nói “tôi chưa có thông tin, bạn hãy hỏi thầy cô” đáng tin hơn một hệ thống câu nào cũng trả lời."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Vòng phản hồi đi qua con người.",
+         "b": true
+        },
+        {
+         "text": " Phản hồi không tự động sửa hệ thống. Có người đọc, hiểu và quyết định sửa gì. Đây là “điểm dừng” em đã học ở Bài 11.2, đặt ở cấp độ cả hệ thống."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2016, một hãng công nghệ lớn đưa lên mạng xã hội một chatbot được thiết kế để học từ chính các cuộc trò chuyện với người dùng. Chưa đầy một ngày, một nhóm người dùng đã cố tình “dạy” nó những phát ngôn xúc phạm, và hãng phải gỡ nó xuống kèm lời xin lỗi công khai. Hãng thừa nhận đã không lường trước kiểu tấn công này [17]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bài học: một vòng phản hồi "
+        },
+        {
+         "text": "tự động hoàn toàn",
+         "b": true
+        },
+        {
+         "text": ", không có con người xem xét, có thể bị lợi dụng. Kiểm thử ở bước 5 cần nghĩ đến cả những người dùng có ý xấu."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Sắp xếp dòng vận hành",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một ứng dụng luyện phát âm tiếng Anh hoạt động qua các việc sau, đang bị xáo trộn. Em sắp lại theo đúng thứ tự và cho biết mỗi việc dùng công nghệ nào đã học ở Bài 11.9."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Hiện điểm từng từ và đánh dấu âm phát chưa đúng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Micro thu giọng đọc của người học."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Người học bấm “Chấm chưa đúng” khi thấy máy đánh giá sai; giáo viên xem lại các trường hợp này hằng tháng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. So cách phát âm của người học với cách phát âm chuẩn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Chuyển âm thanh thành chuỗi âm, từ."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-con-nguoi-o-dau-trong-sau-buoc",
+   "title": "3. Con người ở đâu trong sáu bước?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy đọc lại sáu bước và tự hỏi: bước nào máy làm, bước nào người làm?"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bước",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Quyết định của con người",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phục vụ ai, làm gì, không làm gì"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng dữ liệu nào, có được phép không, đã cân đối chưa"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Công nghệ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn hướng nào, chấp nhận nhược điểm nào"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nói gì với người dùng về giới hạn của hệ thống"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Kiểm thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử những gì, sai đến mức nào thì chưa được ra mắt"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Vận hành"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai chịu trách nhiệm, sửa thế nào, khi nào thì dừng hệ thống"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu trả lời là: "
+      },
+      {
+       "text": "ở bước nào cũng có quyết định của con người",
+       "b": true
+      },
+      {
+       "text": ". Máy thực hiện phép tính; con người quyết định tính cái gì, cho ai, và chịu trách nhiệm về kết quả. Vụ việc hãng hàng không phải bồi thường vì chatbot hướng dẫn sai [12] là một lời nhắc: khi hệ thống sai, người phải trả lời là tổ chức đã đưa nó ra, không phải cỗ máy."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khung năng lực AI cho học sinh của UNESCO sắp xếp các năng lực theo mức tăng dần: từ hiểu, đến áp dụng, đến sáng tạo [2]. Ở lớp 10, em chủ yếu "
+      },
+      {
+       "text": "hiểu",
+       "b": true
+      },
+      {
+       "text": " hệ thống AI gồm những gì. Năm nay, em đã "
+      },
+      {
+       "text": "áp dụng",
+       "b": true
+      },
+      {
+       "text": ": phân tích sản phẩm, đề xuất tính năng, lập quy trình. Sáu bước của bài này là cầu nối sang lớp 12, khi em thử "
+      },
+      {
+       "text": "tạo ra",
+       "b": true
+      },
+      {
+       "text": " một sản phẩm nhỏ của riêng mình."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Phác thảo sáu bước",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Theo nhóm, chọn một ý tưởng (có thể là đề xuất tính năng của nhóm ở Bài 11.7). Điền một bảng sáu dòng ứng với sáu bước; mỗi dòng viết hai, ba ý. Sau đó vẽ dòng vận hành của hệ thống, có ít nhất một nhánh “khi hệ thống không biết” và một vòng phản hồi đi qua con người."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-nhin-lai-ca-nam-hoc",
+   "title": "4. Nhìn lại cả năm học",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mười hai bài của lớp 11 có thể xếp gọn vào ba câu hỏi."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi lớn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Các bài",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều em mang theo",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng AI thế nào cho an toàn và để mình giỏi lên?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "11.1, 11.2, 11.3"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quy trình bảy bước; ba dấu hiệu giữ quyền kiểm soát; bốn nhóm rủi ro và bốn bước ứng phó"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI có lợi cho ai, tốn gì, và em có quyền gì?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "11.4, 11.5"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hai bộ câu hỏi bền vững, công bằng; năm quyền với dữ liệu cá nhân"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI hỗ trợ việc học ra sao, và bên trong nó có gì?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "11.6 đến 11.12"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Năm khâu, sáu nguyên tắc; đề xuất sáu phần; hai kĩ thuật câu lệnh; bốn công nghệ; nơ-ron, phân lớp, phân cụm; sáu bước thiết kế"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu phải chọn một ý xuyên suốt, đó là ý em đã gặp ở gần như mọi bài: "
+      },
+      {
+       "text": "con người đặt mục tiêu, con người kiểm tra, con người chịu trách nhiệm.",
+       "b": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-tu-lam-mot-he-thong-nho-tu-dau-den-cuoi",
+   "title": "Trải nghiệm: Tự làm một hệ thống nhỏ từ đầu đến cuối",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sáu bước thiết kế và vận hành sẽ dễ nhớ hơn khi em tự đi qua cả sáu bước với một hệ thống thật."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image36.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Teachable Machine"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " teachablemachine.withgoogle.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 8 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em đặt mục tiêu, thu thập ảnh và huấn luyện một mô hình nhỏ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em thử mô hình với những đồ vật mới và ghi lại các lần máy đoán sai."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em bổ sung dữ liệu và cập nhật mô hình."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Bước theo dõi và cập nhật cần ai làm, và làm khi nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Em chỉ chụp đồ vật."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image40.png",
+     "caption": "Sơ đồ tư duy Bài 11.12."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Sáu bước:",
+         "b": true
+        },
+        {
+         "text": " mục tiêu và người dùng; dữ liệu; công nghệ và mô hình; đầu ra và giao diện; kiểm thử; vận hành, phản hồi, cập nhật."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sáu bước là một "
+        },
+        {
+         "text": "vòng lặp",
+         "b": true
+        },
+        {
+         "text": ": phản hồi quay lại để cải thiện hệ thống."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dòng vận hành",
+         "b": true
+        },
+        {
+         "text": " tốt có nhánh “khi hệ thống không biết” và có "
+        },
+        {
+         "text": "vòng phản hồi đi qua con người",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hệ thống AI "
+        },
+        {
+         "text": "không bao giờ “xong”",
+         "b": true
+        },
+        {
+         "text": ": cần người theo dõi và cập nhật."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ở bước nào cũng có "
+        },
+        {
+         "text": "quyết định và trách nhiệm của con người",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Mỗi việc sau thuộc bước nào trong sáu bước? a) Thử hệ thống với giọng nói của học sinh ba miền; b) Viết “hệ thống không trả lời câu hỏi về sức khỏe”; c) Xin phép nhà trường dùng văn bản nội quy; d) Phân công người đọc phản ánh hằng tuần; e) Thêm dòng “Đây là trợ lí AI” vào khung trò chuyện."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Chatbot nội quy trả lời một câu hỏi về giờ vào lớp theo quy định của năm học trước. Lỗi này bắt nguồn từ bước nào? Cần sửa ở đâu để không lặp lại?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Một nhóm bạn đề nghị bỏ bước 5 “cho nhanh, có gì sai thì sửa sau”. Em nêu hai rủi ro, có liên hệ với kiến thức về rủi ro và sự cố ở Bài 11.3."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Vẽ dòng vận hành cho một hệ thống gợi ý sách của thư viện trường: người đọc nhập sở thích, hệ thống gợi ý ba cuốn. Phải có nhánh “không biết” và vòng phản hồi."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Chọn một bài trong 12 bài của năm mà em thấy có ích nhất. Viết ba câu: em đã thay đổi điều gì trong cách dùng AI sau bài đó."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Viết một trang “Hồ sơ năng lực AI của em sau lớp 11” gồm ba phần: ba điều em làm được mà đầu năm chưa làm được; một thói quen dùng AI em đã thay đổi; một điều em muốn tìm hiểu hoặc muốn thử làm ở lớp 12. Em giữ trang này trong hồ sơ học tập và chia sẻ với cha mẹ. Đây cũng là tư liệu để thầy cô nhận xét cuối năm; theo Khung nội dung của Bộ Giáo dục và Đào tạo, nội dung giáo dục AI được đánh giá bằng nhận xét, không lấy điểm riêng [1]."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể sáu bước và câu hỏi phải trả lời ở mỗi bước"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô tả dòng vận hành của một hệ thống AI cụ thể"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra quyết định của con người ở từng bước"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết nối các bài đã học vào sáu bước"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyết định hệ thống làm gì, cho ai, bằng dữ liệu và công nghệ nào"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử hệ thống với nhiều tình huống để tìm lỗi trước khi đưa vào dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Triển khai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đưa hệ thống vào sử dụng thật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dòng vận hành"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuỗi xử lí từ lúc người dùng gửi yêu cầu đến lúc nhận kết quả và phản hồi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vòng phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đường đi của thông tin đúng, sai từ người dùng quay về để cải thiện hệ thống"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Bước 5. b) Bước 1. c) Bước 2. d) Bước 6. e) Bước 4."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Bước 6 (không cập nhật), biểu hiện ở dữ liệu (bước 2) đã cũ. Sửa: thay văn bản nội quy mới; đặt lịch cập nhật đầu mỗi học kì; ghi ngày cập nhật ngay trong khung trò chuyện để người dùng biết."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Người dùng nhận thông tin sai và làm theo (rủi ro trở thành sự cố); gặp câu hỏi nhạy cảm, hệ thống có thể trả lời không phù hợp và gây hại; mất lòng tin thì sau đó sửa tốt cũng ít người dùng lại. Phòng trước luôn rẻ hơn ứng phó sau."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: nhập sở thích; tìm sách phù hợp trong danh mục thư viện; nếu không có sách phù hợp thì báo “chưa tìm thấy” và mời hỏi thủ thư; nếu có thì gợi ý ba cuốn kèm lí do; người đọc bấm “thích” hoặc “không hợp”; thủ thư xem phản hồi hằng tháng để chỉnh danh mục và cách gợi ý."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Câu trả lời riêng của em. Nên nêu một thay đổi cụ thể, quan sát được."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [2], [4], [12], [14], [17] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

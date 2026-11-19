@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import Inlines from '../../components/content/Inlines.astro';
+import { GRADES, getGrade, url } from '../../lib/content';
+
+export function getStaticPaths() {
+  return GRADES.map((g) => ({ params: { grade: String(g) } }));
+}
+
+const grade = Number(Astro.params.grade);
+const { sources } = getGrade(grade);
+const groups = [...new Set(sources.map((s) => s.group ?? 'Khác'))];
+---
+
+<Base title={`Nguồn tham khảo lớp ${grade}`} active={String(grade)}>
+  <div class="wrap read content">
+    <p class="small" style="margin-top:24px"><a href={url(`lop-${grade}`)}>← Lớp {grade}</a></p>
+    <h1>Nguồn tham khảo · Lớp {grade}</h1>
+    <p class="muted">Các số trong ngoặc vuông, ví dụ [4], trong bài học dẫn tới mục tương ứng ở đây.</p>
+    {
+      groups.map((g) => (
+        <section>
+          <h2>{g}</h2>
+          <ol class="sources-list">
+            {sources
+              .filter((s) => (s.group ?? 'Khác') === g)
+              .map((s) => (
+                <li id={`nguon-${s.n}`} value={s.n}>
+                  <Inlines inl={s.inl} />
+                </li>
+              ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+</Base>
+
+<style>
+  .sources-list li {
+    margin: 10px 0;
+    word-break: break-word;
+  }
+
+  .sources-list li:target {
+    background: var(--warn-soft);
+    border-radius: 8px;
+    padding: 4px 8px;
+  }
+</style>

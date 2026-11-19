@@ -1,0 +1,2320 @@
+{
+ "id": "11.9",
+ "slug": "bai-11-09",
+ "grade": 11,
+ "num": 9,
+ "topicId": "11.4",
+ "title": "Các công nghệ làm nên một hệ thống AI",
+ "meta": "Chuyên đề 11.4: Bên trong hệ thống AI (tiết 1 trong 4 tiết)",
+ "period": {
+  "index": 1,
+  "total": 4
+ },
+ "objectives": [
+  [
+   {
+    "text": "Mô tả được bốn công nghệ thường gặp trong các sản phẩm AI: "
+   },
+   {
+    "text": "cảm biến, thị giác máy tính, xử lí ngôn ngữ tự nhiên, chatbot",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được mỗi công nghệ "
+   },
+   {
+    "text": "nhận gì, trả ra gì",
+    "b": true
+   },
+   {
+    "text": " và cho ví dụ."
+   }
+  ],
+  [
+   {
+    "text": "“Mổ xẻ” được một sản phẩm quen thuộc để chỉ ra "
+   },
+   {
+    "text": "các công nghệ bên trong",
+    "b": true
+   },
+   {
+    "text": " và mối liên hệ giữa chúng."
+   }
+  ]
+ ],
+ "keywords": [
+  "cảm biến",
+  "thị giác máy tính",
+  "xử lí ngôn ngữ tự nhiên",
+  "nhận dạng tiếng nói",
+  "chatbot"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-chiec-loa-biet-tra-loi",
+   "title": "Khởi động: Chiếc loa biết trả lời",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong phòng khách nhà Minh có một chiếc loa thông minh. Minh nói: “Loa ơi, ngày mai có mưa không?” Chừng hai giây sau, loa đáp: “Ngày mai trời nhiều mây, chiều có mưa rào. Bạn nhớ mang áo mưa nhé.”"
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Trong hai giây ấy, chiếc loa đã phải làm những việc gì? Em thử kể theo thứ tự, càng nhiều bước càng tốt."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu em kể được từ bốn bước trở lên, em đã nhận ra điều quan trọng nhất: chiếc loa không dùng "
+      },
+      {
+       "text": "một",
+       "b": true
+      },
+      {
+       "text": " công nghệ. Nó là nhiều công nghệ xếp thành dây chuyền, mỗi công nghệ làm một việc rồi chuyển kết quả cho công nghệ kế tiếp."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image27.png",
+     "caption": "Hình 11.9.1. Dòng xử lí bên trong một chiếc loa thông minh. Mỗi ô là việc của một công nghệ; mũi tên ghi thứ được chuyển sang bước sau."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài học này giới thiệu bốn công nghệ em sẽ gặp trong hầu hết các sản phẩm AI quanh mình."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-cam-bien-giac-quan-cua-he-thong",
+   "title": "1. Cảm biến: “giác quan” của hệ thống",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cảm biến",
+         "b": true
+        },
+        {
+         "text": " là thiết bị đo một đại lượng của thế giới thực (ánh sáng, âm thanh, nhiệt độ, khoảng cách, chuyển động…) và chuyển thành dữ liệu mà máy tính xử lí được."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cảm biến",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đo gì",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em gặp ở đâu",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Camera"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ánh sáng, tạo thành hình ảnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điện thoại, cổng bãi xe, camera giao thông"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Micro"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Âm thanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điện thoại, loa thông minh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cảm biến nhiệt độ, độ ẩm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhiệt độ, độ ẩm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Máy điều hòa, trạm khí tượng, vườn rau tự tưới"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cảm biến khoảng cách"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khoảng cách đến vật cản"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ô tô lùi xe, rô bốt hút bụi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cảm biến chuyển động, định vị"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gia tốc, hướng, vị trí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đồng hồ đếm bước chân, bản đồ chỉ đường"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với chiếc loa của Minh, cảm biến là "
+      },
+      {
+       "text": "micro",
+       "b": true
+      },
+      {
+       "text": ": nó biến giọng nói của Minh thành một dãy số biểu diễn sóng âm."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Cảm biến là AI.”",
+         "b": true
+        },
+        {
+         "text": " Cảm biến chỉ "
+        },
+        {
+         "text": "đo",
+         "b": true
+        },
+        {
+         "text": ", nó không "
+        },
+        {
+         "text": "hiểu",
+         "b": true
+        },
+        {
+         "text": ". Camera ghi lại hàng triệu điểm sáng tối nhưng không biết trong ảnh có con mèo. Micro ghi lại sóng âm nhưng không biết Minh đang hỏi về thời tiết. Cảm biến tự nó không phải là AI, nhưng là "
+        },
+        {
+         "text": "nguồn dữ liệu",
+         "b": true
+        },
+        {
+         "text": " của AI. Không có cảm biến, hệ thống AI không biết gì về thế giới bên ngoài."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-thi-giac-may-tinh-giup-may-hieu-hinh-anh",
+   "title": "2. Thị giác máy tính: giúp máy “hiểu” hình ảnh",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Thị giác máy tính",
+         "b": true
+        },
+        {
+         "text": " là công nghệ giúp máy tính rút ra thông tin có ý nghĩa từ hình ảnh và video: trong ảnh có gì, ở đâu, đang xảy ra điều gì."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Camera cho máy một tấm ảnh. Thị giác máy tính trả lời các câu hỏi về tấm ảnh đó:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi được trả lời",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân loại ảnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh này thuộc loại nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lá lúa này khỏe hay bị bệnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phát hiện vật thể"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trong ảnh có những gì, ở vị trí nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đếm số xe đang chờ ở một ngã tư"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dạng chữ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trong ảnh có những chữ, số nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đọc biển số xe ở cổng bãi giữ xe; chụp trang sách để lấy chữ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dạng khuôn mặt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khuôn mặt này có khớp với khuôn mặt đã đăng kí không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mở khóa điện thoại"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhận gì, trả ra gì?",
+       "b": true
+      },
+      {
+       "text": " Nhận hình ảnh hoặc video. Trả ra nhãn (“lá bị bệnh đạo ôn”), vị trí (khung bao quanh từng chiếc xe), chữ, hoặc một mức khớp."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Thị giác máy tính có thể chính xác rất không đều giữa các nhóm người. Năm 2018, nghiên cứu “Gender Shades” kiểm tra ba phần mềm thương mại đoán giới tính từ ảnh khuôn mặt: tỉ lệ sai cao nhất với nam giới da sáng là 0,8%, còn với phụ nữ da sẫm màu lên tới 34,7% [13]. Nguyên nhân chính nằm ở dữ liệu dùng để dạy và đánh giá máy: khuôn mặt da sáng chiếm phần lớn. Máy “nhìn” tốt những gì nó đã được xem nhiều."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-xu-li-ngon-ngu-tu-nhien-giup-may-lam-viec-voi-tieng-noi-va",
+   "title": "3. Xử lí ngôn ngữ tự nhiên: giúp máy làm việc với tiếng nói và chữ viết",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "“Ngôn ngữ tự nhiên” là ngôn ngữ con người dùng hằng ngày, như tiếng Việt, tiếng Anh, để phân biệt với ngôn ngữ lập trình."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Xử lí ngôn ngữ tự nhiên",
+         "b": true
+        },
+        {
+         "text": " là công nghệ giúp máy tính làm việc với ngôn ngữ của con người ở dạng chữ viết và tiếng nói: nhận ra, phân tích, dịch, tóm tắt và tạo ra ngôn ngữ."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhận gì, trả ra gì",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dạng tiếng nói"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Âm thanh thành chữ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhập tin nhắn bằng giọng nói; phụ đề tự động"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu yêu cầu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu chữ thành ý định"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Ngày mai có mưa không” thành: hỏi thời tiết, thời gian là ngày mai"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dịch máy"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Văn bản tiếng này thành tiếng khác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dịch thực đơn, dịch trang web"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tóm tắt, phân loại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Văn bản dài thành ý chính hoặc nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lọc thư rác; tóm tắt một bài báo"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tổng hợp tiếng nói"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chữ thành âm thanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Loa đọc câu trả lời; đọc sách cho người khiếm thị"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong chiếc loa của Minh, xử lí ngôn ngữ tự nhiên xuất hiện "
+      },
+      {
+       "text": "ba lần",
+       "b": true
+      },
+      {
+       "text": ": chuyển tiếng nói thành chữ, hiểu câu hỏi, và cuối cùng chuyển câu trả lời từ chữ thành tiếng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tiếng Việt đặt ra những thử thách riêng cho công nghệ này. Em thử đọc câu: "
+      },
+      {
+       "text": "“Ông già đi nhanh quá.”",
+       "i": true
+      },
+      {
+       "text": " Câu này có thể hiểu là một ông cụ bước đi rất nhanh, hoặc một người ông đang già đi nhanh chóng. Con người dựa vào hoàn cảnh để hiểu. Máy cũng phải dựa vào ngữ cảnh xung quanh, và đôi khi hiểu sai. Thêm vào đó là giọng nói ba miền, từ địa phương, cách viết tắt và viết không dấu khi nhắn tin."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-chatbot-noi-nguoi-dung-tro-chuyen-voi-he-thong",
+   "title": "4. Chatbot: nơi người dùng trò chuyện với hệ thống",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chatbot",
+         "b": true
+        },
+        {
+         "text": " là chương trình trò chuyện với con người bằng chữ hoặc tiếng nói, qua nhiều lượt hỏi đáp, để trả lời câu hỏi hoặc giúp thực hiện một việc."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có hai kiểu chatbot em nên phân biệt:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chatbot theo kịch bản",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chatbot dùng mô hình ngôn ngữ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách hoạt động"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dò câu hỏi theo từ khóa, chọn câu trả lời soạn sẵn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo ra câu trả lời mới dựa trên những gì mô hình đã học"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm mạnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trả lời nhất quán, dễ kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Linh hoạt, hiểu nhiều cách hỏi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm yếu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi khác kịch bản là “không hiểu”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có thể tạo ra thông tin sai một cách tự tin"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ví dụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trả lời tự động “Bấm 1 để xem giờ mở cửa”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trợ lí hỏi đáp tổng quát"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Chatbot và xử lí ngôn ngữ tự nhiên là một.”",
+         "b": true
+        },
+        {
+         "text": " Không phải. Xử lí ngôn ngữ tự nhiên là "
+        },
+        {
+         "text": "công nghệ",
+         "b": true
+        },
+        {
+         "text": ". Chatbot là một "
+        },
+        {
+         "text": "sản phẩm",
+         "b": true
+        },
+        {
+         "text": " dùng công nghệ ấy để trò chuyện. Giống như động cơ và chiếc xe máy: xe máy có động cơ, nhưng động cơ còn được dùng trong máy bơm, máy cày. Tương tự, xử lí ngôn ngữ tự nhiên còn được dùng trong dịch máy, lọc thư rác, phụ đề tự động, những thứ không phải là chatbot."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Vì chatbot ngày càng nói năng giống người, pháp luật yêu cầu sự minh bạch: theo Luật Trí tuệ nhân tạo của Việt Nam, người dùng cần được biết khi mình đang tương tác với một hệ thống AI [4]. Và lời của chatbot vẫn có người chịu trách nhiệm. Năm 2024, một hãng hàng không ở Canada phải bồi thường cho hành khách vì chatbot trên trang của hãng hướng dẫn sai về chính sách giá vé [12]."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Công nghệ nào đây?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi ví dụ, em ghi tên công nghệ chính (CB: cảm biến; TG: thị giác máy tính; NN: xử lí ngôn ngữ tự nhiên; CH: chatbot). Có ví dụ dùng hai công nghệ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Điện thoại tự gom các tấm ảnh có cùng một người vào một nhóm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Đồng hồ thông minh đo nhịp tim."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Ứng dụng tự tạo phụ đề cho video bài giảng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Trang web của một nhà sách có ô “Hỏi trợ lí” trả lời về tình trạng đơn hàng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Ứng dụng chụp ảnh thực đơn tiếng Nhật và hiện bản dịch tiếng Việt."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "6. Vườn rau của trường tự bật vòi tưới khi đất khô."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-ghep-lai-mo-xe-mot-san-pham",
+   "title": "5. Ghép lại: “mổ xẻ” một sản phẩm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bốn công nghệ có quan hệ với nhau như sau: "
+      },
+      {
+       "text": "cảm biến thu thập",
+       "b": true
+      },
+      {
+       "text": "; "
+      },
+      {
+       "text": "thị giác máy tính và xử lí ngôn ngữ tự nhiên “hiểu”",
+       "b": true
+      },
+      {
+       "text": " dữ liệu thu được; "
+      },
+      {
+       "text": "chatbot",
+       "b": true
+      },
+      {
+       "text": " là nơi người dùng trò chuyện với hệ thống, và bên trong nó dùng xử lí ngôn ngữ tự nhiên."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để “mổ xẻ” một sản phẩm, em trả lời bốn câu hỏi:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Sản phẩm "
+        },
+        {
+         "text": "biết về thế giới bên ngoài",
+         "b": true
+        },
+        {
+         "text": " nhờ đâu? (cảm biến)"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nó "
+        },
+        {
+         "text": "hiểu",
+         "b": true
+        },
+        {
+         "text": " điều thu được bằng gì? (thị giác máy tính, xử lí ngôn ngữ tự nhiên)"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nó "
+        },
+        {
+         "text": "trả lời",
+         "b": true
+        },
+        {
+         "text": " người dùng qua đâu?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nó "
+        },
+        {
+         "text": "thu dữ liệu gì",
+         "b": true
+        },
+        {
+         "text": " về người dùng? Nếu một công nghệ hỏng thì sao?"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ: ứng dụng dịch qua camera",
+       "b": true
+      },
+      {
+       "text": " (chụp bảng hiệu tiếng nước ngoài, hiện bản dịch)."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trả lời",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Biết nhờ đâu?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Camera chụp ảnh bảng hiệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Hiểu bằng gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thị giác máy tính nhận dạng chữ trong ảnh; xử lí ngôn ngữ tự nhiên dịch chữ sang tiếng Việt"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Trả lời qua đâu?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiện bản dịch đè lên ảnh trên màn hình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Thu dữ liệu gì? Hỏng thì sao?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh chụp (có thể có mặt người xung quanh), vị trí. Nếu nhận dạng chữ sai một kí tự, bản dịch sai theo, dù phần dịch hoạt động tốt"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ý cuối cùng trong bảng đáng để em dừng lại. Trong một dây chuyền, "
+      },
+      {
+       "text": "lỗi ở khâu trước truyền sang khâu sau",
+       "b": true
+      },
+      {
+       "text": ". Chiếc loa nghe nhầm “mưa” thành “mua” thì phần hiểu câu hỏi, dù giỏi đến đâu, cũng sẽ đi tìm câu trả lời cho một câu hỏi khác. Vì thế, khi một sản phẩm AI trả lời sai, câu hỏi hay là: "
+      },
+      {
+       "text": "sai từ khâu nào?",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Mổ xẻ một sản phẩm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chọn một sản phẩm sau và trả lời bốn câu hỏi ở trên. Vẽ sơ đồ dòng xử lí giống Hình 11.9.1."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Cổng bãi giữ xe tự động đọc biển số."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Ứng dụng luyện phát âm tiếng Anh chấm điểm từng từ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Rô bốt hút bụi tự tránh chân bàn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Ô “trợ lí ảo” trên trang tuyển sinh của một trường đại học."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6-moi-cong-nghe-mot-cau-hoi-ve-trach-nhiem",
+   "title": "6. Mỗi công nghệ, một câu hỏi về trách nhiệm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hiểu công nghệ giúp em đặt đúng câu hỏi khi dùng sản phẩm."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Công nghệ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi em nên đặt",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cảm biến"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nó đang đo, đang ghi gì về mình và những người xung quanh? Có tắt được không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thị giác máy tính"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nó có chính xác như nhau với mọi người không? Ảnh của mình được lưu ở đâu?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xử lí ngôn ngữ tự nhiên"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nó có hiểu đúng giọng, đúng cách nói của mình không? Bản dịch, bản tóm tắt này đã được kiểm tra chưa?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chatbot"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mình đang nói chuyện với máy hay với người? Ai chịu trách nhiệm về câu trả lời này?"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Loa thông minh, camera, micro là những cảm biến đặt ngay trong nhà. Các quyền về dữ liệu em học ở Bài 11.5 áp dụng cho chính những thiết bị này."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Đọc thêm: Hai xu hướng đang phát triển nhanh",
+     "id": "doc-them-hai-xu-huong-dang-phat-trien-nhanh"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nội dung mở rộng, không bắt buộc.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hệ thống đa phương thức.",
+       "b": true
+      },
+      {
+       "text": " Trước đây, mỗi mô hình thường chỉ làm việc với một dạng dữ liệu: hoặc chữ, hoặc ảnh, hoặc âm thanh. Nhiều mô hình hiện nay nhận được nhiều dạng cùng lúc: em có thể gửi một tấm ảnh kèm một câu hỏi bằng chữ. Ranh giới giữa thị giác máy tính và xử lí ngôn ngữ tự nhiên vì thế đang mờ dần ở lớp sản phẩm, dù bên trong vẫn là những việc khác nhau."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tạo sinh có tra cứu (RAG).",
+       "b": true
+      },
+      {
+       "text": " Một chatbot dùng mô hình ngôn ngữ có thể trả lời sai vì nó chỉ dựa vào những gì đã học. Một cách khắc phục là cho hệ thống "
+      },
+      {
+       "text": "tra cứu trong một kho tài liệu xác định",
+       "b": true
+      },
+      {
+       "text": " (ví dụ nội quy của trường) rồi mới soạn câu trả lời dựa trên đoạn tài liệu tìm được, kèm chỉ dẫn nguồn. Cách này giúp giảm sai, nhưng không loại hẳn: hệ thống vẫn có thể tìm nhầm đoạn hoặc diễn đạt lệch. Em sẽ gặp lại ý tưởng này ở Bài 11.12."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-ba-tram-ba-cong-nghe",
+   "title": "Trải nghiệm: Ba trạm, ba công nghệ",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bốn công nghệ em vừa học đều có trong chiếc điện thoại. Em hãy đi qua ba trạm để gặp từng công nghệ."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image28.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " phyphox, Google Lens, Google Dịch"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " phyphox.org (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 8 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Trạm 1: em mở phyphox, lắc nhẹ máy và xem số liệu từ cảm biến gia tốc."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Trạm 2: em dùng Google Lens để nhận diện một đồ vật."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Trạm 3: em nói một câu vào Google Dịch và xem máy dịch."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Ở mỗi trạm, máy nhận vào gì và trả ra gì? Trạm nào chỉ có cảm biến mà chưa có AI?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Em không chụp ảnh hay ghi âm người khác."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image29.png",
+     "caption": "Sơ đồ tư duy Bài 11.9."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Một sản phẩm AI thường là "
+        },
+        {
+         "text": "nhiều công nghệ ghép thành dây chuyền",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Cảm biến",
+         "b": true
+        },
+        {
+         "text": " đo thế giới thực, là nguồn dữ liệu; tự nó không phải là AI."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thị giác máy tính",
+         "b": true
+        },
+        {
+         "text": " rút thông tin từ hình ảnh, video."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Xử lí ngôn ngữ tự nhiên",
+         "b": true
+        },
+        {
+         "text": " làm việc với chữ viết và tiếng nói của con người."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Chatbot",
+         "b": true
+        },
+        {
+         "text": " là sản phẩm trò chuyện với người dùng, bên trong dùng xử lí ngôn ngữ tự nhiên."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Lỗi ở khâu trước "
+        },
+        {
+         "text": "truyền sang",
+         "b": true
+        },
+        {
+         "text": " khâu sau."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Hoàn thành bảng cho ba công nghệ (thị giác máy tính, xử lí ngôn ngữ tự nhiên, cảm biến): nhận gì; trả ra gì; một ví dụ ở trường em hoặc gần nhà em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một máy bán nước tự động “nghe” khách gọi món bằng giọng nói. Hôm ấy trời mưa to, máy liên tục nhận sai món. Theo em, lỗi nhiều khả năng bắt đầu từ khâu nào? Lỗi ấy ảnh hưởng thế nào đến các khâu sau?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Hãy chỉ ra chỗ chưa chính xác trong câu: “Camera an ninh của khu phố rất thông minh vì camera là AI.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Kể một sản phẩm dùng xử lí ngôn ngữ tự nhiên nhưng không phải là chatbot, và một sản phẩm dùng thị giác máy tính mà không cần chatbot."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Một trường muốn đặt camera nhận dạng khuôn mặt để điểm danh. Dựa vào mục 2 và mục 6, em nêu hai câu hỏi nhà trường cần trả lời trước khi quyết định."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đi một vòng quanh nhà hoặc trên đường đến trường, tìm ba sản phẩm có ít nhất một trong bốn công nghệ của bài. Với mỗi sản phẩm, ghi: công nghệ nào, nhận gì, trả ra gì, và nó thu dữ liệu gì của người xung quanh. Chọn sản phẩm em thấy thú vị nhất và vẽ sơ đồ dòng xử lí của nó để chia sẻ với lớp."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô tả bốn công nghệ: nhận gì, trả ra gì, ví dụ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt cảm biến với AI; chatbot với xử lí ngôn ngữ tự nhiên"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra các công nghệ trong một sản phẩm quen thuộc"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích vì sao lỗi ở khâu trước truyền sang khâu sau"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cảm biến"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết bị đo đại lượng của thế giới thực và chuyển thành dữ liệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thị giác máy tính"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công nghệ giúp máy rút thông tin từ hình ảnh, video"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xử lí ngôn ngữ tự nhiên"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công nghệ giúp máy làm việc với chữ viết, tiếng nói của con người"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dạng tiếng nói"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuyển âm thanh lời nói thành chữ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chatbot"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chương trình trò chuyện với con người qua nhiều lượt hỏi đáp"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý. Thị giác máy tính: nhận ảnh, video; trả ra nhãn, vị trí, chữ; ví dụ đọc biển số ở bãi xe. Xử lí ngôn ngữ tự nhiên: nhận chữ hoặc tiếng nói; trả ra chữ, ý định, bản dịch, tiếng nói; ví dụ nhập tin nhắn bằng giọng nói. Cảm biến: nhận ánh sáng, âm thanh, nhiệt độ…; trả ra số liệu; ví dụ cảm biến nhiệt của máy điều hòa."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Nhiều khả năng từ khâu đầu: micro thu cả tiếng mưa nên tín hiệu âm thanh bị nhiễu. Nhận dạng tiếng nói nhận dữ liệu nhiễu nên ra chữ sai; phần hiểu yêu cầu xử lí đúng trên chữ sai, nên chọn sai món."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Camera là cảm biến, chỉ ghi hình. Phần “thông minh” (nếu có) là thị giác máy tính phân tích hình ảnh mà camera thu được."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: phụ đề tự động, dịch máy, lọc thư rác (không phải chatbot); mở khóa điện thoại bằng khuôn mặt, đếm xe ở ngã tư (không cần chatbot)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: hệ thống có chính xác như nhau với mọi học sinh không, khi sai thì sửa thế nào; ảnh khuôn mặt được lưu ở đâu, bao lâu, học sinh và cha mẹ có được hỏi ý kiến và có lựa chọn khác không."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [4], [12], [13] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

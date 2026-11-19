@@ -1,0 +1,2021 @@
+{
+ "id": "12.10",
+ "slug": "bai-12-10",
+ "grade": 12,
+ "num": 10,
+ "topicId": "12.4",
+ "title": "Chọn phương án thiết kế và vận hành phù hợp",
+ "meta": "Chuyên đề 12.4: Giải pháp và hợp tác phát triển sản phẩm AI (tiết 1 trong 3 tiết)",
+ "period": {
+  "index": 1,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Mô tả được một "
+   },
+   {
+    "text": "phương án",
+    "b": true
+   },
+   {
+    "text": " thiết kế và vận hành hệ thống AI theo sáu khâu."
+   }
+  ],
+  [
+   {
+    "text": "So sánh được các phương án theo "
+   },
+   {
+    "text": "năm tiêu chí",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Lựa chọn",
+    "b": true
+   },
+   {
+    "text": " được phương án phù hợp cho một nhiệm vụ cụ thể và nêu được sự đánh đổi đã chấp nhận."
+   }
+  ]
+ ],
+ "keywords": [
+  "phương án",
+  "tiêu chí so sánh",
+  "khả năng duy trì",
+  "sự đánh đổi",
+  "nguyên tắc lựa chọn"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-ba-cach-lam-cho-cung-mot-viec",
+   "title": "Khởi động: Ba cách làm cho cùng một việc",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở Bài 12.7, căn tin trường nêu một nhu cầu: mỗi ngày nấu thừa hoặc thiếu vài chục suất, cần biết trước số suất ăn của ngày mai. Ba nhóm học sinh đưa ra ba cách làm (tình huống giả định)."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nhóm 1:",
+         "b": true
+        },
+        {
+         "text": " “Làm một biểu mẫu trực tuyến. Ai ăn ngày mai thì bấm đăng kí trước 4 giờ chiều. Căn tin đếm số đăng kí.”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhóm 2:",
+         "b": true
+        },
+        {
+         "text": " “Dùng số liệu bán hàng hai năm qua huấn luyện một mô hình dự đoán. Mỗi chiều, mô hình đưa ra con số; cô quản lí xem, điều chỉnh rồi quyết định.”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhóm 3:",
+         "b": true
+        },
+        {
+         "text": " “Cũng dùng mô hình dự đoán, nhưng nối thẳng với nhà cung cấp thực phẩm: mô hình tự đặt hàng mỗi chiều, không ai phải làm gì.”"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Nếu em là cô quản lí căn tin, em chọn cách nào? Em dựa vào điều gì để chọn?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có bạn chọn nhóm 3 vì “hiện đại nhất, đỡ việc nhất”. Có bạn chọn nhóm 1 vì “chắc ăn nhất”. Để chọn có căn cứ, và để thuyết phục được người khác, ta cần một "
+      },
+      {
+       "text": "bộ tiêu chí chung",
+       "b": true
+      },
+      {
+       "text": ". Cuối bài, em sẽ quay lại câu hỏi này."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-phuong-an-la-gi",
+   "title": "1. Phương án là gì?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở Bài 12.7, em chọn "
+      },
+      {
+       "text": "kiểu ý tưởng",
+       "b": true
+      },
+      {
+       "text": " (A, B, C, D hay E). Nhưng cùng một kiểu ý tưởng có thể được thiết kế và vận hành theo nhiều cách. Nhóm 2 và nhóm 3 đều chọn kiểu D, vậy mà hai cách làm rất khác nhau."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phương án thiết kế và vận hành",
+         "b": true
+        },
+        {
+         "text": " là một cách cụ thể để hiện thực hóa một ý tưởng, trả lời đủ sáu khâu: mục tiêu và người dùng; dữ liệu; công nghệ và mô hình; đầu ra và giao diện; kiểm thử; vận hành, phản hồi, cập nhật."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sáu khâu này em đã học ở Bài 11.12. Để mô tả một phương án, em điền bảng sau."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Khâu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phương án của nhóm 2",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Mục tiêu và người dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống nhận gì, đưa ra gì, phục vụ ai? Việc gì hệ thống không làm?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận số liệu bán hàng, lịch học; đưa ra số suất ước tính cho ngày mai; phục vụ cô quản lí. Không tự đặt hàng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần dữ liệu gì, lấy ở đâu, có dữ liệu cá nhân không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sổ bán hàng hai năm, lịch học, lịch thi. Không có dữ liệu cá nhân"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Công nghệ và mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài toán là phân loại, dự đoán hay tạo sinh? Dùng kiểu ý tưởng nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán; kiểu D"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Đầu ra và giao diện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng nhận kết quả thế nào? Có biết đang tương tác với AI không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một con số kèm khoảng dao động, hiện trên bảng tính lúc 3 giờ chiều; ghi rõ “ước tính của mô hình”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Kiểm thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử thế nào, đo cái gì thì coi là đạt?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử với số liệu ba tháng gần nhất chưa dùng khi huấn luyện; đạt nếu độ lệch trung bình dưới 15 suất"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Vận hành, phản hồi, cập nhật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai giám sát, ai cập nhật, con người can thiệp ở đâu?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cô quản lí điều chỉnh và quyết định mỗi ngày; câu lạc bộ Tin học cập nhật số liệu mỗi tháng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một phương án được mô tả đủ sáu khâu thì mới so sánh được. Nếu chỉ nói “dùng AI dự đoán”, ta chưa biết ai quyết định, ai cập nhật, sai thì sao."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Phương án là chọn công cụ nào.”",
+         "b": true
+        },
+        {
+         "text": " Công cụ chỉ là một phần của khâu 3. Hai phương án dùng cùng một công cụ có thể khác nhau hoàn toàn về người quyết định (khâu 6) và vì thế khác nhau về mức rủi ro."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-nam-tieu-chi-so-sanh",
+   "title": "2. Năm tiêu chí so sánh",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tiêu chí",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kiến thức đã học",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Đáp ứng mục tiêu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phương án có làm đúng việc cần làm, cho đúng người cần không? Nhanh, đúng đến mức nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 12.7, 12.9"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Dữ liệu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần dữ liệu gì? Có sẵn không, có dữ liệu cá nhân không, ai cập nhật?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.5"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Chi phí và khả năng duy trì",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần thiết bị, kĩ năng, kinh phí gì? Ai vận hành lâu dài? Khi hỏng thì sao?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.4"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Rủi ro khi sai",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai thì ai bị ảnh hưởng, nặng đến đâu, có sửa được không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 12.5"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Vai trò kiểm soát của con người",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người quyết định ở đâu? Có giải trình được không? Mức phân vai I, II hay III?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 12.1, 12.2, 12.3"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em thấy năm tiêu chí này gom lại gần như mọi điều đã học trong ba năm. Đó là chủ ý: chọn phương án là lúc người thiết kế phải cân nhắc mọi mặt "
+      },
+      {
+       "text": "cùng một lúc",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Áp dụng cho ba phương án của căn tin:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tiêu chí",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phương án 1: biểu mẫu đăng kí",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phương án 2: dự đoán, người quyết định",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phương án 3: dự đoán, tự đặt hàng",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Đáp ứng mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rất đúng nếu mọi người đều đăng kí; thực tế nhiều bạn quên"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khá đúng vào ngày thường; cô quản lí bù được ngày đặc biệt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khá đúng vào ngày thường; sai nặng vào ngày đặc biệt"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu tên học sinh đăng kí mỗi ngày: có dữ liệu cá nhân"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ dùng số liệu tổng, không có dữ liệu cá nhân"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Như phương án 2"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Chi phí, duy trì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rất rẻ; nhưng cần cả trường tạo thói quen đăng kí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần người cập nhật số liệu mỗi tháng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần kết nối với nhà cung cấp; hỏng thì không ai biết cách đặt tay"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Rủi ro khi sai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiếu suất cho bạn quên đăng kí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thừa, thiếu vài suất; sửa được hôm sau"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đặt thừa hoặc thiếu cả trăm suất; mất tiền thật, khó sửa trong ngày"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Kiểm soát của con người"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người làm hết (không có AI)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mức II: mô hình đề xuất, cô quản lí quyết định"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mức III: mô hình tự quyết định việc có tiêu tiền"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image32.png",
+     "caption": "Hình 12.10.1. Ba phương án của căn tin theo năm tiêu chí. Hình tròn càng đậm, phương án càng đáp ứng tốt tiêu chí đó. Không phương án nào tốt nhất ở mọi tiêu chí."
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Mô tả một phương án",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chọn phương án 1 hoặc phương án 3 của căn tin. Điền bảng sáu khâu như bảng của nhóm 2 ở mục 1. Khâu nào em thấy khó điền nhất? Điều đó cho thấy phương án còn thiếu gì?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-nguyen-tac-lua-chon",
+   "title": "3. Nguyên tắc lựa chọn",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hình 12.10.1 cho thấy một điều thường gặp: "
+      },
+      {
+       "text": "không phương án nào thắng ở mọi tiêu chí",
+       "b": true
+      },
+      {
+       "text": ". Chọn phương án là chấp nhận một sự đánh đổi. Hai nguyên tắc sau giúp em đánh đổi có căn cứ."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nguyên tắc lựa chọn",
+         "b": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Việc "
+        },
+        {
+         "text": "càng hệ trọng với con người",
+         "b": true
+        },
+        {
+         "text": " thì càng ưu tiên phương án "
+        },
+        {
+         "text": "giữ con người ở vị trí quyết định",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Khi hai phương án đạt mục tiêu ngang nhau, ưu tiên phương án "
+        },
+        {
+         "text": "đơn giản hơn, dễ duy trì hơn, cần ít dữ liệu cá nhân hơn",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với căn tin:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Phương án 3 bị loại",
+         "b": true
+        },
+        {
+         "text": " theo nguyên tắc 1. Đặt hàng là việc có tiêu tiền và khó sửa trong ngày. Để mô hình tự làm việc đó là phân vai mức III cho một việc không nhỏ. Chỉ một ngày khối 12 đi tham quan là căn tin thừa cả trăm suất."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phương án 2 phù hợp",
+         "b": true
+        },
+        {
+         "text": " nếu có người cập nhật số liệu hằng tháng. Nó không thu dữ liệu cá nhân và giữ cô quản lí ở vị trí quyết định."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phương án 1 phù hợp",
+         "b": true
+        },
+        {
+         "text": " khi nguồn lực hạn chế, hoặc ở một trường nhỏ nơi việc đăng kí dễ thành nếp. Theo nguyên tắc 2, nếu phương án 1 đạt mục tiêu ngang phương án 2 thì nên chọn phương án 1."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Như vậy, câu trả lời không phải là một phương án “đúng” cho mọi trường. Câu trả lời là: "
+      },
+      {
+       "text": "với điều kiện của trường mình, phương án nào phù hợp, và vì sao.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhiều khi phương án tốt nhất là "
+      },
+      {
+       "text": "kết hợp",
+       "b": true
+      },
+      {
+       "text": ": các lớp bán trú đăng kí trước qua biểu mẫu (phương án 1); phần học sinh ăn không cố định thì dùng con số ước tính (phương án 2)."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Phương án dùng nhiều công nghệ nhất là phương án tốt nhất.”",
+         "b": true
+        },
+        {
+         "text": " Phương án phù hợp là phương án "
+        },
+        {
+         "text": "đạt mục tiêu, an toàn và duy trì được",
+         "b": true
+        },
+        {
+         "text": ". Một hệ thống tự động hoàn toàn trông ấn tượng trong ngày ra mắt, nhưng nếu không ai biết sửa khi nó hỏng, nó sẽ bị bỏ sau một học kì."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách nghĩ “rủi ro càng cao, con người càng phải kiểm soát chặt” cũng là cách Luật Trí tuệ nhân tạo của Việt Nam được xây dựng: các hệ thống AI được chia ba mức rủi ro; với hệ thống rủi ro cao, nhà cung cấp phải thiết kế để con người giám sát và can thiệp được [6]. Nguyên tắc lựa chọn thứ nhất của bài này là phiên bản thu nhỏ của tinh thần đó, áp dụng cho một dự án học sinh."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-su-danh-doi-phai-duoc-noi-ra",
+   "title": "4. Sự đánh đổi phải được nói ra",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi đã chọn, người thiết kế có trách nhiệm nói rõ ba điều:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều cần nói rõ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ với phương án 2",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã chọn gì, vì sao",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn mô hình dự đoán có người quyết định, vì không thu dữ liệu cá nhân và vẫn có người chịu trách nhiệm về con số cuối cùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã loại gì, vì sao",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Loại phương án tự đặt hàng vì rủi ro mất tiền khi mô hình sai vào ngày đặc biệt"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chấp nhận điểm yếu nào, xử lí ra sao",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chấp nhận phụ thuộc vào việc có người cập nhật số liệu. Xử lí: ghi quy trình cập nhật thành một trang hướng dẫn; mỗi năm câu lạc bộ bàn giao cho khóa sau"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phương án tốt không phải là phương án không có điểm yếu. Phương án tốt là phương án "
+      },
+      {
+       "text": "biết rõ điểm yếu của mình và có cách xử lí",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em nhớ lại nghiên cứu về trợ lí AI trong luyện Toán: phiên bản trả lời trực tiếp giúp học sinh làm bài luyện tập tốt hơn 48% nhưng làm bài kiểm tra kém đi 17%; phiên bản chỉ gợi ý từng bước thì không gây tác hại đó [15]. Hai phiên bản dùng cùng một công nghệ. Khác biệt nằm ở "
+      },
+      {
+       "text": "phương án thiết kế",
+       "b": true
+      },
+      {
+       "text": ": đầu ra là đáp án hay là gợi ý. Lựa chọn thiết kế quyết định hệ thống giúp hay hại người dùng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. So sánh và chọn",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Thư viện trường muốn giúp học sinh tìm sách. Có ba phương án (giả định):"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phương án A:",
+         "i": true
+        },
+        {
+         "text": " in lại sơ đồ kệ sách và danh mục theo chủ đề, dán ở cửa."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phương án B:",
+         "i": true
+        },
+        {
+         "text": " trợ lí AI tra cứu trong danh mục của thư viện, trả lời “sách ở kệ nào, còn hay hết”, kèm nút “hỏi thủ thư”."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phương án C:",
+         "i": true
+        },
+        {
+         "text": " trợ lí AI dựa vào lịch sử mượn của từng học sinh để tự gửi tin nhắn gợi ý sách hằng tuần cho học sinh và phụ huynh."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Lập bảng năm tiêu chí cho ba phương án. Áp dụng hai nguyên tắc lựa chọn. Nhóm em chọn phương án nào (hoặc kết hợp thế nào)? Viết ba điều cần nói rõ như ở mục 4."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phương án nhóm chọn ở hoạt động này, hoặc phương án cho phiếu ý tưởng của nhóm ở Bài 12.7, sẽ là “dự án” của nhóm trong hai bài tới.",
+         "i": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-quay-lai-cau-hoi-mo-dau",
+   "title": "5. Quay lại câu hỏi mở đầu",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở phần Khởi động, em đã chọn một trong ba cách làm cho căn tin. Bây giờ, sau khi có năm tiêu chí và hai nguyên tắc, em có đổi lựa chọn không?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu em đổi, đó là dấu hiệu tốt: em đã thay một lựa chọn theo cảm tính bằng một lựa chọn có căn cứ. Nếu em giữ nguyên, em hãy thử nói lại lí do của mình bằng ngôn ngữ của năm tiêu chí. Trong cả hai trường hợp, em đã làm đúng việc của một người thiết kế có trách nhiệm."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-hai-phuong-an-cho-cung-mot-viec",
+   "title": "Trải nghiệm: Hai phương án cho cùng một việc",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cùng một nhiệm vụ có thể giải bằng nhiều phương án. Em hãy cùng lớp đặt hai phương án cạnh nhau và so sánh."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image13.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Teachable Machine và Gemini"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " teachablemachine.withgoogle.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 8 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Phương án 1: em xem một mô hình tự huấn luyện phân loại ảnh rác."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Phương án 2: em xem một chatbot nhận cùng những ảnh đó và trả lời loại rác."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em so sánh hai phương án theo năm tiêu chí."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Em chọn phương án nào cho trường mình? Em chấp nhận đánh đổi điều gì?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Thầy cô sẽ trình chiếu. Chỉ dùng ảnh đồ vật."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image33.png",
+     "caption": "Sơ đồ tư duy Bài 12.10."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Một "
+        },
+        {
+         "text": "phương án",
+         "b": true
+        },
+        {
+         "text": " phải trả lời đủ sáu khâu: mục tiêu và người dùng; dữ liệu; công nghệ và mô hình; đầu ra và giao diện; kiểm thử; vận hành, phản hồi, cập nhật."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Năm tiêu chí so sánh:",
+         "b": true
+        },
+        {
+         "text": " đáp ứng mục tiêu; dữ liệu; chi phí và khả năng duy trì; rủi ro khi sai; vai trò kiểm soát của con người."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hai nguyên tắc lựa chọn:",
+         "b": true
+        },
+        {
+         "text": " việc càng hệ trọng càng giữ con người ở vị trí quyết định; ngang nhau thì chọn phương án đơn giản, dễ duy trì, ít dữ liệu cá nhân hơn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phương án phù hợp là phương án "
+        },
+        {
+         "text": "đạt mục tiêu, an toàn và duy trì được",
+         "b": true
+        },
+        {
+         "text": ", không phải phương án nhiều công nghệ nhất."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phải "
+        },
+        {
+         "text": "nói rõ",
+         "b": true
+        },
+        {
+         "text": " đã chọn gì, loại gì, chấp nhận điểm yếu nào."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Mỗi câu hỏi sau thuộc tiêu chí nào trong năm tiêu chí? a) “Sang năm các anh chị lớp 12 ra trường thì ai cập nhật?” b) “Nếu máy trả lời sai thì học sinh có bị thiệt gì không?” c) “Có cần thu ảnh khuôn mặt học sinh không?” d) “Ai là người bấm nút gửi thông báo cho phụ huynh?”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một nhóm mô tả phương án: “Dùng chatbot AI trả lời câu hỏi tuyển sinh.” Theo sáu khâu, mô tả này còn thiếu những gì? Viết bốn câu hỏi nhóm cần trả lời thêm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Hai phương án hỗ trợ điểm danh đạt mục tiêu ngang nhau: (X) lớp trưởng điểm danh trên một biểu mẫu trực tuyến mất 1 phút; (Y) camera nhận diện khuôn mặt mất 10 giây. Áp dụng nguyên tắc lựa chọn thứ hai."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Trong phương án C ở Hoạt động 2 (trợ lí tự gửi gợi ý sách cho học sinh và phụ huynh dựa trên lịch sử mượn), em chỉ ra hai tiêu chí mà phương án này yếu nhất và giải thích."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Vì sao “nói rõ điểm yếu của phương án mình chọn” lại làm tăng sự tin cậy chứ không làm giảm? Trả lời trong ba câu, có liên hệ với một bài đã học."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hoàn thiện “hồ sơ dự án” của nhóm gồm hai trang: trang 1 là phiếu ý tưởng (Bài 12.7); trang 2 là bảng so sánh ít nhất hai phương án theo năm tiêu chí, kèm ba điều cần nói rõ. Mang hồ sơ đến hỏi ý kiến một người sẽ thật sự dùng hoặc chịu ảnh hưởng (cô thủ thư, cô quản lí căn tin, bác bảo vệ, các bạn khối dưới). Ghi lại một điều họ chỉ ra mà nhóm chưa nghĩ tới. Giữ hồ sơ cho Bài 12.11 và 12.12."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô tả một phương án theo đủ sáu khâu"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So sánh các phương án theo năm tiêu chí"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Áp dụng hai nguyên tắc lựa chọn và nêu sự đánh đổi"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nói rõ đã chọn gì, loại gì, chấp nhận điểm yếu nào"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phương án"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một cách cụ thể để hiện thực hóa ý tưởng, trả lời đủ sáu khâu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tiêu chí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Căn cứ dùng để so sánh, đánh giá"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khả năng duy trì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống có người, có kinh phí, có kĩ năng để chạy lâu dài"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự đánh đổi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được điều này thì phải chấp nhận giảm điều kia"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết hợp phương án"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng mỗi phương án cho phần việc nó làm tốt nhất"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Chi phí và khả năng duy trì. b) Rủi ro khi sai. c) Dữ liệu. d) Vai trò kiểm soát của con người."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Mô tả mới nói đến công nghệ (một phần của khâu 3). Câu hỏi cần thêm, ví dụ: chatbot trả lời dựa trên tài liệu nào, ai cập nhật khi đề án tuyển sinh thay đổi (khâu 2, 6); nó không trả lời loại câu hỏi nào (khâu 1); người hỏi có biết đây là AI và có được dẫn nguồn không (khâu 4); thử bằng bộ câu hỏi nào, đạt bao nhiêu thì cho dùng (khâu 5)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Hai phương án đạt mục tiêu ngang nhau (biết ai vắng). Phương án X đơn giản hơn, dễ duy trì hơn và không cần thu khuôn mặt, là dữ liệu cá nhân nhạy cảm. Tiết kiệm 50 giây không đủ để bù. Chọn X."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Dữ liệu: dùng lịch sử mượn sách của từng học sinh, là dữ liệu cá nhân, lại gửi cho cả phụ huynh mà học sinh chưa chắc đồng ý. Vai trò kiểm soát của con người: hệ thống tự gửi (mức III), không có thủ thư xem trước; một gợi ý không phù hợp sẽ đến thẳng học sinh và phụ huynh."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Người nghe biết phương án nào cũng có điểm yếu; nhóm nào không nêu thì hoặc chưa nghĩ tới, hoặc đang giấu. Nêu điểm yếu kèm cách xử lí cho thấy nhóm đã lường trước và có người chịu trách nhiệm. Đây là nguyên tắc minh bạch (Bài 12.4) và nhận định trung thực (Bài 12.9)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [6], [15] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

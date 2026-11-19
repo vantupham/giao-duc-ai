@@ -1,0 +1,2109 @@
+{
+ "id": "12.2",
+ "slug": "bai-12-02",
+ "grade": 12,
+ "num": 2,
+ "topicId": "12.1",
+ "title": "Ai quyết định: con người hay AI?",
+ "meta": "Chuyên đề 12.1: Quyền kiểm soát và trách nhiệm giải trình trong vòng đời AI (tiết 2 trong 3 tiết)",
+ "period": {
+  "index": 2,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Tách được một quyết định thành "
+   },
+   {
+    "text": "sáu bước",
+    "b": true
+   },
+   {
+    "text": " và chỉ ra ở mỗi bước AI mạnh ở đâu, con người phải giữ phần nào."
+   }
+  ],
+  [
+   {
+    "text": "Phân biệt được "
+   },
+   {
+    "text": "ba mức phân vai",
+    "b": true
+   },
+   {
+    "text": " giữa con người và AI khi ra quyết định."
+   }
+  ],
+  [
+   {
+    "text": "Lập được "
+   },
+   {
+    "text": "sơ đồ phân vai",
+    "b": true
+   },
+   {
+    "text": " cho một quyết định cụ thể và nhận ra hiện tượng “phê duyệt hình thức”."
+   }
+  ]
+ ],
+ "keywords": [
+  "ra quyết định",
+  "phân vai",
+  "đề xuất",
+  "phê duyệt",
+  "giám sát",
+  "phê duyệt hình thức"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-ai-da-chon-con-duong-nay",
+   "title": "Khởi động: Ai đã chọn con đường này?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sáng Chủ nhật, cả nhà Khoa đi Vũng Tàu. Bố mở ứng dụng bản đồ, ứng dụng đề xuất một con đường “nhanh hơn 12 phút”. Bố đi theo. Con đường ấy hẹp, nhiều ổ gà, và có một đoạn đang sửa cầu nên phải quay đầu. Cả nhà đến nơi muộn gần một giờ. Mẹ nói: “Tại cái bản đồ.” Bố nói: “Thì nó bảo đi đường này mà.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Trong chuyện này, ai đã quyết định đi con đường đó: ứng dụng hay bố của Khoa? Câu trả lời có đơn giản như em nghĩ lúc đầu không?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ứng dụng đã thu thập thông tin giao thông, tính toán và xếp hạng các con đường. Bố là người bấm “bắt đầu” và cầm lái. Nhưng bố có thật sự "
+      },
+      {
+       "text": "xem xét",
+       "b": true
+      },
+      {
+       "text": " đề xuất không, hay chỉ làm theo? Và mục tiêu “nhanh nhất” là do ai đặt: cả nhà có thể thích “dễ đi nhất” hơn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một quyết định không phải là một khoảnh khắc. Nó là một chuỗi bước. Muốn biết ai quyết định, ta phải nhìn từng bước."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-sau-buoc-cua-mot-quyet-dinh",
+   "title": "1. Sáu bước của một quyết định",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Ra quyết định",
+         "b": true
+        },
+        {
+         "text": " là quá trình đi từ một vấn đề đến một hành động, gồm sáu bước: (1) xác định vấn đề và mục tiêu; (2) thu thập thông tin; (3) phân tích, tạo phương án; (4) đánh giá, lựa chọn; (5) thực hiện; (6) xem xét lại và chịu trách nhiệm."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở mỗi bước, AI và con người có những điểm mạnh khác nhau."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image5.png",
+     "caption": "Hình 12.2.1. Sáu bước ra quyết định. Hàng trên: việc AI làm tốt. Hàng dưới (nền xám): phần con người phải giữ. Độ đậm của ô phía trên cho thấy AI giúp được nhiều hay ít ở bước đó."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bước",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI có thể làm tốt",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phần con người phải giữ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Xác định vấn đề, mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hầu như không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyết định cần đạt điều gì, điều gì quan trọng, giới hạn nào không vượt"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Thu thập thông tin"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gom, lọc lượng dữ liệu lớn rất nhanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn nguồn; nhận ra thông tin còn thiếu; hỏi người trong cuộc"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Phân tích, tạo phương án"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tìm quy luật, tính toán, đề xuất nhiều phương án"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu bối cảnh, hoàn cảnh riêng mà dữ liệu không ghi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Đánh giá, lựa chọn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xếp hạng theo tiêu chí cho trước"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cân nhắc giá trị, công bằng; chọn và kí tên"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Thực hiện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tự động hóa các thao tác lặp lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giám sát; dừng khi bất thường"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Xem xét lại, chịu trách nhiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ghi nhật kí, thống kê kết quả"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích với người bị ảnh hưởng; sửa sai; chịu trách nhiệm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhìn bảng, em thấy AI mạnh nhất ở "
+      },
+      {
+       "text": "giữa",
+       "b": true
+      },
+      {
+       "text": " chuỗi: thu thập, tính toán, đề xuất, thực hiện việc lặp lại. Con người không thể thiếu ở "
+      },
+      {
+       "text": "hai đầu",
+       "b": true
+      },
+      {
+       "text": ": đặt mục tiêu lúc đầu và chịu trách nhiệm lúc cuối. Và ở bước 4, AI có thể xếp hạng, nhưng “tiêu chí cho trước” là do con người cho."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Quay lại chuyến đi Vũng Tàu: ứng dụng làm bước 2, 3 và xếp hạng ở bước 4. Mục tiêu “nhanh nhất” (bước 1) là mặc định của ứng dụng mà không ai trong nhà xem lại. Việc chọn (bước 4) thì bố làm mà không xem xét. Trách nhiệm (bước 6) không thể thuộc về ứng dụng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“AI chỉ đề xuất thôi, nên con người vẫn là người quyết định.”",
+         "b": true
+        },
+        {
+         "text": " Còn tùy. Nếu hệ thống chỉ đưa ra một phương án duy nhất, đặt mục tiêu sẵn, và con người không có thời gian hay thông tin để xem xét, thì trên thực tế hệ thống đã quyết định. Người quyết định thật là người (hoặc thứ) định ra mục tiêu và thu hẹp các lựa chọn."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-ba-muc-phan-vai",
+   "title": "2. Ba mức phân vai",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tùy vào việc con người và AI chia nhau sáu bước thế nào, ta có ba mức phân vai."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mức I: Con người quyết định, AI cung cấp thông tin.",
+         "b": true
+        },
+        {
+         "text": " AI giúp thu thập, tóm tắt, tính toán. Con người tự tạo phương án, tự chọn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mức II: AI đề xuất, con người xem xét và phê duyệt.",
+         "b": true
+        },
+        {
+         "text": " AI đưa ra phương án kèm lí do. Con người xem xét, có thể sửa hoặc bác, rồi mới cho thực hiện."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mức III: AI tự quyết định và thực hiện, con người giám sát về sau.",
+         "b": true
+        },
+        {
+         "text": " AI làm trọn chuỗi. Con người xem thống kê, kiểm tra mẫu, can thiệp khi có bất thường."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image6.png",
+     "caption": "Hình 12.2.2. Ba mức phân vai. Từ mức I đến mức III, AI làm nhiều bước hơn. Quyết định càng ảnh hưởng lớn đến con người thì càng phải ở mức thấp."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy xem cùng một việc, “duyệt đơn xin nghỉ học”, được tổ chức theo ba mức (ví dụ giả định)."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mức",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách tổ chức",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "I"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần mềm hiển thị cho giáo viên chủ nhiệm số buổi đã nghỉ và lịch kiểm tra sắp tới của học sinh. Giáo viên đọc đơn, tự quyết định"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "II"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần mềm đề xuất “nên duyệt” hoặc “nên trao đổi thêm” kèm lí do. Giáo viên đọc đơn và đề xuất, rồi quyết định"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "III"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần mềm tự duyệt hoặc từ chối và gửi tin nhắn cho phụ huynh. Cuối tháng giáo viên xem báo cáo tổng hợp"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mức III ở đây nhanh nhất. Nhưng một lá đơn xin nghỉ có thể chứa điều mà dữ liệu không ghi: người thân ốm nặng, hoàn cảnh gia đình. Một lời từ chối tự động gửi đến phụ huynh trong hoàn cảnh ấy là điều không ai mong muốn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chọn mức nào? Nguyên tắc:",
+       "b": true
+      },
+      {
+       "text": " quyết định càng ảnh hưởng đến sức khỏe, cơ hội, quyền lợi của con người và càng khó sửa lại, thì càng phải giữ ở mức I hoặc II. Mức III chỉ hợp với những việc lặp lại nhiều, hậu quả nhỏ và dễ sửa."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mức phù hợp",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vì sao",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lọc thư rác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "III"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Số lượng rất lớn; nhầm thì lấy lại được trong mục thư rác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý bài hát tiếp theo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "III"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hậu quả nhỏ; người nghe bỏ qua được"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chấm bài tự luận"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "II hoặc I"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh hưởng đến kết quả học tập; cần giáo viên xem xét"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xét học bổng, tuyển sinh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "I, cùng lắm là II"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh hưởng lớn đến cơ hội của một con người"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chẩn đoán và quyết định điều trị"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "I hoặc II"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Liên quan đến sức khỏe, tính mạng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2020, do dịch Covid-19, các kì thi cuối cấp ở Anh bị hủy. Cơ quan quản lí thi cử của Anh (Ofqual) dùng một thuật toán để xác định điểm cho học sinh. Ngày 13/8/2020, kết quả được công bố: theo số liệu của chính Ofqual, 39,1% số điểm ở Anh bị hạ ít nhất một bậc, ảnh hưởng đến khoảng 280.000 lượt điểm. Hàng nghìn học sinh thấy điểm của mình bị đánh thấp xuống. Sau làn sóng phản đối, ngày 17/8/2020, chính phủ đổi cách làm: điểm được tính theo đánh giá của giáo viên. Bộ trưởng Giáo dục xin lỗi; người đứng đầu Ofqual sau đó từ chức [9]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Đây không hẳn là một hệ thống AI học từ dữ liệu như em đã học, mà là một thuật toán thống kê. Nhưng bài học về phân vai thì giống hệt: một quyết định ảnh hưởng lớn đến cơ hội của từng học sinh đã được tổ chức gần với mức III. Khi bị phản đối, nó được đưa về cho con người: các giáo viên, những người biết từng học sinh."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Mức nào?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mỗi cách tổ chức sau thuộc mức I, II hay III? Theo em, mức đó có phù hợp với việc ấy không?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Một ứng dụng ngân hàng tự động khóa thẻ khi phát hiện giao dịch bất thường, rồi nhắn tin cho chủ thẻ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Một phần mềm đọc 500 hồ sơ xin việc, loại 400 hồ sơ; nhà tuyển dụng chỉ đọc 100 hồ sơ còn lại."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Một bác sĩ nhờ AI tóm tắt bệnh án dài 40 trang trước khi khám."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Một hệ thống đề xuất mức phạt cho học sinh đi học muộn; giám thị xem từng trường hợp rồi quyết định."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-coi-chung-phe-duyet-hinh-thuc",
+   "title": "3. Coi chừng “phê duyệt hình thức”",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mức II nghe có vẻ là điểm cân bằng lí tưởng: AI làm việc nặng, con người quyết định. Nhưng mức II có một cái bẫy."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phê duyệt hình thức",
+         "b": true
+        },
+        {
+         "text": " là khi con người có tên ở bước phê duyệt nhưng thực tế chỉ bấm đồng ý theo đề xuất của AI mà không xem xét."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phê duyệt hình thức thường xảy ra khi có một trong bốn điều kiện sau:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều kiện",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quá ít thời gian"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phải duyệt 300 hồ sơ mỗi giờ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có thông tin để xem xét"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ thấy “Đề xuất: từ chối”, không thấy lí do"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI thường đúng nên sinh ra chủ quan"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Trước giờ nó chưa sai bao giờ”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bác đề xuất thì phiền hơn đồng ý"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Muốn bác phải viết giải trình; đồng ý thì chỉ cần một cú bấm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em đã gặp một dạng của hiện tượng này ở lớp 11: người dùng tin vào câu trả lời trôi chảy của AI mà không kiểm chứng. Hai luật sư ở New York nộp cho tòa những bản án do AI bịa ra và bị phạt 5.000 đô la Mỹ năm 2023 [12]. Họ là người kí tên, nhưng họ đã không xem xét."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi phê duyệt chỉ còn là hình thức, mức II trên giấy trở thành mức III trên thực tế, và tệ hơn mức III thật: không ai giám sát, vì mọi người tưởng đã có người duyệt."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Làm sao để phê duyệt là thật?",
+       "b": true
+      },
+      {
+       "text": " Bốn điều kiện ngược lại:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Người duyệt có "
+        },
+        {
+         "text": "đủ thời gian",
+         "b": true
+        },
+        {
+         "text": " cho mỗi trường hợp."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đề xuất đi kèm "
+        },
+        {
+         "text": "lí do và dữ liệu",
+         "b": true
+        },
+        {
+         "text": " để xem xét."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Người duyệt "
+        },
+        {
+         "text": "đủ hiểu biết",
+         "b": true
+        },
+        {
+         "text": " để nhận ra đề xuất sai, và thỉnh thoảng được kiểm tra bằng những trường hợp cài sẵn lỗi."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bác đề xuất "
+        },
+        {
+         "text": "dễ như",
+         "b": true
+        },
+        {
+         "text": " đồng ý."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Lập sơ đồ phân vai",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chọn một trong hai quyết định sau. Kẻ bảng sáu bước; ở mỗi bước ghi AI làm gì, con người làm gì. Sau đó cho biết cách phân vai của em thuộc mức nào, và nêu một biện pháp để tránh phê duyệt hình thức."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Thư viện trường quyết định mua những đầu sách nào cho năm học tới."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Giáo viên chủ nhiệm xếp chỗ ngồi cho lớp đầu năm."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-quyet-dinh-cua-chinh-em",
+   "title": "4. Quyết định của chính em",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Năm lớp 12, em đứng trước một trong những quyết định lớn đầu tiên của đời mình: chọn ngành, chọn trường, chọn hướng đi sau phổ thông. Nhiều bạn đã hỏi AI: “Em nên học ngành gì?”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy áp sáu bước vào quyết định ấy."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bước",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI có thể giúp em",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phần chỉ em làm được",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý các câu hỏi để em tự hỏi mình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em muốn gì, coi trọng điều gì, gia đình em có điều kiện thế nào"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Thông tin"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Liệt kê ngành, trường, tổ hợp xét tuyển; em phải kiểm chứng với đề án tuyển sinh chính thức"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi thầy cô, anh chị đang học, người đang làm nghề"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Phương án"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So sánh các ngành theo tiêu chí em đưa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thêm vào những điều chỉ em biết: sức học, sở thích, hoàn cảnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Lựa chọn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra ưu, nhược của từng phương án"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Thực hiện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhắc lịch, rà hồ sơ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học, thi, đăng kí"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Xem lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý cách điều chỉnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sống với lựa chọn của mình, đổi hướng nếu cần"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây là quyết định ở "
+      },
+      {
+       "text": "mức I",
+       "b": true
+      },
+      {
+       "text": ": em quyết định, AI cung cấp thông tin. Và ngay cả thông tin cũng phải kiểm chứng, vì điểm chuẩn, chỉ tiêu, phương thức xét tuyển thay đổi hằng năm, còn AI có thể nói về chúng một cách tự tin và sai."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phân vai tốt là để con người quyết định "
+      },
+      {
+       "text": "tốt hơn",
+       "b": true
+      },
+      {
+       "text": ", không phải để con người "
+      },
+      {
+       "text": "khỏi phải quyết định",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-khi-thuat-toan-chon-nguoi",
+   "title": "Trải nghiệm: Khi thuật toán chọn người",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trò chơi này cho em đóng vai nhà tuyển dụng, rồi giao lại việc chọn người cho một thuật toán. Em hãy theo dõi điều gì xảy ra."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image7.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Survival of the Best Fit"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " survivalofthebestfit.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 7 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em cùng lớp đóng vai nhà tuyển dụng và chọn hồ sơ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em xem thuật toán học từ chính những lựa chọn của lớp."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em quan sát thuật toán lặp lại sự thiên lệch thế nào."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Ở bước nào lẽ ra con người phải giữ quyền quyết định?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Trò chơi bằng tiếng Anh, thầy cô sẽ trình chiếu."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image8.png",
+     "caption": "Sơ đồ tư duy Bài 12.2."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Một quyết định gồm "
+        },
+        {
+         "text": "sáu bước",
+         "b": true
+        },
+        {
+         "text": ": mục tiêu; thu thập thông tin; tạo phương án; lựa chọn; thực hiện; xem xét lại và chịu trách nhiệm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "AI mạnh ở "
+        },
+        {
+         "text": "thu thập, tính toán, đề xuất",
+         "b": true
+        },
+        {
+         "text": "; con người giữ "
+        },
+        {
+         "text": "mục tiêu, lựa chọn có cân nhắc giá trị, và trách nhiệm",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba mức phân vai:",
+         "b": true
+        },
+        {
+         "text": " (I) người quyết định, AI cung cấp thông tin; (II) AI đề xuất, người phê duyệt; (III) AI tự quyết định, người giám sát về sau."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Việc càng "
+        },
+        {
+         "text": "hệ trọng và khó sửa",
+         "b": true
+        },
+        {
+         "text": " thì càng giữ ở mức thấp."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phê duyệt hình thức",
+         "b": true
+        },
+        {
+         "text": " biến mức II thành mức III mà không ai hay."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Trong mỗi việc sau, AI đang tham gia bước nào trong sáu bước? a) Ứng dụng thời tiết gom số liệu từ hàng nghìn trạm đo; b) Phần mềm xếp hạng 20 ứng viên theo điểm; c) Hệ thống tự gửi thư nhắc hạn nộp học phí; d) Trợ lí AI đưa ra ba cách sắp xếp lịch ôn thi."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một bệnh viện quy định: “Mọi kết quả AI đọc phim X-quang phải được bác sĩ kí duyệt.” Mỗi bác sĩ có 20 giây cho một phim và màn hình chỉ hiện chữ “Bình thường” hoặc “Bất thường”. Quy định này thuộc mức mấy trên giấy? Mức mấy trên thực tế? Em đề xuất hai thay đổi."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Bạn Minh nói: “Lọc thư rác ở mức III thì chấm bài tự luận cũng ở mức III được, đều là phân loại cả.” Em dùng nguyên tắc chọn mức để trao đổi với Minh."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Trong câu chuyện về kì thi ở Anh năm 2020, em chỉ ra: bước 1 (mục tiêu) do ai đặt; bước 4 (lựa chọn điểm cho từng học sinh) do ai làm; bước 6 (chịu trách nhiệm) cuối cùng thuộc về ai."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Viết ba câu hỏi em sẽ tự hỏi mình ở bước 1 trước khi nhờ AI tư vấn chọn ngành."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chọn một quyết định em sắp phải đưa ra trong học kì này (chọn tổ hợp môn thi, chọn đề tài dự án, chọn câu lạc bộ, lên kế hoạch ôn tập). Lập bảng sáu bước như ở mục 4: phần nào em nhờ AI, phần nào em tự làm, thông tin nào em sẽ kiểm chứng và kiểm chứng ở đâu. Sau khi quyết định xong, viết hai dòng: AI đã giúp em ở bước nào nhiều nhất, và có lúc nào em suýt “phê duyệt hình thức” đề xuất của nó không."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tách một quyết định thành sáu bước"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu phần AI mạnh và phần con người phải giữ ở mỗi bước"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt ba mức phân vai và chọn mức phù hợp cho một việc"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận ra phê duyệt hình thức và đề xuất cách tránh"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân vai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách chia các bước của một quyết định giữa con người và AI"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đề xuất"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phương án AI đưa ra để con người xem xét"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phê duyệt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người xem xét và đồng ý cho thực hiện"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giám sát về sau"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người theo dõi kết quả sau khi AI đã tự thực hiện"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phê duyệt hình thức"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có tên người duyệt nhưng thực tế không xem xét"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Bước 2. b) Bước 4 (xếp hạng theo tiêu chí cho trước). c) Bước 5. d) Bước 3."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Trên giấy là mức II; trên thực tế gần mức III vì bác sĩ không đủ thời gian và không có thông tin để xem xét. Thay đổi: cho xem vùng nghi ngờ trên phim và mức chắc chắn; phân bổ đủ thời gian, ưu tiên xem kĩ các phim “bất thường” và một tỉ lệ ngẫu nhiên các phim “bình thường”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Cùng là phân loại nhưng hậu quả khác nhau. Thư bị nhầm thì lấy lại được, không ai thiệt nhiều. Điểm bài tự luận ảnh hưởng đến kết quả học tập, và bài tự luận có những ý sáng tạo mà máy dễ đánh giá sai. Việc càng hệ trọng, càng khó sửa thì càng phải có người xem xét."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Bước 1: cơ quan quản lí thi cử và chính phủ (cần có điểm khi không thi được). Bước 4: thuật toán. Bước 6: con người, cụ thể là chính phủ và cơ quan quản lí; họ đã phải xin lỗi và đổi cách làm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: Mình thích làm việc với con người, với máy móc hay với ý tưởng? Điều gì với mình là không thể đánh đổi (ở gần nhà, học phí, thời gian học)? Mình muốn cuộc sống mười năm nữa trông như thế nào?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [9], [12] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2086 @@
+{
+ "id": "12.3",
+ "slug": "bai-12-03",
+ "grade": 12,
+ "num": 3,
+ "topicId": "12.1",
+ "title": "Trách nhiệm giải trình: đối chiếu với quy định",
+ "meta": "Chuyên đề 12.1: Quyền kiểm soát và trách nhiệm giải trình trong vòng đời AI (tiết 3 trong 3 tiết)",
+ "period": {
+  "index": 3,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Giải thích được "
+   },
+   {
+    "text": "trách nhiệm giải trình",
+    "b": true
+   },
+   {
+    "text": " là gì và vì sao máy không tự giải trình được."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được "
+   },
+   {
+    "text": "sáu biểu hiện",
+    "b": true
+   },
+   {
+    "text": " của việc thực hiện trách nhiệm giải trình với một quyết định có AI tham gia."
+   }
+  ],
+  [
+   {
+    "text": "Dùng được "
+   },
+   {
+    "text": "bảng kiểm sáu biểu hiện",
+    "b": true
+   },
+   {
+    "text": " để đối chiếu một tình huống với quy định của nhà trường và pháp luật ở mức khái quát."
+   }
+  ]
+ ],
+ "keywords": [
+  "trách nhiệm giải trình",
+  "thông báo",
+  "giải thích",
+  "lưu vết",
+  "xem xét lại",
+  "khắc phục"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-he-thong-quyet-dinh-nhu-vay",
+   "title": "Khởi động: “Hệ thống quyết định như vậy”",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chị Thảo, sinh viên năm hai, nộp hồ sơ xin học bổng của một quỹ khuyến học. Hai tuần sau, chị nhận được một dòng thông báo: “Hồ sơ không đạt.” Chị đến văn phòng quỹ để hỏi lí do."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhân viên trả lời: “Hồ sơ do hệ thống chấm. Hệ thống quyết định như vậy, tôi cũng không rõ vì sao.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Chị Thảo có quyền đòi hỏi những gì? Câu trả lời của nhân viên thiếu những điều gì? Em thử liệt kê."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có thể em đã viết ra: chị cần được biết hồ sơ do máy chấm; cần biết vì sao không đạt; cần có người xem lại; cần biết ai chịu trách nhiệm. Những điều em vừa liệt kê chính là nội dung của "
+      },
+      {
+       "text": "trách nhiệm giải trình",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-trach-nhiem-giai-trinh-la-gi",
+   "title": "1. Trách nhiệm giải trình là gì?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trách nhiệm giải trình",
+         "b": true
+        },
+        {
+         "text": " là nghĩa vụ của người hoặc tổ chức ra quyết định phải "
+        },
+        {
+         "text": "nói rõ mình đã quyết định gì, dựa vào đâu, vì sao",
+         "b": true
+        },
+        {
+         "text": ", và phải "
+        },
+        {
+         "text": "chịu hậu quả, sửa sai",
+         "b": true
+        },
+        {
+         "text": " khi quyết định đó không đúng."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở Bài 12.1, em đã phân biệt quyền kiểm soát với chịu trách nhiệm. Trách nhiệm giải trình là cách “chịu trách nhiệm” được "
+      },
+      {
+       "text": "thực hiện ra bên ngoài",
+       "b": true
+      },
+      {
+       "text": ": trước người bị ảnh hưởng, trước cấp trên, trước cơ quan có thẩm quyền."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì sao máy không tự giải trình được?",
+       "b": true
+      },
+      {
+       "text": " Một hệ thống AI có thể in ra một dòng lí do, nhưng nó không thể:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "hiểu hoàn cảnh riêng của người đang hỏi;"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "nhận rằng mình sai và xin lỗi;"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "bồi thường, sửa lại quyết định;"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "bị xử lí khi vi phạm."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chỉ con người và tổ chức mới làm được những điều ấy. Vì thế, mỗi quyết định có AI tham gia đều phải có "
+      },
+      {
+       "text": "một con người hoặc một đơn vị cụ thể đứng tên",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một hành khách ở Canada được chatbot trên trang web của một hãng hàng không hướng dẫn sai về chính sách giảm giá vé cho người có tang. Khi hành khách đòi hoàn tiền theo lời chatbot, hãng từ chối và lập luận rằng chatbot phải tự chịu trách nhiệm về lời nói của nó. Năm 2024, cơ quan giải quyết tranh chấp bác bỏ lập luận ấy: hãng chịu trách nhiệm về mọi thông tin trên trang của mình, dù do một trang tĩnh hay một chatbot đưa ra, và phải bồi thường [13]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Câu “hệ thống quyết định như vậy” không miễn trách nhiệm cho ai cả."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-sau-bieu-hien-cua-trach-nhiem-giai-trinh",
+   "title": "2. Sáu biểu hiện của trách nhiệm giải trình",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Làm sao biết một tổ chức có thực hiện trách nhiệm giải trình hay không? Em xem sáu biểu hiện. Hình 12.3.1 xếp chúng theo thời gian quanh một quyết định."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image9.png",
+     "caption": "Hình 12.3.1. Sáu biểu hiện của trách nhiệm giải trình, xếp theo thời điểm: trước, trong và sau một quyết định có AI tham gia."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Biểu hiện",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi kiểm tra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trong chuyện của chị Thảo",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Có người chịu trách nhiệm",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có người hoặc đơn vị cụ thể đứng tên chịu trách nhiệm về quyết định không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không rõ ai. Nhân viên nói “hệ thống quyết định”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Thông báo",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người bị ảnh hưởng có được biết có AI tham gia vào quyết định không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ biết khi đến hỏi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Giải thích",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có nêu lí do của quyết định bằng ngôn ngữ người bình thường hiểu được không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không. Chỉ có “không đạt”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Lưu vết",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có ghi lại dữ liệu đã dùng, kết quả của AI, người phê duyệt để kiểm tra về sau không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không biết; nhân viên không tra được"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Xem xét lại",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có kênh để khiếu nại và được một con người xem xét lại không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Khắc phục",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khi phát hiện sai, có sửa quyết định và bù đắp cho người bị ảnh hưởng không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa đặt ra, vì chưa ai xem lại"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sáu biểu hiện này nối với nhau thành một chuỗi. Không "
+      },
+      {
+       "text": "lưu vết",
+       "b": true
+      },
+      {
+       "text": " thì không thể "
+      },
+      {
+       "text": "giải thích",
+       "b": true
+      },
+      {
+       "text": ". Không "
+      },
+      {
+       "text": "giải thích",
+       "b": true
+      },
+      {
+       "text": " thì người bị ảnh hưởng không biết dựa vào đâu để đề nghị "
+      },
+      {
+       "text": "xem xét lại",
+       "b": true
+      },
+      {
+       "text": ". Không "
+      },
+      {
+       "text": "xem xét lại",
+       "b": true
+      },
+      {
+       "text": " thì không có gì để "
+      },
+      {
+       "text": "khắc phục",
+       "b": true
+      },
+      {
+       "text": ". Và nếu không "
+      },
+      {
+       "text": "có người chịu trách nhiệm",
+       "b": true
+      },
+      {
+       "text": " thì năm việc còn lại không ai làm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Về biểu hiện thứ ba, “giải thích” không có nghĩa là công bố toàn bộ mô hình. Ở Bài 11.10, em đã biết mạng nơ-ron khó giải thích theo kiểu chỉ ra từng trọng số. Giải thích ở đây là giải thích "
+      },
+      {
+       "text": "cho người bị ảnh hưởng",
+       "b": true
+      },
+      {
+       "text": ": những yếu tố chính nào dẫn đến kết quả, và họ có thể làm gì."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích chưa đạt",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích đạt",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Hồ sơ không đạt.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Hồ sơ được chấm theo ba tiêu chí. Hồ sơ của bạn thiếu giấy xác nhận hoàn cảnh nên tiêu chí thứ hai không có điểm. Bạn có thể bổ sung trước ngày 15.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Điểm tín nhiệm của bạn thấp.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Hai lần trả chậm trong sáu tháng gần đây là yếu tố ảnh hưởng nhiều nhất. Nếu thông tin này sai, bạn có thể đề nghị kiểm tra lại tại…”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Đã có người kí duyệt là đã có trách nhiệm giải trình.”",
+         "b": true
+        },
+        {
+         "text": " Chữ kí mới là biểu hiện thứ nhất. Nếu người kí không giải thích được vì sao, không có hồ sơ để tra lại, và người bị ảnh hưởng không có nơi để khiếu nại, thì chữ kí ấy chỉ là hình thức, giống “phê duyệt hình thức” ở Bài 12.2."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Biểu hiện nào đang thiếu?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mỗi tình huống giả định sau thiếu biểu hiện nào trong sáu biểu hiện?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Một ứng dụng giao hàng tự động khóa tài khoản của tài xế vì “vi phạm chính sách”, không nói vi phạm điều gì."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Một phần mềm chấm bài trắc nghiệm chấm sai một câu cho cả khối. Nhà trường sửa điểm, nhưng không ai tra được đợt chấm ấy dùng đáp án phiên bản nào."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Một trung tâm ngoại ngữ dùng AI xếp lớp cho học viên nhưng trên giấy báo chỉ ghi “theo kết quả đánh giá đầu vào”."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Phụ huynh phản ánh điểm rèn luyện do phần mềm tính bị sai; nhà trường trả lời “phần mềm của công ti, trường không can thiệp được”."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-quy-dinh-noi-gi",
+   "title": "3. Quy định nói gì?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trách nhiệm giải trình không chỉ là điều “nên làm”. Nhiều nội dung của nó đã được đưa vào quy định. Bảng sau liên hệ sáu biểu hiện với các văn bản em đã biết. Em "
+      },
+      {
+       "text": "không cần thuộc điều khoản",
+       "b": true
+      },
+      {
+       "text": ". Em cần biết: khi gặp một quyết định có AI, mình được đòi hỏi điều gì và căn cứ nằm ở đâu."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Biểu hiện",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Quy định có liên quan (mức khái quát)",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Có người chịu trách nhiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Luật Trí tuệ nhân tạo quy định trách nhiệm của nhà cung cấp và của bên triển khai hệ thống AI [6]"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Thông báo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống AI tương tác trực tiếp với con người phải được thiết kế để người dùng nhận biết đó là AI; nội dung do AI tạo ra mô phỏng người thật phải được gắn nhãn [6]"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Giải thích"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền được biết của chủ thể dữ liệu theo Luật Bảo vệ dữ liệu cá nhân [7]"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Lưu vết"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhà cung cấp hệ thống AI rủi ro cao phải lập, lưu giữ hồ sơ kĩ thuật và nhật kí hoạt động để phục vụ kiểm tra [6]"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Xem xét lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Với hệ thống rủi ro cao, phải bảo đảm khả năng giám sát và can thiệp của con người [6]; chủ thể dữ liệu có quyền phản đối, khiếu nại [7]"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Khắc phục"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quy định chung về bồi thường thiệt hại; quyền yêu cầu chỉnh sửa, xóa dữ liệu cá nhân [7]"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai lưu ý quan trọng khi đọc bảng này."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ nhất, bảng chỉ nêu tinh thần của quy định.",
+       "b": true
+      },
+      {
+       "text": " Nội dung được dẫn theo các bài giới thiệu luật, không phải theo nguyên văn điều khoản. Luật Trí tuệ nhân tạo có hiệu lực từ ngày 01/3/2026, và các hệ thống đã hoạt động trước ngày đó có thời gian chuyển tiếp để đáp ứng [6]. Khi cần áp dụng vào một việc cụ thể, em cùng thầy cô, cha mẹ tra văn bản gốc đang có hiệu lực."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ hai, ngoài pháp luật còn có quy định của nhà trường.",
+       "b": true
+      },
+      {
+       "text": " Quy tắc sử dụng AI của trường, quy chế đánh giá học sinh, quy định về khiếu nại điểm đều là căn cứ. Nếu một phần mềm chấm điểm được dùng trong trường, quy chế đánh giá vẫn áp dụng: giáo viên chịu trách nhiệm về điểm, học sinh có quyền đề nghị xem lại."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2019, các nước thuộc Tổ chức Hợp tác và Phát triển Kinh tế (OECD) thông qua bộ nguyên tắc về AI, được cập nhật năm 2024. Nguyên tắc thứ năm có tên là “trách nhiệm giải trình” (accountability); nguyên tắc thứ ba là “minh bạch và giải thích được” [4]. Như vậy, điều em đang học là một phần của sự đồng thuận quốc tế, không riêng của nước nào."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-doi-chieu-mot-tinh-huong-voi-quy-dinh",
+   "title": "4. Đối chiếu một tình huống với quy định",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi phân tích một tình huống, em đi theo ba bước:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Mô tả:",
+         "b": true
+        },
+        {
+         "text": " quyết định gì, ảnh hưởng đến ai, AI tham gia ở bước nào (dùng sáu bước của Bài 12.2)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Kiểm tra:",
+         "b": true
+        },
+        {
+         "text": " dùng bảng kiểm sáu biểu hiện, mỗi biểu hiện ghi “có”, “chưa” hoặc “chưa rõ”, kèm bằng chứng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đối chiếu và đề xuất:",
+         "b": true
+        },
+        {
+         "text": " biểu hiện nào chưa đạt thì liên quan đến quy định nào; đề xuất việc cần làm và ai làm."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ (tình huống giả định).",
+       "b": true
+      },
+      {
+       "text": " Một trường trung học phổ thông dùng phần mềm AI để gợi ý danh sách học sinh “có nguy cơ học yếu” dựa trên điểm số và số buổi nghỉ. Danh sách được gửi cho giáo viên chủ nhiệm. Học sinh và phụ huynh không biết có danh sách này. Một học sinh bị đưa vào danh sách do nghỉ ba tuần vì nằm viện; giáo viên bộ môn nhìn danh sách và có phần định kiến với em."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Biểu hiện",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đánh giá",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bằng chứng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Liên hệ quy định, đề xuất",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Người chịu trách nhiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa rõ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không biết ai quyết định dùng, ai quản lí danh sách"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ban giám hiệu phân công một phó hiệu trưởng phụ trách"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Thông báo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh, phụ huynh không biết"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông báo trong cuộc họp phụ huynh đầu năm; liên quan đến quyền được biết [7]"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Giải thích"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Danh sách chỉ có tên"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kèm lí do cho từng trường hợp (ví dụ “nghỉ 15 buổi”)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Lưu vết"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa rõ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không biết dữ liệu nào được dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ghi lại dữ liệu đầu vào và ngày lập danh sách"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Xem xét lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có cách đề nghị rút tên"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giáo viên chủ nhiệm xem từng trường hợp trước khi dùng; học sinh được đề nghị xem lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Khắc phục"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh nằm viện vẫn bị gắn nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rút tên, trao đổi lại với giáo viên bộ môn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết luận của phần phân tích không phải là “bỏ phần mềm”. Phát hiện sớm học sinh cần hỗ trợ là mục tiêu tốt. Kết luận là: muốn dùng thì phải bổ sung sáu việc ở cột cuối, và đưa cách dùng về "
+      },
+      {
+       "text": "mức II thật",
+       "b": true
+      },
+      {
+       "text": ": phần mềm gợi ý, giáo viên chủ nhiệm xem xét từng em."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Kiểm tra và đối chiếu",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Dùng bảng kiểm sáu biểu hiện để phân tích tình huống giả định sau, theo đủ ba bước."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Căn tin trường lắp máy bán hàng tự động có camera AI nhận diện khuôn mặt để trừ tiền vào tài khoản của học sinh. Nhà cung cấp cài đặt trong kì nghỉ hè. Đầu năm, học sinh chỉ được hướng dẫn “đứng trước máy là xong”. Một số học sinh bị trừ tiền hai lần; khi hỏi, cô bán hàng nói “máy của công ti, cô không biết”.",
+         "i": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-ba-cau-hoi-cua-mot-cong-dan",
+   "title": "5. Ba câu hỏi của một công dân",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chuyên đề 12.1 đã đi qua ba bài: nhìn cả "
+      },
+      {
+       "text": "vòng đời",
+       "b": true
+      },
+      {
+       "text": " để tìm lỗ hổng kiểm soát; "
+      },
+      {
+       "text": "phân vai",
+       "b": true
+      },
+      {
+       "text": " hợp lí giữa con người và AI; và con người phải "
+      },
+      {
+       "text": "giải trình",
+       "b": true
+      },
+      {
+       "text": " được về quyết định."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Không phải ai trong các em cũng sẽ thiết kế hệ thống AI. Nhưng tất cả các em sẽ là người "
+      },
+      {
+       "text": "bị ảnh hưởng",
+       "b": true
+      },
+      {
+       "text": " bởi các quyết định có AI tham gia: khi xét tuyển, xin việc, vay vốn, khám bệnh. Khi đó, em có quyền hỏi ba câu:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. "
+        },
+        {
+         "text": "Có AI tham gia vào quyết định này không?",
+         "b": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. "
+        },
+        {
+         "text": "Vì sao quyết định như vậy?",
+         "b": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. "
+        },
+        {
+         "text": "Tôi đề nghị xem xét lại ở đâu, với ai?",
+         "b": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hỏi ba câu ấy một cách bình tĩnh, lịch sự và có căn cứ là kĩ năng của một công dân trong xã hội có AI."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-ai-da-dung-ra-giai-trinh",
+   "title": "Trải nghiệm: Ai đã đứng ra giải trình?",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi một hệ thống AI gây ra sự cố, ai đứng ra giải thích và sửa chữa? Em có thể tự tìm câu trả lời trong các sự cố thật."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image10.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " OECD AI Incidents Monitor"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " oecd.ai/en/incidents (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em tự làm ở nhà nếu muốn (khoảng 15 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em chọn một sự cố trong danh sách trên trang."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em tìm xem ai đã lên tiếng, giải thích thế nào và đã sửa ra sao."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em đối chiếu với sáu biểu hiện của trách nhiệm giải trình."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Trong sự cố em đọc, biểu hiện nào còn thiếu?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Trang bằng tiếng Anh. Đây là hoạt động tự chọn ở nhà, không bắt buộc."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image11.png",
+     "caption": "Sơ đồ tư duy Bài 12.3."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Trách nhiệm giải trình:",
+         "b": true
+        },
+        {
+         "text": " nói rõ đã quyết định gì, dựa vào đâu, vì sao; chịu hậu quả và sửa sai. Máy không tự giải trình được."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sáu biểu hiện:",
+         "b": true
+        },
+        {
+         "text": " có người chịu trách nhiệm; thông báo; giải thích; lưu vết; xem xét lại; khắc phục."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhiều biểu hiện đã thành "
+        },
+        {
+         "text": "quy định",
+         "b": true
+        },
+        {
+         "text": " của pháp luật và nhà trường; khi áp dụng phải tra văn bản gốc."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba câu hỏi của người bị ảnh hưởng: "
+        },
+        {
+         "text": "có AI không; vì sao; đề nghị xem xét lại ở đâu?",
+         "b": true
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Ghép mỗi việc với một biểu hiện: a) Trang web ghi “Bạn đang trò chuyện với trợ lí ảo”; b) Phần mềm lưu lại ngày giờ, dữ liệu đầu vào và tên người duyệt của từng quyết định; c) Thư từ chối có ghi “nếu không đồng ý, bạn gửi đề nghị đến địa chỉ… trong 15 ngày”; d) Công ti hoàn tiền và gửi thư xin lỗi sau khi phát hiện hệ thống tính sai."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Viết lại thông báo “Tài khoản của bạn bị khóa do vi phạm chính sách” thành một thông báo đạt biểu hiện 2, 3 và 5."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Vì sao thiếu “lưu vết” thì các biểu hiện 3, 5, 6 khó thực hiện? Trả lời bằng một ví dụ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Một bạn nói: “Mô hình AI là hộp đen, không ai giải thích được, nên không thể đòi giải thích.” Em phân biệt hai nghĩa của “giải thích” để trao đổi với bạn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Trường em dự định dùng phần mềm AI hỗ trợ chấm bài luận tiếng Anh. Em viết bốn câu hỏi gửi nhà trường, mỗi câu ứng với một biểu hiện khác nhau."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hỏi cha mẹ hoặc một người lớn trong nhà xem đã bao giờ nhận một quyết định tự động mà không hiểu vì sao chưa (bị khóa tài khoản, bị từ chối một dịch vụ, bị tính phí lạ). Cùng người ấy soát lại theo sáu biểu hiện: biểu hiện nào có, biểu hiện nào thiếu. Nếu sự việc còn giải quyết được, em giúp người thân viết ba câu hỏi ở mục 5 để gửi cho nơi ra quyết định."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích trách nhiệm giải trình bằng lời của mình"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu sáu biểu hiện và câu hỏi kiểm tra của từng biểu hiện"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng bảng kiểm để phân tích một tình huống"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Liên hệ biểu hiện còn thiếu với quy định ở mức khái quát"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trách nhiệm giải trình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nghĩa vụ nói rõ quyết định, căn cứ, lí do và chịu hậu quả, sửa sai"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lưu vết"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ghi lại dữ liệu đã dùng, kết quả của AI, người phê duyệt để kiểm tra về sau"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xem xét lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một con người có thẩm quyền xem lại quyết định khi có đề nghị"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhà cung cấp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tổ chức, cá nhân làm ra và đưa hệ thống AI ra thị trường"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bên triển khai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tổ chức, cá nhân dùng hệ thống AI trong hoạt động của mình"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Thông báo. b) Lưu vết. c) Xem xét lại. d) Khắc phục."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: “Hệ thống tự động của chúng tôi đã tạm khóa tài khoản của bạn vì phát hiện ba lần đăng nhập từ thiết bị lạ trong ngày 12/3. Nếu đó là bạn, hoặc bạn cho rằng có nhầm lẫn, hãy gửi đề nghị tại… Nhân viên sẽ xem xét và trả lời trong ba ngày làm việc.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: một học sinh cho rằng phần mềm chấm sai bài. Nếu không lưu bài làm, đáp án và kết quả chấm của đợt đó, giáo viên không có gì để giải thích (3), không có gì để xem lại (5), và không biết phải sửa điểm thế nào (6)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Nghĩa thứ nhất: giải thích từng phép tính bên trong mô hình, điều này quả thật rất khó. Nghĩa thứ hai: giải thích cho người bị ảnh hưởng rằng quyết định dựa trên thông tin gì, yếu tố nào ảnh hưởng chính, và họ có thể làm gì. Nghĩa thứ hai là trách nhiệm của tổ chức và làm được. Nếu một hệ thống không cho phép giải thích theo nghĩa thứ hai thì không nên dùng nó cho quyết định hệ trọng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: Ai chịu trách nhiệm về điểm cuối cùng? Học sinh có được biết bài nào do AI hỗ trợ chấm không? Điểm có kèm nhận xét theo tiêu chí không? Học sinh đề nghị giáo viên chấm lại bằng cách nào?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [4], [6], [7], [13] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+---
+import '../styles/global.css';
+import { url } from '../lib/content';
+
+interface Props {
+  title: string;
+  description?: string;
+  active?: string;
+}
+
+const { title, description = 'Học và dạy trí tuệ nhân tạo cho học sinh THPT: bài học, mô phỏng, phiếu học tập.', active } = Astro.props;
+const nav = [
+  { href: 'lop-10', label: 'Lớp 10', key: '10' },
+  { href: 'lop-11', label: 'Lớp 11', key: '11' },
+  { href: 'lop-12', label: 'Lớp 12', key: '12' },
+  { href: 'phong-thi-nghiem', label: 'Phòng thí nghiệm', key: 'lab' },
+  { href: 'tu-dien', label: 'Từ điển AI', key: 'dict' },
+  { href: 'giao-vien/tong-hop-phieu', label: 'Tổng hợp phiếu', key: 'teacher', teacher: true },
+];
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Giáo dục AI</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <script is:inline>
+      try {
+        const m = localStorage.getItem('gdai.mode');
+        if (m === 'teacher') document.documentElement.dataset.mode = 'teacher';
+      } catch (e) {
+        /* bộ nhớ trình duyệt bị chặn: dùng chế độ học sinh */
+      }
+    </script>
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Bỏ qua phần đầu trang</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href={url()}>
+          <span class="brand-mark" aria-hidden="true">AI</span>
+          <span>Giáo dục AI</span>
+        </a>
+        <nav class="nav" aria-label="Điều hướng chính">
+          {
+            nav.map((n) => (
+              <a href={url(n.href)} aria-current={active === n.key ? 'page' : undefined} class={n.teacher ? 'teacher-only' : undefined}>
+                {n.label}
+              </a>
+            ))
+          }
+        </nav>
+        <div class="mode-switch" role="group" aria-label="Chế độ sử dụng">
+          <button type="button" data-set-mode="student">Học sinh</button>
+          <button type="button" data-set-mode="teacher">Giáo viên</button>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          <strong>Tài liệu lưu hành nội bộ</strong> · Chuyên đề Giáo dục trí tuệ nhân tạo · Tổ Tin học, Trường THPT Hùng Vương, TP. Hồ Chí Minh.
+        </p>
+        <p class="small">
+          Website không dùng tài khoản, không thu thập dữ liệu cá nhân. Ảnh webcam, câu trả lời và kết quả phiếu học tập chỉ lưu trên máy của em.
+        </p>
+      </div>
+    </footer>
+    <script>
+      const root = document.documentElement;
+      const buttons = document.querySelectorAll<HTMLButtonElement>('[data-set-mode]');
+      const sync = () => {
+        const mode = root.dataset.mode === 'teacher' ? 'teacher' : 'student';
+        buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.setMode === mode)));
+      };
+      buttons.forEach((b) =>
+        b.addEventListener('click', () => {
+          const mode = b.dataset.setMode === 'teacher' ? 'teacher' : 'student';
+          if (mode === 'teacher') root.dataset.mode = 'teacher';
+          else delete root.dataset.mode;
+          try {
+            localStorage.setItem('gdai.mode', mode);
+          } catch {
+            /* không lưu được thì chỉ áp dụng cho lần xem này */
+          }
+          window.dispatchEvent(new CustomEvent('gdai:mode', { detail: mode }));
+          sync();
+        }),
+      );
+      sync();
+    </script>
+  </body>
+</html>

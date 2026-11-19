@@ -1,0 +1,142 @@
+.it-grid {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 900px) {
+  .it-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .it-data {
+    grid-row: span 2;
+  }
+}
+
+.it-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: var(--surface);
+}
+
+.it-card h4 {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 4px 0 8px;
+}
+
+.it-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--primary-ink);
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.it-class {
+  border-top: 1px dashed var(--line);
+  padding: 8px 0;
+}
+
+.it-class-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.it-class-head input {
+  font: inherit;
+  font-weight: 700;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text);
+  border-radius: 6px;
+  padding: 2px 6px;
+  width: 60%;
+}
+
+.it-class-head input:hover,
+.it-class-head input:focus {
+  border-color: var(--line);
+}
+
+.it-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  min-height: 38px;
+  margin: 6px 0;
+}
+
+.it-thumbs img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.it-class-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.it-class-actions .btn {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  touch-action: none;
+  user-select: none;
+}
+
+.it-video {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.it-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.it-video-cover {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.it-output {
+  font-size: 1.1rem;
+  margin: 10px 0 6px;
+}
+
+.it-bar {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.it-bar-track {
+  height: 10px;
+  background: var(--surface-2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.it-bar-track span {
+  display: block;
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.2s;
+}

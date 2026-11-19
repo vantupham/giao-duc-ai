@@ -1,0 +1,37 @@
+{
+  "name": "giao-duc-ai",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "convert": "node scripts/convert-docx.mjs",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.4.2",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@tensorflow-models/knn-classifier": "^1.2.6",
+    "@tensorflow-models/mobilenet": "^2.1.1",
+    "@tensorflow/tfjs": "^4.22.0",
+    "astro": "^5.18.2",
+    "fflate": "^0.8.3",
+    "qr-scanner": "^1.4.2",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "fast-xml-parser": "^5.12.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  }
+}

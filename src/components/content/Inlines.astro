@@ -1,0 +1,53 @@
+---
+// Hiển thị một dãy chữ có định dạng; chuyển trích dẫn [n] thành liên kết tới danh mục nguồn.
+import type { Inline } from '../../lib/types';
+import { url } from '../../lib/content';
+
+interface Props {
+  inl: Inline[];
+  grade?: number;
+}
+
+const { inl, grade } = Astro.props;
+
+type Piece = { kind: 'text'; text: string } | { kind: 'cite'; n: string };
+
+function splitCites(text: string): Piece[] {
+  if (!grade) return [{ kind: 'text', text }];
+  const out: Piece[] = [];
+  let last = 0;
+  for (const m of text.matchAll(/\[(\d{1,2})\]/g)) {
+    if (m.index > last) out.push({ kind: 'text', text: text.slice(last, m.index) });
+    out.push({ kind: 'cite', n: m[1] });
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) out.push({ kind: 'text', text: text.slice(last) });
+  return out;
+}
+
+const safeHref = (h: string) => (/^https?:\/\//.test(h) ? h : null);
+---
+
+{
+  inl.map((x) => {
+    const pieces = splitCites(x.text);
+    const body = pieces.map((p) =>
+      p.kind === 'cite' ? (
+        <a class="cite" href={url(`nguon-tham-khao/lop-${grade}#nguon-${p.n}`)} title={`Nguồn [${p.n}]`}>
+          [{p.n}]
+        </a>
+      ) : (
+        p.text
+      ),
+    );
+    const href = x.href ? safeHref(x.href) : null;
+    const styled = x.b && x.i ? <strong><em>{body}</em></strong> : x.b ? <strong>{body}</strong> : x.i ? <em>{body}</em> : body;
+    return href ? (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {styled}
+      </a>
+    ) : (
+      styled
+    );
+  })
+}

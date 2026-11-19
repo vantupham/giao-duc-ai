@@ -1,0 +1,1862 @@
+{
+ "id": "10.5",
+ "slug": "bai-10-05",
+ "grade": 10,
+ "num": 5,
+ "topicId": "10.2",
+ "title": "Đạo đức trong thiết kế và vận hành AI",
+ "meta": "Chuyên đề 10.2: Dùng AI đúng quy định, có đạo đức (tiết 2 trong 2 tiết)",
+ "period": {
+  "index": 2,
+  "total": 2
+ },
+ "objectives": [
+  [
+   {
+    "text": "Trình bày được ví dụ về ba vấn đề đạo đức có thể phát sinh khi làm ra và vận hành AI: "
+   },
+   {
+    "text": "thiên vị dữ liệu, vi phạm quyền riêng tư, thiếu minh bạch",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Chỉ ra được vấn đề phát sinh ở khâu "
+   },
+   {
+    "text": "thiết kế",
+    "b": true
+   },
+   {
+    "text": " hay khâu "
+   },
+   {
+    "text": "vận hành",
+    "b": true
+   },
+   {
+    "text": ", và ai bị ảnh hưởng."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được việc người thiết kế, người vận hành nên làm để phòng tránh."
+   }
+  ]
+ ],
+ "keywords": [
+  "thiên vị dữ liệu",
+  "quyền riêng tư",
+  "minh bạch",
+  "thiết kế",
+  "vận hành"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-khi-ai-ve-nghe-nghiep",
+   "title": "Khởi động: Khi AI vẽ nghề nghiệp",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy làm một thí nghiệm tưởng tượng. Em yêu cầu một công cụ AI tạo ảnh vẽ “một bác sĩ”, lặp lại 20 lần. Rồi “một y tá”, 20 lần. Rồi “một kĩ sư”, “một người giúp việc”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giả sử kết quả là: gần như tất cả “bác sĩ” và “kĩ sư” là nam, gần như tất cả “y tá” và “người giúp việc” là nữ."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Có ai đã viết một dòng lệnh “bác sĩ thì phải là nam” không? Nếu không, khuôn mẫu này từ đâu ra?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Không ai lập trình điều đó. Công cụ học từ rất nhiều hình ảnh có sẵn, và trong những hình ảnh ấy khuôn mẫu này đã tồn tại. Máy chỉ lặp lại điều nó thấy nhiều nhất."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở bài trước, em học về ranh giới của "
+      },
+      {
+       "text": "người dùng",
+       "b": true
+      },
+      {
+       "text": ". Bài này, em đổi chỗ ngồi: sang ghế của "
+      },
+      {
+       "text": "người làm ra và người vận hành",
+       "b": true
+      },
+      {
+       "text": " hệ thống AI. Họ không có ý xấu, nhưng sản phẩm của họ vẫn có thể gây hại. Vì sao, và phòng tránh thế nào?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thí nghiệm ở trên là tình huống giả định để minh họa. Hiện tượng công cụ AI lặp lại khuôn mẫu từ dữ liệu là có thật, như em sẽ thấy ở mục 1.",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-van-de-thu-nhat-thien-vi-du-lieu",
+   "title": "1. Vấn đề thứ nhất: thiên vị dữ liệu",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Thiên vị dữ liệu",
+         "b": true
+        },
+        {
+         "text": " xảy ra khi dữ liệu dùng để dạy máy không đại diện đầy đủ, cân đối cho mọi nhóm người dùng, khiến hệ thống đối xử thiếu công bằng với một số nhóm."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy nghĩ đến một cuộc khảo sát “học sinh trường mình thích môn gì” mà người khảo sát chỉ hỏi các bạn trong đội tuyển Toán. Kết quả sẽ lệch, dù người khảo sát không hề gian dối. Dữ liệu dạy máy cũng có thể lệch theo đúng cách ấy."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2018, hai nhà nghiên cứu Joy Buolamwini và Timnit Gebru kiểm tra ba hệ thống thương mại phân loại giới tính qua ảnh khuôn mặt. Nhóm bị nhận sai nhiều nhất là phụ nữ da sẫm màu, với tỉ lệ sai lên tới "
+        },
+        {
+         "text": "34,7%",
+         "b": true
+        },
+        {
+         "text": "; trong khi tỉ lệ sai cao nhất ở nam giới da sáng màu chỉ là "
+        },
+        {
+         "text": "0,8%",
+         "b": true
+        },
+        {
+         "text": ". Hai tác giả cũng cho thấy hai bộ ảnh chuẩn thường dùng để đánh giá các hệ thống loại này có "
+        },
+        {
+         "text": "79,6%",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "86,2%",
+         "b": true
+        },
+        {
+         "text": " số người da sáng màu. [10]"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cùng năm ấy, hãng tin Reuters đưa tin về một công cụ chấm hồ sơ xin việc học từ hồ sơ 10 năm của một công ty, phần lớn là của nam giới; công cụ đã hạ điểm những hồ sơ có từ chỉ phụ nữ. [11]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai câu chuyện, một bài học: "
+      },
+      {
+       "text": "máy không tự sinh ra định kiến; nó học định kiến từ dữ liệu",
+       "b": true
+      },
+      {
+       "text": ", rồi lặp lại trên quy mô rất lớn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phát sinh ở đâu?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Khi thiết kế:",
+         "i": true
+        },
+        {
+         "text": " chọn dữ liệu thiếu nhóm, lệch nhóm; không thử kết quả riêng cho từng nhóm người dùng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi vận hành:",
+         "i": true
+        },
+        {
+         "text": " dữ liệu mới từ người dùng tiếp tục làm lệch; không ai theo dõi khiếu nại."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-van-de-thu-hai-vi-pham-quyen-rieng-tu",
+   "title": "2. Vấn đề thứ hai: vi phạm quyền riêng tư",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Vi phạm quyền riêng tư",
+         "b": true
+        },
+        {
+         "text": " xảy ra khi hệ thống thu thập, sử dụng hoặc chia sẻ dữ liệu cá nhân "
+        },
+        {
+         "text": "quá mức cần thiết",
+         "b": true
+        },
+        {
+         "text": " hoặc khi "
+        },
+        {
+         "text": "chưa được đồng ý",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy hình dung một ứng dụng đèn pin trên điện thoại. Để bật đèn, nó cần gì? Chỉ cần quyền dùng đèn. Nếu nó đòi thêm quyền đọc danh bạ, xem vị trí, nghe micro, em nên tự hỏi: "
+      },
+      {
+       "text": "nó lấy những thứ đó để làm gì?",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giống như khi em đi mượn sách thư viện: cô thủ thư cần biết tên và lớp của em. Cô không cần biết nhà em có mấy người, bố mẹ em làm nghề gì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phát sinh ở đâu?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Khi thiết kế:",
+         "i": true
+        },
+        {
+         "text": " thiết kế cho ứng dụng thu thập nhiều dữ liệu hơn mức mục tiêu cần."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi vận hành:",
+         "i": true
+        },
+        {
+         "text": " lưu trữ kém an toàn; dùng dữ liệu vào mục đích khác với lúc xin phép; chia sẻ cho bên thứ ba."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở Bài 10.3, em đã biết Luật Bảo vệ dữ liệu cá nhân trao cho em quyền được biết, quyền đồng ý, quyền yêu cầu xóa [6]. Một hệ thống được thiết kế có đạo đức sẽ tôn trọng các quyền ấy ngay từ đầu, không chờ đến khi bị nhắc."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-van-de-thu-ba-thieu-minh-bach",
+   "title": "3. Vấn đề thứ ba: thiếu minh bạch",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Thiếu minh bạch",
+         "b": true
+        },
+        {
+         "text": " xảy ra khi người dùng "
+        },
+        {
+         "text": "không biết",
+         "b": true
+        },
+        {
+         "text": " mình đang tương tác với AI, hoặc "
+        },
+        {
+         "text": "không được giải thích",
+         "b": true
+        },
+        {
+         "text": " vì sao AI đưa ra kết quả như vậy."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em nhắn tin hỏi “nhân viên tư vấn” của một cửa hàng suốt 20 phút, kể cả chuyện riêng, rồi mới biết bên kia là một chatbot. Em thấy thế nào? Hoặc em nộp bài và nhận lại một con điểm do máy chấm, không một lời nhận xét, hỏi ai cũng chỉ nghe “hệ thống chấm thế”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cả hai trường hợp, em đều bị đặt vào thế không biết và không hỏi lại được."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phát sinh ở đâu?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Khi thiết kế:",
+         "i": true
+        },
+        {
+         "text": " không thiết kế phần giải thích; không gắn nhãn nội dung do AI tạo."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi vận hành:",
+         "i": true
+        },
+        {
+         "text": " không thông báo cho người dùng; không có kênh hỏi lại, khiếu nại."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Minh bạch không chỉ là chuyện đạo đức mà đã thành yêu cầu của pháp luật. Luật Trí tuệ nhân tạo của Việt Nam quy định hệ thống AI tương tác trực tiếp với con người phải được thiết kế, vận hành để người sử dụng nhận biết được; nội dung mô phỏng ngoại hình, giọng nói của người thật phải được gắn nhãn dễ nhận biết [5]."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-nhin-ca-ba-van-de-tren-mot-bang",
+   "title": "4. Nhìn cả ba vấn đề trên một bảng",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vấn đề",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Là gì",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phát sinh khi thiết kế",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phát sinh khi vận hành",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiên vị dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống thiếu công bằng với một nhóm vì dữ liệu không đại diện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn dữ liệu thiếu nhóm, lệch nhóm; không thử theo từng nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu mới tiếp tục làm lệch; không theo dõi khiếu nại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vi phạm quyền riêng tư"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu thập, dùng dữ liệu cá nhân quá mức hoặc khi chưa được đồng ý"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế thu thập nhiều hơn cần thiết"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lưu trữ kém an toàn; dùng sai mục đích; chia sẻ cho bên khác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiếu minh bạch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng không biết đang gặp AI, không được giải thích"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có phần giải thích, không gắn nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không thông báo; không có kênh hỏi lại"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Thiết kế hay vận hành?",
+         "b": true
+        },
+        {
+         "text": " Mốc phân biệt: "
+        },
+        {
+         "text": "trước khi",
+         "b": true
+        },
+        {
+         "text": " sản phẩm đến tay người dùng là thiết kế; "
+        },
+        {
+         "text": "trong lúc",
+         "b": true
+        },
+        {
+         "text": " sản phẩm đang được dùng là vận hành."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Riêng tư hay minh bạch?",
+         "b": true
+        },
+        {
+         "text": " "
+        },
+        {
+         "text": "Riêng tư:",
+         "i": true
+        },
+        {
+         "text": " người ta lấy và dùng thông tin "
+        },
+        {
+         "text": "của tôi",
+         "b": true
+        },
+        {
+         "text": ". "
+        },
+        {
+         "text": "Minh bạch:",
+         "i": true
+        },
+        {
+         "text": " tôi có "
+        },
+        {
+         "text": "được biết và được giải thích",
+         "b": true
+        },
+        {
+         "text": " không. Một ứng dụng có thể vi phạm cả hai cùng lúc: lấy quá nhiều dữ liệu và giấu việc đó trong điều khoản dài 30 trang."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Tại AI.”",
+         "b": true
+        },
+        {
+         "text": " Hãy hỏi lại: ai chọn dữ liệu? Ai quyết định thu thập thông tin gì? Ai quyết định không thông báo? Sau mỗi câu trả lời là một con người."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Ba mẩu tin sau thuộc vấn đề nào? (1) Một phần mềm nhận giọng nói hiểu rất kém người nói giọng một số vùng. (2) Một ứng dụng chỉnh ảnh giữ lại ảnh khuôn mặt người dùng để huấn luyện mô hình mà không nói rõ. (3) Một tổng đài dùng giọng nói do AI tạo mà không báo cho người gọi biết."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image14.png",
+     "caption": "Hình 10.5.1. Ba vấn đề đạo đức có thể nảy sinh ở hai khâu thiết kế và vận hành."
+    }
+   ]
+  },
+  {
+   "id": "5-phan-tich-mot-truong-hop-quy-hoc-bong",
+   "title": "5. Phân tích một trường hợp: quỹ học bổng",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy cùng phân tích một tình huống giả định theo năm câu hỏi."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một quỹ học bổng dùng AI chấm sơ loại hồ sơ. Hệ thống học từ hồ sơ trúng tuyển của 10 năm trước, phần lớn đến từ các trường ở thành phố lớn. Năm nay, học sinh trường vùng xa có thành tích tương đương bị chấm thấp hơn rõ rệt. Người bị loại chỉ nhận được một dòng: “Hồ sơ không đạt”."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phân tích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Vấn đề chính là gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiên vị dữ liệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Chi tiết nào cho thấy?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu học phần lớn từ trường thành phố lớn; học sinh vùng xa bị chấm thấp hơn dù thành tích tương đương"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Phát sinh ở khâu nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế (chọn dữ liệu, không thử theo nhóm trường)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Ai bị ảnh hưởng?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh vùng xa mất cơ hội học bổng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Nên làm gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bổ sung dữ liệu đại diện các vùng; kiểm tra kết quả theo từng nhóm trường; hội đồng xem lại hồ sơ bị loại"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em có thấy một "
+      },
+      {
+       "text": "vấn đề ẩn",
+       "b": true
+      },
+      {
+       "text": " không? Dòng “Hồ sơ không đạt” không kèm lí do: đó là thiếu minh bạch. Trong thực tế, các vấn đề đạo đức hiếm khi đi một mình."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phân tích tình huống sau theo năm câu hỏi: "
+        },
+        {
+         "text": "Một ứng dụng học từ vựng miễn phí yêu cầu quyền truy cập vị trí, danh bạ và micro liên tục. Điều khoản dài 30 trang có một câu cho phép chia sẻ dữ liệu cho đối tác quảng cáo. Sau vài tuần, người dùng nhận quảng cáo đúng những gì mình vừa nói chuyện.",
+         "i": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6-ba-cau-hoi-cua-nguoi-thiet-ke-co-trach-nhiem",
+   "title": "6. Ba câu hỏi của người thiết kế có trách nhiệm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong những câu chuyện ở bài này, có ai cố tình làm hại người khác không? Hầu như không. Phần lớn vấn đề đạo đức của AI không đến từ ý xấu, mà từ việc "
+      },
+      {
+       "text": "không nghĩ trước",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "không kiểm tra",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì vậy, người thiết kế và người vận hành có trách nhiệm tự hỏi ba câu trước khi phát hành một sản phẩm:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu có đại diện cho mọi người sẽ dùng sản phẩm không?",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Có thu thập nhiều hơn mức cần thiết không?",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Người dùng có biết đây là AI, và có hỏi lại được không?",
+         "b": true
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một ngày nào đó, em có thể là người ngồi ở chiếc ghế ấy: khi làm một dự án khoa học kĩ thuật, một sản phẩm cho câu lạc bộ, hay trong công việc sau này. Ba câu hỏi này dành cho em."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-hoi-ai-bac-si-trong-nhu-the-nao",
+   "title": "Trải nghiệm: Hỏi AI: bác sĩ trông như thế nào?",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở phần Khởi động, em đã làm một thí nghiệm tưởng tượng với công cụ AI tạo ảnh. Bây giờ em hãy cùng cả lớp làm thí nghiệm đó thật."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image12.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Gemini"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " gemini.google.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em quan sát thầy cô yêu cầu AI vẽ “một bác sĩ” bốn lần, rồi “một y tá” bốn lần."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em đếm xem trong các ảnh có bao nhiêu nam, bao nhiêu nữ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em đề xuất thêm một từ vào yêu cầu để kết quả đa dạng hơn, rồi cùng xem kết quả thay đổi thế nào."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Khuôn mẫu trong các bức ảnh đến từ đâu? Nếu em là người thiết kế công cụ này, em sẽ sửa ở khâu nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Kết quả mỗi lần có thể khác nhau, đó cũng là điều đáng để thảo luận."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image15.png",
+     "caption": "Sơ đồ tư duy Bài 10.5."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Người làm ra và vận hành AI có "
+        },
+        {
+         "text": "trách nhiệm đạo đức",
+         "b": true
+        },
+        {
+         "text": " về tác động của sản phẩm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba vấn đề thường gặp: "
+        },
+        {
+         "text": "thiên vị dữ liệu",
+         "b": true
+        },
+        {
+         "text": " (thiếu công bằng), "
+        },
+        {
+         "text": "vi phạm quyền riêng tư",
+         "b": true
+        },
+        {
+         "text": " (lấy và dùng dữ liệu quá mức), "
+        },
+        {
+         "text": "thiếu minh bạch",
+         "b": true
+        },
+        {
+         "text": " (người dùng không được biết, không được giải thích)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Vấn đề có thể phát sinh khi "
+        },
+        {
+         "text": "thiết kế",
+         "b": true
+        },
+        {
+         "text": " (trước khi đến tay người dùng) hoặc khi "
+        },
+        {
+         "text": "vận hành",
+         "b": true
+        },
+        {
+         "text": " (trong lúc đang dùng)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Máy không tự sinh ra định kiến; nó "
+        },
+        {
+         "text": "học từ dữ liệu",
+         "b": true
+        },
+        {
+         "text": " và lặp lại trên quy mô lớn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Các vấn đề thường đi cùng nhau; phần lớn đến từ "
+        },
+        {
+         "text": "thiếu suy nghĩ trước và thiếu kiểm tra",
+         "b": true
+        },
+        {
+         "text": ", không phải từ ý xấu."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba câu hỏi của người thiết kế: dữ liệu có đại diện không; có thu thập quá mức không; người dùng có biết và hỏi lại được không."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Ghi TV (thiên vị dữ liệu), RT (vi phạm quyền riêng tư) hoặc MB (thiếu minh bạch) cho mỗi tình huống."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tình huống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vấn đề",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "a"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một trò chơi xếp hình trên điện thoại đòi quyền đọc tin nhắn"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "b"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một phần mềm chấm bài luận chỉ trả về điểm số, giáo viên cũng không biết vì sao"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "c"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một ứng dụng đo da gợi ý mĩ phẩm hoạt động tốt với da sáng, kém với da ngăm"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "d"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một trang tin đăng bài do AI viết mà không ghi chú gì"
+          }
+         ]
+        }
+       ],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi tình huống ở Bài 1, cho biết vấn đề phát sinh chủ yếu ở khâu thiết kế hay vận hành."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Phân tích theo năm câu hỏi của mục 5: "
+      },
+      {
+       "text": "Một trường thử dùng hệ thống AI chấm bài luận. Học sinh chỉ nhận điểm số, không có nhận xét. Một số bài viết sáng tạo, không theo dàn ý quen thuộc bị điểm thấp. Khi học sinh hỏi, giáo viên cũng không biết vì sao hệ thống chấm như vậy.",
+       "i": true
+      },
+      {
+       "text": " Em có tìm thấy vấn đề ẩn không?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Tự nêu một ví dụ (có thật hoặc giả định) về một vấn đề đạo đức khi thiết kế hoặc vận hành AI ở chính trường em hoặc nơi em sống. Ghi rõ: vấn đề gì, ai bị ảnh hưởng, nên làm gì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Câu lạc bộ Tin học của trường muốn làm một ứng dụng điểm danh bằng nhận diện khuôn mặt. Áp dụng ba câu hỏi của người thiết kế có trách nhiệm, em hãy viết ba điều câu lạc bộ cần cân nhắc. Có cách nào đạt mục tiêu điểm danh mà cần ít dữ liệu cá nhân hơn không?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Thám tử điều khoản.",
+       "b": true
+      },
+      {
+       "text": " Chọn một ứng dụng em đang dùng. Tìm xem nó xin những quyền gì trên điện thoại. Quyền nào cần cho chức năng chính? Quyền nào em thấy thừa?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Chuẩn bị cho học kì II.",
+       "b": true
+      },
+      {
+       "text": " Trong một ngày, từ lúc thức dậy đến khi đi ngủ, hãy ghi lại những lần em gặp AI (mở khóa điện thoại, bản đồ, gợi ý video, dịch…). Em sẽ dùng danh sách này ở Bài 10.6."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ví dụ cho ba vấn đề đạo đức"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt vi phạm quyền riêng tư với thiếu minh bạch"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra vấn đề phát sinh ở khâu thiết kế hay vận hành"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đề xuất việc người thiết kế, vận hành nên làm"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiên vị dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu không đại diện đầy đủ, cân đối, khiến hệ thống thiếu công bằng với một số nhóm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền riêng tư"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền của mỗi người được kiểm soát thông tin về mình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Minh bạch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng được biết đang tương tác với AI và được giải thích về kết quả"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giai đoạn làm ra sản phẩm, trước khi đến tay người dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vận hành"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giai đoạn sản phẩm đang được sử dụng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) RT; b) MB; c) TV; d) MB."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Thiết kế (thiết kế xin quyền thừa). b) Cả hai: thiết kế không có phần giải thích, vận hành không có kênh hỏi lại. c) Thiết kế (dữ liệu thiếu nhóm da ngăm, không thử theo nhóm). d) Vận hành (không thông báo, không gắn nhãn)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Vấn đề chính: thiếu minh bạch, phát sinh ở cả thiết kế và vận hành; học sinh và giáo viên đều bị ảnh hưởng. Vấn đề ẩn: thiên vị, vì bài khác khuôn mẫu bị chấm thấp, có thể do dữ liệu bài mẫu thiếu đa dạng. Nên làm: hệ thống nêu căn cứ chấm theo từng tiêu chí; giáo viên chấm lại và quyết định điểm; cho học sinh biết bài được AI hỗ trợ chấm; bổ sung bài mẫu đa dạng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: dữ liệu khuôn mặt phải đủ đa dạng (ánh sáng, đeo kính, khẩu trang) để không nhận sai một số bạn; khuôn mặt là dữ liệu cá nhân nhạy cảm, cần sự đồng ý của học sinh và phụ huynh, cần biết lưu ở đâu, ai xem được; các bạn phải được biết và có cách khác nếu không đồng ý. Cách cần ít dữ liệu hơn: quét mã trên thẻ học sinh, hoặc lớp trưởng điểm danh."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [5], [6], [10], [11] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

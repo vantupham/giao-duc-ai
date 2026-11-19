@@ -1,0 +1,131 @@
+{
+  "slug": "bai-10-11",
+  "lessonId": "10.11",
+  "title": "Phiếu học tập Bài 10.11 – Giải phẫu một hệ thống AI",
+  "version": 1,
+  "objectives": [
+    { "id": "M1", "text": "Phát biểu mục tiêu của một hệ thống AI: hệ thống nhận gì, đưa ra gì, phục vụ ai." },
+    { "id": "M2", "text": "Mô tả năm thành phần cơ bản: dữ liệu, thuật toán, mô hình, đầu ra, phản hồi." },
+    { "id": "M3", "text": "Giải thích vì sao mục tiêu thay đổi thì các thành phần phải thay đổi theo." }
+  ],
+  "summary": {
+    "title": "Hoàn thành sơ đồ năm thành phần",
+    "lines": [
+      "Dữ liệu được [[thuật toán]] học để tạo thành [[mô hình]].",
+      "Mô hình nhận đầu vào mới và tạo ra [[đầu ra]]; người dùng gửi [[phản hồi]], phản hồi quay về làm giàu dữ liệu.",
+      "Thuật toán là [[cách học]]; mô hình là thứ có được [[sau khi học]].",
+      "[[Mục tiêu]] chi phối tất cả các thành phần."
+    ],
+    "distractors": ["camera", "màn hình", "trước khi học"]
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "objective": "M1",
+      "level": "thong-hieu",
+      "prompt": "Phát biểu nào là một mục tiêu đủ cụ thể cho trạm phân loại rác?",
+      "explanation": "Mục tiêu rõ ràng trả lời đủ ba câu hỏi: nhận gì (ảnh rác ở căn tin), đưa ra gì (một trong ba nhóm), phục vụ ai làm gì (học sinh bỏ đúng thùng).",
+      "options": [
+        { "text": "Hệ thống giúp trường sạch đẹp hơn.", "misconception": "Nhầm mong muốn với mục tiêu" },
+        { "text": "Hệ thống dùng trí tuệ nhân tạo hiện đại để xử lí rác.", "misconception": "Nghĩ nói về công nghệ là đã có mục tiêu" },
+        { "text": "Hệ thống nhận ảnh rác và phân loại.", "misconception": "Mục tiêu thiếu đầu ra cụ thể và người được phục vụ" },
+        { "text": "Hệ thống nhận ảnh một món rác chụp tại căn tin và cho biết món đó thuộc nhóm tái chế, hữu cơ hay còn lại, để học sinh bỏ đúng thùng.", "correct": true }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "classify",
+      "objective": "M2",
+      "level": "thong-hieu",
+      "prompt": "Hệ thống gợi ý sách của thư viện trường. Ghép mỗi mô tả với thành phần tương ứng.",
+      "explanation": "Lịch sử mượn: dữ liệu. Cách tìm sách hay được mượn cùng nhau: thuật toán. Bộ gợi ý cài trên máy tra cứu: mô hình. Ba cuốn hiện trên màn hình: đầu ra. Nút báo gợi ý không hợp, có thủ thư xem lại: phản hồi.",
+      "categories": ["Dữ liệu", "Thuật toán", "Mô hình", "Đầu ra", "Phản hồi"],
+      "items": [
+        { "text": "Lịch sử mượn sách của hàng nghìn bạn đọc", "category": 0 },
+        { "text": "Cách máy tìm ra những cuốn thường được mượn cùng nhau", "category": 1, "misconception": "Nhầm thuật toán (cách học) với mô hình (thứ có được sau khi học)" },
+        { "text": "Bộ gợi ý cài trên máy tra cứu, mỗi lần có bạn đăng nhập thì tính ra gợi ý", "category": 2, "misconception": "Nhầm mô hình (thứ có được sau khi học) với thuật toán (cách học)" },
+        { "text": "Danh sách ba cuốn sách hiện trên màn hình", "category": 3 },
+        { "text": "Nút “Gợi ý này không hợp với mình”, thủ thư xem lại mỗi tháng", "category": 4 }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "truefalse",
+      "objective": "M2",
+      "level": "nhan-biet",
+      "prompt": "Khi trạm đã đặt ở căn tin, thứ đang chạy mỗi lần Minh đưa vỏ hộp sữa lên là thuật toán học.",
+      "explanation": "Sai. Lúc sử dụng, thứ đang chạy là mô hình (kết quả của việc học). Thuật toán học làm việc lúc huấn luyện.",
+      "answer": false,
+      "misconception": "Nhầm thuật toán (cách học) với mô hình (thứ có được sau khi học)"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "objective": "M2",
+      "level": "thong-hieu",
+      "prompt": "Nút “Sai rồi” trên trạm phân loại rác chỉ thật sự là kênh phản hồi khi nào?",
+      "explanation": "Phản hồi đầy đủ trả lời: ai báo sai, báo bằng cách nào, thông tin dùng để làm gì. Thiếu ý thứ ba thì nút chỉ để trang trí.",
+      "options": [
+        { "text": "Khi nút có màu nổi bật, dễ thấy", "misconception": "Nghĩ có nút là đã có phản hồi" },
+        { "text": "Khi có người dùng thông tin đó để gán lại nhãn và cho máy học thêm", "correct": true },
+        { "text": "Khi máy tự xóa ảnh bị báo sai", "misconception": "Chưa thấy phản hồi phải quay về làm giàu dữ liệu" },
+        { "text": "Khi người dùng bấm thật nhiều lần", "misconception": "Nghĩ số lần bấm quan trọng hơn việc xử lí thông tin" }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "order",
+      "objective": "M2",
+      "level": "van-dung",
+      "prompt": "Sắp xếp vòng hoạt động của trạm phân loại rác theo chiều mũi tên của sơ đồ.",
+      "explanation": "Dữ liệu → thuật toán học → mô hình → đầu ra → phản hồi quay về dữ liệu.",
+      "items": [
+        "Con người chụp và gán nhãn hàng nghìn ảnh rác",
+        "Thuật toán học từ các ảnh đã gán nhãn",
+        "Mô hình thu được được đặt vào trạm",
+        "Trạm hiện “Tái chế. Mức chắc chắn: 92%”",
+        "Người dùng bấm “Sai rồi” khi máy nhầm"
+      ],
+      "misconception": "Chưa nắm vòng: dữ liệu → thuật toán → mô hình → đầu ra → phản hồi"
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "objective": "M3",
+      "level": "van-dung",
+      "prompt": "Nhà trường muốn trạm nhận biết thêm pin (rác nguy hại). Thành phần nào có thể giữ nguyên?",
+      "explanation": "Thuật toán (cách học) có thể giữ nguyên. Dữ liệu phải thêm ảnh pin, mô hình phải học lại, đầu ra thêm nhãn mới, phản hồi theo dõi riêng nhóm nguy hại.",
+      "options": [
+        { "text": "Dữ liệu", "misconception": "Chưa thấy mô hình cũ chưa từng “thấy” pin nên cần dữ liệu mới" },
+        { "text": "Thuật toán", "correct": true },
+        { "text": "Mô hình", "misconception": "Nghĩ mô hình cũ tự biết nhãn mới mà không cần học lại" },
+        { "text": "Đầu ra", "misconception": "Quên phải thêm nhãn “nguy hại” ở đầu ra" }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "objective": "M3",
+      "level": "thong-hieu",
+      "prompt": "Thư viện đổi mục tiêu hệ thống thành “gợi ý sách theo sở thích”. Vì sao phải xem lại dữ liệu trước tiên?",
+      "explanation": "Mục tiêu quyết định cần dữ liệu gì. Dữ liệu đổi thì mô hình phải học lại.",
+      "options": [
+        { "text": "Vì mục tiêu quyết định cần thu thập dữ liệu gì", "correct": true },
+        { "text": "Vì dữ liệu cũ chắc chắn đã bị hỏng", "misconception": "Chưa thấy mối liên hệ giữa mục tiêu và dữ liệu" },
+        { "text": "Vì thuật toán cũ không còn chạy được", "misconception": "Nghĩ đổi mục tiêu thì luôn phải thay thuật toán" },
+        { "text": "Vì phải mua máy tra cứu mới", "misconception": "Nhầm thiết bị với các thành phần của hệ thống AI" }
+      ]
+    }
+  ],
+  "apply": {
+    "objective": "M1",
+    "prompt": "Viết câu mục tiêu theo mẫu “Hệ thống nhận … và đưa ra … để …” cho hệ thống cảnh báo ngập quanh cổng trường vào giờ tan học. Nêu thêm dữ liệu cần thu thập và một kênh phản hồi.",
+    "rubric": [
+      "Có câu mục tiêu nhưng thiếu một trong ba ý (nhận gì, đưa ra gì, để ai làm gì).",
+      "Câu mục tiêu đủ ba ý.",
+      "Đủ ba ý, nêu đúng dữ liệu (lượng mưa, mực nước, lịch sử ngập) và một kênh phản hồi có người xử lí."
+    ],
+    "hint": "Mục tiêu quyết định dữ liệu và phản hồi."
+  }
+}

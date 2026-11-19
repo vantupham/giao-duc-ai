@@ -1,0 +1,1922 @@
+{
+ "id": "11.4",
+ "slug": "bai-11-04",
+ "grade": 11,
+ "num": 4,
+ "topicId": "11.2",
+ "title": "AI vì lợi ích lâu dài: bền vững và công bằng",
+ "meta": "Chuyên đề 11.2: AI bền vững, công bằng và quyền của người dùng (tiết 1 trong 2 tiết)",
+ "period": {
+  "index": 1,
+  "total": 2
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nêu được ví dụ AI mang lại "
+   },
+   {
+    "text": "lợi ích lâu dài",
+    "b": true
+   },
+   {
+    "text": " cho con người trong nông nghiệp, y tế, giáo dục, môi trường."
+   }
+  ],
+  [
+   {
+    "text": "Giải thích được thế nào là một hệ thống AI "
+   },
+   {
+    "text": "bền vững",
+    "b": true
+   },
+   {
+    "text": " và "
+   },
+   {
+    "text": "công bằng",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Dùng được hai bộ câu hỏi để "
+   },
+   {
+    "text": "phân tích",
+    "b": true
+   },
+   {
+    "text": " một ứng dụng AI cụ thể, kể cả khi phải cân nhắc đánh đổi."
+   }
+  ]
+ ],
+ "keywords": [
+  "lợi ích lâu dài",
+  "bền vững",
+  "công bằng",
+  "trung tâm dữ liệu",
+  "nhóm yếu thế",
+  "sự đánh đổi"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-mot-cau-hoi-gui-cho-ai-ton-nhung-gi",
+   "title": "Khởi động: Một câu hỏi gửi cho AI “tốn” những gì?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em gõ một câu hỏi vào ô trò chuyện, bấm gửi. Hai giây sau, câu trả lời hiện ra. Miễn phí, nhẹ nhàng, gần như không tốn gì."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Có thật là không tốn gì không? Em thử liệt kê những thứ đã được dùng để câu trả lời ấy đến được màn hình của em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hình 11.4.1 đi theo câu hỏi của em. Em đếm xem có bao nhiêu thứ mình chưa từng nghĩ tới."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image12.png",
+     "caption": "Hình 11.4.1. Đường đi của một câu hỏi gửi cho AI. Phần phía dưới là những thứ được dùng mà người hỏi không nhìn thấy."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu hỏi của em đi qua mạng viễn thông đến một "
+      },
+      {
+       "text": "trung tâm dữ liệu",
+       "b": true
+      },
+      {
+       "text": ", nơi có hàng nghìn máy tính chạy suốt ngày đêm. Máy tính cần "
+      },
+      {
+       "text": "điện",
+       "b": true
+      },
+      {
+       "text": " để chạy, cần "
+      },
+      {
+       "text": "làm mát",
+       "b": true
+      },
+      {
+       "text": " để khỏi quá nóng (nhiều nơi dùng nước), cần "
+      },
+      {
+       "text": "thiết bị",
+       "b": true
+      },
+      {
+       "text": " được sản xuất từ khoáng sản, và cần "
+      },
+      {
+       "text": "con người",
+       "b": true
+      },
+      {
+       "text": " xây dựng, vận hành, kiểm tra. Một câu hỏi thì rất nhỏ. Nhưng mỗi ngày thế giới gửi đi một số lượng câu hỏi khổng lồ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài học này không nhằm khuyên em ngừng dùng AI. Nó giúp em nhìn một hệ thống AI "
+      },
+      {
+       "text": "đầy đủ hơn",
+       "b": true
+      },
+      {
+       "text": ": cả lợi ích lẫn chi phí, cả người được lợi lẫn người có thể bị bỏ lại."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-ai-mang-lai-loi-ich-lau-dai-o-dau",
+   "title": "1. AI mang lại lợi ích lâu dài ở đâu?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một lợi ích "
+      },
+      {
+       "text": "lâu dài",
+       "b": true
+      },
+      {
+       "text": " là lợi ích còn đó sau nhiều năm và đến được với nhiều người, khác với sự tiện lợi tức thời. Bảng sau nêu một số hướng ứng dụng đang được triển khai ở nhiều nơi."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lĩnh vực",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI có thể giúp",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lợi ích lâu dài",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nông nghiệp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận diện sâu bệnh qua ảnh chụp lá; tính lượng nước tưới theo độ ẩm đất"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giảm thuốc trừ sâu, tiết kiệm nước, ổn định mùa vụ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Y tế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỗ trợ sàng lọc bệnh qua hình ảnh ở nơi thiếu bác sĩ chuyên khoa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phát hiện sớm bệnh cho người ở vùng xa"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giáo dục"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đọc màn hình, chuyển giọng nói thành chữ, giải thích lại theo trình độ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh khuyết tật và học sinh thiếu người kèm cặp có thêm cơ hội"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Môi trường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự báo lũ, ngập, cháy rừng; tối ưu việc dùng điện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giảm thiệt hại do thiên tai, tiết kiệm năng lượng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chính ngành năng lượng cũng dùng AI. Theo Cơ quan Năng lượng Quốc tế (IEA), AI có thể giúp tiết kiệm điện ở nhiều nơi, ví dụ điều khiển hệ thống sưởi, làm mát trong các tòa nhà hiệu quả hơn [9]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhưng “có thể giúp” chưa phải là “chắc chắn giúp”. Một ứng dụng có đem lại lợi ích lâu dài hay không tùy vào hai điều: nó có "
+      },
+      {
+       "text": "bền vững",
+       "b": true
+      },
+      {
+       "text": " không và có "
+      },
+      {
+       "text": "công bằng",
+       "b": true
+      },
+      {
+       "text": " không."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-ben-vung-co-duy-tri-duoc-lau-dai-ma-khong-gay-hai-khong",
+   "title": "2. Bền vững: có duy trì được lâu dài mà không gây hại không?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một hệ thống AI "
+        },
+        {
+         "text": "bền vững",
+         "b": true
+        },
+        {
+         "text": " khi nó có thể được duy trì lâu dài mà không gây hại cho con người và thiên nhiên: dùng năng lượng, tài nguyên một cách hiệu quả, và có người, có kinh phí để vận hành, cập nhật."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em chú ý: bền vững gồm "
+      },
+      {
+       "text": "hai vế",
+       "b": true
+      },
+      {
+       "text": ". Vế thứ nhất là về tài nguyên và môi trường. Vế thứ hai là về khả năng duy trì."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.1. Vế thứ nhất: năng lượng và tài nguyên",
+     "id": "2-1-ve-thu-nhat-nang-luong-va-tai-nguyen"
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Theo báo cáo “Năng lượng và AI” của Cơ quan Năng lượng Quốc tế công bố năm 2025 [9]:"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "• Năm 2024, các trung tâm dữ liệu trên thế giới dùng khoảng 415 TWh điện, tức khoảng 1,5% lượng điện tiêu thụ toàn cầu."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "• Đến năm 2030, con số này được dự báo tăng lên khoảng 945 TWh, tức hơn gấp đôi. AI là động lực quan trọng nhất của mức tăng đó."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "• Một trung tâm dữ liệu chuyên cho AI cỡ điển hình tiêu thụ lượng điện ngang với khoảng 100.000 hộ gia đình."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image13.png",
+     "caption": "Hình 11.4.2. Điện tiêu thụ của các trung tâm dữ liệu trên thế giới: năm 2024 và dự báo năm 2030 (đơn vị: TWh). Nguồn số liệu: IEA, 2025 [9]."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để dễ hình dung: 1 TWh bằng một tỉ kWh, mà mỗi kWh chính là “một số điện” trên hóa đơn tiền điện nhà em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đọc những con số này, em cần giữ hai điều cùng lúc. Một mặt, 1,5% là phần nhỏ trong tổng lượng điện toàn cầu, và trung tâm dữ liệu phục vụ nhiều thứ khác ngoài AI (lưu ảnh, xem phim, họp trực tuyến). Mặt khác, tốc độ tăng là rất nhanh, và các trung tâm dữ liệu thường tập trung ở một số vùng, gây sức ép lớn lên lưới điện tại chỗ."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.2. Vế thứ hai: ai nuôi hệ thống về lâu dài?",
+     "id": "2-2-ve-thu-hai-ai-nuoi-he-thong-ve-lau-dai"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một hệ thống AI không “xong” sau khi ra mắt. Sâu bệnh mới xuất hiện, giống cây thay đổi, thiết bị hỏng, dữ liệu cũ đi. Nếu không có người cập nhật và không có kinh phí, hệ thống sẽ kém dần rồi bị bỏ."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dấu hiệu cảnh báo về tính bền vững",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ chạy được nhờ một khoản tài trợ ngắn hạn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần thiết bị đắt tiền, tốn điện mà nơi sử dụng không có sẵn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không rõ ai chịu trách nhiệm cập nhật và sửa lỗi"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“AI tốn điện, vậy tốt nhất là không dùng.”",
+         "b": true
+        },
+        {
+         "text": " Kết luận này bỏ quên vế lợi ích. Một hệ thống dự báo ngập giúp cả thành phố tránh kẹt xe có thể tiết kiệm nhiều nhiên liệu hơn số điện nó tiêu thụ. Câu hỏi đúng là: "
+        },
+        {
+         "text": "lợi ích có xứng với tài nguyên bỏ ra không, và có cách nào đạt cùng lợi ích mà tốn ít hơn không?",
+         "b": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-cong-bang-moi-nguoi-co-duoc-huong-loi-nhu-nhau-khong",
+   "title": "3. Công bằng: mọi người có được hưởng lợi như nhau không?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một hệ thống AI "
+        },
+        {
+         "text": "công bằng",
+         "b": true
+        },
+        {
+         "text": " khi nó không phân biệt đối xử theo giới tính, vùng miền, điều kiện kinh tế; khi người yếu thế cũng tiếp cận và dùng được; và khi nó hoạt động tốt với mọi nhóm người dùng chứ không chỉ một nhóm."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Công bằng có hai tầng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tầng 1: Có tiếp cận được không?",
+       "b": true
+      },
+      {
+       "text": " Ứng dụng có thể tải miễn phí, nhưng nếu nó chỉ chạy trên điện thoại đời mới, cần mạng mạnh, chỉ có tiếng Anh, thì một bạn ở vùng sóng yếu, dùng điện thoại cũ vẫn bị bỏ lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tầng 2: Có chính xác như nhau với mọi nhóm không?",
+       "b": true
+      },
+      {
+       "text": " Đây là tầng khó thấy hơn."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2018, hai nhà nghiên cứu Joy Buolamwini và Timnit Gebru kiểm tra ba phần mềm thương mại đoán giới tính từ ảnh khuôn mặt. Với nam giới da sáng, tỉ lệ đoán sai cao nhất chỉ là 0,8%. Với phụ nữ da sẫm màu, tỉ lệ sai lên tới 34,7%. Họ cũng chỉ ra rằng hai bộ ảnh thường dùng để đánh giá các phần mềm loại này có tới 79,6% và 86,2% là khuôn mặt da sáng [13]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Không ai cố tình làm phần mềm sai với phụ nữ da sẫm màu. Nó sai vì trong dữ liệu, nhóm này quá ít. "
+        },
+        {
+         "text": "Dữ liệu thiếu ai thì hệ thống dễ sai với người đó.",
+         "b": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dấu hiệu cảnh báo về tính công bằng",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ dùng được với thiết bị đời mới hoặc mạng mạnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ có một ngôn ngữ, không tính đến người khuyết tật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chính xác với nhóm này, kém hẳn với nhóm khác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có kênh để người dùng góp ý, khiếu nại"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Ai cũng được tải ứng dụng, vậy là công bằng.”",
+         "b": true
+        },
+        {
+         "text": " Tải được chưa phải là dùng được, và dùng được chưa phải là được phục vụ tốt như nhau. Khi xét công bằng, em hỏi đủ năm thứ: thiết bị, kết nối, ngôn ngữ, chi phí và độ chính xác với nhóm của mình."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-phan-tich-mot-ung-dung-hai-bo-cau-hoi",
+   "title": "4. Phân tích một ứng dụng: hai bộ câu hỏi",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Từ hai mục trên, em có một công cụ phân tích gọn."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bền vững",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Công bằng",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B1. Hệ thống dùng năng lượng, thiết bị ở mức nào so với lợi ích đem lại?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C1. Ai dùng được, ai không dùng được (thiết bị, mạng, ngôn ngữ, chi phí)?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B2. Ai vận hành, cập nhật, trả chi phí sau một, hai năm nữa?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C2. Dữ liệu huấn luyện có đại diện cho những người sẽ dùng không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B3. Nó có gây hại gì cho con người, thiên nhiên không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C3. Khi hệ thống sai, người dùng có nơi để phản ánh không?"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ phân tích (tình huống giả định).",
+       "b": true
+      },
+      {
+       "text": " Một huyện miền núi triển khai ứng dụng nhận diện bệnh trên cây lúa. Nông dân chụp ảnh lá, ứng dụng cho biết tên bệnh và cách xử lí. Ứng dụng cần kết nối mạng liên tục, chỉ có tiếng Việt, được huấn luyện bằng ảnh các giống lúa ở đồng bằng. Kinh phí do một dự án tài trợ trong hai năm."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhận xét",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mỗi lần dùng chỉ là một tấm ảnh; lợi ích lớn nếu giảm được thuốc trừ sâu. Điểm mạnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sau hai năm chưa rõ ai trả chi phí, ai cập nhật bệnh mới. Điểm yếu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vùng sóng yếu khó dùng; bà con chưa thạo tiếng Việt khó đọc hướng dẫn. Điểm yếu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh huấn luyện là giống lúa đồng bằng, có thể sai với giống lúa nương. Điểm yếu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C3"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa có kênh phản ánh. Điểm yếu"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đề xuất cải tiến:",
+       "b": true
+      },
+      {
+       "text": " cho phép chụp ảnh khi không có mạng và gửi sau; thêm hướng dẫn bằng giọng nói và bằng tiếng dân tộc; bổ sung ảnh lúa nương do chính bà con và cán bộ khuyến nông chụp; giao cho trạm khuyến nông huyện tiếp nhận phản ánh và duy trì sau dự án."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em thấy đấy: một ý tưởng tốt vẫn có thể thiếu bền vững và công bằng, và phần lớn điểm yếu "
+      },
+      {
+       "text": "sửa được",
+       "b": true
+      },
+      {
+       "text": " nếu được nhìn ra từ sớm."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Phân tích một hồ sơ",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chọn một trong ba hồ sơ giả định sau, trả lời sáu câu hỏi B1 đến C3, rồi nêu một điểm mạnh, một điểm yếu và một đề xuất cải tiến."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Một ứng dụng gia sư tiếng Anh bằng AI, thu phí hằng tháng, chấm phát âm rất chính xác với giọng miền Bắc, kém hơn với giọng miền Trung và miền Nam."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Một hệ thống cảnh báo ngập đường của thành phố, gửi tin nhắn miễn phí đến mọi thuê bao, do cơ quan nhà nước vận hành, dùng số liệu của các trạm đo mưa."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Một công cụ dịch tự động giữa tiếng Việt và một tiếng dân tộc thiểu số, do một nhóm sinh viên làm trong cuộc thi, chưa có người duy trì."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-khi-phai-danh-doi",
+   "title": "5. Khi phải đánh đổi",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong thực tế, bền vững, công bằng và chất lượng không phải lúc nào cũng đi cùng nhau. Em xét tình huống sau."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một nhóm làm ứng dụng nhận diện bệnh cây có hai lựa chọn:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mô hình lớn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mô hình nhỏ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Độ chính xác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cao hơn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thấp hơn một chút"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chạy ở đâu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trên máy chủ, cần mạng mạnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ngay trên điện thoại cũ, không cần mạng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điện năng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tốn hơn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ít hơn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai dùng được"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người có mạng tốt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gần như mọi người"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Không có đáp án đúng cho mọi nơi. Ở bệnh viện, độ chính xác có thể phải đặt lên trước. Ở vùng sóng yếu, một mô hình nhỏ dùng được còn hơn một mô hình lớn không ai mở nổi. Điều quan trọng là người làm ra hệ thống "
+      },
+      {
+       "text": "nói rõ mình đã chọn gì, vì ai, và chấp nhận mất gì",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Tranh luận ba phút",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với ứng dụng nhận diện bệnh lúa ở mục 4, em chọn mô hình lớn hay mô hình nhỏ? Viết hai lí do, rồi trao đổi với một bạn chọn ngược lại. Sau khi nghe bạn, em có đổi ý không? Vì sao?"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Còn em, với tư cách người dùng?",
+       "b": true
+      },
+      {
+       "text": " Em không xây trung tâm dữ liệu, nhưng em có thể dùng có cân nhắc: dùng AI khi nó thật sự giúp được việc; chọn công cụ vừa đủ cho nhiệm vụ; và khi thấy một công cụ phục vụ kém một nhóm bạn nào đó, em lên tiếng qua kênh góp ý. Khung năng lực AI cho học sinh của UNESCO cũng coi việc hiểu tác động của AI tới xã hội và môi trường là một phần của năng lực AI [2]."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-moi-mo-hinh-ai-ton-bao-nhieu-dien",
+   "title": "Trải nghiệm: Mỗi mô hình AI tốn bao nhiêu điện?",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa học một hệ thống AI bền vững là thế nào. Có một bảng xếp hạng cho em thấy các mô hình AI tốn điện khác nhau ra sao."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image14.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " AI Energy Score"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " huggingface.github.io/AIEnergyScore (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em quan sát thầy cô mở bảng xếp hạng điện năng của các mô hình AI."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em so sánh một mô hình nhỏ và một mô hình lớn làm cùng một việc."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em thảo luận: với những việc đơn giản, có cần dùng mô hình lớn không?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Lựa chọn công cụ hằng ngày của em ảnh hưởng thế nào đến tính bền vững?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Trang này bằng tiếng Anh, thầy cô sẽ trình chiếu và giải thích."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image15.png",
+     "caption": "Sơ đồ tư duy Bài 11.4."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "AI có thể mang lại "
+        },
+        {
+         "text": "lợi ích lâu dài",
+         "b": true
+        },
+        {
+         "text": " trong nông nghiệp, y tế, giáo dục, môi trường, nhưng không tự động."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bền vững:",
+         "b": true
+        },
+        {
+         "text": " dùng tài nguyên hiệu quả, không gây hại, và có người, có kinh phí duy trì lâu dài."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Công bằng:",
+         "b": true
+        },
+        {
+         "text": " mọi nhóm đều tiếp cận được và được phục vụ tốt như nhau; dữ liệu thiếu ai thì hệ thống dễ sai với người đó."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thường phải "
+        },
+        {
+         "text": "đánh đổi",
+         "b": true
+        },
+        {
+         "text": "; cần nói rõ đã chọn gì, vì ai, chấp nhận mất gì."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Kể hai thứ “không nhìn thấy” được dùng khi em gửi một câu hỏi cho AI, và cho biết mỗi thứ liên quan đến vế nào của tính bền vững."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một trường triển khai phần mềm AI chấm bài viết tay. Phần mềm đọc tốt chữ viết rõ, hay đọc sai chữ của học sinh viết tay trái hoặc chữ nghiêng. Đây là vấn đề về bền vững hay công bằng, thuộc tầng nào? Em đề xuất cách khắc phục."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Một bạn nói: “Trung tâm dữ liệu chỉ dùng 1,5% điện toàn cầu, vậy không có gì phải bàn.” Dựa vào mục 2.1, em nêu hai ý để bạn nhìn vấn đề đầy đủ hơn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Một dự án tặng 50 máy tính bảng có ứng dụng AI học Toán cho một trường vùng xa. Sau một năm, một nửa số máy hỏng pin, ứng dụng không còn được cập nhật. Dùng câu hỏi B2 để phân tích và nêu điều lẽ ra cần tính từ đầu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Thư viện trường muốn làm công cụ AI đọc sách thành tiếng cho bạn khiếm thị. Em nêu một câu hỏi về bền vững và một câu hỏi về công bằng mà nhóm làm cần trả lời trước khi bắt đầu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chọn một ứng dụng có AI mà gia đình em đang dùng (bản đồ chỉ đường, dịch, học ngoại ngữ, gợi ý video…). Hỏi ông bà hoặc một người lớn tuổi trong nhà dùng thử một chức năng. Ghi lại: người ấy gặp khó ở đâu (chữ nhỏ, giọng nói không nhận ra, thao tác rối)? Từ đó, viết ba dòng góp ý cho nhà phát triển về tính công bằng của ứng dụng. Nếu ứng dụng có kênh góp ý, em có thể gửi thật."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ví dụ AI mang lại lợi ích lâu dài ở hai lĩnh vực"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích hai vế của tính bền vững"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích hai tầng của tính công bằng"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân tích một ứng dụng bằng sáu câu hỏi và đề xuất cải tiến"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trung tâm dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nơi đặt rất nhiều máy tính để lưu trữ, xử lí dữ liệu và chạy các mô hình AI"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bền vững"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Duy trì được lâu dài mà không gây hại cho con người và thiên nhiên"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công bằng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mọi nhóm người đều tiếp cận được và được phục vụ tốt như nhau"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhóm yếu thế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhóm người gặp bất lợi về điều kiện kinh tế, sức khỏe, địa lí, ngôn ngữ…"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự đánh đổi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Được điều này thì phải chấp nhận giảm điều kia"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: điện và nước làm mát (vế tài nguyên, môi trường); người vận hành, kinh phí bảo trì (vế khả năng duy trì)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Công bằng, tầng 2: hệ thống chính xác với nhóm này, kém với nhóm khác. Khắc phục: bổ sung mẫu chữ của nhiều kiểu viết vào dữ liệu; cho giáo viên xem lại bài bị máy đọc với mức chắc chắn thấp; có kênh để học sinh đề nghị chấm lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Tốc độ tăng rất nhanh, dự báo hơn gấp đôi vào năm 2030; các trung tâm dữ liệu tập trung ở một số vùng nên gây sức ép lớn lên lưới điện tại chỗ. Có thể thêm: ngoài điện còn có nước làm mát và thiết bị."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Dự án không tính ai sửa máy, ai trả tiền thay pin, ai cập nhật ứng dụng sau khi kết thúc. Lẽ ra cần có kế hoạch bảo trì, tập huấn cho giáo viên tại chỗ và một đơn vị chịu trách nhiệm lâu dài."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý. Bền vững: ai cập nhật khi thư viện có sách mới, kinh phí ở đâu? Công bằng: giọng đọc có rõ với mọi vùng miền không; bạn khiếm thị không có điện thoại riêng thì dùng bằng cách nào?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [2], [9], [13] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

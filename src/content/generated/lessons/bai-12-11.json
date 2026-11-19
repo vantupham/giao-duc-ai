@@ -1,0 +1,2453 @@
+{
+ "id": "12.11",
+ "slug": "bai-12-11",
+ "grade": 12,
+ "num": 11,
+ "topicId": "12.4",
+ "title": "Một sản phẩm AI cần những ai?",
+ "meta": "Chuyên đề 12.4: Giải pháp và hợp tác phát triển sản phẩm AI (tiết 2 trong 3 tiết)",
+ "period": {
+  "index": 2,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nhận biết được các "
+   },
+   {
+    "text": "vai trò",
+    "b": true
+   },
+   {
+    "text": " khác nhau trong quá trình phát triển một sản phẩm AI: đề xuất ý tưởng, lập trình, huấn luyện mô hình, kiểm thử và một số vai trò liên quan."
+   }
+  ],
+  [
+   {
+    "text": "Giải thích được vì sao tạo ra sản phẩm AI cần "
+   },
+   {
+    "text": "sự hợp tác",
+    "b": true
+   },
+   {
+    "text": " của nhiều người với chuyên môn khác nhau."
+   }
+  ],
+  [
+   {
+    "text": "Lập được "
+   },
+   {
+    "text": "bảng phân vai",
+    "b": true
+   },
+   {
+    "text": " cho dự án của nhóm và liên hệ với định hướng của bản thân."
+   }
+  ]
+ ],
+ "keywords": [
+  "vai trò",
+  "quản lí sản phẩm",
+  "phụ trách dữ liệu",
+  "huấn luyện mô hình",
+  "kiểm thử",
+  "chuyên gia lĩnh vực",
+  "hợp tác"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-mot-nguoi-co-lam-het-duoc-khong",
+   "title": "Khởi động: Một người có làm hết được không?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhóm em quyết định làm ứng dụng nhận biết lá bệnh cho vườn trường (phiếu ý tưởng ở Bài 12.7). Dưới đây là những việc cần làm:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Hỏi đội vườn xem các bạn thật sự cần gì."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Chụp 300 ảnh lá; nhờ thầy dạy Sinh xác nhận lá nào bệnh."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Huấn luyện mô hình và điều chỉnh cho đến khi đạt."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Viết ứng dụng để chụp ảnh và hiện kết quả."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thiết kế màn hình sao cho bạn lớp 10 nhìn là hiểu."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thử với ảnh mới, đo tỉ lệ đúng, tìm lỗi."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Kiểm tra xem việc chụp ảnh có vô tình thu hình các bạn không."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Giải thích cho đội vườn cách dùng và tiếp nhận góp ý."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Một người có làm hết tám việc này được không? Nếu làm được, có nên không? Việc nào em thấy hợp với mình nhất?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một người rất giỏi có thể làm được cả tám. Nhưng có ít nhất một việc mà người đó "
+      },
+      {
+       "text": "không nên tự làm",
+       "b": true
+      },
+      {
+       "text": ": việc số 6. Người viết ra sản phẩm rất khó nhìn thấy lỗi của chính mình. Và việc số 2 cần một người có hiểu biết về bệnh cây, thứ mà người giỏi lập trình chưa chắc có."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Những việc này thuộc về những "
+      },
+      {
+       "text": "vai trò",
+       "b": true
+      },
+      {
+       "text": " khác nhau. Một sản phẩm AI là kết quả của cả một nhóm."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-cac-vai-tro-trong-mot-nhom-lam-san-pham-ai",
+   "title": "1. Các vai trò trong một nhóm làm sản phẩm AI",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Vai trò",
+         "b": true
+        },
+        {
+         "text": " là một nhóm công việc gắn với một loại trách nhiệm và một loại kĩ năng trong quá trình làm ra sản phẩm."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vai trò",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc chính",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cần gì từ vai khác",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kĩ năng, môn học liên quan",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đề xuất ý tưởng, quản lí sản phẩm",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tìm hiểu nhu cầu người dùng; xác định mục tiêu; điều phối cả nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ý kiến của người dùng, của chuyên gia lĩnh vực"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giao tiếp, tổ chức; Ngữ văn, khoa học xã hội"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phụ trách dữ liệu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu thập, gán nhãn, làm sạch, bảo vệ dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục tiêu từ người quản lí sản phẩm; nhãn đúng từ chuyên gia lĩnh vực"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cẩn thận; Toán, Tin học"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện mô hình",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn cách học, cho máy học, điều chỉnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu đã chuẩn bị; kết quả đo từ người kiểm thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Toán, Tin học"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lập trình",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết ứng dụng, nối mô hình với giao diện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình đã huấn luyện; bản thiết kế giao diện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tin học; tư duy lôgic"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm thử",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử với trường hợp mới, đo hiệu quả, tìm lỗi, kiểm tra công bằng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sản phẩm từ lập trình; tiêu chí từ mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tỉ mỉ, phản biện"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế trải nghiệm",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế màn hình, lời nhắn, cách người dùng thao tác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu biết về người dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mĩ thuật, Ngữ văn; đồng cảm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuyên gia lĩnh vực",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cung cấp hiểu biết chuyên môn của lĩnh vực mà sản phẩm phục vụ (y tế, nông nghiệp, giáo dục…)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu hỏi rõ ràng từ nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiến thức sâu về lĩnh vực"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phụ trách đạo đức, pháp lí",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rà soát quyền riêng tư, an toàn, tuân thủ quy định"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô tả đầy đủ về dữ liệu và cách dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giáo dục kinh tế và pháp luật; tư duy phản biện"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bốn vai trò cốt lõi",
+       "b": true
+      },
+      {
+       "text": " em cần nhận biết là: "
+      },
+      {
+       "text": "đề xuất ý tưởng, lập trình, huấn luyện mô hình, kiểm thử",
+       "b": true
+      },
+      {
+       "text": " [1]. Bốn vai trò còn lại cho thấy một điều quan trọng không kém: sản phẩm AI cần cả những người "
+      },
+      {
+       "text": "không làm kĩ thuật",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ghép tám việc ở phần Khởi động với các vai trò:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vai trò",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Hỏi đội vườn cần gì; 8. Giải thích cách dùng, nhận góp ý"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quản lí sản phẩm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Chụp ảnh, tổ chức việc gán nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phụ trách dữ liệu (cùng thầy dạy Sinh là chuyên gia lĩnh vực)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Huấn luyện, điều chỉnh mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện mô hình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Viết ứng dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lập trình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Thiết kế màn hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế trải nghiệm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Thử, đo, tìm lỗi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm thử"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7. Kiểm tra việc thu hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phụ trách đạo đức, pháp lí"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image34.png",
+     "caption": "Hình 12.11.1. Các vai trò quanh một sản phẩm AI. Các đường nối là những “chỗ nối” nơi hai vai phải trao đổi với nhau; lỗi thường nằm ở chính các chỗ nối này."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong một nhóm nhỏ, một người có thể giữ nhiều vai.",
+       "b": true
+      },
+      {
+       "text": " Nhóm bốn học sinh có thể gộp vai lập trình với huấn luyện mô hình, gộp thiết kế trải nghiệm với quản lí sản phẩm. Nhưng không vai nào được bỏ trống, và nên "
+      },
+      {
+       "text": "giữ vai kiểm thử riêng",
+       "b": true
+      },
+      {
+       "text": ", không để người làm tự kiểm tra mình. Em đã gặp lí do này ở Bài 12.1: “tự thử, tự xác nhận đạt” là một lỗ hổng kiểm soát."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Làm AI là việc của người giỏi lập trình.”",
+         "b": true
+        },
+        {
+         "text": " Trong bảng tám vai trò, chỉ có hai vai đòi hỏi lập trình là chính. Một sản phẩm chạy đúng về kĩ thuật vẫn thất bại nếu không ai hỏi người dùng cần gì, không ai hiểu về bệnh cây để gán nhãn đúng, không ai kiểm tra xem nó có công bằng không. Lĩnh vực AI cần nhiều kiểu người."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Thẻ “Tôi là ai?”",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mỗi câu sau là lời tự giới thiệu của một vai trò. Em ghi tên vai trò."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. “Tôi thử sản phẩm với những trường hợp mới, đo hiệu quả, tìm lỗi và kiểm tra xem sản phẩm có công bằng với mọi nhóm người dùng không.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. “Tôi tìm hiểu người dùng cần gì, xác định mục tiêu của sản phẩm và giữ cho cả nhóm đi đúng hướng.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. “Tôi không biết lập trình, nhưng tôi biết một chiếc lá bị bệnh đốm trông khác lá bị cháy nắng thế nào.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. “Tôi lo sao cho mỗi tấm ảnh đều có nhãn đúng, không trùng lặp, và không chứa thông tin riêng tư của ai.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. “Tôi đọc kĩ phần ‘dữ liệu được lưu ở đâu’ và hỏi: chúng ta đã xin phép chưa?”"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-vi-sao-phai-hop-tac",
+   "title": "2. Vì sao phải hợp tác?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "h3",
+     "text": "2.1. Mỗi vai chỉ nhìn thấy một phần",
+     "id": "2-1-moi-vai-chi-nhin-thay-mot-phan"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Người huấn luyện mô hình thấy con số 93%. Người kiểm thử thấy mô hình sai nhiều với lá chụp lúc trời râm. Thầy dạy Sinh thấy trong dữ liệu có hai loại bệnh bị gán chung một nhãn. Đội vườn thấy ứng dụng mở quá chậm trên điện thoại cũ. Không ai trong số họ sai; mỗi người chỉ đứng ở một góc. Sản phẩm tốt khi các góc nhìn ấy "
+      },
+      {
+       "text": "gặp nhau",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.2. Lỗi thường nằm ở chỗ nối giữa hai vai",
+     "id": "2-2-loi-thuong-nam-o-cho-noi-giua-hai-vai"
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chỗ nối bị đứt",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều xảy ra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em đã gặp ở",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quản lí sản phẩm và phụ trách dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu không khớp với mục tiêu: thu ảnh lá ở vườn khác, giống cây khác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.4: ứng dụng bệnh lúa đồng bằng dùng cho lúa nương"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lập trình và thiết kế trải nghiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sản phẩm chạy đúng nhưng người dùng không dùng được"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.4: người lớn tuổi không đọc được chữ nhỏ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện mô hình và kiểm thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình được báo cáo bằng con số đo trên dữ liệu đã học"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 12.9: nguyên tắc thử bằng dữ liệu mới"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhóm kĩ thuật và phụ trách đạo đức, pháp lí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kĩ thuật tốt nhưng trái quy định về dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.5, 12.3"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cả nhóm và chuyên gia lĩnh vực"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhãn sai từ gốc; sản phẩm giải quyết sai vấn đề"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 12.8: chất lượng nằm ở ví dụ"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2018, hai nhà nghiên cứu công bố kết quả kiểm tra ba phần mềm thương mại đoán giới tính qua ảnh khuôn mặt: tỉ lệ sai với phụ nữ da sẫm màu lên tới 34,7%, trong khi với nam giới da sáng cao nhất chỉ 0,8% [10]. Các phần mềm này do những công ti lớn với đội ngũ kĩ sư giỏi làm ra. Thứ còn thiếu không phải là kĩ thuật lập trình. Thứ còn thiếu là một phép thử mà vai "
+        },
+        {
+         "text": "kiểm thử",
+         "b": true
+        },
+        {
+         "text": " lẽ ra phải làm (đo riêng từng nhóm), và một câu hỏi mà vai "
+        },
+        {
+         "text": "phụ trách dữ liệu",
+         "b": true
+        },
+        {
+         "text": " lẽ ra phải hỏi (dữ liệu có đủ mọi nhóm người không)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một câu chuyện khác: năm 2016, một hãng công nghệ phải gỡ chatbot của mình sau chưa đầy một ngày vì người dùng “dạy” nó nói lời xúc phạm; hãng thừa nhận đã không lường trước kiểu tấn công này [14]. Thứ còn thiếu là người đặt câu hỏi: “Nếu có người cố tình dùng sai thì sao?”"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.3. Hợp tác là một cách kiểm soát",
+     "id": "2-3-hop-tac-la-mot-cach-kiem-soat"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi nhiều người với nhiều góc nhìn cùng xem một sản phẩm, mỗi người là một "
+      },
+      {
+       "text": "điểm kiểm soát",
+       "b": true
+      },
+      {
+       "text": " của vòng đời (Bài 12.1). Vai kiểm thử, vai chuyên gia lĩnh vực và vai phụ trách đạo đức thường là những người phát hiện vấn đề sớm nhất, chính vì họ không phải là người viết ra sản phẩm."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Các công cụ AI ngày càng hỗ trợ được nhiều phần việc kĩ thuật, kể cả viết mã lệnh. Điều đó không làm các vai trò biến mất. Nó làm cho những phần việc "
+        },
+        {
+         "text": "mà máy không làm thay được",
+         "b": true
+        },
+        {
+         "text": " trở nên quan trọng hơn: hiểu người dùng, đặt đúng mục tiêu, phán đoán điều gì là công bằng, và chịu trách nhiệm. Khung năng lực AI cho học sinh của UNESCO cũng đặt năng lực hợp tác và tư duy lấy con người làm trung tâm ngang hàng với hiểu biết kĩ thuật [2]."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-hop-tac-the-nao-cho-tot",
+   "title": "3. Hợp tác thế nào cho tốt?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Biết có những vai nào là một chuyện. Làm việc được với nhau là chuyện khác. Ba thói quen sau giúp một nhóm, kể cả nhóm học sinh, hợp tác tốt."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thói quen 1: Viết ra thứ mình bàn giao.",
+       "b": true
+      },
+      {
+       "text": " Mỗi chỗ nối là một lần bàn giao. Người phụ trách dữ liệu giao cho người huấn luyện không chỉ một thư mục ảnh, mà kèm một trang ghi chú: bao nhiêu ảnh mỗi nhãn, chụp ở đâu, ai gán nhãn, còn thiếu gì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thói quen 2: Mời người “ngoài” vào sớm.",
+       "b": true
+      },
+      {
+       "text": " Hỏi chuyên gia lĩnh vực và người dùng từ lúc còn là phiếu ý tưởng, không đợi đến khi làm xong. Sửa một dòng trên giấy rẻ hơn nhiều so với sửa một sản phẩm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thói quen 3: Coi người tìm ra lỗi là người giúp mình.",
+       "b": true
+      },
+      {
+       "text": " Khi người kiểm thử báo “mô hình sai với lá chụp lúc trời râm”, câu trả lời tốt là “cảm ơn, mình cần thêm ảnh trời râm”, không phải “tại bạn chụp sai cách”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bảng phân vai mẫu: dự án nhận biết lá bệnh, nhóm bốn học sinh",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thành viên",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vai trò",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc cụ thể trong dự án",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lan"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quản lí sản phẩm; thiết kế trải nghiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phỏng vấn đội vườn; vẽ màn hình; viết hướng dẫn sử dụng một trang"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Minh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phụ trách dữ liệu; phụ trách đạo đức"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tổ chức chụp 300 ảnh; nhờ thầy dạy Sinh gán nhãn; kiểm tra ảnh không có mặt người"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khoa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện mô hình; lập trình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện bằng công cụ không cần viết mã; gắn mô hình vào ứng dụng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hà"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chụp 60 ảnh mới ở điều kiện khác; đo tỉ lệ đúng chung và theo điều kiện ánh sáng; ghi các lần bỏ sót"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thầy dạy Sinh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuyên gia lĩnh vực (ngoài nhóm)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xác nhận nhãn; xác nhận lại các lá bị máy báo “nghi bệnh”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em để ý: Hà chỉ giữ một vai. Và thầy dạy Sinh, dù không ở trong nhóm, vẫn có tên trong bảng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Phân vai cho dự án của nhóm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Lấy “hồ sơ dự án” của nhóm (Bài 12.10). Lập bảng phân vai như bảng mẫu: mỗi vai có người phụ trách và việc cụ thể gắn với phương án đã chọn. Kiểm tra ba điều: không vai nào bỏ trống; vai kiểm thử không trùng với người huấn luyện hoặc lập trình; có ít nhất một người “ngoài nhóm” (chuyên gia lĩnh vực hoặc người dùng). Giữ bảng để báo cáo ở Bài 12.12."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-con-em-em-hop-voi-vai-nao",
+   "title": "4. Còn em, em hợp với vai nào?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em sắp chọn ngành, chọn nghề. Bảng vai trò ở mục 1 cho em thấy một điều: dù em mạnh về Toán, về Văn, về Mĩ thuật, về Sinh học hay về làm việc với con người, đều có một chỗ cho em trong việc làm ra các sản phẩm AI."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nếu em thích…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể hợp với vai",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Và em sẽ cần rèn thêm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trò chuyện, tìm hiểu người khác cần gì, tổ chức công việc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quản lí sản phẩm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu đủ kĩ thuật để nói chuyện được với người lập trình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sắp xếp, soát lỗi, làm việc với số liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phụ trách dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thống kê; hiểu về quyền riêng tư"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải bài toán khó, tìm quy luật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện mô hình, lập trình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Toán, lập trình; và thói quen hỏi “mô hình này dùng cho ai”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bắt lỗi, đặt câu hỏi “nếu… thì sao”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu về đánh giá, về công bằng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vẽ, viết, để ý đến cảm nhận của người khác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế trải nghiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu giới hạn của công nghệ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một lĩnh vực chuyên sâu: y, nông nghiệp, sư phạm, luật…"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuyên gia lĩnh vực; phụ trách đạo đức, pháp lí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu AI đủ để biết nó giúp gì và có thể sai ở đâu"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Và kể cả khi em không làm việc trong một nhóm phát triển AI nào, em sẽ làm việc "
+      },
+      {
+       "text": "cùng AI",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "cùng những người làm AI",
+       "b": true
+      },
+      {
+       "text": ": người bác sĩ làm việc với phần mềm đọc phim, người giáo viên chọn công cụ cho lớp mình, người nông dân góp ý cho ứng dụng bệnh cây. Hiểu cách một sản phẩm AI được làm ra, và ai làm ra nó, giúp em biết hỏi đúng người, đúng câu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lưu ý: tên gọi các vị trí công việc trong thực tế thay đổi theo từng nơi và theo thời gian. Bảng trên mô tả loại công việc, không phải tên chức danh.",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-mot-san-pham-ai-can-nhung-ai",
+   "title": "Trải nghiệm: Một sản phẩm AI cần những ai?",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhiều công cụ AI nổi tiếng được làm ra nhờ hàng nghìn người cùng đóng góp. Em hãy nhìn vào một dự án như vậy."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image35.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Trang dự án scikit-learn trên GitHub"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " github.com/scikit-learn/scikit-learn (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em cùng lớp xem trang dự án scikit-learn: có bao nhiêu người đã đóng góp."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em xem mục thảo luận (Issues) và tài liệu hướng dẫn của dự án."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em ghép mỗi việc em thấy với một vai trò trong bài."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Ngoài người lập trình, dự án này cần những vai trò nào? Em thấy mình hợp với vai trò nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Trang bằng tiếng Anh, thầy cô sẽ trình chiếu."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image36.png",
+     "caption": "Sơ đồ tư duy Bài 12.11."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Một sản phẩm AI cần nhiều "
+        },
+        {
+         "text": "vai trò",
+         "b": true
+        },
+        {
+         "text": "; bốn vai cốt lõi: "
+        },
+        {
+         "text": "đề xuất ý tưởng, lập trình, huấn luyện mô hình, kiểm thử",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Còn có: phụ trách dữ liệu; thiết kế trải nghiệm; chuyên gia lĩnh vực; phụ trách đạo đức, pháp lí. Sản phẩm AI cần cả người "
+        },
+        {
+         "text": "không làm kĩ thuật",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phải hợp tác vì "
+        },
+        {
+         "text": "mỗi vai chỉ nhìn thấy một phần",
+         "b": true
+        },
+        {
+         "text": ", và lỗi thường nằm ở "
+        },
+        {
+         "text": "chỗ nối",
+         "b": true
+        },
+        {
+         "text": " giữa hai vai."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhóm nhỏ có thể gộp vai, nhưng "
+        },
+        {
+         "text": "không bỏ trống",
+         "b": true
+        },
+        {
+         "text": " vai nào và nên "
+        },
+        {
+         "text": "giữ vai kiểm thử riêng",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dù theo ngành nào, hiểu cách sản phẩm AI được làm ra giúp em "
+        },
+        {
+         "text": "làm việc cùng AI và cùng người làm AI",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Mỗi việc sau thuộc vai trò nào? a) Xóa các ảnh bị mờ, bị trùng khỏi bộ ảnh huấn luyện; b) Quyết định ứng dụng chỉ báo “nghi bệnh”, không tự kết luận tên bệnh; c) Thử ứng dụng trên một chiếc điện thoại đời cũ; d) Đổi chữ “Độ tin cậy: 0,62” thành “Máy chưa chắc, bạn nên hỏi thầy cô”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một nhóm ba bạn đều giỏi lập trình làm chatbot tư vấn chọn ngành cho học sinh lớp 12. Nhóm đang thiếu những vai nào? Nêu hai rủi ro cụ thể do thiếu các vai đó."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Sự cố: ứng dụng luyện phát âm chấm thấp bất thường với học sinh một số vùng miền (tình huống ở Bài 12.1). Em chỉ ra ít nhất hai “chỗ nối” đã bị đứt, và cho biết vai nào lẽ ra có thể phát hiện sớm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Vì sao nên giữ vai kiểm thử riêng, kể cả trong nhóm chỉ có bốn người? Trả lời trong ba câu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Chọn một vai trò em thấy hợp với mình nhất. Viết: vì sao; hai điều em đã có; một điều em cần học hoặc rèn thêm sau khi rời trường phổ thông."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tìm hiểu về một người đang làm một công việc có liên quan đến AI hoặc dữ liệu: có thể là người thân, người quen, một cựu học sinh của trường, hoặc qua một bài phỏng vấn trên báo chính thống. Ghi lại: công việc hằng ngày của người ấy gần với vai trò nào trong bảng; họ làm việc với những vai nào khác; kĩ năng nào họ cho là quan trọng nhất. Nếu là bài báo, ghi rõ nguồn. So sánh với hình dung của em trước khi tìm hiểu: điều gì làm em bất ngờ?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể các vai trò, nhất là bốn vai cốt lõi, và việc chính của từng vai"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích vì sao phải hợp tác, có ví dụ về “chỗ nối”"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lập bảng phân vai gắn với dự án của nhóm"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Liên hệ một vai trò với sở thích, định hướng của bản thân"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vai trò"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhóm công việc gắn với một loại trách nhiệm và kĩ năng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quản lí sản phẩm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người tìm hiểu nhu cầu, xác định mục tiêu và điều phối nhóm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử sản phẩm với trường hợp mới để đo hiệu quả và tìm lỗi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuyên gia lĩnh vực"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người hiểu sâu lĩnh vực mà sản phẩm phục vụ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bàn giao"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc chuyển kết quả từ vai này sang vai khác, kèm thông tin cần thiết"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Phụ trách dữ liệu. b) Quản lí sản phẩm (cùng chuyên gia lĩnh vực và phụ trách đạo đức). c) Kiểm thử. d) Thiết kế trải nghiệm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Thiếu: quản lí sản phẩm (hiểu học sinh cần gì), chuyên gia lĩnh vực (giáo viên hướng nghiệp, thông tin tuyển sinh chính thức), kiểm thử riêng, phụ trách đạo đức. Rủi ro: chatbot đưa thông tin tuyển sinh sai hoặc cũ mà không ai phát hiện; chatbot “khuyên” chọn ngành như thể đó là quyết định của nó, trong khi đây là quyết định mức I của học sinh (Bài 12.2)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Chỗ nối giữa quản lí sản phẩm và phụ trách dữ liệu (mục tiêu là học sinh cả nước, dữ liệu chỉ có hai thành phố); giữa huấn luyện mô hình và kiểm thử (tự thử, chỉ thử ở một nơi). Vai kiểm thử, nếu đo riêng theo vùng miền, và vai chuyên gia lĩnh vực (giáo viên tiếng Anh ở các vùng) có thể phát hiện sớm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Người làm ra sản phẩm quen với cách mình nghĩ nên khó thấy điểm mù của mình, và có xu hướng muốn sản phẩm “đạt”. Người kiểm thử độc lập sẽ thử những trường hợp người làm không nghĩ tới. Không có kiểm thử riêng thì nhóm không biết mô hình sai với ai cho đến khi người dùng gánh hậu quả."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Câu trả lời riêng của em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [2], [10], [14] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2249 @@
+{
+ "id": "10.7",
+ "slug": "bai-10-07",
+ "grade": 10,
+ "num": 7,
+ "topicId": "10.3",
+ "title": "AI tạo sinh khác gì AI phân loại, dự đoán? AI giúp em học thế nào?",
+ "meta": "Chuyên đề 10.3: Ứng dụng AI và kĩ năng đặt câu lệnh (tiết 2 trong 4 tiết)",
+ "period": {
+  "index": 2,
+  "total": 4
+ },
+ "objectives": [
+  [
+   {
+    "text": "Phân biệt được "
+   },
+   {
+    "text": "AI tạo sinh",
+    "b": true
+   },
+   {
+    "text": " với hệ thống "
+   },
+   {
+    "text": "AI phân loại",
+    "b": true
+   },
+   {
+    "text": " và "
+   },
+   {
+    "text": "AI dự đoán",
+    "b": true
+   },
+   {
+    "text": " qua ví dụ cụ thể."
+   }
+  ],
+  [
+   {
+    "text": "Giải thích được vì sao AI tạo sinh có thể viết rất trôi chảy mà vẫn sai."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được ví dụ về việc dùng AI "
+   },
+   {
+    "text": "hỗ trợ học tập",
+    "b": true
+   },
+   {
+    "text": ", và phân biệt được dùng AI "
+   },
+   {
+    "text": "để học",
+    "i": true
+   },
+   {
+    "text": " với để AI "
+   },
+   {
+    "text": "làm thay",
+    "i": true
+   },
+   {
+    "text": "."
+   }
+  ]
+ ],
+ "keywords": [
+  "AI phân loại",
+  "AI dự đoán",
+  "AI tạo sinh",
+  "mô hình ngôn ngữ lớn",
+  "ảo giác AI"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-ba-chiec-may-ba-kieu-tra-loi",
+   "title": "Khởi động: Ba chiếc máy, ba kiểu trả lời",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy tưởng tượng trên bàn có ba chiếc máy. Em đưa cho mỗi máy một thứ và xem nó trả lại gì."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Máy thứ nhất",
+         "b": true
+        },
+        {
+         "text": " nhận một bức thư điện tử. Nó trả lời: "
+        },
+        {
+         "text": "“Thư rác.”",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Máy thứ hai",
+         "b": true
+        },
+        {
+         "text": " nhận số liệu thời tiết mấy ngày qua. Nó trả lời: "
+        },
+        {
+         "text": "“Ngày mai khả năng mưa 80%.”",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Máy thứ ba",
+         "b": true
+        },
+        {
+         "text": " nhận một câu: “Viết giúp mình thư xin phép nghỉ học.” Nó trả lại "
+        },
+        {
+         "text": "một bức thư dài 150 chữ",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Thứ mà ba chiếc máy trả ra khác nhau ở điểm nào?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Máy thứ nhất "
+      },
+      {
+       "text": "chọn một nhãn",
+       "b": true
+      },
+      {
+       "text": " trong những nhãn có sẵn. Máy thứ hai đưa ra "
+      },
+      {
+       "text": "một con số",
+       "b": true
+      },
+      {
+       "text": " về điều chưa xảy ra. Máy thứ ba tạo ra "
+      },
+      {
+       "text": "một thứ chưa từng tồn tại",
+       "b": true
+      },
+      {
+       "text": ": một bức thư mới."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba chiếc máy đại diện cho ba loại hệ thống AI. Cách phân biệt nhanh nhất là nhìn vào "
+      },
+      {
+       "text": "đầu ra",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-ba-loai-he-thong-ai",
+   "title": "1. Ba loại hệ thống AI",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "h3",
+     "text": "1.1. AI phân loại: “Cái này thuộc loại nào?”",
+     "id": "1-1-ai-phan-loai-cai-nay-thuoc-loai-nao"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "AI phân loại nhận một đối tượng và "
+      },
+      {
+       "text": "gán cho nó một nhãn",
+       "b": true
+      },
+      {
+       "text": " chọn trong danh sách có sẵn. Nó giống người xếp thư ở bưu điện: mỗi lá thư được bỏ vào đúng một ô."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ:",
+       "i": true
+      },
+      {
+       "text": " lọc thư rác (rác, không rác); nhận diện lá cây (khỏe, bệnh); nhận dạng chữ số viết tay (0 đến 9)."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "1.2. AI dự đoán: “Sắp tới sẽ là bao nhiêu?”",
+     "id": "1-2-ai-du-doan-sap-toi-se-la-bao-nhieu"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "AI dự đoán dùng dữ liệu đã có để "
+      },
+      {
+       "text": "ước lượng một con số hoặc một xu hướng",
+       "b": true
+      },
+      {
+       "text": " chưa xảy ra. Nó giống bác nông dân nhìn trời, nhìn gió mà đoán mưa, chỉ khác là nó nhìn vào hàng triệu số liệu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ:",
+       "i": true
+      },
+      {
+       "text": " dự báo nhiệt độ ngày mai; ước tính số suất ăn căn tin cần nấu; dự báo lượng xe qua một nút giao lúc 17 giờ."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "1.3. AI tạo sinh: “Hãy tạo ra…”",
+     "id": "1-3-ai-tao-sinh-hay-tao-ra"
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "AI tạo sinh",
+         "b": true
+        },
+        {
+         "text": " là loại AI có khả năng tạo ra nội dung mới như văn bản, hình ảnh, âm thanh, video, mã nguồn hoặc dữ liệu, dựa trên dữ liệu đã học [1]."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ:",
+       "i": true
+      },
+      {
+       "text": " trợ lí trò chuyện viết thư, tóm tắt, gợi ý dàn ý; công cụ tạo tranh từ mô tả; công cụ tạo giai điệu."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "So sánh ba loại",
+     "id": "so-sanh-ba-loai"
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI phân loại",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI dự đoán",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI tạo sinh",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một nhãn trong danh sách có sẵn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một con số hoặc xu hướng sắp xảy ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội dung mới: văn bản, hình ảnh, âm thanh, mã"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu hỏi nó trả lời",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Cái này thuộc loại nào?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Sắp tới sẽ là bao nhiêu, thế nào?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Hãy tạo ra…”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ví dụ",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lọc thư rác; nhận diện lá bệnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự báo mưa; ước tính thời gian đến nơi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trợ lí viết văn bản; công cụ tạo ảnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khi sai thì",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gán nhầm nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con số lệch thực tế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội dung nghe hợp lí nhưng không đúng sự thật"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“AI nào cũng là AI tạo sinh.”",
+         "b": true
+        },
+        {
+         "text": " Phần lớn AI em gặp hằng ngày không tạo ra nội dung mới: lọc thư, dự báo thời tiết, mở khóa bằng khuôn mặt."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phân loại hay dự đoán?",
+         "b": true
+        },
+        {
+         "text": " "
+        },
+        {
+         "text": "Phân loại",
+         "i": true
+        },
+        {
+         "text": " chọn một nhãn cho thứ "
+        },
+        {
+         "text": "đang có trước mặt",
+         "b": true
+        },
+        {
+         "text": ". "
+        },
+        {
+         "text": "Dự đoán",
+         "i": true
+        },
+        {
+         "text": " ước lượng một "
+        },
+        {
+         "text": "giá trị",
+         "b": true
+        },
+        {
+         "text": " hoặc điều "
+        },
+        {
+         "text": "chưa xảy ra",
+         "b": true
+        },
+        {
+         "text": ". “Lá này bệnh hay khỏe?” là phân loại. “Tuần sau vườn có bao nhiêu cây nhiễm bệnh?” là dự đoán."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Một sản phẩm, nhiều loại.",
+         "b": true
+        },
+        {
+         "text": " Trợ lí ảo nghe em nói (phân loại âm thanh thành từ ngữ) rồi trả lời (tạo sinh). Đừng ngạc nhiên khi một ứng dụng thuộc hơn một loại."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Xếp mỗi hệ thống vào một trong ba loại và nêu căn cứ là dạng đầu ra: (a) ứng dụng cho biết bình luận là tích cực hay tiêu cực; (b) hệ thống ước tính lượng điện trường dùng tháng tới; (c) trợ lí gợi ý dàn ý bài thuyết trình; (d) ứng dụng nhận ra tiếng chim nào đang hót."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image19.png",
+     "caption": "Hình 10.7.1. Ba loại hệ thống AI: nhìn đầu ra để nhận ra."
+    }
+   ]
+  },
+  {
+   "id": "2-vi-sao-ai-tao-sinh-viet-troi-chay-ma-van-co-the-sai",
+   "title": "2. Vì sao AI tạo sinh viết trôi chảy mà vẫn có thể sai?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đứng sau các trợ lí trò chuyện là "
+      },
+      {
+       "text": "mô hình ngôn ngữ lớn",
+       "b": true
+      },
+      {
+       "text": ": mô hình AI tạo sinh được huấn luyện trên khối lượng văn bản rất lớn, có khả năng hiểu và tạo ra ngôn ngữ tự nhiên [1]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để hiểu nó làm việc thế nào, em thử trò chơi "
+      },
+      {
+       "text": "điền từ tiếp theo",
+       "b": true
+      },
+      {
+       "text": ":"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Sáng nay trời mưa to nên em mang theo …”",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em điền ngay được “áo mưa” hoặc “ô”. Em không tra từ điển, cũng không nhìn ra cửa sổ. Em điền được vì đã đọc và nghe rất nhiều câu tương tự."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mô hình ngôn ngữ lớn làm việc theo cách gần như vậy: nó tạo ra câu trả lời bằng cách "
+      },
+      {
+       "text": "chọn lần lượt những từ có khả năng xuất hiện tiếp theo",
+       "b": true
+      },
+      {
+       "text": ", dựa trên những gì đã học. Nhờ đọc một lượng văn bản khổng lồ, nó viết rất mượt."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhưng hãy chú ý: nó chọn từ "
+      },
+      {
+       "text": "nghe hợp lí",
+       "b": true
+      },
+      {
+       "text": ", chứ không tra xem điều đó "
+      },
+      {
+       "text": "có thật",
+       "b": true
+      },
+      {
+       "text": " hay không. Thử câu này:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Cuốn sách [một cái tên do em tự bịa ra] do nhà văn … viết năm …”",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một người chưa từng nghe đến cuốn sách ấy sẽ nói “tôi không biết”. Một mô hình ngôn ngữ thì có thể điền luôn một cái tên nhà văn và một năm xuất bản nghe rất thuyết phục, dù cuốn sách không tồn tại."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Ảo giác AI",
+         "b": true
+        },
+        {
+         "text": " là hiện tượng hệ thống AI tạo ra đầu ra có vẻ hợp lí nhưng sai, thiếu căn cứ hoặc không tồn tại trong thực tế. Đây là "
+        },
+        {
+         "text": "hạn chế kĩ thuật",
+         "b": true
+        },
+        {
+         "text": " của mô hình, không phải hành vi có chủ đích [1]."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Điều khó chịu nhất của ảo giác AI là: "
+      },
+      {
+       "text": "giọng văn lúc sai giống hệt giọng văn lúc đúng",
+       "b": true
+      },
+      {
+       "text": ". Không có dấu hiệu nào trên bề mặt để em nhận ra."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Ở Bài 10.2, em đã đọc chuyện hai luật sư tại New York. Năm 2023, họ nộp cho tòa một bản lập luận có dẫn các bản án do một công cụ trò chuyện AI cung cấp. Các bản án đó không tồn tại. Tòa phạt họ 5.000 đô la Mỹ. Thẩm phán nêu rõ: dùng AI tự nó không sai, nhưng người nộp tài liệu phải bảo đảm tài liệu chính xác. [12]"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Những người làm nghề luật, vốn rất quen với việc tra cứu, vẫn bị thuyết phục bởi giọng văn tự tin của máy. Đó là lí do em cần một thói quen, không phải một cảm giác."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thói quen ấy là:",
+       "b": true
+      },
+      {
+       "text": " mọi thông tin quan trọng do AI tạo sinh đưa ra đều phải được "
+      },
+      {
+       "text": "kiểm chứng bằng nguồn độc lập",
+       "b": true
+      },
+      {
+       "text": " trước khi dùng. Nguồn độc lập là sách giáo khoa, trang thông tin chính thống, thầy cô. Hỏi lại chính công cụ đó “bạn có chắc không?” "
+      },
+      {
+       "text": "không phải",
+       "b": true
+      },
+      {
+       "text": " là kiểm chứng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“AI nói dối.”",
+         "b": true
+        },
+        {
+         "text": " Nói dối là biết sự thật mà cố tình nói khác đi. Mô hình không có ý định ấy; nó cũng không tự biết câu mình viết đúng hay sai."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Viết hay thế chắc là đúng.”",
+         "b": true
+        },
+        {
+         "text": " Viết hay và viết đúng là hai việc khác nhau."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Công cụ bây giờ giỏi lắm rồi, không sai nữa đâu.”",
+         "b": true
+        },
+        {
+         "text": " Công cụ ngày càng được cải thiện, nhưng không có gì bảo đảm đúng tuyệt đối. Thói quen kiểm chứng không bao giờ thừa."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-ai-giup-em-hoc-the-nao",
+   "title": "3. AI giúp em học thế nào?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "AI có thể là một người bạn học rất kiên nhẫn. Dưới đây là vài cách các bạn học sinh đang dùng."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc học của em",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI có thể giúp",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa hiểu một khái niệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích lại bằng ví dụ khác với sách"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Muốn biết mình đã thuộc bài chưa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đặt câu hỏi để em tự kiểm tra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết xong bản nháp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra chỗ lập luận yếu, câu chưa rõ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Luyện nói ngoại ngữ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đóng vai người đối thoại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sắp thi, nhiều môn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý cách chia thời gian ôn tập"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Làm sai mà không biết vì sao"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xem lời giải của em và chỉ ra bước sai"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhưng cũng chính công cụ ấy có thể khiến em học ít đi. Khác biệt nằm ở cách dùng."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Để học hay làm thay?",
+     "id": "de-hoc-hay-lam-thay"
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dùng AI để học (em vẫn là người suy nghĩ)",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Để AI làm thay (em không học được gì)",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ giải thích lại khái niệm bằng ví dụ khác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ viết cả bài rồi nộp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ đặt câu hỏi để tự kiểm tra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chép đáp án mà không hiểu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tự viết, rồi nhờ chỉ lỗi và giải thích"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ tóm tắt để khỏi phải đọc tài liệu được giao"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khi bí, nhờ gợi ý bước tiếp theo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ làm hộ bài tập về nhà"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy nghĩ đến phòng tập thể hình. Huấn luyện viên có thể chỉ cho em tư thế đúng, đếm nhịp, nhắc em cố thêm một lần. Nhưng nếu huấn luyện viên nâng tạ hộ em, cơ bắp của em không lớn lên. Việc học cũng vậy: phần “nặng” phải do em nâng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một câu hỏi để tự kiểm tra",
+         "b": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Sau khi dùng AI, mình có tự làm lại được việc này mà không cần nó không?”",
+         "i": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nếu có: em đã dùng AI để học. Nếu không: AI đã làm thay em."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hướng dẫn về AI tạo sinh trong giáo dục và nghiên cứu của UNESCO (2023) kêu gọi một cách tiếp cận "
+        },
+        {
+         "text": "lấy con người làm trung tâm",
+         "b": true
+        },
+        {
+         "text": ", và khuyến nghị giới hạn độ tuổi tối thiểu là 13 khi dùng công cụ AI tạo sinh trong lớp học [4]. Ở trường mình, em dùng các công cụ đã được nhà trường rà soát, theo hướng dẫn của thầy cô."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Viết lại hai cách “làm thay” sau thành cách “để học” cho cùng nhiệm vụ: (a) nhờ AI giải bài Toán rồi chép lời giải; (b) nhờ AI làm slide thuyết trình từ đầu đến cuối."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-chon-dung-loai-dung-dung-cach",
+   "title": "4. Chọn đúng loại, dùng đúng cách",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hiểu ba loại hệ thống giúp em biết "
+      },
+      {
+       "text": "nên tin đến đâu",
+       "b": true
+      },
+      {
+       "text": ":"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Với "
+        },
+        {
+         "text": "AI phân loại",
+         "b": true
+        },
+        {
+         "text": ", hãy nhớ nó chỉ biết những nhãn đã được dạy, và có thể gán nhầm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Với "
+        },
+        {
+         "text": "AI dự đoán",
+         "b": true
+        },
+        {
+         "text": ", hãy đọc con số như một "
+        },
+        {
+         "text": "ước lượng",
+         "b": true
+        },
+        {
+         "text": ". “Khả năng mưa 80%” nghĩa là vẫn có thể không mưa."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Với "
+        },
+        {
+         "text": "AI tạo sinh",
+         "b": true
+        },
+        {
+         "text": ", hãy coi mọi thông tin là "
+        },
+        {
+         "text": "bản nháp cần kiểm chứng",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Và dù là loại nào, nếu em dùng AI cho bài học, hãy nhớ việc "
+      },
+      {
+       "text": "khai báo",
+       "b": true
+      },
+      {
+       "text": " đã học ở Bài 10.4."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-mot-cai-nhan-hay-mot-noi-dung-moi",
+   "title": "Trải nghiệm: Một cái nhãn hay một nội dung mới?",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa phân biệt AI phân loại và AI tạo sinh bằng cách nhìn vào đầu ra. Hãy xem hai loại này làm việc ngay trước mắt em."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image3.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Quick, Draw! và Gemini"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " quickdraw.withgoogle.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em quan sát thầy cô vẽ một hình trên Quick, Draw!: máy trả về tên của hình."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em quan sát thầy cô gõ vào một chatbot: “Viết thư xin phép nghỉ học”."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em so sánh hai đầu ra và ghi PL hoặc TS cho từng công cụ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Vì sao đầu ra của AI tạo sinh cần được kiểm chứng kĩ hơn?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Thầy cô sẽ trình chiếu, em không cần dùng máy."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image20.png",
+     "caption": "Sơ đồ tư duy Bài 10.7."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Phân biệt ba loại hệ thống AI bằng cách nhìn "
+        },
+        {
+         "text": "đầu ra",
+         "b": true
+        },
+        {
+         "text": ": "
+        },
+        {
+         "text": "phân loại",
+         "b": true
+        },
+        {
+         "text": " cho một nhãn có sẵn; "
+        },
+        {
+         "text": "dự đoán",
+         "b": true
+        },
+        {
+         "text": " cho một con số hoặc xu hướng; "
+        },
+        {
+         "text": "tạo sinh",
+         "b": true
+        },
+        {
+         "text": " cho nội dung mới."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mô hình ngôn ngữ lớn tạo câu trả lời bằng cách "
+        },
+        {
+         "text": "chọn từ có khả năng xuất hiện tiếp theo",
+         "b": true
+        },
+        {
+         "text": "; nó viết trôi chảy nhưng không tự kiểm tra sự thật."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ảo giác AI:",
+         "b": true
+        },
+        {
+         "text": " nội dung nghe hợp lí nhưng sai hoặc không có thật; là hạn chế kĩ thuật, không phải máy cố ý."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nội dung do AI tạo sinh phải được "
+        },
+        {
+         "text": "kiểm chứng bằng nguồn độc lập",
+         "b": true
+        },
+        {
+         "text": "; hỏi lại chính nó không phải là kiểm chứng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "AI có thể hỗ trợ học tập theo nhiều cách: giải thích, đặt câu hỏi, góp ý, luyện tập."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dùng AI "
+        },
+        {
+         "text": "để học",
+         "b": true
+        },
+        {
+         "text": " khi em vẫn là người suy nghĩ; câu hỏi tự kiểm tra: "
+        },
+        {
+         "text": "không có AI, mình có tự làm lại được không?",
+         "i": true
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Ghi PL (phân loại), DĐ (dự đoán) hoặc TS (tạo sinh) cho mỗi hệ thống."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hệ thống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Loại",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "a"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ứng dụng nhận diện loài hoa qua ảnh chụp"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "b"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ soạn lời chúc mừng năm mới theo yêu cầu"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "c"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống ước tính số học sinh sẽ đăng kí câu lạc bộ năm sau"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "d"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bộ lọc tin nhắn có dấu hiệu lừa đảo"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "e"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ tạo nhạc nền cho video"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "f"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ứng dụng báo “xe buýt sẽ đến trạm sau khoảng 6 phút”"
+          }
+         ]
+        }
+       ],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi loại hệ thống, tự nêu một ví dụ "
+      },
+      {
+       "text": "khác",
+       "b": true
+      },
+      {
+       "text": " các ví dụ trong bài, kèm đầu vào và đầu ra."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Bạn An nhờ trợ lí AI cho biết năm sinh của một nhà thơ, rồi hỏi thêm: “Bạn có chắc không?”. Trợ lí trả lời: “Tôi chắc chắn.” An ghi năm sinh ấy vào bài. An đã kiểm chứng chưa? Vì sao? An nên làm gì?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Xếp các cách dùng sau vào “để học” hoặc “làm thay”, và viết lại một cách “làm thay” thành “để học”: (a) nhờ AI đặt 5 câu hỏi về bài vừa học; (b) nhờ AI viết bài cảm nhận rồi chép lại; (c) tự viết đoạn văn tiếng Anh, nhờ AI chỉ lỗi ngữ pháp và giải thích; (d) nhờ AI tóm tắt chương sách để khỏi phải đọc; (e) nhờ AI đóng vai người phỏng vấn để luyện nói."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Giải thích cho em của em (học lớp 6) vì sao một trợ lí AI có thể “bịa” ra tên một cuốn sách không có thật. Dùng trò chơi điền từ tiếp theo để giải thích, trong 4 đến 5 câu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Thử làm thám tử.",
+       "b": true
+      },
+      {
+       "text": " Nhờ thầy cô hoặc dùng công cụ được trường cho phép, lấy một câu trả lời của trợ lí AI về một nội dung trong sách giáo khoa của em. Chọn ba thông tin trong câu trả lời và đối chiếu với sách. Ghi lại: thông tin nào đúng, thông tin nào sai, thông tin nào em không tìm được nguồn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Chuẩn bị cho bài sau.",
+       "b": true
+      },
+      {
+       "text": " Nghĩ một việc học tập cụ thể trong tuần này mà em muốn nhờ AI hỗ trợ. Viết ra đúng câu yêu cầu như em vẫn hay gõ, mang đến Bài 10.8."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt AI phân loại, dự đoán, tạo sinh bằng dạng đầu ra"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích vì sao AI tạo sinh trôi chảy mà vẫn có thể sai"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu cách kiểm chứng một thông tin do AI đưa ra"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ví dụ dùng AI để học và phân biệt với làm thay"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI phân loại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống gán cho đối tượng một nhãn trong danh sách có sẵn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI dự đoán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống ước lượng một giá trị hoặc xu hướng từ dữ liệu đã có"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI tạo sinh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Loại AI tạo ra nội dung mới như văn bản, hình ảnh, âm thanh, mã"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình ngôn ngữ lớn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình AI tạo sinh được huấn luyện trên khối lượng văn bản rất lớn, có khả năng hiểu và tạo ra ngôn ngữ tự nhiên"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảo giác AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiện tượng AI tạo ra đầu ra có vẻ hợp lí nhưng sai, thiếu căn cứ hoặc không có thật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nguồn độc lập"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nguồn thông tin không phụ thuộc vào chính công cụ AI đang cần kiểm tra"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) PL; b) TS; c) DĐ; d) PL; e) TS; f) DĐ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Chưa. Hỏi lại chính công cụ không phải là kiểm chứng, vì nó có thể lặp lại cái sai với cùng giọng tự tin. An nên đối chiếu với sách giáo khoa Ngữ văn hoặc một nguồn chính thống, hoặc hỏi cô giáo."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Để học: (a), (c), (e). Làm thay: (b), (d). Ví dụ viết lại (d): “Em tự đọc và tự tóm tắt, rồi nhờ AI so với nội dung chương và chỉ ra ý em còn thiếu.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: máy đã đọc rất nhiều câu nên biết sau “cuốn sách… do nhà văn” thường là một cái tên. Nó chọn những từ nghe hợp lí nhất để điền tiếp. Nó không đi tra xem cuốn sách có thật không. Vì thế đôi khi nó điền một cái tên nghe rất giống thật. Mình phải tự kiểm tra lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [4], [12] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1662 @@
+{
+ "id": "11.3",
+ "slug": "bai-11-03",
+ "grade": 11,
+ "num": 3,
+ "topicId": "11.1",
+ "title": "Nhận diện và phân loại rủi ro, sự cố khi dùng AI",
+ "meta": "Chuyên đề 11.1: Dùng AI an toàn để nâng cao năng lực bản thân (tiết 3 trong 3 tiết)",
+ "period": {
+  "index": 3,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Phân biệt được "
+   },
+   {
+    "text": "rủi ro",
+    "b": true
+   },
+   {
+    "text": " với "
+   },
+   {
+    "text": "sự cố",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Xếp được một tình huống vào một trong "
+   },
+   {
+    "text": "bốn nhóm",
+    "b": true
+   },
+   {
+    "text": ": dữ liệu và riêng tư; giả mạo và thông tin sai; bản quyền; trung thực học thuật."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được cách "
+   },
+   {
+    "text": "phòng",
+    "b": true
+   },
+   {
+    "text": " trước khi sự cố xảy ra và "
+   },
+   {
+    "text": "bốn bước ứng phó",
+    "b": true
+   },
+   {
+    "text": " khi nó đã xảy ra."
+   }
+  ]
+ ],
+ "keywords": [
+  "rủi ro",
+  "sự cố",
+  "deepfake",
+  "thông tin sai",
+  "bản quyền",
+  "trung thực học thuật"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-cuoc-goi-cua-me",
+   "title": "Khởi động: Cuộc gọi của “mẹ”",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giờ ra chơi, Hà nhận một cuộc gọi video từ tài khoản của mẹ. Hình hơi nhòe, tiếng lúc được lúc mất, nhưng đúng là khuôn mặt và giọng của mẹ: “Mẹ đang ở bệnh viện với dì, điện thoại sắp hết pin. Con chuyển gấp cho mẹ hai triệu vào số tài khoản mẹ nhắn, lát mẹ gọi lại.” Cuộc gọi tắt sau chừng mười giây. Tin nhắn kèm số tài khoản mang tên một người lạ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định, dựng theo các dấu hiệu lừa đảo mà cơ quan công an đã cảnh báo.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Nếu là Hà, em làm gì trong ba phút tiếp theo? Những chi tiết nào trong cuộc gọi khiến em nghi ngờ?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hà chưa mất gì cả. Nhưng nguy cơ mất tiền đang ở rất gần. Sự khác nhau giữa “chưa xảy ra” và “đã xảy ra” chính là điểm bắt đầu của bài học."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-rui-ro-va-su-co-chua-xay-ra-va-da-xay-ra",
+   "title": "1. Rủi ro và sự cố: chưa xảy ra và đã xảy ra",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Rủi ro",
+         "b": true
+        },
+        {
+         "text": " là khả năng một điều có hại "
+        },
+        {
+         "text": "có thể xảy ra",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Sự cố",
+         "b": true
+        },
+        {
+         "text": " là điều có hại "
+        },
+        {
+         "text": "đã xảy ra",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trời nhiều mây đen là rủi ro bị ướt. Bị ướt là sự cố. Với rủi ro, việc cần làm là "
+      },
+      {
+       "text": "phòng",
+       "b": true
+      },
+      {
+       "text": " (mang áo mưa). Với sự cố, việc cần làm là "
+      },
+      {
+       "text": "ứng phó",
+       "b": true
+      },
+      {
+       "text": " (thay áo, lau khô, và lần sau nhớ xem dự báo)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong chuyện của Hà:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trong chuyện của Hà",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc cần làm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rủi ro"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có người dùng AI giả mặt, giả giọng người thân để lừa chuyển tiền"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phòng: thống nhất trước với gia đình cách xác minh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự cố (nếu Hà chuyển tiền)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hà mất hai triệu đồng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ứng phó: lưu bằng chứng, báo ngay cho cha mẹ, ngân hàng, công an"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Chưa có chuyện gì xảy ra thì chưa cần làm gì.”",
+         "b": true
+        },
+        {
+         "text": " Đây là lúc cần làm nhất. Phòng một rủi ro thường chỉ mất vài phút. Khắc phục một sự cố có thể mất nhiều tuần, và có thứ không lấy lại được, như một tấm ảnh đã bị phát tán."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-bon-nhom-rui-ro-thuong-gap-voi-hoc-sinh",
+   "title": "2. Bốn nhóm rủi ro thường gặp với học sinh",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Rủi ro khi dùng AI có rất nhiều dạng. Để không bị rối, em xếp chúng vào bốn nhóm. Hình 11.3.1 cho mỗi nhóm một ví dụ ở dạng rủi ro và một ví dụ ở dạng sự cố."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image8.png",
+     "caption": "Hình 11.3.1. Bốn nhóm rủi ro khi dùng AI. Cột giữa là điều có thể xảy ra, cột phải là điều đã xảy ra."
+    },
+    {
+     "t": "h3",
+     "text": "2.1. Nhóm 1: Dữ liệu và quyền riêng tư",
+     "id": "2-1-nhom-1-du-lieu-va-quyen-rieng-tu"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mỗi thứ em đưa vào một công cụ AI (câu hỏi, ảnh, giọng nói, tệp tài liệu) đều rời khỏi máy của em. Nó có thể được lưu lại, được dùng để cải tiến công cụ, hoặc bị lộ nếu hệ thống của nhà cung cấp gặp vấn đề."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Rủi ro tăng lên nhiều khi dữ liệu ấy là "
+      },
+      {
+       "text": "của người khác",
+       "b": true
+      },
+      {
+       "text": ": ảnh tập thể lớp, tin nhắn của bạn, bảng điểm. Em có thể tự quyết định về dữ liệu của mình, nhưng em không có quyền quyết định thay bạn. Luật Bảo vệ dữ liệu cá nhân, có hiệu lực từ ngày 01/01/2026, quy định các quyền của mỗi người đối với dữ liệu của chính mình [5]. Em sẽ học kĩ các quyền này ở Bài 11.5."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.2. Nhóm 2: Giả mạo và thông tin sai",
+     "id": "2-2-nhom-2-gia-mao-va-thong-tin-sai"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhóm này có hai dạng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dạng thứ nhất: người khác dùng AI để lừa em.",
+       "b": true
+      },
+      {
+       "text": " AI hiện có thể tạo hình ảnh, video và giọng nói rất giống một người thật. Sản phẩm giả như vậy thường được gọi là "
+      },
+      {
+       "text": "deepfake",
+       "b": true
+      },
+      {
+       "text": ". Bộ Công an đã nhiều lần cảnh báo về các cuộc gọi video giả mạo người thân để vay tiền, và nêu một số dấu hiệu nhận biết [7]:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dấu hiệu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vì sao",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cuộc gọi rất ngắn, thường chỉ vài giây"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kẻ gian tránh để lộ sơ hở"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khuôn mặt thiếu cảm xúc, tư thế gượng, hướng đầu và thân không khớp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hình ảnh là do máy ghép"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tiếng không khớp với cử động môi, nhiều tiếng ồn hoặc quá im lặng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Âm thanh và hình ảnh được tạo riêng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lấy cớ sóng yếu để ngắt giữa chừng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tránh bị hỏi thêm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Yêu cầu chuyển tiền vào tài khoản không đúng tên người gọi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đây là mục đích của cuộc gọi"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách phòng mà cơ quan công an khuyến cáo: "
+      },
+      {
+       "text": "gọi lại bằng số điện thoại thông thường",
+       "b": true
+      },
+      {
+       "text": " để xác minh, không chuyển tiền chỉ vì một cuộc gọi video, không chia sẻ tràn lan hình ảnh và video rõ mặt, rõ giọng trên mạng [7]. Về pháp luật, Luật An ninh mạng năm 2025 cấm dùng AI để giả mạo video, hình ảnh, giọng nói của người khác trái pháp luật [6]; Luật Trí tuệ nhân tạo yêu cầu gắn nhãn nhận biết với nội dung do AI tạo ra mô phỏng người thật [4]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dạng thứ hai: chính công cụ AI đưa cho em thông tin sai.",
+       "b": true
+      },
+      {
+       "text": " AI tạo sinh có thể viết ra số liệu, câu trích dẫn, tên sách không có thật với giọng văn rất tự tin. Ở Bài 11.1, em đã đọc chuyện hai luật sư bị phạt vì nộp các bản án do AI bịa ra [11]. Cách phòng là bước 6 của quy trình: kiểm chứng bằng nguồn độc lập."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.3. Nhóm 3: Bản quyền",
+     "id": "2-3-nhom-3-ban-quyen"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một bức tranh, một bài hát, một bài viết đều có người tạo ra, và người đó có quyền đối với tác phẩm của mình. Rủi ro về bản quyền xuất hiện ở hai chiều:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Chiều đưa vào:",
+         "b": true
+        },
+        {
+         "text": " em tải lên công cụ AI một tác phẩm của người khác (cả cuốn sách, bộ tranh của một họa sĩ) khi chưa được phép."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Chiều lấy ra:",
+         "b": true
+        },
+        {
+         "text": " em dùng sản phẩm AI tạo ra giống rõ rệt với một tác phẩm có thật, rồi công bố hoặc bán như của mình."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Pháp luật về bản quyền đối với sản phẩm do AI tạo ra đang được nhiều nước, trong đó có Việt Nam, tiếp tục hoàn thiện. Ở mức của học sinh, em giữ ba thói quen: không tải lên thứ không phải của mình khi chưa được phép; ghi nguồn; nói rõ phần nào do AI tạo. Khi cần biết quy định cụ thể, em hỏi thầy cô."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.4. Nhóm 4: Trung thực học thuật",
+     "id": "2-4-nhom-4-trung-thuc-hoc-thuat"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trung thực học thuật nghĩa là bài mang tên em phản ánh đúng việc em đã làm. Rủi ro ở nhóm này không đến từ kẻ gian hay từ lỗi của máy, mà từ "
+      },
+      {
+       "text": "lựa chọn của chính người học",
+       "b": true
+      },
+      {
+       "text": ": nộp sản phẩm của AI như của mình, dùng AI trong nhiệm vụ không cho phép, hoặc dùng mà không khai báo."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hậu quả trực tiếp là vi phạm quy định của lớp, của trường. Hậu quả lâu dài hơn em đã thấy ở Bài 11.2: năng lực thật không tăng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Rủi ro hay sự cố? Nhóm nào?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi tình huống giả định, em ghi R (rủi ro) hoặc S (sự cố), và số của nhóm (1 đến 4)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Trang cá nhân của Linh để công khai hơn 200 tấm ảnh rõ mặt và nhiều video Linh nói chuyện."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Bài thuyết trình của nhóm Bảo có một câu “theo thống kê” do AI viết; cô giáo hỏi nguồn và cả nhóm không trả lời được."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Trí định nhờ AI vẽ bìa tập san lớp “theo đúng phong cách” của một họa sĩ truyện tranh đang nổi tiếng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Mai dán danh sách họ tên, ngày sinh, số điện thoại phụ huynh của cả lớp vào một công cụ AI để nhờ xếp bảng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Tuấn nộp bài cảm nhận do AI viết; bài bị phát hiện và Tuấn phải làm lại."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-phong-truoc-ung-pho-sau",
+   "title": "3. Phòng trước, ứng phó sau",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "h3",
+     "text": "3.1. Phòng: mỗi nhóm một thói quen",
+     "id": "3-1-phong-moi-nhom-mot-thoi-quen"
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhóm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thói quen phòng ngừa",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Dữ liệu và riêng tư"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ đưa vừa đủ; không đưa dữ liệu của người khác khi chưa hỏi; xem công cụ xin quyền gì"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Giả mạo, thông tin sai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xác minh qua kênh khác trước khi tin, trước khi chuyển tiền, trước khi chia sẻ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Bản quyền"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không tải lên tác phẩm của người khác khi chưa được phép; ghi nguồn; nói rõ phần do AI tạo"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Trung thực học thuật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi rõ nhiệm vụ có được dùng AI không; tự làm phần cốt lõi; khai báo"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em sẽ thấy bốn thói quen này trùng với các bước 2, 3, 6, 7 của quy trình bảy bước. Quy trình ở Bài 11.1 chính là công cụ phòng rủi ro."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "3.2. Ứng phó: bốn bước khi sự cố đã xảy ra",
+     "id": "3-2-ung-pho-bon-buoc-khi-su-co-da-xay-ra"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dù phòng kĩ đến đâu, sự cố vẫn có thể xảy ra. Khi đó, điều quan trọng nhất là "
+      },
+      {
+       "text": "không xử lí một mình và không giấu",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image9.png",
+     "caption": "Hình 11.3.2. Bốn bước ứng phó khi sự cố đã xảy ra."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 1. Dừng lại.",
+       "b": true
+      },
+      {
+       "text": " Ngừng việc đang làm: không chuyển thêm tiền, không trả lời thêm, không chia sẻ tiếp, không dùng tiếp kết quả đang nghi ngờ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 2. Lưu bằng chứng.",
+       "b": true
+      },
+      {
+       "text": " Chụp màn hình cuộc trò chuyện, số tài khoản, đường liên kết, thời gian. Đừng xóa vội vì xấu hổ hay vì sợ: bằng chứng là thứ giúp người lớn giúp được em."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 3. Báo cho người tin cậy.",
+       "b": true
+      },
+      {
+       "text": " Cha mẹ, thầy cô chủ nhiệm, và tùy mức độ là ngân hàng, cơ quan công an, nền tảng nơi xảy ra sự việc. Nếu sự cố liên quan đến bài học, em báo cho giáo viên bộ môn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 4. Khắc phục và rút kinh nghiệm.",
+       "b": true
+      },
+      {
+       "text": " Đổi mật khẩu, khóa tài khoản, yêu cầu gỡ nội dung, làm lại bài, xin lỗi người bị ảnh hưởng. Sau đó tự hỏi: bước nào trong quy trình mình đã bỏ?"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Theo thông tin của Bộ Công an, trong các vụ lừa đảo bằng cuộc gọi video giả mạo, kẻ gian thường thu thập hình ảnh và giọng nói của nạn nhân từ chính những gì nạn nhân và người thân đăng công khai trên mạng xã hội, rồi dùng AI ghép thành video [7]. Vì vậy, một tấm ảnh đăng hôm nay có thể là “nguyên liệu” cho một rủi ro về sau. Điều này không có nghĩa em không được đăng gì, mà là em nên chọn điều gì để công khai và điều gì chỉ để bạn bè xem."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Viết thẻ ứng phó",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Quay lại tình huống e) ở Hoạt động 1 (Tuấn nộp bài do AI viết) và tình huống của Hà ở phần Khởi động, giả sử Hà đã chuyển tiền. Với mỗi tình huống, em viết một thẻ gồm bốn dòng ứng với bốn bước ứng phó. Chú ý: bước 3 của hai tình huống báo cho những người khác nhau."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-em-co-the-la-nguoi-gay-ra-rui-ro-cho-nguoi-khac",
+   "title": "4. Em có thể là người gây ra rủi ro cho người khác",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phần lớn bài học này nói về việc bảo vệ em. Nhưng em hãy nhìn lại bốn nhóm một lần nữa từ phía ngược lại:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Đưa ảnh của bạn vào công cụ AI khi chưa hỏi là tạo rủi ro "
+        },
+        {
+         "text": "cho bạn",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Chia sẻ tiếp một tin chưa kiểm chứng là đẩy rủi ro "
+        },
+        {
+         "text": "cho người đọc",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Ghép mặt cho vui” một bạn trong lớp có thể làm tổn thương bạn thật sự, và có thể vi phạm pháp luật [6]."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nộp bài không trung thực làm giảm ý nghĩa nỗ lực "
+        },
+        {
+         "text": "của các bạn làm thật",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "An toàn khi dùng AI vì thế gồm cả hai chiều: không để mình bị hại và không gây hại cho người khác."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-thu-lam-ke-tung-tin-gia",
+   "title": "Trải nghiệm: Thử làm kẻ tung tin giả",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách tốt để không bị lừa là hiểu kẻ lừa đảo làm gì. Trò chơi này cho em đóng vai người tung tin giả để nhìn rõ các thủ đoạn."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image10.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Bad News"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " getbadnews.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em tự làm ở nhà nếu muốn (khoảng 15 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em chơi trò chơi trong khoảng 15 phút."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em ghi lại các thủ đoạn em gặp trong trò chơi."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em chọn một thủ đoạn để chia sẻ với lớp ở tiết sau."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Biết các thủ đoạn này giúp em phòng tránh rủi ro “giả mạo và thông tin sai” thế nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Trò chơi bằng tiếng Anh. Đây là hoạt động tự chọn ở nhà, không bắt buộc."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image11.png",
+     "caption": "Sơ đồ tư duy Bài 11.3."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Rủi ro",
+         "b": true
+        },
+        {
+         "text": " là điều có hại có thể xảy ra; "
+        },
+        {
+         "text": "sự cố",
+         "b": true
+        },
+        {
+         "text": " là điều có hại đã xảy ra. Rủi ro thì phòng, sự cố thì ứng phó."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bốn nhóm: "
+        },
+        {
+         "text": "dữ liệu và riêng tư; giả mạo và thông tin sai; bản quyền; trung thực học thuật",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Với cuộc gọi đáng ngờ: "
+        },
+        {
+         "text": "xác minh qua kênh khác",
+         "b": true
+        },
+        {
+         "text": " trước khi làm theo."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ứng phó sự cố: "
+        },
+        {
+         "text": "dừng lại, lưu bằng chứng, báo người tin cậy, khắc phục và rút kinh nghiệm",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "An toàn gồm cả việc "
+        },
+        {
+         "text": "không gây rủi ro cho người khác",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Viết lại mỗi sự cố sau thành rủi ro tương ứng (điều lẽ ra có thể thấy trước): a) tài khoản mạng xã hội bị chiếm sau khi đăng nhập vào một trang “tạo ảnh AI miễn phí”; b) bài báo tường của lớp in một câu danh ngôn không có thật."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một bạn nhận tin nhắn thoại đúng giọng thầy chủ nhiệm, yêu cầu nộp gấp tiền quỹ vào một tài khoản lạ. Bạn ấy nên xác minh bằng những cách nào? Nêu ít nhất hai cách."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Có tình huống thuộc hơn một nhóm. Hãy chỉ ra hai nhóm trong tình huống sau và giải thích: “Dùng AI tạo một video bạn cùng lớp ‘phát biểu’ những câu bạn ấy chưa từng nói, rồi đăng lên nhóm lớp.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Bạn Như lỡ gửi ảnh thẻ học sinh cho một tài khoản lạ tự xưng là “trợ lí AI của trường”. Áp dụng bốn bước ứng phó, viết việc cụ thể Như cần làm ở mỗi bước."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Chọn một nhóm rủi ro em thấy mình dễ gặp nhất. Viết hai thói quen em sẽ thay đổi từ tuần này."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cùng gia đình thống nhất một "
+      },
+      {
+       "text": "cách xác minh riêng",
+       "b": true
+      },
+      {
+       "text": " cho các cuộc gọi, tin nhắn khẩn cấp liên quan đến tiền: ví dụ luôn gọi lại bằng số điện thoại thông thường, hoặc hỏi một câu mà chỉ người nhà mới biết. Viết lại thỏa thuận thành ba dòng và nói cho ông bà hoặc em nhỏ trong nhà cùng biết, vì người lớn tuổi và trẻ nhỏ thường là đối tượng kẻ gian nhắm tới."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt rủi ro với sự cố, có ví dụ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xếp một tình huống vào đúng nhóm trong bốn nhóm"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu dấu hiệu và cách xác minh một cuộc gọi đáng ngờ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thực hiện bốn bước ứng phó khi có sự cố"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rủi ro"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khả năng một điều có hại có thể xảy ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự cố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều có hại đã xảy ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Deepfake"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hình ảnh, video, âm thanh do AI tạo ra hoặc chỉnh sửa để trông, nghe giống một người thật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bản quyền (quyền tác giả)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền của người tạo ra tác phẩm đối với tác phẩm của mình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trung thực học thuật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài mang tên mình phản ánh đúng việc mình đã làm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Rủi ro: đăng nhập tài khoản chính vào một trang không rõ nguồn gốc thì có thể bị lấy mật khẩu. b) Rủi ro: câu trích dẫn do AI đưa ra có thể không có thật nếu không tra nguồn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Gọi trực tiếp cho thầy bằng số điện thoại đã lưu; hỏi thầy khi gặp ở trường; hỏi lớp trưởng hoặc phụ huynh xem có thông báo chính thức không; đối chiếu tên chủ tài khoản. Không chuyển tiền khi chưa xác minh."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Nhóm 2 (giả mạo, tạo thông tin sai về một người) và nhóm 1 (dùng hình ảnh, giọng nói của bạn khi chưa được đồng ý). Nếu video dùng làm sản phẩm học tập thì còn chạm đến nhóm 4."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Dừng lại: không gửi thêm gì, không bấm liên kết. Lưu bằng chứng: chụp màn hình tài khoản và cuộc trò chuyện. Báo: cha mẹ và giáo viên chủ nhiệm để trường xác nhận có “trợ lí” đó hay không. Khắc phục: chặn và báo cáo tài khoản, cảnh giác với cuộc gọi, tin nhắn dùng thông tin trên thẻ; lần sau kiểm tra kênh chính thức của trường trước."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Câu trả lời riêng của em. Thói quen nên cụ thể, làm được ngay, ví dụ “chuyển trang cá nhân sang chế độ chỉ bạn bè xem”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [4], [5], [6], [7], [11] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

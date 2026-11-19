@@ -1,0 +1,397 @@
+{
+ "grade": 12,
+ "topics": [
+  {
+   "id": "12.1",
+   "grade": 12,
+   "title": "Quyền kiểm soát và trách nhiệm giải trình trong vòng đời AI",
+   "info": "3 tiết · Bài 12.1 đến Bài 12.3",
+   "description": "Một hệ thống AI có cả một vòng đời, từ lúc là ý tưởng đến lúc ngừng sử dụng. Chuyên đề mở đầu lớp 12 đi dọc vòng đời đó để hỏi ở từng giai đoạn: ai đang kiểm soát, ai chịu trách nhiệm. Em cũng học cách phân vai giữa con người và AI trong một quyết định, và hiểu vì sao máy không thể tự giải trình.",
+   "guidingQuestion": "Khi một quyết định có AI tham gia, ai phải trả lời câu hỏi “vì sao”?",
+   "outcomes": [
+    "Phân tích một hệ thống AI để tìm ra các “lỗ hổng kiểm soát”.",
+    "Lập sơ đồ phân vai cho một quyết định và nhận ra “phê duyệt hình thức”.",
+    "Dùng bảng kiểm để đối chiếu một tình huống với quy định, ở mức khái quát."
+   ],
+   "lessonBlurbs": {
+    "12.1": "Tám giai đoạn của vòng đời; quyền kiểm soát và trách nhiệm ở mỗi giai đoạn.",
+    "12.2": "Sáu bước của một quyết định và ba mức phân vai giữa con người với AI.",
+    "12.3": "Sáu biểu hiện của trách nhiệm giải trình; đối chiếu với quy định."
+   }
+  },
+  {
+   "id": "12.2",
+   "grade": 12,
+   "title": "Đạo đức, rủi ro và trách nhiệm công dân trong xã hội có AI",
+   "info": "3 tiết · Bài 12.4 đến Bài 12.6",
+   "description": "Sắp bước ra khỏi trường phổ thông, em không chỉ là người dùng AI mà còn là một công dân trong xã hội có AI. Chuyên đề này trao cho em ba công cụ: sáu nguyên tắc đạo đức để soát một sản phẩm, một cách xác định mức độ rủi ro có căn cứ, và cách lên tiếng góp ý cho một quy định.",
+   "guidingQuestion": "Một công dân có trách nhiệm làm gì khi AI có mặt ở khắp nơi?",
+   "outcomes": [
+    "Soát một sản phẩm AI theo sáu nguyên tắc đạo đức.",
+    "Xếp một việc sử dụng AI vào mức rủi ro thấp, trung bình hoặc cao và nêu căn cứ.",
+    "Viết bản góp ý cho một quy định về sử dụng AI."
+   ],
+   "lessonBlurbs": {
+    "12.4": "An toàn, công bằng, minh bạch, riêng tư, trách nhiệm, lợi ích; khi các nguyên tắc giằng co.",
+    "12.5": "Hai căn cứ: mức độ hậu quả và khả năng xảy ra; cách hạ mức rủi ro.",
+    "12.6": "Bốn nội dung trách nhiệm công dân; viết một bản góp ý có căn cứ."
+   }
+  },
+  {
+   "id": "12.3",
+   "grade": 12,
+   "title": "Công cụ phát triển và đánh giá hiệu quả hệ thống AI",
+   "info": "3 tiết · Bài 12.7 đến Bài 12.9",
+   "description": "Đây là chuyên đề “xắn tay áo”. Em đi từ một nhu cầu có thật đến một ý tưởng công cụ, kể cả khi câu trả lời đúng là không cần AI. Em làm quen với các công cụ mã nguồn mở, miễn phí để huấn luyện một mô hình, rồi học cách trả lời câu hỏi khó nhất: hệ thống này tốt đến đâu, và tốt với ai.",
+   "guidingQuestion": "Làm sao biết một hệ thống AI thật sự tốt, chứ không chỉ trông có vẻ tốt?",
+   "outcomes": [
+    "Viết phiếu ý tưởng nêu rõ kiểu đã chọn, kiểu đã loại và phần việc con người giữ.",
+    "Nêu bốn điều cần kiểm tra trước khi dùng một công cụ phát triển AI.",
+    "Đọc và tính số liệu thử nghiệm đơn giản để đánh giá một hệ thống."
+   ],
+   "lessonBlurbs": {
+    "12.7": "Năm kiểu ý tưởng giải pháp và bốn câu hỏi để chọn.",
+    "12.8": "Bốn bước huấn luyện mô hình; mã nguồn mở khác miễn phí thế nào.",
+    "12.9": "Ba nguyên tắc đánh giá; điểm yếu mà con số chung che mất."
+   }
+  },
+  {
+   "id": "12.4",
+   "grade": 12,
+   "title": "Giải pháp và hợp tác phát triển sản phẩm AI",
+   "info": "3 tiết · Bài 12.10 đến Bài 12.12",
+   "description": "Chuyên đề cuối cùng của ba năm học là một dự án nhỏ của nhóm. Em so sánh các phương án thiết kế và vận hành, chọn một phương án và nói rõ mình đã đánh đổi điều gì. Em thấy một sản phẩm AI cần nhiều người với chuyên môn khác nhau, rồi cùng nhóm báo cáo, phản biện và nhìn lại cả chặng đường.",
+   "guidingQuestion": "Để một ý tưởng AI thành sản phẩm dùng được, cần chọn gì và cần những ai?",
+   "outcomes": [
+    "Lựa chọn phương án phù hợp cho một nhiệm vụ và nêu sự đánh đổi đã chấp nhận.",
+    "Lập bảng phân vai cho dự án của nhóm.",
+    "Trình bày, phản biện và đánh giá một phương án một cách có căn cứ."
+   ],
+   "lessonBlurbs": {
+    "12.10": "Sáu khâu của một phương án, năm tiêu chí so sánh, sự đánh đổi.",
+    "12.11": "Các vai trò trong một dự án AI và định hướng của bản thân.",
+    "12.12": "Báo cáo bốn ý, phản biện có căn cứ, nhìn lại ba năm học."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "group": "Văn bản và khung chương trình",
+   "inl": [
+    {
+     "text": "Bộ Giáo dục và Đào tạo (2026). "
+    },
+    {
+     "text": "Khung nội dung giáo dục trí tuệ nhân tạo cho học sinh phổ thông",
+     "i": true
+    },
+    {
+     "text": ", ban hành kèm theo Quyết định số 2422/QĐ-BGDĐT ngày 18/8/2026 (các yêu cầu cần đạt lớp 12 và phần Phụ lục: Giải thích thuật ngữ)."
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "group": "Văn bản và khung chương trình",
+   "inl": [
+    {
+     "text": "Miao, F., & Shiohira, K. (2024). "
+    },
+    {
+     "text": "AI competency framework for students",
+     "i": true
+    },
+    {
+     "text": ". UNESCO, Paris. ISBN 978-92-3-100709-5."
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "group": "Văn bản và khung chương trình",
+   "inl": [
+    {
+     "text": "UNESCO (11/2021). "
+    },
+    {
+     "text": "Recommendation on the Ethics of Artificial Intelligence",
+     "i": true
+    },
+    {
+     "text": ". Nội dung dẫn theo bản tin “193 countries adopt first-ever global agreement on the Ethics of Artificial Intelligence”, UN News. "
+    },
+    {
+     "text": "https://news.un.org/en/story/2021/11/1106612",
+     "href": "https://news.un.org/en/story/2021/11/1106612"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "group": "Văn bản và khung chương trình",
+   "inl": [
+    {
+     "text": "OECD (2019, cập nhật 2024). "
+    },
+    {
+     "text": "OECD AI Principles",
+     "i": true
+    },
+    {
+     "text": ". OECD.AI Policy Observatory. "
+    },
+    {
+     "text": "https://oecd.ai/en/ai-principles",
+     "href": "https://oecd.ai/en/ai-principles"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "group": "Văn bản và khung chương trình",
+   "inl": [
+    {
+     "text": "Russell, S., Perset, K., & Grobelnik, M. (29/11/2023). "
+    },
+    {
+     "text": "Updates to the OECD’s definition of an AI system explained",
+     "i": true
+    },
+    {
+     "text": ". OECD.AI Policy Observatory. "
+    },
+    {
+     "text": "https://oecd.ai/en/wonk/ai-system-definition-update",
+     "href": "https://oecd.ai/en/wonk/ai-system-definition-update"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "group": "Pháp luật Việt Nam",
+   "inl": [
+    {
+     "text": "Quốc hội (2025). "
+    },
+    {
+     "text": "Luật Trí tuệ nhân tạo",
+     "i": true
+    },
+    {
+     "text": ", số 134/2025/QH15, thông qua ngày 10/12/2025, có hiệu lực từ ngày 01/3/2026. Nội dung dẫn theo bài “Đưa Luật Trí tuệ nhân tạo vào cuộc sống: Lập khung quản trị toàn diện cho AI”, Báo Lào Cai điện tử. "
+    },
+    {
+     "text": "https://baolaocai.vn/dua-luat-tri-tue-nhan-tao-vao-cuoc-song-lap-khung-quan-tri-toan-dien-cho-ai-post895042.html",
+     "href": "https://baolaocai.vn/dua-luat-tri-tue-nhan-tao-vao-cuoc-song-lap-khung-quan-tri-toan-dien-cho-ai-post895042.html"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "group": "Pháp luật Việt Nam",
+   "inl": [
+    {
+     "text": "Quốc hội (2025). "
+    },
+    {
+     "text": "Luật Bảo vệ dữ liệu cá nhân",
+     "i": true
+    },
+    {
+     "text": ", số 91/2025/QH15, có hiệu lực từ ngày 01/01/2026. Nội dung về quyền của chủ thể dữ liệu dẫn theo Cổng thông tin điện tử tỉnh Hà Tĩnh. "
+    },
+    {
+     "text": "https://hatinh.gov.vn/vi/bai-viet/luat-bao-ve-du-lieu-ca-nhan-chinh-thuc-co-hieu-luc-thi-hanh-tu-ngay-112026",
+     "href": "https://hatinh.gov.vn/vi/bai-viet/luat-bao-ve-du-lieu-ca-nhan-chinh-thuc-co-hieu-luc-thi-hanh-tu-ngay-112026"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "group": "Pháp luật Việt Nam",
+   "inl": [
+    {
+     "text": "Quốc hội (2025). "
+    },
+    {
+     "text": "Luật An ninh mạng",
+     "i": true
+    },
+    {
+     "text": ", số 116/2025/QH15, thông qua ngày 10/12/2025, có hiệu lực từ ngày 01/7/2026. Nội dung dẫn theo bản tóm lược của Apolat Legal. "
+    },
+    {
+     "text": "https://apolatlegal.com/vi/laws/luat-an-ninh-mang-2025-so-116-2025-qh15/",
+     "href": "https://apolatlegal.com/vi/laws/luat-an-ninh-mang-2025-so-116-2025-qh15/"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "group": "Nghiên cứu, công cụ và sự việc có thật",
+   "inl": [
+    {
+     "text": "“From ‘mutant algorithms’ to resignations: a timeline of the exam grading fiasco”. Bản tin của hãng thông tấn PA (Anh), đăng trên Express & Star, 2020. "
+    },
+    {
+     "text": "https://www.expressandstar.com/uk-news/from-mutant-algorithms-to-resignations-a-timeline-of-the-exam-grading-fiasco-6023621",
+     "href": "https://www.expressandstar.com/uk-news/from-mutant-algorithms-to-resignations-a-timeline-of-the-exam-grading-fiasco-6023621"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "group": "Nghiên cứu, công cụ và sự việc có thật",
+   "inl": [
+    {
+     "text": "Buolamwini, J., & Gebru, T. (2018). "
+    },
+    {
+     "text": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification",
+     "i": true
+    },
+    {
+     "text": ". Proceedings of Machine Learning Research, tập 81, trang 77–91. "
+    },
+    {
+     "text": "https://proceedings.mlr.press/v81/buolamwini18a.html",
+     "href": "https://proceedings.mlr.press/v81/buolamwini18a.html"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "group": "Nghiên cứu, công cụ và sự việc có thật",
+   "inl": [
+    {
+     "text": "Dastin, J. (10/10/2018). "
+    },
+    {
+     "text": "Amazon scraps secret AI recruiting tool that showed bias against women",
+     "i": true
+    },
+    {
+     "text": ". Reuters; đọc qua bản đăng lại của Euronews. "
+    },
+    {
+     "text": "https://www.euronews.com/2018/10/10/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women",
+     "href": "https://www.euronews.com/2018/10/10/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "group": "Nghiên cứu, công cụ và sự việc có thật",
+   "inl": [
+    {
+     "text": "Vụ "
+    },
+    {
+     "text": "Mata v. Avianca",
+     "i": true
+    },
+    {
+     "text": ", Tòa án liên bang khu vực phía Nam New York, quyết định xử phạt ngày 22/6/2023. Dẫn theo Ambrogi, R. (22/6/2023), LawSites. "
+    },
+    {
+     "text": "https://www.lawnext.com/2023/06/court-imposes-sanctions-on-lawyers-who-filed-bogus-cases-after-relying-on-chatgpt-for-legal-research.html",
+     "href": "https://www.lawnext.com/2023/06/court-imposes-sanctions-on-lawyers-who-filed-bogus-cases-after-relying-on-chatgpt-for-legal-research.html"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "group": "Nghiên cứu, công cụ và sự việc có thật",
+   "inl": [
+    {
+     "text": "Vụ "
+    },
+    {
+     "text": "Moffatt v. Air Canada",
+     "i": true
+    },
+    {
+     "text": ", 2024 BCCRT 149. Dẫn theo bài phân tích của McCarthy Tétrault (02/2024). "
+    },
+    {
+     "text": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot",
+     "href": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "group": "Nghiên cứu, công cụ và sự việc có thật",
+   "inl": [
+    {
+     "text": "Microsoft (25/3/2016). "
+    },
+    {
+     "text": "Learning from Tay’s introduction",
+     "i": true
+    },
+    {
+     "text": ". The Official Microsoft Blog. "
+    },
+    {
+     "text": "https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/",
+     "href": "https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "group": "Nghiên cứu, công cụ và sự việc có thật",
+   "inl": [
+    {
+     "text": "Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2024). "
+    },
+    {
+     "text": "Generative AI Can Harm Learning",
+     "i": true
+    },
+    {
+     "text": ". Bản thảo nghiên cứu trên SSRN (số 4895486). Số liệu dẫn theo bài “Without Guardrails, Generative AI Can Harm Education”, Knowledge at Wharton, 27/8/2024. "
+    },
+    {
+     "text": "https://knowledge.wharton.upenn.edu/article/without-guardrails-generative-ai-can-harm-education",
+     "href": "https://knowledge.wharton.upenn.edu/article/without-guardrails-generative-ai-can-harm-education"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "group": "Nghiên cứu, công cụ và sự việc có thật",
+   "inl": [
+    {
+     "text": "Google Creative Lab (2019). "
+    },
+    {
+     "text": "Teachable Machine",
+     "i": true
+    },
+    {
+     "text": ". Trang giới thiệu trên Experiments with Google. "
+    },
+    {
+     "text": "https://experiments.withgoogle.com/teachable-machine",
+     "href": "https://experiments.withgoogle.com/teachable-machine"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "group": "Nghiên cứu, công cụ và sự việc có thật",
+   "inl": [
+    {
+     "text": "“Bộ Công an chỉ ra dấu hiệu nhận biết cuộc gọi lừa đảo ‘Deepfake’”. Báo Pháp Luật Thành phố Hồ Chí Minh điện tử. "
+    },
+    {
+     "text": "https://plo.vn/bo-cong-an-chi-ra-dau-hieu-nhan-biet-cuoc-goi-lua-dao-deepfake-post741817.html",
+     "href": "https://plo.vn/bo-cong-an-chi-ra-dau-hieu-nhan-biet-cuoc-goi-lua-dao-deepfake-post741817.html"
+    }
+   ]
+  }
+ ]
+}

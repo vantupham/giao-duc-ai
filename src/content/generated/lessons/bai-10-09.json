@@ -1,0 +1,2225 @@
+{
+ "id": "10.9",
+ "slug": "bai-10-09",
+ "grade": 10,
+ "num": 9,
+ "topicId": "10.3",
+ "title": "Thực hành: đặt câu lệnh và kiểm chứng kết quả",
+ "meta": "Chuyên đề 10.3: Ứng dụng AI và kĩ năng đặt câu lệnh (tiết 4 trong 4 tiết)",
+ "period": {
+  "index": 4,
+  "total": 4
+ },
+ "objectives": [
+  [
+   {
+    "text": "Thực hiện được quy trình "
+   },
+   {
+    "text": "bốn bước",
+    "b": true
+   },
+   {
+    "text": " khi dùng AI tạo sinh cho một việc học tập: viết câu lệnh, chạy, kiểm chứng, cải tiến."
+   }
+  ],
+  [
+   {
+    "text": "Kiểm chứng được thông tin do AI đưa ra bằng sách giáo khoa hoặc nguồn chính thống."
+   }
+  ],
+  [
+   {
+    "text": "Ghi lại được quá trình làm việc trong "
+   },
+   {
+    "text": "nhật kí câu lệnh",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ]
+ ],
+ "keywords": [
+  "quy trình bốn bước",
+  "kiểm chứng",
+  "nguồn độc lập",
+  "cải tiến",
+  "nhật kí câu lệnh"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-the-nao-la-dung-ai-hieu-qua",
+   "title": "Khởi động: Thế nào là dùng AI “hiệu quả”?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bạn Quân khoe: “Tớ dùng AI hiệu quả lắm. Gõ một câu, 10 giây sau có ngay bài dài hai trang.”"
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Nhanh và dài có phải là hiệu quả không? Theo em, dùng AI cho việc học thì thế nào mới gọi là hiệu quả?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thử nghĩ xem: nếu bài hai trang ấy có ba chỗ sai mà Quân không biết, và Quân cũng không hiểu nội dung, thì Quân được gì?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong bài học này, ta thống nhất ba tiêu chí. Một lần dùng AI cho việc học là "
+      },
+      {
+       "text": "hiệu quả",
+       "b": true
+      },
+      {
+       "text": " khi kết quả:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Đúng:",
+         "b": true
+        },
+        {
+         "text": " đã được kiểm chứng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dùng được:",
+         "b": true
+        },
+        {
+         "text": " phục vụ đúng mục tiêu học tập của em."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hiểu được:",
+         "b": true
+        },
+        {
+         "text": " em giải thích lại được bằng lời của mình."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy giữ ba tiêu chí này đến cuối bài."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-ba-quy-tac-an-toan-khi-thuc-hanh",
+   "title": "1. Ba quy tắc an toàn khi thực hành",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Chỉ dùng công cụ và tài khoản",
+         "b": true
+        },
+        {
+         "text": " đã được thầy cô mở sẵn. Em không tự tạo tài khoản."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Không nhập",
+         "b": true
+        },
+        {
+         "text": " họ tên, hình ảnh, số điện thoại, điểm số của bất kì ai."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mọi thông tin AI đưa ra đều là bản nháp",
+         "b": true
+        },
+        {
+         "text": " cho đến khi em kiểm chứng."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-quy-trinh-bon-buoc",
+   "title": "2. Quy trình bốn bước",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở Bài 10.8, em đã biết viết một câu lệnh tốt. Nhưng câu lệnh tốt mới là điểm xuất phát. Người dùng AI có kinh nghiệm làm việc theo một vòng lặp:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bước",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi tự soát",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Viết",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết câu lệnh theo bảng kiểm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã rõ mục tiêu, bối cảnh, ràng buộc, định dạng chưa? Có dữ liệu cá nhân không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Chạy",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gửi câu lệnh, "
+          },
+          {
+           "text": "đọc kĩ",
+           "b": true
+          },
+          {
+           "text": " kết quả"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả có đúng điều mình hỏi không? Có gì lạ không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Kiểm chứng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn ít nhất 3 thông tin, đối chiếu với nguồn độc lập"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông tin này đúng, sai, hay chưa kiểm chứng được?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Cải tiến",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sửa câu lệnh dựa trên điều còn thiếu hoặc sai, rồi chạy lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vòng này mình thay đổi yêu cầu nào? Vì sao?"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em có thấy nó giống cách em làm một bài văn không? Viết nháp, đọc lại, soát lỗi, viết lại. Không ai nộp bản nháp đầu tiên. Đừng “nộp” kết quả đầu tiên của AI."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image23.png",
+     "caption": "Quy trình bốn bước khi dùng AI tạo sinh cho việc học"
+    },
+    {
+     "t": "h3",
+     "text": "Bước 3 là bước quan trọng nhất",
+     "id": "buoc-3-la-buoc-quan-trong-nhat"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kiểm chứng là đối chiếu thông tin với một "
+      },
+      {
+       "text": "nguồn độc lập",
+       "b": true
+      },
+      {
+       "text": ": nguồn không phụ thuộc vào chính công cụ em đang kiểm tra."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Là nguồn độc lập",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Không phải là kiểm chứng",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sách giáo khoa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi lại chính công cụ đó: “Bạn có chắc không?”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trang thông tin của cơ quan nhà nước, tổ chức uy tín"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi một công cụ AI khác rồi thấy “giống nhau” là tin"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thầy cô"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thấy viết trôi chảy, có số liệu nên tin"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tự tính lại, tự đếm lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tin vào đường dẫn, tên sách mà AI đưa ra mà không mở xem"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hai luật sư trong vụ việc ở New York năm 2023 đã nộp cho tòa những bản án do công cụ AI cung cấp, có đủ tên vụ án, tên tòa, tên thẩm phán, nhưng không hề tồn tại [12]. Bài học cho việc kiểm chứng: "
+        },
+        {
+         "text": "một nguồn do AI nêu ra cũng là thông tin cần kiểm chứng",
+         "b": true
+        },
+        {
+         "text": ". Em phải tự tìm cuốn sách, tự mở đường dẫn ấy. Tìm không thấy thì ghi là “không kiểm chứng được” và không dùng."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Chọn gì để kiểm chứng?",
+     "id": "chon-gi-de-kiem-chung"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em không cần kiểm chứng từng chữ. Hãy ưu tiên theo thứ tự:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Thứ mà nếu sai thì hại nhiều nhất:",
+         "b": true
+        },
+        {
+         "text": " định nghĩa, công thức, mốc thời gian, tên người, số liệu."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thứ em sẽ đưa vào bài của mình.",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thứ nghe “quá hay”, quá bất ngờ.",
+         "b": true
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trong câu trả lời sau của một trợ lí AI, em sẽ chọn ba thông tin nào để kiểm chứng trước? (Đây là câu trả lời giả định, có cài chi tiết đáng ngờ.) "
+        },
+        {
+         "text": "“Quang hợp là quá trình cây xanh dùng năng lượng ánh sáng để tổng hợp chất hữu cơ từ khí các-bô-níc và nước, đồng thời giải phóng ô-xi. Quá trình này diễn ra ở lục lạp. Theo một nghiên cứu năm 2019 của Viện Sinh học Quốc tế, rừng nhiệt đới tạo ra 28% lượng ô-xi của Trái Đất.”",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image24.png",
+     "caption": "Hình 10.9.1. Quy trình bốn bước. Sau bước 4, em quay lại bước 2."
+    }
+   ]
+  },
+  {
+   "id": "3-xem-mot-lan-lam-mau",
+   "title": "3. Xem một lần làm mẫu",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhóm bạn Vân nhận nhiệm vụ: "
+      },
+      {
+       "text": "lập kế hoạch ôn tập 2 tuần cho kì kiểm tra cuối kì ba môn",
+       "b": true
+      },
+      {
+       "text": ". Đây là nhật kí câu lệnh của nhóm."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Vòng 1",
+     "id": "vong-1"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu lệnh:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hãy đóng vai người hướng dẫn học tập. Em là học sinh lớp 10, hai tuần nữa kiểm tra cuối kì ba môn Toán, Vật lí, Ngữ văn. Lập kế hoạch ôn tập 14 ngày, mỗi ngày không quá 90 phút, trình bày thành bảng theo ngày."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết quả (tóm tắt):",
+       "b": true
+      },
+      {
+       "text": " có bảng 14 ngày, nhưng chia đều ba môn; có ngày xếp 120 phút; liệt kê tên chương không khớp với sách đang học."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kiểm chứng:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thông tin cần kiểm chứng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nguồn đối chiếu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kết quả",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tên các chương Vật lí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục lục sách giáo khoa Vật lí 10"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai",
+           "b": true
+          },
+          {
+           "text": " 2 chương"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tổng thời gian mỗi ngày"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tự cộng lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai:",
+           "b": true
+          },
+          {
+           "text": " 3 ngày vượt 90 phút"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lịch có trùng ngày kiểm tra không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lịch kiểm tra của trường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đúng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhận xét của nhóm:",
+       "b": true
+      },
+      {
+       "text": " AI không biết sách mình đang học nên đoán tên chương. AI không biết mình yếu phần nào nên chia đều. AI không tự kiểm tra phép cộng."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Vòng 2",
+     "id": "vong-2"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu lệnh cải tiến:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "(Giữ phần trên.) Đây là mục lục ba môn theo sách em đang học: [dán mục lục]. Em yếu nhất phần hàm số và phần động lực học, hãy dành nhiều thời gian hơn cho hai phần này. Tuyệt đối không quá 90 phút mỗi ngày; có 1 ngày nghỉ mỗi tuần. Thêm một cột ghi tổng số phút của từng ngày."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đã thay đổi yêu cầu nào?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thay đổi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuộc yêu cầu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vì sao",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dán mục lục sách"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bối cảnh (tài liệu nguồn)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Để AI dùng đúng tên chương, không phải đoán"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu phần còn yếu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bối cảnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Để kế hoạch ưu tiên đúng chỗ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Tuyệt đối không quá 90 phút”, có ngày nghỉ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ràng buộc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vòng 1 bị vượt"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thêm cột tổng số phút"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tiêu chí kiểm tra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Để nhóm soát nhanh"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết quả vòng 2:",
+       "b": true
+      },
+      {
+       "text": " dùng đúng tên chương, ưu tiên phần yếu, có cột tổng phút và không ngày nào vượt 90."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phần nhóm tự làm, không dùng AI:",
+       "b": true
+      },
+      {
+       "text": " điều chỉnh lịch theo thời khóa biểu thật của từng bạn. AI không biết ai học thêm tối thứ Ba, ai đá bóng chiều thứ Năm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tự đánh giá:",
+       "b": true
+      },
+      {
+       "text": " Đúng: có. Dùng được: có. Cả nhóm hiểu: có."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết quả trong ví dụ được mô tả để minh họa; kết quả thật mỗi lần chạy có thể khác.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Cải tiến” là thêm chữ “chi tiết hơn”, “hay hơn”.",
+         "b": true
+        },
+        {
+         "text": " Cải tiến đúng nghĩa là thay đổi "
+        },
+        {
+         "text": "một yêu cầu cụ thể",
+         "b": true
+        },
+        {
+         "text": " trong sáu yêu cầu, dựa trên "
+        },
+        {
+         "text": "một hạn chế cụ thể",
+         "b": true
+        },
+        {
+         "text": " của vòng trước. Hãy tự hỏi: vòng 1 sai, thiếu hay thừa điều gì?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Kết quả đầu tiên tốt rồi, khỏi cần vòng 2.”",
+         "b": true
+        },
+        {
+         "text": " Kể cả khi kết quả tốt, em vẫn phải làm bước 3. Kiểm chứng xong thấy đúng thì đó là một kết quả đáng tin; chưa kiểm chứng thì mới là một kết quả trông có vẻ tốt."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Dán tài liệu vào là AI sẽ đúng.”",
+         "b": true
+        },
+        {
+         "text": " Cho AI tài liệu nguồn giúp giảm sai lệch nhưng không xóa hẳn. Vẫn phải soát."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-nhat-ki-cau-lenh-ghi-lai-de-hoc-va-de-trung-thuc",
+   "title": "4. Nhật kí câu lệnh: ghi lại để học và để trung thực",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhật kí câu lệnh là bản ghi những gì em đã làm với AI. Nó có hai tác dụng:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Giúp em học:",
+         "b": true
+        },
+        {
+         "text": " nhìn lại, em thấy thay đổi nào làm kết quả tốt lên."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Giúp em trung thực:",
+         "b": true
+        },
+        {
+         "text": " đây là căn cứ để điền Phiếu khai báo sử dụng AI."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mẫu nhật kí tối giản:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mục",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vòng 1",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vòng 2",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu lệnh đã dùng"
+          }
+         ]
+        }
+       ],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tóm tắt kết quả"
+          }
+         ]
+        }
+       ],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ba thông tin đã kiểm chứng; nguồn; đúng hay sai"
+          }
+         ]
+        }
+       ],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều còn thiếu, sai, thừa"
+          }
+         ]
+        }
+       ],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thay đổi ở vòng sau và lí do"
+          }
+         ]
+        }
+       ],
+       [],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cuối nhật kí, ghi thêm hai dòng: "
+      },
+      {
+       "text": "Kết quả cuối có đúng, dùng được, hiểu được không?",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "Phần nào em tự làm, không dùng AI?",
+       "b": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-lam-viec-nhom-o-phong-may",
+   "title": "5. Làm việc nhóm ở phòng máy",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để không ai ngồi xem, mỗi nhóm chia bốn vai và "
+      },
+      {
+       "text": "đổi vai giữa hai vòng",
+       "b": true
+      },
+      {
+       "text": ":"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vai",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc làm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người gõ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhập câu lệnh đúng như nhóm đã thống nhất"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mở sách, đối chiếu, đánh dấu đúng hoặc sai"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thư kí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ghi nhật kí câu lệnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người báo cáo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Theo dõi thời gian, chuẩn bị chia sẻ với lớp"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2 (thực hành chính)",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với câu lệnh nhóm đã chuẩn bị từ Bài 10.8:"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Vòng 1:",
+         "b": true
+        },
+        {
+         "text": " chạy, đọc kĩ, kiểm chứng ít nhất 3 thông tin, ghi nhật kí, xác định điều cần cải tiến."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Vòng 2:",
+         "b": true
+        },
+        {
+         "text": " đổi vai; viết câu lệnh cải tiến, chạy, so với vòng 1, ghi nhật kí."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Kết thúc:",
+         "b": true
+        },
+        {
+         "text": " tự đánh giá theo ba tiêu chí "
+        },
+        {
+         "text": "đúng, dùng được, hiểu được",
+         "i": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nếu không có máy:",
+         "i": true
+        },
+        {
+         "text": " dùng bản in kết quả thầy cô phát, làm bước kiểm chứng trên giấy, viết câu lệnh vòng 2 và dự đoán kết quả sẽ thay đổi thế nào."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6-sau-khi-thuc-hanh-ai-la-nguoi-quyet-dinh",
+   "title": "6. Sau khi thực hành: ai là người quyết định?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy nhìn lại nhật kí của nhóm Vân. AI đã làm gì? Soạn bảng, sắp lịch, tính toán sơ bộ. Con người đã làm gì?"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Đặt mục tiêu: ôn ba môn trong hai tuần."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phát hiện ba chỗ sai."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quyết định thay đổi gì ở vòng 2."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Điều chỉnh theo đời sống thật của từng bạn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quyết định có dùng bản kế hoạch này không."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây chính là điều em đã học từ Bài 10.1: trong mọi hệ thống AI, "
+      },
+      {
+       "text": "con người là bên đặt mục tiêu, kiểm tra và quyết định",
+       "b": true
+      },
+      {
+       "text": ". Kĩ năng đặt câu lệnh chỉ là phương tiện để làm tốt vai trò ấy."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu em dùng kết quả hôm nay cho bài học thật ở một môn khác, hãy điền "
+      },
+      {
+       "text": "Phiếu khai báo sử dụng AI",
+       "b": true
+      },
+      {
+       "text": " kèm theo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image25.png",
+     "caption": "Sơ đồ tư duy Bài 10.9."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Dùng AI cho việc học là "
+        },
+        {
+         "text": "hiệu quả",
+         "b": true
+        },
+        {
+         "text": " khi kết quả "
+        },
+        {
+         "text": "đúng, dùng được, hiểu được",
+         "b": true
+        },
+        {
+         "text": "; nhanh và dài không phải là hiệu quả."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quy trình bốn bước: "
+        },
+        {
+         "text": "viết, chạy, kiểm chứng, cải tiến",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Kiểm chứng",
+         "b": true
+        },
+        {
+         "text": " là đối chiếu với "
+        },
+        {
+         "text": "nguồn độc lập",
+         "b": true
+        },
+        {
+         "text": ": sách giáo khoa, nguồn chính thống, thầy cô, tự tính lại."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hỏi lại chính AI không phải là kiểm chứng; "
+        },
+        {
+         "text": "nguồn do AI nêu ra cũng phải được kiểm tra",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Cải tiến",
+         "b": true
+        },
+        {
+         "text": " là thay đổi một yêu cầu cụ thể dựa trên một hạn chế cụ thể của vòng trước."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhật kí câu lệnh",
+         "b": true
+        },
+        {
+         "text": " giúp em học từ quá trình và là căn cứ để khai báo trung thực."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người "
+        },
+        {
+         "text": "đặt mục tiêu, kiểm tra, quyết định",
+         "b": true
+        },
+        {
+         "text": "; có những phần phải tự làm."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Sắp xếp các việc sau theo đúng thứ tự của quy trình bốn bước: (a) mở sách giáo khoa đối chiếu ba định nghĩa; (b) thêm vào câu lệnh “chỉ dùng kiến thức trong đoạn sách em dán dưới đây”; (c) gửi câu lệnh và đọc kĩ câu trả lời; (d) viết câu lệnh theo bảng kiểm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Việc nào dưới đây là kiểm chứng đúng cách? Giải thích: (a) hỏi lại trợ lí AI “thông tin này có đúng không?”; (b) so định nghĩa với sách giáo khoa; (c) thấy hai công cụ AI trả lời giống nhau nên tin; (d) mở đường dẫn mà AI đưa ra và thấy trang không tồn tại; (e) tự cộng lại các con số trong bảng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Nhóm bạn Bảo nhờ AI tạo 5 câu hỏi ôn bài Lịch sử kèm đáp án. Kết quả vòng 1: câu hỏi quá khó, có một đáp án ghi sai năm diễn ra sự kiện, và không cho biết nội dung nằm ở bài nào trong sách. Hãy đề xuất "
+      },
+      {
+       "text": "ba thay đổi",
+       "b": true
+      },
+      {
+       "text": " cho câu lệnh vòng 2, mỗi thay đổi ghi rõ thuộc yêu cầu nào trong sáu yêu cầu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Bạn Kiên cải tiến câu lệnh bằng cách thêm: “Hãy viết hay hơn và chi tiết hơn nữa.” Cách cải tiến này có vấn đề gì? Em sẽ hỏi Kiên câu gì để giúp bạn cải tiến đúng hướng?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Điền một nhật kí câu lệnh tưởng tượng (2 vòng) cho nhiệm vụ: nhờ AI giải thích một khái niệm Hóa học lớp 10 bằng hai ví dụ trong đời sống. Ở vòng 1, giả sử một ví dụ của AI không đúng với kiến thức trong sách."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Nhật kí thật.",
+       "b": true
+      },
+      {
+       "text": " Trong tuần, dùng quy trình bốn bước cho một việc học tập có thật (theo hướng dẫn của thầy cô về công cụ được dùng). Ghi nhật kí và điền Phiếu khai báo sử dụng AI."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Dạy lại.",
+       "b": true
+      },
+      {
+       "text": " Giải thích cho một người trong gia đình vì sao không nên tin ngay câu trả lời của một trợ lí AI, và chỉ cho họ một cách kiểm chứng đơn giản."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thực hiện đủ bốn bước viết, chạy, kiểm chứng, cải tiến"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn thông tin quan trọng và kiểm chứng bằng nguồn độc lập"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cải tiến câu lệnh dựa trên hạn chế của vòng trước"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ghi nhật kí câu lệnh trung thực"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm chứng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đối chiếu thông tin với nguồn độc lập, đáng tin cậy trước khi dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nguồn độc lập"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nguồn không phụ thuộc vào chính công cụ AI đang cần kiểm tra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cải tiến câu lệnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thay đổi một yêu cầu cụ thể của câu lệnh dựa trên hạn chế của kết quả trước"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhật kí câu lệnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bản ghi câu lệnh, kết quả, việc kiểm chứng và các thay đổi qua từng vòng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hoạt động 1.",
+       "b": true
+      },
+      {
+       "text": " Nên kiểm chứng trước: định nghĩa quang hợp (sẽ đưa vào bài); nơi diễn ra (lục lạp); và đặc biệt là câu “theo một nghiên cứu năm 2019 của Viện Sinh học Quốc tế… 28%”, vì có tên tổ chức, năm, con số cụ thể mà em chưa từng nghe. Nếu không tìm thấy nguồn, không dùng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " (d), (c), (a), (b)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Đúng cách: (b), (e), và (d) là một phần của kiểm chứng (kết quả: nguồn không tồn tại, không dùng thông tin đó). Không đúng: (a) và (c), vì không phải nguồn độc lập."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: thêm bối cảnh “em là học sinh lớp 10, dán nội dung bài học” (bối cảnh, tài liệu nguồn); thêm “câu hỏi ở mức nhận biết và thông hiểu, chỉ trong phạm vi đoạn đã dán” (ràng buộc); thêm “sau mỗi đáp án ghi nội dung ấy nằm ở mục nào” (tiêu chí kiểm tra)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " “Hay hơn, chi tiết hơn” không nói rõ vòng 1 sai, thiếu hay thừa điều gì nên AI chỉ viết dài thêm. Câu hỏi cho Kiên: “Kết quả vòng 1 chưa đạt ở điểm nào cụ thể? Điểm đó thuộc yêu cầu nào trong sáu yêu cầu?”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [12] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

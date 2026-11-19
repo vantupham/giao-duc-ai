@@ -1,0 +1,2378 @@
+{
+ "id": "12.1",
+ "slug": "bai-12-01",
+ "grade": 12,
+ "num": 1,
+ "topicId": "12.1",
+ "title": "Vòng đời hệ thống AI và các điểm kiểm soát của con người",
+ "meta": "Chuyên đề 12.1: Quyền kiểm soát và trách nhiệm giải trình trong vòng đời AI (tiết 1 trong 3 tiết)",
+ "period": {
+  "index": 1,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Kể được "
+   },
+   {
+    "text": "tám giai đoạn",
+    "b": true
+   },
+   {
+    "text": " trong vòng đời của một hệ thống AI."
+   }
+  ],
+  [
+   {
+    "text": "Phân biệt được "
+   },
+   {
+    "text": "quyền kiểm soát",
+    "b": true
+   },
+   {
+    "text": " với "
+   },
+   {
+    "text": "chịu trách nhiệm",
+    "b": true
+   },
+   {
+    "text": ", và chỉ ra được ở mỗi giai đoạn ai cần giữ hai điều đó."
+   }
+  ],
+  [
+   {
+    "text": "Phân tích",
+    "b": true
+   },
+   {
+    "text": " được một hệ thống AI cụ thể để tìm ra các “lỗ hổng kiểm soát”."
+   }
+  ]
+ ],
+ "keywords": [
+  "vòng đời hệ thống AI",
+  "điểm kiểm soát",
+  "quyền kiểm soát",
+  "chịu trách nhiệm",
+  "lỗ hổng kiểm soát"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-loi-nay-bat-dau-tu-khi-nao",
+   "title": "Khởi động: Lỗi này bắt đầu từ khi nào?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một ứng dụng chấm phát âm tiếng Anh được nhiều trường sử dụng. Sau một học kì, giáo viên ở một số tỉnh nhận thấy điều lạ: học sinh nói giọng địa phương của vùng mình thường bị chấm thấp bất thường, kể cả những em phát âm tiếng Anh rất rõ. Thầy cô và học sinh gửi phản ánh qua mục “Góp ý” suốt ba tháng. Không ai trả lời."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Theo em, lỗi này bắt đầu từ lúc nào: lúc học sinh dùng ứng dụng, lúc ứng dụng ra mắt, hay sớm hơn nữa? Ai lẽ ra phải phát hiện?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy thử lần ngược lại. Học sinh bị chấm sai "
+      },
+      {
+       "text": "khi sử dụng",
+       "b": true
+      },
+      {
+       "text": ". Nhưng ứng dụng chấm sai vì mô hình được huấn luyện chủ yếu bằng giọng của một số vùng: lỗi nằm ở khâu "
+      },
+      {
+       "text": "dữ liệu",
+       "b": true
+      },
+      {
+       "text": ". Lẽ ra việc thử nghiệm phải phát hiện điều đó, nhưng người ta chỉ thử với học sinh ở một thành phố: lỗi nằm ở khâu "
+      },
+      {
+       "text": "thử nghiệm",
+       "b": true
+      },
+      {
+       "text": ". Và khi người dùng phản ánh thì không ai đọc: lỗi nằm ở khâu "
+      },
+      {
+       "text": "giám sát",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một lỗi mà người dùng gánh chịu hôm nay có thể đã được “gieo” từ nhiều tháng trước, ở nhiều chỗ khác nhau. Muốn con người thật sự kiểm soát được AI, ta phải nhìn cả "
+      },
+      {
+       "text": "cuộc đời",
+       "b": true
+      },
+      {
+       "text": " của hệ thống chứ không chỉ lúc nó đang chạy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nhac-lai-em-da-biet-gi-tu-lop-10-va-lop-11",
+   "title": "Nhắc lại: Em đã biết gì từ lớp 10 và lớp 11?",
+   "kind": "recall",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ý cần nhớ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nội dung ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Xem lại ở",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Năm thành phần của hệ thống AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu, thuật toán, mô hình, đầu ra, phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.11 (tập Khối 10)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người phải kiểm soát AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI có thể sai, thiên lệch; người quyết định và chịu trách nhiệm là con người"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.2 (tập Khối 10)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sáu bước thiết kế và vận hành"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục tiêu; dữ liệu; công nghệ; đầu ra; kiểm thử; vận hành, phản hồi, cập nhật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.12 (tập Khối 11)"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sáu bước ở lớp 11 là cách nhìn của "
+      },
+      {
+       "text": "người làm ra",
+       "b": true
+      },
+      {
+       "text": " hệ thống. Bài hôm nay nhìn rộng hơn: tính cả quyết định có nên làm hệ thống hay không, và cả lúc hệ thống bị ngừng sử dụng."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-vong-doi-cua-mot-he-thong-ai",
+   "title": "1. Vòng đời của một hệ thống AI",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Vòng đời hệ thống AI",
+         "b": true
+        },
+        {
+         "text": " là toàn bộ các giai đoạn mà một hệ thống AI đi qua, từ lúc người ta quyết định có dùng AI hay không cho đến lúc hệ thống bị ngừng sử dụng."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Các tài liệu chia vòng đời theo những cách hơi khác nhau. Trong tài liệu này, chúng ta dùng cách chia tám giai đoạn."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image2.png",
+     "caption": "Hình 12.1.1. Tám giai đoạn trong vòng đời của một hệ thống AI. Mỗi dấu tròn xám là một điểm kiểm soát: chỗ phải có người xem xét và kí nhận trước khi đi tiếp. Đường nét đứt: kết quả giám sát và xử lí sự cố quay về các giai đoạn trước."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giai đoạn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc diễn ra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi về kiểm soát và trách nhiệm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Xác định vấn đề",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyết định có dùng AI không, để làm gì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai quyết định? Đã hỏi ý kiến người bị ảnh hưởng chưa? Có cách không dùng AI không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Chuẩn bị dữ liệu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu thập, gán nhãn, làm sạch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu của ai, có được phép dùng không, có đại diện cho mọi nhóm không? Ai kiểm tra?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Thiết kế",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn mô hình, đầu ra, giao diện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng có được biết đang tương tác với AI không? Có chỗ cho con người can thiệp không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Thử nghiệm",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm tra trước khi dùng thật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã thử với những nhóm người, tình huống nào? Ai kí xác nhận đạt?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Triển khai",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đưa vào sử dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai cho phép triển khai? Người dùng được hướng dẫn gì?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Giám sát",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Theo dõi khi đang dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai theo dõi kết quả, tiếp nhận phản ánh? Bao lâu một lần?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7. Xử lí sự cố",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sửa khi có sai sót"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai có quyền tạm dừng? Ai thông báo và khắc phục cho người bị ảnh hưởng?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "8. Kết thúc sử dụng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ngừng hệ thống"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu được xóa hay giữ? Ai quyết định, ai thông báo?"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba điều em nên chú ý khi đọc bảng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giai đoạn 1 có thể kết thúc bằng câu “không cần AI”.",
+       "b": true
+      },
+      {
+       "text": " Đây là điểm kiểm soát sớm nhất và rẻ nhất. Nhiều rắc rối về sau bắt nguồn từ việc không ai đặt câu hỏi này."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giai đoạn 6 và 7 dài hơn tất cả các giai đoạn trước cộng lại.",
+       "b": true
+      },
+      {
+       "text": " Một hệ thống có thể được làm ra trong vài tháng và được dùng trong nhiều năm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giai đoạn 8 thường bị quên.",
+       "b": true
+      },
+      {
+       "text": " Khi một ứng dụng học tập đóng cửa, bài làm, giọng nói, điểm số của hàng nghìn học sinh đi đâu? Quyền yêu cầu xóa dữ liệu mà em học ở Bài 11.5 có ý nghĩa nhất chính ở giai đoạn này."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Các giai đoạn trước khi ra mắt là việc của kĩ sư, người dùng chỉ cần quan tâm lúc sử dụng.”",
+         "b": true
+        },
+        {
+         "text": " Lỗi người dùng phải chịu thường được gieo từ khâu dữ liệu và khâu thử nghiệm. Hiểu vòng đời giúp em, với tư cách người dùng và công dân, hỏi đúng câu: dữ liệu lấy ở đâu, đã thử với ai, phản ánh thì gửi cho ai."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Xếp việc vào giai đoạn",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mỗi việc sau thuộc giai đoạn nào trong tám giai đoạn?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Một công ti cho 200 người thuộc nhiều lứa tuổi dùng thử trợ lí giọng nói trước khi bán."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Một bệnh viện họp bàn có nên dùng phần mềm AI đọc phim X-quang hay không."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Một trang học trực tuyến thông báo ngừng hoạt động và hướng dẫn người dùng tải dữ liệu của mình về."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Nhóm phát triển thuê người nghe 10.000 đoạn ghi âm và ghi lại nội dung từng đoạn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Một ngân hàng tạm tắt chatbot sau khi nó trả lời sai về lãi suất, rồi gửi thư xin lỗi khách hàng."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-hai-dieu-phai-co-o-moi-giai-doan",
+   "title": "2. Hai điều phải có ở mỗi giai đoạn",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở cột thứ ba của bảng trên, em thấy hai loại câu hỏi lặp đi lặp lại: “ai kiểm tra, ai được dừng?” và “ai đứng ra trả lời?”. Đó là hai khái niệm cần phân biệt."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Quyền kiểm soát",
+         "b": true
+        },
+        {
+         "text": " là khả năng thật sự để "
+        },
+        {
+         "text": "xem xét, can thiệp và dừng lại",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chịu trách nhiệm",
+         "b": true
+        },
+        {
+         "text": " là "
+        },
+        {
+         "text": "đứng ra giải thích",
+         "b": true
+        },
+        {
+         "text": " điều đã xảy ra và "
+        },
+        {
+         "text": "khắc phục hậu quả",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai điều này không phải lúc nào cũng nằm ở cùng một người, và đó là nguồn gốc của nhiều vấn đề."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tình huống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Có quyền kiểm soát?",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Có chịu trách nhiệm?",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vấn đề",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhân viên phải bấm “duyệt” 300 hồ sơ mỗi giờ theo đề xuất của AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trên giấy thì có; thực tế không kịp xem"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có: tên nhân viên nằm trên quyết định"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trách nhiệm mà không có quyền kiểm soát thật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kĩ sư có thể sửa mô hình bất cứ lúc nào, không cần ai duyệt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không ai hỏi đến"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền mà không kèm trách nhiệm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục “Góp ý” có nhận thư nhưng không ai được phân công đọc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có cả hai"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Lỗ hổng kiểm soát",
+         "b": true
+        },
+        {
+         "text": " là một giai đoạn hoặc một bước quan trọng mà ở đó "
+        },
+        {
+         "text": "không có con người cụ thể nào",
+         "b": true
+        },
+        {
+         "text": " vừa có quyền kiểm soát thật vừa chịu trách nhiệm."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Từ “cụ thể” rất quan trọng. “Công ti chịu trách nhiệm” hay “bộ phận kĩ thuật sẽ xem” chưa đủ. Phải trả lời được: "
+      },
+      {
+       "text": "ai, ở vị trí nào, làm gì, khi nào",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Luật Trí tuệ nhân tạo của Việt Nam, có hiệu lực từ ngày 01/3/2026, cũng đi theo hướng này. Theo nội dung đã được công bố, với hệ thống AI có rủi ro cao, nhà cung cấp phải thiết kế để bảo đảm khả năng giám sát và can thiệp của con người, đồng thời lập và lưu giữ hồ sơ kĩ thuật, nhật kí hoạt động để có thể kiểm tra về sau [6]. Em sẽ học kĩ hơn về mức độ rủi ro ở Bài 12.5."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2016, một hãng công nghệ lớn đưa lên mạng xã hội một chatbot được thiết kế để học từ các cuộc trò chuyện với người dùng. Chưa đầy một ngày, một nhóm người dùng đã cố tình “dạy” nó những phát ngôn xúc phạm, và hãng phải gỡ chatbot xuống kèm lời xin lỗi. Trong bài viết sau đó, hãng cho biết họ đã thử nghiệm chatbot trong nhiều điều kiện, nhưng đã không lường trước kiểu tấn công này [14]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Đặt vào vòng đời: lỗ hổng nằm ở giai đoạn 4 (chưa thử với người dùng có ý xấu) và giai đoạn 3 (thiết kế cho hệ thống tự học từ người dùng mà không có ai xem xét ở giữa). Điểm làm đúng: ở giai đoạn 7, có người có quyền dừng hệ thống và đã dừng nhanh, có người đứng ra giải thích công khai."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-phan-tich-mot-he-thong-theo-vong-doi",
+   "title": "3. Phân tích một hệ thống theo vòng đời",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để phân tích, em lập một bảng tám dòng. Ở mỗi dòng, em trả lời hai câu hỏi: "
+      },
+      {
+       "text": "ai kiểm soát",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "ai chịu trách nhiệm",
+       "b": true
+      },
+      {
+       "text": ". Dòng nào không trả lời được, hoặc câu trả lời là “không ai”, “chưa rõ”, “hệ thống tự làm”, đó là một lỗ hổng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ: ứng dụng chấm phát âm ở phần Khởi động.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giai đoạn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều đã xảy ra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ai kiểm soát, ai chịu trách nhiệm?",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhận xét",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Xác định vấn đề"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công ti quyết định làm ứng dụng chấm phát âm cho học sinh cả nước"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ban giám đốc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rõ. Nhưng chưa hỏi ý kiến giáo viên các vùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Chuẩn bị dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng bản ghi âm của học sinh ở hai thành phố lớn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhóm dữ liệu thu thập; không ai kiểm tra tính đại diện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lỗ hổng",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Thiết kế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ứng dụng hiện điểm số, không ghi chú rằng điểm có thể chưa chính xác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhóm thiết kế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiếu thông tin cho người dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Thử nghiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử với 100 học sinh ở một thành phố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhóm kĩ thuật tự thử, tự xác nhận đạt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lỗ hổng",
+           "b": true
+          },
+          {
+           "text": ": người làm tự kiểm tra mình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Triển khai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bán cho các trường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phòng kinh doanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rõ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Giám sát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có mục “Góp ý”, không ai được phân công đọc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không ai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lỗ hổng",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7. Xử lí sự cố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa có quy trình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không ai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lỗ hổng",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "8. Kết thúc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa tính đến"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa rõ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần bổ sung"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sau khi tìm ra lỗ hổng, bước tiếp theo là "
+      },
+      {
+       "text": "đề xuất cách vá",
+       "b": true
+      },
+      {
+       "text": ". Mỗi cách vá cũng phải nêu người cụ thể."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lỗ hổng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách vá",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu thiếu đại diện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trưởng nhóm dữ liệu lập bảng thống kê số bản ghi theo vùng miền; một người ngoài nhóm kiểm tra trước khi huấn luyện"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tự thử, tự xác nhận"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử với học sinh ít nhất ba vùng; kết quả theo từng vùng do bộ phận kiểm thử độc lập kí xác nhận"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Góp ý không ai đọc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân công một người đọc góp ý hằng tuần; phản ánh lặp lại từ ba lần được chuyển thẳng cho người phụ trách sản phẩm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có quy trình xử lí sự cố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người phụ trách sản phẩm có quyền tạm tắt tính năng chấm điểm; có mẫu thông báo cho các trường"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Phân tích vòng đời là để bắt lỗi và bác bỏ hệ thống.”",
+         "b": true
+        },
+        {
+         "text": " Không phải. Mục đích là bảo đảm ở mọi bước quan trọng đều có con người cụ thể kiểm soát và chịu trách nhiệm. Một hệ thống sau khi được vá các lỗ hổng sẽ đáng tin hơn và hữu ích hơn."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Tìm lỗ hổng",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Đọc mô tả hệ thống giả định sau, lập bảng tám dòng, đánh dấu các lỗ hổng kiểm soát và đề xuất cách vá cho hai lỗ hổng em thấy nghiêm trọng nhất."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một trường dùng phần mềm AI xếp thời khóa biểu. Thầy phó hiệu trưởng quyết định mua vì “trường bạn cũng dùng”. Phần mềm lấy dữ liệu phân công giảng dạy của năm trước. Nhà cung cấp cài đặt trong một buổi chiều và cho chạy ngay. Thời khóa biểu được gửi tự động đến giáo viên và phụ huynh. Một số giáo viên đang nuôi con nhỏ bị xếp dạy tiết 1 cả sáu ngày; họ không biết phản ánh với ai. Hợp đồng không nói gì về dữ liệu khi trường ngừng dùng.",
+         "i": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-vi-sao-phai-la-con-nguoi",
+   "title": "4. Vì sao phải là con người?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có bạn sẽ hỏi: tại sao không để một hệ thống AI khác giám sát hệ thống AI này? Công cụ tự động có thể hỗ trợ việc theo dõi, nhưng hai điều sau thì máy không làm thay được."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ nhất, chỉ con người mới chịu trách nhiệm được.",
+       "b": true
+      },
+      {
+       "text": " Một hệ thống không thể xin lỗi, không thể bồi thường, không thể ra trước cơ quan có thẩm quyền. Khi một hãng hàng không lập luận rằng chatbot của họ tự chịu trách nhiệm về thông tin sai nó đưa ra, cơ quan giải quyết tranh chấp ở Canada đã bác bỏ: hãng phải chịu trách nhiệm về mọi thông tin trên trang của mình [13]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ hai, chỉ con người mới cân nhắc được giá trị.",
+       "b": true
+      },
+      {
+       "text": " Xếp giáo viên nuôi con nhỏ dạy tiết 1 cả tuần có thể là phương án “tối ưu” về số phòng học, nhưng không ổn về tình người. Điều gì quan trọng hơn điều gì là câu hỏi mà dữ liệu không trả lời thay được."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khung năng lực AI cho học sinh của UNESCO đặt “tư duy lấy con người làm trung tâm” làm một trong bốn nhóm năng lực cốt lõi, trong đó có việc hiểu rằng con người phải giữ quyền quyết định và chịu trách nhiệm đối với AI [2]. Vòng đời là công cụ để biến nguyên tắc đó thành các câu hỏi cụ thể, hỏi được ở từng giai đoạn."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-doc-li-lich-cua-mot-mo-hinh-ai",
+   "title": "Trải nghiệm: Đọc “lí lịch” của một mô hình AI",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhiều mô hình AI có một “thẻ mô hình”, giống như bản lí lịch. Em hãy đọc một thẻ như vậy để tìm dấu vết của vòng đời hệ thống."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image3.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Thẻ mô hình trên Hugging Face"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " huggingface.co (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em cùng lớp xem thẻ mô hình của một mô hình phổ biến."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em tìm các thông tin: dữ liệu huấn luyện, cách đánh giá, những giới hạn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em ghép mỗi thông tin vào một giai đoạn của vòng đời."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Thẻ mô hình không nói gì về giai đoạn nào? Đó có phải là một lỗ hổng kiểm soát không?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Trang bằng tiếng Anh, thầy cô sẽ trình chiếu và tóm tắt."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image4.png",
+     "caption": "Sơ đồ tư duy Bài 12.1."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Vòng đời hệ thống AI",
+         "b": true
+        },
+        {
+         "text": " gồm tám giai đoạn: xác định vấn đề; chuẩn bị dữ liệu; thiết kế; thử nghiệm; triển khai; giám sát; xử lí sự cố; kết thúc sử dụng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quyền kiểm soát:",
+         "b": true
+        },
+        {
+         "text": " xem xét, can thiệp, dừng lại. "
+        },
+        {
+         "text": "Chịu trách nhiệm:",
+         "b": true
+        },
+        {
+         "text": " giải thích và khắc phục hậu quả."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Lỗ hổng kiểm soát:",
+         "b": true
+        },
+        {
+         "text": " bước quan trọng mà không có người cụ thể giữ cả hai điều trên."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hai câu hỏi đi cùng mọi giai đoạn: "
+        },
+        {
+         "text": "ai kiểm soát, ai chịu trách nhiệm?",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phân tích vòng đời nhằm "
+        },
+        {
+         "text": "vá lỗ hổng",
+         "b": true
+        },
+        {
+         "text": ", không nhằm bác bỏ hệ thống."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Sắp xếp lại tám giai đoạn sau theo đúng thứ tự: giám sát; thiết kế; kết thúc sử dụng; xác định vấn đề; triển khai; chuẩn bị dữ liệu; xử lí sự cố; thử nghiệm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi tình huống, cho biết đang thiếu quyền kiểm soát, thiếu người chịu trách nhiệm, hay thiếu cả hai: a) Bác sĩ nhận kết quả AI đọc phim nhưng phần mềm không cho xem vùng nào trên phim khiến nó kết luận như vậy; b) Một trang web dùng AI gợi ý tin tức, khi có tin giả lan rộng thì không bộ phận nào nhận là việc của mình; c) Một giáo viên phát hiện phần mềm chấm trắc nghiệm chấm sai nhưng không có nút nào để sửa điểm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Một cửa hàng dùng camera AI đếm khách. Sau hai năm, cửa hàng đóng cửa. Em nêu ba câu hỏi cần được trả lời ở giai đoạn 8."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Vì sao “nhóm kĩ thuật tự thử, tự xác nhận đạt” bị coi là một lỗ hổng, dù có người làm và có người kí? Trả lời trong ba câu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Chọn một ứng dụng có AI em đang dùng. Với tư cách người dùng, em nhìn thấy được dấu vết của những giai đoạn nào (ví dụ: mục góp ý cho thấy có giai đoạn giám sát)? Giai đoạn nào em hoàn toàn không có thông tin?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tìm một bản tin về một sự cố liên quan đến AI (trong nước hoặc quốc tế) trên một tờ báo chính thống. Đọc và thử trả lời: sự cố lộ ra ở giai đoạn nào; theo bài báo, nguyên nhân nằm ở giai đoạn nào; ai đã đứng ra giải thích và khắc phục. Ghi lại nguồn bài báo. Nếu bài báo không cho đủ thông tin để trả lời, em ghi rõ “chưa đủ thông tin” thay vì suy đoán."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể tám giai đoạn của vòng đời theo thứ tự"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt quyền kiểm soát với chịu trách nhiệm"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lập bảng phân tích vòng đời và chỉ ra lỗ hổng kiểm soát"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đề xuất cách vá lỗ hổng, có nêu người cụ thể"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vòng đời hệ thống AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Toàn bộ các giai đoạn từ lúc quyết định dùng AI đến lúc ngừng hệ thống"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỗ phải có người xem xét và xác nhận trước khi đi tiếp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khả năng thật sự để xem xét, can thiệp, dừng lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chịu trách nhiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đứng ra giải thích và khắc phục hậu quả"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lỗ hổng kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bước quan trọng không có người cụ thể vừa kiểm soát vừa chịu trách nhiệm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Xác định vấn đề; chuẩn bị dữ liệu; thiết kế; thử nghiệm; triển khai; giám sát; xử lí sự cố; kết thúc sử dụng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Thiếu quyền kiểm soát thật: bác sĩ chịu trách nhiệm nhưng không có thông tin để xem xét. b) Thiếu người chịu trách nhiệm (và nhiều khả năng thiếu cả người giám sát). c) Thiếu quyền kiểm soát: phát hiện được nhưng không can thiệp được."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: hình ảnh và số liệu đã thu được xóa hay chuyển cho ai; ai quyết định và ai xác nhận việc xóa; khách hàng và nhân viên có được thông báo không."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Người làm ra sản phẩm khó nhìn thấy điểm mù của chính mình và có động lực muốn sản phẩm “đạt”. Việc kiểm tra chỉ có giá trị kiểm soát khi người kiểm tra độc lập với người làm. Có chữ kí nhưng không có sự xem xét thật thì vẫn là lỗ hổng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Câu trả lời riêng của em. Thông thường người dùng thấy được dấu vết của giai đoạn 3 (giao diện, thông báo “đây là AI”), 5 (hướng dẫn sử dụng), 6 (mục góp ý) và ít biết về giai đoạn 2, 4."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [2], [6], [13], [14] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

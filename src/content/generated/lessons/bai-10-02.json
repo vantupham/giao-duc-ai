@@ -1,0 +1,1821 @@
+{
+ "id": "10.2",
+ "slug": "bai-10-02",
+ "grade": 10,
+ "num": 2,
+ "topicId": "10.1",
+ "title": "Vì sao con người phải kiểm soát AI?",
+ "meta": "Chuyên đề 10.1: Con người làm chủ AI (tiết 2 trong 3 tiết)",
+ "period": {
+  "index": 2,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Giải thích được vì sao con người cần kiểm soát AI, dựa trên ba giá trị: "
+   },
+   {
+    "text": "an toàn, công bằng, quyền lợi con người",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được một số "
+   },
+   {
+    "text": "rủi ro",
+    "b": true
+   },
+   {
+    "text": " mà một sản phẩm AI có thể gây ra cho cá nhân và cho xã hội."
+   }
+  ],
+  [
+   {
+    "text": "Chỉ ra được con người nên can thiệp ở khâu nào trong một tình huống cụ thể."
+   }
+  ]
+ ],
+ "keywords": [
+  "kiểm soát",
+  "an toàn",
+  "công bằng",
+  "quyền lợi con người",
+  "rủi ro",
+  "thiên lệch"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-khi-mot-luat-su-tin-may-tuyet-doi",
+   "title": "Khởi động: Khi một luật sư tin máy tuyệt đối",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Năm 2023, tại một tòa án ở New York (Hoa Kỳ), hai luật sư nộp cho tòa một bản lập luận trong vụ kiện một hãng hàng không. Trong bản ấy có dẫn nhiều bản án để làm căn cứ. Khi luật sư phía bên kia và thẩm phán đi tìm, họ phát hiện: "
+      },
+      {
+       "text": "những bản án đó không hề tồn tại",
+       "b": true
+      },
+      {
+       "text": ". Chúng do một công cụ trò chuyện AI tạo ra khi luật sư nhờ nó tra cứu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ngày 22/6/2023, thẩm phán ra quyết định phạt hai luật sư và công ty của họ 5.000 đô la Mỹ, đồng thời buộc họ gửi thư thông báo cho thân chủ và cho từng vị thẩm phán bị nêu tên trong các bản án giả [12]."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Trong chuyện này, lỗi thuộc về công cụ AI hay thuộc về con người? Vì sao?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chính thẩm phán đã trả lời. Ông viết rằng việc luật sư dùng công cụ AI tự nó không có gì sai; nhưng luật sư có vai trò “gác cổng”, phải bảo đảm những gì mình nộp cho tòa là chính xác [12]. Công cụ đã sai, nhưng người bỏ khâu kiểm tra mới là người chịu trách nhiệm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở bài trước, em biết con người có vai trò trong mọi hệ thống AI. Bài này trả lời câu hỏi tiếp theo: "
+      },
+      {
+       "text": "vì sao con người phải giữ quyền kiểm soát",
+       "b": true
+      },
+      {
+       "text": ", và nếu buông ra thì điều gì có thể xảy ra?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-kiem-soat-ai-nghia-la-gi",
+   "title": "1. “Kiểm soát AI” nghĩa là gì?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhiều bạn nghe “kiểm soát” liền nghĩ đến “cấm”. Không phải vậy."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Con người kiểm soát AI",
+         "b": true
+        },
+        {
+         "text": " nghĩa là con người "
+        },
+        {
+         "text": "đặt mục tiêu",
+         "b": true
+        },
+        {
+         "text": " cho hệ thống, "
+        },
+        {
+         "text": "theo dõi và kiểm tra",
+         "b": true
+        },
+        {
+         "text": " kết quả của nó, "
+        },
+        {
+         "text": "có quyền can thiệp hoặc dừng",
+         "b": true
+        },
+        {
+         "text": " nó, và "
+        },
+        {
+         "text": "chịu trách nhiệm",
+         "b": true
+        },
+        {
+         "text": " về việc sử dụng nó."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy nghĩ đến chiếc xe có chế độ hỗ trợ lái. Xe có thể tự giữ làn, tự giữ khoảng cách. Nhưng người lái vẫn phải để tay trên vô lăng, mắt nhìn đường, chân sẵn sàng đạp phanh. Kiểm soát không làm chiếc xe kém hiện đại đi; nó làm chuyến đi an toàn."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image5.png",
+     "caption": "Hình 10.2.1. Bốn việc của “kiểm soát AI”."
+    }
+   ]
+  },
+  {
+   "id": "2-ba-li-do-con-nguoi-phai-giu-quyen-kiem-soat",
+   "title": "2. Ba lí do con người phải giữ quyền kiểm soát",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "h3",
+     "text": "2.1. An toàn: vì AI có thể sai",
+     "id": "2-1-an-toan-vi-ai-co-the-sai"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mọi hệ thống AI đều có thể sai, kể cả hệ thống rất tốt. AI tạo sinh có thể viết ra nội dung nghe hợp lí nhưng không đúng sự thật, như các bản án giả ở trên. Hiện tượng này gọi là "
+      },
+      {
+       "text": "ảo giác AI",
+       "b": true
+      },
+      {
+       "text": ": đây là hạn chế kĩ thuật của mô hình, không phải máy cố ý nói dối [1]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cái sai của máy có một đặc điểm nguy hiểm: nó được nói ra bằng giọng tự tin y như cái đúng. Vì vậy cần một con người đứng ở cuối để hỏi “có chắc không?” trước khi kết quả được dùng vào việc hệ trọng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ:",
+       "i": true
+      },
+      {
+       "text": " phần mềm hỗ trợ đọc phim X-quang có thể đánh dấu vùng nghi ngờ rất nhanh. Bác sĩ là người xem lại, đối chiếu với triệu chứng của bệnh nhân, rồi mới kết luận."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.2. Công bằng: vì AI học từ dữ liệu của quá khứ",
+     "id": "2-2-cong-bang-vi-ai-hoc-tu-du-lieu-cua-qua-khu"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "AI không tự nghĩ ra điều gì là công bằng. Nó học từ dữ liệu, mà dữ liệu là dấu vết của những việc con người đã làm, kể cả những việc chưa công bằng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Theo hãng tin Reuters, từ năm 2014 một tập đoàn công nghệ lớn đã phát triển một công cụ AI để chấm điểm hồ sơ xin việc. Công cụ học từ các hồ sơ gửi đến công ty trong vòng 10 năm, mà phần lớn những hồ sơ ấy là của nam giới. Đến năm 2015, công ty nhận ra công cụ không đánh giá ứng viên cho các vị trí kĩ thuật một cách trung lập về giới: nó hạ điểm những hồ sơ có từ chỉ phụ nữ, chẳng hạn “đội trưởng câu lạc bộ cờ vua nữ”. Công ty đã chỉnh sửa, nhưng không có gì bảo đảm công cụ sẽ không tìm ra cách phân biệt khác. Nhóm phát triển bị giải tán vào đầu năm 2017. [11]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Không ai viết dòng lệnh “trừ điểm phụ nữ”. Máy tự rút ra điều đó từ dữ liệu cũ. Sai lệch có tính hệ thống như vậy gọi là "
+      },
+      {
+       "text": "thiên lệch",
+       "b": true
+      },
+      {
+       "text": " [1]. Chỉ con người mới nhận ra “kết quả này không công bằng” và quyết định sửa hoặc dừng."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.3. Quyền lợi con người: vì ai đó phải chịu trách nhiệm",
+     "id": "2-3-quyen-loi-con-nguoi-vi-ai-do-phai-chiu-trach-nhiem"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi một quyết định ảnh hưởng đến em, ví dụ em bị loại khỏi danh sách học bổng, em có quyền hỏi: "
+      },
+      {
+       "text": "vì sao?",
+       "i": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "tôi đề nghị xem xét lại ở đâu?",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một cỗ máy không thể đứng ra trả lời hai câu hỏi đó. Nó không thể giải thích bằng lời lẽ mà em hiểu được, không thể xin lỗi, không thể sửa sai cho em. Chỉ con người mới làm được. Vì thế, những quyết định ảnh hưởng đến cơ hội, sức khỏe, danh dự của một người cần có "
+      },
+      {
+       "text": "một con người cụ thể đứng tên",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giá trị",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vì sao cần con người kiểm soát",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "An toàn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI có thể sai; con người phát hiện và dừng kịp thời"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người lái vẫn quan sát khi xe hỗ trợ lái; bác sĩ xem lại phim"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công bằng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI học từ dữ liệu cũ nên có thể lặp lại thiên lệch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ chấm hồ sơ hạ điểm ứng viên nữ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền lợi con người"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyết định ảnh hưởng đến con người cần có người giải thích và chịu trách nhiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người bị từ chối được biết lí do và được xem xét lại"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Máy thì khách quan, không thiên vị ai.”",
+         "b": true
+        },
+        {
+         "text": " Máy học từ dữ liệu do con người tạo ra. Dữ liệu lệch thì máy lệch theo, và còn lặp lại cái lệch ấy hàng triệu lần."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“AI nguy hiểm thế thì đừng dùng nữa.”",
+         "b": true
+        },
+        {
+         "text": " Rủi ro không phải lí do để từ chối AI. Nó là lí do để "
+        },
+        {
+         "text": "giữ con người ở vị trí kiểm soát",
+         "b": true
+        },
+        {
+         "text": ". Xe máy có rủi ro, và câu trả lời là mũ bảo hiểm cùng luật giao thông, không phải cấm xe."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Có người kí tên cuối là đủ.”",
+         "b": true
+        },
+        {
+         "text": " Nếu người kí không đọc, không có thời gian xem, không có quyền bác bỏ, thì chữ kí ấy chỉ là hình thức."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi tình huống sau, em hãy cho biết giá trị nào đang bị đe dọa nếu không có con người kiểm tra: (a) một ứng dụng tự động khóa tài khoản người bán hàng khi “phát hiện bất thường”; (b) một hệ thống tự điều khiển đèn giao thông mà không có ai trực; (c) một phần mềm chấm thi nói chỉ cho điểm cao với giọng một vùng."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-ban-do-rui-ro-ai-co-the-gay-hai-cho-ai",
+   "title": "3. Bản đồ rủi ro: AI có thể gây hại cho ai?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Rủi ro",
+       "b": true
+      },
+      {
+       "text": " là khả năng xảy ra điều gây hại. Muốn nói rõ một rủi ro, em cần trả lời đủ ba ý: "
+      },
+      {
+       "text": "ai",
+       "b": true
+      },
+      {
+       "text": " bị ảnh hưởng, bị ảnh hưởng "
+      },
+      {
+       "text": "điều gì",
+       "b": true
+      },
+      {
+       "text": ", trong "
+      },
+      {
+       "text": "tình huống nào",
+       "b": true
+      },
+      {
+       "text": ". Nói “AI có hại” thì chưa phải là nêu rủi ro."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Với cá nhân",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Với xã hội",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận thông tin sai và làm theo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tin giả lan nhanh, khó phân biệt thật giả"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lộ dữ liệu cá nhân: hình ảnh, giọng nói, vị trí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một nhóm người bị đối xử thiếu công bằng trên diện rộng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lệ thuộc, giảm khả năng tự suy nghĩ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lừa đảo có thể thực hiện với số lượng lớn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bị cuốn theo nội dung được gợi ý, mất thời gian"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhiều công việc thay đổi, cần học kĩ năng mới"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bị giả mạo hình ảnh, giọng nói"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dân mất lòng tin vào thông tin"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bảng này không nhằm làm em sợ. Nó giống tấm biển cảnh báo ở đoạn đường trơn: biết trước thì đi cẩn thận hơn."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chọn một dòng trong bảng. Viết lại thành một câu rủi ro đầy đủ ba ý. Ví dụ: “Một học sinh lớp 10 (ai) có thể chép vào bài thuyết trình một số liệu do trợ lí AI bịa ra (điều gì) khi dùng nó để tìm tài liệu mà không đối chiếu nguồn (tình huống).”"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-kiem-soat-o-dau-tim-khau-then-chot",
+   "title": "4. Kiểm soát ở đâu? Tìm “khâu then chốt”",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kiểm soát không có nghĩa là con người làm lại mọi việc của máy. Như thế thì dùng máy để làm gì. Điều cần làm là tìm "
+      },
+      {
+       "text": "khâu then chốt",
+       "b": true
+      },
+      {
+       "text": ": chỗ mà nếu sai thì hậu quả rơi vào con người và khó sửa."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy xem ba tình huống, mỗi tình huống có một đề xuất “để AI tự quyết cho nhanh”:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tình huống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI nên làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Con người phải giữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giá trị được bảo vệ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bệnh viện quá tải, muốn cho bệnh nhân về ngay khi AI kết luận phim “bình thường”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sàng lọc, đánh dấu phim nghi ngờ để ưu tiên đọc trước"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bác sĩ kết luận; thỉnh thoảng xem lại ngẫu nhiên các phim AI cho là bình thường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "An toàn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quỹ học bổng muốn để AI tự loại 80% hồ sơ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sắp xếp, tóm tắt hồ sơ, kiểm tra thiếu giấy tờ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hội đồng quyết định loại; người bị loại được biết lí do và đề nghị xem xét lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công bằng, quyền lợi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thành phố muốn bỏ hẳn người trực, để AI điều khiển đèn giao thông kể cả khi có sự cố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều chỉnh đèn trong điều kiện bình thường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người trực can thiệp khi có tai nạn, xe ưu tiên, thiên tai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "An toàn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em có nhận ra điểm chung không? Ở cả ba tình huống, câu trả lời tốt nhất không phải “chỉ người” hay “chỉ máy”, mà là "
+      },
+      {
+       "text": "máy hỗ trợ, người quyết định ở khâu then chốt",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-kiem-soat-bat-dau-tu-chinh-em",
+   "title": "5. Kiểm soát bắt đầu từ chính em",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em chưa điều hành bệnh viện hay quỹ học bổng. Nhưng em đang kiểm soát, hoặc không kiểm soát, AI mỗi ngày:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Khi trợ lí AI đưa ra một con số, em có "
+        },
+        {
+         "text": "tìm nguồn để đối chiếu",
+         "b": true
+        },
+        {
+         "text": " không?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi ứng dụng gợi ý video tiếp theo, em có "
+        },
+        {
+         "text": "tự quyết định",
+         "b": true
+        },
+        {
+         "text": " xem hay dừng không?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi một ứng dụng xin quyền truy cập danh bạ, em có "
+        },
+        {
+         "text": "hỏi vì sao nó cần",
+         "b": true
+        },
+        {
+         "text": " không?"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba thói quen nhỏ đó chính là an toàn, quyền tự chủ và quyền lợi của em trong đời sống hằng ngày."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-neu-em-la-chiec-xe-tu-lai",
+   "title": "Trải nghiệm: Nếu em là chiếc xe tự lái",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa học vì sao con người phải giữ quyền kiểm soát AI. Trang web này đặt em vào những tình huống khó mà một chiếc xe tự lái có thể gặp phải."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image6.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Moral Machine"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " moralmachine.net (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em cùng cả lớp xem từng tình huống: xe mất phanh và phải chọn một trong hai hướng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em giơ tay chọn phương án của mình."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em so lựa chọn của lớp với kết quả của hàng triệu người trên thế giới."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Có nên để chiếc xe tự quyết định trong những tình huống như vậy không? Nếu xảy ra tai nạn, ai phải chịu trách nhiệm?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Thầy cô sẽ trình chiếu trang này, em không cần dùng máy."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image7.png",
+     "caption": "Sơ đồ tư duy Bài 10.2."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Kiểm soát AI",
+         "b": true
+        },
+        {
+         "text": " là đặt mục tiêu, kiểm tra, có quyền dừng và chịu trách nhiệm; không phải là cấm dùng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba lí do phải kiểm soát: "
+        },
+        {
+         "text": "an toàn",
+         "b": true
+        },
+        {
+         "text": " (AI có thể sai), "
+        },
+        {
+         "text": "công bằng",
+         "b": true
+        },
+        {
+         "text": " (AI học từ dữ liệu cũ, có thể thiên lệch), "
+        },
+        {
+         "text": "quyền lợi con người",
+         "b": true
+        },
+        {
+         "text": " (cần người giải thích và chịu trách nhiệm)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Rủi ro",
+         "b": true
+        },
+        {
+         "text": " cần nêu đủ: ai bị ảnh hưởng, điều gì, trong tình huống nào."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "AI có thể gây rủi ro cho "
+        },
+        {
+         "text": "cá nhân",
+         "b": true
+        },
+        {
+         "text": " (thông tin sai, lộ dữ liệu, lệ thuộc, bị giả mạo) và cho "
+        },
+        {
+         "text": "xã hội",
+         "b": true
+        },
+        {
+         "text": " (tin giả, phân biệt đối xử, lừa đảo quy mô lớn)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người không cần làm lại mọi việc của máy, mà cần giữ "
+        },
+        {
+         "text": "khâu then chốt",
+         "b": true
+        },
+        {
+         "text": ": chỗ sai thì hại người và khó sửa."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Công cụ có thể sai, nhưng "
+        },
+        {
+         "text": "người dùng kết quả là người chịu trách nhiệm",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Nối mỗi tình huống với giá trị chính đang được bảo vệ (an toàn, công bằng, quyền lợi con người)."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tình huống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giá trị",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "a"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kĩ sư thử phần mềm nhận giọng nói với người nói nhiều giọng vùng miền trước khi phát hành"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "b"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dược sĩ kiểm tra lại đơn thuốc do phần mềm gợi ý"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "c"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ngân hàng cho khách hàng biết lí do bị từ chối vay và có nhân viên xem xét lại"
+          }
+         ]
+        }
+       ],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Viết ba câu rủi ro đầy đủ (ai, điều gì, tình huống nào) cho một ứng dụng AI tạo ảnh chân dung từ ảnh người dùng tải lên: hai rủi ro với cá nhân, một rủi ro với xã hội."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Một trường định dùng AI "
+      },
+      {
+       "text": "tự động xếp lớp",
+       "b": true
+      },
+      {
+       "text": " cho học sinh lớp 10 dựa trên điểm thi và kết quả một bài trắc nghiệm tính cách. Hãy chỉ ra khâu then chốt cần con người quyết định và giải thích bằng ít nhất hai giá trị."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Bạn Tùng nói: “Luật sư trong chuyện kia xui thôi, lỗi là tại công cụ bịa ra bản án.” Em có đồng ý không? Viết 3 đến 4 câu trả lời Tùng, có dùng ý của thẩm phán."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Chọn một trong ba tình huống ở mục 4. Đóng vai người ủng hộ “để AI tự quyết”, nêu hai lợi ích có thật của đề xuất đó. Sau đó đổi vai, nêu cách giữ được lợi ích ấy mà vẫn bảo đảm kiểm soát."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Phỏng vấn nhanh.",
+       "b": true
+      },
+      {
+       "text": " Hỏi người thân xem họ đã từng nhận tin nhắn, cuộc gọi nào nghi là giả mạo chưa. Ghi lại một trường hợp trong 3 dòng, "
+      },
+      {
+       "text": "không ghi tên và số điện thoại",
+       "b": true
+      },
+      {
+       "text": ". Em sẽ dùng ở bài sau."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Tự soi.",
+       "b": true
+      },
+      {
+       "text": " Trong tuần này, ghi lại một lần em dùng kết quả của một công cụ AI. Em đã kiểm tra bằng cách nào? Nếu chưa kiểm tra, lần sau em sẽ làm gì?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích “kiểm soát AI” nghĩa là gì"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ba giá trị và ví dụ cho mỗi giá trị"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết một câu rủi ro đầy đủ ba ý"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra khâu then chốt trong một tình huống"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm soát AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người đặt mục tiêu, kiểm tra kết quả, có quyền can thiệp hoặc dừng, và chịu trách nhiệm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rủi ro"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khả năng xảy ra điều gây hại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảo giác AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiện tượng hệ thống AI tạo ra đầu ra có vẻ hợp lí nhưng sai hoặc không có thật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiên lệch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai lệch có tính hệ thống trong đầu ra của AI, có thể dẫn đến kết quả thiếu công bằng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khâu then chốt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bước mà nếu sai thì hậu quả rơi vào con người và khó sửa"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) công bằng; b) an toàn; c) quyền lợi con người."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: người dùng có thể bị lộ ảnh khuôn mặt nếu ứng dụng lưu và chia sẻ ảnh cho bên khác; một học sinh có thể bị bạn dùng ảnh của mình tạo hình chế giễu khi ảnh bị tải lên mà không xin phép; cộng đồng có thể bị lừa bởi ảnh chân dung giả dùng để lập tài khoản mạo danh."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Khâu then chốt: quyết định xếp lớp cuối cùng và việc tiếp nhận ý kiến của học sinh, phụ huynh. Công bằng: bài trắc nghiệm tính cách có thể không phù hợp với mọi học sinh, dữ liệu cũ có thể lệch. Quyền lợi: việc xếp lớp ảnh hưởng ba năm học, học sinh cần được biết căn cứ và được đề nghị xem xét lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: công cụ đã tạo ra nội dung sai, đó là hạn chế có thật. Nhưng thẩm phán nêu rõ dùng AI không có gì sai, còn luật sư phải bảo đảm tính chính xác của tài liệu mình nộp. Người dùng kết quả mà không kiểm tra thì chịu trách nhiệm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ với bệnh viện. Lợi ích: giảm thời gian chờ, bác sĩ đỡ quá tải. Cách giữ lợi ích: AI xếp thứ tự ưu tiên để bác sĩ đọc phim nghi ngờ trước; phim AI cho là bình thường vẫn được bác sĩ xem, nhưng nhanh hơn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [11], [12] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

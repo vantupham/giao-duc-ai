@@ -1,0 +1,1855 @@
+{
+ "id": "11.5",
+ "slug": "bai-11-05",
+ "grade": 11,
+ "num": 5,
+ "topicId": "11.2",
+ "title": "Dữ liệu của em, quyền của em",
+ "meta": "Chuyên đề 11.2: AI bền vững, công bằng và quyền của người dùng (tiết 2 trong 2 tiết)",
+ "period": {
+  "index": 2,
+  "total": 2
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nhận ra được đâu là "
+   },
+   {
+    "text": "dữ liệu cá nhân",
+    "b": true
+   },
+   {
+    "text": " trong những gì em đưa cho một công cụ AI."
+   }
+  ],
+  [
+   {
+    "text": "Trình bày được "
+   },
+   {
+    "text": "năm quyền cơ bản",
+    "b": true
+   },
+   {
+    "text": " của em đối với dữ liệu của mình."
+   }
+  ],
+  [
+   {
+    "text": "Đọc được một bản điều khoản để tìm "
+   },
+   {
+    "text": "ba thông tin quan trọng",
+    "b": true
+   },
+   {
+    "text": ", và viết được một "
+   },
+   {
+    "text": "yêu cầu xóa dữ liệu",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ]
+ ],
+ "keywords": [
+  "dữ liệu cá nhân",
+  "chủ thể dữ liệu",
+  "sự đồng ý",
+  "rút lại sự đồng ý",
+  "điều khoản sử dụng",
+  "yêu cầu xóa"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-hai-chu-toi-dong-y",
+   "title": "Khởi động: Hai chữ “Tôi đồng ý”",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em đã bấm “Tôi đồng ý” bao nhiêu lần trong đời? Chắc khó đếm. Mỗi lần cài một ứng dụng, mở một trang mới, hộp thoại ấy lại hiện ra với một đường liên kết màu xanh: "
+      },
+      {
+       "text": "Điều khoản sử dụng và Chính sách quyền riêng tư",
+       "i": true
+      },
+      {
+       "text": ". Phần lớn chúng ta bấm đồng ý trong chưa đầy hai giây."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Lần gần nhất em bấm “Tôi đồng ý”, em đã đồng ý với điều gì? Em có nhớ ứng dụng ấy được phép làm gì với ảnh, giọng nói, câu hỏi của em không?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu em không nhớ, em không phải là người duy nhất. Nhưng với các công cụ AI, cái bấm ấy quan trọng hơn trước, vì thứ em đưa vào không chỉ là tên và mật khẩu. Đó là bài làm, là câu hỏi lúc em đang lo lắng, là giọng nói, là khuôn mặt."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-du-lieu-ca-nhan-thu-gi-la-cua-em",
+   "title": "1. Dữ liệu cá nhân: thứ gì là “của em”?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Dữ liệu cá nhân",
+         "b": true
+        },
+        {
+         "text": " là thông tin gắn với một con người cụ thể hoặc giúp xác định một con người cụ thể."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Người mà dữ liệu ấy nói về được gọi là "
+        },
+        {
+         "text": "chủ thể dữ liệu",
+         "b": true
+        },
+        {
+         "text": ". Với dữ liệu của em, chủ thể dữ liệu là em."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có thông tin đứng một mình đã chỉ ra em: họ tên kèm ngày sinh, số định danh, ảnh khuôn mặt. Có thông tin phải ghép lại mới chỉ ra em: “học sinh lớp 11, trường X, vừa đoạt giải bơi lội” thì cả trường biết là ai."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi dùng công cụ AI, dữ liệu cá nhân của em đi vào theo ba đường:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đường vào",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em "
+          },
+          {
+           "text": "chủ động đưa",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Họ tên, thư điện tử khi đăng kí; nội dung câu hỏi; ảnh, tệp tải lên; giọng nói"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ "
+          },
+          {
+           "text": "tự ghi nhận",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thời gian dùng, loại thiết bị, vị trí gần đúng, những gì em bấm vào"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ "
+          },
+          {
+           "text": "suy ra",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trình độ của em, môn em yếu, thói quen học, sở thích"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đường thứ ba ít ai nghĩ đến. Từ những câu hỏi em gửi mỗi tối, một hệ thống có thể suy ra em đang gặp khó ở môn nào, thậm chí tâm trạng em ra sao. Thông tin được suy ra ấy cũng nói về em."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Mình không gõ họ tên, vậy là không có dữ liệu cá nhân.”",
+         "b": true
+        },
+        {
+         "text": " Ảnh có khuôn mặt, đoạn ghi âm giọng nói, một bài văn kể về gia đình, tài khoản đăng nhập đều có thể chỉ ra em, dù em không gõ tên."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Soi lại một lần dùng",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nhớ lại lần gần nhất em dùng một công cụ AI. Kẻ ba cột ứng với ba đường vào ở bảng trên và ghi những dữ liệu em nghĩ công cụ đã có về em. Đánh dấu sao vào dòng nào có dữ liệu của "
+        },
+        {
+         "text": "người khác",
+         "b": true
+        },
+        {
+         "text": " (bạn bè, người thân)."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-nam-quyen-co-ban-cua-em",
+   "title": "2. Năm quyền cơ bản của em",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dữ liệu là của em, nên em có quyền đối với nó. Luật Bảo vệ dữ liệu cá nhân, có hiệu lực từ ngày 01/01/2026, quy định các quyền của chủ thể dữ liệu [5]. Ở lớp 11, em cần nắm chắc năm quyền cơ bản sau. Hình 11.5.1 gắn mỗi quyền vào chặng đường đi của dữ liệu."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image16.png",
+     "caption": "Hình 11.5.1. Vòng đời của dữ liệu cá nhân và năm quyền của em. Mỗi quyền “canh” một chặng trên đường đi của dữ liệu."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Quyền",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nghĩa là",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu em có thể hỏi",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Quyền được biết",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em được biết dữ liệu nào của mình bị thu thập, để làm gì, ai xử lí"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Ứng dụng này lấy những gì của em và dùng vào việc gì?”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Quyền đồng ý hoặc không đồng ý",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc xử lí dữ liệu của em cần sự đồng ý của em, trừ trường hợp luật quy định khác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em có thể dùng mà không bật mục này không?”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Quyền rút lại sự đồng ý",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã đồng ý rồi vẫn có thể đổi ý"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em muốn tắt việc dùng dữ liệu của em để cải tiến sản phẩm.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Quyền xem và chỉnh sửa",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em được xem dữ liệu của mình đang được lưu và yêu cầu sửa cho đúng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Cho em xem thông tin đang lưu về em. Mục này sai, xin sửa lại.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Quyền yêu cầu xóa",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em được yêu cầu xóa dữ liệu của mình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em không dùng nữa. Xin xóa tài khoản và dữ liệu của em.”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Luật còn quy định một số quyền khác, như quyền yêu cầu hạn chế xử lí, quyền phản đối, quyền khiếu nại [5]. Khi cần biết nội dung chính xác của từng quyền và các trường hợp ngoại lệ, em đọc văn bản luật hoặc hỏi thầy cô, cha mẹ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba điều cần hiểu đúng về sự đồng ý:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Đồng ý phải là lựa chọn thật.",
+         "b": true
+        },
+        {
+         "text": " Một ô đã được đánh dấu sẵn, hay một câu viết mập mờ ở cuối trang, không phải là cách hỏi ý kiến đàng hoàng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đồng ý cho việc này không phải là đồng ý cho mọi việc.",
+         "b": true
+        },
+        {
+         "text": " Em cho phép dùng micro để chấm phát âm; điều đó không có nghĩa em cho phép dùng giọng nói của em vào quảng cáo."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Rút lại được.",
+         "b": true
+        },
+        {
+         "text": " Đổi ý là quyền của em, không phải là làm phiền."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với các hệ thống AI, pháp luật còn có thêm một yêu cầu liên quan đến quyền được biết: theo Luật Trí tuệ nhân tạo, người dùng cần được biết khi mình đang tương tác với một hệ thống AI chứ không phải với con người [4]. Nếu em trò chuyện với “nhân viên tư vấn” trên một trang web và không rõ đó là người hay máy, em có quyền hỏi."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em chưa đủ 18 tuổi thì sao?",
+       "b": true
+      },
+      {
+       "text": " Pháp luật có những quy định riêng để bảo vệ dữ liệu của trẻ em và người chưa thành niên, trong đó có vai trò của cha mẹ hoặc người giám hộ [6]. Vì thế, với những quyết định lớn về dữ liệu (đăng kí dịch vụ trả phí, gửi giấy tờ, gửi yêu cầu chính thức đến một công ti), em nên làm cùng cha mẹ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-doc-dieu-khoan-tim-ba-thong-tin-trong-ba-phut",
+   "title": "3. Đọc điều khoản: tìm ba thông tin trong ba phút",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Không ai đọc hết một bản điều khoản dài hai mươi trang. Nhưng em có thể tìm "
+      },
+      {
+       "text": "ba thông tin",
+       "b": true
+      },
+      {
+       "text": " trong ba phút, bằng cách dò các từ khóa."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cần tìm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Từ khóa nên dò",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điều em muốn biết",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu gì?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“thu thập”, “thông tin chúng tôi nhận”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có thứ nào không liên quan đến chức năng không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng làm gì, chia sẻ cho ai?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“sử dụng”, “cải thiện”, “huấn luyện”, “bên thứ ba”, “đối tác”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu của em có được dùng để huấn luyện mô hình, có được chuyển cho bên khác không?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em kiểm soát thế nào?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“quyền của bạn”, “xóa”, “tắt”, “liên hệ”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có nút tắt, có cách xóa, có địa chỉ liên hệ không? Lưu trong bao lâu?"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy thử với một bản điều khoản rút gọn của ứng dụng "
+      },
+      {
+       "text": "giả định",
+       "b": true
+      },
+      {
+       "text": " “HọcVui AI” (ứng dụng này không có thật, được viết ra để luyện tập)."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trích điều khoản của HọcVui AI (giả định)",
+         "b": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Điều 2. Chúng tôi thu thập: họ tên, ngày sinh, trường, lớp; nội dung bạn nhập và tệp bạn tải lên; bản ghi âm giọng nói; danh bạ điện thoại; vị trí của thiết bị."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Điều 3. Chúng tôi sử dụng dữ liệu để cung cấp dịch vụ, cải thiện sản phẩm, huấn luyện mô hình AI và gửi thông tin từ các đối tác quảng cáo."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Điều 5. Dữ liệu được lưu trong thời gian cần thiết theo quyết định của chúng tôi."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Điều 7. Bằng việc tiếp tục sử dụng, bạn được xem là đã đồng ý với mọi thay đổi của điều khoản này."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em đọc và so với ba thông tin cần tìm:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cần tìm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tìm thấy ở",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhận xét",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều 2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Danh bạ và vị trí không cần cho việc học. Danh bạ còn là dữ liệu của người khác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng làm gì, cho ai?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều 3"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng để huấn luyện mô hình và chuyển cho đối tác quảng cáo, không thấy lựa chọn từ chối"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em kiểm soát thế nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều 5, 7"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không nêu thời hạn lưu; không nêu cách xóa; coi “tiếp tục dùng” là đồng ý với mọi thay đổi"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết luận: nên cân nhắc không dùng, hoặc hỏi thầy cô, cha mẹ trước. Nếu vẫn dùng, em từ chối các quyền truy cập danh bạ, vị trí và không tải lên tài liệu có thông tin riêng tư."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Ba câu hỏi trước khi bấm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mở phần cài đặt quyền riêng tư của một ứng dụng em đang dùng (hoặc dùng lại trích đoạn HọcVui AI). Tìm câu trả lời cho ba câu hỏi: thu gì; dùng làm gì và chia sẻ cho ai; em kiểm soát thế nào. Câu nào em không tìm thấy câu trả lời? Việc không tìm thấy nói lên điều gì?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-thuc-hien-quyen-tu-biet-den-lam",
+   "title": "4. Thực hiện quyền: từ biết đến làm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Biết quyền mà không dùng thì quyền chỉ nằm trên giấy. Có ba mức thực hiện, từ dễ đến khó."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mức 1. Tự chỉnh trong phần cài đặt.",
+       "b": true
+      },
+      {
+       "text": " Nhiều công cụ có mục cài đặt cho phép tắt việc lưu lịch sử trò chuyện, tắt việc dùng dữ liệu của em để cải tiến mô hình, xóa từng cuộc trò chuyện, thu hồi quyền dùng micro, camera. Đây là cách nhanh nhất để dùng quyền 2, 3 và 5."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mức 2. Gửi yêu cầu cho nhà cung cấp.",
+       "b": true
+      },
+      {
+       "text": " Khi phần cài đặt không có lựa chọn em cần, em viết yêu cầu gửi đến địa chỉ liên hệ ghi trong chính sách quyền riêng tư. Một yêu cầu tốt gồm bốn ý: em là ai (đủ để họ tìm ra tài khoản), em yêu cầu gì, căn cứ, và em mong được phản hồi thế nào."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mẫu yêu cầu xóa dữ liệu",
+         "b": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Kính gửi: Bộ phận bảo vệ dữ liệu của [tên dịch vụ]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Tôi là chủ tài khoản đăng kí bằng địa chỉ thư điện tử […]. Tôi đề nghị quý đơn vị "
+        },
+        {
+         "text": "xóa tài khoản và toàn bộ dữ liệu cá nhân của tôi",
+         "b": true
+        },
+        {
+         "text": ", bao gồm nội dung đã nhập, tệp đã tải lên và bản ghi âm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Tôi thực hiện quyền của chủ thể dữ liệu theo quy định của pháp luật về bảo vệ dữ liệu cá nhân."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Xin vui lòng xác nhận bằng thư điện tử khi việc xóa hoàn tất."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trân trọng. [Họ tên, ngày gửi]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mức 3. Nhờ người lớn và cơ quan có trách nhiệm.",
+       "b": true
+      },
+      {
+       "text": " Nếu nhà cung cấp không phản hồi, hoặc dữ liệu của em bị dùng sai gây hại, em báo cho cha mẹ, thầy cô để được hỗ trợ khiếu nại theo quy định."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Việt Nam đã xây dựng khá đầy đủ khung pháp luật cho lĩnh vực này chỉ trong hơn một năm: Luật Dữ liệu được Quốc hội thông qua ngày 30/11/2024; Luật Bảo vệ dữ liệu cá nhân có hiệu lực từ 01/01/2026; Luật Trí tuệ nhân tạo có hiệu lực từ 01/3/2026; Luật An ninh mạng năm 2025 có hiệu lực từ 01/7/2026 [4], [5], [6], [15]. Thế hệ của em là thế hệ học sinh đầu tiên bước vào lớp học AI khi các quyền về dữ liệu đã được ghi thành luật."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-quyen-cua-em-dung-o-dau-o-quyen-cua-nguoi-khac",
+   "title": "5. Quyền của em dừng ở đâu? Ở quyền của người khác",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Năm quyền trên là của "
+      },
+      {
+       "text": "mỗi người",
+       "b": true
+      },
+      {
+       "text": " đối với dữ liệu của "
+      },
+      {
+       "text": "chính mình",
+       "b": true
+      },
+      {
+       "text": ". Điều đó có hai hệ quả:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Em "
+        },
+        {
+         "text": "không thể đồng ý thay",
+         "b": true
+        },
+        {
+         "text": " bạn. Tải ảnh lớp lên một công cụ tạo ảnh hoạt hình là em đang quyết định thay cho bốn mươi người."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bạn em cũng có quyền "
+        },
+        {
+         "text": "yêu cầu em xóa",
+         "b": true
+        },
+        {
+         "text": " ảnh, tin nhắn của bạn mà em đã chia sẻ. Khi bạn yêu cầu, tôn trọng là việc nên làm."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một quy tắc ngắn để nhớ: "
+      },
+      {
+       "text": "của mình thì cân nhắc, của người thì phải hỏi.",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-xem-du-lieu-cua-chinh-em",
+   "title": "Trải nghiệm: Xem dữ liệu của chính em",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa biết em có năm quyền đối với dữ liệu của mình. Nếu em có tài khoản Google, em có thể tự xem tài khoản đang lưu những gì về em."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image17.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Google, trang Hoạt động của tôi"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " myactivity.google.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em tự làm ở nhà nếu muốn (khoảng 15 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em đăng nhập tài khoản của mình và mở trang Hoạt động của tôi."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em xem có những loại dữ liệu nào đang được lưu."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Nếu muốn, em thử tắt một mục hoặc đặt chế độ tự động xóa."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Khi làm những việc trên, em đã thực hiện quyền nào trong năm quyền?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Đây là hoạt động tự chọn ở nhà, không bắt buộc. Em nên làm cùng cha mẹ và không chụp màn hình gửi cho người khác."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image18.png",
+     "caption": "Sơ đồ tư duy Bài 11.5."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu cá nhân",
+         "b": true
+        },
+        {
+         "text": " là thông tin gắn với hoặc giúp xác định một người cụ thể; gồm cả thứ em đưa, thứ công cụ ghi nhận và thứ công cụ suy ra."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Năm quyền cơ bản: "
+        },
+        {
+         "text": "được biết; đồng ý hoặc không đồng ý; rút lại sự đồng ý; xem và chỉnh sửa; yêu cầu xóa",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đọc điều khoản, tìm ba thông tin: "
+        },
+        {
+         "text": "thu gì; dùng làm gì và chia sẻ cho ai; em kiểm soát thế nào",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thực hiện quyền: tự chỉnh cài đặt, gửi yêu cầu, nhờ người lớn hỗ trợ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Với dữ liệu của người khác: "
+        },
+        {
+         "text": "phải hỏi",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Trong các thông tin sau, thông tin nào là dữ liệu cá nhân? Thông tin nào chỉ là dữ liệu cá nhân khi ghép với thông tin khác? a) Ảnh chân dung; b) “một học sinh thích môn Hóa”; c) bản ghi âm em đọc bài; d) “học sinh lớp 11A3 có điểm Toán cao nhất kì I”; e) nhiệt độ ngoài trời hôm nay."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Mỗi việc sau là thực hiện quyền nào? a) Vào cài đặt tắt mục “dùng nội dung của tôi để cải thiện mô hình” đã bật từ trước; b) Hỏi trung tâm ngoại ngữ xem phần mềm chấm nói có lưu bản ghi âm không; c) Đề nghị sửa ngày sinh bị ghi sai trong hồ sơ học trực tuyến; d) Bấm “Từ chối” khi ứng dụng xin quyền vị trí."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Một ứng dụng viết: “Nếu không cho phép truy cập danh bạ, bạn không thể sử dụng tính năng giải bài tập.” Em nhận xét gì về cách xin sự đồng ý này?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Viết một yêu cầu ngắn (ba, bốn câu) gửi nhà cung cấp một ứng dụng luyện nói, đề nghị cho biết họ đang lưu những bản ghi âm nào của em và lưu trong bao lâu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Lớp em muốn dùng một công cụ AI để làm video kỉ yếu từ ảnh của cả lớp. Em đề xuất ba việc cần làm trước khi tải ảnh lên."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cùng cha mẹ làm một buổi “dọn dẹp dữ liệu” trong 20 phút: chọn ba ứng dụng trên điện thoại, xem mỗi ứng dụng đang được cấp những quyền gì, thu hồi quyền không cần thiết, và xóa tài khoản ở một dịch vụ cả nhà không còn dùng. Ghi lại: việc nào dễ, việc nào khó tìm, và em học được gì về cách các ứng dụng thiết kế phần cài đặt."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận ra dữ liệu cá nhân trong một lần dùng AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu năm quyền cơ bản và cho ví dụ từng quyền"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tìm ba thông tin quan trọng trong một bản điều khoản"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết một yêu cầu thực hiện quyền gửi nhà cung cấp"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu cá nhân"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông tin gắn với hoặc giúp xác định một con người cụ thể"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chủ thể dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người mà dữ liệu cá nhân nói về"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sự đồng ý"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc chủ thể dữ liệu tự nguyện, rõ ràng cho phép xử lí dữ liệu của mình"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều khoản sử dụng, chính sách quyền riêng tư"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Văn bản của nhà cung cấp nêu họ thu gì, dùng làm gì và quyền của người dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bên thứ ba"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tổ chức, cá nhân khác ngoài người dùng và nhà cung cấp dịch vụ"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) và c) là dữ liệu cá nhân. d) chỉ ra một người cụ thể với những ai biết lớp đó, nên cũng cần coi là dữ liệu cá nhân. b) đứng riêng thì chưa, nhưng ghép với trường, lớp, thời gian thì có thể. e) không phải."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Rút lại sự đồng ý. b) Được biết. c) Xem và chỉnh sửa. d) Không đồng ý."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Danh bạ không liên quan đến giải bài tập. Buộc người dùng phải cho một quyền không cần thiết thì mới được dùng dịch vụ làm cho sự đồng ý không còn là lựa chọn thật. Nên từ chối và tìm công cụ khác."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: “Kính gửi bộ phận hỗ trợ. Tôi là chủ tài khoản […]. Tôi đề nghị được biết quý đơn vị hiện lưu những bản ghi âm nào của tôi, dùng vào mục đích gì và lưu trong bao lâu. Xin phản hồi qua thư điện tử này. Trân trọng.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Hỏi ý kiến từng bạn (và cha mẹ, nếu cần), bạn nào không đồng ý thì không dùng ảnh của bạn ấy; đọc điều khoản xem ảnh có bị giữ lại, dùng để huấn luyện không; chọn công cụ được thầy cô chấp thuận, làm xong thì xóa ảnh đã tải lên."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [4], [5], [6], [15] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

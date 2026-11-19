@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/content';
+---
+
+<Base title="Không tìm thấy trang">
+  <div class="wrap read">
+    <h1 style="margin-top:48px">Không tìm thấy trang này</h1>
+    <p class="muted">Đường dẫn có thể đã đổi. Em quay về <a href={url()}>trang chủ</a> hoặc chọn khối lớp ở thanh đầu trang.</p>
+  </div>
+</Base>

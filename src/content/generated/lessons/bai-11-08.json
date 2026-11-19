@@ -1,0 +1,2479 @@
+{
+ "id": "11.8",
+ "slug": "bai-11-08",
+ "grade": 11,
+ "num": 8,
+ "topicId": "11.3",
+ "title": "Prompt nâng cao: ràng buộc đầu ra và chia nhỏ nhiệm vụ",
+ "meta": "Chuyên đề 11.3: AI trong học tập và kĩ thuật prompt nâng cao (tiết 3 trong 3 tiết)",
+ "period": {
+  "index": 3,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Mô tả được hai kĩ thuật đặt câu lệnh nâng cao: "
+   },
+   {
+    "text": "ràng buộc định dạng đầu ra",
+    "b": true
+   },
+   {
+    "text": " và "
+   },
+   {
+    "text": "chia nhỏ nhiệm vụ",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Nhận ra được "
+   },
+   {
+    "text": "dấu hiệu",
+    "b": true
+   },
+   {
+    "text": " cho thấy một yêu cầu cần đến kĩ thuật nào."
+   }
+  ],
+  [
+   {
+    "text": "Giải thích được vì sao chia nhỏ nhiệm vụ giúp con người "
+   },
+   {
+    "text": "giữ quyền quyết định",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ]
+ ],
+ "keywords": [
+  "câu lệnh (prompt)",
+  "ràng buộc định dạng đầu ra",
+  "chia nhỏ nhiệm vụ",
+  "điểm kiểm tra",
+  "chuỗi câu lệnh"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-mot-cau-lenh-om-dom",
+   "title": "Khởi động: Một câu lệnh “ôm đồm”",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bạn Vy cần chọn cách học từ vựng tiếng Anh cho học kì tới. Vy gõ một câu lệnh thật dài:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“So sánh ba phương pháp học từ vựng là thẻ ghi nhớ, đọc truyện và học theo chủ đề, rồi chọn phương pháp tốt nhất cho em, sau đó lập kế hoạch học bốn tuần và soạn luôn bài kiểm tra cuối mỗi tuần.”",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "AI trả về hơn một trang chữ liền nhau. Phần so sánh viết thành ba đoạn văn, mỗi đoạn một kiểu, rất khó đối chiếu. AI chọn “học theo chủ đề” mà Vy không rõ vì sao. Kế hoạch bốn tuần giả định Vy học hai giờ mỗi ngày, trong khi Vy chỉ có ba mươi phút. Bốn bài kiểm tra thì dựa trên một kế hoạch Vy không dùng được."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Câu lệnh của Vy không sai chính tả, không thiếu lịch sự. Vậy nó có vấn đề gì? Em thử chỉ ra ít nhất hai vấn đề."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có hai vấn đề, ứng với hai kĩ thuật của bài học này. Thứ nhất, Vy không nói kết quả cần "
+      },
+      {
+       "text": "trình bày thế nào",
+       "b": true
+      },
+      {
+       "text": ", nên phần so sánh khó đọc. Thứ hai, Vy dồn "
+      },
+      {
+       "text": "bốn việc phụ thuộc nhau",
+       "b": true
+      },
+      {
+       "text": " vào một lần hỏi, nên khi việc thứ hai lệch thì hai việc sau hỏng theo, và Vy không có lúc nào để can thiệp."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nhac-lai-sau-yeu-cau-cua-mot-cau-lenh-tot",
+   "title": "Nhắc lại: Sáu yêu cầu của một câu lệnh tốt",
+   "kind": "recall",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở lớp 10 (Bài 10.8 của tập Khối 10), em đã học sáu yêu cầu. Bảng sau giúp em nhớ lại."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Yêu cầu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu tự hỏi",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần AI làm việc gì, để phục vụ điều gì?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Bối cảnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mình là ai, đã biết gì, đang ở hoàn cảnh nào?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Vai trò"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI nên trả lời như ai?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Ràng buộc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giới hạn về độ dài, phạm vi, điều không được làm?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Định dạng đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả trình bày thế nào?"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Tiêu chí kiểm tra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Làm sao để mình kiểm chứng được?"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài hôm nay đi sâu vào yêu cầu 5, và thêm một kĩ thuật mới cho những nhiệm vụ mà "
+      },
+      {
+       "text": "một câu lệnh, dù viết tốt đến đâu, cũng không đủ",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-ki-thuat-thu-nhat-rang-buoc-dinh-dang-dau-ra",
+   "title": "1. Kĩ thuật thứ nhất: ràng buộc định dạng đầu ra",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Ràng buộc định dạng đầu ra",
+         "b": true
+        },
+        {
+         "text": " là nêu rõ trong câu lệnh kết quả phải được trình bày theo "
+        },
+        {
+         "text": "khuôn nào",
+         "b": true
+        },
+        {
+         "text": ": bảng có những cột gì, bao nhiêu mục, mỗi mục dài bao nhiêu, theo thứ tự nào."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thay vì “so sánh ba phương pháp”, Vy có thể viết:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“So sánh ba phương pháp học từ vựng (thẻ ghi nhớ, đọc truyện, học theo chủ đề) trong ",
+         "i": true
+        },
+        {
+         "text": "một bảng có bốn cột",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ": phương pháp; thời gian cần mỗi ngày; điểm mạnh; điểm yếu. ",
+         "i": true
+        },
+        {
+         "text": "Mỗi ô không quá 15 chữ.",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": " Nếu ô nào không chắc, ghi ‘chưa rõ’.”",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hình 11.8.1 đặt hai kết quả cạnh nhau."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image24.png",
+     "caption": "Hình 11.8.1. Cùng một nội dung, trước và sau khi ràng buộc định dạng. Ở khuôn bảng, ô trống và ô “chưa rõ” lộ ra ngay."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ràng buộc định dạng đem lại bốn lợi ích:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lợi ích",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So sánh được"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các thứ cần so nằm cùng hàng, cùng cột"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm tra nhanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ô trống, ô lạ, ô mâu thuẫn hiện ra ngay; em biết chính xác chỗ nào cần kiểm chứng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng lại được"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả đưa thẳng được vào vở, vào trang trình chiếu, vào bước tiếp theo"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thống nhất"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi nhiều lần, kết quả vẫn cùng một khuôn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một số khuôn hay dùng trong học tập:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em cần",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Khuôn nên yêu cầu",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So sánh nhiều thứ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bảng, nêu rõ tên các cột"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trình tự làm việc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Danh sách đánh số, mỗi bước một dòng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ý chính của một bài"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đúng 5 gạch đầu dòng, mỗi dòng không quá 20 chữ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ôn tập"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cặp “Câu hỏi” và “Trả lời”, mỗi cặp một dòng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích khái niệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ba phần: định nghĩa một câu; một ví dụ; một điều dễ nhầm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Ràng buộc định dạng chỉ để cho đẹp.”",
+         "b": true
+        },
+        {
+         "text": " Không phải. Định dạng là công cụ để "
+        },
+        {
+         "text": "kiểm tra",
+         "b": true
+        },
+        {
+         "text": ". Trong một đoạn văn trơn tru, một chỗ AI bỏ sót rất khó thấy. Trong một cái bảng, chỗ bỏ sót là một ô trống."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lưu ý trung thực:",
+       "b": true
+      },
+      {
+       "text": " khuôn đẹp không làm nội dung đúng hơn. Một bảng gọn gàng vẫn có thể chứa thông tin sai. Ràng buộc định dạng giúp em kiểm chứng "
+      },
+      {
+       "text": "dễ hơn",
+       "b": true
+      },
+      {
+       "text": ", chứ không kiểm chứng "
+      },
+      {
+       "text": "thay",
+       "b": true
+      },
+      {
+       "text": " em."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Thêm khuôn cho câu lệnh",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Viết lại ba câu lệnh sau bằng cách thêm ràng buộc định dạng phù hợp."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. “Cho em biết sự khác nhau giữa nguyên phân và giảm phân.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. “Hướng dẫn em cách làm một thí nghiệm đo gia tốc rơi tự do.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. “Tóm tắt truyện ngắn em vừa học trong tuần này.”"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-ki-thuat-thu-hai-chia-nho-nhiem-vu",
+   "title": "2. Kĩ thuật thứ hai: chia nhỏ nhiệm vụ",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chia nhỏ nhiệm vụ",
+         "b": true
+        },
+        {
+         "text": " là tách một yêu cầu lớn thành "
+        },
+        {
+         "text": "chuỗi các bước",
+         "b": true
+        },
+        {
+         "text": ", mỗi bước là một câu lệnh riêng; bước sau dùng kết quả của bước trước; và giữa các bước, "
+        },
+        {
+         "text": "con người xem xét, kiểm chứng, quyết định",
+         "b": true
+        },
+        {
+         "text": " rồi mới đi tiếp."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu lệnh ôm đồm của Vy có thể chia thành bốn bước:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bước",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu lệnh của Vy",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc Vy làm trước khi đi tiếp",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“So sánh ba phương pháp… trong một bảng bốn cột…”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đọc bảng, đối chiếu với kinh nghiệm của mình và lời khuyên của cô"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em chỉ có 30 phút mỗi ngày và hay quên từ sau một tuần. Dựa vào bảng trên, phương pháp nào hợp hơn? Nêu hai lí do.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tự quyết định",
+           "b": true
+          },
+          {
+           "text": " chọn phương pháp nào. Vy có thể chọn khác AI"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em chọn thẻ ghi nhớ. Hãy lập kế hoạch bốn tuần, mỗi ngày 30 phút, dạng bảng theo tuần.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xem kế hoạch có vừa sức không, sửa lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Dựa vào kế hoạch tuần 1 đã sửa, hãy soạn 10 câu kiểm tra, có đáp án ở cuối.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Làm thử, kiểm tra đáp án"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hình 11.8.2 cho thấy sự khác biệt về cấu trúc."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image25.png",
+     "caption": "Hình 11.8.2. Phía trên: một câu lệnh ôm đồm, lỗi ở giữa bị kéo đến cuối. Phía dưới: chuỗi bốn bước, sau mỗi bước có một điểm kiểm tra do con người thực hiện."
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Điểm kiểm tra",
+         "b": true
+        },
+        {
+         "text": " là chỗ giữa hai bước, nơi con người đọc kết quả, kiểm chứng điều cần kiểm chứng và quyết định: đi tiếp, sửa, hay quay lại."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chia nhỏ có ba lợi ích:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Lỗi không lan.",
+         "b": true
+        },
+        {
+         "text": " Nếu bước 2 lệch, em sửa ngay tại bước 2. Trong câu lệnh ôm đồm, lỗi ở giữa âm thầm kéo đến tận cuối."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mỗi bước rõ hơn.",
+         "b": true
+        },
+        {
+         "text": " AI chỉ phải làm một việc, với đủ bối cảnh cho việc đó."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người ở vị trí quyết định.",
+         "b": true
+        },
+        {
+         "text": " Ở bảng trên, sau bước 2, người chọn phương pháp là Vy, không phải AI. Đây chính là “điểm dừng” mà em đã học ở Bài 11.2."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba lưu ý để chia nhỏ cho đúng:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lỗi thường gặp",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách tránh",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chia thành các bước rời rạc, bước sau “quên” bước trước"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mỗi bước nhắc lại mục tiêu chung và kết quả đã chốt ở bước trước (“Em chọn thẻ ghi nhớ…”)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chia quá vụn, mỗi câu một việc tí hon"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ tách ở chỗ có "
+          },
+          {
+           "text": "quyết định",
+           "b": true
+          },
+          {
+           "text": " hoặc cần "
+          },
+          {
+           "text": "kiểm chứng",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bấm tiếp mà không đọc kết quả"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm kiểm tra chỉ có ý nghĩa khi em thật sự dừng lại đọc"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Chia nhỏ nhiệm vụ là hỏi nhiều câu.”",
+         "b": true
+        },
+        {
+         "text": " Hỏi mười câu không liên quan đến nhau không phải là chia nhỏ. Chia nhỏ là các bước của "
+        },
+        {
+         "text": "cùng một mục tiêu",
+         "b": true
+        },
+        {
+         "text": ", và "
+        },
+        {
+         "text": "bước sau dùng kết quả của bước trước",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-khi-nao-dung-ki-thuat-nao",
+   "title": "3. Khi nào dùng kĩ thuật nào?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chọn kĩ thuật không theo sở thích mà theo "
+      },
+      {
+       "text": "dấu hiệu của yêu cầu",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ràng buộc định dạng (ĐD)",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chia nhỏ nhiệm vụ (CN)",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dấu hiệu nên dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần so sánh nhiều thứ; cần dùng lại kết quả vào chỗ khác; cần đọc nhanh, kiểm tra nhanh; cần kết quả thống nhất giữa nhiều lần hỏi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Yêu cầu gồm nhiều việc nối bằng “rồi”, “sau đó”, “và”; bước sau phụ thuộc kết quả bước trước; có chỗ con người cần quyết định; cần kiểm chứng giữa chừng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lợi ích chính"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dễ so sánh, dễ kiểm tra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lỗi không lan, con người giữ quyền quyết định"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai kĩ thuật không loại trừ nhau. Trong ví dụ của Vy, bước 1 và bước 3 vừa là một mắt xích của chuỗi (CN), vừa có ràng buộc định dạng (ĐD)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ phân loại:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Yêu cầu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kĩ thuật",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dấu hiệu",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Liệt kê các mốc chính của Cách mạng tháng Tám”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "ĐD"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần đọc nhanh, đối chiếu với sách: bảng hai cột thời gian và sự kiện"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Tìm đề tài cho dự án Sinh học, rồi lập kế hoạch thí nghiệm”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "CN"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hai việc nối bằng “rồi”; chọn đề tài là quyết định của em"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“So sánh ba mẫu máy tính cầm tay, chọn một mẫu, rồi viết thư xin cha mẹ mua”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "ĐD + CN"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So sánh nhiều thứ (bảng); ba việc phụ thuộc nhau, có quyết định ở giữa"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Giải thích định luật Ôm”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không cần kĩ thuật nâng cao"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một việc, kết quả ngắn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dòng cuối cùng cũng quan trọng: "
+      },
+      {
+       "text": "không phải yêu cầu nào cũng cần kĩ thuật nâng cao",
+       "b": true
+      },
+      {
+       "text": ". Dùng công cụ đúng lúc cũng là một kĩ năng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Chọn và bảo vệ",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi yêu cầu sau, ghi ĐD, CN, ĐD + CN hoặc “không cần”, và nêu dấu hiệu làm căn cứ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. “Cho em 10 cặp từ đồng nghĩa tiếng Anh trình độ B1 để chép vào sổ.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. “Đọc dàn ý bài thuyết trình của em, chỉ ra chỗ yếu, rồi gợi ý cách sửa, sau đó viết giúp phần mở đầu.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. “Căn bậc hai của 2 xấp xỉ bằng bao nhiêu?”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. “So sánh ưu, nhược điểm của bốn nguồn năng lượng tái tạo để em đưa vào trang trình chiếu.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. “Giúp em ôn chương Hàm số lượng giác: kiểm tra xem em hổng phần nào, rồi cho bài luyện đúng phần đó.”"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-ki-thuat-khong-thay-duoc-trach-nhiem",
+   "title": "4. Kĩ thuật không thay được trách nhiệm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu lệnh tốt hơn cho kết quả "
+      },
+      {
+       "text": "dễ dùng",
+       "b": true
+      },
+      {
+       "text": " hơn và "
+      },
+      {
+       "text": "dễ kiểm tra",
+       "b": true
+      },
+      {
+       "text": " hơn. Nó không bảo đảm kết quả đúng. Vì thế, hai kĩ thuật của bài này luôn đi cùng hai bước cuối của quy trình ở Bài 11.1: kiểm chứng và khai báo."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em cũng nên để ý một điều ở yêu cầu b) trong Hoạt động 2: mắt xích cuối cùng (“viết giúp phần mở đầu”) là chỗ AI bắt đầu làm thay. Chia nhỏ nhiệm vụ cho em cơ hội "
+      },
+      {
+       "text": "nhìn thấy",
+       "b": true
+      },
+      {
+       "text": " mắt xích ấy và quyết định bỏ nó đi."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Sự phân biệt giữa “hỏi một lần lấy kết quả” và “đi từng bước có gợi ý” cũng là sự phân biệt trong thí nghiệm ở Bài 11.2: học sinh dùng trợ lí trả lời thẳng làm bài kiểm tra kém hơn 17% so với nhóm không dùng AI, còn học sinh dùng công cụ dẫn dắt từng bước thì không bị kém đi [8]. Cách em chia bước và đặt điểm kiểm tra trong câu lệnh của mình chính là cách em tự thiết kế công cụ cho bản thân."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Đọc thêm: Kết hợp các kĩ thuật",
+     "id": "doc-them-ket-hop-cac-ki-thuat"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nội dung mở rộng, không bắt buộc.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi đã quen, em có thể kết hợp thêm một số cách sau trong chuỗi câu lệnh của mình:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em viết trong câu lệnh",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dùng khi",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đưa ví dụ mẫu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Đây là một câu hỏi mẫu theo đúng kiểu em cần: … Hãy soạn 5 câu cùng kiểu.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khó tả bằng lời kiểu kết quả mình muốn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Yêu cầu tự rà soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Trước khi trả lời, hãy đối chiếu kết quả với ba yêu cầu sau… và nói rõ yêu cầu nào chưa đạt.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả phải thỏa nhiều điều kiện"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Yêu cầu hỏi lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Nếu thiếu thông tin để làm tốt, hãy hỏi em trước khi làm.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em chưa chắc mình đã nêu đủ bối cảnh"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lời tự rà soát của AI vẫn là sản phẩm của AI. Nó giúp em thấy thêm vấn đề, nhưng không phải là bước kiểm chứng độc lập."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-om-dom-hay-chia-nho",
+   "title": "Trải nghiệm: Ôm đồm hay chia nhỏ?",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa học hai kĩ thuật đặt câu lệnh nâng cao. Hãy tự kiểm chứng xem chia nhỏ nhiệm vụ có thật sự tốt hơn không."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image3.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Gemini"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " gemini.google.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 7 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em gửi câu lệnh “ôm đồm” trên phiếu và lưu lại kết quả."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em chia nhiệm vụ thành ba bước và gửi lần lượt từng bước."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em yêu cầu trình bày kết quả dạng bảng, rồi so sánh hai cách làm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Khi chia nhỏ, em đã giữ được quyền quyết định ở những chỗ nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em đăng nhập bằng tài khoản nhà trường. Em không đưa thông tin cá nhân vào câu lệnh."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image26.png",
+     "caption": "Sơ đồ tư duy Bài 11.8."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Ràng buộc định dạng đầu ra:",
+         "b": true
+        },
+        {
+         "text": " nêu rõ khuôn của kết quả (bảng, số mục, độ dài). Giúp so sánh, kiểm tra nhanh, dùng lại, thống nhất."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Chia nhỏ nhiệm vụ:",
+         "b": true
+        },
+        {
+         "text": " tách yêu cầu lớn thành chuỗi bước, bước sau dùng kết quả bước trước, có "
+        },
+        {
+         "text": "điểm kiểm tra",
+         "b": true
+        },
+        {
+         "text": " do con người thực hiện."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Chọn kĩ thuật theo "
+        },
+        {
+         "text": "dấu hiệu của yêu cầu",
+         "b": true
+        },
+        {
+         "text": "; có thể dùng cả hai; có khi không cần kĩ thuật nào."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Chia nhỏ nhiệm vụ là cách giữ "
+        },
+        {
+         "text": "con người ở vị trí quyết định",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Kĩ thuật tốt không thay được "
+        },
+        {
+         "text": "kiểm chứng",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Viết câu lệnh có ràng buộc định dạng cho yêu cầu: so sánh ba thể loại văn học (truyện ngắn, tiểu thuyết, kí) để ôn tập."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Bạn Long gõ: “Tìm hiểu về ô nhiễm không khí ở thành phố, chọn nguyên nhân quan trọng nhất, đề xuất giải pháp và viết bài thuyết trình.” Hãy chia thành chuỗi bước và ghi rõ việc Long làm ở mỗi điểm kiểm tra."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Trong chuỗi ở Bài 2, có mắt xích nào Long nên tự làm thay vì nhờ AI không? Vì sao?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Một bạn chia nhiệm vụ thành năm câu lệnh, nhưng ở mỗi bước chỉ gõ “Tiếp đi” mà không đọc kết quả. Cách làm này có còn lợi ích của chia nhỏ nhiệm vụ không? Giải thích."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Bạn Hân yêu cầu AI trả lời “trong một bảng ba cột” và tin hoàn toàn vào bảng vì “trông rất khoa học”. Em nói gì với Hân?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chọn một nhiệm vụ học tập lớn em sắp làm (dự án nhóm, bài thu hoạch, kế hoạch ôn thi). Viết ra chuỗi ba đến năm bước, mỗi bước gồm: câu lệnh dự kiến (có ràng buộc định dạng nếu cần) và việc em sẽ làm ở điểm kiểm tra. Đánh dấu những bước em quyết định "
+      },
+      {
+       "text": "tự làm, không dùng AI",
+       "b": true
+      },
+      {
+       "text": ". Sau khi thực hiện, ghi lại bước nào kết quả của AI phải sửa nhiều nhất."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô tả hai kĩ thuật và lợi ích của từng kĩ thuật"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận ra dấu hiệu để chọn kĩ thuật cho một yêu cầu"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết câu lệnh có ràng buộc định dạng"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chia một yêu cầu lớn thành chuỗi bước có điểm kiểm tra"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu lệnh (prompt)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội dung người dùng gửi cho AI tạo sinh để yêu cầu nó làm một việc"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ràng buộc định dạng đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Yêu cầu kết quả trình bày theo một khuôn xác định"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chia nhỏ nhiệm vụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tách yêu cầu lớn thành chuỗi bước, bước sau dùng kết quả bước trước"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm kiểm tra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỗ giữa hai bước để con người đọc, kiểm chứng, quyết định"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuỗi câu lệnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các câu lệnh nối tiếp nhau phục vụ một mục tiêu chung"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: “Em là học sinh lớp 11 đang ôn tập. Hãy so sánh truyện ngắn, tiểu thuyết và kí trong một bảng có bốn cột: thể loại; dung lượng; đặc điểm nổi bật; một tác phẩm trong chương trình phổ thông. Mỗi ô không quá 20 chữ. Ô nào không chắc, ghi ‘cần kiểm tra lại’.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Bước 1: liệt kê các nguyên nhân dạng bảng (nguyên nhân, biểu hiện, cần số liệu gì); Long đối chiếu với sách và nguồn chính thức. Bước 2: Long tự chọn nguyên nhân sẽ trình bày, có thể hỏi AI ưu, nhược của từng lựa chọn. Bước 3: nhờ gợi ý các nhóm giải pháp cho nguyên nhân đã chọn; Long chọn giải pháp hợp với địa phương. Bước 4: Long viết bài; nhờ AI nhận xét dàn ý."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Chọn nguyên nhân quan trọng nhất và viết bài thuyết trình. Đó là phần cốt lõi của nhiệm vụ (lập luận và diễn đạt) và là quyết định của người trình bày."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gần như không. Lợi ích của chia nhỏ nằm ở điểm kiểm tra. Không đọc, không kiểm chứng, không quyết định thì năm bước cũng giống một câu lệnh ôm đồm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Bảng giúp kiểm tra dễ hơn nhưng không làm nội dung đúng hơn. Hân cần đối chiếu từng ô, nhất là các ô có số liệu, với nguồn độc lập."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [8] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2328 @@
+{
+ "id": "12.7",
+ "slug": "bai-12-07",
+ "grade": 12,
+ "num": 7,
+ "topicId": "12.3",
+ "title": "Từ nhu cầu đến ý tưởng công cụ AI",
+ "meta": "Chuyên đề 12.3: Công cụ phát triển và đánh giá hiệu quả hệ thống AI (tiết 1 trong 3 tiết)",
+ "period": {
+  "index": 1,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Phân biệt được "
+   },
+   {
+    "text": "năm kiểu ý tưởng",
+    "b": true
+   },
+   {
+    "text": " giải pháp, trong đó có kiểu “không cần AI”."
+   }
+  ],
+  [
+   {
+    "text": "Dùng được "
+   },
+   {
+    "text": "bốn câu hỏi",
+    "b": true
+   },
+   {
+    "text": " để chọn kiểu ý tưởng phù hợp với một nhu cầu."
+   }
+  ],
+  [
+   {
+    "text": "Viết được một "
+   },
+   {
+    "text": "phiếu ý tưởng",
+    "b": true
+   },
+   {
+    "text": " nêu rõ kiểu đã chọn, kiểu đã loại và phần việc con người giữ."
+   }
+  ]
+ ],
+ "keywords": [
+  "nhu cầu",
+  "ý tưởng công cụ",
+  "mô hình phân loại",
+  "trợ lí có tra cứu tài liệu",
+  "mô hình dự đoán",
+  "giải pháp không cần AI"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-co-phai-viec-gi-cung-can-ai",
+   "title": "Khởi động: Có phải việc gì cũng cần AI?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu lạc bộ Tin học của trường nhận được ba “đơn đặt hàng”:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Việc 1.",
+         "b": true
+        },
+        {
+         "text": " Tính điểm trung bình môn của cả lớp từ bảng điểm thành phần."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Việc 2.",
+         "b": true
+        },
+        {
+         "text": " Giúp đội chăm sóc vườn trường nhận biết lá cây bị bệnh qua ảnh chụp."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Việc 3.",
+         "b": true
+        },
+        {
+         "text": " Trả lời học sinh về lịch thi, phòng thi, quy định mang đồ dùng vào phòng thi."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Việc nào cần AI? Việc nào không? Hai việc cần AI có nên dùng cùng một kiểu công cụ không?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Việc 1 đã có công thức rõ ràng; một bảng tính làm đúng tuyệt đối, AI chỉ thêm rủi ro sai. Việc 2 không viết được thành quy tắc, vì lá bệnh muôn hình muôn vẻ, nhưng có thể chụp nhiều ảnh mẫu: hợp với một mô hình phân loại. Việc 3 cần trả lời bằng lời, và phải "
+      },
+      {
+       "text": "đúng theo văn bản của trường",
+       "b": true
+      },
+      {
+       "text": ": hợp với một trợ lí biết tra cứu tài liệu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba việc, ba kiểu giải pháp. Chọn đúng kiểu là bước đầu tiên của người thiết kế, trước cả khi chọn công cụ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nhac-lai-ba-loai-he-thong-ai",
+   "title": "Nhắc lại: Ba loại hệ thống AI",
+   "kind": "recall",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Loại",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đầu ra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Xem lại ở",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân loại",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một nhãn trong số các nhãn biết trước"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Lá bệnh” hay “lá khỏe”; “thư rác” hay “thư thường”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.7 (tập Khối 10), Bài 11.11 (tập Khối 11)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một con số ước tính"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Số suất ăn ngày mai; lượng mưa tuần tới"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.7 (tập Khối 10)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo sinh",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội dung mới: văn bản, hình ảnh, âm thanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu trả lời, bản tóm tắt, bức tranh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 10.7 (tập Khối 10), Bài 11.8 (tập Khối 11)"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba loại này ứng với các kiểu đầu ra được nêu trong định nghĩa hệ thống AI của Tổ chức Hợp tác và Phát triển Kinh tế (OECD): dự đoán, nội dung, khuyến nghị hoặc quyết định [5]."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-bat-dau-tu-nhu-cau",
+   "title": "1. Bắt đầu từ nhu cầu",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở Bài 11.7, em đã học cách phát biểu một khó khăn trong việc học: ai gặp, ở khâu nào, vì sao cách hiện tại chưa giúp được. Bài này mở rộng ra mọi loại nhu cầu, trong trường và ngoài trường."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nhu cầu",
+         "b": true
+        },
+        {
+         "text": " là điều một nhóm người cụ thể cần được giải quyết. Một nhu cầu được phát biểu tốt nêu rõ: "
+        },
+        {
+         "text": "ai",
+         "b": true
+        },
+        {
+         "text": " cần, cần "
+        },
+        {
+         "text": "kết quả gì",
+         "b": true
+        },
+        {
+         "text": ", và "
+        },
+        {
+         "text": "hiện nay",
+         "b": true
+        },
+        {
+         "text": " đang làm thế nào."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phát biểu mơ hồ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phát biểu rõ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Làm AI cho thư viện.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Thủ thư mất nhiều thời gian trả lời cùng một loại câu hỏi ‘sách này còn không, ở kệ nào’. Cần một cách để học sinh tự tra được, đúng theo danh mục của thư viện.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Dùng AI chống lãng phí thức ăn.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Căn tin mỗi ngày nấu thừa hoặc thiếu vài chục suất vì không biết hôm sau bao nhiêu học sinh ăn. Cần một con số ước tính trước 4 giờ chiều hôm trước.”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em để ý: phát biểu rõ "
+      },
+      {
+       "text": "không nhắc gì đến AI",
+       "b": true
+      },
+      {
+       "text": ". Nó chỉ nói về người và về kết quả. Công nghệ đến sau."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Có công nghệ hay thì tìm chỗ mà dùng.”",
+         "b": true
+        },
+        {
+         "text": " Đi từ công nghệ đến nhu cầu thường cho ra những sản phẩm không ai cần. Người thiết kế giỏi đi theo chiều ngược lại: từ nhu cầu, đến kết quả cần có, rồi mới đến kiểu giải pháp."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-nam-kieu-y-tuong",
+   "title": "2. Năm kiểu ý tưởng",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với học sinh phổ thông và các công cụ hiện có, phần lớn ý tưởng rơi vào một trong năm kiểu sau."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kiểu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hợp khi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Điểm cần lưu ý",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "A. Mô hình phân loại tự huấn luyện",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu thập ví dụ có nhãn của chính mình, cho máy học, dùng mô hình để gán nhãn cái mới"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra là một nhãn; có thể tự thu thập vài trăm ví dụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chất lượng phụ thuộc dữ liệu; chỉ biết các nhãn đã học"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B. Trợ lí dùng mô hình ngôn ngữ có sẵn kèm hướng dẫn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết hướng dẫn cho một mô hình ngôn ngữ lớn về vai trò, cách trả lời"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần tạo, góp ý, giải thích văn bản; không cần thông tin riêng, chính xác tuyệt đối"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có thể tạo nội dung sai; phải có người kiểm tra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C. Trợ lí có tra cứu tài liệu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình ngôn ngữ tìm trong tài liệu được cung cấp rồi mới trả lời, kèm nguồn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần trả lời đúng theo tài liệu cụ thể, hay thay đổi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phải có người cập nhật tài liệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "D. Mô hình dự đoán từ số liệu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng số liệu quá khứ để ước tính một con số sắp tới"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có số liệu ghi chép đều đặn; cần ước lượng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai khi hoàn cảnh thay đổi; kết quả là ước tính"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "E. Không cần AI",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công thức, bảng tính, biểu mẫu, quy tắc “nếu… thì…”, hoặc đổi cách tổ chức công việc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã có quy tắc rõ; cần đúng tuyệt đối; cần giải thích được từng kết quả"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thường rẻ hơn, dễ duy trì hơn, ít rủi ro hơn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em đã gặp cả bốn kiểu có AI ở các lớp dưới, dù chưa gọi tên như vậy: trạm phân loại rác (kiểu A); câu lệnh “gia sư” ở Bài 11.6 (kiểu B); chatbot nội quy ở Bài 11.12 (kiểu C); dự báo ngập (kiểu D)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai cặp dễ lẫn:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "B và C.",
+       "b": true
+      },
+      {
+       "text": " Cả hai đều là trợ lí trò chuyện. Khác nhau ở chỗ "
+      },
+      {
+       "text": "nó lấy nội dung từ đâu",
+       "b": true
+      },
+      {
+       "text": ". Kiểu B trả lời từ những gì mô hình đã học được nói chung. Kiểu C tra trong tài liệu em đưa cho nó. Hỏi “cách viết mở bài hay” thì B là đủ. Hỏi “thứ Hai mặc gì theo nội quy trường mình” thì phải là C, vì mô hình không thể tự biết nội quy trường em, và nếu không biết nó có thể bịa."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "A và D.",
+       "b": true
+      },
+      {
+       "text": " Cả hai đều học từ dữ liệu của em. Khác nhau ở "
+      },
+      {
+       "text": "đầu ra",
+       "b": true
+      },
+      {
+       "text": ": A cho một "
+      },
+      {
+       "text": "nhãn",
+       "b": true
+      },
+      {
+       "text": " (bệnh hay khỏe), D cho một "
+      },
+      {
+       "text": "con số",
+       "b": true
+      },
+      {
+       "text": " (290 suất ăn)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kiểu E không phải là “thua cuộc”.",
+       "b": true
+      },
+      {
+       "text": " Tính điểm trung bình bằng bảng tính nhanh hơn, đúng hơn, rẻ hơn và giải thích được hơn bất kì mô hình AI nào. Trong sáu bước thiết kế, bước đầu tiên có thể kết thúc bằng câu “việc này không cần AI”, và đó là một quyết định thiết kế tốt. Em cũng đã gặp ý này ở Bài 12.1: giai đoạn “xác định vấn đề” là điểm kiểm soát sớm nhất."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2020, khi các kì thi cuối cấp ở Anh bị hủy vì dịch bệnh, cơ quan quản lí thi cử dùng một thuật toán để xác định điểm cho học sinh. Kết quả công bố ngày 13/8/2020 cho thấy 39,1% số điểm bị hạ ít nhất một bậc; chỉ bốn ngày sau, chính phủ phải bỏ cách làm này và quay về dùng đánh giá của giáo viên [9]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nhìn theo bài học hôm nay: nhu cầu là “mỗi học sinh cần một điểm số công bằng khi không thi được”. Giải pháp cuối cùng được chấp nhận lại là một giải pháp "
+        },
+        {
+         "text": "dựa vào con người",
+         "b": true
+        },
+        {
+         "text": ": các giáo viên, những người biết rõ từng học sinh. Không phải nhu cầu nào cũng được giải quyết tốt nhất bằng một mô hình."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Kiểu nào?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mỗi ý tưởng sau thuộc kiểu A, B, C, D hay E?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Một công cụ nghe tiếng chim và cho biết đó là loài nào trong 15 loài thường gặp ở vườn quốc gia."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Một trợ lí trả lời câu hỏi của tân sinh viên dựa trên cuốn sổ tay sinh viên của trường."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Một biểu mẫu trực tuyến để học sinh đăng kí suất ăn trước 4 giờ chiều."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Một công cụ ước tính số xe sẽ gửi ở bãi xe trường vào ngày hội."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Một trợ lí đóng vai người phỏng vấn để học sinh luyện trả lời phỏng vấn học bổng."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-bon-cau-hoi-de-chon-kieu",
+   "title": "3. Bốn câu hỏi để chọn kiểu",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để chọn kiểu ý tưởng có căn cứ, em trả lời bốn câu hỏi theo thứ tự."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vì sao phải hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu trả lời dẫn đến đâu",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Kết quả cần có là gì?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra quyết định loại hệ thống"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một nhãn: A. Một con số ước tính: D. Một đoạn văn bản: B hoặc C. Một kết quả tính theo quy tắc: E"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Dữ liệu, tài liệu nào dùng được?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có nguyên liệu thì không có sản phẩm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có ví dụ có nhãn: A. Có số liệu ghi đều: D. Có tài liệu chính thức: C. Không có gì riêng: B hoặc E"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Cần chính xác đến đâu? Sai thì sao?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mức rủi ro quyết định mức kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai là hệ trọng: nghiêng về C (có nguồn để đối chiếu) hoặc E; luôn cần người xem lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Có cách đơn giản hơn không?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải pháp đơn giản dễ duy trì, ít rủi ro"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nếu một biểu mẫu, một bảng tính giải quyết được: E"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hình 12.7.1 biến bốn câu hỏi thành một sơ đồ chọn lựa."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image22.png",
+     "caption": "Hình 12.7.1. Sơ đồ chọn kiểu ý tưởng. Đi từ trên xuống; câu hỏi “có cách đơn giản hơn không?” được hỏi đầu tiên và hỏi lại ở cuối."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ: nhu cầu của căn tin.",
+       "b": true
+      },
+      {
+       "text": " “Căn tin mỗi ngày nấu thừa hoặc thiếu vài chục suất. Cần một con số ước tính trước 4 giờ chiều hôm trước.”"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trả lời",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Kết quả cần có?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một con số: số suất ăn ngày mai"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Dữ liệu dùng được?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sổ ghi số suất bán mỗi ngày trong hai năm; lịch học, lịch thi; có thể thêm dự báo thời tiết"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Chính xác đến đâu? Sai thì sao?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lệch 10 đến 15 suất là chấp nhận được. Sai thì thừa thức ăn hoặc một số bạn phải chờ; không hệ trọng, sửa được ngay hôm sau"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Cách đơn giản hơn?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có: cho học sinh đăng kí suất ăn trước (kiểu E). Chính xác hơn dự đoán, nhưng đòi hỏi mọi học sinh phải nhớ đăng kí mỗi ngày"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết luận có thể là "
+      },
+      {
+       "text": "kiểu D",
+       "b": true
+      },
+      {
+       "text": ", hoặc "
+      },
+      {
+       "text": "kiểu E",
+       "b": true
+      },
+      {
+       "text": ", hoặc kết hợp: đăng kí trước cho lớp nào muốn, dự đoán cho phần còn lại. Điều quan trọng là nhóm nêu được "
+      },
+      {
+       "text": "đã cân nhắc những kiểu nào và vì sao loại",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dù chọn kiểu nào, luôn còn một câu hỏi nữa: "
+      },
+      {
+       "text": "con người giữ phần việc gì?",
+       "b": true
+      },
+      {
+       "text": " Với căn tin: cô quản lí xem con số ước tính, điều chỉnh theo điều cô biết mà số liệu không có (ngày mai khối 12 đi tham quan), và quyết định. Đây là phân vai mức II của Bài 12.2."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Ý tưởng dùng công nghệ càng mới càng tốt.”",
+         "b": true
+        },
+        {
+         "text": " Tiêu chí của một ý tưởng tốt là giải quyết đúng nhu cầu, an toàn và duy trì được. Một biểu mẫu đăng kí có thể thắng một mô hình dự đoán. Khi hai phương án đạt mục tiêu ngang nhau, phương án đơn giản hơn là phương án tốt hơn."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-phieu-y-tuong",
+   "title": "4. Phiếu ý tưởng",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Kết quả của bài học này là một "
+      },
+      {
+       "text": "phiếu ý tưởng",
+       "b": true
+      },
+      {
+       "text": ": một trang giấy đủ để người khác hiểu em định làm gì và vì sao."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mục",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nội dung",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhu cầu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai cần, cần kết quả gì, hiện đang làm thế nào"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bốn câu hỏi",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trả lời ngắn gọn từng câu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểu ý tưởng chọn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "A, B, C, D hoặc E; mô tả trong hai, ba câu hệ thống nhận gì, làm gì, trả ra gì"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểu đã loại",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ít nhất một kiểu khác đã cân nhắc và lí do loại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần việc con người giữ",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai kiểm tra, ai quyết định, khi công cụ sai thì sao"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phiếu mẫu: nhận biết lá bệnh ở vườn trường",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mục",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nội dung",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhu cầu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đội chăm sóc vườn (học sinh khối 10) không phân biệt được lá bệnh với lá bị nắng táp, thường phát hiện muộn. Hiện phải chờ thầy dạy Sinh xem từng cây"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bốn câu hỏi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "(1) Một nhãn: “nghi bệnh”, “khỏe”, “không chắc”. (2) Tự chụp được khoảng 300 ảnh lá của các cây trong vườn, nhờ thầy gán nhãn. (3) Không cần chính xác tuyệt đối; bỏ sót thì cây bệnh nặng thêm, báo nhầm thì mất công xem lại. (4) Cách đơn giản hơn: một tờ hướng dẫn có ảnh mẫu; đã thử nhưng các bạn vẫn lúng túng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểu chọn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "A.",
+           "b": true
+          },
+          {
+           "text": " Mô hình nhận ảnh chụp một chiếc lá, trả ra một trong ba nhãn kèm mức chắc chắn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểu đã loại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B: mô hình ngôn ngữ chung không biết các cây cụ thể trong vườn trường và không đáng tin khi nhìn ảnh bệnh cây. E: đã thử tờ hướng dẫn, chưa đủ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con người giữ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lá bị gắn nhãn “nghi bệnh” hoặc “không chắc” được chụp gửi thầy dạy Sinh xác nhận trước khi cắt tỉa hay phun thuốc. Mỗi tháng đội vườn bổ sung ảnh mới"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phiếu ý tưởng này sẽ theo em qua ba bài tiếp theo: chọn công cụ để làm (Bài 12.8), đánh giá xem nó tốt đến đâu (Bài 12.9), và so sánh các phương án thiết kế (Bài 12.10)."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Viết phiếu ý tưởng",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Theo nhóm, chọn một nhu cầu có thật trong trường hoặc ở nơi em sống. Viết phiếu ý tưởng đủ năm mục. Trước khi nộp, tự kiểm tra: nhóm đã dùng ít nhất hai trong bốn câu hỏi làm căn cứ chưa; đã nêu kiểu bị loại chưa; phần việc của con người có gắn với hậu quả khi công cụ sai không."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-y-tuong-cua-em-da-co-ai-lam-chua",
+   "title": "Trải nghiệm: Ý tưởng của em đã có ai làm chưa?",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trước khi bắt tay làm, người phát triển thường tìm xem đã có ai giải quyết nhu cầu tương tự chưa. Em hãy làm điều đó với ý tưởng của nhóm."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image23.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Các bản demo trên Hugging Face Spaces"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " huggingface.co/spaces (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em cùng lớp tìm một bản chạy thử (demo) gần với nhu cầu của nhóm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em xem demo hoạt động thế nào."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em đối chiếu với bốn câu hỏi: nhu cầu này có thật sự cần AI không?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Demo này thuộc kiểu ý tưởng nào trong năm kiểu?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Không tải lên ảnh hay tệp có thông tin cá nhân khi thử demo."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image24.png",
+     "caption": "Sơ đồ tư duy Bài 12.7."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Bắt đầu từ "
+        },
+        {
+         "text": "nhu cầu",
+         "b": true
+        },
+        {
+         "text": " (ai cần, kết quả gì, hiện làm thế nào), không bắt đầu từ công nghệ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Năm kiểu ý tưởng:",
+         "b": true
+        },
+        {
+         "text": " A mô hình phân loại tự huấn luyện; B trợ lí dùng mô hình ngôn ngữ có sẵn; C trợ lí có tra cứu tài liệu; D mô hình dự đoán từ số liệu; E không cần AI."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bốn câu hỏi:",
+         "b": true
+        },
+        {
+         "text": " kết quả cần có; dữ liệu dùng được; cần chính xác đến đâu và sai thì sao; có cách đơn giản hơn không."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Người thiết kế giỏi "
+        },
+        {
+         "text": "biết khi nào không cần AI",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Kiểu nào cũng phải nêu "
+        },
+        {
+         "text": "phần việc con người giữ",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Phát biểu lại hai nhu cầu sau cho rõ (ai, kết quả gì, hiện làm thế nào): a) “Làm AI cho phòng y tế trường.” b) “Ứng dụng AI vào bãi giữ xe.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Giải thích sự khác nhau giữa kiểu B và kiểu C bằng một ví dụ ở trường em. Việc nào dùng B là đủ, việc nào bắt buộc phải là C?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Ban cán sự lớp muốn “dùng AI chia nhóm học tập cho công bằng”. Em áp dụng câu hỏi thứ 4 và đề xuất một giải pháp kiểu E. Theo em, có phần nào của việc này mà AI giúp được không?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Một nhóm chọn kiểu B (trợ lí dùng mô hình ngôn ngữ có sẵn) để “trả lời học sinh về liều dùng thuốc hạ sốt”. Dùng câu hỏi thứ 3 để nhận xét lựa chọn này."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Với nhu cầu “thư viện muốn biết tháng tới cần mua thêm bao nhiêu bản của những đầu sách hay bị mượn hết”, em trả lời bốn câu hỏi và chọn kiểu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hỏi một người lớn đang đi làm (cha mẹ, cô chú, anh chị) về một việc lặp đi lặp lại trong công việc của họ mà họ mong có công cụ giúp. Ghi lại nhu cầu theo ba ý: ai, kết quả gì, hiện làm thế nào. Áp dụng bốn câu hỏi và cho biết em sẽ đề xuất kiểu ý tưởng nào. Kể lại đề xuất cho người ấy nghe và ghi phản ứng của họ: điều gì em đã không lường tới?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phát biểu rõ một nhu cầu"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt năm kiểu ý tưởng, nhất là B với C, A với D"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng bốn câu hỏi làm căn cứ để chọn kiểu"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết phiếu ý tưởng có kiểu đã loại và phần việc con người giữ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhu cầu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều một nhóm người cụ thể cần được giải quyết"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình ngôn ngữ lớn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình AI được huấn luyện trên lượng văn bản rất lớn, có thể tạo ra văn bản mới"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trợ lí có tra cứu tài liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trợ lí tìm trong tài liệu được cung cấp rồi mới trả lời, kèm nguồn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình dự đoán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình dùng số liệu quá khứ để ước tính một con số sắp tới"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phiếu ý tưởng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một trang mô tả nhu cầu, kiểu giải pháp chọn, kiểu đã loại và vai trò con người"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý. a) “Cô y tế phải ghi tay và tra lại sổ mỗi khi cần biết một học sinh đã từng bị dị ứng thuốc gì. Cần tra được ngay thông tin này khi học sinh xuống phòng y tế.” b) “Giờ tan học, phụ huynh và học sinh mất 10 đến 15 phút tìm xe vì không biết xe để ở dãy nào. Cần biết ngay vị trí xe.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: “gợi ý cách viết thư xin phép nghỉ học cho lịch sự” dùng B là đủ. “Xin nghỉ quá mấy buổi thì phải có đơn của phụ huynh theo nội quy” phải là C, vì câu trả lời phải đúng theo văn bản của trường."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Kiểu E: giáo viên và ban cán sự chia theo vài quy tắc rõ ràng (mỗi nhóm có bạn mạnh từng môn, cân bằng nam nữ, xoay vòng mỗi tháng) bằng một bảng tính. Chia nhóm liên quan đến quan hệ bạn bè và hoàn cảnh riêng, là việc con người nên quyết định. AI có thể giúp ở phần phụ: gợi ý các tiêu chí chia nhóm để cả lớp thảo luận."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Liều dùng thuốc cần chính xác tuyệt đối; sai thì ảnh hưởng sức khỏe, khó đảo ngược: rủi ro cao. Kiểu B có thể tạo nội dung sai một cách tự tin, nên không phù hợp. Việc này nên do cô y tế, bác sĩ, dược sĩ trả lời, hoặc dùng tờ hướng dẫn chính thức (kiểu E)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý. (1) Một con số cho mỗi đầu sách. (2) Lịch sử mượn trả nhiều năm của thư viện. (3) Ước lượng là đủ; sai thì mua thừa hoặc thiếu vài bản, sửa được ở đợt sau. (4) Cách đơn giản: thống kê số lượt phải chờ của từng đầu sách trong bảng tính (kiểu E) có thể đã đủ. Nếu muốn tính cả xu hướng theo mùa thi thì kiểu D. Thủ thư là người quyết định danh sách mua."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [5], [9] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

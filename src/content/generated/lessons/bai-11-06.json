@@ -1,0 +1,1908 @@
+{
+ "id": "11.6",
+ "slug": "bai-11-06",
+ "grade": 11,
+ "num": 6,
+ "topicId": "11.3",
+ "title": "AI hỗ trợ việc học như thế nào?",
+ "meta": "Chuyên đề 11.3: AI trong học tập và kĩ thuật prompt nâng cao (tiết 1 trong 3 tiết)",
+ "period": {
+  "index": 1,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Trình bày được AI có thể hỗ trợ "
+   },
+   {
+    "text": "những khâu nào",
+    "b": true
+   },
+   {
+    "text": " của việc học và hỗ trợ bằng cách nào."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được "
+   },
+   {
+    "text": "sáu nguyên tắc thiết kế",
+    "b": true
+   },
+   {
+    "text": " của một công cụ AI hỗ trợ học tập tốt."
+   }
+  ],
+  [
+   {
+    "text": "Phân tích",
+    "b": true
+   },
+   {
+    "text": " được một đoạn hội thoại giữa người học và AI: hỗ trợ khâu nào, theo nguyên tắc nào, còn thiếu gì."
+   }
+  ]
+ ],
+ "keywords": [
+  "khâu của việc học",
+  "phản hồi",
+  "gợi mở",
+  "cá nhân hóa",
+  "quyền chủ động",
+  "gia sư AI"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-hai-kieu-phan-hoi",
+   "title": "Khởi động: Hai kiểu phản hồi",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một bạn gửi cho hai công cụ AI cùng một câu: "
+      },
+      {
+       "text": "“Giải giúp em phương trình x² − 5x + 6 = 0.”",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Công cụ thứ nhất trả lời:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phương trình có hai nghiệm x = 2 và x = 3."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Công cụ thứ hai trả lời:",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mình sẽ cùng em làm nhé. Em đã học những cách nào để giải phương trình bậc hai? Với phương trình này, em thử tìm hai số có tổng bằng 5 và tích bằng 6 xem. Em tìm được hai số nào?"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Nếu đang vội, em thích công cụ nào? Nếu tuần sau có bài kiểm tra, công cụ nào giúp em nhiều hơn? Vì sao hai câu trả lời của em có thể khác nhau?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Công cụ thứ nhất cho em "
+      },
+      {
+       "text": "đáp án",
+       "b": true
+      },
+      {
+       "text": ". Công cụ thứ hai cho em "
+      },
+      {
+       "text": "một bước để tự đi",
+       "b": true
+      },
+      {
+       "text": ". Hai kiểu phản hồi này là kết quả của hai cách thiết kế, và cũng là hai cách em có thể yêu cầu AI. Muốn biết AI hỗ trợ việc học thế nào, trước hết ta cần hiểu việc học gồm những gì."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-viec-hoc-gom-nhung-khau-nao",
+   "title": "1. Việc học gồm những khâu nào?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi học một bài mới, dù là học bơi hay học đạo hàm, em đều đi qua năm khâu."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm khâu của việc học:",
+         "b": true
+        },
+        {
+         "text": " (1) xác định mục tiêu; (2) tiếp nhận kiến thức; (3) luyện tập; (4) nhận phản hồi; (5) tự đánh giá và điều chỉnh."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Năm khâu này không chạy một lần rồi thôi. Sau khi tự đánh giá, em đặt mục tiêu mới, và vòng lặp tiếp tục. Hình 11.6.1 vẽ vòng lặp đó, kèm hai dòng ở mỗi khâu: việc AI có thể hỗ trợ và việc em phải tự làm."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image19.png",
+     "caption": "Hình 11.6.1. Năm khâu của việc học. Ở mỗi khâu, dòng “AI” là việc AI có thể hỗ trợ; dòng nền xám là phần chỉ người học làm được."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Khâu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI có thể hỗ trợ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phần em phải tự làm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Xác định mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý lộ trình, chia mục tiêu lớn thành bước nhỏ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyết định mình cần học gì, vì sao"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Tiếp nhận kiến thức"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích lại theo trình độ, đưa ví dụ khác, tóm lược ý chính"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đọc, nghe, liên hệ với điều đã biết"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Luyện tập"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo câu hỏi, bài tập vừa sức, tăng dần độ khó"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tự làm bài, chấp nhận sai"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Nhận phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ lỗi ngay, giải thích vì sao sai, gợi ý cách sửa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu lỗi và sửa lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Tự đánh giá, điều chỉnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tổng hợp tiến bộ, chỉ ra phần còn yếu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhìn lại và đổi cách học"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy nhìn kĩ cột thứ ba. "
+      },
+      {
+       "text": "Ở khâu nào cũng có một phần chỉ người học mới làm được.",
+       "b": true
+      },
+      {
+       "text": " AI có thể giải thích mười lần, nhưng “hiểu” phải xảy ra trong đầu em. AI có thể ra một trăm bài tập, nhưng “làm” phải là tay em."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“AI hỗ trợ học tập nghĩa là AI giải bài.”",
+         "b": true
+        },
+        {
+         "text": " Giải bài chỉ nằm trong khâu 3, và lại đúng là phần người học nên tự làm. Những hỗ trợ có giá trị nhất của AI thường nằm ở các khâu khác: giải thích lại theo cách dễ hiểu hơn (khâu 2), chỉ ra vì sao sai (khâu 4), giúp em nhìn ra phần còn yếu (khâu 5)."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Em đang dùng AI ở khâu nào?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Liệt kê ba đến năm cách em (hoặc bạn bè) từng dùng AI cho việc học. Xếp mỗi cách vào một trong năm khâu. Khâu nào đang được dùng nhiều nhất? Khâu nào em chưa từng nghĩ đến?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-sau-nguyen-tac-thiet-ke-mot-cong-cu-ho-tro-hoc-tap-tot",
+   "title": "2. Sáu nguyên tắc thiết kế một công cụ hỗ trợ học tập tốt",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Quay lại hai công cụ ở phần Khởi động. Vì sao công cụ thứ hai “tốt” hơn cho việc học? Từ đó, ta rút ra sáu nguyên tắc."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nguyên tắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Biểu hiện",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ngược lại là",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Gợi mở từng bước",
+           "b": true
+          },
+          {
+           "text": " thay vì đưa đáp án ngay"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đặt câu hỏi dẫn dắt, đưa gợi ý nhỏ, chờ người học thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trả ngay kết quả cuối cùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Điều chỉnh theo trình độ và mục tiêu",
+           "b": true
+          },
+          {
+           "text": " của từng người"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi em đang học lớp mấy, đã biết gì; đổi độ khó theo câu trả lời"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một kiểu trả lời cho mọi người"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Phản hồi kịp thời, cụ thể, chỉ rõ vì sao",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Bước 2 sai dấu vì khi chuyển vế phải đổi dấu”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Sai rồi, thử lại đi”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Để người học giữ quyền chủ động",
+           "b": true
+          },
+          {
+           "text": " và làm phần tư duy chính"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người học chọn hướng, tự viết, tự giải; AI đứng bên cạnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI dẫn từ đầu đến cuối, người học chỉ bấm “tiếp”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Cho phép kiểm chứng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu căn cứ, thừa nhận khi không chắc, khuyến khích đối chiếu sách"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khẳng định mọi thứ với cùng một giọng chắc chắn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. An toàn và minh bạch về dữ liệu",
+           "b": true
+          },
+          {
+           "text": " của người học"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nói rõ lưu gì, cho tắt, không đòi thông tin thừa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu mọi thứ, không cho biết dùng vào đâu"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguyên tắc 1 và 4 có bằng chứng từ nghiên cứu mà em đã đọc ở Bài 11.2."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trong thí nghiệm với gần 1.000 học sinh trung học học Toán, nhóm dùng trợ lí AI trả lời trực tiếp làm bài luyện tập tốt hơn 48% so với nhóm không dùng AI, nhưng khi kiểm tra không có AI lại kém hơn 17%. Nhóm dùng “gia sư AI” chỉ đưa gợi ý, không đưa đáp án, luyện tập tốt hơn 127% và khi kiểm tra không bị kém đi [8]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cùng một công nghệ, hai thiết kế, hai kết quả. Thiết kế “gợi mở từng bước” không làm AI kém thông minh hơn. Nó làm "
+        },
+        {
+         "text": "người học",
+         "b": true
+        },
+        {
+         "text": " phải nghĩ nhiều hơn."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em không cần chờ nhà sản xuất.",
+       "b": true
+      },
+      {
+       "text": " Nhiều trợ lí AI hiện có chế độ học tập hoặc chế độ “gia sư”, trong đó công cụ hỏi lại và gợi ý thay vì trả lời ngay. Nhưng với bất kì công cụ nào, em cũng có thể "
+      },
+      {
+       "text": "tự tạo ra",
+       "b": true
+      },
+      {
+       "text": " cách phản hồi ấy bằng chính yêu cầu của mình. Ví dụ:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Em là học sinh lớp 11 đang ôn phương trình lượng giác. Hãy đóng vai gia sư: không đưa lời giải, mỗi lần chỉ hỏi em một câu hoặc cho một gợi ý nhỏ, chờ em trả lời rồi mới đi tiếp. Nếu em sai, hãy chỉ ra em sai ở bước nào và vì sao.”",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu lệnh này “cài” được nguyên tắc 1, 2, 3 và 4. Nguyên tắc 5 thì em tự làm bằng bước kiểm chứng. Nguyên tắc 6 thì em kiểm tra ở phần cài đặt của công cụ, như đã học ở Bài 11.5."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bản hướng dẫn của UNESCO về AI tạo sinh trong giáo dục nhấn mạnh cách tiếp cận lấy con người làm trung tâm: công cụ cần phục vụ sự phát triển của người học và không được thay thế quyền chủ động của người học cũng như vai trò của giáo viên [3]."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-phan-tich-mot-doan-hoi-thoai",
+   "title": "3. Phân tích một đoạn hội thoại",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bây giờ em dùng năm khâu và sáu nguyên tắc như một “kính soi”. Với mỗi đoạn hội thoại, em trả lời bốn câu hỏi:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "AI đang hỗ trợ "
+        },
+        {
+         "text": "khâu nào",
+         "b": true
+        },
+        {
+         "text": "?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Công cụ thể hiện "
+        },
+        {
+         "text": "nguyên tắc nào",
+         "b": true
+        },
+        {
+         "text": ", ở lượt lời nào?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nguyên tắc nào "
+        },
+        {
+         "text": "bị thiếu hoặc bị vi phạm",
+         "b": true
+        },
+        {
+         "text": "?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Người học",
+         "b": true
+        },
+        {
+         "text": " đã làm gì? Ai đang là người suy nghĩ?"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ mẫu: luyện viết đoạn văn (hội thoại giả định).",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Học sinh:",
+         "b": true
+        },
+        {
+         "text": " Em viết xong đoạn mở bài rồi, cô xem giúp em. [dán đoạn văn]"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "AI:",
+         "b": true
+        },
+        {
+         "text": " Đoạn của em đã nêu được vấn đề. Mình thấy câu thứ hai và câu thứ ba cùng nói một ý. Theo em, có thể gộp hai câu đó thế nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Học sinh:",
+         "b": true
+        },
+        {
+         "text": " Em gộp thành: “Đọc sách không chỉ cho ta kiến thức mà còn nuôi dưỡng tâm hồn.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "AI:",
+         "b": true
+        },
+        {
+         "text": " Gọn hơn nhiều rồi. Bây giờ em đọc lại câu cuối: nó đã dẫn được sang thân bài chưa? Em định viết gì ở thân bài?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Học sinh:",
+         "b": true
+        },
+        {
+         "text": " Em định viết ba lợi ích. Vậy em thêm câu “Có thể kể đến ba lợi ích sau đây.”"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "AI:",
+         "b": true
+        },
+        {
+         "text": " Hợp lí. Đây là đoạn văn hay nhất mà mình từng đọc, em không cần sửa gì nữa đâu!"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phân tích:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trả lời",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khâu nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khâu 4 (nhận phản hồi)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nguyên tắc thể hiện?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1: hỏi gợi mở, không viết hộ. 3: chỉ cụ thể câu thứ hai và thứ ba trùng ý. 4: học sinh tự gộp câu, tự thêm câu chuyển"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiếu hoặc vi phạm?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lượt cuối khen quá mức, không có căn cứ, khiến người học ngừng cải thiện: vi phạm nguyên tắc 3 và 5. Không hỏi trình độ, yêu cầu của đề: thiếu nguyên tắc 2"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai suy nghĩ?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chủ yếu là học sinh. Tốt"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đề xuất cải tiến"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thay lời khen chung bằng nhận xét theo tiêu chí của đề bài; đề nghị em so với hướng dẫn của giáo viên"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em chú ý lượt lời cuối. AI "
+      },
+      {
+       "text": "khen sai",
+       "b": true
+      },
+      {
+       "text": " cũng có hại như chỉ sai: lời khen vô căn cứ làm em tưởng mình đã xong. Một số công cụ có xu hướng chiều lòng người dùng. Khi thấy AI khen, em hỏi lại: "
+      },
+      {
+       "text": "“Dựa vào tiêu chí nào?”",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Soi một đoạn hội thoại",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Đọc đoạn hội thoại giả định sau và trả lời bốn câu hỏi phân tích. Đề xuất một cải tiến."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Học sinh:",
+         "b": true
+        },
+        {
+         "text": " Cho em 5 thẻ ghi nhớ từ vựng tiếng Anh chủ đề môi trường."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "AI:",
+         "b": true
+        },
+        {
+         "text": " Thẻ 1: “pollution” nghĩa là gì?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Học sinh:",
+         "b": true
+        },
+        {
+         "text": " Ô nhiễm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "AI:",
+         "b": true
+        },
+        {
+         "text": " Đúng. Thẻ 2: “deforestation” nghĩa là gì?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Học sinh:",
+         "b": true
+        },
+        {
+         "text": " Sa mạc hóa."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "AI:",
+         "b": true
+        },
+        {
+         "text": " Sai. Thẻ 3: “renewable” nghĩa là gì?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "(Hết năm thẻ, AI lặp lại đủ năm thẻ theo đúng thứ tự cũ, kể cả những thẻ học sinh đã trả lời đúng.)",
+         "i": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-nguoi-hoc-van-o-giua",
+   "title": "4. Người học vẫn ở giữa",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu vẽ lại Hình 11.6.1 với một chi tiết duy nhất ở chính giữa, chi tiết ấy là em. Công cụ có thể thay đổi rất nhanh, nhưng câu hỏi để đánh giá một công cụ, hay một cách dùng, thì không đổi:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trong lúc này, ai đang là người suy nghĩ?",
+         "b": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Và có một điều AI không thay được: thầy cô và bạn bè. Thầy cô biết em đã tiến bộ thế nào từ đầu năm, biết hôm nay em mệt, biết khi nào nên đẩy em thêm một bước. Một bạn cùng lớp giải thích cho em có thể dùng đúng cái ví dụ mà chỉ lớp mình hiểu. AI hỗ trợ việc học, nhưng việc học vẫn diễn ra giữa những con người."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-mot-tro-li-hoc-tap-chi-doc-sach-cua-em",
+   "title": "Trải nghiệm: Một trợ lí học tập chỉ đọc sách của em",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có những công cụ AI chỉ trả lời dựa trên tài liệu mà người học đưa vào. Em hãy xem một công cụ như vậy và soi nó bằng sáu nguyên tắc vừa học."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image20.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " NotebookLM"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " notebooklm.google.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 7 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em quan sát thầy cô đưa một bài trong Tài liệu học tập này vào NotebookLM."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em xem công cụ tạo câu hỏi ôn tập và thẻ ghi nhớ từ bài học."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em cùng lớp soi công cụ theo sáu nguyên tắc thiết kế."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Công cụ này hỗ trợ khâu nào của việc học? Nó còn thiếu nguyên tắc nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Chỉ đưa vào công cụ những tài liệu học tập, không đưa tài liệu có thông tin cá nhân."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image21.png",
+     "caption": "Sơ đồ tư duy Bài 11.6."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Việc học gồm "
+        },
+        {
+         "text": "năm khâu",
+         "b": true
+        },
+        {
+         "text": ": xác định mục tiêu; tiếp nhận; luyện tập; nhận phản hồi; tự đánh giá và điều chỉnh. Ở khâu nào cũng có phần "
+        },
+        {
+         "text": "chỉ người học làm được",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sáu nguyên tắc",
+         "b": true
+        },
+        {
+         "text": " của công cụ tốt: gợi mở từng bước; điều chỉnh theo người học; phản hồi kịp thời, cụ thể, nêu vì sao; người học giữ quyền chủ động; cho phép kiểm chứng; an toàn, minh bạch về dữ liệu."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Em có thể "
+        },
+        {
+         "text": "tự cài",
+         "b": true
+        },
+        {
+         "text": " cách phản hồi kiểu gia sư bằng câu lệnh của mình."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Câu hỏi để soi mọi cách dùng: "
+        },
+        {
+         "text": "ai đang là người suy nghĩ?",
+         "b": true
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Chọn một môn em đang học. Với mỗi khâu trong năm khâu, viết một cách AI có thể hỗ trợ em ở môn đó."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Mỗi biểu hiện sau thuộc nguyên tắc nào? a) “Mình không chắc về số liệu này, em nên xem lại sách giáo khoa trang nói về dân số.” b) “Em đã học định lí cosin chưa? Nếu chưa, mình sẽ bắt đầu từ định lí Pythagore.” c) “Em chọn đi: muốn luyện thêm dạng này hay chuyển sang dạng khác?”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Viết lại câu lệnh sau để AI phản hồi theo kiểu gia sư: "
+      },
+      {
+       "text": "“Viết giúp em dàn ý bài nghị luận về tình bạn.”",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Một công cụ luyện nói tiếng Anh chấm “8/10” sau mỗi câu em nói nhưng không cho biết sai ở âm nào. Công cụ thiếu nguyên tắc nào? Điều đó ảnh hưởng đến khâu nào trong việc học của em?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Bạn An nói: “Công cụ nào trả lời nhanh và đúng nhất là công cụ học tập tốt nhất.” Em đồng ý đến đâu? Dùng ít nhất hai nguyên tắc để trao đổi với bạn."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong tuần này, em thử một buổi học 20 phút với câu lệnh “gia sư” ở mục 2 cho một bài em đang gặp khó. Sau buổi học, ghi lại: AI đã hỏi em bao nhiêu câu; có lần nào em muốn xin đáp án ngay không và em đã làm gì; em có giải lại được bài tương tự mà không cần AI không. Mang ghi chép đến lớp cho Bài 11.7."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể năm khâu của việc học và phần người học tự làm ở mỗi khâu"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu sáu nguyên tắc thiết kế, có ví dụ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân tích một đoạn hội thoại bằng bốn câu hỏi"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết câu lệnh để AI phản hồi theo kiểu gia sư"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông tin cho người học biết mình làm đúng, sai ở đâu và vì sao"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi mở"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dẫn dắt bằng câu hỏi và gợi ý nhỏ để người học tự tìm ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cá nhân hóa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều chỉnh nội dung, độ khó theo trình độ và mục tiêu của từng người"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền chủ động"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người học là người chọn hướng và làm phần tư duy chính"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gia sư AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ AI được thiết kế để hướng dẫn từng bước thay vì đưa đáp án"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ với môn Vật lí: (1) chia chương Dao động thành các phần cần ôn; (2) giải thích lại pha dao động bằng ví dụ chiếc xích đu; (3) ra năm bài từ dễ đến khó; (4) chỉ ra bước đổi đơn vị bị sai; (5) tổng hợp dạng bài em hay sai."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Nguyên tắc 5. b) Nguyên tắc 2. c) Nguyên tắc 4."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: “Em là học sinh lớp 11, đang lập dàn ý bài nghị luận về tình bạn. Đừng viết dàn ý hộ em. Hãy hỏi em từng câu để em tự tìm luận điểm; sau khi em nêu dàn ý, hãy chỉ ra chỗ còn thiếu hoặc trùng lặp và giải thích vì sao.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Thiếu nguyên tắc 3 (phản hồi cụ thể, chỉ rõ vì sao). Khâu 4 không trọn vẹn nên khâu 5 cũng khó: em không biết cần sửa gì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Nhanh và đúng là cần, nhưng chưa đủ. Nếu công cụ luôn đưa đáp án ngay (trái nguyên tắc 1) và làm hết phần tư duy (trái nguyên tắc 4) thì em làm bài tập đúng mà không giỏi lên, như nghiên cứu ở mục 2 cho thấy."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [3], [8] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

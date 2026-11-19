@@ -1,0 +1,28 @@
+---
+import type { LabPlacement } from './registry';
+import TrafficLight from './traffic-light/TrafficLight';
+import RecyclingStation from './recycling-station/RecyclingStation';
+import ImageTrainer from './image-trainer/ImageTrainer';
+import NeuronLab from './neuron/NeuronLab';
+import NetworkPlayground from './network/NetworkPlayground';
+
+interface Props {
+  lab: LabPlacement;
+}
+
+const { lab } = Astro.props;
+---
+
+<section class="lab" id={`lab-${lab.key}`} aria-labelledby={`lab-${lab.key}-title`}>
+  <div class="lab-head">
+    <h3 id={`lab-${lab.key}-title`}>{lab.title}</h3>
+    <p>{lab.description}</p>
+  </div>
+  <div class="lab-body">
+    {lab.key === 'traffic-light' && <TrafficLight client:visible />}
+    {lab.key === 'recycling-station' && <RecyclingStation client:visible />}
+    {lab.key === 'image-trainer' && <ImageTrainer client:visible />}
+    {lab.key === 'neuron' && <NeuronLab client:visible />}
+    {lab.key === 'network-playground' && <NetworkPlayground client:visible />}
+  </div>
+</section>

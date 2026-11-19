@@ -1,0 +1,2059 @@
+{
+ "id": "11.7",
+ "slug": "bai-11-07",
+ "grade": 11,
+ "num": 7,
+ "topicId": "11.3",
+ "title": "Đề xuất tính năng AI cho việc học của em",
+ "meta": "Chuyên đề 11.3: AI trong học tập và kĩ thuật prompt nâng cao (tiết 2 trong 3 tiết)",
+ "period": {
+  "index": 2,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Phát biểu được một "
+   },
+   {
+    "text": "khó khăn có thật",
+    "b": true
+   },
+   {
+    "text": " trong việc học thành một câu rõ ràng."
+   }
+  ],
+  [
+   {
+    "text": "Viết được "
+   },
+   {
+    "text": "câu đề xuất",
+    "b": true
+   },
+   {
+    "text": " và trình bày một đề xuất tính năng AI theo "
+   },
+   {
+    "text": "cấu trúc sáu phần",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Tự đánh giá và góp ý cho đề xuất của bạn theo "
+   },
+   {
+    "text": "bốn tiêu chí",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ]
+ ],
+ "keywords": [
+  "khó khăn của người học",
+  "tính năng",
+  "đầu vào",
+  "đầu ra",
+  "đề xuất",
+  "tiêu chí đánh giá"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-buc-tuong-kho-khan",
+   "title": "Khởi động: Bức tường khó khăn",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy lấy một mẩu giấy và viết tiếp câu sau, càng cụ thể càng tốt:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Khi học môn …, em thường bị kẹt ở chỗ …”",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dưới đây là vài mẩu giấy có thể được dán lên “bức tường khó khăn” của một lớp 11 (ví dụ giả định):"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Học Sử xong tưởng thuộc rồi, đến lúc kiểm tra mới biết mình quên.”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Nghe giảng Lí thì hiểu, về nhà mở bài tập ra không biết bắt đầu từ đâu.”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Viết đoạn văn tiếng Anh xong không biết sai chỗ nào, ngại hỏi cô vì sợ làm phiền.”"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Sắp thuyết trình mà không có ai nghe thử để góp ý.”"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Trong những khó khăn trên, khó khăn nào có thể được một tính năng AI giúp đỡ? Khó khăn nào thì AI không phải là lời giải?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở Bài 11.6, em là người "
+      },
+      {
+       "text": "dùng",
+       "b": true
+      },
+      {
+       "text": " và "
+      },
+      {
+       "text": "phân tích",
+       "b": true
+      },
+      {
+       "text": " công cụ. Hôm nay em đổi vai: em là người "
+      },
+      {
+       "text": "đề xuất",
+       "b": true
+      },
+      {
+       "text": " công cụ. Em không cần biết lập trình. Việc của người đề xuất là hiểu thật rõ người học cần gì, và mô tả đủ rõ để người khác có thể làm ra."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-bat-dau-tu-kho-khan-dung-bat-dau-tu-cong-nghe",
+   "title": "1. Bắt đầu từ khó khăn, đừng bắt đầu từ công nghệ",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách dễ nhất để có một đề xuất tồi là bắt đầu bằng câu: “Làm một ứng dụng AI thật hiện đại để…” Cách tốt hơn là bắt đầu từ một người cụ thể đang gặp một khó khăn cụ thể."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một khó khăn được phát biểu tốt trả lời được ba câu hỏi: "
+      },
+      {
+       "text": "ai",
+       "b": true
+      },
+      {
+       "text": " gặp, gặp "
+      },
+      {
+       "text": "ở khâu nào",
+       "b": true
+      },
+      {
+       "text": " của việc học, và "
+      },
+      {
+       "text": "vì sao",
+       "b": true
+      },
+      {
+       "text": " cách hiện tại chưa giải quyết được."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phát biểu mơ hồ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phát biểu rõ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Học Sử khó nhớ.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Học sinh lớp 11 học xong một bài Sử không biết mình đã nhớ đến đâu (khâu tự đánh giá), vì không có ai hỏi lại và ngại tự ra câu hỏi.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em nói tiếng Anh kém.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Em không có người nghe và chỉ ra âm nào em phát sai (khâu nhận phản hồi), vì trên lớp mỗi bạn chỉ được nói vài phút.”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Khó khăn nào cũng nên giải quyết bằng AI.”",
+         "b": true
+        },
+        {
+         "text": " Không phải. “Em không có thời gian học” là chuyện sắp xếp thời gian. “Em không thấy môn này có ý nghĩa” cần một cuộc trò chuyện với thầy cô. AI phù hợp khi khó khăn nằm ở chỗ cần "
+        },
+        {
+         "text": "giải thích lại, ra bài luyện tập, phản hồi nhanh, tổng hợp",
+         "b": true
+        },
+        {
+         "text": ", tức là những việc em đã thấy ở bảng năm khâu của Bài 11.6."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Viết lại khó khăn",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Lấy mẩu giấy em viết ở phần Khởi động. Viết lại thành một câu rõ theo mẫu: "
+        },
+        {
+         "text": "“[Ai] gặp khó khăn [gì] ở khâu [nào], vì [lí do cách hiện tại chưa giúp được].”",
+         "i": true
+        },
+        {
+         "text": " Đổi cho bạn bên cạnh đọc: bạn có hình dung ra đúng tình huống của em không?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-mot-cau-de-xuat",
+   "title": "2. Một câu đề xuất",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi đã có khó khăn rõ, em viết ý tưởng thành "
+      },
+      {
+       "text": "một câu duy nhất",
+       "b": true
+      },
+      {
+       "text": " theo khuôn sau:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Câu đề xuất",
+         "b": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Dành cho ",
+         "i": true
+        },
+        {
+         "text": "[ai]",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": " đang gặp ",
+         "i": true
+        },
+        {
+         "text": "[khó khăn gì]",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ", tính năng ",
+         "i": true
+        },
+        {
+         "text": "[tên]",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": " sẽ nhận ",
+         "i": true
+        },
+        {
+         "text": "[đầu vào]",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": " và ",
+         "i": true
+        },
+        {
+         "text": "[làm gì, trả ra gì]",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ", giúp ",
+         "i": true
+        },
+        {
+         "text": "[lợi ích cho việc học]",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ".”",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ với khó khăn “không có ai nghe thử bài thuyết trình”:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Dành cho ",
+         "i": true
+        },
+        {
+         "text": "học sinh sắp thuyết trình",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": " mà ",
+         "i": true
+        },
+        {
+         "text": "không có ai nghe thử và góp ý",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ", tính năng ",
+         "i": true
+        },
+        {
+         "text": "Người nghe khó tính",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": " sẽ nhận ",
+         "i": true
+        },
+        {
+         "text": "bản ghi âm phần nói thử và dàn ý",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ", rồi ",
+         "i": true
+        },
+        {
+         "text": "đặt ba câu hỏi mà người nghe có thể hỏi và chỉ ra đoạn nói quá nhanh hoặc lạc khỏi dàn ý",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ", giúp ",
+         "i": true
+        },
+        {
+         "text": "em tự sửa bài nói và chuẩn bị trả lời câu hỏi",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ".”",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một câu, nhưng buộc em phải nghĩ đủ sáu thứ. Viết không nổi một câu này nghĩa là ý tưởng chưa chín."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trung tâm của câu đề xuất là ba thứ: "
+      },
+      {
+       "text": "đầu vào, việc AI làm, đầu ra",
+       "b": true
+      },
+      {
+       "text": ". Hình 11.7.1 đặt ba thứ ấy cạnh hai thứ dễ bị quên: phần người học tự làm, và rủi ro."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image22.png",
+     "caption": "Hình 11.7.1. Khung của một tính năng AI hỗ trợ học tập, minh họa bằng tính năng “Người nghe khó tính”. Hai dải phía dưới là những phần đề xuất nào cũng phải có."
+    }
+   ]
+  },
+  {
+   "id": "3-cau-truc-sau-phan-cua-mot-de-xuat",
+   "title": "3. Cấu trúc sáu phần của một đề xuất",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu đề xuất là phần lõi. Để người khác hiểu và tin, em mở nó ra thành sáu phần."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phần",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nội dung cần có",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Người dùng và khó khăn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai, gặp khó khăn gì, ở khâu nào của việc học"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Tính năng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI nhận gì, làm gì, trả ra gì; một ví dụ sử dụng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Lợi ích",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người học làm tốt hơn điều gì"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Phần người học tự làm",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc gì AI không làm thay"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Rủi ro và cách kiểm soát",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có thể sai ở đâu; dữ liệu nào bị thu thập; có thể bị lạm dụng thế nào; cách phòng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Điều kiện sử dụng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần thiết bị, kết nối gì; bạn thiếu điều kiện có dùng được không"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đề xuất mẫu: tính năng “Người nghe khó tính”",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phần",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nội dung",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Người dùng và khó khăn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh lớp 11 chuẩn bị thuyết trình; khâu nhận phản hồi; luyện một mình nên không biết mình nói nhanh hay chậm, không lường được câu hỏi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Tính năng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận bản ghi âm 3 đến 5 phút và dàn ý. Trả ra: ba câu hỏi người nghe có thể hỏi; các đoạn nói nhanh quá mức; ý nào trong dàn ý bị bỏ sót. Ví dụ: Thu nói thử bài về rác thải nhựa, nhận câu hỏi “Số liệu về lượng rác em lấy ở đâu?”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Lợi ích"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sửa được tốc độ nói, bổ sung ý thiếu, chuẩn bị trước câu trả lời"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Phần người học tự làm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tự viết nội dung, tự nói, tự trả lời câu hỏi. Tính năng không viết bài nói và không trả lời hộ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Rủi ro và cách kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có thể nhận sai giọng địa phương, nên cho người dùng sửa bản chữ. Bản ghi âm là dữ liệu cá nhân, nên xóa sau khi phân tích và không dùng để huấn luyện nếu người dùng không đồng ý. Câu hỏi AI đặt ra có thể lạc đề, nên người dùng được bỏ qua"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Điều kiện sử dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điện thoại có micro. Bạn không có điện thoại riêng có thể dùng máy ở thư viện. Có lựa chọn gõ nội dung thay cho ghi âm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em để ý phần 4 và phần 5. Đây là hai phần hay bị bỏ nhất, và cũng là hai phần cho thấy người đề xuất có trách nhiệm hay không. Bỏ phần 4, tính năng dễ trượt thành “làm thay”. Bỏ phần 5, người dùng gánh rủi ro mà không biết."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-bon-tieu-chi-cua-mot-de-xuat-tot",
+   "title": "4. Bốn tiêu chí của một đề xuất tốt",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tiêu chí",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi kiểm tra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Liên hệ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Giải quyết khó khăn có thật",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có ít nhất vài bạn trong lớp gặp đúng khó khăn này không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục 1 của bài"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Để học, không làm thay",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sau khi dùng, người học có giỏi lên không? Ai là người suy nghĩ?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.2, 11.6"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Khả thi",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có dữ liệu đầu vào không? Việc này AI có làm được không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.9 đến 11.12 sẽ giúp em trả lời kĩ hơn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. An toàn và công bằng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu của người học có được bảo vệ không? Bạn thiếu điều kiện có dùng được không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài 11.4, 11.5"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thử dùng bốn tiêu chí với ba ý tưởng ngắn (giả định):"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ý tưởng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhận xét theo tiêu chí",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“AI viết bài văn hộ khi sắp đến hạn nộp”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trượt tiêu chí 2. Sửa: AI đọc dàn ý và hỏi lại ba chỗ lập luận còn yếu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“AI đọc suy nghĩ để biết em chưa hiểu chỗ nào”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trượt tiêu chí 3: không có đầu vào như vậy. Sửa: AI dựa vào các câu em làm sai để chỉ ra phần chưa vững"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“AI theo dõi camera suốt giờ tự học để nhắc khi em mất tập trung”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vướng tiêu chí 4: thu hình liên tục là thu rất nhiều dữ liệu cá nhân. Cần cân nhắc cách ít xâm phạm hơn, như tự đặt đồng hồ nhắc"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một số tính năng mà học sinh hay nghĩ ra, như tạo câu hỏi ôn tập hoặc thẻ ghi nhớ từ chính tài liệu của người học, hiện đã có trong một số công cụ. Điều đó không làm ý tưởng của em mất giá trị. Người thiết kế giỏi thường "
+        },
+        {
+         "text": "cải tiến từ cái đã có",
+         "b": true
+        },
+        {
+         "text": ": thêm phần giải thích vì sao sai, thêm lựa chọn cho bạn dùng máy cũ, bớt dữ liệu phải thu. Trong thí nghiệm em đã đọc ở Bài 11.2, chỉ một thay đổi thiết kế (đưa gợi ý thay cho đáp án) đã đổi kết quả học tập của học sinh [8]."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-trinh-bay-va-gop-y-phien-cho-y-tuong",
+   "title": "5. Trình bày và góp ý: phiên chợ ý tưởng",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một đề xuất viết xong mới là bản nháp. Nó tốt lên nhờ góp ý. Trong “phiên chợ ý tưởng”, mỗi nhóm trưng bày đề xuất của mình; các nhóm khác đi xem và để lại góp ý."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi trình bày",
+       "b": true
+      },
+      {
+       "text": ", em nói theo thứ tự: khó khăn (kể một tình huống thật), câu đề xuất, một ví dụ sử dụng, rồi phần 4 và 5. Hai phút là đủ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi góp ý",
+       "b": true
+      },
+      {
+       "text": ", em dùng mẫu “một khen, một hỏi, một gợi ý”:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mẫu câu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một khen"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Mình thích ở chỗ…” (gắn với một tiêu chí)"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Mình thích ở chỗ tính năng bắt người học tự trả lời trước.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một hỏi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Mình chưa rõ…”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Mình chưa rõ bản ghi âm được lưu ở đâu, bao lâu.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một gợi ý"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Sẽ thế nào nếu…”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Sẽ thế nào nếu có thêm lựa chọn gõ chữ cho bạn ngại ghi âm?”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Góp ý tốt là góp ý "
+      },
+      {
+       "text": "giúp bạn sửa được",
+       "b": true
+      },
+      {
+       "text": ". “Hay đấy” hoặc “không khả thi đâu” đều không giúp được gì."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Từ một câu đến sáu phần",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Theo nhóm, chọn một khó khăn trên bức tường của lớp. Viết câu đề xuất, rồi mở thành sáu phần theo bảng ở mục 3. Tự chấm theo bốn tiêu chí trước khi mang ra phiên chợ. Sau phiên chợ, sửa ít nhất một điểm dựa trên góp ý nhận được và ghi rõ em đã sửa gì."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu nhóm em dùng AI để hỗ trợ viết đề xuất",
+       "b": true
+      },
+      {
+       "text": " thì áp dụng đúng quy trình ở Bài 11.1: ý tưởng và khó khăn là của nhóm; AI có thể giúp rà xem sáu phần đã đủ chưa hoặc đóng vai người phản biện; và nhóm ghi rõ đã dùng AI vào việc gì."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-thu-nhanh-mot-y-tuong-cua-lop",
+   "title": "Trải nghiệm: Thử nhanh một ý tưởng của lớp",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đề xuất trên giấy khác với khi được chạy thử. Em hãy xem một đề xuất của lớp “sống dậy” trong vài phút."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image3.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Gemini, Gem tùy chỉnh"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " gemini.google.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em cùng lớp chọn đề xuất của một nhóm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em quan sát thầy cô dựng nhanh một trợ lí AI làm theo đề xuất đó."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em thử đặt câu hỏi cho trợ lí và góp ý theo bốn tiêu chí."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Bản chạy thử cho thấy đề xuất cần sửa điều gì trước khi làm thật?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Thầy cô sẽ trình chiếu trên tài khoản của nhà trường."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image23.png",
+     "caption": "Sơ đồ tư duy Bài 11.7."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Đề xuất tốt "
+        },
+        {
+         "text": "bắt đầu từ khó khăn có thật",
+         "b": true
+        },
+        {
+         "text": " của một người học cụ thể, không bắt đầu từ công nghệ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Câu đề xuất:",
+         "b": true
+        },
+        {
+         "text": " dành cho ai, gặp khó khăn gì, tính năng tên gì, nhận gì, làm gì và trả ra gì, giúp gì."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sáu phần:",
+         "b": true
+        },
+        {
+         "text": " người dùng và khó khăn; tính năng; lợi ích; phần người học tự làm; rủi ro và cách kiểm soát; điều kiện sử dụng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bốn tiêu chí:",
+         "b": true
+        },
+        {
+         "text": " khó khăn có thật; để học, không làm thay; khả thi; an toàn và công bằng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Góp ý theo mẫu: "
+        },
+        {
+         "text": "một khen, một hỏi, một gợi ý",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Viết lại hai phát biểu sau thành khó khăn rõ (ai, khâu nào, vì sao): a) “Em học Hóa hay quên công thức.” b) “Em đọc bài đọc hiểu tiếng Anh rất chậm.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Câu đề xuất sau còn thiếu những thành phần nào? Hãy bổ sung: "
+      },
+      {
+       "text": "“Tính năng Sổ tay thông minh sẽ dùng AI giúp học sinh học tốt hơn.”",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Với tính năng “Chỉ chỗ sai, không sửa hộ” (nhận đoạn văn tiếng Anh của người học, gạch dưới chỗ sai và nêu loại lỗi, không viết lại), em viết phần 4 và phần 5 của đề xuất."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Một nhóm đề xuất: “AI tự động chấm điểm hạnh kiểm dựa trên tin nhắn trong nhóm lớp.” Dùng bốn tiêu chí để nhận xét. Theo em, ý tưởng này nên sửa hay nên bỏ?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Viết góp ý “một khen, một hỏi, một gợi ý” cho đề xuất mẫu “Người nghe khó tính” ở mục 3."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mang đề xuất của nhóm về hỏi ý kiến hai người ngoài lớp: một bạn khối khác và một người lớn (cha mẹ, anh chị). Hỏi họ hai câu: “Khó khăn này có thật không?” và “Điều gì ở tính năng này làm anh chị, cô chú lo ngại?” Ghi lại câu trả lời và bổ sung vào phần 5 của đề xuất. Nếu trường có Câu lạc bộ AI hoặc cuộc thi ý tưởng, đây là điểm khởi đầu tốt cho một sản phẩm của nhóm."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phát biểu rõ một khó khăn trong việc học"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết câu đề xuất đủ thành phần"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trình bày đề xuất theo sáu phần, có phần 4 và 5"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đánh giá và góp ý theo bốn tiêu chí"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tính năng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một việc cụ thể mà công cụ làm được cho người dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu vào"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ người dùng đưa cho tính năng (văn bản, ảnh, ghi âm, câu trả lời…)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ tính năng trả lại cho người dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đề xuất"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bản mô tả một ý tưởng đủ rõ để người khác hiểu, đánh giá và có thể làm ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khả thi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có thể làm được với dữ liệu và công nghệ hiện có"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý. a) “Học sinh lớp 11 học công thức Hóa xong một tuần là quên (khâu luyện tập), vì chỉ đọc lại chứ không có bài luyện nhắc lại đúng lúc sắp quên.” b) “Em đọc bài tiếng Anh chậm (khâu tiếp nhận) vì gặp từ mới là dừng lại tra từng từ, mất mạch ý.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Thiếu: dành cho ai, khó khăn gì, đầu vào, việc AI làm và đầu ra, lợi ích cụ thể. Ví dụ bổ sung: “Dành cho học sinh ghi vở rời rạc, khó ôn lại, tính năng Sổ tay thông minh sẽ nhận ảnh chụp trang vở và đặt năm câu hỏi tự kiểm tra từ chính nội dung đã ghi, giúp em biết mình còn hổng phần nào.”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Phần 4: người học tự viết, tự sửa từng lỗi, tự viết lại bản hoàn chỉnh. Phần 5: AI có thể bắt lỗi sai hoặc bỏ sót, nên ghi rõ “nên đối chiếu với giáo viên”; bài viết có thể chứa chuyện riêng tư, nên không lưu sau khi phân tích; có thể bị dùng trong bài kiểm tra, nên chỉ dùng khi giáo viên cho phép."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Tiêu chí 1: không xuất phát từ khó khăn của người học. Tiêu chí 2: không phục vụ việc học. Tiêu chí 4: thu tin nhắn riêng tư của cả lớp, dễ đánh giá sai và không công bằng. Đây là việc hệ trọng với con người, không nên giao cho máy tự quyết. Nên bỏ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: “Mình thích ở chỗ tính năng không viết bài nói hộ. Mình chưa rõ nếu máy nhận sai giọng thì kết quả ‘nói nhanh’ có còn đúng không. Sẽ thế nào nếu cho người dùng chọn mức độ ‘khó tính’ của câu hỏi?”"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [8] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

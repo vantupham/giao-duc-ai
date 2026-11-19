@@ -1,0 +1,2650 @@
+{
+ "id": "11.10",
+ "slug": "bai-11-10",
+ "grade": 11,
+ "num": 10,
+ "topicId": "11.4",
+ "title": "Mạng nơ-ron nhân tạo và những ứng dụng quanh ta",
+ "meta": "Chuyên đề 11.4: Bên trong hệ thống AI (tiết 2 trong 4 tiết)",
+ "period": {
+  "index": 2,
+  "total": 4
+ },
+ "objectives": [
+  [
+   {
+    "text": "Giải thích được ở mức đơn giản "
+   },
+   {
+    "text": "một nơ-ron nhân tạo",
+    "b": true
+   },
+   {
+    "text": " làm việc thế nào: nhận tín hiệu, cân nhắc mức quan trọng, so với ngưỡng, đưa ra kết quả."
+   }
+  ],
+  [
+   {
+    "text": "Mô tả được "
+   },
+   {
+    "text": "mạng nơ-ron nhân tạo",
+    "b": true
+   },
+   {
+    "text": " gồm ba loại lớp và “học” bằng cách điều chỉnh các mức quan trọng."
+   }
+  ],
+  [
+   {
+    "text": "Kể được "
+   },
+   {
+    "text": "ứng dụng",
+    "b": true
+   },
+   {
+    "text": " của mạng nơ-ron trong đời sống, và nêu được khi nào nó phù hợp, khi nào không."
+   }
+  ]
+ ],
+ "keywords": [
+  "nơ-ron nhân tạo",
+  "trọng số",
+  "ngưỡng",
+  "lớp vào",
+  "lớp ẩn",
+  "lớp ra",
+  "huấn luyện",
+  "học sâu"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-so-1-hay-so-7",
+   "title": "Khởi động: Số 1 hay số 7?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy viết chữ số 1 và chữ số 7 ra giấy, rồi nhìn sang vở bạn bên cạnh. Có bạn viết số 1 chỉ là một nét sổ thẳng. Có bạn thêm nét hất ở đầu, trông gần giống số 7. Có bạn viết số 7 có gạch ngang ở giữa, có bạn không."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vậy mà bưu điện vẫn có máy đọc được mã số viết tay trên phong bì, điện thoại vẫn chuyển được chữ viết tay thành chữ đánh máy."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Em thử viết một quy tắc bằng lời để máy phân biệt số 1 với số 7, sao cho đúng với chữ viết của cả lớp. Có viết nổi không? Khó ở đâu?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "“Số 7 có nét ngang phía trên.” Nhưng số 1 có nét hất dài thì sao? “Số 1 thì thẳng đứng.” Nhưng có bạn viết nghiêng. Cứ mỗi quy tắc lại có ngoại lệ, và danh sách ngoại lệ không bao giờ hết."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với những việc như thế, người ta không viết quy tắc cho máy nữa. Người ta cho máy xem thật nhiều ví dụ và để máy "
+      },
+      {
+       "text": "tự tìm ra",
+       "b": true
+      },
+      {
+       "text": " cách phân biệt. Công cụ phổ biến nhất để làm điều đó có tên là mạng nơ-ron nhân tạo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-mot-no-ron-nhan-tao-co-may-can-nhac-ti-hon",
+   "title": "1. Một nơ-ron nhân tạo: cỗ máy cân nhắc tí hon",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bộ não con người có hàng chục tỉ tế bào thần kinh, gọi là nơ-ron, nối với nhau thành mạng. Mỗi nơ-ron nhận tín hiệu từ nhiều nơ-ron khác, và chỉ “phát” tín hiệu đi tiếp khi tổng tín hiệu nhận được đủ mạnh. Các nhà khoa học mượn ý tưởng ấy để tạo ra một phép tính rất đơn giản."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nơ-ron nhân tạo",
+         "b": true
+        },
+        {
+         "text": " là một phép tính nhỏ: nó nhận nhiều "
+        },
+        {
+         "text": "tín hiệu vào",
+         "b": true
+        },
+        {
+         "text": ", nhân mỗi tín hiệu với một "
+        },
+        {
+         "text": "trọng số",
+         "b": true
+        },
+        {
+         "text": " (mức quan trọng), cộng tất cả lại, rồi so tổng với một "
+        },
+        {
+         "text": "ngưỡng",
+         "b": true
+        },
+        {
+         "text": " để đưa ra "
+        },
+        {
+         "text": "tín hiệu ra",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để thấy nó chạy thế nào, em hãy đóng vai một nơ-ron."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trò chơi “Nơ-ron giấy”: Sáng nay có đi học bằng xe đạp không?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bạn Bình quyết định dựa trên ba tín hiệu. Mỗi tín hiệu nhận giá trị 1 (có) hoặc 0 (không)."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tín hiệu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ý nghĩa",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trọng số",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vì sao",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "A"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trời đang mưa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "−3"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mưa làm Bình rất ngại đạp xe"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Còn kịp giờ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "+2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kịp giờ thì thong thả đạp xe"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có bạn đi cùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "+2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có bạn thì vui hơn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ngưỡng:",
+       "b": true
+      },
+      {
+       "text": " nếu tổng từ 2 trở lên thì kết quả là “đi xe đạp”. Ngược lại là “không đi”."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image30.png",
+     "caption": "Hình 11.10.1. Một nơ-ron nhân tạo với ví dụ “đi xe đạp”. Mỗi tín hiệu vào được nhân với trọng số của nó; nơ-ron cộng lại rồi so với ngưỡng."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thử tính với bốn buổi sáng:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Buổi sáng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "A (mưa)",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "B (kịp giờ)",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "C (có bạn)",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tổng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kết quả",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ Hai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "0"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "0 + 2 + 2 = 4"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đi xe đạp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ Ba"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "−3 + 2 + 2 = 1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không đi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ Tư"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "0"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "0"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "0 + 2 + 0 = 2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đi xe đạp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ Năm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "0"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "−3 + 2 + 0 = −1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không đi"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chỉ với phép nhân, phép cộng và một phép so sánh, “nơ-ron giấy” đã đưa ra được quyết định. Nó không hiểu mưa là gì, cũng không biết xe đạp là gì. Nó chỉ tính."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bây giờ đến phần quan trọng nhất: nơ-ron “học” thế nào?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giả sử ta quan sát Bình thật và thấy: sáng thứ Ba, trời mưa, nhưng vì kịp giờ và có bạn nên Bình "
+      },
+      {
+       "text": "vẫn đi xe đạp",
+       "b": true
+      },
+      {
+       "text": ". Nơ-ron giấy đã đoán sai. Sửa thế nào? Ta không viết thêm quy tắc mới. Ta chỉ "
+      },
+      {
+       "text": "chỉnh trọng số",
+       "b": true
+      },
+      {
+       "text": ": đổi trọng số của tín hiệu mưa từ −3 thành −2."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Buổi sáng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tổng với trọng số mới",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Kết quả",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ Ba"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "−2 + 2 + 2 = 2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đi xe đạp (khớp với thực tế)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ Năm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "−2 + 2 + 0 = 0"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không đi (vẫn như cũ)"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Huấn luyện",
+         "b": true
+        },
+        {
+         "text": " một mạng nơ-ron là cho nó xem nhiều ví dụ đã biết kết quả đúng, so kết quả nó đưa ra với kết quả đúng, rồi "
+        },
+        {
+         "text": "điều chỉnh các trọng số",
+         "b": true
+        },
+        {
+         "text": " từng chút một để lần sau sai ít hơn."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa làm đúng việc đó bằng tay, với một nơ-ron và một ví dụ. Máy tính làm việc đó tự động, với hàng triệu nơ-ron và hàng triệu ví dụ."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Đóng vai nơ-ron",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Dùng bộ trọng số ban đầu (−3, +2, +2; ngưỡng 2)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Tính kết quả cho buổi sáng: trời không mưa, không kịp giờ, có bạn đi cùng."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Tính kết quả cho buổi sáng: trời mưa, không kịp giờ, không có bạn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Một bạn khác tên Chi rất ghét mưa: cứ mưa là không đi xe đạp, dù kịp giờ và có bạn. Nhưng không có bạn đi cùng thì Chi vẫn đi nếu kịp giờ và trời không mưa. Bộ trọng số ban đầu có mô tả đúng Chi không? Em kiểm tra bằng bốn buổi sáng trong bảng."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-tu-mot-no-ron-den-mot-mang",
+   "title": "2. Từ một nơ-ron đến một mạng",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một nơ-ron chỉ làm được những cân nhắc đơn giản. Để phân biệt số 1 với số 7, hay nhận ra một khuôn mặt, người ta nối rất nhiều nơ-ron lại, xếp thành các "
+      },
+      {
+       "text": "lớp",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mạng nơ-ron nhân tạo",
+         "b": true
+        },
+        {
+         "text": " là mô hình gồm nhiều nơ-ron nhân tạo nối với nhau, xếp thành các lớp: "
+        },
+        {
+         "text": "lớp vào",
+         "b": true
+        },
+        {
+         "text": " nhận dữ liệu, một hoặc nhiều "
+        },
+        {
+         "text": "lớp ẩn",
+         "b": true
+        },
+        {
+         "text": " xử lí, và "
+        },
+        {
+         "text": "lớp ra",
+         "b": true
+        },
+        {
+         "text": " đưa kết quả."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image31.png",
+     "caption": "Hình 11.10.2. Một mạng nơ-ron ba lớp nhận ảnh chữ số viết tay. Tín hiệu đi từ trái sang phải; mỗi đường nối mang một trọng số."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lấy ví dụ nhận dạng chữ số viết tay:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lớp",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trong ví dụ chữ số",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lớp vào"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dữ liệu thô, mỗi nơ-ron một giá trị"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mỗi nơ-ron nhận độ đậm nhạt của một ô nhỏ (điểm ảnh) trong ảnh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lớp ẩn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết hợp các tín hiệu để phát hiện đặc điểm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có nơ-ron “phát” mạnh khi thấy nét ngang phía trên, có nơ-ron “phát” khi thấy nét sổ dài"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lớp ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đưa ra kết quả"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mười nơ-ron ứng với mười chữ số 0 đến 9; nơ-ron nào phát mạnh nhất thì đó là câu trả lời"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Điều thú vị là "
+      },
+      {
+       "text": "không ai lập trình",
+       "b": true
+      },
+      {
+       "text": " cho nơ-ron ở lớp ẩn phải tìm “nét ngang”. Sau khi xem hàng chục nghìn chữ số viết tay kèm đáp án đúng và điều chỉnh trọng số nhiều lần, mạng tự hình thành những “bộ phát hiện” như vậy. Người thiết kế quyết định mạng có bao nhiêu lớp, bao nhiêu nơ-ron; dữ liệu quyết định các trọng số."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Giải Nobel Vật lí năm 2024 được trao cho John J. Hopfield và Geoffrey Hinton “vì những khám phá và phát minh nền tảng giúp máy học bằng mạng nơ-ron nhân tạo trở thành hiện thực”. Thông cáo của Viện Hàn lâm Khoa học Hoàng gia Thụy Điển cũng nêu rõ mạng nơ-ron nhân tạo ban đầu được lấy cảm hứng từ cấu trúc của bộ não [10]. Các công trình nền tảng của hai ông bắt đầu từ những năm 1980, nghĩa là ý tưởng em vừa học đã có trước khi các em ra đời rất lâu. Thứ thay đổi gần đây là lượng dữ liệu và sức mạnh của máy tính."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Mạng nơ-ron nhân tạo là bộ não điện tử, nó suy nghĩ như người.”",
+         "b": true
+        },
+        {
+         "text": " Mạng nơ-ron chỉ "
+        },
+        {
+         "text": "lấy cảm hứng",
+         "b": true
+        },
+        {
+         "text": " từ bộ não. Nơ-ron nhân tạo là phép nhân, phép cộng và phép so sánh. Nó không có ý thức, không có cảm xúc, không “hiểu” theo nghĩa con người hiểu. Nó tìm ra quy luật trong số liệu, và có thể tìm rất giỏi."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Đọc thêm: “Học sâu” là gì?",
+     "id": "doc-them-hoc-sau-la-gi"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nội dung mở rộng, không bắt buộc.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi một mạng nơ-ron có "
+      },
+      {
+       "text": "nhiều lớp ẩn",
+       "b": true
+      },
+      {
+       "text": " xếp chồng lên nhau, người ta gọi việc huấn luyện nó là "
+      },
+      {
+       "text": "học sâu",
+       "b": true
+      },
+      {
+       "text": " (deep learning); “sâu” là nói về số lớp. Lớp ẩn đầu phát hiện những đặc điểm đơn giản như nét thẳng, nét cong; lớp sau ghép chúng thành hình phức tạp hơn như con mắt, bánh xe; lớp sau nữa ghép thành khuôn mặt, chiếc xe. Các mô hình ngôn ngữ đứng sau những trợ lí trò chuyện hiện nay cũng là mạng nơ-ron nhiều lớp với số trọng số rất lớn."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-ba-dac-diem-can-nho-ve-mang-no-ron",
+   "title": "3. Ba đặc điểm cần nhớ về mạng nơ-ron",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đặc điểm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nghĩa là",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hệ quả với người dùng",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học từ ví dụ, không theo quy tắc viết sẵn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không ai viết “số 7 có nét ngang”; mạng tự rút ra từ dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Làm được những việc khó viết thành quy tắc. Nhưng dữ liệu thế nào thì mạng thế ấy"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần nhiều dữ liệu và nhiều phép tính",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có rất nhiều trọng số phải điều chỉnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tốn điện, tốn thiết bị (em nhớ lại Bài 11.4). Thiếu dữ liệu thì mạng học kém"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khó giải thích vì sao",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu trả lời nằm rải trong vô số trọng số, không có “dòng lí do” để đọc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Với việc hệ trọng, cần con người kiểm tra và chịu trách nhiệm"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đặc điểm thứ ba thường được gọi là tính "
+      },
+      {
+       "text": "“hộp đen”",
+       "b": true
+      },
+      {
+       "text": ". Nếu em hỏi nơ-ron giấy “vì sao không đi xe đạp?”, em chỉ ra được ngay: vì trời mưa, trọng số −3. Nhưng với một mạng có hàng triệu trọng số, không ai chỉ ra được một trọng số nào là “lí do”. Các nhà nghiên cứu đang tìm cách làm cho mạng nơ-ron dễ giải thích hơn, nhưng đây vẫn là bài toán chưa có lời giải trọn vẹn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đặc điểm thứ nhất có mặt trái mà em đã gặp: phần mềm nhận diện khuôn mặt sai tới 34,7% với phụ nữ da sẫm màu trong khi chỉ sai 0,8% với nam giới da sáng, vì dữ liệu thiếu cân đối [13]. Mạng nơ-ron không tự biết dữ liệu của mình thiếu ai."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-mang-no-ron-o-quanh-ta",
+   "title": "4. Mạng nơ-ron ở quanh ta",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Lĩnh vực",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ứng dụng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mạng nhận gì, trả ra gì",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đời sống hằng ngày"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mở khóa điện thoại bằng khuôn mặt; gõ chữ bằng giọng nói"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh thành “khớp hay không khớp”; âm thanh thành chữ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ngôn ngữ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dịch máy; trợ lí trò chuyện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu tiếng này thành câu tiếng khác; câu hỏi thành câu trả lời"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Y tế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỗ trợ bác sĩ đọc ảnh X-quang, ảnh đáy mắt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh thành vùng nghi ngờ để bác sĩ xem xét"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giao thông"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đếm xe, đọc biển số, hỗ trợ lái xe"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hình ảnh từ camera thành số xe, chữ số, vật cản"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nông nghiệp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận diện sâu bệnh qua ảnh lá"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh lá thành tên bệnh có thể mắc"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải trí, sáng tạo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý bài hát, video; tạo ảnh, tạo nhạc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lịch sử nghe, xem thành danh sách gợi ý; mô tả thành hình ảnh"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em để ý điểm chung: hầu hết các việc trên đều thuộc loại "
+      },
+      {
+       "text": "khó viết thành quy tắc",
+       "b": true
+      },
+      {
+       "text": " nhưng "
+      },
+      {
+       "text": "có rất nhiều ví dụ",
+       "b": true
+      },
+      {
+       "text": ". Đó chính là “đất” của mạng nơ-ron."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi nào không nên dùng mạng nơ-ron?",
+       "b": true
+      },
+      {
+       "text": " Không phải bài toán nào cũng cần đến nó."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tình huống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Có nên dùng?",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vì sao",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tính điểm trung bình môn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã có công thức rõ ràng, chính xác tuyệt đối"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm tra học sinh đủ điều kiện dự thi theo quy chế"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quy tắc đã viết sẵn; cần giải thích được từng quyết định"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận ra giọng nói của nhiều vùng miền"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không viết nổi quy tắc; có nhiều bản ghi âm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân loại ảnh rác tái chế và rác hữu cơ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hình dạng rác vô cùng đa dạng; có thể thu nhiều ảnh"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Có hay không?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi việc sau, em trả lời “nên” hoặc “không nên” dùng mạng nơ-ron và nêu một lí do dựa trên ba đặc điểm ở mục 3."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Sắp xếp danh sách lớp theo thứ tự bảng chữ cái."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Chuyển chữ viết tay trong vở thành chữ đánh máy."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Quyết định một học sinh có bị kỉ luật hay không."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Gợi ý sách trong thư viện dựa trên những cuốn bạn đọc đã mượn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Tính tiền điện theo bậc thang giá."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-gioi-tim-quy-luat-khong-co-nghia-la-luon-dung",
+   "title": "5. Giỏi tìm quy luật không có nghĩa là luôn đúng",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mạng nơ-ron làm được những việc mà cách lập trình theo quy tắc không làm nổi. Nhưng ba đặc điểm của nó cũng nhắc em ba điều khi dùng các sản phẩm có mạng nơ-ron bên trong:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Kết quả là "
+        },
+        {
+         "text": "dự đoán dựa trên quy luật trong dữ liệu",
+         "b": true
+        },
+        {
+         "text": ", không phải là sự thật chắc chắn. Mức chắc chắn 92% vẫn có nghĩa là có thể sai."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nó làm tốt với những gì "
+        },
+        {
+         "text": "giống dữ liệu đã học",
+         "b": true
+        },
+        {
+         "text": ", và có thể sai bất ngờ với những gì khác lạ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Vì khó giải thích, những quyết định ảnh hưởng lớn đến con người (sức khỏe, điểm số, kỉ luật, tuyển chọn) "
+        },
+        {
+         "text": "không nên để mạng nơ-ron tự quyết",
+         "b": true
+        },
+        {
+         "text": ". Luật Trí tuệ nhân tạo của Việt Nam quản lí các hệ thống AI theo mức độ rủi ro chính là theo tinh thần này [4]."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-nhin-mot-mang-no-ron-dang-hoc",
+   "title": "Trải nghiệm: Nhìn một mạng nơ-ron đang học",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa đóng vai một nơ-ron bằng giấy. Trang web này cho em nhìn một mạng nơ-ron thật học ngay trên màn hình."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image32.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " TensorFlow Playground"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " playground.tensorflow.org (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 8 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em chọn bộ dữ liệu có hai nhóm điểm và bấm nút chạy."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em thêm hoặc bớt lớp ẩn, số nơ-ron, rồi quan sát đường phân chia hai nhóm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em tìm cách dùng ít nơ-ron nhất mà mạng vẫn tách được hai nhóm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Trên màn hình, trọng số hiện ra ở đâu? Em thấy mạng “học” bằng cách nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Trang bằng tiếng Anh, thầy cô sẽ giới thiệu các nút trước."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image33.png",
+     "caption": "Sơ đồ tư duy Bài 11.10."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nơ-ron nhân tạo:",
+         "b": true
+        },
+        {
+         "text": " nhận tín hiệu vào, nhân với "
+        },
+        {
+         "text": "trọng số",
+         "b": true
+        },
+        {
+         "text": ", cộng lại, so với "
+        },
+        {
+         "text": "ngưỡng",
+         "b": true
+        },
+        {
+         "text": ", đưa tín hiệu ra."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mạng nơ-ron nhân tạo:",
+         "b": true
+        },
+        {
+         "text": " nhiều nơ-ron xếp thành "
+        },
+        {
+         "text": "lớp vào, lớp ẩn, lớp ra",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Huấn luyện",
+         "b": true
+        },
+        {
+         "text": " là điều chỉnh trọng số dựa trên nhiều ví dụ đã biết kết quả đúng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba đặc điểm: "
+        },
+        {
+         "text": "học từ ví dụ; cần nhiều dữ liệu và phép tính; khó giải thích",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phù hợp với việc "
+        },
+        {
+         "text": "khó viết thành quy tắc mà có nhiều ví dụ",
+         "b": true
+        },
+        {
+         "text": "; không cần cho việc đã có công thức, quy tắc rõ."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Một nơ-ron quyết định “có nên mang áo khoác không” với ba tín hiệu: trời lạnh (trọng số +3), trời có gió (+1), phải mang cặp nặng (−1). Ngưỡng là 2. Tính kết quả cho: a) lạnh, không gió, cặp nặng; b) không lạnh, có gió, cặp nhẹ; c) lạnh, có gió, cặp nặng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Với nơ-ron ở Bài 1, một bạn nói: “Hôm trời không lạnh nhưng gió to, mình vẫn mang áo khoác.” Cần chỉnh trọng số nào, theo hướng nào, để nơ-ron mô tả đúng bạn ấy?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Vì sao nhận dạng chữ viết tay hợp với mạng nơ-ron hơn là viết quy tắc? Trả lời bằng hai ý, có liên hệ với phần Khởi động."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Một ứng dụng nhận diện bệnh trên lá cà phê hoạt động tốt ở Đắk Lắk nhưng sai nhiều khi dùng cho cà phê trồng ở Sơn La. Dùng đặc điểm thứ nhất của mạng nơ-ron để giải thích và đề xuất cách khắc phục."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Một ngân hàng dùng mạng nơ-ron để quyết định cho vay. Một khách hàng bị từ chối và hỏi lí do, nhân viên trả lời: “Máy quyết định thế.” Em nhận xét gì, dựa vào đặc điểm thứ ba?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thiết kế một “nơ-ron giấy” cho một quyết định hằng ngày của em (tối nay có xem phim không, cuối tuần có đi đá bóng không). Chọn ba tín hiệu, đặt trọng số và ngưỡng. Sau đó theo dõi quyết định thật của em trong năm ngày, so với kết quả của nơ-ron. Nơ-ron đoán đúng mấy lần? Em chỉnh trọng số nào để nó đúng hơn? Có điều gì trong quyết định của em mà ba tín hiệu không nắm bắt được?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tính kết quả của một nơ-ron khi biết tín hiệu, trọng số, ngưỡng"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích “huấn luyện” là điều chỉnh trọng số"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô tả ba loại lớp của mạng nơ-ron"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ứng dụng và trường hợp không nên dùng mạng nơ-ron"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nơ-ron nhân tạo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phép tính nhỏ: nhân tín hiệu với trọng số, cộng lại, so với ngưỡng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trọng số"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Con số cho biết một tín hiệu quan trọng đến mức nào và theo hướng nào"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ngưỡng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mức mà tổng phải đạt tới để nơ-ron “phát” tín hiệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lớp ẩn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các lớp nơ-ron nằm giữa lớp vào và lớp ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quá trình điều chỉnh trọng số dựa trên các ví dụ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sâu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Huấn luyện mạng nơ-ron có nhiều lớp ẩn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) 3 + 0 − 1 = 2, đạt ngưỡng: mang áo. b) 0 + 1 + 0 = 1: không mang. c) 3 + 1 − 1 = 3: mang áo."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Tăng trọng số của “trời có gió”, ví dụ từ +1 lên +2. Khi đó trường hợp b) có tổng là 2, đạt ngưỡng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Chữ viết tay mỗi người một kiểu, quy tắc nào cũng có ngoại lệ nên không viết hết được. Trong khi đó có thể thu rất nhiều mẫu chữ đã biết đáp án để mạng tự rút ra cách phân biệt."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Mạng học từ ví dụ: ảnh huấn luyện chủ yếu ở Đắk Lắk (giống cây, ánh sáng, loại bệnh), nên gặp điều kiện khác thì sai. Khắc phục: bổ sung ảnh chụp ở Sơn La có cán bộ nông nghiệp gắn nhãn, huấn luyện lại, và theo dõi tỉ lệ sai riêng cho từng vùng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Mạng nơ-ron khó giải thích, nên với quyết định ảnh hưởng lớn đến con người, tổ chức phải có người xem xét, giải thích và chịu trách nhiệm. “Máy quyết định thế” không phải là câu trả lời chấp nhận được."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [4], [10], [13] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

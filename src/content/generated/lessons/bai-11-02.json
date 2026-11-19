@@ -1,0 +1,1875 @@
+{
+ "id": "11.2",
+ "slug": "bai-11-02",
+ "grade": 11,
+ "num": 2,
+ "topicId": "11.1",
+ "title": "AI: nâng cao năng lực hay làm thay con người?",
+ "meta": "Chuyên đề 11.1: Dùng AI an toàn để nâng cao năng lực bản thân (tiết 2 trong 3 tiết)",
+ "period": {
+  "index": 2,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Phân biệt được việc dùng AI để "
+   },
+   {
+    "text": "nâng cao năng lực",
+    "b": true
+   },
+   {
+    "text": " với việc để AI "
+   },
+   {
+    "text": "làm thay",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Dùng được "
+   },
+   {
+    "text": "bốn câu hỏi",
+    "b": true
+   },
+   {
+    "text": " để phân tích một tình huống dùng AI trong học tập, y tế, lập trình."
+   }
+  ],
+  [
+   {
+    "text": "Nêu được "
+   },
+   {
+    "text": "ba dấu hiệu",
+    "b": true
+   },
+   {
+    "text": " cho thấy con người vẫn đang giữ quyền kiểm soát."
+   }
+  ]
+ ],
+ "keywords": [
+  "nâng cao năng lực",
+  "làm thay",
+  "quyền kiểm soát",
+  "phụ thuộc",
+  "tác nhân AI",
+  "điểm dừng"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-lan-va-nam-cung-hoc-viet-tieng-anh",
+   "title": "Khởi động: Lan và Nam cùng học viết tiếng Anh",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lan và Nam học cùng lớp, cùng dùng một công cụ AI để học viết tiếng Anh trong một học kì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lan",
+       "b": true
+      },
+      {
+       "text": " tự viết đoạn văn trước. Sau đó Lan nhờ AI chỉ ra lỗi, nhưng yêu cầu: “Đừng sửa giúp, chỉ gạch dưới chỗ sai và cho biết loại lỗi.” Lan tự sửa, ghi lỗi hay gặp vào sổ, tuần sau viết lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nam",
+       "b": true
+      },
+      {
+       "text": " nhập đề bài, nhận đoạn văn AI viết, đọc lướt, đổi vài từ rồi nộp. Bài của Nam thường được điểm cao hơn Lan trong mấy tuần đầu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cuối học kì, bài kiểm tra viết làm tại lớp, không có thiết bị."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "(Đây là tình huống giả định.)",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Em đoán kết quả của hai bạn thế nào? Quan trọng hơn: cùng một công cụ, điều gì đã làm nên khác biệt?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Công cụ không khác. Khác biệt nằm ở chỗ "
+      },
+      {
+       "text": "ai là người làm phần việc tạo ra năng lực",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-hai-con-duong-tu-cung-mot-cong-cu",
+   "title": "1. Hai con đường từ cùng một công cụ",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image5.png",
+     "caption": "Hình 11.2.1. Cùng một công cụ, hai con đường. Con đường phía trên: em làm phần cốt lõi, AI hỗ trợ. Con đường phía dưới: AI làm phần cốt lõi, em chỉ chuyển kết quả đi."
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Dùng AI để nâng cao năng lực",
+         "b": true
+        },
+        {
+         "text": " là khi AI hỗ trợ để con người làm việc tốt hơn, học được nhiều hơn, trong khi con người vẫn tự làm phần cốt lõi, vẫn hiểu và vẫn quyết định."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Để AI làm thay",
+         "b": true
+        },
+        {
+         "text": " là khi AI làm phần cốt lõi của công việc, còn con người chỉ chuyển kết quả đi mà không hiểu, không kiểm tra và không còn thật sự quyết định."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Từ khóa ở đây là "
+      },
+      {
+       "text": "phần cốt lõi",
+       "b": true
+      },
+      {
+       "text": ". Trong một bài tập viết, phần cốt lõi là nghĩ ý và diễn đạt. Trong một bài toán, đó là tìm ra cách giải. Trong một dự án lập trình, đó là hiểu chương trình chạy thế nào. Phần cốt lõi là phần mà nếu em không làm, em sẽ không giỏi lên."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bảng sau đặt hai cách dùng cạnh nhau."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nâng cao năng lực",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm thay",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai làm phần cốt lõi?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "AI"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em có giải thích lại được kết quả không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không, hoặc rất lơ mơ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em có kiểm tra và sửa không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hầu như không"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sau một thời gian, khi không có AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em làm tốt hơn trước"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em làm kém hơn hoặc không làm được"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ví dụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ AI ra đề luyện tập và chỉ chỗ sai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ AI giải rồi chép"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Cứ để AI làm một phần là làm thay.”",
+         "b": true
+        },
+        {
+         "text": " Không hẳn. Nhờ máy tính cầm tay tính căn bậc hai khi đang học Vật lí không phải là làm thay, vì phần cốt lõi của bài là phân tích hiện tượng. Nhưng dùng máy tính trong giờ luyện tính nhẩm lại là làm thay. Ranh giới phụ thuộc vào "
+        },
+        {
+         "text": "mục tiêu của nhiệm vụ",
+         "b": true
+        },
+        {
+         "text": ", không phụ thuộc vào công cụ."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-bang-chung-diem-luyen-tap-cao-chua-chac-la-hoc-duoc",
+   "title": "2. Bằng chứng: điểm luyện tập cao chưa chắc là học được",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chuyện của Lan và Nam là giả định, nhưng đã có nghiên cứu thật kiểm tra điều này."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một nhóm nghiên cứu ở Đại học Pennsylvania (Hoa Kỳ) làm thí nghiệm với gần 1.000 học sinh trung học học Toán ở Thổ Nhĩ Kì. Học sinh được chia thành ba nhóm khi luyện tập:"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "• Nhóm 1 dùng một trợ lí AI trò chuyện thông thường, hỏi gì đáp nấy."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "• Nhóm 2 dùng một “gia sư AI” đã được cài sẵn nguyên tắc: chỉ gợi ý từng bước, không đưa đáp án."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "• Nhóm 3 không dùng AI, chỉ dùng sách vở."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trong các buổi luyện tập, nhóm 1 làm bài tốt hơn nhóm không dùng AI 48%, nhóm 2 tốt hơn tới 127%. Nhưng khi làm bài kiểm tra "
+        },
+        {
+         "text": "không có AI",
+         "b": true
+        },
+        {
+         "text": ", nhóm 1 lại "
+        },
+        {
+         "text": "kém hơn nhóm không dùng AI 17%",
+         "b": true
+        },
+        {
+         "text": ". Nhóm 2 đạt kết quả tương đương nhóm không dùng AI [8]."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy đọc lại ba con số ấy và rút ra hai điều."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ nhất, làm bài luyện tập đúng nhiều hơn không có nghĩa là học được nhiều hơn.",
+       "b": true
+      },
+      {
+       "text": " Nhóm 1 “trông” giỏi hơn trong lúc luyện, nhưng năng lực thật lại giảm. Theo nhóm tác giả, nhiều học sinh đã dùng trợ lí như một chiếc “nạng”: hỏi thẳng đáp án rồi chép."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ hai, cách thiết kế và cách dùng quyết định kết quả.",
+       "b": true
+      },
+      {
+       "text": " Khi công cụ chỉ gợi ý chứ không cho đáp án, tác hại biến mất. Điều đó cho thấy vấn đề không nằm ở việc có AI hay không, mà ở việc ai làm phần cốt lõi."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây là một nghiên cứu, trong một môn học, ở một nước. Em không nên coi đó là kết luận cho mọi trường hợp. Nhưng nó đủ để em cẩn trọng với cảm giác “mình đang làm tốt” khi có AI bên cạnh."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-ba-dau-hieu-em-van-giu-quyen-kiem-soat",
+   "title": "3. Ba dấu hiệu em vẫn giữ quyền kiểm soát",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Làm sao biết mình đang đi con đường nào? Em tự kiểm tra bằng ba dấu hiệu."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dấu hiệu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu tự hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách thử nhanh",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mình có giải thích lại được kết quả bằng lời của mình không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gấp máy lại, nói cho bạn nghe trong một phút"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm tra",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mình có tự phát hiện được chỗ sai của AI không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tìm ít nhất một chỗ cần sửa hoặc cần xác minh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyết định",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mình có thể không làm theo gợi ý của AI không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu một lí do vì sao mình giữ hoặc bỏ gợi ý"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu cả ba câu đều trả lời được, em đang dùng AI như một người hỗ trợ. Nếu có câu nào em bí, đó là chỗ AI đang làm thay em."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Xếp hai cột",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Xếp mỗi cách dùng sau vào cột “nâng cao năng lực” hoặc “làm thay”. Với những cách em thấy “còn tùy”, hãy viết rõ tùy vào điều gì."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Nhờ AI đặt 10 câu hỏi ôn tập Sinh học rồi tự trả lời."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Nhờ AI viết bản thu hoạch sau chuyến tham quan."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Nhờ AI giải thích một đoạn chương trình em viết bị lỗi ở đâu."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Nhờ AI dịch bài đọc tiếng Anh sang tiếng Việt để làm câu hỏi đọc hiểu."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Nhờ AI đóng vai người phỏng vấn để em luyện trả lời."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "6. Nhờ AI tóm tắt cuốn truyện em chưa đọc để viết bài cảm nhận."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-bon-cau-hoi-de-phan-tich-mot-tinh-huong",
+   "title": "4. Bốn câu hỏi để phân tích một tình huống",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ngoài chuyện học tập, cùng một sự phân biệt ấy xuất hiện ở bệnh viện, ở công ti phần mềm và ở nhiều nơi khác. Để phân tích bất kì tình huống nào, em dùng bốn câu hỏi:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Ai quyết định cuối cùng?",
+         "b": true
+        },
+        {
+         "text": " Con người hay AI?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người có đủ hiểu để kiểm tra không?",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi sai, ai phát hiện và ai chịu trách nhiệm?",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sau một thời gian, năng lực của con người tăng lên hay giảm đi?",
+         "b": true
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Áp dụng vào y tế (tình huống giả định).",
+       "b": true
+      },
+      {
+       "text": " Một phòng khám dùng phần mềm AI đọc phim X-quang phổi."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách dùng A",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách dùng B",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần mềm khoanh vùng nghi ngờ. Bác sĩ xem phim, xem vùng khoanh, hỏi bệnh, rồi kết luận"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần mềm in kết luận. Nhân viên đưa thẳng cho bệnh nhân, không có bác sĩ xem lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Ai quyết định?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bác sĩ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần mềm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Có kiểm tra được không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có, bác sĩ có chuyên môn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không ai kiểm tra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Khi sai?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bác sĩ có cơ hội phát hiện; trách nhiệm rõ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không ai phát hiện; trách nhiệm mơ hồ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Năng lực?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bác sĩ làm nhanh hơn, có thêm “đôi mắt thứ hai”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kĩ năng đọc phim của phòng khám dần mai một"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách A là nâng cao năng lực. Cách B là làm thay, và nguy hiểm vì liên quan đến sức khỏe con người. Luật Trí tuệ nhân tạo của Việt Nam, có hiệu lực từ ngày 01/3/2026, phân các hệ thống AI theo mức độ rủi ro; rủi ro càng cao thì yêu cầu về quản lí càng chặt chẽ [4]. Em có thể hiểu tinh thần chung: việc càng hệ trọng thì càng không được để máy tự quyết một mình."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Áp dụng vào lập trình.",
+       "b": true
+      },
+      {
+       "text": " Một lập trình viên nhờ AI viết một hàm, đọc từng dòng, chạy thử với nhiều dữ liệu, sửa chỗ chưa ổn: nâng cao năng lực. Một người khác dán nguyên đoạn mã AI viết vào sản phẩm mà không hiểu nó làm gì: làm thay. Khi chương trình gặp lỗi lúc nửa đêm, chỉ người thứ nhất sửa được."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Phân tích một hồ sơ",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chọn "
+        },
+        {
+         "text": "một",
+         "b": true
+        },
+        {
+         "text": " trong hai tình huống giả định sau và trả lời bốn câu hỏi. Sau đó đề xuất một thay đổi để tình huống nghiêng về phía nâng cao năng lực."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Một bạn lớp 11 dùng AI lập kế hoạch ôn thi: AI xếp lịch từng ngày, bạn làm theo mà không xem lại lịch có hợp với sức mình không."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Một cửa hàng dùng AI trả lời tin nhắn khách hàng tự động, kể cả các câu hỏi về đổi trả và hoàn tiền; không có nhân viên nào đọc lại."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-khi-ai-khong-chi-tra-loi-ma-con-hanh-dong",
+   "title": "5. Khi AI không chỉ trả lời mà còn hành động",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Những công cụ em dùng lâu nay chủ yếu "
+      },
+      {
+       "text": "trả lời",
+       "b": true
+      },
+      {
+       "text": ": em hỏi, nó đáp, em quyết định làm gì tiếp. Một loại hệ thống mới đang xuất hiện nhiều hơn, gọi là "
+      },
+      {
+       "text": "tác nhân AI",
+       "b": true
+      },
+      {
+       "text": " (AI agent)."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Tác nhân AI",
+         "b": true
+        },
+        {
+         "text": " là hệ thống AI có thể tự thực hiện một chuỗi nhiều bước để đạt mục tiêu được giao, kể cả dùng các công cụ khác như tìm kiếm, gửi thư, điền biểu mẫu, đặt lịch."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với tác nhân AI, câu hỏi “ai làm phần cốt lõi” có thêm một câu hỏi mới: "
+      },
+      {
+       "text": "em trao cho nó quyền hành động đến đâu?",
+       "b": true
+      },
+      {
+       "text": " Hình 11.2.2 mô tả bốn bậc trao quyền."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image6.png",
+     "caption": "Hình 11.2.2. Thang trao quyền cho AI. Càng lên cao, AI tự làm càng nhiều, và điểm dừng để con người xem xét càng quan trọng."
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Điểm dừng",
+         "b": true
+        },
+        {
+         "text": " là chỗ trong chuỗi công việc mà hệ thống AI phải dừng lại, trình bày điều nó định làm và chờ con người đồng ý rồi mới làm tiếp."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ, em nhờ một tác nhân AI chuẩn bị chuyến dã ngoại của lớp. Tìm địa điểm, so giá, lập bảng chi phí: nó có thể tự làm. Nhưng trước khi "
+      },
+      {
+       "text": "gửi tin nhắn cho cả lớp",
+       "b": true
+      },
+      {
+       "text": " hay "
+      },
+      {
+       "text": "đặt cọc",
+       "b": true
+      },
+      {
+       "text": ", nó phải dừng để em xem. Quy tắc chọn điểm dừng khá dễ nhớ: đặt điểm dừng trước mọi việc "
+      },
+      {
+       "text": "khó rút lại",
+       "b": true
+      },
+      {
+       "text": " (gửi đi, xóa, thanh toán, đăng công khai) và mọi việc "
+      },
+      {
+       "text": "ảnh hưởng đến người khác",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2024, một cơ quan giải quyết tranh chấp ở Canada xử vụ một hành khách được chatbot của hãng hàng không hướng dẫn sai về chính sách giảm giá vé. Hãng cho rằng chatbot phải tự chịu trách nhiệm về lời nói của nó. Lập luận này bị bác bỏ: hãng phải chịu trách nhiệm về mọi thông tin trên trang của mình, dù do người hay chatbot đưa ra [12]. Trao việc cho AI không có nghĩa là trao luôn trách nhiệm."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-hai-che-do-mot-bai-toan",
+   "title": "Trải nghiệm: Hai chế độ, một bài toán",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhiều chatbot đã có chế độ dành cho việc học. Em hãy tự kiểm chứng: chế độ nào giúp em giỏi lên, chế độ nào làm thay em?"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image3.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Gemini, chế độ Học có hướng dẫn"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " gemini.google.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 7 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em gửi một bài toán vừa sức ở chế độ trò chuyện thường."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em gửi lại đúng bài toán đó ở chế độ Học có hướng dẫn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em so sánh hai cuộc trò chuyện: ở đâu em phải tự nghĩ?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Dùng bốn câu hỏi phân tích của bài, em thấy chế độ nào giúp em nâng cao năng lực?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em đăng nhập bằng tài khoản nhà trường."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image7.png",
+     "caption": "Sơ đồ tư duy Bài 11.2."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Cùng một công cụ AI có thể "
+        },
+        {
+         "text": "nâng cao năng lực",
+         "b": true
+        },
+        {
+         "text": " hoặc "
+        },
+        {
+         "text": "làm thay",
+         "b": true
+        },
+        {
+         "text": "; khác biệt ở chỗ ai làm "
+        },
+        {
+         "text": "phần cốt lõi",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Làm bài tốt hơn khi có AI "
+        },
+        {
+         "text": "chưa chắc",
+         "b": true
+        },
+        {
+         "text": " là học được nhiều hơn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba dấu hiệu giữ quyền kiểm soát: "
+        },
+        {
+         "text": "hiểu, kiểm tra, quyết định",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bốn câu hỏi phân tích: ai quyết định; có kiểm tra được không; khi sai thì sao; năng lực tăng hay giảm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Với tác nhân AI, cần "
+        },
+        {
+         "text": "điểm dừng",
+         "b": true
+        },
+        {
+         "text": " trước việc khó rút lại và việc ảnh hưởng đến người khác."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi môn sau, em nêu một cách dùng AI nâng cao năng lực và một cách dùng làm thay: a) Ngữ văn; b) Toán; c) Tin học."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Bạn Khoa nói: “Mình vẫn đọc lại bài AI viết trước khi nộp, vậy là mình kiểm soát rồi.” Dùng ba dấu hiệu ở mục 3 để nhận xét ý kiến này."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Một thư viện dùng AI gợi ý sách cho bạn đọc dựa trên lịch sử mượn. Thủ thư nhận thấy mình dần không còn nhớ sách nào hợp với lứa tuổi nào. Em trả lời câu hỏi số 4 cho tình huống này và đề xuất một cách khắc phục."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Em giao cho một tác nhân AI việc: “Tổng hợp ý kiến của lớp về địa điểm dã ngoại, chọn nơi được nhiều phiếu nhất, đặt chỗ và báo cho cả lớp.” Em đặt điểm dừng ở những chỗ nào? Vì sao?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Dựa vào nghiên cứu ở mục 2, viết ba câu khuyên một bạn lớp 10 đang dùng AI để luyện Toán."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chọn một kĩ năng em muốn giỏi lên trong học kì này (viết, nói tiếng Anh, giải toán hình, lập trình…). Viết một “thỏa thuận với chính mình” gồm ba dòng: phần nào em luôn tự làm; phần nào em nhờ AI hỗ trợ; em sẽ thử mình không có AI vào lúc nào (ví dụ: mỗi tuần làm một bài hoàn toàn không dùng thiết bị). Sau bốn tuần, em xem lại thỏa thuận và điều chỉnh."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt nâng cao năng lực với làm thay, có ví dụ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tự kiểm tra bằng ba dấu hiệu hiểu, kiểm tra, quyết định"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân tích một tình huống bằng bốn câu hỏi"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn điểm dừng hợp lí khi giao việc cho tác nhân AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần cốt lõi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phần của nhiệm vụ mà nếu không tự làm thì không phát triển được năng lực nhiệm vụ đó nhắm tới"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phụ thuộc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tình trạng không còn làm được việc khi thiếu công cụ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quyền kiểm soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khả năng hiểu, kiểm tra và quyết định về kết quả"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tác nhân AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống AI tự thực hiện chuỗi nhiều bước và dùng công cụ khác để đạt mục tiêu được giao"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm dừng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỗ hệ thống phải chờ con người đồng ý rồi mới làm tiếp"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý. a) Nhờ AI phản biện luận điểm của mình; nhờ AI viết bài. b) Nhờ AI gợi ý bước đầu khi bí rồi tự giải tiếp; chép lời giải. c) Nhờ AI giải thích thông báo lỗi; dán mã mà không hiểu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Khoa mới có một phần của dấu hiệu “kiểm tra”. Cần hỏi thêm: Khoa có giải thích lại được bài bằng lời của mình không (hiểu)? Khoa có thay đổi, bác bỏ ý nào của AI không (quyết định)? Và phần cốt lõi là viết thì Khoa chưa làm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Năng lực của thủ thư đang giảm. Khắc phục: thủ thư tự gợi ý trước rồi mới so với gợi ý của AI; mỗi tuần tự chọn một danh sách sách không dùng AI; xem lại và sửa các gợi ý chưa hợp."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Hai điểm dừng chắc chắn cần có: trước khi đặt chỗ (liên quan đến tiền, khó rút lại) và trước khi báo cho cả lớp (ảnh hưởng đến nhiều người). Nên thêm một điểm dừng sau khi tổng hợp phiếu để em kiểm tra AI đếm đúng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: tự làm trước rồi mới hỏi; yêu cầu AI chỉ gợi ý, không đưa đáp án; thường xuyên làm bài không có AI để biết năng lực thật."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [4], [8], [12] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

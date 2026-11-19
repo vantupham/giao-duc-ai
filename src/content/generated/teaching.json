@@ -1,0 +1,905 @@
+{
+ "bai-10-10": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 6,
+    "label": "Lớp làm “máy học”"
+   },
+   {
+    "minutes": 12,
+    "label": "Bốn bệnh, ba câu hỏi"
+   },
+   {
+    "minutes": 22,
+    "label": "Khám bệnh dữ liệu"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Một ứng dụng chấm phát âm tiếng Anh được huấn luyện bằng giọng người lớn ở một vùng. Điều gì có thể xảy ra khi học sinh nhiều vùng miền dùng nó?",
+   "“Cứ nhiều dữ liệu là AI tốt.” Em đồng ý không? Vì sao?"
+  ]
+ },
+ "bai-10-11": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Trạm phân loại rác"
+   },
+   {
+    "minutes": 15,
+    "label": "Mục tiêu, năm thành phần"
+   },
+   {
+    "minutes": 20,
+    "label": "Giải phẫu theo nhóm"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Ghi tên thành phần còn thiếu vào các ô trống trên sơ đồ trong phiếu.",
+   "Thư viện trường đổi mục tiêu của hệ thống thành “gợi ý sách theo sở thích”. Thành phần nào phải đổi trước? Vì sao?"
+  ]
+ },
+ "bai-10-12": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 4,
+    "label": "Trạm rác xuống phong độ"
+   },
+   {
+    "minutes": 10,
+    "label": "Sáu loại vấn đề"
+   },
+   {
+    "minutes": 24,
+    "label": "Bảng sự cố, báo cáo"
+   },
+   {
+    "minutes": 7,
+    "label": "Nhìn lại cả năm"
+   }
+  ],
+  "exitTicket": [
+   "Điều em hiểu rõ nhất sau một năm học về AI là gì?",
+   "Điều em còn băn khoăn hoặc muốn học tiếp ở lớp 11 là gì?",
+   "Một thói quen em sẽ giữ khi dùng AI cho việc học."
+  ]
+ },
+ "bai-10-01": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 7,
+    "label": "Ai đang cầm lái?"
+   },
+   {
+    "minutes": 13,
+    "label": "Ba vai trò"
+   },
+   {
+    "minutes": 20,
+    "label": "Vẽ sơ đồ"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Trường dùng một trợ lí AI trả lời câu hỏi về nội quy. Ghi SD (sử dụng), VH (vận hành) hoặc TC (tùy chỉnh) cho từng việc trên phiếu.",
+   "Với một công cụ AI em từng dùng, em đang giữ vai trò nào? Nêu một việc em sẽ làm để giữ quyền chủ động."
+  ]
+ },
+ "bai-10-02": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Khi tin AI tuyệt đối"
+   },
+   {
+    "minutes": 13,
+    "label": "Ba lí do, bản đồ rủi ro"
+   },
+   {
+    "minutes": 22,
+    "label": "Tranh biện"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Nêu một rủi ro của sản phẩm AI đối với cá nhân và một rủi ro đối với xã hội.",
+   "Một ứng dụng dùng AI chấm điểm rèn luyện của học sinh dựa trên camera lớp học. Con người cần kiểm soát ở khâu nào? Giải thích bằng ít nhất một trong ba giá trị."
+  ]
+ },
+ "bai-10-03": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Chuyện của Minh"
+   },
+   {
+    "minutes": 17,
+    "label": "Bốn trạm luật"
+   },
+   {
+    "minutes": 18,
+    "label": "Tình huống nào, luật nào?"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Kể tên ba luật bảo vệ em trong không gian số và ghi một điều mỗi luật bảo vệ.",
+   "Em nhận được một video trong đó “bạn thân” nói những lời rất lạ và xin vay tiền. Em nghi là video giả. Em sẽ làm những việc gì, theo thứ tự nào?"
+  ]
+ },
+ "bai-10-04": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Đèn giao thông"
+   },
+   {
+    "minutes": 12,
+    "label": "Hai tầng, hai loại vi phạm"
+   },
+   {
+    "minutes": 23,
+    "label": "Tình huống, khai báo"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Nêu một ví dụ về hành vi dùng AI vi phạm quy định của trường và một ví dụ vi phạm pháp luật.",
+   "Nêu một ví dụ về sự cố khi dùng AI: người dùng không cố ý nhưng vẫn gây hậu quả. Làm thế nào để phòng tránh?",
+   "Hoàn thành câu: “Trong học kì này, khi dùng AI để học, em cam kết ...”"
+  ]
+ },
+ "bai-10-05": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "AI vẽ nghề nghiệp"
+   },
+   {
+    "minutes": 14,
+    "label": "Ba vấn đề, hai khâu"
+   },
+   {
+    "minutes": 21,
+    "label": "Phân tích hồ sơ"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Nối mỗi tình huống trên phiếu với một vấn đề: (TV) thiên vị dữ liệu, (RT) vi phạm quyền riêng tư, (MB) thiếu minh bạch.",
+   "Tự nêu một ví dụ (thật hoặc giả định) về một vấn đề đạo đức khi thiết kế hoặc vận hành AI. Ghi rõ: vấn đề gì, ai bị ảnh hưởng, nên làm gì."
+  ]
+ },
+ "bai-10-06": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Một ngày có bao nhiêu AI?"
+   },
+   {
+    "minutes": 13,
+    "label": "Sáu nhóm, bốn câu hỏi"
+   },
+   {
+    "minutes": 22,
+    "label": "Bản đồ, vấn đề của nhóm"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Với mỗi nhóm tính năng, ghi tên một ứng dụng AI (không lặp lại thẻ đã dùng nếu có thể).",
+   "Vấn đề nào phù hợp hơn để ứng dụng AI, vì sao? (a) Phát hiện sớm đoạn đường sắp ngập để cảnh báo phụ huynh. (b) Quyết định hình thức kỉ luật một học sinh."
+  ]
+ },
+ "bai-10-07": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 4,
+    "label": "Ba chiếc máy"
+   },
+   {
+    "minutes": 18,
+    "label": "Ba loại, một lưu ý"
+   },
+   {
+    "minutes": 18,
+    "label": "Xếp loại, sửa cách dùng"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Ghi PL, DĐ hoặc TS cho từng hệ thống trên phiếu.",
+   "Vì sao AI tạo sinh viết rất trôi chảy mà vẫn có thể sai? Em làm gì trước khi dùng kết quả?",
+   "Nêu một việc học cụ thể của em và cách em dùng AI “để học” cho việc đó."
+  ]
+ },
+ "bai-10-08": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Hân và Phúc"
+   },
+   {
+    "minutes": 14,
+    "label": "Sáu yêu cầu"
+   },
+   {
+    "minutes": 21,
+    "label": "Chẩn đoán và sửa"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Kể tên ít nhất bốn yêu cầu của một câu lệnh tốt và câu hỏi mà mỗi yêu cầu trả lời.",
+   "Câu lệnh “Dịch đoạn này sang tiếng Anh.” đang thiếu gì? Em hãy viết lại."
+  ]
+ },
+ "bai-10-09": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 4,
+    "label": "Thế nào là hiệu quả?"
+   },
+   {
+    "minutes": 6,
+    "label": "Quy tắc và quy trình"
+   },
+   {
+    "minutes": 27,
+    "label": "Thực hành hai vòng"
+   },
+   {
+    "minutes": 8,
+    "label": "Chia sẻ, phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Ở vòng 2, em đã đổi gì trong câu lệnh? Vì sao?",
+   "Ghi một thông tin em đã kiểm chứng và nguồn em dùng.",
+   "Hoàn thành câu: “Lần sau dùng AI cho việc học, điều đầu tiên em sẽ làm là ...”"
+  ]
+ },
+ "bai-11-10": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Số 1 hay số 7?"
+   },
+   {
+    "minutes": 15,
+    "label": "Nơ-ron giấy"
+   },
+   {
+    "minutes": 20,
+    "label": "Ứng dụng quanh ta"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Nêu ba ứng dụng của mạng nơ-ron nhân tạo ở ba lĩnh vực khác nhau. Với mỗi ứng dụng, ghi đầu vào và đầu ra.",
+   "Vì sao nhận dạng chữ viết tay thường dùng mạng nơ-ron thay vì viết sẵn các quy tắc?"
+  ]
+ },
+ "bai-11-11": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 4,
+    "label": "Hai việc trông giống nhau"
+   },
+   {
+    "minutes": 18,
+    "label": "Hai trò chơi dữ liệu"
+   },
+   {
+    "minutes": 18,
+    "label": "Xếp thẻ ứng dụng"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Ghi PL (phân lớp) hoặc PC (phân cụm) cho từng tình huống trên phiếu.",
+   "Nêu thêm một ứng dụng phân lớp và một ứng dụng phân cụm khác với các ví dụ trên."
+  ]
+ },
+ "bai-11-12": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 4,
+    "label": "Nếu trường nhờ lớp mình..."
+   },
+   {
+    "minutes": 12,
+    "label": "Sáu bước, dòng vận hành"
+   },
+   {
+    "minutes": 22,
+    "label": "Thiết kế của nhóm"
+   },
+   {
+    "minutes": 7,
+    "label": "Tự đánh giá cuối năm"
+   }
+  ],
+  "exitTicket": [
+   "Sắp xếp các việc của một cổng bãi xe tự động theo đúng dòng vận hành (ghi số thứ tự trên phiếu).",
+   "Tự đánh giá cuối năm: ba điều em làm được mà đầu năm chưa làm được, và một thói quen dùng AI em đã thay đổi."
+  ]
+ },
+ "bai-11-01": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 7,
+    "label": "Chuyện của Quân"
+   },
+   {
+    "minutes": 12,
+    "label": "Bảy bước, ba giai đoạn"
+   },
+   {
+    "minutes": 21,
+    "label": "Viết quy trình, thử thách chéo"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Sắp xếp năm việc theo đúng thứ tự trong quy trình (ghi số 1 đến 5 trên phiếu).",
+   "Em sắp dùng một ứng dụng AI luyện nói tiếng Anh qua micro. Viết ba việc em sẽ làm, mỗi giai đoạn một việc, đúng với ứng dụng này."
+  ]
+ },
+ "bai-11-02": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Lan và Nam"
+   },
+   {
+    "minutes": 12,
+    "label": "Hai con đường, ba dấu hiệu"
+   },
+   {
+    "minutes": 23,
+    "label": "Phân tích trường hợp"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Một nông dân dùng ứng dụng AI chụp ảnh lá để chẩn đoán bệnh cây và gợi ý thuốc. Nêu một lợi ích về năng lực của người nông dân và một điểm người nông dân phải tự kiểm soát.",
+   "Chọn một việc học tập của em có thể dùng AI. Viết một cách dùng làm em giỏi lên và một cách dùng khiến em không tiến bộ."
+  ]
+ },
+ "bai-11-03": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Cuộc gọi của “mẹ”"
+   },
+   {
+    "minutes": 12,
+    "label": "Rủi ro, sự cố, bốn nhóm"
+   },
+   {
+    "minutes": 23,
+    "label": "Phân loại 12 thẻ"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Với mỗi tình huống trên phiếu, ghi nhóm (1 đến 4) và R hoặc S.",
+   "Chọn một tình huống ở câu 1: nó có thể vi phạm quy định nào? Em sẽ làm gì?"
+  ]
+ },
+ "bai-11-04": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Một câu hỏi tốn gì?"
+   },
+   {
+    "minutes": 13,
+    "label": "Bền vững và công bằng"
+   },
+   {
+    "minutes": 22,
+    "label": "Đánh giá một ứng dụng"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Nêu hai ví dụ ứng dụng AI mang lại lợi ích xã hội lâu dài ở hai lĩnh vực khác nhau; ghi rõ ai được lợi.",
+   "Một thư viện số dùng AI đọc sách thành tiếng cho người khiếm thị. Nêu một yếu tố cho thấy hệ thống này bền vững và một yếu tố cho thấy nó công bằng."
+  ]
+ },
+ "bai-11-05": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "“Tôi đồng ý”"
+   },
+   {
+    "minutes": 13,
+    "label": "Dữ liệu cá nhân, năm quyền"
+   },
+   {
+    "minutes": 22,
+    "label": "Soi điều khoản"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Ghi tên quyền tương ứng với mỗi tình huống trên phiếu.",
+   "Trước khi bấm “Tôi đồng ý” với một ứng dụng AI mới, em sẽ tìm câu trả lời cho ba câu hỏi nào?"
+  ]
+ },
+ "bai-11-06": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Hai kiểu phản hồi"
+   },
+   {
+    "minutes": 14,
+    "label": "Năm khâu, sáu nguyên tắc"
+   },
+   {
+    "minutes": 21,
+    "label": "Phân tích hội thoại"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Chọn một môn em đang học. Nêu cách AI có thể hỗ trợ em ở hai khâu khác nhau của việc học, và phần em phải tự làm ở mỗi khâu.",
+   "Một công cụ AI hỗ trợ học tập cần được thiết kế thế nào để người học thật sự tiến bộ? Nêu hai nguyên tắc em cho là quan trọng nhất và giải thích ngắn gọn."
+  ]
+ },
+ "bai-11-07": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Bức tường khó khăn"
+   },
+   {
+    "minutes": 10,
+    "label": "Đề xuất gồm những gì?"
+   },
+   {
+    "minutes": 25,
+    "label": "Viết đề xuất, phiên chợ"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Viết một câu đề xuất tính năng AI cho khó khăn học tập của riêng em (khác đề xuất của nhóm), theo mẫu: “Dành cho ... đang gặp ..., tính năng ... sẽ nhận ... và ..., giúp ...”.",
+   "Với tính năng đó: phần nào em phải tự làm? Một rủi ro và cách phòng?"
+  ]
+ },
+ "bai-11-08": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 6,
+    "label": "Câu lệnh ôm đồm"
+   },
+   {
+    "minutes": 13,
+    "label": "Hai kĩ thuật"
+   },
+   {
+    "minutes": 21,
+    "label": "Chọn kĩ thuật, viết lại"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Với mỗi yêu cầu trên phiếu, ghi kĩ thuật phù hợp (ĐD, CN hoặc ĐD + CN) và một lí do.",
+   "Vì sao chia nhỏ nhiệm vụ giúp con người giữ quyền kiểm soát tốt hơn so với gửi tất cả trong một câu lệnh?"
+  ]
+ },
+ "bai-11-09": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Chiếc loa biết trả lời"
+   },
+   {
+    "minutes": 15,
+    "label": "Bốn công nghệ"
+   },
+   {
+    "minutes": 20,
+    "label": "Ghép thẻ, mổ xẻ"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Hoàn thành bảng trên phiếu: với mỗi công nghệ, ghi nhận gì, trả ra gì và một ví dụ.",
+   "Chatbot và xử lí ngôn ngữ tự nhiên khác nhau thế nào? Trả lời trong một đến hai câu."
+  ]
+ },
+ "bai-12-10": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 4,
+    "label": "Ba cách cho một việc"
+   },
+   {
+    "minutes": 13,
+    "label": "Năm tiêu chí"
+   },
+   {
+    "minutes": 23,
+    "label": "So sánh và chọn"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Với nhiệm vụ trên phiếu: em chọn phương án nào? Nêu hai lí do theo hai tiêu chí khác nhau.",
+   "Phương án em không chọn có điểm nào đáng lo nhất?"
+  ]
+ },
+ "bai-12-11": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 4,
+    "label": "Một người làm hết?"
+   },
+   {
+    "minutes": 12,
+    "label": "Các vai trò"
+   },
+   {
+    "minutes": 22,
+    "label": "Cuộc họp dự án"
+   },
+   {
+    "minutes": 7,
+    "label": "Vai trò hợp với em"
+   }
+  ],
+  "exitTicket": [
+   "Ghi vai trò tương ứng với mỗi việc trên phiếu.",
+   "Vì sao làm ra một sản phẩm AI cần sự hợp tác của nhiều người có chuyên môn khác nhau? Nêu một ví dụ về điều có thể hỏng nếu thiếu một vai.",
+   "Định hướng của em: vai trò em thấy hợp với mình nhất, và vì sao."
+  ]
+ },
+ "bai-12-12": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 3,
+    "label": "Bố cục và luật"
+   },
+   {
+    "minutes": 6,
+    "label": "Tự soát sáu nguyên tắc"
+   },
+   {
+    "minutes": 28,
+    "label": "Báo cáo, phản biện"
+   },
+   {
+    "minutes": 8,
+    "label": "Tự đánh giá cuối năm"
+   }
+  ],
+  "exitTicket": []
+ },
+ "bai-12-01": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 7,
+    "label": "Lỗi bắt đầu từ khi nào?"
+   },
+   {
+    "minutes": 13,
+    "label": "Tám giai đoạn"
+   },
+   {
+    "minutes": 20,
+    "label": "Phân tích vòng đời"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Một trường triển khai AI hỗ trợ chấm bài luận. Ghi số giai đoạn vòng đời (1 đến 8) cho mỗi việc trên phiếu.",
+   "Với hệ thống trên, chọn một bước em cho là quan trọng nhất. Ai phải kiểm soát, ai chịu trách nhiệm ở bước đó? Nếu thiếu thì hậu quả là gì?"
+  ]
+ },
+ "bai-12-02": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Ai đã chọn con đường này?"
+   },
+   {
+    "minutes": 13,
+    "label": "Sáu bước, ba mức"
+   },
+   {
+    "minutes": 22,
+    "label": "Sơ đồ phân vai"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Em dùng một trợ lí AI để hỗ trợ quyết định chọn ngành học. Với mỗi bước, ghi AI có thể làm gì và em phải tự làm gì.",
+   "Một cửa hàng để AI tự trả lời và tự hoàn tiền cho mọi khiếu nại dưới 100.000 đồng, nhân viên xem thống kê mỗi tuần. Đây là mức phân vai nào? Có hợp lí không, vì sao?"
+  ]
+ },
+ "bai-12-03": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "“Hệ thống quyết định như vậy”"
+   },
+   {
+    "minutes": 14,
+    "label": "Sáu biểu hiện, quy định"
+   },
+   {
+    "minutes": 21,
+    "label": "Kiểm tra và đối chiếu"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Với tình huống trên phiếu: chọn ba biểu hiện của trách nhiệm giải trình và đánh giá Có, Một phần hay Không, kèm căn cứ.",
+   "Nêu một văn bản trong nước hoặc quốc tế có thể dùng để đối chiếu và ý liên quan."
+  ]
+ },
+ "bai-12-04": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "“Tử tế” và “đáng lo”"
+   },
+   {
+    "minutes": 17,
+    "label": "Mỗi nhóm một nguyên tắc"
+   },
+   {
+    "minutes": 18,
+    "label": "Soi một sản phẩm"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Ghi tên nguyên tắc tương ứng với mỗi mô tả trên phiếu.",
+   "Chọn một nguyên tắc em cho là khó thực hiện nhất với người thiết kế. Vì sao?"
+  ]
+ },
+ "bai-12-05": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Việc nào đáng lo hơn?"
+   },
+   {
+    "minutes": 13,
+    "label": "Căn cứ, thang ba mức"
+   },
+   {
+    "minutes": 22,
+    "label": "Xếp 12 tình huống"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Với ba việc trên phiếu: xác định mức rủi ro (thấp, trung bình, cao) và nêu một căn cứ.",
+   "Chọn việc (b): nêu một biện pháp để hạ mức rủi ro."
+  ]
+ },
+ "bai-12-06": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 4,
+    "label": "Chuyện của ai?"
+   },
+   {
+    "minutes": 15,
+    "label": "Bốn nội dung, hai phía"
+   },
+   {
+    "minutes": 21,
+    "label": "Góp ý quy tắc"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Ghi số của nội dung trách nhiệm công dân (1 đến 4) tương ứng với mỗi việc làm trên phiếu.",
+   "Nêu một trách nhiệm của người phát triển AI và một trách nhiệm của người sử dụng AI.",
+   "Nếu thấy một quy định về AI chưa hợp lí, em có thể làm gì? Nêu một kênh cụ thể."
+  ]
+ },
+ "bai-12-07": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "Việc gì cũng cần AI?"
+   },
+   {
+    "minutes": 14,
+    "label": "Năm kiểu, bốn câu hỏi"
+   },
+   {
+    "minutes": 21,
+    "label": "Chọn ý tưởng"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Chọn kiểu ý tưởng (A, B, C, D hoặc E) cho mỗi công việc trên phiếu và nêu một lí do.",
+   "Vì sao với câu hỏi về quy chế thi, một trợ lí có tra cứu tài liệu phù hợp hơn một trợ lí chỉ dựa vào hiểu biết chung của mô hình?"
+  ]
+ },
+ "bai-12-08": {
+  "slideCount": 17,
+  "plan": [
+   {
+    "minutes": 4,
+    "label": "Ba phút dạy máy?"
+   },
+   {
+    "minutes": 18,
+    "label": "Trình diễn, các công cụ"
+   },
+   {
+    "minutes": 18,
+    "label": "Ghép công cụ với nhu cầu"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Nêu ba công cụ mã nguồn mở hoặc miễn phí dùng để thiết kế, huấn luyện, phát triển hệ thống AI và mỗi công cụ dùng để làm gì.",
+   "Trước khi dùng một công cụ AI mới cho dự án học tập, em cần kiểm tra những điều gì? Nêu hai điều."
+  ]
+ },
+ "bai-12-09": {
+  "slideCount": 18,
+  "plan": [
+   {
+    "minutes": 5,
+    "label": "“Chính xác 95%”"
+   },
+   {
+    "minutes": 14,
+    "label": "Ba nguyên tắc"
+   },
+   {
+    "minutes": 21,
+    "label": "Đánh giá từ số liệu"
+   },
+   {
+    "minutes": 5,
+    "label": "Phiếu ra cửa"
+   }
+  ],
+  "exitTicket": [
+   "Nêu một ví dụ về cách đánh giá hiệu quả cho mỗi hệ thống trên phiếu.",
+   "Một ứng dụng chấm phát âm được thử với 200 học sinh, tỉ lệ chấm đúng chung là 90%. Em cần xem thêm số liệu nào trước khi kết luận ứng dụng này tốt? Vì sao?"
+  ]
+ }
+}

@@ -1,0 +1,2552 @@
+{
+ "id": "10.10",
+ "slug": "bai-10-10",
+ "grade": 10,
+ "num": 10,
+ "topicId": "10.4",
+ "title": "Dữ liệu tốt, AI tốt",
+ "meta": "Chuyên đề 10.4: Dữ liệu và hệ thống AI (tiết 1 trong 3 tiết)",
+ "period": {
+  "index": 1,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nêu được bốn vấn đề thường gặp về chất lượng dữ liệu dùng để dạy máy: "
+   },
+   {
+    "text": "quá ít, sai nhãn, lệch nhóm, không phù hợp bối cảnh",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Phân tích được mỗi vấn đề của dữ liệu ảnh hưởng thế nào đến kết quả của hệ thống AI."
+   }
+  ],
+  [
+   {
+    "text": "Đề xuất được cách khắc phục cho một bộ dữ liệu cụ thể."
+   }
+  ]
+ ],
+ "keywords": [
+  "dữ liệu huấn luyện",
+  "gán nhãn",
+  "lệch nhóm",
+  "bối cảnh sử dụng",
+  "chất lượng dữ liệu"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-lop-minh-lam-may-hoc",
+   "title": "Khởi động: Lớp mình làm “máy học”",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy đóng vai một cỗ máy. Cỗ máy này chưa biết gì về trái cây. Nó chỉ được học từ "
+      },
+      {
+       "text": "sáu tấm thẻ",
+       "b": true
+      },
+      {
+       "text": " sau:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thẻ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhãn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuối vỏ vàng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chín"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuối vỏ xanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa chín"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xoài vỏ vàng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chín"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xoài vỏ xanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa chín"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đu đủ vỏ vàng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chín"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đu đủ vỏ xanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa chín"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Học xong rồi. Bây giờ là bài kiểm tra. Nhớ nhé: em là cỗ máy, "
+      },
+      {
+       "text": "chỉ được dùng điều học từ sáu thẻ trên",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Thẻ kiểm tra 1: "
+        },
+        {
+         "text": "cam sành vỏ xanh",
+         "b": true
+        },
+        {
+         "text": ". Chín hay chưa chín?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thẻ kiểm tra 2: "
+        },
+        {
+         "text": "dưa hấu vỏ xanh",
+         "b": true
+        },
+        {
+         "text": ". Chín hay chưa chín?"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cỗ máy trong em trả lời ngay: “Chưa chín.” Cả hai lần. Và sai cả hai lần: cam sành chín vỏ vẫn xanh, dưa hấu chín vỏ vẫn xanh."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Cỗ máy sai vì nó “kém thông minh”, hay vì điều gì khác? Cần thêm thẻ nào để nó học đúng hơn?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cỗ máy không kém. Nó đã học rất đúng "
+      },
+      {
+       "text": "theo những gì được cho",
+       "b": true
+      },
+      {
+       "text": ": trong sáu thẻ, cứ vàng là chín, cứ xanh là chưa chín. Vấn đề nằm ở sáu tấm thẻ: chúng thiếu hẳn những loại quả chín mà vỏ vẫn xanh."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây là điều quan trọng nhất của bài hôm nay: "
+      },
+      {
+       "text": "máy học đúng theo dữ liệu; dữ liệu thế nào thì máy thế ấy.",
+       "b": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-du-lieu-la-sach-giao-khoa-cua-may",
+   "title": "1. Dữ liệu là “sách giáo khoa” của máy",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em còn nhớ ở Bài 10.7: AI phân loại học từ những ví dụ đã được con người ghi sẵn kết quả đúng. Việc ghi kết quả đúng cho từng ví dụ gọi là "
+      },
+      {
+       "text": "gán nhãn",
+       "b": true
+      },
+      {
+       "text": "; cách học này gọi là "
+      },
+      {
+       "text": "học có giám sát",
+       "b": true
+      },
+      {
+       "text": " [1]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy hình dung em chuẩn bị thi mà sách giáo khoa:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "chỉ còn lại ba trang,"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "hoặc có nhiều trang in sai đáp án,"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "hoặc có 200 trang về một chương và 2 trang cho tất cả các chương còn lại,"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "hoặc là sách của một chương trình khác hẳn."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em có chăm chỉ đến đâu thì kết quả cũng khó tốt. Bốn tình huống ấy chính là bốn “bệnh” của dữ liệu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để dễ theo dõi, ta dùng lại ví dụ "
+      },
+      {
+       "text": "trạm phân loại rác ở căn tin",
+       "b": true
+      },
+      {
+       "text": " (tình huống giả định): học sinh đưa một món rác trước camera, trạm báo bỏ vào thùng "
+      },
+      {
+       "text": "tái chế",
+       "i": true
+      },
+      {
+       "text": ", "
+      },
+      {
+       "text": "hữu cơ",
+       "i": true
+      },
+      {
+       "text": " hay "
+      },
+      {
+       "text": "còn lại",
+       "i": true
+      },
+      {
+       "text": ". Trạm học từ ảnh các món rác đã được gán nhãn."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-bon-benh-cua-du-lieu",
+   "title": "2. Bốn “bệnh” của dữ liệu",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "h3",
+     "text": "Bệnh thứ nhất: quá ít",
+     "id": "benh-thu-nhat-qua-it"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Biểu hiện:",
+       "b": true
+      },
+      {
+       "text": " mỗi loại chỉ có vài ví dụ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với trạm rác:",
+       "i": true
+      },
+      {
+       "text": " trạm chỉ được học 5 ảnh cho mỗi nhóm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Máy sẽ thế nào?",
+       "b": true
+      },
+      {
+       "text": " Nó chỉ nhận đúng những món rất giống 5 ảnh đã thấy. Gặp chai nhựa bị bóp méo, hộp sữa nằm nghiêng, nó đoán mò. Kết quả thất thường."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong đời sống:",
+       "i": true
+      },
+      {
+       "text": " em chỉ gặp một người Huế duy nhất và người ấy rất ít nói. Em kết luận “người Huế ít nói”. Một ví dụ không đủ để rút ra quy luật."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách chữa:",
+       "b": true
+      },
+      {
+       "text": " thu thập thêm, ưu tiên những trường hợp hay gặp trong thực tế."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bệnh thứ hai: sai nhãn",
+     "id": "benh-thu-hai-sai-nhan"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Biểu hiện:",
+       "b": true
+      },
+      {
+       "text": " ví dụ bị ghi nhầm kết quả."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với trạm rác:",
+       "i": true
+      },
+      {
+       "text": " các bạn gán nhãn vội trong giờ ra chơi; một phần ba ảnh hộp sữa giấy bị ghi nhầm là “hữu cơ”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Máy sẽ thế nào?",
+       "b": true
+      },
+      {
+       "text": " Nó học luôn cái sai. Nó không có cách nào biết nhãn bị ghi nhầm. Kết quả: trạm thường xuyên bảo học sinh bỏ hộp sữa vào thùng hữu cơ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong đời sống:",
+       "i": true
+      },
+      {
+       "text": " một cuốn sách bài tập in sai đáp án. Bạn nào chăm chỉ học thuộc đáp án thì càng sai nhiều."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách chữa:",
+       "b": true
+      },
+      {
+       "text": " rà soát và gán nhãn lại; thống nhất quy tắc gán nhãn; cho hai người gán nhãn độc lập rồi so với nhau."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bệnh thứ ba: lệch nhóm",
+     "id": "benh-thu-ba-lech-nhom"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Biểu hiện:",
+       "b": true
+      },
+      {
+       "text": " một nhóm có rất nhiều ví dụ, nhóm khác rất ít, hoặc thiếu hẳn một nhóm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với trạm rác:",
+       "i": true
+      },
+      {
+       "text": " có 900 ảnh chai nhựa và lon, nhưng chỉ có 20 ảnh vỏ trái cây."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Máy sẽ thế nào?",
+       "b": true
+      },
+      {
+       "text": " Nó giỏi với nhóm nhiều, kém với nhóm ít. Trạm có xu hướng báo “tái chế” cho hầu hết mọi thứ, vì trong dữ liệu, đoán “tái chế” gần như lúc nào cũng trúng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trò chơi trái cây ở phần Khởi động chính là bệnh này: dữ liệu thiếu hẳn nhóm “quả chín vỏ xanh”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi dữ liệu là về "
+      },
+      {
+       "text": "con người",
+       "b": true
+      },
+      {
+       "text": ", bệnh lệch nhóm trở thành chuyện công bằng."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2018, hai nhà nghiên cứu Joy Buolamwini và Timnit Gebru kiểm tra ba hệ thống thương mại phân loại giới tính qua ảnh khuôn mặt. Nhóm bị nhận sai nhiều nhất là phụ nữ da sẫm màu, tỉ lệ sai lên tới "
+        },
+        {
+         "text": "34,7%",
+         "b": true
+        },
+        {
+         "text": "; tỉ lệ sai cao nhất ở nam giới da sáng màu chỉ là "
+        },
+        {
+         "text": "0,8%",
+         "b": true
+        },
+        {
+         "text": ". Hai bộ ảnh chuẩn hay được dùng để đánh giá các hệ thống loại này có "
+        },
+        {
+         "text": "79,6%",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "86,2%",
+         "b": true
+        },
+        {
+         "text": " số người da sáng màu. [10]"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cũng năm đó, Reuters đưa tin một công cụ chấm hồ sơ xin việc được học từ hồ sơ 10 năm của một công ty, phần lớn là của nam giới. Công cụ đã hạ điểm những hồ sơ có từ chỉ phụ nữ. [11]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy chú ý: nếu chỉ nhìn một con số chung, những hệ thống ấy trông có vẻ tốt. Phải tách riêng từng nhóm mới thấy vấn đề."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách chữa:",
+       "b": true
+      },
+      {
+       "text": " bổ sung dữ liệu cho nhóm còn thiếu để cân đối và đa dạng; khi kiểm tra, xem kết quả "
+      },
+      {
+       "text": "riêng từng nhóm",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bệnh thứ tư: không phù hợp bối cảnh",
+     "id": "benh-thu-tu-khong-phu-hop-boi-canh"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Biểu hiện:",
+       "b": true
+      },
+      {
+       "text": " dữ liệu được lấy ở một nơi, một thời điểm, một điều kiện "
+      },
+      {
+       "text": "khác",
+       "b": true
+      },
+      {
+       "text": " với nơi hệ thống sẽ được dùng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với trạm rác:",
+       "i": true
+      },
+      {
+       "text": " toàn bộ ảnh huấn luyện chụp từng món rác sạch sẽ, đặt trên nền trắng, đủ sáng, trong phòng học. Còn ở căn tin thật, rác dính thức ăn, bị bóp méo, ánh sáng lúc sáng lúc tối, phía sau là mặt bàn lộn xộn."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Máy sẽ thế nào?",
+       "b": true
+      },
+      {
+       "text": " Lúc thử trong phòng thì rất tốt. Đem ra căn tin thì kém hẳn. Đây là kiểu thất bại gây bất ngờ nhất, vì mọi con số lúc thử nghiệm đều đẹp."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong đời sống:",
+       "i": true
+      },
+      {
+       "text": " em tập lái xe đạp trong sân trường vắng rất thành thạo, rồi lần đầu ra đường Nguyễn Thị Minh Khai giờ tan tầm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dữ liệu "
+      },
+      {
+       "text": "cũ",
+       "b": true
+      },
+      {
+       "text": " cũng là một dạng sai bối cảnh: ảnh chụp từ năm ngoái, năm nay căn tin đổi toàn bộ bao bì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách chữa:",
+       "b": true
+      },
+      {
+       "text": " lấy dữ liệu đúng nơi, đúng lúc, đúng điều kiện mà hệ thống sẽ làm việc; cập nhật định kì."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Bảng tổng hợp",
+     "id": "bang-tong-hop"
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vấn đề",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Biểu hiện",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hệ thống AI sẽ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách khắc phục",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Quá ít",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mỗi loại chỉ có vài ví dụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đoán mò với thứ chưa gặp; kết quả thất thường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu thập thêm, nhất là trường hợp hay gặp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai nhãn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ví dụ bị ghi nhầm loại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học luôn cái sai; nhầm lẫn giữa các loại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rà soát, gán nhãn lại; nhiều người cùng kiểm tra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lệch nhóm",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhóm nhiều, nhóm ít, thiếu hẳn nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giỏi với nhóm nhiều, kém hoặc thiếu công bằng với nhóm ít"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bổ sung nhóm thiếu; kiểm tra riêng từng nhóm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không phù hợp bối cảnh",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu cũ, hoặc lấy ở nơi khác nơi sẽ dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tốt lúc thử, kém khi dùng thật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lấy dữ liệu đúng nơi, đúng lúc; cập nhật định kì"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Sai nhãn hay lệch nhóm?",
+         "b": true
+        },
+        {
+         "text": " "
+        },
+        {
+         "text": "Sai nhãn:",
+         "i": true
+        },
+        {
+         "text": " ví dụ bị "
+        },
+        {
+         "text": "ghi nhầm",
+         "b": true
+        },
+        {
+         "text": ". "
+        },
+        {
+         "text": "Lệch nhóm:",
+         "i": true
+        },
+        {
+         "text": " ví dụ ghi đúng cả, nhưng "
+        },
+        {
+         "text": "phân bố không cân đối",
+         "b": true
+        },
+        {
+         "text": ". Một bộ dữ liệu có thể mắc cả hai."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Tại thuật toán.”",
+         "b": true
+        },
+        {
+         "text": " Trong trò chơi trái cây, em thông minh hơn mọi cỗ máy mà vẫn trả lời sai, vì dữ liệu chỉ có thế. Trước khi nghi ngờ thuật toán, hãy nhìn lại dữ liệu."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi mô tả sau về bộ dữ liệu của một ứng dụng nhận diện lá rau bị sâu bệnh, hãy gọi tên “bệnh”: (a) có 800 ảnh lá khỏe và 30 ảnh lá bệnh; (b) toàn bộ ảnh tải từ một trang web nước ngoài về các loại rau không trồng ở Việt Nam; (c) nhiều ảnh lá bị úa do thiếu nước được ghi là “sâu bệnh”; (d) mỗi loại chỉ có 4 ảnh."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image26.png",
+     "caption": "Hình 10.10.1. “Bệnh” của dữ liệu đi đến người dùng như thế nào."
+    }
+   ]
+  },
+  {
+   "id": "3-cu-that-nhieu-du-lieu-la-tot-chua-chac",
+   "title": "3. “Cứ thật nhiều dữ liệu là tốt”? Chưa chắc",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đây là hiểu lầm phổ biến nhất về dữ liệu. Hãy so sánh hai bộ dữ liệu cho trạm phân loại rác:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bộ X",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bộ Y",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Số ảnh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1.000"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "900"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân bố"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "900 tái chế, 60 hữu cơ, 40 còn lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chia đều ba nhóm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nơi chụp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Căn tin"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Căn tin, nhiều buổi khác nhau"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tình trạng rác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chủ yếu chai, lon sạch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có món sạch, món dính thức ăn, món bị bóp méo, nhiều góc chụp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gán nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một người gán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hai người gán độc lập, giáo viên xử lí chỗ khác nhau"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bộ X nhiều ảnh hơn. Nhưng trạm học từ bộ X sẽ gần như chỉ biết nói “tái chế”. Trạm học từ bộ Y sẽ làm việc tốt hơn nhiều."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Dữ liệu tốt để dạy máy là dữ liệu "
+        },
+        {
+         "text": "đủ, đúng, đa dạng và đúng bối cảnh",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Đủ:",
+         "b": true
+        },
+        {
+         "text": " đủ số lượng cho từng nhóm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đúng:",
+         "b": true
+        },
+        {
+         "text": " nhãn chính xác."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đa dạng:",
+         "b": true
+        },
+        {
+         "text": " đại diện cho mọi trường hợp, mọi nhóm sẽ gặp."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đúng bối cảnh:",
+         "b": true
+        },
+        {
+         "text": " lấy ở nơi, lúc, điều kiện mà hệ thống sẽ làm việc."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bộ Y cho ta thấy thêm một điều: "
+      },
+      {
+       "text": "dữ liệu tốt không tự nhiên mà có",
+       "b": true
+      },
+      {
+       "text": ". Phải có người đi chụp nhiều buổi, người gán nhãn cẩn thận, người kiểm tra lại. Đằng sau một hệ thống AI tốt là rất nhiều công sức của con người ở khâu dữ liệu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-tu-du-lieu-den-chat-luong-ai-tap-suy-luan",
+   "title": "4. Từ dữ liệu đến chất lượng AI: tập suy luận",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Phân tích ảnh hưởng của dữ liệu là tập trả lời chuỗi câu hỏi: "
+      },
+      {
+       "text": "dữ liệu có gì bất thường → máy sẽ sai kiểu gì → với ai, khi nào → sửa thế nào.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Làm thử với một tình huống:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một ứng dụng chấm phát âm tiếng Anh được dạy gần như hoàn toàn bằng bản ghi âm của người lớn ở một vùng."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Suy luận",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu có gì bất thường?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lệch nhóm (thiếu giọng học sinh, thiếu giọng các vùng khác); kéo theo không phù hợp bối cảnh nếu đem dùng cho học sinh cả nước"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Máy sẽ sai kiểu gì?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Coi cách phát âm khác với nhóm đã học là “sai”, dù phát âm vẫn đúng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Với ai, khi nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh có giọng vùng miền khác; bị chấm thấp oan"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hậu quả?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học sinh nản, mất tự tin; thiếu công bằng giữa các vùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sửa thế nào?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bổ sung bản ghi âm của học sinh nhiều vùng miền, có giáo viên đánh dấu; kiểm tra tỉ lệ chấm đúng theo từng vùng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Suy luận tương tự cho tình huống: "
+        },
+        {
+         "text": "Thư viện trường làm hệ thống gợi ý sách, dùng dữ liệu lượt mượn của năm học 2019. Từ đó đến nay thư viện đã nhập thêm hàng nghìn đầu sách mới.",
+         "i": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-ba-cau-hoi-ve-du-lieu-ma-nguoi-co-trach-nhiem-luon-hoi",
+   "title": "5. Ba câu hỏi về dữ liệu mà người có trách nhiệm luôn hỏi",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Các mô hình AI tạo sinh lớn học từ một lượng nội dung rất lớn, phần nhiều lấy từ Internet. Em biết Internet thế nào rồi: có điều đúng, có điều sai; có tiếng nói của nhóm này nhiều hơn nhóm khác; có những tác phẩm mà tác giả giữ bản quyền."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì vậy, với bất kì hệ thống AI nào, kể cả dự án nhỏ của nhóm em, có ba câu hỏi luôn nên đặt ra:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu có đúng không?",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu có đại diện cho mọi người sẽ dùng hệ thống không?",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mình có được phép dùng dữ liệu này không?",
+         "b": true
+        },
+        {
+         "text": " Nó của ai? Có chứa thông tin cá nhân không?"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu thứ ba nối với Bài 10.3 và 10.5. Ảnh chụp món rác thì không sao. Ảnh có khuôn mặt bạn bè, bản ghi âm giọng nói của người khác thì là dữ liệu cá nhân, phải có sự đồng ý."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-tu-tay-lam-du-lieu-bi-benh",
+   "title": "Trải nghiệm: Tự tay làm dữ liệu “bị bệnh”",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở phần Khởi động, em đã đóng vai một cỗ máy học từ sáu tấm thẻ trái cây. Bây giờ em dạy một cỗ máy thật, và thử làm cho dữ liệu của nó “bị bệnh”."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image27.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Teachable Machine"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " teachablemachine.withgoogle.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 8 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em tạo hai nhóm “chín” và “chưa chín”, và chỉ dùng ảnh quả chuối để dạy máy."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em bấm huấn luyện, rồi đưa quả cam, quả xoài vào cho máy đoán."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em thêm ảnh các loại quả khác vào dữ liệu, huấn luyện lại và so sánh kết quả."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Máy đoán sai vì cách học kém hay vì dữ liệu? Em vừa tạo ra “bệnh” nào trong bốn bệnh?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Em chỉ chụp đồ vật, không chụp người."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image28.png",
+     "caption": "Sơ đồ tư duy Bài 10.10."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Máy học đúng theo dữ liệu",
+         "b": true
+        },
+        {
+         "text": "; dữ liệu thế nào thì máy thế ấy. Chất lượng của hệ thống AI khó vượt quá chất lượng dữ liệu nó được học."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bốn vấn đề thường gặp: "
+        },
+        {
+         "text": "quá ít, sai nhãn, lệch nhóm, không phù hợp bối cảnh",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Lệch nhóm",
+         "b": true
+        },
+        {
+         "text": " với dữ liệu về con người dẫn đến "
+        },
+        {
+         "text": "thiếu công bằng",
+         "b": true
+        },
+        {
+         "text": "; cần kiểm tra kết quả riêng từng nhóm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nhiều chưa chắc là tốt.",
+         "b": true
+        },
+        {
+         "text": " Dữ liệu tốt là "
+        },
+        {
+         "text": "đủ, đúng, đa dạng, đúng bối cảnh",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu tốt cần "
+        },
+        {
+         "text": "công sức của con người",
+         "b": true
+        },
+        {
+         "text": ": thu thập, gán nhãn, kiểm tra, cập nhật."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba câu hỏi: dữ liệu có "
+        },
+        {
+         "text": "đúng",
+         "b": true
+        },
+        {
+         "text": " không; có "
+        },
+        {
+         "text": "đại diện",
+         "b": true
+        },
+        {
+         "text": " không; mình có "
+        },
+        {
+         "text": "được phép dùng",
+         "b": true
+        },
+        {
+         "text": " không."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Gọi tên vấn đề của dữ liệu trong mỗi trường hợp."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mô tả",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vấn đề",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "a"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một ứng dụng nhận diện biển báo giao thông được dạy bằng ảnh biển báo của một nước khác"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "b"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bộ ảnh dạy máy phân biệt chó và mèo có 50 ảnh mèo bị ghi là “chó”"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "c"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bộ dữ liệu giọng nói có 5.000 bản ghi giọng nam và 200 bản ghi giọng nữ"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "d"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một hệ thống nhận diện chữ viết tay được dạy bằng 10 mẫu chữ của một người"
+          }
+         ]
+        }
+       ],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi trường hợp ở Bài 1, dự đoán hệ thống sẽ "
+      },
+      {
+       "text": "sai kiểu gì",
+       "b": true
+      },
+      {
+       "text": " khi đem dùng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Căn tin đưa trạm phân loại rác vào dùng. Tháng đầu trạm chạy tốt. Sang học kì II, căn tin đổi sang li giấy và hộp cơm loại mới; trạm bắt đầu báo sai nhiều. Đây là vấn đề nào của dữ liệu? Ai nên làm gì để khắc phục?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " “Cứ có thật nhiều dữ liệu là AI sẽ tốt.” Em hãy phản biện nhận định này bằng một ví dụ của riêng em (không dùng ví dụ trạm rác)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Nhóm em muốn làm một mô hình nhận diện ba loại cây trong sân trường. Lập kế hoạch thu thập dữ liệu để tránh cả bốn “bệnh”: chụp bao nhiêu ảnh mỗi loại, chụp lúc nào, ở đâu, ai gán nhãn, ai kiểm tra?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Soi dữ liệu quanh em.",
+       "b": true
+      },
+      {
+       "text": " Tìm một ví dụ trong đời sống mà người ta rút ra kết luận từ “dữ liệu” quá ít hoặc lệch nhóm (một cuộc bình chọn trên mạng, một lời nhận xét về cả một nhóm người…). Dữ liệu ấy mắc bệnh gì?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Chuẩn bị cho bài sau.",
+       "b": true
+      },
+      {
+       "text": " Lấy tờ ghi “Vấn đề của nhóm” từ Bài 10.6. Thử nghĩ trước: hệ thống AI cho vấn đề đó cần "
+      },
+      {
+       "text": "dữ liệu gì",
+       "b": true
+      },
+      {
+       "text": ", lấy "
+      },
+      {
+       "text": "ở đâu",
+       "b": true
+      },
+      {
+       "text": ", "
+      },
+      {
+       "text": "ai",
+       "b": true
+      },
+      {
+       "text": " gán nhãn?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể tên bốn vấn đề của dữ liệu và cho ví dụ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán hệ thống sai kiểu gì từ một vấn đề của dữ liệu"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích vì sao nhiều dữ liệu chưa chắc là tốt"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đề xuất cách khắc phục cụ thể cho một bộ dữ liệu"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu huấn luyện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các ví dụ dùng để dạy máy"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gán nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc con người ghi kết quả đúng cho từng ví dụ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học có giám sát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách học máy từ dữ liệu đã được gán nhãn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lệch nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu có nhóm quá nhiều, nhóm quá ít hoặc thiếu hẳn một nhóm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bối cảnh sử dụng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nơi, lúc, điều kiện mà hệ thống sẽ làm việc"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiên lệch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai lệch có tính hệ thống trong đầu ra của AI, có thể dẫn đến kết quả thiếu công bằng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hoạt động 1.",
+       "b": true
+      },
+      {
+       "text": " (a) lệch nhóm; (b) không phù hợp bối cảnh; (c) sai nhãn; (d) quá ít."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) không phù hợp bối cảnh; b) sai nhãn; c) lệch nhóm; d) quá ít (và lệch nhóm, vì chỉ có chữ của một người)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) Không nhận ra hoặc nhận nhầm biển báo của Việt Nam. b) Hay gọi mèo là chó, nhất là những con giống các ảnh bị ghi nhầm. c) Nhận giọng nam tốt, giọng nữ kém. d) Chỉ đọc được chữ giống người đó; gặp chữ người khác thì đoán mò."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Không phù hợp bối cảnh (dữ liệu đã cũ so với thực tế mới). Người phụ trách trạm chụp và gán nhãn ảnh li giấy, hộp cơm loại mới, cho máy học lại; trong lúc chờ, dán hướng dẫn tạm thời cho hai loại rác này."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: mỗi loại cây ít nhất vài chục ảnh, số lượng tương đương nhau (tránh quá ít, lệch nhóm); chụp ở sân trường, vào nhiều buổi, nhiều góc, cả lá non và lá già (đúng bối cảnh, đa dạng); hai bạn gán nhãn độc lập, nhờ thầy cô Sinh học kiểm tra (tránh sai nhãn); không chụp dính mặt người."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [10], [11] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

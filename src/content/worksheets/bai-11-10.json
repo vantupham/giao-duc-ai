@@ -1,0 +1,116 @@
+{
+  "slug": "bai-11-10",
+  "lessonId": "11.10",
+  "title": "Phiếu học tập Bài 11.10 – Mạng nơ-ron nhân tạo",
+  "version": 1,
+  "objectives": [
+    { "id": "M1", "text": "Giải thích một nơ-ron nhân tạo làm việc thế nào: nhận tín hiệu, nhân trọng số, cộng, so với ngưỡng." },
+    { "id": "M2", "text": "Mô tả mạng nơ-ron gồm ba loại lớp và “học” bằng cách điều chỉnh trọng số." },
+    { "id": "M3", "text": "Kể ứng dụng của mạng nơ-ron và nêu khi nào phù hợp, khi nào không." }
+  ],
+  "summary": {
+    "title": "Hoàn thành sơ đồ bài học",
+    "lines": [
+      "Một nơ-ron: nhân tín hiệu với [[trọng số]], cộng lại, so với [[ngưỡng]].",
+      "Một mạng: lớp vào, lớp [[ẩn]], lớp ra.",
+      "Huấn luyện: chỉnh trọng số dựa trên nhiều ví dụ đã biết [[kết quả đúng]].",
+      "Ba đặc điểm: học từ ví dụ; cần nhiều [[dữ liệu]]; khó [[giải thích]]."
+    ],
+    "distractors": ["quy tắc", "ý thức", "cảm xúc"]
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "objective": "M1",
+      "level": "thong-hieu",
+      "prompt": "Nơ-ron “đi xe đạp” có trọng số: Mưa −3, Kịp giờ +2, Có bạn +2; ngưỡng 2 (tổng từ 2 trở lên thì đi). Sáng thứ Sáu: không mưa, kịp giờ, không có bạn. Kết quả là gì?",
+      "explanation": "Tổng = 0 + 2 + 0 = 2. Tổng bằng ngưỡng là đạt, nên kết quả là “đi xe đạp”.",
+      "options": [
+        { "text": "Đi xe đạp, vì tổng bằng 2", "correct": true },
+        { "text": "Không đi, vì tổng chưa vượt quá ngưỡng", "misconception": "Hiểu sai điều kiện ngưỡng: “từ 2 trở lên” đã gồm cả bằng 2" },
+        { "text": "Không đi, vì không có bạn đi cùng", "misconception": "Lập luận theo cảm tính thay vì nhân trọng số rồi cộng" },
+        { "text": "Không tính được vì thiếu tín hiệu mưa", "misconception": "Chưa biết tín hiệu “không” nghĩa là giá trị 0" }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "truefalse",
+      "objective": "M1",
+      "level": "nhan-biet",
+      "prompt": "“Nơ-ron nhân tạo hiểu được trời mưa là gì nên mới quyết định không đi xe đạp.”",
+      "explanation": "Sai. Nơ-ron chỉ nhân, cộng và so sánh. Nó không hiểu mưa là gì; mạng nơ-ron chỉ lấy cảm hứng từ bộ não.",
+      "answer": false,
+      "misconception": "Nghĩ mạng nơ-ron “hiểu”, “suy nghĩ” như người (Dễ nhầm)"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "objective": "M2",
+      "level": "thong-hieu",
+      "prompt": "Nơ-ron đoán sai buổi sáng thứ Ba (đoán không đi, thực tế Bình vẫn đi). Khi huấn luyện, điều gì được thay đổi?",
+      "explanation": "Huấn luyện là điều chỉnh trọng số dựa trên ví dụ có kết quả đúng, không phải viết thêm quy tắc.",
+      "options": [
+        { "text": "Dữ liệu đầu vào của buổi sáng thứ Ba", "misconception": "Nghĩ huấn luyện là sửa dữ liệu cho khớp kết quả" },
+        { "text": "Các trọng số, ví dụ trọng số của mưa từ −3 thành −2", "correct": true },
+        { "text": "Bình phải thay đổi thói quen cho khớp với máy", "misconception": "Đảo ngược vai trò: bắt thực tế theo máy" },
+        { "text": "Người lập trình viết thêm quy tắc “nếu thứ Ba thì đi”", "misconception": "Nghĩ máy học bằng cách được viết thêm quy tắc" }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "order",
+      "objective": "M2",
+      "level": "van-dung",
+      "prompt": "Sắp xếp các bước của một vòng huấn luyện mạng nơ-ron.",
+      "explanation": "Đưa ví dụ có đáp án → mạng đưa ra kết quả → so với đáp án → chỉnh trọng số → lặp lại với ví dụ khác.",
+      "items": [
+        "Đưa vào một ví dụ đã biết kết quả đúng",
+        "Mạng tính toán và đưa ra kết quả",
+        "So kết quả của mạng với kết quả đúng",
+        "Chỉnh trọng số một chút để lần sau sai ít hơn",
+        "Lặp lại với ví dụ tiếp theo"
+      ],
+      "misconception": "Chưa nắm vòng huấn luyện: đoán → so đáp án → chỉnh trọng số → lặp lại"
+    },
+    {
+      "id": "q5",
+      "type": "classify",
+      "objective": "M3",
+      "level": "thong-hieu",
+      "prompt": "Mỗi sản phẩm sau học từ dữ liệu (có mạng nơ-ron) hay chỉ làm theo quy tắc cố định?",
+      "explanation": "Nhận diện khuôn mặt và gõ chữ bằng giọng nói khó viết thành quy tắc nên dùng mạng nơ-ron. Máy tính bỏ túi và bảng tính điểm đã có công thức rõ ràng.",
+      "categories": ["Có mạng nơ-ron", "Quy tắc cố định"],
+      "items": [
+        { "text": "Nhận diện khuôn mặt để mở khóa điện thoại", "category": 0 },
+        { "text": "Máy tính bỏ túi", "category": 1, "misconception": "Nghĩ mọi thiết bị điện tử thông minh đều có mạng nơ-ron" },
+        { "text": "Gõ chữ bằng giọng nói", "category": 0 },
+        { "text": "Bảng tính điểm trung bình môn", "category": 1, "misconception": "Chưa nhận ra việc đã có công thức thì không cần mạng nơ-ron" }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "objective": "M3",
+      "level": "van-dung",
+      "prompt": "Một bệnh viện dùng mạng nơ-ron hỗ trợ đọc ảnh X-quang. Vì sao bác sĩ vẫn phải xem lại và chịu trách nhiệm?",
+      "explanation": "Mạng nơ-ron khó giải thích (“hộp đen”) và kết quả chỉ là dự đoán, có thể sai. Việc hệ trọng cần con người kiểm tra.",
+      "options": [
+        { "text": "Vì mạng nơ-ron đọc ảnh chậm hơn bác sĩ", "misconception": "Nghĩ vấn đề là tốc độ, không phải khả năng giải thích và độ tin cậy" },
+        { "text": "Vì kết quả khó giải thích và vẫn có thể sai", "correct": true },
+        { "text": "Vì mạng nơ-ron không xử lí được hình ảnh", "misconception": "Chưa biết mạng nơ-ron xử lí ảnh rất tốt" },
+        { "text": "Vì pháp luật cấm dùng AI trong y tế", "misconception": "Nhầm: luật quản lí AI theo mức độ rủi ro, không cấm" }
+      ]
+    }
+  ],
+  "apply": {
+    "objective": "M3",
+    "prompt": "Một bạn muốn làm ứng dụng nhận biết tiếng chim trong vườn trường. Em có khuyên dùng mạng nơ-ron không? Cần chuẩn bị gì, và cần lưu ý điều gì khi dùng kết quả?",
+    "rubric": [
+      "Trả lời có hoặc không, chưa nêu lí do.",
+      "Nêu được lí do: tiếng chim khó viết thành quy tắc, cần nhiều bản ghi âm đã có nhãn.",
+      "Thêm lưu ý: tiếng ồn hoặc bối cảnh khác có thể làm sai, cần thử với dữ liệu mới, kết quả chỉ là dự đoán."
+    ],
+    "hint": "Nhớ lại ba đặc điểm của mạng nơ-ron ở mục 3."
+  }
+}

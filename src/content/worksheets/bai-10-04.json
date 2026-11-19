@@ -1,0 +1,129 @@
+{
+  "slug": "bai-10-04",
+  "lessonId": "10.4",
+  "title": "Phiếu học tập Bài 10.4 – Ranh giới: khi nào dùng AI là vi phạm?",
+  "version": 1,
+  "objectives": [
+    { "id": "M1", "text": "Nêu ví dụ về hành vi dùng AI vi phạm quy định của nhà trường hoặc pháp luật." },
+    { "id": "M2", "text": "Nêu ví dụ về sự cố liên quan đến AI: không cố ý nhưng vẫn dẫn đến vi phạm." },
+    { "id": "M3", "text": "Biết cách khai báo việc sử dụng AI trong sản phẩm học tập." }
+  ],
+  "summary": {
+    "title": "Hoàn thành sơ đồ bài học",
+    "lines": [
+      "Khi dùng AI, em chịu hai tầng quy định: [[nhà trường]] và [[pháp luật]].",
+      "Vùng vàng: được dùng nếu [[khai báo]] và theo hướng dẫn của giáo viên.",
+      "Vi phạm có thể do hành vi [[cố ý]] hoặc do [[sự cố]] vì bất cẩn; bất cẩn vẫn phải chịu trách nhiệm.",
+      "Hai việc giữ em an toàn ở vùng vàng: [[kiểm chứng]] và khai báo."
+    ],
+    "distractors": ["giấu đi", "tốc độ", "điểm số"]
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "type": "classify",
+      "objective": "M1",
+      "level": "thong-hieu",
+      "prompt": "Xếp mỗi việc vào vùng xanh, vàng hoặc đỏ.",
+      "explanation": "Tự ôn bằng vở ghi của mình: xanh. Gợi ý dàn ý rồi tự viết, có khai báo: vàng. Nộp bài dịch như bài tự viết: đỏ. Tải ảnh cả lớp lên ứng dụng lạ: đỏ, vì ảnh các bạn là dữ liệu cá nhân.",
+      "categories": ["Xanh", "Vàng", "Đỏ"],
+      "items": [
+        { "text": "Nhờ AI tạo 10 câu hỏi trắc nghiệm từ vở ghi của mình để tự ôn", "category": 0, "misconception": "Nghĩ dùng AI trong học tập lúc nào cũng là gian lận" },
+        { "text": "Nhờ AI gợi ý dàn ý, sau đó tự viết bài và khai báo", "category": 1, "misconception": "Chưa phân biệt vùng vàng (được dùng khi khai báo) với vùng xanh, vùng đỏ" },
+        { "text": "Nhờ AI dịch nguyên một bài tiếng Anh trên mạng rồi nộp như bài tự viết", "category": 2, "misconception": "“Sửa vài chữ là thành bài của em”: chưa thấy ý tưởng là của người khác" },
+        { "text": "Tải ảnh chụp cả lớp lên một ứng dụng lạ để “biến thành hoạt hình”", "category": 2, "misconception": "Chưa nhận ra ảnh của bạn bè là dữ liệu cá nhân" }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "objective": "M1",
+      "level": "nhan-biet",
+      "prompt": "Việc nào vi phạm cả quy định của nhà trường lẫn pháp luật?",
+      "explanation": "Ghép mặt bạn để chế giễu là tạo nội dung giả mạo người thật và dùng dữ liệu cá nhân (hình ảnh) trái phép: vi phạm cả hai tầng.",
+      "options": [
+        { "text": "Nộp bài văn do AI viết mà không khai báo", "misconception": "Nhầm vi phạm quy định nhà trường (trung thực học thuật) với vi phạm pháp luật" },
+        { "text": "Dùng AI ghép mặt bạn vào ảnh chế giễu rồi đăng lên nhóm lớp", "correct": true },
+        { "text": "Nhờ AI giải thích lại một khái niệm chưa hiểu", "misconception": "Nghĩ dùng AI lúc nào cũng là vi phạm" },
+        { "text": "Hỏi thầy cô bài này được dùng AI đến mức nào", "misconception": "Nghĩ dùng AI lúc nào cũng là vi phạm" }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "truefalse",
+      "objective": "M2",
+      "level": "nhan-biet",
+      "prompt": "Mai tin chatbot nên đưa vào báo tường một “câu nói của danh nhân” mà thực ra AI bịa ra. Vì Mai không cố ý nên Mai không phải chịu trách nhiệm.",
+      "explanation": "Sai. Đây là sự cố do không kiểm chứng. Không cố ý thì mức độ khác, nhưng em vẫn chịu trách nhiệm về sản phẩm mình nộp.",
+      "answer": false,
+      "misconception": "“Em không cố ý thì không sao”: chưa hiểu bất cẩn vẫn phải chịu trách nhiệm"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "objective": "M2",
+      "level": "thong-hieu",
+      "prompt": "Lớp trưởng Dũng dán vào chatbot danh sách lớp có họ tên, số điện thoại phụ huynh và điểm giữa kì để nhờ chia nhóm học tập. Đây là gì?",
+      "explanation": "Dũng có ý tốt nhưng đã đưa dữ liệu cá nhân của cả lớp ra ngoài: đó là một sự cố. Cách đúng là thay tên bằng mã số, bỏ thông tin định danh.",
+      "options": [
+        { "text": "Hành vi cố ý vi phạm", "misconception": "Nhầm sự cố (không cố ý) với hành vi cố ý" },
+        { "text": "Sự cố: không cố ý nhưng làm lộ dữ liệu cá nhân của cả lớp", "correct": true },
+        { "text": "Không sao, vì Dũng làm việc tốt cho lớp", "misconception": "Nghĩ có ý tốt thì không gây hại" },
+        { "text": "Vùng xanh, vì dùng AI cho việc học", "misconception": "Chưa nhận ra danh sách có họ tên, số điện thoại là dữ liệu cá nhân" }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "objective": "M2",
+      "level": "van-dung",
+      "prompt": "Hải nhận được đoạn ghi âm “giọng thầy hiệu trưởng” thông báo ngày mai nghỉ học. Hải nên làm gì?",
+      "explanation": "Kiểm tra trên kênh chính thức của trường trước khi chia sẻ, và báo cho thầy cô. Chuyển tiếp thông tin chưa kiểm chứng là góp phần lan truyền tin sai.",
+      "options": [
+        { "text": "Chuyển tiếp ngay vào các nhóm để mọi người cùng biết", "misconception": "Chia sẻ trước khi kiểm chứng" },
+        { "text": "Kiểm tra trên kênh chính thức của trường trước khi chia sẻ, báo thầy cô", "correct": true },
+        { "text": "Chuyển tiếp kèm câu “không biết có thật không”", "misconception": "Nghĩ thêm lời rào đón là hết trách nhiệm" },
+        { "text": "Dùng AI tạo thêm một đoạn ghi âm khác cho vui", "misconception": "Tạo nội dung giả mạo người thật" }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "classify",
+      "objective": "M3",
+      "level": "thong-hieu",
+      "prompt": "Ghép mỗi thông tin vào đúng mục của phiếu khai báo sử dụng AI.",
+      "explanation": "Công cụ: dùng gì. Mục đích: dùng để làm gì. Phần em tự làm: phần của em. Cách kiểm chứng: đối chiếu với nguồn nào.",
+      "categories": ["Công cụ", "Mục đích", "Phần em tự làm", "Cách kiểm chứng"],
+      "items": [
+        { "text": "Trợ lí AI do trường cấp tài khoản", "category": 0 },
+        { "text": "Nhờ gợi ý bố cục bài thuyết trình", "category": 1 },
+        { "text": "Tự tìm số liệu và tự viết toàn bộ nội dung", "category": 2 },
+        { "text": "Đối chiếu số liệu với trang của cơ quan thống kê", "category": 3 }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "objective": "M3",
+      "level": "van-dung",
+      "prompt": "Linh nói: “Mình không khai báo đâu, khai ra cô lại trừ điểm.” Em trả lời Linh thế nào là đúng nhất?",
+      "explanation": "Khai báo là minh chứng của trung thực, không tự động làm tăng hay giảm kết quả. Giấu việc dùng AI mới là vi phạm.",
+      "options": [
+        { "text": "Đúng rồi, giấu đi cho được điểm cao", "misconception": "Nghĩ khai báo sẽ bị trừ điểm" },
+        { "text": "Khai báo không tự động làm tăng hay giảm kết quả; giấu mới là vi phạm", "correct": true },
+        { "text": "Chỉ cần khai báo khi AI viết hơn nửa bài", "misconception": "Nghĩ khai báo tính theo số chữ AI viết, không theo phần AI đóng góp" },
+        { "text": "Sửa vài chữ thì không cần khai báo nữa", "misconception": "“Sửa vài chữ là thành bài của em”" }
+      ]
+    }
+  ],
+  "apply": {
+    "objective": "M3",
+    "prompt": "Em làm bài thuyết trình Địa lí: nhờ AI gợi ý bố cục, tự tìm số liệu trong sách và trên trang cơ quan thống kê, tự viết nội dung, nhờ AI tạo một hình minh họa. Viết ngắn gọn phần khai báo của em.",
+    "rubric": [
+      "Chỉ ghi tên công cụ hoặc “có dùng AI”.",
+      "Nêu được AI giúp gì (bố cục, hình minh họa) và phần em tự làm.",
+      "Đủ các ý: công cụ, mục đích, phạm vi AI hỗ trợ, phần tự làm, cách kiểm chứng số liệu, ghi chú “hình do AI tạo”."
+    ],
+    "hint": "Xem lại phiếu khai báo mẫu của bạn Giang ở mục 5."
+  }
+}

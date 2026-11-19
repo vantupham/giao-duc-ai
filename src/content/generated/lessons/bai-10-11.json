@@ -1,0 +1,3868 @@
+{
+ "id": "10.11",
+ "slug": "bai-10-11",
+ "grade": 10,
+ "num": 11,
+ "topicId": "10.4",
+ "title": "Giải phẫu một hệ thống AI",
+ "meta": "Chuyên đề 10.4: Dữ liệu và hệ thống AI (tiết 2 trong 3 tiết)",
+ "period": {
+  "index": 2,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Phát biểu được "
+   },
+   {
+    "text": "mục tiêu",
+    "b": true
+   },
+   {
+    "text": " của một hệ thống AI trong một tình huống cụ thể: hệ thống nhận gì, đưa ra gì, phục vụ ai."
+   }
+  ],
+  [
+   {
+    "text": "Mô tả được "
+   },
+   {
+    "text": "năm thành phần cơ bản",
+    "b": true
+   },
+   {
+    "text": " của một hệ thống AI: dữ liệu, thuật toán, mô hình, đầu ra, phản hồi."
+   }
+  ],
+  [
+   {
+    "text": "Giải thích được vì sao "
+   },
+   {
+    "text": "mục tiêu thay đổi thì các thành phần phải thay đổi theo",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ]
+ ],
+ "keywords": [
+  "hệ thống AI",
+  "mục tiêu",
+  "dữ liệu",
+  "thuật toán",
+  "mô hình",
+  "đầu ra",
+  "phản hồi"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-chiec-thung-rac-biet-nhin",
+   "title": "Khởi động: Chiếc thùng rác biết “nhìn”",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giờ ra chơi, căn tin trường mình đông nghịt. Trước ba chiếc thùng rác, Minh cầm vỏ hộp sữa đứng ngẩn ra: bỏ vào thùng tái chế, thùng hữu cơ hay thùng còn lại?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bây giờ em hãy hình dung nhà trường đặt ở đó một "
+      },
+      {
+       "text": "trạm phân loại rác",
+       "b": true
+      },
+      {
+       "text": ". Minh chỉ cần đưa vỏ hộp sữa trước camera, màn hình hiện ngay dòng chữ:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Tái chế. Mức chắc chắn: 92%",
+         "b": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trông có vẻ đơn giản. Nhưng em hãy dừng lại một phút và thử trả lời:"
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Để chiếc trạm làm được việc đó, "
+      },
+      {
+       "text": "phía sau",
+       "i": true
+      },
+      {
+       "text": " nó phải có những gì?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có thể em nghĩ đến camera, màn hình, một chương trình máy tính. Đúng, nhưng chưa đủ. Camera chỉ chụp được ảnh. Làm sao máy "
+      },
+      {
+       "text": "biết",
+       "i": true
+      },
+      {
+       "text": " vỏ hộp sữa thuộc nhóm nào? Ai đã dạy nó? Dạy bằng gì? Và nếu nó báo sai thì ai sửa?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong Sinh học, muốn hiểu một cơ thể hoạt động thế nào, người ta giải phẫu để xem từng cơ quan. Bài học này làm điều tương tự với một hệ thống AI: mở nó ra, gọi tên từng bộ phận và xem các bộ phận ấy liên quan với nhau như thế nào."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lưu ý: trạm phân loại rác là tình huống giả định, được dùng làm ví dụ xuyên suốt bài học.",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-he-thong-ai-la-gi",
+   "title": "1. Hệ thống AI là gì?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong đời sống, chúng ta hay gọi chung mọi thứ là “AI”: “AI gợi ý video”, “AI chấm phát âm”, “hỏi AI xem”. Cách gọi đó tiện, nhưng dễ làm ta tưởng AI là một “khối” duy nhất, bí ẩn. Thực ra, thứ ta đang dùng là một "
+      },
+      {
+       "text": "hệ thống AI",
+       "b": true
+      },
+      {
+       "text": ", tức là nhiều bộ phận phối hợp với nhau."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hệ thống AI",
+         "b": true
+        },
+        {
+         "text": " là hệ thống dựa trên máy, căn cứ vào các "
+        },
+        {
+         "text": "mục tiêu",
+         "b": true
+        },
+        {
+         "text": " được xác định rõ ràng hoặc được hình thành một cách ngầm định, suy luận từ "
+        },
+        {
+         "text": "dữ liệu đầu vào",
+         "b": true
+        },
+        {
+         "text": " để tạo ra các "
+        },
+        {
+         "text": "đầu ra",
+         "b": true
+        },
+        {
+         "text": " như dự đoán, nội dung, khuyến nghị hoặc quyết định, có thể gây ảnh hưởng tới môi trường vật lí hoặc môi trường số."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "(Lược theo phần Giải thích thuật ngữ của Khung nội dung giáo dục trí tuệ nhân tạo cho học sinh phổ thông, Bộ Giáo dục và Đào tạo, 2026) [1]",
+         "i": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Định nghĩa trên rất gần với định nghĩa được Tổ chức Hợp tác và Phát triển Kinh tế (OECD) cập nhật năm 2023 và được nhiều nước tham khảo khi xây dựng luật. Tạm dịch: "
+      },
+      {
+       "text": "hệ thống AI là một hệ thống dựa trên máy, vì các mục tiêu tường minh hoặc ngầm định, suy luận từ đầu vào nhận được cách tạo ra các đầu ra như dự đoán, nội dung, khuyến nghị hoặc quyết định có thể ảnh hưởng đến môi trường vật lí hoặc môi trường ảo",
+       "i": true
+      },
+      {
+       "text": " [2]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy đọc chậm lại định nghĩa và chú ý ba cụm từ: "
+      },
+      {
+       "text": "mục tiêu",
+       "b": true
+      },
+      {
+       "text": ", "
+      },
+      {
+       "text": "đầu vào",
+       "b": true
+      },
+      {
+       "text": ", "
+      },
+      {
+       "text": "đầu ra",
+       "b": true
+      },
+      {
+       "text": ". Mọi hệ thống AI, dù là trạm phân loại rác hay một trợ lí trò chuyện, đều có thể được mô tả bằng ba cụm từ này. Chúng ta bắt đầu từ cái quan trọng nhất: mục tiêu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-muc-tieu-diem-xuat-phat-cua-moi-he-thong-ai",
+   "title": "2. Mục tiêu: điểm xuất phát của mọi hệ thống AI",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "h3",
+     "text": "2.1. Mong muốn chưa phải là mục tiêu",
+     "id": "2-1-mong-muon-chua-phai-la-muc-tieu"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giả sử em là người lập trình và nhận được một trong bốn “đề bài” sau cho trạm phân loại rác:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phát biểu",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "A"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống giúp trường sạch đẹp hơn."
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống dùng trí tuệ nhân tạo hiện đại để xử lí rác."
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống nhận ảnh rác và phân loại."
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "D"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống nhận ảnh một món rác chụp tại căn tin và cho biết món đó thuộc nhóm tái chế, hữu cơ hay còn lại, để học sinh bỏ đúng thùng."
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với đề bài nào em biết ngay mình phải làm gì?"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "A",
+         "b": true
+        },
+        {
+         "text": " là một "
+        },
+        {
+         "text": "mong muốn",
+         "i": true
+        },
+        {
+         "text": " đáng quý, nhưng không cho biết máy phải nhận gì và trả ra gì. Trồng thêm cây cũng làm trường sạch đẹp hơn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "B",
+         "b": true
+        },
+        {
+         "text": " chỉ nói về công nghệ, không nói về việc cần làm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "C",
+         "b": true
+        },
+        {
+         "text": " khá hơn: có đầu vào. Nhưng “phân loại” thành những nhóm nào? Cho ai dùng?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "D",
+         "b": true
+        },
+        {
+         "text": " trả lời đủ cả ba câu hỏi. Đây mới là một "
+        },
+        {
+         "text": "mục tiêu",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mục tiêu của hệ thống AI",
+         "b": true
+        },
+        {
+         "text": " là nhiệm vụ cụ thể mà hệ thống phải thực hiện. Một mục tiêu rõ ràng trả lời được ba câu hỏi: hệ thống "
+        },
+        {
+         "text": "nhận gì",
+         "b": true
+        },
+        {
+         "text": ", "
+        },
+        {
+         "text": "đưa ra gì",
+         "b": true
+        },
+        {
+         "text": ", và "
+        },
+        {
+         "text": "phục vụ ai để làm việc gì",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.2. Mẫu câu mục tiêu",
+     "id": "2-2-mau-cau-muc-tieu"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em có thể dùng mẫu câu sau cho mọi hệ thống AI:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hệ thống nhận "
+        },
+        {
+         "text": "[đầu vào gì]",
+         "b": true
+        },
+        {
+         "text": " và đưa ra "
+        },
+        {
+         "text": "[kết quả gì]",
+         "b": true
+        },
+        {
+         "text": " để "
+        },
+        {
+         "text": "[giúp ai làm việc gì]",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một vài ví dụ quen thuộc:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hệ thống",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhận",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đưa ra",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Để",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lọc tin nhắn rác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nội dung một tin nhắn mới"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhãn “rác” hoặc “không rác”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng không bị làm phiền, bị lừa"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ứng dụng bản đồ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm đi, điểm đến, tình hình giao thông"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lộ trình và thời gian dự kiến"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người đi đường chọn được đường phù hợp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chấm phát âm tiếng Anh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giọng đọc một câu của người học"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Những âm phát chưa đúng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người học biết cần luyện lại chỗ nào"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "2.3. Vì sao mục tiêu phải cụ thể?",
+     "id": "2-3-vi-sao-muc-tieu-phai-cu-the"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì mục tiêu trả lời hộ ta ba câu hỏi lớn của cả quá trình làm ra hệ thống:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Cần thu thập dữ liệu gì?",
+         "b": true
+        },
+        {
+         "text": " Mục tiêu D nói rõ “ảnh rác chụp tại căn tin”, nên ta biết phải đi chụp ảnh rác ở căn tin chứ không phải tải ảnh bất kì trên mạng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đầu ra có dạng gì?",
+         "b": true
+        },
+        {
+         "text": " Một trong ba nhãn: tái chế, hữu cơ, còn lại."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thế nào là hệ thống làm đúng?",
+         "b": true
+        },
+        {
+         "text": " Học sinh bỏ đúng thùng. Đây là căn cứ để kiểm tra, đánh giá."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mục tiêu mơ hồ thì cả ba câu hỏi đều không có lời đáp."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Viết lại phát biểu C ở trên thành một mục tiêu đầy đủ cho một hệ thống khác do em tự chọn (ví dụ: nhận diện lá cây bị sâu bệnh ở vườn trường). Đổi vở với bạn bên cạnh và kiểm tra giúp nhau: câu của bạn đã đủ ba ý chưa?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-nam-thanh-phan-co-ban-cua-he-thong-ai",
+   "title": "3. Năm thành phần cơ bản của hệ thống AI",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi đã có mục tiêu, ta mở “nắp máy” ra. Bên trong một hệ thống AI có năm thành phần cơ bản [1]:"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dữ liệu, Thuật toán, Mô hình, Đầu ra, Phản hồi.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trước khi đi vào từng thành phần, em hãy đọc một câu chuyện rất gần với chính mình."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Một phép so sánh: mùa ôn thi của bạn Lan",
+     "id": "mot-phep-so-sanh-mua-on-thi-cua-ban-lan"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lan chuẩn bị thi cuối kì môn Toán."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Lan gom "
+        },
+        {
+         "text": "đề thi các năm trước kèm đáp án",
+         "b": true
+        },
+        {
+         "text": ". Không có chúng, Lan không biết ôn gì."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Lan chọn "
+        },
+        {
+         "text": "cách ôn",
+         "b": true
+        },
+        {
+         "text": ": mỗi tối làm một đề, sai câu nào thì xem lại lí thuyết phần đó, hôm sau làm lại."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sau ba tuần, trong đầu Lan hình thành "
+        },
+        {
+         "text": "hiểu biết và kĩ năng giải toán",
+         "b": true
+        },
+        {
+         "text": ". Thứ này không nhìn thấy được, nhưng chính nó sẽ đi vào phòng thi cùng Lan."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Vào phòng thi, gặp một "
+        },
+        {
+         "text": "đề hoàn toàn mới",
+         "b": true
+        },
+        {
+         "text": ", Lan viết ra "
+        },
+        {
+         "text": "bài làm",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Cô giáo "
+        },
+        {
+         "text": "chấm và chữa bài",
+         "b": true
+        },
+        {
+         "text": ". Lan biết mình sai ở đâu để ôn tiếp."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Năm gạch đầu dòng ấy ứng đúng với năm thành phần của một hệ thống AI:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chuyện ôn thi của Lan",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thành phần của hệ thống AI",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đề thi các năm kèm đáp án"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách ôn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thuật toán",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu biết, kĩ năng trong đầu sau khi ôn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài làm với đề mới"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cô chấm, chữa bài"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phản hồi",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy giữ câu chuyện này trong đầu. Chúng ta sẽ quay lại nó nhiều lần."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "3.1. Dữ liệu: “sách giáo khoa” của máy",
+     "id": "3-1-du-lieu-sach-giao-khoa-cua-may"
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Dữ liệu",
+         "b": true
+        },
+        {
+         "text": " là các ví dụ được dùng để dạy máy và để kiểm tra xem máy học đã tốt chưa."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với trạm phân loại rác, dữ liệu là "
+      },
+      {
+       "text": "hàng nghìn tấm ảnh",
+       "b": true
+      },
+      {
+       "text": " vỏ chai, hộp sữa, vỏ trái cây, khăn giấy, hộp xốp… chụp ngay tại căn tin. Mỗi tấm ảnh được con người ghi sẵn nó thuộc nhóm nào. Việc ghi này gọi là "
+      },
+      {
+       "text": "gán nhãn",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ảnh",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhãn do con người gán",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vỏ chai nhựa bị bóp méo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tái chế"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vỏ chuối"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hữu cơ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hộp xốp dính thức ăn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Còn lại"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lon nước ngọt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tái chế"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở bài trước, em đã biết dữ liệu tốt là dữ liệu "
+      },
+      {
+       "text": "đủ, đúng, đa dạng và đúng bối cảnh",
+       "b": true
+      },
+      {
+       "text": ". Dữ liệu kém thì những thành phần phía sau có tốt đến đâu cũng không cứu được."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật: khi dữ liệu thiếu cân đối",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2018, hai nhà nghiên cứu Joy Buolamwini và Timnit Gebru công bố công trình “Gender Shades”. Họ kiểm tra ba hệ thống thương mại có chức năng phân loại giới tính qua ảnh khuôn mặt. Kết quả: nhóm bị nhận sai nhiều nhất là phụ nữ da sẫm màu, với tỉ lệ sai lên tới "
+        },
+        {
+         "text": "34,7%",
+         "b": true
+        },
+        {
+         "text": ", trong khi tỉ lệ sai cao nhất ở nam giới da sáng màu chỉ là "
+        },
+        {
+         "text": "0,8%",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hai tác giả cũng chỉ ra rằng hai bộ ảnh chuẩn thường được dùng để đánh giá các hệ thống loại này có thành phần rất lệch: "
+        },
+        {
+         "text": "79,6%",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "86,2%",
+         "b": true
+        },
+        {
+         "text": " số người trong ảnh có da sáng màu. Họ đã xây dựng một bộ ảnh mới cân bằng hơn về giới và màu da để việc đánh giá được công bằng. [10]"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bài học:",
+         "b": true
+        },
+        {
+         "text": " một hệ thống có thể trông rất tốt nếu chỉ nhìn con số chung, nhưng lại làm kém với những nhóm người ít xuất hiện trong dữ liệu."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "3.2. Thuật toán: “cách học” của máy",
+     "id": "3-2-thuat-toan-cach-hoc-cua-may"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong môn Tin học, em đã biết "
+      },
+      {
+       "text": "thuật toán",
+       "b": true
+      },
+      {
+       "text": " là một dãy hữu hạn các bước, quy tắc được xác định rõ ràng nhằm giải quyết một bài toán [1]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong một hệ thống AI học từ dữ liệu, thuật toán mà ta quan tâm là "
+      },
+      {
+       "text": "cách máy học từ các ví dụ",
+       "b": true
+      },
+      {
+       "text": ". Với trạm phân loại rác, thuật toán học làm việc đại ý như sau:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Xem một ảnh và thử đoán nó thuộc nhóm nào."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "So lời đoán với nhãn đúng do con người đã gán."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nếu đoán sai, tự điều chỉnh một chút để lần sau đoán gần đúng hơn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Lặp lại với ảnh tiếp theo, hàng nghìn, hàng vạn lần."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em thấy giống cách ôn thi của Lan chứ? Làm đề, so đáp án, sửa chỗ sai, làm lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách xây dựng mô hình bằng việc cho máy học từ dữ liệu, thay vì con người viết sẵn từng quy tắc, được gọi là "
+      },
+      {
+       "text": "học máy",
+       "b": true
+      },
+      {
+       "text": ". Khi dữ liệu đã có nhãn đúng như ở trên, đó là "
+      },
+      {
+       "text": "học có giám sát",
+       "b": true
+      },
+      {
+       "text": " [1]."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "3.3. Mô hình: “thứ còn lại” sau khi học",
+     "id": "3-3-mo-hinh-thu-con-lai-sau-khi-hoc"
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mô hình AI",
+         "b": true
+        },
+        {
+         "text": " là thành phần của hệ thống AI, tạo ra đầu ra từ đầu vào dựa trên các tham số hoặc quy tắc được xây dựng sẵn hoặc học được từ dữ liệu [1]."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nói giản dị: sau khi thuật toán học “chạy” xong trên dữ liệu, ta thu được một "
+      },
+      {
+       "text": "bộ phân loại",
+       "b": true
+      },
+      {
+       "text": ". Bộ phân loại này được đặt vào trạm. Mỗi lần có một ảnh rác mới, chính nó tính toán và cho biết ảnh ấy giống nhóm nào nhất."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong chuyện của Lan, mô hình là hiểu biết và kĩ năng trong đầu Lan sau ba tuần ôn. Lan không mang chồng đề cũ vào phòng thi; Lan mang cái mình đã học được."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm: thuật toán và mô hình khác nhau thế nào?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Đây là chỗ nhiều bạn lẫn lộn nhất. Em hãy tự hỏi hai câu:"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Cái nào là ",
+         "i": true
+        },
+        {
+         "text": "cách học",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": ", cái nào là ",
+         "i": true
+        },
+        {
+         "text": "thứ có được sau khi học",
+         "b": true,
+         "i": true
+        },
+        {
+         "text": "?",
+         "i": true
+        },
+        {
+         "text": " Cách học là thuật toán. Thứ có được là mô hình."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi trạm đã đặt ở căn tin, cái gì đang chạy mỗi lần Minh đưa vỏ hộp sữa lên?",
+         "i": true
+        },
+        {
+         "text": " Mô hình."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật toán (học)",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mô hình",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Là gì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách máy học từ dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả của việc học"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Làm việc khi nào"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lúc huấn luyện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lúc sử dụng, mỗi khi có đầu vào mới"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trong chuyện ôn thi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách ôn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu biết sau khi ôn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trong nhà bếp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách luyện nấu: nấu, nếm, chỉnh, nấu lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tay nghề của người đầu bếp"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hai mô hình có thể rất khác nhau dù dùng cùng một thuật toán, nếu chúng được học từ hai bộ dữ liệu khác nhau. Cũng như hai bạn cùng một cách ôn nhưng ôn hai bộ đề khác nhau thì giỏi những dạng bài khác nhau."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "3.4. Đầu ra: thứ người dùng nhận được",
+     "id": "3-4-dau-ra-thu-nguoi-dung-nhan-duoc"
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Đầu ra",
+         "b": true
+        },
+        {
+         "text": " là kết quả mà hệ thống trả cho người dùng."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở trạm phân loại rác, đầu ra là dòng chữ trên màn hình: "
+      },
+      {
+       "text": "“Tái chế. Mức chắc chắn: 92%”",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy chú ý con số 92%. Nó cho biết mô hình khá chắc, nhưng "
+      },
+      {
+       "text": "không phải chắc tuyệt đối",
+       "b": true
+      },
+      {
+       "text": ". Nói cách khác, đầu ra của một hệ thống AI là một "
+      },
+      {
+       "text": "phỏng đoán có căn cứ",
+       "i": true
+      },
+      {
+       "text": ", không phải một chân lí. Vì có thể sai nên mới cần đến thành phần thứ năm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tùy mục tiêu, đầu ra có thể rất khác nhau: một "
+      },
+      {
+       "text": "nhãn",
+       "b": true
+      },
+      {
+       "text": " (rác, không rác), một "
+      },
+      {
+       "text": "con số",
+       "b": true
+      },
+      {
+       "text": " (mai có khoảng 300 suất ăn), một "
+      },
+      {
+       "text": "danh sách gợi ý",
+       "b": true
+      },
+      {
+       "text": " (ba cuốn sách nên đọc), hoặc một "
+      },
+      {
+       "text": "nội dung mới",
+       "b": true
+      },
+      {
+       "text": " (một đoạn văn trả lời)."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "3.5. Phản hồi: đường quay về để hệ thống tốt lên",
+     "id": "3-5-phan-hoi-duong-quay-ve-de-he-thong-tot-len"
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phản hồi",
+         "b": true
+        },
+        {
+         "text": " là thông tin cho biết đầu ra đúng hay sai, được đưa trở lại để cải thiện hệ thống."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trên trạm phân loại rác có một nút "
+      },
+      {
+       "text": "“Sai rồi”",
+       "b": true
+      },
+      {
+       "text": ". Khi máy báo hộp xốp là “tái chế”, Minh bấm nút. Cuối tuần, người phụ trách mở danh sách các ảnh bị báo sai, gán lại nhãn đúng và đưa chúng vào bộ dữ liệu để máy học thêm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một phản hồi đầy đủ trả lời được ba câu hỏi: "
+      },
+      {
+       "text": "ai báo sai, báo bằng cách nào, và thông tin đó được dùng để làm gì",
+       "b": true
+      },
+      {
+       "text": ". Thiếu ý thứ ba thì nút “Sai rồi” chỉ để trang trí."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em gặp phản hồi mỗi ngày mà có thể không để ý: nút “thích” hoặc “không thích” dưới câu trả lời của một trợ lí AI, nút “không quan tâm” dưới một video được gợi ý, thao tác “báo cáo tin rác”. Mỗi lần bấm, em đang góp một mẩu thông tin giúp hệ thống thay đổi. Người dùng cũng là người góp phần “dạy” hệ thống."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "3.6. Ghép năm thành phần lại",
+     "id": "3-6-ghep-nam-thanh-phan-lai"
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image29.png",
+     "caption": "Năm thành phần của hệ thống AI và vòng phản hồi"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Đọc sơ đồ theo chiều mũi tên: "
+      },
+      {
+       "text": "dữ liệu",
+       "b": true
+      },
+      {
+       "text": " được "
+      },
+      {
+       "text": "thuật toán",
+       "b": true
+      },
+      {
+       "text": " học để tạo thành "
+      },
+      {
+       "text": "mô hình",
+       "b": true
+      },
+      {
+       "text": "; mô hình nhận đầu vào mới và tạo ra "
+      },
+      {
+       "text": "đầu ra",
+       "b": true
+      },
+      {
+       "text": "; người dùng "
+      },
+      {
+       "text": "phản hồi",
+       "b": true
+      },
+      {
+       "text": "; phản hồi quay về làm giàu dữ liệu, và vòng học lại bắt đầu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Điểm đáng nhớ nhất của sơ đồ là nó "
+      },
+      {
+       "text": "khép thành vòng",
+       "b": true
+      },
+      {
+       "text": ". Một hệ thống AI tốt không phải là hệ thống làm xong rồi để đó, mà là hệ thống được tiếp tục chăm sóc."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Lúc khởi động, em đã nghĩ đến camera và màn hình. Chúng nằm ở đâu trong sơ đồ?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Gợi ý:",
+         "i": true
+        },
+        {
+         "text": " camera và màn hình là "
+        },
+        {
+         "text": "thiết bị",
+         "b": true
+        },
+        {
+         "text": ". Camera là nơi thu đầu vào, màn hình là nơi hiển thị đầu ra. Chúng cần thiết, nhưng phần “biết phân loại” nằm ở mô hình."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image30.png",
+     "caption": "Hình 10.11.1. Năm thành phần của hệ thống AI tạo thành một vòng khép kín, do mục tiêu chi phối."
+    }
+   ]
+  },
+  {
+   "id": "4-muc-tieu-doi-cac-thanh-phan-doi-theo",
+   "title": "4. Mục tiêu đổi, các thành phần đổi theo",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bây giờ em sẽ thấy vì sao mục 2 lại quan trọng đến thế."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giả sử sau một học kì, nhà trường muốn trạm nhận biết thêm "
+      },
+      {
+       "text": "pin và rác nguy hại",
+       "b": true
+      },
+      {
+       "text": ", vì đã có học sinh bỏ pin vào thùng tái chế. Mục tiêu mới:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hệ thống nhận ảnh một món rác chụp tại căn tin và cho biết món đó thuộc nhóm tái chế, hữu cơ, "
+        },
+        {
+         "text": "nguy hại",
+         "b": true
+        },
+        {
+         "text": " hay còn lại, để học sinh bỏ đúng thùng."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chỉ thêm hai chữ “nguy hại”, nhưng xem điều gì xảy ra với từng thành phần:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thành phần",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Có phải đổi không?",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đổi thế nào?",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phải chụp và gán nhãn thêm ảnh pin, bóng đèn hỏng…"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thuật toán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có thể giữ nguyên"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách học vẫn như cũ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phải huấn luyện lại; mô hình cũ chưa từng “thấy” pin"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thêm một nhãn mới và hướng dẫn mang đến điểm thu gom riêng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần theo dõi riêng các lần nhận sai ở nhóm mới, vì sai ở nhóm này gây hại nhiều hơn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Từ ví dụ này, ta rút ra mối liên hệ giữa mục tiêu và các thành phần:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Mục tiêu quyết định "
+        },
+        {
+         "text": "cần dữ liệu gì",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mục tiêu quyết định "
+        },
+        {
+         "text": "đầu ra có dạng gì",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mục tiêu quyết định "
+        },
+        {
+         "text": "phản hồi cần đo điều gì",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu thay đổi thì "
+        },
+        {
+         "text": "mô hình phải được học lại",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì thế, người thiết kế có kinh nghiệm luôn viết mục tiêu trước, rồi mới nghĩ đến công nghệ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-cung-khung-ay-mot-he-thong-khac-tro-li-hoi-dap-noi-quy",
+   "title": "5. Cùng khung ấy, một hệ thống khác: trợ lí hỏi đáp nội quy",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Năm thành phần không chỉ đúng với máy phân loại ảnh. Em hãy thử với một hệ thống thuộc loại AI tạo sinh: "
+      },
+      {
+       "text": "trợ lí trả lời học sinh về nội quy và lịch học",
+       "b": true
+      },
+      {
+       "text": " của trường (tình huống giả định)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mục tiêu:",
+       "b": true
+      },
+      {
+       "text": " Hệ thống nhận câu hỏi bằng tiếng Việt của học sinh về nội quy, lịch học và đưa ra câu trả lời đúng theo văn bản của trường, có ghi rõ trích từ mục nào, để học sinh tra cứu nhanh."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thành phần",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Trong trợ lí hỏi đáp nội quy",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vì sao phù hợp với mục tiêu",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bản nội quy, thời khóa biểu, thông báo chính thức của trường"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục tiêu là “đúng theo văn bản của trường” nên phải dùng văn bản chính thức và luôn cập nhật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thuật toán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách tìm đoạn văn bản liên quan đến câu hỏi; cách mô hình ngôn ngữ đã được huấn luyện để tạo câu trả lời"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phải tra tài liệu của trường trước rồi mới trả lời"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một mô hình ngôn ngữ có sẵn, được cung cấp tài liệu của trường để dựa vào đó trả lời"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cần hiểu tốt tiếng Việt vì người hỏi là học sinh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu trả lời ngắn kèm tên mục được trích; hoặc câu “Mình chưa có thông tin này”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục tiêu yêu cầu ghi rõ nguồn để học sinh kiểm tra lại được"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nút “hữu ích” hoặc “chưa đúng”; các câu chưa trả lời được gửi về người phụ trách để bổ sung tài liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đo đúng điều mục tiêu cần: trả lời có đúng văn bản không"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "So sánh hai hệ thống, em thấy: "
+      },
+      {
+       "text": "khung năm thành phần giống nhau, nội dung bên trong khác hẳn nhau",
+       "b": true
+      },
+      {
+       "text": ", và sự khác nhau ấy đều bắt nguồn từ mục tiêu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6-con-nguoi-o-dau-trong-so-do",
+   "title": "6. Con người ở đâu trong sơ đồ?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy nhìn lại sơ đồ ở mục 3.6 và tìm con người. Không có ô nào ghi “con người”, nhưng con người có mặt ở mọi mũi tên:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Con người "
+        },
+        {
+         "text": "đặt mục tiêu",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người "
+        },
+        {
+         "text": "thu thập và gán nhãn dữ liệu",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người "
+        },
+        {
+         "text": "chọn thuật toán",
+         "b": true
+        },
+        {
+         "text": " và quyết định khi nào mô hình đủ tốt để đem dùng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người "
+        },
+        {
+         "text": "đọc đầu ra",
+         "b": true
+        },
+        {
+         "text": " và quyết định có làm theo hay không. Minh vẫn có thể không tin dòng chữ trên màn hình."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người "
+        },
+        {
+         "text": "phản hồi",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "xử lí phản hồi",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì vậy, khi một hệ thống AI làm sai, câu hỏi nên đặt ra không phải là “AI sai ở đâu?” mà là: "
+      },
+      {
+       "text": "sai từ thành phần nào, và ai chịu trách nhiệm ở thành phần đó?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Suy nghĩ có trách nhiệm",
+         "b": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Về dữ liệu:",
+         "b": true
+        },
+        {
+         "text": " một hệ thống tốt chỉ thu thập những gì mục tiêu thật sự cần. Trạm phân loại rác cần ảnh món rác, không cần ảnh khuôn mặt học sinh. Trước khi nói “cứ thu thập thật nhiều”, hãy hỏi: dữ liệu này của ai, có được phép dùng không, có chứa thông tin cá nhân không?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Về đầu ra:",
+         "b": true
+        },
+        {
+         "text": " người dùng có quyền được biết mình đang tương tác với một hệ thống AI. Đây cũng là một yêu cầu về minh bạch trong Luật Trí tuệ nhân tạo của Việt Nam, có hiệu lực từ ngày 01/3/2026 [5]."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-tim-nam-thanh-phan-tren-man-hinh",
+   "title": "Trải nghiệm: Tìm năm thành phần trên màn hình",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa học năm thành phần của một hệ thống AI. Chúng đều có mặt trên màn hình của công cụ em dùng ở bài trước."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image27.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Teachable Machine"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " teachablemachine.withgoogle.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em mở lại mô hình trái cây của nhóm (hoặc tạo nhanh một mô hình mới)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em chỉ ra trên màn hình: đâu là dữ liệu, đâu là bước học, đâu là mô hình, đâu là đầu ra."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em thêm một ảnh bị máy đoán sai vào dữ liệu: việc này ứng với thành phần nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Trong hệ thống nhỏ em vừa làm, con người có mặt ở những thành phần nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Em chỉ chụp đồ vật."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image31.png",
+     "caption": "Sơ đồ tư duy Bài 10.11."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Hệ thống AI",
+         "b": true
+        },
+        {
+         "text": " không phải một “khối” bí ẩn. Nó gồm nhiều thành phần phối hợp để đạt một mục tiêu."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mục tiêu",
+         "b": true
+        },
+        {
+         "text": " là nhiệm vụ cụ thể, viết theo mẫu: "
+        },
+        {
+         "text": "Hệ thống nhận … và đưa ra … để …",
+         "i": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Năm thành phần cơ bản: "
+        },
+        {
+         "text": "dữ liệu",
+         "b": true
+        },
+        {
+         "text": " (ví dụ để dạy máy), "
+        },
+        {
+         "text": "thuật toán",
+         "b": true
+        },
+        {
+         "text": " (cách máy học), "
+        },
+        {
+         "text": "mô hình",
+         "b": true
+        },
+        {
+         "text": " (kết quả của việc học, tạo ra đầu ra), "
+        },
+        {
+         "text": "đầu ra",
+         "b": true
+        },
+        {
+         "text": " (kết quả trả cho người dùng), "
+        },
+        {
+         "text": "phản hồi",
+         "b": true
+        },
+        {
+         "text": " (thông tin đúng, sai quay lại để cải thiện)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Thuật toán là cách học; mô hình là thứ có được sau khi học.",
+         "b": true
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Các thành phần tạo thành một "
+        },
+        {
+         "text": "vòng khép kín",
+         "b": true
+        },
+        {
+         "text": " nhờ phản hồi."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mục tiêu chi phối tất cả:",
+         "b": true
+        },
+        {
+         "text": " mục tiêu đổi thì dữ liệu, mô hình, đầu ra, phản hồi phải đổi theo."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Con người",
+         "b": true
+        },
+        {
+         "text": " có mặt và chịu trách nhiệm ở mọi thành phần."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Trong các phát biểu sau, phát biểu nào là một mục tiêu đủ cụ thể? Sửa lại những phát biểu chưa đạt."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Hệ thống giúp học sinh học tiếng Anh tốt hơn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hệ thống nhận một tin nhắn mới và cho biết tin đó có dấu hiệu lừa đảo hay không, để người nhận cảnh giác trước khi bấm vào đường dẫn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hệ thống ứng dụng công nghệ AI mới nhất vào thư viện."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một ứng dụng "
+      },
+      {
+       "text": "chấm phát âm tiếng Anh",
+       "b": true
+      },
+      {
+       "text": " hoạt động như sau. Hãy ghi tên thành phần tương ứng (dữ liệu, thuật toán, mô hình, đầu ra, phản hồi) cho mỗi mô tả."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mô tả",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thành phần",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "a"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Màn hình tô đỏ âm “th” mà người học đọc chưa đúng"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "b"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hàng chục nghìn bản ghi âm của nhiều người đọc, mỗi bản đã được giáo viên đánh dấu âm đúng, âm sai"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "c"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người học bấm “nhận xét này chưa đúng”; giáo viên xem lại các trường hợp đó mỗi tháng"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "d"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách máy so các bản ghi âm với phần đánh dấu của giáo viên để tự điều chỉnh dần"
+          }
+         ]
+        }
+       ],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "e"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thứ được cài trong ứng dụng, mỗi lần nghe một câu mới thì tính ra âm nào chưa đúng"
+          }
+         ]
+        }
+       ],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Bạn Nam nói: “Thuật toán và mô hình là một, đều là phần mềm cả.” Em hãy dùng một ví dụ trong đời sống (khác ví dụ ôn thi) để giải thích cho Nam hiểu sự khác nhau."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Ứng dụng chấm phát âm ở Bài 2 ban đầu có mục tiêu phục vụ học sinh trung học ở thành phố. Nay nhà phát triển muốn phục vụ "
+      },
+      {
+       "text": "học sinh ở mọi vùng miền",
+       "b": true
+      },
+      {
+       "text": ". Lập bảng cho biết từng thành phần có phải thay đổi không và thay đổi thế nào."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Vẽ sơ đồ năm thành phần cho hệ thống "
+      },
+      {
+       "text": "cảnh báo ngập quanh cổng trường",
+       "b": true
+      },
+      {
+       "text": " (báo trước cho phụ huynh đoạn đường có nguy cơ ngập vào giờ tan học). Nhớ viết câu mục tiêu trước khi vẽ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Thám tử phản hồi.",
+       "b": true
+      },
+      {
+       "text": " Trong một tuần, em hãy để ý các ứng dụng mình dùng và ghi lại ít nhất ba “kênh phản hồi” (nút thích, nút báo cáo, câu hỏi “gợi ý này có hữu ích không?”…). Với mỗi kênh, thử đoán: thông tin em gửi đi được dùng để cải thiện điều gì?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Dự án nhỏ của nhóm.",
+       "b": true
+      },
+      {
+       "text": " Chọn một vấn đề có thật ở trường hoặc nơi em sống. Viết câu mục tiêu và lập sơ đồ năm thành phần cho một hệ thống AI có thể giúp giải quyết vấn đề đó. Ghi rõ: hệ thống của nhóm có cần dữ liệu cá nhân không? Nếu có, làm thế nào để giảm bớt?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "3. Chuẩn bị cho bài sau.",
+       "b": true
+      },
+      {
+       "text": " Với hệ thống của nhóm, hãy dự đoán hai sự cố có thể xảy ra khi hệ thống được đưa vào dùng thật. Mỗi sự cố bắt nguồn từ thành phần nào?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu em có dùng công cụ AI khi làm các nhiệm vụ trên, hãy ghi vào Phiếu khai báo sử dụng AI của trường: dùng công cụ gì, để làm gì, phần nào em tự làm, em đã kiểm chứng ra sao.",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Viết câu mục tiêu đủ ba ý cho một hệ thống AI"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể tên và mô tả năm thành phần bằng một ví dụ cụ thể"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích sự khác nhau giữa thuật toán và mô hình"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra thành phần nào phải đổi khi mục tiêu đổi"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra con người làm gì ở từng thành phần"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống dựa trên máy, căn cứ vào mục tiêu, suy luận từ đầu vào để tạo ra đầu ra như dự đoán, nội dung, khuyến nghị, quyết định"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục tiêu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhiệm vụ cụ thể hệ thống phải thực hiện: nhận gì, đưa ra gì, phục vụ ai"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các ví dụ dùng để dạy và kiểm tra máy"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gán nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc con người ghi kết quả đúng cho từng ví dụ trong dữ liệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thuật toán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dãy hữu hạn các bước, quy tắc rõ ràng để giải quyết một nhiệm vụ; trong bài này là cách máy học từ dữ liệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học máy"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cách xây dựng mô hình AI bằng việc cho máy học từ dữ liệu thay vì lập trình sẵn từng quy tắc"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học có giám sát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Học máy từ dữ liệu đã được gán nhãn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thành phần tạo ra đầu ra từ đầu vào, dựa trên những gì đã được xây dựng sẵn hoặc học được từ dữ liệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kết quả hệ thống trả cho người dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông tin về việc đầu ra đúng hay sai, quay lại để cải thiện hệ thống"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiên lệch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai lệch có tính hệ thống trong đầu ra của AI, có thể dẫn đến kết quả thiếu công bằng"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Các giải thích về hệ thống AI, thuật toán, học máy, học có giám sát, mô hình AI, thiên lệch được lược theo phần Giải thích thuật ngữ của tài liệu [1].",
+       "i": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Chỉ có (b) đủ cụ thể. Gợi ý sửa: (a) “Hệ thống nhận giọng đọc một câu tiếng Anh của người học và chỉ ra âm phát chưa đúng, để người học luyện lại”; (c) “Hệ thống nhận môn học mà học sinh chọn và đưa ra ba cuốn sách phù hợp trong thư viện, để học sinh tìm sách nhanh hơn”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " a) đầu ra; b) dữ liệu; c) phản hồi; d) thuật toán; e) mô hình."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Chấp nhận mọi ví dụ phân biệt được "
+      },
+      {
+       "text": "cách học",
+       "i": true
+      },
+      {
+       "text": " với "
+      },
+      {
+       "text": "thứ có được sau khi học",
+       "i": true
+      },
+      {
+       "text": ". Chẳng hạn: giáo trình và cách tập lái xe là thuật toán, còn kĩ năng lái của người đã tập xong là mô hình; khi ra đường, thứ “chạy” là kĩ năng chứ không phải giáo trình."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Dữ liệu: phải bổ sung bản ghi âm của học sinh nhiều vùng miền, có đánh dấu của giáo viên. Thuật toán: có thể giữ nguyên. Mô hình: phải huấn luyện lại. Đầu ra: có thể giữ dạng cũ, nhưng nên có ghi chú rằng nhận xét của AI có thể chưa chính xác. Phản hồi: cần theo dõi riêng tỉ lệ nhận xét sai theo từng vùng miền để phát hiện nhóm bị chấm thiếu công bằng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý. Mục tiêu: hệ thống nhận số liệu mưa, mực nước, triều và đưa ra mức nguy cơ ngập của từng đoạn đường quanh trường trong 1 đến 2 giờ tới, để phụ huynh chọn đường đón con. Dữ liệu: lượng mưa, mực nước và lịch sử các lần ngập theo giờ. Thuật toán: cách máy tìm quy luật giữa mưa, triều và ngập trong số liệu cũ. Mô hình: bộ dự đoán thu được sau khi học. Đầu ra: mức nguy cơ ngập của từng đoạn đường. Phản hồi: so dự báo với thực tế, người dân báo điểm ngập; số liệu mới được bổ sung vào dữ liệu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [2], [5], [10] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

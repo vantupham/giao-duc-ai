@@ -1,0 +1,2225 @@
+{
+ "id": "12.4",
+ "slug": "bai-12-04",
+ "grade": 12,
+ "num": 4,
+ "topicId": "12.2",
+ "title": "Sáu nguyên tắc đạo đức khi thiết kế AI",
+ "meta": "Chuyên đề 12.2: Đạo đức, rủi ro và trách nhiệm công dân trong xã hội có AI (tiết 1 trong 3 tiết)",
+ "period": {
+  "index": 1,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nêu được "
+   },
+   {
+    "text": "sáu nguyên tắc đạo đức",
+    "b": true
+   },
+   {
+    "text": " mà người thiết kế AI cần tuân theo: an toàn, công bằng, minh bạch, riêng tư, trách nhiệm, lợi ích xã hội."
+   }
+  ],
+  [
+   {
+    "text": "Chỉ ra được mỗi nguyên tắc "
+   },
+   {
+    "text": "đòi hỏi việc gì",
+    "b": true
+   },
+   {
+    "text": " ở từng khâu thiết kế."
+   }
+  ],
+  [
+   {
+    "text": "Soát",
+    "b": true
+   },
+   {
+    "text": " được một sản phẩm AI theo sáu nguyên tắc và nhận ra khi các nguyên tắc "
+   },
+   {
+    "text": "giằng co",
+    "b": true
+   },
+   {
+    "text": " nhau."
+   }
+  ]
+ ],
+ "keywords": [
+  "đạo đức AI",
+  "an toàn",
+  "công bằng",
+  "minh bạch",
+  "riêng tư",
+  "trách nhiệm",
+  "lợi ích xã hội"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-tu-te-va-dang-lo",
+   "title": "Khởi động: “Tử tế” và “đáng lo”",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy nghĩ đến các ứng dụng có AI mình từng dùng hoặc từng nghe nói. Chọn một ứng dụng em thấy "
+      },
+      {
+       "text": "“tử tế”",
+       "b": true
+      },
+      {
+       "text": " và một ứng dụng em thấy "
+      },
+      {
+       "text": "“đáng lo”",
+       "b": true
+      },
+      {
+       "text": ". Với mỗi ứng dụng, viết ra một lí do."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dưới đây là vài lí do học sinh hay nêu:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "“Tử tế” vì…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "“Đáng lo” vì…",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Nó nói rõ câu trả lời có thể sai.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Nó cứ giữ mình lại, lướt mãi không dứt ra được.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Nó hỏi trước khi dùng ảnh của mình.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Không biết nó lấy dữ liệu của mình làm gì.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Bà mình mắt kém vẫn dùng được.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Nó nhận giọng bạn mình sai suốt.”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Có nút báo lỗi và có người trả lời thật.”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Hỏi ai chịu trách nhiệm thì không ai nhận.”"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Em thử gom các lí do ở hai cột thành từng nhóm. Em gom được mấy nhóm? Đặt tên cho mỗi nhóm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Rất có thể các nhóm của em gần trùng với sáu nguyên tắc của bài học này. Điều đó không ngẫu nhiên: các nguyên tắc đạo đức về AI được rút ra từ chính những điều con người thấy tử tế hay đáng lo ở công nghệ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-vi-sao-nguoi-thiet-ke-can-nguyen-tac-dao-duc",
+   "title": "1. Vì sao người thiết kế cần nguyên tắc đạo đức?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở lớp 10 (Bài 10.5), em đã biết đạo đức trong AI không phải là thứ “thêm vào cho đẹp” sau khi sản phẩm đã xong. Mỗi lựa chọn kĩ thuật đều là một lựa chọn về con người: dùng dữ liệu của ai, tối ưu cho điều gì, khi sai thì ai chịu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có ba lí do khiến nguyên tắc cần được viết ra thành lời."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ nhất, người thiết kế không nhìn thấy hết người dùng.",
+       "b": true
+      },
+      {
+       "text": " Một nhóm kĩ sư trẻ ở thành phố khó tự hình dung ra một bác nông dân dùng điện thoại cũ ở vùng sóng yếu. Nguyên tắc buộc họ phải hỏi những câu mình không tự nghĩ ra."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ hai, có những áp lực kéo sản phẩm đi lệch.",
+       "b": true
+      },
+      {
+       "text": " Ra mắt cho kịp, giữ người dùng ở lại lâu hơn, thu thêm dữ liệu: đó là những áp lực có thật. Nguyên tắc là điểm tựa để nói “không”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ ba, pháp luật luôn đi sau công nghệ một quãng.",
+       "b": true
+      },
+      {
+       "text": " Giữa lúc một công nghệ xuất hiện và lúc có quy định cụ thể, nguyên tắc đạo đức là thứ dẫn đường."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Tháng 11 năm 2021, toàn bộ 193 quốc gia thành viên của UNESCO thông qua Khuyến nghị về Đạo đức của Trí tuệ nhân tạo, văn kiện toàn cầu đầu tiên về chủ đề này. Theo thông tin của Liên Hợp Quốc, văn kiện kêu gọi minh bạch và để mỗi người kiểm soát dữ liệu cá nhân của mình, nêu rõ không được dùng AI để chấm điểm xã hội và giám sát hàng loạt, và khuyến khích phát triển AI tiết kiệm dữ liệu, năng lượng, tài nguyên [3]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trước đó, năm 2019, các nước OECD đã thông qua năm nguyên tắc về AI (cập nhật năm 2024): tăng trưởng bao trùm, phát triển bền vững và hạnh phúc; quyền con người và các giá trị dân chủ, gồm cả công bằng và quyền riêng tư; minh bạch và giải thích được; vững chắc, an ninh và an toàn; trách nhiệm giải trình [4]."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Các bộ nguyên tắc trên thế giới khác nhau về cách chia và tên gọi, nhưng nội dung gặp nhau ở một số điểm chung. Tài liệu này gom thành "
+      },
+      {
+       "text": "sáu nguyên tắc",
+       "b": true
+      },
+      {
+       "text": " để em dễ nhớ và dễ dùng."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-sau-nguyen-tac",
+   "title": "2. Sáu nguyên tắc",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image12.png",
+     "caption": "Hình 12.4.1. Sáu nguyên tắc đạo đức khi thiết kế AI. Con người ở giữa: mỗi nguyên tắc là một cách bảo vệ con người."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nguyên tắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi cốt lõi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm đúng trông thế nào",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dấu hiệu vi phạm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. An toàn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống có thể gây hại cho ai không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thử kĩ trước khi ra mắt, kể cả với người dùng có ý xấu; có cách dừng; biết từ chối việc nguy hiểm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ra mắt vội; không có nút dừng; đưa lời khuyên nguy hiểm cho sức khỏe"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Công bằng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mọi nhóm người có được phục vụ tốt như nhau không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu đại diện cho mọi nhóm; đo kết quả theo từng nhóm; người yếu thế dùng được"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chính xác với nhóm này, kém với nhóm khác; chỉ chạy trên thiết bị đắt tiền"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Minh bạch",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng có biết mình đang gặp AI và hiểu nó làm gì không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nói rõ “đây là AI”; nêu giới hạn; giải thích được kết quả ở mức người dùng hiểu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giả làm người; giấu việc dùng AI; kết quả không kèm lí do"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Riêng tư",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu của con người có được tôn trọng không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu vừa đủ; hỏi ý kiến; cho xem, sửa, xóa; bảo mật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu thừa; dùng vào việc khác mà không hỏi; không cho xóa"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. Trách nhiệm",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khi có vấn đề, ai trả lời?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có người đứng tên; có kênh khiếu nại; lưu vết; sửa sai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Hệ thống quyết định như vậy”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. Lợi ích xã hội",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống có làm cuộc sống tốt hơn về lâu dài không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải quyết nhu cầu thật; tiết kiệm tài nguyên; không gây nghiện, không làm con người kém đi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tối ưu cho thời gian dán mắt vào màn hình; tốn tài nguyên cho việc vô bổ"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mỗi nguyên tắc nối với một bài em đã học:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "An toàn",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "trách nhiệm",
+         "b": true
+        },
+        {
+         "text": ": Bài 12.1 (điểm kiểm soát), Bài 12.3 (trách nhiệm giải trình)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Công bằng",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "lợi ích xã hội",
+         "b": true
+        },
+        {
+         "text": ": Bài 11.4 (bền vững và công bằng)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Riêng tư",
+         "b": true
+        },
+        {
+         "text": ": Bài 11.5 (năm quyền với dữ liệu cá nhân)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Minh bạch",
+         "b": true
+        },
+        {
+         "text": ": Bài 11.9 (người dùng cần biết mình đang nói chuyện với máy)."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Về công bằng.",
+         "b": true
+        },
+        {
+         "text": " Năm 2018, một nghiên cứu kiểm tra ba phần mềm thương mại đoán giới tính qua ảnh khuôn mặt: tỉ lệ sai cao nhất với nam giới da sáng là 0,8%, với phụ nữ da sẫm màu là 34,7% [10]. Cùng năm, hãng tin Reuters đưa tin một tập đoàn công nghệ đã ngừng một công cụ AI chấm hồ sơ xin việc vì nó đánh giá thấp hồ sơ của phụ nữ; công cụ được huấn luyện bằng hồ sơ của mười năm trước, phần lớn là của nam giới [11]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Trong cả hai trường hợp, không ai cố ý phân biệt đối xử. Sự thiếu công bằng đi vào hệ thống qua dữ liệu, và chỉ lộ ra khi có người "
+        },
+        {
+         "text": "đo riêng từng nhóm",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Minh bạch nghĩa là công khai toàn bộ mã nguồn và dữ liệu.”",
+         "b": true
+        },
+        {
+         "text": " Không nhất thiết. Minh bạch với người dùng nghĩa là họ biết ba điều: mình đang tương tác với AI; AI này làm được gì và có giới hạn gì; kết quả dựa trên những yếu tố chính nào. Công khai mã nguồn là một việc tốt trong nhiều trường hợp, nhưng một kho mã nguồn dài hàng triệu dòng không giúp một phụ huynh hiểu vì sao con mình bị xếp vào lớp phụ đạo."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Nguyên tắc nào?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Quay lại bảng ở phần Khởi động. Với mỗi lí do trong tám lí do, em ghi tên nguyên tắc liên quan. Sau đó bổ sung thêm cho mỗi nguyên tắc một ví dụ của riêng em."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-nguyen-tac-di-vao-thiet-ke-nhu-the-nao",
+   "title": "3. Nguyên tắc đi vào thiết kế như thế nào?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một nguyên tắc chỉ có giá trị khi nó thành việc làm cụ thể. Bảng sau cho thấy sáu nguyên tắc “hỏi” người thiết kế những gì ở từng khâu của sáu bước thiết kế (Bài 11.12)."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Khâu",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi đạo đức phải trả lời",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nguyên tắc",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mục tiêu và người dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hệ thống này có thật sự giúp ích không? Có ai bị thiệt không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lợi ích xã hội, an toàn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu có được phép dùng không? Có đủ mọi nhóm không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Riêng tư, công bằng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công nghệ và mô hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có giải thích được kết quả không? Có phương án tốn ít tài nguyên hơn không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Minh bạch, lợi ích xã hội"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đầu ra và giao diện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng có biết đây là AI không? Có biết giới hạn của nó không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Minh bạch"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm thử"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã thử với mọi nhóm, mọi tình huống xấu chưa?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "An toàn, công bằng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vận hành, phản hồi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai tiếp nhận phản ánh? Ai có quyền dừng?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trách nhiệm, an toàn"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ví dụ: soát một sản phẩm (tình huống giả định).",
+       "b": true
+      },
+      {
+       "text": " “Bạn Học” là một ứng dụng gia sư AI cho học sinh trung học. Ứng dụng giải thích bài rất dễ hiểu, có giọng nói ba miền, có dòng chữ “Tôi là AI, có thể sai” ở đầu mỗi cuộc trò chuyện. Ứng dụng miễn phí; đổi lại, nó thu lịch sử trò chuyện để bán quảng cáo. Nó gửi thông báo “Bạn Học nhớ bạn!” năm lần mỗi ngày và thưởng huy hiệu cho ai dùng trên ba giờ. Không có mục liên hệ."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nguyên tắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đánh giá",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Căn cứ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "An toàn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa rõ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có thông tin về việc thử nghiệm với câu hỏi nhạy cảm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công bằng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tốt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có giọng nói ba miền; miễn phí"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Minh bạch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tốt về AI, kém về dữ liệu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có nói rõ là AI; không nói rõ việc bán dữ liệu cho quảng cáo"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Riêng tư"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kém"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thu lịch sử trò chuyện của học sinh để quảng cáo"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trách nhiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kém"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có mục liên hệ, không rõ ai trả lời"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lợi ích xã hội"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lẫn lộn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giúp học thật; nhưng thiết kế để giữ chân, thưởng cho việc dùng nhiều chứ không phải học tốt"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em thấy đấy: "
+      },
+      {
+       "text": "một sản phẩm có thể làm tốt nguyên tắc này và vi phạm nguyên tắc khác",
+       "b": true
+      },
+      {
+       "text": ". Vì thế người thiết kế có đạo đức soát đủ cả sáu trước khi phát hành, không chọn riêng vài nguyên tắc mình làm tốt để khoe."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Soát đủ cả sáu",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chọn một trong hai sản phẩm giả định sau. Lập bảng sáu nguyên tắc như trên. Với nguyên tắc em đánh giá kém nhất, đề xuất một thay đổi thiết kế."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Một ứng dụng điểm danh bằng khuôn mặt cho lớp học: nhanh, chính xác cao trong phòng đủ sáng, lưu ảnh khuôn mặt vĩnh viễn trên máy chủ của công ti, học sinh không có lựa chọn điểm danh cách khác."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Một chatbot tư vấn sức khỏe tuổi học trò: trả lời tức thì, ẩn danh hoàn toàn, không nói rõ là AI, không có hướng dẫn chuyển sang người thật khi gặp chuyện nghiêm trọng."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-khi-cac-nguyen-tac-giang-co",
+   "title": "4. Khi các nguyên tắc giằng co",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trong thực tế, làm tốt hơn một nguyên tắc đôi khi làm khó nguyên tắc khác."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giằng co",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công bằng và riêng tư",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Muốn kiểm tra hệ thống có công bằng giữa các vùng miền thì phải biết người dùng thuộc vùng nào, tức là phải thu thêm dữ liệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "An toàn và riêng tư",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Muốn phát hiện học sinh đang gặp nguy hiểm trong cuộc trò chuyện thì phải có ai đó (hoặc thứ gì đó) đọc cuộc trò chuyện"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Minh bạch và an toàn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công bố chi tiết cách bộ lọc lừa đảo hoạt động giúp người dùng hiểu, nhưng cũng giúp kẻ gian tìm cách lách"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lợi ích và công bằng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mô hình lớn chính xác hơn nhưng chỉ người có mạng mạnh mới dùng được (Bài 11.4)"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Không có công thức giải cho mọi trường hợp. Nhưng có ba việc người thiết kế có trách nhiệm luôn làm:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Gọi tên sự giằng co",
+         "b": true
+        },
+        {
+         "text": " thay vì giả vờ nó không có."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Tìm phương án thứ ba.",
+         "b": true
+        },
+        {
+         "text": " Ví dụ, để kiểm tra công bằng giữa các vùng miền, có thể mời người dùng tự nguyện tham gia một đợt thử nghiệm, thay vì thu vùng miền của tất cả mọi người."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hỏi người bị ảnh hưởng",
+         "b": true
+        },
+        {
+         "text": " và "
+        },
+        {
+         "text": "nói rõ đã chọn gì, vì sao",
+         "b": true
+        },
+        {
+         "text": ". Đây chính là minh bạch và trách nhiệm."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em cũng nên biết một hiện tượng: có tổ chức công bố những bộ nguyên tắc đạo đức rất đẹp nhưng sản phẩm thì không thay đổi gì. Nguyên tắc chỉ có ý nghĩa khi đi kèm việc làm kiểm tra được: ai chịu trách nhiệm, đo bằng gì, công bố ở đâu. Khi đọc một lời cam kết “AI có trách nhiệm”, em hỏi lại: "
+      },
+      {
+       "text": "bằng chứng đâu?",
+       "b": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-con-em-nguoi-dung",
+   "title": "5. Còn em, người dùng?",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sáu nguyên tắc viết cho người thiết kế, nhưng người dùng cũng dùng được, theo hai cách."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để chọn công cụ.",
+       "b": true
+      },
+      {
+       "text": " Trước khi dùng một công cụ AI mới, em soát nhanh: nó có nói rõ là AI không; nó lấy gì của mình; có ai để hỏi khi có vấn đề không; nó giúp mình giỏi lên hay chỉ giữ mình ở lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để soi chính mình.",
+       "b": true
+      },
+      {
+       "text": " Khi em dùng AI tạo một sản phẩm (một tấm ảnh, một video, một bài viết), em cũng là “người thiết kế” của sản phẩm ấy. Nó có an toàn cho người xem không? Có công bằng với người được nhắc đến không? Em có nói rõ phần nào do AI tạo không? Em có dùng hình ảnh của ai mà chưa hỏi không? Em có nhận nó là của mình không? Nó có ích cho ai không?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-soat-mo-hinh-cua-nhom-em",
+   "title": "Trải nghiệm: Soát mô hình của nhóm em",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Sáu nguyên tắc đạo đức không chỉ dành cho các công ty lớn. Em có thể dùng chúng để soát chính mô hình nhỏ do nhóm mình làm."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image13.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Teachable Machine"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " teachablemachine.withgoogle.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 7 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em mở mô hình của nhóm (hoặc tạo nhanh một mô hình mới)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em thử mô hình với nhiều kiểu đầu vào: ánh sáng, góc chụp, màu sắc khác nhau."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em đánh dấu những nguyên tắc mà mô hình chưa đạt."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Khi sửa mô hình, em thấy hai nguyên tắc nào giằng co nhau?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Em chỉ chụp đồ vật."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image14.png",
+     "caption": "Sơ đồ tư duy Bài 12.4."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Sáu nguyên tắc: "
+        },
+        {
+         "text": "an toàn, công bằng, minh bạch, riêng tư, trách nhiệm, lợi ích xã hội",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Mỗi nguyên tắc phải thành "
+        },
+        {
+         "text": "việc làm cụ thể",
+         "b": true
+        },
+        {
+         "text": " ở từng khâu thiết kế."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Một sản phẩm có thể làm tốt nguyên tắc này và vi phạm nguyên tắc khác: phải "
+        },
+        {
+         "text": "soát đủ cả sáu",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Khi các nguyên tắc "
+        },
+        {
+         "text": "giằng co",
+         "b": true
+        },
+        {
+         "text": ": gọi tên, tìm phương án thứ ba, hỏi người bị ảnh hưởng và nói rõ lựa chọn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Lời cam kết đạo đức cần "
+        },
+        {
+         "text": "bằng chứng",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Mỗi việc làm sau thể hiện nguyên tắc nào? a) Ứng dụng tự xóa bản ghi âm sau khi chấm phát âm xong; b) Nhóm phát triển thử chatbot với 50 câu hỏi cố tình “gài bẫy” trước khi ra mắt; c) Trang web công bố tỉ lệ nhận dạng đúng theo từng vùng miền; d) Ứng dụng học tập tự nhắc “bạn đã học 45 phút, hãy nghỉ một lát”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một ứng dụng tạo ảnh chân dung “đẹp hơn” luôn làm sáng da và thon mặt người dùng. Em phân tích theo nguyên tắc công bằng và nguyên tắc lợi ích xã hội."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Chỉ ra sự giằng co giữa hai nguyên tắc trong tình huống: “Nhà trường muốn lắp camera AI ở sân trường để phát hiện bắt nạt.” Đề xuất một phương án thứ ba."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Một công ti viết trên trang chủ: “Chúng tôi cam kết AI công bằng và có trách nhiệm.” Em nêu ba bằng chứng em muốn thấy trước khi tin lời cam kết này."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Em dùng AI làm một video ngắn giới thiệu câu lạc bộ, trong đó có giọng đọc do AI tạo và ảnh các thành viên. Em soát video theo sáu nguyên tắc, mỗi nguyên tắc một câu."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Chọn một ứng dụng có AI mà em dùng nhiều nhất. Lập “phiếu sáu nguyên tắc” cho ứng dụng đó: mỗi nguyên tắc chấm một trong ba mức (tốt, chưa rõ, kém) và ghi một căn cứ em tự tìm thấy trong ứng dụng hoặc trong điều khoản của nó. Ghi rõ điều nào em "
+      },
+      {
+       "text": "không tìm được thông tin",
+       "b": true
+      },
+      {
+       "text": ": việc không tìm được cũng là một dữ kiện về tính minh bạch. Giữ phiếu này để dùng lại ở Bài 12.12."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu sáu nguyên tắc và câu hỏi cốt lõi của từng nguyên tắc"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận ra nguyên tắc nào được tuân thủ, bị vi phạm trong một ví dụ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Soát một sản phẩm theo đủ sáu nguyên tắc, có căn cứ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ra sự giằng co giữa hai nguyên tắc và đề xuất cách xử lí"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nguyên tắc đạo đức"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều cần tuân theo để việc làm ra và dùng công nghệ không gây hại và phục vụ con người"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Minh bạch"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người dùng biết mình đang gặp AI, biết nó làm gì, có giới hạn gì"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giằng co giữa các nguyên tắc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Làm tốt hơn nguyên tắc này thì khó hơn cho nguyên tắc khác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chấm điểm xã hội"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng dữ liệu về hành vi để xếp hạng con người và quyết định quyền lợi của họ"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế gây nghiện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiết kế nhằm giữ người dùng ở lại lâu nhất, bất kể có lợi cho họ hay không"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Riêng tư. b) An toàn. c) Công bằng và minh bạch. d) Lợi ích xã hội."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Công bằng: ứng dụng ngầm coi một kiểu màu da, khuôn mặt là “đẹp hơn”, không tôn trọng sự đa dạng của người dùng. Lợi ích xã hội: dùng lâu dài có thể khiến người trẻ tự ti về ngoại hình thật của mình. Đề xuất: không tự động đổi màu da, hình dáng khuôn mặt; để người dùng tự chọn và có ghi chú ảnh đã chỉnh sửa."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " An toàn (phát hiện bắt nạt) giằng co với riêng tư (quay và phân tích hình ảnh mọi học sinh suốt ngày). Phương án thứ ba, ví dụ: tăng người trực ở những điểm khuất; lập kênh báo tin ẩn danh; nếu vẫn lắp camera thì không nhận diện khuôn mặt, lưu ngắn ngày, chỉ người có thẩm quyền được xem khi có sự việc, và hỏi ý kiến học sinh, phụ huynh trước."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: số liệu kết quả theo từng nhóm người dùng; tên bộ phận hoặc người chịu trách nhiệm và kênh khiếu nại có người trả lời; báo cáo về những lần hệ thống sai và cách đã khắc phục."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: không có nội dung gây hiểu lầm hay nguy hiểm; giới thiệu công bằng mọi thành viên; ghi “giọng đọc do AI tạo”; đã xin phép từng bạn có ảnh; ghi tên nhóm thực hiện để ai có ý kiến thì liên hệ; video giúp bạn mới hiểu đúng về câu lạc bộ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [3], [4], [10], [11] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

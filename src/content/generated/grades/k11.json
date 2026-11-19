@@ -1,0 +1,400 @@
+{
+ "grade": 11,
+ "topics": [
+  {
+   "id": "11.1",
+   "grade": 11,
+   "title": "Dùng AI an toàn để nâng cao năng lực bản thân",
+   "info": "3 tiết · Bài 11.1 đến Bài 11.3",
+   "description": "Ở lớp 10, em đã biết con người phải làm chủ AI. Lên lớp 11, em biến điều đó thành thói quen cụ thể: một quy trình bảy bước cho mỗi lần dùng AI, một cách tự soi xem AI đang giúp mình giỏi lên hay đang làm thay mình, và một cách gọi tên, phòng tránh, ứng phó với rủi ro và sự cố.",
+   "guidingQuestion": "Dùng AI thế nào để mình giỏi lên, chứ không phụ thuộc thêm?",
+   "outcomes": [
+    "Tự lập quy trình sử dụng AI an toàn cho một nhiệm vụ học tập của em.",
+    "Phân tích một tình huống: AI đang nâng cao năng lực hay làm thay con người.",
+    "Xếp loại một rủi ro, nêu cách phòng và cách ứng phó khi sự cố xảy ra."
+   ],
+   "lessonBlurbs": {
+    "11.1": "Bảy bước dùng AI an toàn: trước, trong và sau khi dùng.",
+    "11.2": "Bốn câu hỏi để phân biệt nâng cao năng lực với làm thay.",
+    "11.3": "Rủi ro khác sự cố thế nào; bốn nhóm rủi ro và bốn bước ứng phó."
+   }
+  },
+  {
+   "id": "11.2",
+   "grade": 11,
+   "title": "AI bền vững, công bằng và quyền của người dùng",
+   "info": "2 tiết · Bài 11.4 và Bài 11.5",
+   "description": "Chuyên đề này mở rộng tầm nhìn từ việc của riêng em ra xã hội. AI có thể đem lại lợi ích lâu dài, nhưng cũng tiêu tốn tài nguyên và có thể không đến được với mọi người như nhau. Rồi em quay lại với chính mình: dữ liệu em đưa cho các công cụ AI là của em, và em có quyền đối với nó.",
+   "guidingQuestion": "AI đem lại lợi ích cho ai, với cái giá nào, và em có quyền gì?",
+   "outcomes": [
+    "Phân tích một ứng dụng AI về tính bền vững và công bằng, kể cả khi phải đánh đổi.",
+    "Trình bày năm quyền cơ bản của em đối với dữ liệu của mình.",
+    "Tìm ba thông tin quan trọng trong một bản điều khoản và viết yêu cầu xóa dữ liệu."
+   ],
+   "lessonBlurbs": {
+    "11.4": "Lợi ích lâu dài của AI; thế nào là bền vững và công bằng.",
+    "11.5": "Dữ liệu cá nhân, năm quyền cơ bản và cách đọc một bản điều khoản."
+   }
+  },
+  {
+   "id": "11.3",
+   "grade": 11,
+   "title": "AI trong học tập và kĩ thuật prompt nâng cao",
+   "info": "3 tiết · Bài 11.6 đến Bài 11.8",
+   "description": "Em đã dùng AI để học; bây giờ em nhìn kĩ hơn xem AI hỗ trợ được khâu nào của việc học và một công cụ hỗ trợ tốt cần những nguyên tắc gì. Từ đó em đổi vai: từ người dùng thành người đề xuất một tính năng AI cho chính việc học của mình, rồi nâng tay nghề đặt câu lệnh với hai kĩ thuật mới.",
+   "guidingQuestion": "Nếu được thiết kế một công cụ AI cho việc học của mình, em sẽ muốn nó làm gì?",
+   "outcomes": [
+    "Phân tích một đoạn hội thoại giữa người học và AI theo các nguyên tắc đã học.",
+    "Viết và trình bày một đề xuất tính năng AI cho việc học.",
+    "Chọn và dùng đúng kĩ thuật đặt câu lệnh nâng cao cho một yêu cầu."
+   ],
+   "lessonBlurbs": {
+    "11.6": "Các khâu của việc học mà AI hỗ trợ được; sáu nguyên tắc thiết kế.",
+    "11.7": "Từ một khó khăn có thật đến một đề xuất sáu phần.",
+    "11.8": "Ràng buộc định dạng đầu ra và chia nhỏ nhiệm vụ."
+   }
+  },
+  {
+   "id": "11.4",
+   "grade": 11,
+   "title": "Bên trong hệ thống AI",
+   "info": "4 tiết · Bài 11.9 đến Bài 11.12",
+   "description": "Chuyên đề dài nhất của năm đưa em vào bên trong các sản phẩm AI. Em làm quen với bốn công nghệ thường gặp, tự tay đóng vai một nơ-ron, chơi hai trò chơi dữ liệu để hiểu phân cụm và phân lớp, rồi ghép tất cả lại thành bức tranh thiết kế và vận hành tổng thể một hệ thống.",
+   "guidingQuestion": "Máy “học” như thế nào, và con người đứng ở đâu khi máy học?",
+   "outcomes": [
+    "“Mổ xẻ” một sản phẩm quen thuộc để chỉ ra các công nghệ bên trong.",
+    "Giải thích ở mức đơn giản mạng nơ-ron học thế nào, phân cụm khác phân lớp ra sao.",
+    "Trình bày sáu bước thiết kế, vận hành và vai trò của con người ở từng bước."
+   ],
+   "lessonBlurbs": {
+    "11.9": "Cảm biến, thị giác máy tính, xử lí ngôn ngữ tự nhiên, chatbot.",
+    "11.10": "Một nơ-ron, một mạng ba lớp và việc học bằng cách chỉnh trọng số.",
+    "11.11": "Dữ liệu đã có nhãn hay chưa: phân lớp và phân cụm.",
+    "11.12": "Sáu bước thiết kế và vận hành; nhìn lại cả năm học."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "n": 1,
+   "group": "Văn bản và khung chương trình",
+   "inl": [
+    {
+     "text": "Bộ Giáo dục và Đào tạo (2026). "
+    },
+    {
+     "text": "Khung nội dung giáo dục trí tuệ nhân tạo cho học sinh phổ thông",
+     "i": true
+    },
+    {
+     "text": ", ban hành kèm theo Quyết định số 2422/QĐ-BGDĐT ngày 18/8/2026 (các yêu cầu cần đạt lớp 11 và phần Phụ lục: Giải thích thuật ngữ)."
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "group": "Văn bản và khung chương trình",
+   "inl": [
+    {
+     "text": "Miao, F., & Shiohira, K. (2024). "
+    },
+    {
+     "text": "AI competency framework for students",
+     "i": true
+    },
+    {
+     "text": ". UNESCO, Paris. ISBN 978-92-3-100709-5."
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "group": "Văn bản và khung chương trình",
+   "inl": [
+    {
+     "text": "UNESCO (07/9/2023). "
+    },
+    {
+     "text": "Guidance for generative AI in education and research",
+     "i": true
+    },
+    {
+     "text": ". Nội dung dẫn theo bản tin “UNESCO: Governments must quickly regulate Generative AI in schools”. "
+    },
+    {
+     "text": "https://gcedclearinghouse.org/en/node/129359",
+     "href": "https://gcedclearinghouse.org/en/node/129359"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "group": "Pháp luật Việt Nam",
+   "inl": [
+    {
+     "text": "Quốc hội (2025). "
+    },
+    {
+     "text": "Luật Trí tuệ nhân tạo",
+     "i": true
+    },
+    {
+     "text": ", số 134/2025/QH15, có hiệu lực từ ngày 01/3/2026. Nội dung dẫn theo bài “Đưa Luật Trí tuệ nhân tạo vào cuộc sống: Lập khung quản trị toàn diện cho AI”, Báo Lào Cai điện tử. "
+    },
+    {
+     "text": "https://baolaocai.vn/dua-luat-tri-tue-nhan-tao-vao-cuoc-song-lap-khung-quan-tri-toan-dien-cho-ai-post895042.html",
+     "href": "https://baolaocai.vn/dua-luat-tri-tue-nhan-tao-vao-cuoc-song-lap-khung-quan-tri-toan-dien-cho-ai-post895042.html"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "group": "Pháp luật Việt Nam",
+   "inl": [
+    {
+     "text": "Quốc hội (2025). "
+    },
+    {
+     "text": "Luật Bảo vệ dữ liệu cá nhân",
+     "i": true
+    },
+    {
+     "text": ", số 91/2025/QH15, có hiệu lực từ ngày 01/01/2026. Nội dung về quyền của chủ thể dữ liệu dẫn theo Cổng thông tin điện tử tỉnh Hà Tĩnh. "
+    },
+    {
+     "text": "https://hatinh.gov.vn/vi/bai-viet/luat-bao-ve-du-lieu-ca-nhan-chinh-thuc-co-hieu-luc-thi-hanh-tu-ngay-112026",
+     "href": "https://hatinh.gov.vn/vi/bai-viet/luat-bao-ve-du-lieu-ca-nhan-chinh-thuc-co-hieu-luc-thi-hanh-tu-ngay-112026"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "group": "Pháp luật Việt Nam",
+   "inl": [
+    {
+     "text": "Quốc hội (2025). "
+    },
+    {
+     "text": "Luật An ninh mạng",
+     "i": true
+    },
+    {
+     "text": ", số 116/2025/QH15, thông qua ngày 10/12/2025, có hiệu lực từ ngày 01/7/2026. Nội dung dẫn theo bản tóm lược của Apolat Legal. "
+    },
+    {
+     "text": "https://apolatlegal.com/vi/laws/luat-an-ninh-mang-2025-so-116-2025-qh15/",
+     "href": "https://apolatlegal.com/vi/laws/luat-an-ninh-mang-2025-so-116-2025-qh15/"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "group": "Pháp luật Việt Nam",
+   "inl": [
+    {
+     "text": "“Bộ Công an chỉ ra dấu hiệu nhận biết cuộc gọi lừa đảo ‘Deepfake’”. Báo Pháp Luật Thành phố Hồ Chí Minh điện tử. "
+    },
+    {
+     "text": "https://plo.vn/bo-cong-an-chi-ra-dau-hieu-nhan-biet-cuoc-goi-lua-dao-deepfake-post741817.html",
+     "href": "https://plo.vn/bo-cong-an-chi-ra-dau-hieu-nhan-biet-cuoc-goi-lua-dao-deepfake-post741817.html"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2024). "
+    },
+    {
+     "text": "Generative AI Can Harm Learning",
+     "i": true
+    },
+    {
+     "text": ". Bản thảo nghiên cứu trên SSRN (số 4895486). Số liệu dẫn theo bài “Without Guardrails, Generative AI Can Harm Education”, Knowledge at Wharton, 27/8/2024. "
+    },
+    {
+     "text": "https://knowledge.wharton.upenn.edu/article/without-guardrails-generative-ai-can-harm-education",
+     "href": "https://knowledge.wharton.upenn.edu/article/without-guardrails-generative-ai-can-harm-education"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "International Energy Agency (2025). "
+    },
+    {
+     "text": "Energy and AI",
+     "i": true
+    },
+    {
+     "text": ", phần Executive summary. "
+    },
+    {
+     "text": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+     "href": "https://www.iea.org/reports/energy-and-ai/executive-summary"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "The Royal Swedish Academy of Sciences (08/10/2024). "
+    },
+    {
+     "text": "Press release: The Nobel Prize in Physics 2024",
+     "i": true
+    },
+    {
+     "text": ". "
+    },
+    {
+     "text": "https://www.nobelprize.org/prizes/physics/2024/press-release/",
+     "href": "https://www.nobelprize.org/prizes/physics/2024/press-release/"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "Vụ "
+    },
+    {
+     "text": "Mata v. Avianca",
+     "i": true
+    },
+    {
+     "text": ", Tòa án liên bang khu vực phía Nam New York, quyết định xử phạt ngày 22/6/2023. Dẫn theo Ambrogi, R. (22/6/2023), LawSites. "
+    },
+    {
+     "text": "https://www.lawnext.com/2023/06/court-imposes-sanctions-on-lawyers-who-filed-bogus-cases-after-relying-on-chatgpt-for-legal-research.html",
+     "href": "https://www.lawnext.com/2023/06/court-imposes-sanctions-on-lawyers-who-filed-bogus-cases-after-relying-on-chatgpt-for-legal-research.html"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "Vụ "
+    },
+    {
+     "text": "Moffatt v. Air Canada",
+     "i": true
+    },
+    {
+     "text": ", 2024 BCCRT 149. Dẫn theo bài phân tích của McCarthy Tétrault (02/2024). "
+    },
+    {
+     "text": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot",
+     "href": "https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "Buolamwini, J., & Gebru, T. (2018). "
+    },
+    {
+     "text": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification",
+     "i": true
+    },
+    {
+     "text": ". Proceedings of Machine Learning Research, tập 81, trang 77–91. "
+    },
+    {
+     "text": "https://proceedings.mlr.press/v81/buolamwini18a.html",
+     "href": "https://proceedings.mlr.press/v81/buolamwini18a.html"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "Russell, S., Perset, K., & Grobelnik, M. (29/11/2023). "
+    },
+    {
+     "text": "Updates to the OECD’s definition of an AI system explained",
+     "i": true
+    },
+    {
+     "text": ". OECD.AI Policy Observatory. "
+    },
+    {
+     "text": "https://oecd.ai/en/wonk/ai-system-definition-update",
+     "href": "https://oecd.ai/en/wonk/ai-system-definition-update"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "Quốc hội (2024). "
+    },
+    {
+     "text": "Luật Dữ liệu",
+     "i": true
+    },
+    {
+     "text": ", số 60/2024/QH15, thông qua ngày 30/11/2024."
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "Dastin, J. (10/10/2018). "
+    },
+    {
+     "text": "Amazon scraps secret AI recruiting tool that showed bias against women",
+     "i": true
+    },
+    {
+     "text": ". Reuters; đọc qua bản đăng lại của Euronews. "
+    },
+    {
+     "text": "https://www.euronews.com/2018/10/10/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women",
+     "href": "https://www.euronews.com/2018/10/10/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "group": "Nghiên cứu, báo cáo và sự việc có thật",
+   "inl": [
+    {
+     "text": "Microsoft (25/3/2016). "
+    },
+    {
+     "text": "Learning from Tay’s introduction",
+     "i": true
+    },
+    {
+     "text": ". The Official Microsoft Blog. "
+    },
+    {
+     "text": "https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/",
+     "href": "https://blogs.microsoft.com/blog/2016/03/25/learning-tays-introduction/"
+    }
+   ]
+  }
+ ]
+}

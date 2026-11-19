@@ -1,0 +1,2539 @@
+{
+ "id": "12.5",
+ "slug": "bai-12-05",
+ "grade": 12,
+ "num": 5,
+ "topicId": "12.2",
+ "title": "Xác định mức độ rủi ro khi sử dụng AI",
+ "meta": "Chuyên đề 12.2: Đạo đức, rủi ro và trách nhiệm công dân trong xã hội có AI (tiết 2 trong 3 tiết)",
+ "period": {
+  "index": 2,
+  "total": 3
+ },
+ "objectives": [
+  [
+   {
+    "text": "Nêu được "
+   },
+   {
+    "text": "hai căn cứ",
+    "b": true
+   },
+   {
+    "text": " để xác định mức độ rủi ro: mức độ hậu quả và khả năng xảy ra."
+   }
+  ],
+  [
+   {
+    "text": "Xếp được một việc sử dụng AI vào mức rủi ro "
+   },
+   {
+    "text": "thấp, trung bình hoặc cao",
+    "b": true
+   },
+   {
+    "text": ", có nêu căn cứ."
+   }
+  ],
+  [
+   {
+    "text": "Đề xuất được cách "
+   },
+   {
+    "text": "hạ mức rủi ro",
+    "b": true
+   },
+   {
+    "text": ", và liên hệ được với quy định của nhà trường, pháp luật ở mức khái quát."
+   }
+  ]
+ ],
+ "keywords": [
+  "mức độ rủi ro",
+  "hậu quả",
+  "khả năng xảy ra",
+  "đảo ngược được",
+  "hạ mức rủi ro"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-viec-nao-dang-lo-hon",
+   "title": "Khởi động: Việc nào đáng lo hơn?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Dưới đây là bốn việc sử dụng AI của học sinh (tình huống giả định). Em hãy xếp theo thứ tự từ ít đáng lo nhất đến đáng lo nhất."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "A.",
+         "b": true
+        },
+        {
+         "text": " Nhờ AI gợi ý tên cho nhóm thuyết trình."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "B.",
+         "b": true
+        },
+        {
+         "text": " Nhờ AI tóm tắt một chương Sinh học rồi dùng bản tóm tắt để ôn thi, không đối chiếu sách."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "C.",
+         "b": true
+        },
+        {
+         "text": " Dùng AI ghép mặt một bạn trong lớp vào một video hài rồi đăng lên nhóm lớp."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "D.",
+         "b": true
+        },
+        {
+         "text": " Dùng AI viết bài luận rồi nộp trong hồ sơ xin học bổng."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Em xếp thế nào? Quan trọng hơn: em đã dựa vào "
+      },
+      {
+       "text": "những căn cứ gì",
+       "b": true
+      },
+      {
+       "text": " để xếp?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khi so sánh, có lẽ em đã tự hỏi: việc này ảnh hưởng đến ai, chỉ mình hay cả người khác? Lỡ sai thì có sửa lại được không? Có vi phạm quy định nào không? Chuyện xấu có dễ xảy ra không?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em đã dùng các căn cứ ấy một cách tự nhiên. Bài học này sắp xếp chúng thành một "
+      },
+      {
+       "text": "thang đo dùng chung",
+       "b": true
+      },
+      {
+       "text": ", để cả lớp, và cả những người làm luật, có thể nói cùng một ngôn ngữ về rủi ro."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nhac-lai-rui-ro-va-su-co",
+   "title": "Nhắc lại: Rủi ro và sự cố",
+   "kind": "recall",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ở lớp 11 (Bài 11.3 của tập Khối 11), em đã học: "
+      },
+      {
+       "text": "rủi ro",
+       "b": true
+      },
+      {
+       "text": " là điều có hại "
+      },
+      {
+       "text": "có thể",
+       "i": true
+      },
+      {
+       "text": " xảy ra; "
+      },
+      {
+       "text": "sự cố",
+       "b": true
+      },
+      {
+       "text": " là điều có hại "
+      },
+      {
+       "text": "đã",
+       "i": true
+      },
+      {
+       "text": " xảy ra. Em cũng đã biết bốn nhóm rủi ro: dữ liệu và riêng tư; giả mạo và thông tin sai; bản quyền; trung thực học thuật."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lớp 11 trả lời câu hỏi “rủi ro "
+      },
+      {
+       "text": "loại gì",
+       "b": true
+      },
+      {
+       "text": "?”. Bài hôm nay trả lời câu hỏi tiếp theo: “rủi ro "
+      },
+      {
+       "text": "lớn đến đâu",
+       "b": true
+      },
+      {
+       "text": "?”"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-hai-can-cu-de-do-rui-ro",
+   "title": "1. Hai căn cứ để đo rủi ro",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Mức độ rủi ro",
+         "b": true
+        },
+        {
+         "text": " của một việc sử dụng AI được xác định từ hai căn cứ: "
+        },
+        {
+         "text": "mức độ hậu quả",
+         "b": true
+        },
+        {
+         "text": " nếu điều xấu xảy ra, và "
+        },
+        {
+         "text": "khả năng",
+         "b": true
+        },
+        {
+         "text": " điều xấu đó xảy ra."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "1.1. Căn cứ thứ nhất: hậu quả nặng đến đâu?",
+     "id": "1-1-can-cu-thu-nhat-hau-qua-nang-den-dau"
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Để đánh giá hậu quả, em hỏi ba câu."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hậu quả nhẹ hơn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hậu quả nặng hơn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai bị ảnh hưởng?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ mình em"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Người khác; nhiều người; người yếu thế"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có đảo ngược được không?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sửa lại, làm lại được"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không lấy lại được: ảnh đã phát tán, danh dự, sức khỏe, cơ hội đã mất"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vi phạm quy định nào?",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không vi phạm gì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vi phạm nội quy, quy chế thi; vi phạm pháp luật"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu hỏi thứ hai thường bị xem nhẹ nhất và lại quan trọng nhất. Một bài tập làm sai có thể làm lại. Một video ghép mặt đã bị chia sẻ thì không ai thu hồi hết được."
+      }
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "1.2. Căn cứ thứ hai: có dễ xảy ra không?",
+     "id": "1-2-can-cu-thu-hai-co-de-xay-ra-khong"
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Khả năng thấp hơn khi…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Khả năng cao hơn khi…",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có bước kiểm chứng, có người xem lại"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng thẳng kết quả, không ai kiểm tra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ đã được nhà trường rà soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ không rõ nguồn gốc"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc quen, đã làm nhiều lần và biết chỗ dễ sai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Việc mới, lĩnh vực mình không hiểu nên không nhận ra cái sai"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng một lần"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng lặp lại hằng ngày, cho nhiều người"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "1.3. Ghép hai căn cứ: thang ba mức",
+     "id": "1-3-ghep-hai-can-cu-thang-ba-muc"
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image15.png",
+     "caption": "Hình 12.5.1. Ma trận rủi ro. Mức độ rủi ro tăng dần về góc trên bên phải. Mũi tên nét đứt: hai cách hạ mức rủi ro là giảm khả năng xảy ra và giảm hậu quả."
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mức",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đặc điểm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách ứng xử",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thấp",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hậu quả nhẹ, chỉ ảnh hưởng đến mình, sửa được, không vi phạm gì"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng được; vẫn giữ thói quen kiểm chứng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trung bình",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hậu quả đáng kể nhưng còn sửa được, hoặc hậu quả nhẹ nhưng rất dễ xảy ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ dùng khi có biện pháp kiểm soát: kiểm chứng, khai báo, hỏi thầy cô"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cao",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hậu quả nặng, ảnh hưởng người khác, khó đảo ngược, hoặc vi phạm quy định, pháp luật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không làm; hoặc phải thay đổi hẳn cách làm và có người có trách nhiệm cho phép"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Áp dụng cho bốn việc ở phần Khởi động:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hậu quả",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Khả năng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Mức",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Căn cứ chính",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "A. Gợi ý tên nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rất nhẹ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thấp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thấp",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chỉ ảnh hưởng nhóm mình; đổi tên lúc nào cũng được"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "B. Ôn thi bằng bản tóm tắt chưa đối chiếu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đáng kể (mất điểm) nhưng chỉ mình chịu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khá cao: AI tóm tắt có thể sai, sót"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trung bình",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sửa được nếu phát hiện trước khi thi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "C. Ghép mặt bạn, đăng lên nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nặng: tổn thương bạn; không thu hồi được"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cao"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cao",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh hưởng người khác; không đảo ngược; có thể vi phạm pháp luật"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "D. Nộp bài luận AI viết trong hồ sơ học bổng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nặng: gian dối trong hồ sơ; lấy mất cơ hội của người khác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cao"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cao",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vi phạm trung thực; ảnh hưởng người khác"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Rủi ro cao nghĩa là chắc chắn sẽ có chuyện.”",
+         "b": true
+        },
+        {
+         "text": " Không phải. Mức rủi ro cao nghĩa là "
+        },
+        {
+         "text": "nếu",
+         "i": true
+        },
+        {
+         "text": " có chuyện thì hậu quả nặng và khó sửa, nên không được trông vào may mắn. Ngược lại, “rủi ro thấp” không có nghĩa là không cần kiểm chứng."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-cung-mot-viec-khac-boi-canh-khac-muc",
+   "title": "2. Cùng một việc, khác bối cảnh, khác mức",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Mức rủi ro không gắn cứng vào công cụ hay vào hành động. Nó phụ thuộc vào "
+      },
+      {
+       "text": "bối cảnh",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bối cảnh 1",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bối cảnh 2",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ AI giải một bài toán"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài tập về nhà, thầy cho phép dùng AI để tham khảo: "
+          },
+          {
+           "text": "thấp đến trung bình",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trong giờ kiểm tra, trong kì thi: "
+          },
+          {
+           "text": "cao",
+           "b": true
+          },
+          {
+           "text": " (vi phạm quy chế)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tải ảnh lên công cụ tạo ảnh hoạt hình"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh của chính em: "
+          },
+          {
+           "text": "thấp đến trung bình",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh tập thể lớp, chưa hỏi ai: "
+          },
+          {
+           "text": "cao",
+           "b": true
+          },
+          {
+           "text": " (dữ liệu của người khác)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hỏi AI về triệu chứng sức khỏe"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Để biết nên hỏi bác sĩ điều gì: "
+          },
+          {
+           "text": "trung bình",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Để tự mua thuốc uống thay cho đi khám: "
+          },
+          {
+           "text": "cao",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhờ AI dịch một đoạn văn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Để hiểu một bài báo: "
+          },
+          {
+           "text": "thấp",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Để dịch hướng dẫn dùng thuốc cho bà: "
+          },
+          {
+           "text": "cao",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì thế, khi xếp mức, câu trả lời “còn tùy” là chấp nhận được, miễn là em nói rõ "
+      },
+      {
+       "text": "tùy vào điều gì",
+       "b": true
+      },
+      {
+       "text": ". Điều quan trọng không phải là thuộc một bảng đáp án, mà là "
+      },
+      {
+       "text": "nêu được căn cứ",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Xếp mức và nêu căn cứ",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Xếp mỗi việc sau vào mức thấp, trung bình hoặc cao. Với mỗi việc, ghi một căn cứ về hậu quả và một căn cứ về khả năng xảy ra. Việc nào “còn tùy” thì ghi rõ tùy vào điều gì."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Nhờ AI ra 20 câu trắc nghiệm để tự ôn Lịch sử."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Dùng AI viết phần “kết quả thí nghiệm” cho một thí nghiệm nhóm em chưa làm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Dán nội dung trò chuyện riêng của một bạn vào AI để hỏi “bạn ấy đang nghĩ gì về mình”."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Nhờ AI góp ý phát âm bài nói tiếng Anh em tự chuẩn bị."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Dùng AI tạo một bản tin “trường cho nghỉ học ngày mai” để trêu cả lớp."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "6. Nhờ AI lập thực đơn giảm cân rồi làm theo trong một tháng."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-ha-muc-rui-ro",
+   "title": "3. Hạ mức rủi ro",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Xác định mức rủi ro không phải để dán nhãn rồi thôi. Nó giúp em quyết định: "
+      },
+      {
+       "text": "dùng, dùng có điều kiện, hay không dùng",
+       "b": true
+      },
+      {
+       "text": ". Và với nhiều việc, em có thể chủ động "
+      },
+      {
+       "text": "hạ mức",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hạ mức rủi ro",
+         "b": true
+        },
+        {
+         "text": " là thay đổi cách làm để giảm khả năng điều xấu xảy ra, hoặc giảm hậu quả nếu nó xảy ra."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có ba hướng:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Hướng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cách làm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giảm khả năng xảy ra",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thêm bước kiểm chứng; nhờ người có hiểu biết xem lại; dùng công cụ đã được rà soát"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bản tóm tắt Sinh học: đối chiếu từng ý với sách giáo khoa. Từ trung bình xuống thấp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giảm hậu quả",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bỏ dữ liệu cá nhân; không công bố; thử ở phạm vi nhỏ trước"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tải ảnh lớp: xin phép từng bạn, làm mờ mặt bạn không đồng ý, không đăng công khai"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đổi hẳn cách làm",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chuyển phần cốt lõi về cho mình; chuyển quyết định về cho người có trách nhiệm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bài luận học bổng: tự viết, chỉ nhờ AI chỉ lỗi diễn đạt, và khai báo nếu được yêu cầu"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có những việc "
+      },
+      {
+       "text": "không hạ mức được",
+       "b": true
+      },
+      {
+       "text": ", vì bản thân việc đó là sai: dùng AI trong phòng thi, tạo nội dung giả mạo về người khác, gian dối trong hồ sơ. Với những việc ấy, câu trả lời duy nhất là không làm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Quy trình bảy bước ở Bài 11.1 chính là một bộ biện pháp hạ mức rủi ro: kiểm tra công cụ và chuẩn bị đầu vào làm giảm hậu quả về dữ liệu; giám sát và kiểm chứng làm giảm khả năng dùng thông tin sai; khai báo làm giảm rủi ro về trung thực."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-phap-luat-va-nha-truong-cung-dung-thang-rui-ro",
+   "title": "4. Pháp luật và nhà trường cũng dùng thang rủi ro",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách nghĩ “rủi ro càng cao, yêu cầu càng chặt” không chỉ dành cho học sinh. Đó cũng là cách nhiều nước xây dựng luật về AI."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "didyouknow",
+     "title": "Em có biết?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Luật Trí tuệ nhân tạo của Việt Nam, được Quốc hội thông qua ngày 10/12/2025 và có hiệu lực từ ngày 01/3/2026, phân các hệ thống AI thành ba mức rủi ro: thấp, trung bình và cao. Theo nội dung đã được công bố [6]:"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "• Hệ thống rủi ro "
+        },
+        {
+         "text": "cao",
+         "b": true
+        },
+        {
+         "text": " là hệ thống có kết quả được dùng làm căn cứ cho quyết định ảnh hưởng đến quyền, nghĩa vụ, lợi ích hợp pháp của con người, có thể gây hậu quả nghiêm trọng, hoặc có phạm vi triển khai rộng. Các hệ thống này được kiểm tra định kì hoặc khi có dấu hiệu vi phạm, và nhà cung cấp phải thiết kế để con người giám sát, can thiệp được."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "• Hệ thống rủi ro "
+        },
+        {
+         "text": "trung bình",
+         "b": true
+        },
+        {
+         "text": " được giám sát qua báo cáo, kiểm tra chọn mẫu hoặc đánh giá của tổ chức độc lập."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "• Hệ thống rủi ro "
+        },
+        {
+         "text": "thấp",
+         "b": true
+        },
+        {
+         "text": " được kiểm tra khi có sự cố, có phản ánh."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nhà cung cấp tự phân loại hệ thống của mình trước khi đưa vào sử dụng."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k12/image16.png",
+     "caption": "Hình 12.5.2. Ba mức rủi ro của hệ thống AI và cách quản lí tương ứng, theo nội dung đã công bố của Luật Trí tuệ nhân tạo [6]. Mức càng cao, kiểm tra càng chặt."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em so sánh thang của luật với thang của bài học:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thang của bài học",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thang của luật",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đối tượng được xếp mức"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một "
+          },
+          {
+           "text": "việc sử dụng",
+           "b": true
+          },
+          {
+           "text": " AI của em"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một "
+          },
+          {
+           "text": "hệ thống",
+           "b": true
+          },
+          {
+           "text": " AI do nhà cung cấp đưa ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ai xếp mức"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Em, người dùng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhà cung cấp, dưới sự kiểm tra của cơ quan nhà nước"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Căn cứ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hậu quả và khả năng xảy ra"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ảnh hưởng đến quyền, lợi ích của con người; mức nghiêm trọng; phạm vi"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm chung"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rủi ro càng cao thì càng cần con người kiểm soát chặt"
+          }
+         ]
+        }
+       ],
+       []
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai thang không thay thế nhau. Một hệ thống thuộc mức rủi ro thấp theo luật (ví dụ một công cụ tạo ảnh) vẫn có thể bị dùng vào một việc rủi ro cao (ghép mặt người khác để bôi nhọ). Luật An ninh mạng năm 2025 cấm dùng AI để giả mạo hình ảnh, video, giọng nói của người khác trái pháp luật [8]. Luật Bảo vệ dữ liệu cá nhân bảo vệ dữ liệu của người bị đưa vào công cụ [7]."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Với quy định của nhà trường,",
+       "b": true
+      },
+      {
+       "text": " em cần biết ba loại: quy chế kiểm tra, thi (dùng AI trong phòng thi là vi phạm); quy định về trung thực trong học tập (nộp sản phẩm AI như của mình); và Quy tắc sử dụng AI của trường nếu đã ban hành. Các vi phạm này đều rơi vào mức rủi ro cao theo căn cứ “vi phạm quy định nào”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lưu ý: phần pháp luật ở đây chỉ nêu tinh thần của quy định theo các bài giới thiệu luật. Khi cần áp dụng, em cùng thầy cô tra văn bản gốc đang có hiệu lực.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Hạ mức",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Chọn hai việc em đã xếp ở mức trung bình hoặc cao trong Hoạt động 1. Với mỗi việc: nếu hạ mức được, em viết cách làm mới và cho biết đã giảm khả năng hay giảm hậu quả; nếu không hạ được, em giải thích vì sao."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-hai-cau-hoi-truoc-khi-bam",
+   "title": "5. Hai câu hỏi trước khi bấm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thang rủi ro chỉ có ích khi nó thành phản xạ. Em không cần kẻ bảng trước mỗi lần dùng AI. Em chỉ cần hai câu hỏi, mất chừng năm giây:"
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. "
+        },
+        {
+         "text": "Nếu sai, hậu quả nặng đến đâu, ai chịu, có sửa được không?",
+         "b": true
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. "
+        },
+        {
+         "text": "Điều đó có dễ xảy ra không, và mình đã làm gì để nó khó xảy ra hơn?",
+         "b": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nếu câu trả lời cho câu thứ nhất là “nặng, người khác chịu, không sửa được”, em dừng lại, dù khả năng xảy ra có vẻ thấp."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-mot-noi-khac-xep-muc-rui-ro-the-nao",
+   "title": "Trải nghiệm: Một nơi khác xếp mức rủi ro thế nào?",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Liên minh châu Âu (EU) có một công cụ trực tuyến giúp xác định một hệ thống AI thuộc mức rủi ro nào. Em hãy so sánh cách làm đó với cách lớp em vừa xếp."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k12/image17.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Công cụ kiểm tra tuân thủ Đạo luật AI của EU"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " ai-act-service-desk.ec.europa.eu (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Cả lớp cùng làm, thầy cô trình chiếu (khoảng 7 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em cùng lớp chọn một tình huống trong bài."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em góp ý để thầy cô trả lời các câu hỏi của công cụ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em so kết quả với mức rủi ro lớp đã xếp."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Hai căn cứ em vừa học, hậu quả và khả năng xảy ra, có mặt trong các câu hỏi của công cụ không?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Đây là luật của EU, chỉ dùng để so sánh. Ở Việt Nam, em căn cứ vào Luật Trí tuệ nhân tạo."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k12/image18.png",
+     "caption": "Sơ đồ tư duy Bài 12.5."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Mức độ rủi ro được xác định từ "
+        },
+        {
+         "text": "hậu quả",
+         "b": true
+        },
+        {
+         "text": " (ai bị ảnh hưởng, có đảo ngược được không, vi phạm quy định nào) và "
+        },
+        {
+         "text": "khả năng xảy ra",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Ba mức:",
+         "b": true
+        },
+        {
+         "text": " thấp (dùng được); trung bình (dùng khi có biện pháp kiểm soát); cao (không làm, hoặc đổi hẳn cách làm)."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Cùng một việc, "
+        },
+        {
+         "text": "khác bối cảnh thì khác mức",
+         "b": true
+        },
+        {
+         "text": "; điều quan trọng là nêu được căn cứ."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Hạ mức rủi ro:",
+         "b": true
+        },
+        {
+         "text": " giảm khả năng xảy ra, giảm hậu quả, hoặc đổi cách làm. Có việc không hạ mức được."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Luật Trí tuệ nhân tạo cũng quản lí hệ thống AI theo "
+        },
+        {
+         "text": "ba mức rủi ro",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi cặp, việc nào rủi ro cao hơn và căn cứ nào tạo ra khác biệt? a) Nhờ AI dịch thực đơn / nhờ AI dịch đơn thuốc; b) Tạo ảnh hoạt hình từ ảnh của mình / từ ảnh em bé hàng xóm; c) Nhờ AI gợi ý ý tưởng cho bài văn / nhờ AI viết bài văn trong giờ kiểm tra."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Bạn Hưng nói: “Mình dùng AI viết báo cáo thực hành cả năm nay, chưa bị phát hiện lần nào, vậy rủi ro là thấp.” Hưng đang nhầm ở căn cứ nào? Em phân tích lại."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Một nhóm bạn muốn dùng AI tạo giọng nói của thầy hiệu trưởng để làm video chúc mừng ngày 20/11. Xác định mức rủi ro. Có cách nào hạ mức không?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Theo mô tả ở mục 4, mỗi hệ thống sau nhiều khả năng thuộc mức rủi ro nào theo cách phân loại của luật, và vì sao: a) phần mềm gợi ý nhạc; b) phần mềm chấm điểm hồ sơ vay vốn. (Chỉ cần nêu suy luận dựa trên mô tả; kết luận chính thức thuộc về cơ quan có thẩm quyền.)"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Viết lại một việc em từng làm với AI mà giờ em thấy thuộc mức trung bình. Em sẽ thêm biện pháp gì để hạ mức?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Lập “bản đồ rủi ro” cho việc dùng AI của chính em trong một tuần: liệt kê năm đến bảy việc em đã dùng AI, đặt mỗi việc vào một ô của ma trận ở Hình 12.5.1. Việc nào nằm ở vùng trung bình hoặc cao? Chọn một việc và ghi biện pháp hạ mức em sẽ áp dụng từ tuần sau. Nếu thấy phù hợp, em chia sẻ bản đồ với cha mẹ để cả nhà cùng thống nhất cách dùng AI."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu hai căn cứ và ba câu hỏi về hậu quả"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xếp mức rủi ro cho một việc dùng AI, có căn cứ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích vì sao cùng một việc có thể khác mức khi khác bối cảnh"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đề xuất cách hạ mức rủi ro, hoặc giải thích vì sao không hạ được"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mức độ rủi ro"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Độ lớn của rủi ro, xác định từ hậu quả và khả năng xảy ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hậu quả"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thiệt hại nếu điều xấu xảy ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đảo ngược được"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sửa lại, lấy lại được như trước"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hạ mức rủi ro"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thay đổi cách làm để giảm khả năng xảy ra hoặc giảm hậu quả"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ma trận rủi ro"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bảng ghép hai căn cứ hậu quả và khả năng để xếp mức"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) Đơn thuốc: hậu quả về sức khỏe, khó đảo ngược. b) Ảnh em bé hàng xóm: dữ liệu của người khác, lại là trẻ em. c) Viết trong giờ kiểm tra: vi phạm quy chế."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Hưng chỉ nhìn khả năng “bị phát hiện”, trong khi hậu quả vẫn nguyên: không có kĩ năng làm thực hành, vi phạm trung thực học thuật, và nếu số liệu bịa thì là gian dối. Hơn nữa làm lặp lại cả năm khiến khả năng xảy ra hậu quả tăng lên chứ không giảm. Đây là mức cao."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Mức cao nếu làm mà không hỏi: giả giọng một người thật, dù ý tốt, là dùng dữ liệu cá nhân của người đó và dễ gây hiểu lầm. Hạ mức: xin phép thầy trước, ghi rõ trong video “giọng nói do AI tạo, đã được thầy đồng ý”, chỉ chiếu trong buổi lễ. Cách đơn giản và an toàn hơn: mời thầy thu âm thật."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " a) Nhiều khả năng mức thấp: không là căn cứ cho quyết định ảnh hưởng đến quyền, lợi ích; hậu quả nhỏ. b) Nhiều khả năng mức cao: kết quả là căn cứ cho quyết định ảnh hưởng trực tiếp đến lợi ích của người vay."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Câu trả lời riêng của em. Biện pháp nên cụ thể: kiểm chứng bằng nguồn nào, hỏi ai, bỏ dữ liệu gì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [6], [7], [8] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

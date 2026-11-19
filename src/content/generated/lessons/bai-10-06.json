@@ -1,0 +1,2207 @@
+{
+ "id": "10.6",
+ "slug": "bai-10-06",
+ "grade": 10,
+ "num": 6,
+ "topicId": "10.3",
+ "title": "Bản đồ ứng dụng AI quanh ta",
+ "meta": "Chuyên đề 10.3: Ứng dụng AI và kĩ năng đặt câu lệnh (tiết 1 trong 4 tiết)",
+ "period": {
+  "index": 1,
+  "total": 4
+ },
+ "objectives": [
+  [
+   {
+    "text": "Liệt kê được các ứng dụng AI theo "
+   },
+   {
+    "text": "sáu nhóm tính năng",
+    "b": true
+   },
+   {
+    "text": "."
+   }
+  ],
+  [
+   {
+    "text": "Xác định được "
+   },
+   {
+    "text": "vấn đề thực tế",
+    "b": true
+   },
+   {
+    "text": " ở trường, ở địa phương có thể ứng dụng AI để giải quyết, và nêu lí do."
+   }
+  ],
+  [
+   {
+    "text": "Nhận ra vấn đề nào "
+   },
+   {
+    "text": "không nên",
+    "b": true
+   },
+   {
+    "text": " giao cho AI."
+   }
+  ]
+ ],
+ "keywords": [
+  "ứng dụng AI",
+  "tính năng",
+  "nhận dạng",
+  "dự đoán",
+  "gợi ý",
+  "tạo sinh",
+  "điều khiển tự động"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-mot-ngay-cua-em-co-bao-nhieu-ai",
+   "title": "Khởi động: Một ngày của em có bao nhiêu AI?",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy đi theo một ngày của bạn Thảo, học sinh lớp 10."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "6 giờ:",
+         "b": true
+        },
+        {
+         "text": " Thảo nhìn vào điện thoại, máy mở khóa bằng khuôn mặt."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "6 giờ 15:",
+         "b": true
+        },
+        {
+         "text": " Thảo xem dự báo: “9 giờ có mưa, khả năng 80%”. Thảo mang áo mưa."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "6 giờ 40:",
+         "b": true
+        },
+        {
+         "text": " Bố mở bản đồ, ứng dụng báo “đường Điện Biên Phủ đang đông, đi lối khác nhanh hơn 7 phút”."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Giờ ra chơi:",
+         "b": true
+        },
+        {
+         "text": " Thảo nói vào điện thoại một câu tiếng Anh, ứng dụng chấm phát âm và chỉ ra âm đọc chưa đúng."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Buổi trưa:",
+         "b": true
+        },
+        {
+         "text": " hộp thư của Thảo tự đẩy ba thư quảng cáo vào mục thư rác."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Buổi tối:",
+         "b": true
+        },
+        {
+         "text": " Thảo nhờ một trợ lí AI đặt năm câu hỏi ôn bài Sinh học. Xong việc, ứng dụng nghe nhạc gợi ý một danh sách “hợp với tâm trạng thư giãn”."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Trong lúc đó:",
+         "b": true
+        },
+        {
+         "text": " con robot hút bụi tự chạy quanh nhà, tránh chân bàn."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Em đếm được mấy lần AI xuất hiện? Các ứng dụng này làm cùng một kiểu việc, hay những kiểu việc khác nhau?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tám lần, và nếu em nhìn kĩ thì chúng làm những kiểu việc rất khác nhau: cái thì "
+      },
+      {
+       "text": "nhận ra",
+       "i": true
+      },
+      {
+       "text": ", cái thì "
+      },
+      {
+       "text": "đoán trước",
+       "i": true
+      },
+      {
+       "text": ", cái thì "
+      },
+      {
+       "text": "chọn hộ",
+       "i": true
+      },
+      {
+       "text": ", cái thì "
+      },
+      {
+       "text": "tạo ra",
+       "i": true
+      },
+      {
+       "text": ". Khi mọi thứ đều bị gọi chung là “AI”, ta dễ bỏ qua sự khác nhau ấy. Bài này giúp em vẽ một tấm bản đồ để xếp chúng vào đúng chỗ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-sau-nhom-tinh-nang-cua-ung-dung-ai",
+   "title": "1. Sáu nhóm tính năng của ứng dụng AI",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một cách xếp nhóm rất dễ dùng là hỏi: "
+      },
+      {
+       "text": "ứng dụng này làm việc gì?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhóm tính năng",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "AI làm việc gì",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Ví dụ",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dạng",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận ra đối tượng trong hình ảnh, âm thanh"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mở khóa bằng khuôn mặt; chuyển giọng nói thành chữ; đọc biển số xe"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán, dự báo",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ước lượng điều sắp xảy ra từ dữ liệu đã có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự báo mưa; ước tính thời gian đi đường; dự báo nhu cầu điện"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý, đề xuất",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn nội dung phù hợp với từng người"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý video, bài hát, sản phẩm, sách"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hội thoại và xử lí ngôn ngữ",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hiểu, dịch, tóm tắt, trả lời bằng ngôn ngữ tự nhiên"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dịch tự động; trợ lí ảo; chatbot hỏi đáp"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo sinh nội dung",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo ra văn bản, hình ảnh, âm thanh, mã mới"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Công cụ viết, vẽ, tạo nhạc bằng AI"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều khiển tự động",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ra quyết định hành động trong môi trường thật"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Robot hút bụi; hỗ trợ lái xe; đèn tín hiệu thông minh"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "h3",
+     "text": "Xếp một ngày của Thảo lên bản đồ",
+     "id": "xep-mot-ngay-cua-thao-len-ban-do"
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Việc trong ngày",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhóm tính năng",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mở khóa bằng khuôn mặt"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dạng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự báo mưa"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán, dự báo"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Bản đồ gợi ý đường, ước tính thời gian"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán, dự báo (kèm gợi ý)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chấm phát âm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dạng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lọc thư rác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dạng (phân loại thư)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Trợ lí đặt câu hỏi ôn bài"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Hội thoại; tạo sinh nội dung"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý danh sách nhạc"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý, đề xuất"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Robot hút bụi"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều khiển tự động"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em thấy đấy: có những ứng dụng nằm ở "
+      },
+      {
+       "text": "hai nhóm cùng lúc",
+       "b": true
+      },
+      {
+       "text": ". Trợ lí ảo vừa nhận dạng giọng nói, vừa hội thoại. Ứng dụng bản đồ vừa dự đoán thời gian, vừa gợi ý lộ trình. Điều đó hoàn toàn bình thường: một sản phẩm thường ghép nhiều tính năng. Khi phân vân, em hãy hỏi: "
+      },
+      {
+       "text": "tính năng nào là chính?",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": []
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "“Cái gì điện tử cũng là AI.”",
+         "b": true
+        },
+        {
+         "text": " Không phải. Chiếc máy tính bỏ túi tính rất nhanh, nhưng nó làm theo quy tắc cố định do con người viết sẵn. Ứng dụng chuyển giọng nói thành chữ thì khác: nó "
+        },
+        {
+         "text": "học từ dữ liệu",
+         "b": true
+        },
+        {
+         "text": " để nhận ra lời nói của những người nó chưa từng nghe."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“AI là chatbot.”",
+         "b": true
+        },
+        {
+         "text": " Chatbot chỉ nằm ở một, hai ô trên bản đồ. Phần lớn AI quanh em làm việc lặng lẽ: lọc thư, dự báo, gợi ý."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "“Mỗi ứng dụng chỉ thuộc một nhóm.”",
+         "b": true
+        },
+        {
+         "text": " Nhiều ứng dụng kết hợp vài tính năng."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Lấy danh sách “một ngày của em có bao nhiêu AI” mà em đã ghi sau Bài 10.5. Xếp từng mục vào sáu nhóm. Nhóm nào em gặp nhiều nhất? Nhóm nào em chưa gặp lần nào?"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k10/image16.png",
+     "caption": "Hình 10.6.1. Sáu nhóm tính năng của ứng dụng AI, mỗi nhóm một ví dụ."
+    }
+   ]
+  },
+  {
+   "id": "2-cau-chuyen-co-that-ai-tren-duong-pho-thanh-pho-minh",
+   "title": "2. Câu chuyện có thật: AI trên đường phố thành phố mình",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Theo Trung tâm Quản lý điều hành giao thông đô thị Thành phố Hồ Chí Minh, AI đang được dùng trong giao thông của thành phố vào nhiều việc:"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "theo dõi các điểm thường xuyên đông xe, ùn ứ và "
+        },
+        {
+         "text": "cảnh báo",
+         "b": true
+        },
+        {
+         "text": " cho người quản lí;"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "tự động phát hiện",
+         "b": true
+        },
+        {
+         "text": " sự cố như xe dừng, tai nạn, đặc biệt trong đường hầm sông Sài Gòn;"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "phân tích dữ liệu cảm biến để "
+        },
+        {
+         "text": "nhận diện",
+         "b": true
+        },
+        {
+         "text": " mật độ, tốc độ phương tiện;"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "kết hợp dữ liệu lịch sử với dữ liệu thời gian thực để "
+        },
+        {
+         "text": "dự báo",
+         "b": true
+        },
+        {
+         "text": " điểm có nguy cơ ùn tắc, từ đó tối ưu thời gian đèn tín hiệu."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Hệ thống được triển khai trên các tuyến trục Võ Văn Kiệt, Mai Chí Thọ, Phạm Văn Đồng. Trung tâm cũng nêu những thách thức: chi phí đầu tư ban đầu, yêu cầu hạ tầng công nghệ và bảo mật dữ liệu. [15]"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em thử dùng bản đồ sáu nhóm để đọc câu chuyện này: phát hiện xe dừng là "
+      },
+      {
+       "text": "nhận dạng",
+       "b": true
+      },
+      {
+       "text": "; dự báo điểm ùn tắc là "
+      },
+      {
+       "text": "dự đoán",
+       "b": true
+      },
+      {
+       "text": "; điều chỉnh thời gian đèn là "
+      },
+      {
+       "text": "điều khiển tự động",
+       "b": true
+      },
+      {
+       "text": ". Một hệ thống lớn, nhiều tính năng cùng làm việc."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Khung giáo dục AI của Bộ Giáo dục và Đào tạo cũng khuyến khích học sinh tìm hiểu ứng dụng AI gắn với thực tiễn Việt Nam, chẳng hạn trong nông nghiệp, giáo dục, dự báo lũ, dịch ngôn ngữ các dân tộc [1]."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-khi-nao-ai-giup-duoc-bon-cau-hoi-sang-loc",
+   "title": "3. Khi nào AI giúp được? Bốn câu hỏi sàng lọc",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Biết AI làm được nhiều việc dễ khiến ta nghĩ “việc gì cũng dùng AI”. Người hiểu AI thì hỏi ngược lại: "
+      },
+      {
+       "text": "việc này có hợp với AI không?",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hãy so sánh hai vấn đề ở trường:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Vấn đề A:",
+         "b": true
+        },
+        {
+         "text": " Thư viện có hàng nghìn cuốn sách, học sinh không biết chọn cuốn nào hợp với môn đang học."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Vấn đề B:",
+         "b": true
+        },
+        {
+         "text": " Hai bạn trong lớp mâu thuẫn với nhau, cần người hòa giải."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vấn đề nào hợp để ứng dụng AI? Em dùng bốn câu hỏi sau để sàng lọc."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Câu hỏi sàng lọc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vấn đề A: gợi ý sách",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Vấn đề B: hòa giải mâu thuẫn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. Việc có "
+          },
+          {
+           "text": "lặp lại nhiều lần",
+           "b": true
+          },
+          {
+           "text": " không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có, hàng trăm lượt hỏi mỗi tuần"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không, mỗi chuyện một khác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. Có "
+          },
+          {
+           "text": "dữ liệu",
+           "b": true
+          },
+          {
+           "text": " để máy học không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có: danh mục sách, số lượt mượn theo môn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có và không nên thu thập"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. Có "
+          },
+          {
+           "text": "quy luật",
+           "b": true
+          },
+          {
+           "text": " để tìm không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có: học sinh học môn này hay mượn sách nào"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mỗi mâu thuẫn có hoàn cảnh riêng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. Nếu AI "
+          },
+          {
+           "text": "sai",
+           "b": true
+          },
+          {
+           "text": " thì hậu quả có chấp nhận được không, có người kiểm tra không?"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai thì học sinh mượn nhầm một cuốn, đổi lại được"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sai thì làm tổn thương con người, khó sửa"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vấn đề A qua cả bốn câu. Vấn đề B trượt cả bốn: nó cần sự thấu hiểu, lắng nghe và phán xét của con người."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Một vấn đề "
+        },
+        {
+         "text": "phù hợp để ứng dụng AI",
+         "b": true
+        },
+        {
+         "text": " khi: việc lặp lại nhiều lần, có dữ liệu, có quy luật để máy tìm, và khi AI sai thì hậu quả chấp nhận được và có con người kiểm tra."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Câu hỏi thứ tư nối thẳng về chuyên đề trước: việc ảnh hưởng lớn đến sức khỏe, cơ hội, danh dự của một con người thì phải do con người quyết định."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Dùng bốn câu hỏi để sàng lọc hai vấn đề: (a) phát hiện sớm đoạn đường quanh trường sắp ngập để báo cho phụ huynh; (b) chấm điểm hạnh kiểm cho học sinh. Vấn đề nào hợp hơn với AI? Câu hỏi nào giúp em quyết định?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-tu-van-de-den-y-tuong-lam-thu-mot-lan",
+   "title": "4. Từ vấn đề đến ý tưởng: làm thử một lần",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Giả sử nhóm em chọn vấn đề: "
+      },
+      {
+       "text": "“Căn tin hay nấu thừa hoặc thiếu suất ăn.”",
+       "b": true
+      },
+      {
+       "text": " Hãy đi từng bước."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 1. Nói rõ vấn đề.",
+       "b": true
+      },
+      {
+       "text": " Ở đâu, khi nào, ai gặp khó? "
+      },
+      {
+       "text": "Ở căn tin trường, mỗi buổi trưa; cô quản lí căn tin không biết nên nấu bao nhiêu suất; có hôm thừa 40 suất, có hôm học sinh đến muộn hết cơm.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 2. Hiện nay người ta xử lí thế nào?",
+       "b": true
+      },
+      {
+       "text": " "
+      },
+      {
+       "text": "Cô ước lượng theo kinh nghiệm.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 3. Chạy bốn câu sàng lọc.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Lặp lại? Có, ngày nào cũng phải quyết định."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu? Có: số suất bán ra từng ngày, thứ trong tuần, thời tiết, lịch học, lịch sự kiện của trường."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quy luật? Có vẻ có: thứ Hai đông hơn, ngày mưa đông hơn, ngày thi ít hơn."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sai thì sao? Thừa hoặc thiếu vài chục suất; cô quản lí vẫn là người quyết định cuối."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 4. AI giúp bằng nhóm tính năng nào?",
+       "b": true
+      },
+      {
+       "text": " "
+      },
+      {
+       "text": "Dự đoán: ước tính số suất cho ngày mai.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bước 5. Điều gì AI không nên làm thay?",
+       "b": true
+      },
+      {
+       "text": " "
+      },
+      {
+       "text": "Quyết định thực đơn; xử lí ngày có sự kiện bất thường; cô quản lí vẫn xem và điều chỉnh con số.",
+       "i": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em thấy không: chưa cần viết một dòng mã nào, nhóm đã có một ý tưởng rõ ràng. Ở Bài 10.11, em sẽ dùng chính vấn đề của nhóm mình để “giải phẫu” một hệ thống AI."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "note",
+     "title": null,
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Lưu ý về dữ liệu.",
+         "b": true
+        },
+        {
+         "text": " Khi nghĩ ý tưởng, nếu thấy mình định dùng khuôn mặt, vị trí hay thông tin riêng của từng học sinh, hãy dừng lại và hỏi: "
+        },
+        {
+         "text": "có cách nào đạt mục tiêu mà không cần dữ liệu cá nhân không?",
+         "i": true
+        },
+        {
+         "text": " Ví dụ trên chỉ cần số suất bán ra mỗi ngày, không cần biết ai ăn gì."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-nhin-ai-bang-con-mat-cua-nguoi-lam-chu",
+   "title": "5. Nhìn AI bằng con mắt của người làm chủ",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tấm bản đồ sáu nhóm không chỉ để xếp cho gọn. Nó giúp em hỏi đúng câu khi gặp một ứng dụng mới:"
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nó thuộc nhóm nào? Vậy nó "
+        },
+        {
+         "text": "có thể sai kiểu gì",
+         "b": true
+        },
+        {
+         "text": "? (Nhận dạng thì nhận nhầm; dự đoán thì lệch; tạo sinh thì có thể tạo ra nội dung nghe hợp lí mà không đúng.)"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Nó cần "
+        },
+        {
+         "text": "dữ liệu gì về mình",
+         "b": true
+        },
+        {
+         "text": " để làm việc đó?"
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Việc này "
+        },
+        {
+         "text": "có đáng giao cho máy",
+         "b": true
+        },
+        {
+         "text": " không, hay mình tự làm thì tốt hơn?"
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Người dùng thông thường hỏi “ứng dụng này có gì hay?”. Người làm chủ công nghệ hỏi thêm ba câu trên."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-tim-ai-trong-chiec-dien-thoai",
+   "title": "Trải nghiệm: Tìm AI trong chiếc điện thoại",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa vẽ bản đồ ứng dụng AI quanh ta. Chiếc điện thoại có thể giúp em thêm vài điểm mới lên bản đồ đó."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k10/image17.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Google Lens"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " lens.google (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 6 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em cùng nhóm mở Google Lens trên thiết bị của lớp."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em chụp một chiếc lá, rồi chụp một dòng chữ tiếng Anh trong sách."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em ghi lại: máy nhận vào gì, trả ra gì, và thêm ứng dụng này vào bản đồ của lớp."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Ứng dụng này thuộc lĩnh vực nào trên bản đồ? Nó có thể nhận sai trong trường hợp nào?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không chụp người, không chụp giấy tờ có thông tin cá nhân."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k10/image18.png",
+     "caption": "Sơ đồ tư duy Bài 10.6."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "AI quanh ta làm nhiều "
+        },
+        {
+         "text": "kiểu việc khác nhau",
+         "b": true
+        },
+        {
+         "text": "; gọi chung là “AI” thì dễ bỏ qua sự khác nhau ấy."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Sáu nhóm tính năng: "
+        },
+        {
+         "text": "nhận dạng; dự đoán, dự báo; gợi ý, đề xuất; hội thoại và xử lí ngôn ngữ; tạo sinh nội dung; điều khiển tự động",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Một ứng dụng có thể thuộc "
+        },
+        {
+         "text": "nhiều nhóm",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Không phải thiết bị điện tử nào cũng là AI; dấu hiệu của AI học máy là "
+        },
+        {
+         "text": "học từ dữ liệu",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Bốn câu hỏi sàng lọc: việc có "
+        },
+        {
+         "text": "lặp lại",
+         "b": true
+        },
+        {
+         "text": " không; có "
+        },
+        {
+         "text": "dữ liệu",
+         "b": true
+        },
+        {
+         "text": " không; có "
+        },
+        {
+         "text": "quy luật",
+         "b": true
+        },
+        {
+         "text": " không; "
+        },
+        {
+         "text": "sai",
+         "b": true
+        },
+        {
+         "text": " thì có chấp nhận được và có người kiểm tra không."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Việc cần thấu hiểu, phán xét, ảnh hưởng lớn đến một con người thì "
+        },
+        {
+         "text": "không nên giao cho AI",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Xếp mỗi ứng dụng vào nhóm tính năng chính: (a) ứng dụng ngân hàng xác thực bằng vân tay; (b) trang bán hàng hiện mục “có thể bạn cũng thích”; (c) ứng dụng dịch câu tiếng Việt sang tiếng Nhật; (d) công cụ vẽ tranh theo mô tả; (e) ứng dụng báo “đơn hàng sẽ đến sau khoảng 25 phút”; (f) máy điều hòa tự chỉnh nhiệt độ theo số người trong phòng."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Trong các thiết bị sau, cái nào "
+      },
+      {
+       "text": "không",
+       "b": true
+      },
+      {
+       "text": " phải là ứng dụng AI học từ dữ liệu? Giải thích: (a) đồng hồ báo thức; (b) ứng dụng nhận diện loài hoa qua ảnh chụp; (c) máy tính bỏ túi; (d) bộ lọc tin nhắn rác; (e) đèn cầu thang bật khi có người đi qua."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Dùng bốn câu hỏi sàng lọc cho vấn đề: “Phụ huynh và học sinh nhận nhiều tin nhắn giả danh nhà trường”. AI có thể giúp bằng nhóm tính năng nào? Điều gì AI không nên làm thay?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Với mỗi nhóm tính năng, tìm một ứng dụng có thể giúp ích cho "
+      },
+      {
+       "text": "nông dân",
+       "b": true
+      },
+      {
+       "text": " hoặc "
+      },
+      {
+       "text": "người cao tuổi",
+       "b": true
+      },
+      {
+       "text": " ở Việt Nam. Ghi ít nhất bốn nhóm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Bạn Huy đề xuất: “Trường mình nên dùng AI để quyết định bạn nào được vào đội tuyển học sinh giỏi, cho khách quan.” Em hãy dùng câu hỏi sàng lọc thứ tư để nhận xét đề xuất này, và gợi ý một cách AI có thể "
+      },
+      {
+       "text": "hỗ trợ",
+       "b": true
+      },
+      {
+       "text": " mà không "
+      },
+      {
+       "text": "quyết định",
+       "b": true
+      },
+      {
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "1. Vấn đề của nhóm.",
+       "b": true
+      },
+      {
+       "text": " Cùng nhóm chọn một vấn đề có thật ở trường hoặc nơi em sống. Đi qua năm bước ở mục 4 và ghi lại. "
+      },
+      {
+       "text": "Giữ tờ ghi chép này:",
+       "b": true
+      },
+      {
+       "text": " em sẽ dùng lại ở Bài 10.11 và 10.12."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "2. Đi tìm AI ở địa phương.",
+       "b": true
+      },
+      {
+       "text": " Tìm một ví dụ về ứng dụng AI đang được dùng ở Thành phố Hồ Chí Minh hoặc ở Việt Nam, từ một nguồn báo chí chính thống. Ghi lại: ứng dụng làm việc gì, thuộc nhóm tính năng nào, nguồn tin là gì."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kể tên sáu nhóm tính năng và cho ví dụ"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xếp một ứng dụng vào nhóm tính năng phù hợp"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dùng bốn câu hỏi sàng lọc cho một vấn đề"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu một vấn đề thực tế có thể ứng dụng AI và lí do"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích ngắn gọn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ứng dụng AI"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sản phẩm, dịch vụ dùng AI để thực hiện một hoặc nhiều tính năng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận dạng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhận ra đối tượng trong hình ảnh, âm thanh"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dự đoán, dự báo"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ước lượng điều sắp xảy ra hoặc một giá trị từ dữ liệu đã có"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gợi ý, đề xuất"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn nội dung phù hợp với từng người dùng"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo sinh nội dung"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Tạo ra văn bản, hình ảnh, âm thanh, mã mới"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điều khiển tự động"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ra quyết định hành động trong môi trường thật"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " a) nhận dạng; b) gợi ý, đề xuất; c) hội thoại và xử lí ngôn ngữ; d) tạo sinh nội dung; e) dự đoán, dự báo; f) điều khiển tự động (kèm nhận dạng số người)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " (a), (c), (e) làm theo quy tắc cố định, không học từ dữ liệu. (b) và (d) là ứng dụng AI học từ dữ liệu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Lặp lại: có. Dữ liệu: có thể thu thập tin nhắn mẫu đã xóa số điện thoại, tên người. Quy luật: có (hối thúc, yêu cầu chuyển tiền, đường dẫn lạ). Sai: cảnh báo nhầm thì người nhận kiểm tra lại được. Nhóm tính năng: nhận dạng (phân loại tin nhắn). AI không nên tự xóa tin hay tự trả lời; người nhận vẫn xác minh qua kênh chính thức của trường."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Gợi ý: việc chọn đội tuyển ảnh hưởng lớn đến cơ hội của từng bạn, cần xét cả sự tiến bộ, hoàn cảnh, nguyện vọng; nếu AI sai thì khó sửa và khó giải thích. AI có thể hỗ trợ tổng hợp kết quả các bài kiểm tra để thầy cô xem; thầy cô là người quyết định và giải thích."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [1], [15] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

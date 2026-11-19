@@ -1,0 +1,2912 @@
+{
+ "id": "11.11",
+ "slug": "bai-11-11",
+ "grade": 11,
+ "num": 11,
+ "topicId": "11.4",
+ "title": "Phân cụm và phân lớp: máy gom nhóm, máy gắn nhãn",
+ "meta": "Chuyên đề 11.4: Bên trong hệ thống AI (tiết 3 trong 4 tiết)",
+ "period": {
+  "index": 3,
+  "total": 4
+ },
+ "objectives": [
+  [
+   {
+    "text": "Giải thích được ở mức đơn giản "
+   },
+   {
+    "text": "phân lớp",
+    "b": true
+   },
+   {
+    "text": " và "
+   },
+   {
+    "text": "phân cụm",
+    "b": true
+   },
+   {
+    "text": " là gì."
+   }
+  ],
+  [
+   {
+    "text": "Phân biệt được hai bài toán dựa trên một câu hỏi: "
+   },
+   {
+    "text": "dữ liệu đã có nhãn hay chưa?",
+    "b": true
+   }
+  ],
+  [
+   {
+    "text": "Tự tay thực hiện được một ví dụ phân cụm và một ví dụ phân lớp, và nêu được ứng dụng của mỗi loại."
+   }
+  ]
+ ],
+ "keywords": [
+  "nhãn",
+  "phân lớp",
+  "phân cụm",
+  "cụm",
+  "điểm ngoại lệ",
+  "dữ liệu huấn luyện"
+ ],
+ "sections": [
+  {
+   "id": "khoi-dong-hai-viec-trong-giong-nhau",
+   "title": "Khởi động: Hai việc trông giống nhau",
+   "kind": "warmup",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Việc thứ nhất.",
+       "b": true
+      },
+      {
+       "text": " Hộp thư điện tử của em tự chuyển một số thư vào mục “Thư rác”. Không ai bảo nó từng thư một, nhưng nó hiếm khi nhầm."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Việc thứ hai.",
+       "b": true
+      },
+      {
+       "text": " Điện thoại của em tự gom ảnh thành từng nhóm: nhóm này toàn ảnh một người bạn, nhóm kia toàn ảnh một người khác. Điện thoại không biết tên các bạn ấy. Nó chỉ biết những tấm ảnh này “giống nhau”."
+      }
+     ]
+    },
+    {
+     "t": "question",
+     "inl": [
+      {
+       "text": " Cả hai việc đều là “xếp thứ vào nhóm”. Theo em, chúng khác nhau ở điểm nào?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Gợi ý: ở việc thứ nhất, các nhóm đã "
+      },
+      {
+       "text": "có tên từ trước",
+       "b": true
+      },
+      {
+       "text": " (“thư rác”, “không phải thư rác”). Ở việc thứ hai, "
+      },
+      {
+       "text": "không có tên nào cho trước",
+       "b": true
+      },
+      {
+       "text": "; máy tự tìm ra các nhóm. Khác biệt nhỏ ấy dẫn đến hai bài toán khác nhau, có tên là phân lớp và phân cụm."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1-nhan-chia-khoa-de-phan-biet-hai-bai-toan",
+   "title": "1. Nhãn: chìa khóa để phân biệt hai bài toán",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Nhãn",
+         "b": true
+        },
+        {
+         "text": " là câu trả lời đúng được gắn sẵn cho một mẫu dữ liệu. Ví dụ: tấm ảnh được gắn nhãn “mèo”; lá thư được gắn nhãn “thư rác”."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhãn thường do con người gắn. Mỗi lần em bấm “Báo cáo thư rác”, em đang gắn một cái nhãn."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image34.png",
+     "caption": "Hình 11.11.1. Bên trái: dữ liệu đã có nhãn (hai loại kí hiệu), việc cần làm là gắn nhãn cho điểm mới có dấu hỏi. Bên phải: dữ liệu chưa có nhãn, việc cần làm là tìm ra các nhóm."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Toàn bộ bài học này xoay quanh một câu hỏi: "
+      },
+      {
+       "text": "dữ liệu đã có nhãn hay chưa?",
+       "b": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2-phan-lop-hoc-tu-vi-du-co-nhan-de-gan-nhan-cho-cai-moi",
+   "title": "2. Phân lớp: học từ ví dụ có nhãn để gắn nhãn cho cái mới",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phân lớp",
+         "b": true
+        },
+        {
+         "text": " là bài toán xếp một mẫu dữ liệu mới vào một trong các "
+        },
+        {
+         "text": "nhóm đã biết trước",
+         "b": true
+        },
+        {
+         "text": ", dựa trên những ví dụ "
+        },
+        {
+         "text": "đã có nhãn",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trò chơi “Lọc tin nhắn”.",
+       "b": true
+      },
+      {
+       "text": " Em là bộ lọc. Dưới đây là tám tin nhắn đã được con người gắn nhãn (ví dụ giả định)."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tin",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Có đường liên kết lạ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giục làm ngay",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhắc đến tiền, quà",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Nhãn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1. “Chúc mừng! Bạn trúng thưởng xe máy, bấm vào đây nhận trong hôm nay”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2. “Tối nay học nhóm ở nhà Lan nhé”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thường"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3. “Tài khoản của bạn sắp bị khóa, xác nhận ngay tại đường dẫn sau”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "4. “Mẹ chuyển tiền ăn sáng rồi nhé con”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thường"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5. “Vay tiền không cần giấy tờ, giải ngân trong 5 phút, bấm ngay”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6. “Nhanh lên, xe sắp chạy rồi!”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thường"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7. “Xem tài liệu ôn tập cô gửi ở đường dẫn của lớp”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thường"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "8. “Nhận quà miễn phí, chỉ còn 10 suất, đăng kí tại đây”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rác"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em hãy nhìn bảng và tự rút ra một quy luật trước khi đọc tiếp."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Một quy luật khớp với cả tám ví dụ: "
+      },
+      {
+       "text": "tin vừa có đường liên kết lạ vừa giục làm ngay thì là rác.",
+       "b": true
+      },
+      {
+       "text": " Chỉ có một trong hai dấu hiệu (tin 6, tin 7) thì chưa phải. “Nhắc đến tiền” tự nó không nói lên điều gì (tin 4)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa làm việc của một thuật toán phân lớp: "
+      },
+      {
+       "text": "học quy luật từ ví dụ có nhãn",
+       "b": true
+      },
+      {
+       "text": ". Bây giờ dùng quy luật ấy cho tin mới:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tin mới",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Liên kết lạ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giục ngay",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Dự đoán",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "9. “Gói cước ưu đãi chỉ hôm nay, đăng kí tại đường dẫn này”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rác"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "10. “Chiều nay họp lớp lúc 4 giờ nhé”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thường"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "11. “Thầy gửi đường dẫn nộp bài, các em nộp trước 9 giờ tối nay”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Có"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Rác?",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Tin 11 là tin thật của thầy, nhưng quy luật của em xếp nó vào “rác”. Bộ lọc đã "
+      },
+      {
+       "text": "sai",
+       "b": true
+      },
+      {
+       "text": ". Vì sao? Vì trong tám ví dụ, chưa có ví dụ nào là tin hợp lệ có cả hai dấu hiệu. Quy luật học được chỉ tốt bằng những ví dụ đã thấy."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Máy phân lớp là máy biết đúng sai.”",
+         "b": true
+        },
+        {
+         "text": " Máy không biết thế nào là lừa đảo. Nó chỉ tìm quy luật nối "
+        },
+        {
+         "text": "đặc điểm",
+         "b": true
+        },
+        {
+         "text": " với "
+        },
+        {
+         "text": "nhãn",
+         "b": true
+        },
+        {
+         "text": " trong các ví dụ. Ví dụ thiếu hoặc lệch thì quy luật thiếu hoặc lệch. Vì thế hộp thư của em mới có mục “Không phải thư rác” để em sửa cho nó: đó chính là phản hồi, là nhãn mới."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ứng dụng của phân lớp:",
+       "b": true
+      },
+      {
+       "text": " lọc thư rác; nhận dạng chữ số viết tay (mười lớp từ 0 đến 9, em đã gặp ở Bài 11.10); nhận diện lá cây bị bệnh gì; phân loại rác tái chế và rác hữu cơ; hỗ trợ bác sĩ đánh dấu ảnh X-quang “cần xem kĩ”."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3-phan-cum-tu-tim-nhom-khi-chua-co-nhan",
+   "title": "3. Phân cụm: tự tìm nhóm khi chưa có nhãn",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Phân cụm",
+         "b": true
+        },
+        {
+         "text": " là bài toán chia các mẫu dữ liệu "
+        },
+        {
+         "text": "chưa có nhãn",
+         "b": true
+        },
+        {
+         "text": " thành các nhóm (gọi là "
+        },
+        {
+         "text": "cụm",
+         "b": true
+        },
+        {
+         "text": "), sao cho các mẫu trong cùng một cụm "
+        },
+        {
+         "text": "giống nhau",
+         "b": true
+        },
+        {
+         "text": " hơn so với các mẫu ở cụm khác."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Trò chơi “Lưới thư viện”.",
+       "b": true
+      },
+      {
+       "text": " Thư viện trường ghi lại hai con số của 13 bạn đọc trong một tuần: số giờ ngồi ở thư viện và số sách mượn về (số liệu giả định). Không có nhãn nào cả."
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Bạn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "a",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "b",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "c",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "d",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "e",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "f",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "g",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "h",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "i",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "k",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "l",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "m",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "n",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giờ ở thư viện"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "8"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Sách mượn về"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "5"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "7"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "8"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "6"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nhìn bảng số, rất khó thấy gì. Em hãy chấm 13 điểm lên giấy kẻ ô: trục ngang là số giờ, trục dọc là số sách. Sau đó khoanh những điểm nằm gần nhau."
+      }
+     ]
+    },
+    {
+     "t": "figure",
+     "src": "media/k11/image35.png",
+     "caption": "Hình 11.11.2. Trò chơi “Lưới thư viện”. Bên trái: 13 bạn đọc chưa có nhãn. Bên phải: ba cụm hiện ra khi khoanh các điểm gần nhau; điểm n đứng riêng."
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ba cụm hiện ra, và một điểm đứng riêng:"
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Cụm",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Các bạn",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Đặc điểm chung",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Tên do con người đặt",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "1"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "a, b, c, d"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ít giờ, ít sách"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Thỉnh thoảng ghé”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "2"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "e, f, g, h"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhiều giờ, nhiều sách"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Mọt sách”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "3"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "i, k, l, m"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ít giờ, nhiều sách"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Mượn về nhà đọc”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Riêng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "n"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhiều giờ, gần như không mượn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "?"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Có ba điều em cần chú ý."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ nhất, máy tìm ra cụm, con người đặt tên cụm.",
+       "b": true
+      },
+      {
+       "text": " Thuật toán chỉ nói: “bốn điểm này gần nhau”. Ý nghĩa “mượn về nhà đọc” là do em nhìn vào và hiểu."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ hai, “giống nhau” ở đây là “gần nhau” theo các đặc điểm được chọn.",
+       "b": true
+      },
+      {
+       "text": " Nếu thư viện ghi thêm thể loại sách, các cụm có thể khác đi. Người chọn đặc điểm để đo là con người."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thứ ba, có điểm không thuộc cụm nào.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "concept",
+     "title": "Khái niệm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Điểm ngoại lệ",
+         "b": true
+        },
+        {
+         "text": " là mẫu dữ liệu nằm xa tất cả các cụm, khác hẳn phần còn lại."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bạn n ngồi thư viện 8 giờ nhưng chỉ mượn 1 cuốn. Có thể bạn ấy đến để tự học, hoặc để dùng máy tính. Điểm ngoại lệ thường là chỗ thú vị nhất của dữ liệu: nó gợi ra câu hỏi mà trước đó không ai nghĩ đến (thư viện có nên mở thêm góc tự học không?). Trong ngân hàng, một giao dịch “ngoại lệ” có thể là dấu hiệu thẻ bị dùng trộm."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "pitfall",
+     "title": "Dễ nhầm",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "“Phân cụm luôn có một đáp án đúng.”",
+         "b": true
+        },
+        {
+         "text": " Không phải. Có người khoanh ba cụm, có người gộp cụm 1 và cụm 3 thành một cụm “ít giờ”. Chia thành mấy cụm là lựa chọn, tùy vào mục đích. Điều này khác với phân lớp, nơi mỗi mẫu có một nhãn đúng để so."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Ứng dụng của phân cụm:",
+       "b": true
+      },
+      {
+       "text": " gom ảnh theo khuôn mặt trong điện thoại; gom các bài báo cùng nói về một sự kiện; chia khách hàng thành các nhóm có thói quen mua sắm giống nhau; phát hiện giao dịch bất thường."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 1. Thêm bạn đọc mới",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Thư viện có thêm ba bạn đọc: p (6 giờ, 6 sách), q (1 giờ, 5 sách), r (5 giờ, 2 sách). Em chấm ba điểm này lên Hình 11.11.2. Mỗi bạn thuộc cụm nào? Có bạn nào em thấy khó xếp không? Điều đó nói gì về ranh giới giữa các cụm?"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4-dat-canh-nhau-phan-lop-va-phan-cum",
+   "title": "4. Đặt cạnh nhau: phân lớp và phân cụm",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phân lớp",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Phân cụm",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Dữ liệu ban đầu"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đã có nhãn",
+           "b": true
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa có nhãn",
+           "b": true
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Các nhóm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Biết trước, có tên sẵn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chưa biết, máy tự tìm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu hỏi được trả lời"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Cái mới này thuộc nhóm nào?”"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "“Trong đống này có những nhóm nào?”"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Kiểm tra đúng sai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "So với nhãn đúng"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Không có nhãn để so; con người xem cụm có ý nghĩa không"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Vai trò con người"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gắn nhãn cho ví dụ; sửa khi máy sai"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chọn đặc điểm; đặt tên và diễn giải cụm"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Ví dụ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Lọc thư rác"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Gom ảnh theo khuôn mặt"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Cách nhớ nhanh: "
+      },
+      {
+       "text": "phân lớp là gắn nhãn; phân cụm là gom nhóm.",
+       "b": true
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Hai bài toán còn có thể "
+      },
+      {
+       "text": "nối tiếp nhau",
+       "b": true
+      },
+      {
+       "text": ". Điện thoại gom ảnh thành các cụm khuôn mặt (phân cụm). Khi em gõ tên “Lan” cho một cụm, em đã gắn nhãn. Từ đó, mỗi ảnh mới chụp sẽ được hỏi: “đây có phải Lan không?” (phân lớp)."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "activity",
+     "title": "Hoạt động 2. Phân lớp hay phân cụm?",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Với mỗi tình huống, ghi PL (phân lớp) hoặc PC (phân cụm) và nêu căn cứ: có nhãn chưa, các nhóm biết trước chưa?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "1. Một ứng dụng nghe đoạn nhạc và cho biết đó là nhạc dân ca, nhạc trẻ hay nhạc không lời."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "2. Một trang đọc báo tự gom hàng nghìn bài viết trong ngày thành các chủ đề đang được quan tâm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "3. Trạm phân loại ở căn tin nhận ảnh và báo “tái chế”, “hữu cơ” hoặc “còn lại”."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "4. Một nhà sách muốn biết khách hàng của mình có những kiểu mua sắm nào để xếp lại kệ."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "5. Phần mềm xem ảnh nốt ruồi và báo “nên đi khám” hoặc “chưa cần”."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5-khi-thu-duoc-xep-nhom-la-con-nguoi",
+   "title": "5. Khi thứ được xếp nhóm là con người",
+   "kind": "content",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Xếp thư, xếp ảnh rác thì đơn giản. Nhưng trong trò “Lưới thư viện”, mỗi điểm là một bạn học sinh. Khi dữ liệu là con người, em cần cẩn trọng với ba điều."
+      }
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nhãn có thể đóng khung một người.",
+         "b": true
+        },
+        {
+         "text": " Cái tên “thỉnh thoảng ghé” nghe vô hại, nhưng nếu nó thành “lười đọc” và đi vào nhận xét cuối kì thì khác. Một cụm mô tả hành vi trong một tuần, nó không mô tả con người."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Đặc điểm được chọn có thể bỏ sót điều quan trọng.",
+         "b": true
+        },
+        {
+         "text": " Bạn n “gần như không mượn sách” có thể là người chăm học nhất. Hai con số không kể hết câu chuyện."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Dữ liệu về con người là dữ liệu cá nhân.",
+         "b": true
+        },
+        {
+         "text": " Lịch sử mượn sách cho biết khá nhiều về một người. Các quyền em học ở Bài 11.5 áp dụng ở đây."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "story",
+     "title": "Câu chuyện có thật",
+     "blocks": [
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Năm 2018, hãng tin Reuters đưa tin một tập đoàn công nghệ lớn đã ngừng một công cụ AI thử nghiệm dùng để chấm điểm hồ sơ xin việc. Công cụ được huấn luyện bằng hồ sơ ứng viên trong mười năm trước đó, phần lớn là của nam giới, và nó đã học cách đánh giá thấp những hồ sơ có dấu hiệu là của phụ nữ [16]."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Đây là một bài toán phân lớp (“nên mời phỏng vấn” hay “không”). Máy đã học đúng quy luật có trong các nhãn cũ. Vấn đề là các nhãn cũ ấy mang sẵn sự thiên lệch."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Vì thế, khi một hệ thống phân lớp hoặc phân cụm được dùng cho con người, câu hỏi cần đặt ra là: nhãn do ai gắn, dựa trên gì; và người bị xếp nhóm có được biết, được giải thích, được phản đối không."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-nghiem-co-nhan-va-khong-co-nhan",
+   "title": "Trải nghiệm: Có nhãn và không có nhãn",
+   "kind": "experience",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Em vừa chơi hai trò chơi dữ liệu trên giấy. Bây giờ em xem máy làm phân lớp và phân cụm trên máy tính."
+      }
+     ]
+    },
+    {
+     "t": "box",
+     "kind": "tool",
+     "title": null,
+     "blocks": [
+      {
+       "t": "figure",
+       "src": "media/k11/image36.png",
+       "caption": null
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Công cụ:",
+         "b": true
+        },
+        {
+         "text": " Teachable Machine và trang mô phỏng phân cụm"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Địa chỉ:",
+         "b": true
+        },
+        {
+         "text": " teachablemachine.withgoogle.com (hoặc quét mã QR)"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Cách làm:",
+         "b": true
+        },
+        {
+         "text": " Em làm cùng nhóm trên máy của lớp (khoảng 8 phút)."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 1.",
+         "b": true
+        },
+        {
+         "text": " Em dùng Teachable Machine dạy máy nhận ra hai loại đồ vật mà em đã đặt tên sẵn."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 2.",
+         "b": true
+        },
+        {
+         "text": " Em mở trang mô phỏng phân cụm và xem máy tự gom các điểm thành nhóm."
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Bước 3.",
+         "b": true
+        },
+        {
+         "text": " Em so sánh: trong trường hợp nào con người phải gắn nhãn trước?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em nghĩ thêm:",
+         "b": true
+        },
+        {
+         "text": " Việc nào em vừa làm là phân lớp, việc nào là phân cụm? Vì sao?"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "inl": [
+        {
+         "text": "Em lưu ý:",
+         "b": true
+        },
+        {
+         "text": " Em không cần đăng nhập. Em chỉ chụp đồ vật."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ghi-nho",
+   "title": "Ghi nhớ",
+   "kind": "remember",
+   "blocks": [
+    {
+     "t": "figure",
+     "src": "media/k11/image37.png",
+     "caption": "Sơ đồ tư duy Bài 11.11."
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      {
+       "inl": [
+        {
+         "text": "Nhãn",
+         "b": true
+        },
+        {
+         "text": " là câu trả lời đúng gắn sẵn cho một mẫu dữ liệu."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phân lớp:",
+         "b": true
+        },
+        {
+         "text": " học từ ví dụ "
+        },
+        {
+         "text": "đã có nhãn",
+         "b": true
+        },
+        {
+         "text": " để xếp mẫu mới vào nhóm "
+        },
+        {
+         "text": "biết trước",
+         "b": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Phân cụm:",
+         "b": true
+        },
+        {
+         "text": " chia dữ liệu "
+        },
+        {
+         "text": "chưa có nhãn",
+         "b": true
+        },
+        {
+         "text": " thành các cụm gồm những mẫu giống nhau; máy tìm cụm, "
+        },
+        {
+         "text": "con người đặt tên",
+         "b": true
+        },
+        {
+         "text": " cụm."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Điểm ngoại lệ",
+         "b": true
+        },
+        {
+         "text": " nằm xa mọi cụm và thường đáng chú ý."
+        }
+       ],
+       "level": 0
+      },
+      {
+       "inl": [
+        {
+         "text": "Quy luật máy học được "
+        },
+        {
+         "text": "chỉ tốt bằng dữ liệu và nhãn",
+         "b": true
+        },
+        {
+         "text": " nó được xem. Khi xếp nhóm con người, cần đặc biệt cẩn trọng."
+        }
+       ],
+       "level": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luyen-tap",
+   "title": "Luyện tập",
+   "kind": "practice",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Trong trò “Lọc tin nhắn”, em bổ sung tin 11 vào bảng ví dụ với nhãn “Thường”. Quy luật cũ không còn khớp. Em đề xuất thêm một đặc điểm thứ tư để phân biệt tin 11 với các tin rác."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Một cửa hàng trà sữa ghi lại giờ đến và số tiền mỗi lần mua của 200 khách, rồi muốn “xem khách có những kiểu nào”. Đây là phân lớp hay phân cụm? Sau khi có kết quả, phần việc nào vẫn là của con người?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Cho sáu điểm (giờ tự học mỗi ngày, giờ dùng điện thoại mỗi ngày): (1, 5), (1, 6), (2, 5), (4, 1), (5, 1), (5, 2). Chấm lên giấy kẻ ô và khoanh cụm. Có mấy cụm? Thêm điểm (5, 6): em nhận xét gì?"
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Giải thích vì sao với phân lớp ta tính được “tỉ lệ đoán đúng”, còn với phân cụm thì khó nói “đúng bao nhiêu phần trăm”."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Một trường muốn dùng phân cụm trên dữ liệu điểm số và số buổi nghỉ để “tìm nhóm học sinh có nguy cơ”. Em nêu một lợi ích có thể có và hai điều nhà trường cần cẩn trọng."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "van-dung",
+   "title": "Vận dụng",
+   "kind": "apply",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Thu thập một bộ dữ liệu nhỏ của chính em hoặc của nhóm, khoảng 12 đến 15 mẫu, mỗi mẫu hai con số. Ví dụ: với mỗi bài hát trong danh sách yêu thích, ghi độ dài (phút) và mức sôi động em tự chấm (1 đến 10). Chấm lên giấy kẻ ô, khoanh cụm, đặt tên cho từng cụm và tìm điểm ngoại lệ. Viết ba dòng: cụm nào làm em bất ngờ; nếu đổi một đặc điểm thì em đoán các cụm thay đổi thế nào."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tu-danh-gia",
+   "title": "Tự đánh giá",
+   "kind": "selfcheck",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Em có thể…",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Chưa chắc",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm được",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Làm tốt, giúp được bạn",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Giải thích phân lớp, phân cụm bằng lời của mình"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân biệt hai bài toán dựa vào nhãn"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Khoanh cụm và chỉ ra điểm ngoại lệ trên một biểu đồ điểm"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nêu ứng dụng của mỗi loại và điều cần cẩn trọng khi dữ liệu là con người"
+          }
+         ]
+        }
+       ],
+       [],
+       [],
+       []
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thuat-ngu-cua-bai",
+   "title": "Thuật ngữ của bài",
+   "kind": "glossary",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Thuật ngữ",
+          "b": true
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "inl": [
+         {
+          "text": "Giải thích",
+          "b": true
+         }
+        ]
+       }
+      ]
+     ],
+     "rows": [
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Nhãn"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Câu trả lời đúng gắn sẵn cho một mẫu dữ liệu"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Đặc điểm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Thông tin được dùng để mô tả một mẫu (có liên kết lạ không, số giờ, số sách…)"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân lớp"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Xếp mẫu mới vào nhóm biết trước, dựa trên ví dụ có nhãn"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Phân cụm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Chia dữ liệu chưa có nhãn thành các nhóm gồm những mẫu giống nhau"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Cụm"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Một nhóm do phân cụm tìm ra"
+          }
+         ]
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Điểm ngoại lệ"
+          }
+         ]
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "inl": [
+          {
+           "text": "Mẫu nằm xa mọi cụm, khác hẳn phần còn lại"
+          }
+         ]
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "goi-y-tra-loi-phan-luyen-tap",
+   "title": "Gợi ý trả lời phần Luyện tập",
+   "kind": "answers",
+   "blocks": [
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 1.",
+       "b": true
+      },
+      {
+       "text": " Ví dụ: “người gửi có trong danh bạ hay không”, hoặc “đường liên kết có thuộc địa chỉ quen thuộc của trường, lớp hay không”. Tin 11 đến từ người gửi quen; các tin rác đến từ số lạ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 2.",
+       "b": true
+      },
+      {
+       "text": " Phân cụm, vì chưa có nhãn và chưa biết trước có những nhóm nào. Việc của con người: chọn đặc điểm để ghi, quyết định số cụm, đặt tên và diễn giải từng cụm, quyết định dùng kết quả vào việc gì."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 3.",
+       "b": true
+      },
+      {
+       "text": " Hai cụm: {(1, 5), (1, 6), (2, 5)} là học ít, dùng điện thoại nhiều; {(4, 1), (5, 1), (5, 2)} là học nhiều, dùng điện thoại ít. Điểm (5, 6) nằm xa cả hai cụm: điểm ngoại lệ, một bạn vừa học nhiều vừa dùng điện thoại nhiều (có thể học bằng điện thoại)."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 4.",
+       "b": true
+      },
+      {
+       "text": " Phân lớp có nhãn đúng để so từng dự đoán nên đếm được đúng, sai. Phân cụm không có nhãn; chia thành mấy cụm là lựa chọn, nên chỉ đánh giá được cụm có hợp lí và hữu ích hay không."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Bài 5.",
+       "b": true
+      },
+      {
+       "text": " Lợi ích: sớm nhận ra nhóm bạn cần hỗ trợ. Cẩn trọng: không biến cụm thành nhãn dán lên học sinh, kết quả chỉ để thầy cô tìm hiểu thêm chứ không tự động kết luận; điểm số và số buổi nghỉ không nói hết hoàn cảnh; dữ liệu là dữ liệu cá nhân, cần bảo mật và minh bạch với học sinh, cha mẹ."
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "inl": [
+      {
+       "text": "Nguồn của bài: [16] trong danh mục Nguồn tham khảo cuối sách.",
+       "i": true
+      }
+     ],
+     "cls": "sources"
+    }
+   ]
+  }
+ ]
+}

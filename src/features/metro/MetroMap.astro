@@ -1,0 +1,228 @@
+---
+// Bản đồ tuyến AI: 36 bài là 36 ga. Máy tính xem bản đồ ngang, điện thoại xem tuyến dọc.
+import { GRADES, getGrade, lessonsOfTopic } from '../../lib/content';
+import { labsFor } from '../labs/registry';
+import { getWorksheet } from '../worksheet/registry';
+import { layoutMetro, type MetroGradeInput } from './layout';
+import './metro.css';
+
+const grades: MetroGradeInput[] = GRADES.map((g) => ({
+  grade: g,
+  topics: getGrade(g).topics.map((t) => ({
+    id: t.id,
+    title: t.title,
+    lessons: lessonsOfTopic(t.id).map((l) => ({ slug: l.slug, id: l.id, title: l.title })),
+  })),
+}));
+const map = layoutMetro(grades);
+const topicOf = (id: string) => GRADES.flatMap((g) => getGrade(g).topics).find((t) => t.id === id)!;
+const blurb = (topicId: string, lessonId: string) => topicOf(topicId).lessonBlurbs[lessonId] ?? '';
+const firstOfGrade = new Set(grades.map((g) => g.topics[0]?.lessons[0]?.slug));
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (slug: string) => `${base}/bai/${slug}`;
+
+/** Ngắt tiêu đề chuyên đề thành tối đa 2 dòng cho nhãn trên bản đồ. */
+function twoLines(text: string, max = 30): string[] {
+  const words = text.split(' ');
+  const lines: string[] = [''];
+  for (const w of words) {
+    const cur = lines[lines.length - 1];
+    if ((cur + ' ' + w).trim().length > max && lines.length < 2) lines.push(w);
+    else lines[lines.length - 1] = (cur + ' ' + w).trim();
+  }
+  return lines;
+}
+---
+
+<section class="metro" aria-labelledby="metro-h" data-metro>
+  <div class="metro-head">
+    <div>
+      <p class="mono metro-kicker">Bản đồ tuyến · 36 ga · 3 năm học</p>
+      <h2 id="metro-h" class="display">Hành trình của em</h2>
+    </div>
+    <ul class="metro-legend" aria-label="Chú giải">
+      <li><span class="lg lg-done"></span>Đã học</li>
+      <li><span class="lg lg-started"></span>Đang học</li>
+      <li><span class="lg lg-new"></span>Chưa học</li>
+      <li><span class="lg lg-lab">◆</span>Có mô phỏng</li>
+    </ul>
+  </div>
+
+  <div class="metro-canvas">
+    <svg viewBox={`0 0 ${map.width} ${map.height}`} role="img" aria-label="Bản đồ 36 bài học của ba khối lớp">
+      <defs>
+        {
+          map.bends.map((b) => (
+            <linearGradient id={`bend-${b.from}`} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color={`var(--g${b.from})`} />
+              <stop offset="1" stop-color={`var(--g${b.to})`} />
+            </linearGradient>
+          ))
+        }
+      </defs>
+      {map.bends.map((b) => <path class="m-bend" d={b.d} stroke={`url(#bend-${b.from})`} />)}
+      {map.lines.map((l) => <path class="m-line" d={l.d} style={`--lc:var(--g${l.grade})`} />)}
+      {map.lines.map((l) => <path class="m-line-progress" d={l.d} style={`--lc:var(--g${l.grade})`} data-line={l.grade} />)}
+      {
+        map.topics.map((t) => (
+          <text class="m-topic" x={t.x} y={t.y - 14} text-anchor="middle" style={`--lc:var(--g${t.grade})`}>
+            <tspan class="m-topic-id" x={t.x}>CĐ {t.id}</tspan>
+            {twoLines(t.title).map((line, i) => (
+              <tspan x={t.x} dy={i === 0 ? 15 : 13}>
+                {line}
+              </tspan>
+            ))}
+          </text>
+        ))
+      }
+      {
+        map.stations.map((s) => {
+          const labs = labsFor(s.slug).length;
+          const ws = Boolean(getWorksheet(s.slug));
+          return (
+            <a
+              class={`m-st ${s.isTerminal ? 'is-terminal' : ''}`}
+              href={href(s.slug)}
+              data-slug={s.slug}
+              data-id={s.id}
+              data-title={s.title}
+              data-topic={`Chuyên đề ${s.topicId}`}
+              data-blurb={blurb(s.topicId, s.id)}
+              data-labs={labs}
+              data-ws={ws ? '1' : ''}
+              style={`--lc:var(--g${s.grade})`}
+              aria-label={`Bài ${s.id}. ${s.title}${labs ? `. Có ${labs} mô phỏng` : ''}`}
+            >
+              <g transform={`translate(${s.x} ${s.y})`}>
+                <circle class="m-halo" r="22" />
+                <circle class="m-dot" r={s.isTerminal ? 11 : 8.5} />
+                <circle class="m-core" r={s.isTerminal ? 4.5 : 3.2} />
+                {labs > 0 && <path class="m-lab" d="M0 -27 l6 6 -6 6 -6 -6z" />}
+                {firstOfGrade.has(s.slug) ? (
+                  <text class="m-start" y="34" text-anchor="middle">
+                    LỚP {s.grade}
+                  </text>
+                ) : (
+                  <text class="m-num" y="32" text-anchor="middle">
+                    {s.id}
+                  </text>
+                )}
+              </g>
+            </a>
+          );
+        })
+      }
+    </svg>
+    <div class="m-card" role="tooltip" hidden data-metro-card>
+      <p class="mono m-card-meta"></p>
+      <p class="m-card-title"></p>
+      <p class="m-card-blurb"></p>
+      <p class="m-card-tags"></p>
+    </div>
+  </div>
+
+  <ol class="metro-list" aria-label="Danh sách bài theo tuyến">
+    {
+      grades.map((g) => (
+        <li class="ml-grade" style={`--lc:var(--g${g.grade})`}>
+          <p class="ml-grade-name display">Lớp {g.grade}</p>
+          <ol>
+            {g.topics.map((t) => (
+              <li class="ml-topic">
+                <p class="mono ml-topic-name">
+                  CĐ {t.id} · {t.title}
+                </p>
+                <ol>
+                  {t.lessons.map((l) => (
+                    <li>
+                      <a class="ml-st" href={href(l.slug)} data-slug={l.slug}>
+                        <span class="ml-dot" aria-hidden="true" />
+                        <span class="mono ml-num">{l.id}</span>
+                        <span class="ml-title">{l.title}</span>
+                        {labsFor(l.slug).length > 0 && (
+                          <span class="ml-lab" title="Có mô phỏng">
+                            ◆
+                          </span>
+                        )}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </li>
+            ))}
+          </ol>
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<script>
+  import { loadProgress, PROGRESS_EVENT } from '../progress/store';
+  import { continueTarget, lessonStatus } from '../progress/progress';
+  import { lessonHref, readLessonOrder } from '../progress/links';
+
+  const root = document.querySelector<HTMLElement>('[data-metro]');
+  if (root) {
+    const order = readLessonOrder();
+    const total = (slug: string) => order.find((o) => o.slug === slug)?.sections ?? 0;
+
+    const paint = () => {
+      const p = loadProgress();
+      const current = continueTarget(p, order);
+      root.querySelectorAll<HTMLElement | SVGElement>('[data-slug]').forEach((el) => {
+        const slug = el.dataset.slug!;
+        el.classList.remove('is-done', 'is-started', 'is-current');
+        const st = lessonStatus(p, slug, total(slug));
+        if (st !== 'new') el.classList.add(`is-${st}`);
+        if (slug === current) el.classList.add('is-current');
+        el.setAttribute('href', lessonHref(slug));
+      });
+      // phần tuyến đã đi qua: tô đậm tới ga cuối cùng đã học của mỗi khối
+      root.querySelectorAll<SVGPathElement>('[data-line]').forEach((path) => {
+        const grade = path.dataset.line;
+        const slugs = order.filter((o) => o.slug.startsWith(`bai-${grade}-`));
+        let reached = -1;
+        slugs.forEach((o, i) => {
+          if (lessonStatus(p, o.slug, o.sections) !== 'new') reached = i;
+        });
+        const len = path.getTotalLength();
+        const frac = slugs.length > 1 ? Math.max(0, reached) / (slugs.length - 1) : 0;
+        path.style.strokeDasharray = `${len}`;
+        path.style.strokeDashoffset = `${reached < 0 ? len : len * (1 - frac)}`;
+      });
+    };
+    paint();
+    window.addEventListener(PROGRESS_EVENT, paint);
+
+    // thẻ xem nhanh khi rê chuột hoặc dùng phím Tab vào một ga
+    const card = root.querySelector<HTMLElement>('[data-metro-card]')!;
+    const canvas = root.querySelector<HTMLElement>('.metro-canvas')!;
+    const set = (sel: string, text: string) => (card.querySelector(sel)!.textContent = text);
+    const show = (st: SVGAElement) => {
+      const d = st.dataset;
+      const status = st.classList.contains('is-done') ? ' · đã học' : st.classList.contains('is-started') ? ' · đang học' : '';
+      set('.m-card-meta', `Bài ${d.id} · ${d.topic}${status}`);
+      set('.m-card-title', d.title ?? '');
+      set('.m-card-blurb', d.blurb ?? '');
+      const tags = [Number(d.labs) ? `◆ ${d.labs} mô phỏng` : '', d.ws ? '▣ Phiếu học tập' : ''].filter(Boolean).join('   ');
+      set('.m-card-tags', tags);
+      card.style.setProperty('--lc', st.style.getPropertyValue('--lc'));
+      card.hidden = false;
+      const a = st.getBoundingClientRect();
+      const c = canvas.getBoundingClientRect();
+      const w = card.offsetWidth;
+      const left = Math.min(Math.max(a.left - c.left + a.width / 2 - w / 2, 0), c.width - w);
+      const below = a.top - c.top < c.height / 2;
+      card.style.left = `${left}px`;
+      card.style.top = below ? `${a.bottom - c.top + 6}px` : `${a.top - c.top - card.offsetHeight - 6}px`;
+    };
+    const hide = () => (card.hidden = true);
+    root.querySelectorAll<SVGAElement>('.m-st').forEach((st) => {
+      st.addEventListener('pointerenter', () => show(st));
+      st.addEventListener('focus', () => show(st));
+      st.addEventListener('pointerleave', hide);
+      st.addEventListener('blur', hide);
+    });
+  }
+</script>

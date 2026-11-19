@@ -1,0 +1,26 @@
+---
+// Bộ biểu tượng nét đơn dùng chung cho giao diện v2 (tự vẽ, không phụ thuộc thư viện ngoài).
+interface Props {
+  name: 'map' | 'play' | 'flask' | 'book' | 'sun' | 'moon' | 'list' | 'arrow' | 'check' | 'search' | 'teacher' | 'close';
+  size?: number;
+}
+const { name, size = 20 } = Astro.props;
+const PATHS: Record<Props['name'], string> = {
+  map: 'M4 6h7a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h11M4 6a1.5 1.5 0 1 0 0 .01M20 18a1.5 1.5 0 1 0 0 .01',
+  play: 'M7 5v14l11-7z',
+  flask: 'M9 3h6M10 3v6L4.5 18.5A1.6 1.6 0 0 0 6 21h12a1.6 1.6 0 0 0 1.5-2.5L14 9V3M7.5 15h9',
+  book: 'M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5',
+  sun: 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4',
+  moon: 'M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z',
+  list: 'M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01',
+  arrow: 'M5 12h14M13 6l6 6-6 6',
+  check: 'M5 12.5l4.5 4.5L19 7',
+  search: 'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-4-4',
+  teacher: 'M3 4h18v11H3zM8 21l4-6 4 6M7 9h6',
+  close: 'M6 6l12 12M18 6L6 18',
+};
+---
+
+<svg class="icon" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d={PATHS[name]} fill={name === 'play' ? 'currentColor' : 'none'} />
+</svg>

@@ -1,0 +1,137 @@
+---
+import BaseV2 from '../../layouts/BaseV2.astro';
+import Icon from '../../components/v2/Icon.astro';
+import MetroMap from '../../features/metro/MetroMap.astro';
+import LabPoster from '../../features/labs/LabPoster.astro';
+import LiveNet from '../../features/hero/LiveNet';
+import { LAB_PLACEMENTS } from '../../features/labs/registry';
+import { worksheets } from '../../features/worksheet/registry';
+import { lessons, url } from '../../lib/content';
+import '../../styles/v2/home.css';
+
+const labs = Object.entries(LAB_PLACEMENTS).flatMap(([slug, list]) => list.map((l) => ({ ...l, slug, lesson: lessons.find((x) => x.slug === slug)! })));
+// mô phỏng nổi bật nhất đứng đầu bộ sưu tập
+const featured = labs.find((l) => l.key === 'network-playground')!;
+const others = labs.filter((l) => l !== featured);
+const lessonHref = (slug: string) => url(slug === 'bai-11-10' ? `ban-mau/${slug}/` : `bai/${slug}`);
+const first = lessons[0];
+---
+
+<BaseV2 title="Bản mẫu trang chủ" active="home" proto="home">
+  <section class="h-hero v2-wrap">
+    <div class="h-copy">
+      <p class="mono h-kicker">Chuyên đề Giáo dục trí tuệ nhân tạo · THPT · Lớp 10–12</p>
+      <h1 class="h-title">Học AI bằng cách <span class="marker">chạm vào nó</span>.</h1>
+      <p class="h-lead">
+        36 bài học từ tài liệu của Tổ Tin học, đi kèm mô phỏng chạy ngay trên trình duyệt. Em kéo, bấm, huấn luyện, rồi tự kiểm tra bằng phiếu học tập. Không cần tài khoản.
+      </p>
+      <div class="h-continue" data-continue-card>
+        <p class="mono h-continue-label" data-cc-label>Bắt đầu hành trình</p>
+        <a class="h-continue-link" href={url(`bai/${first.slug}`)} data-cc-link>
+          <span class="h-continue-num mono" data-cc-num>{first.id}</span>
+          <span class="h-continue-title" data-cc-title>{first.title}</span>
+          <Icon name="arrow" />
+        </a>
+      </div>
+      <div class="h-ctas">
+        <a class="v2-btn" href="#metro-h"><Icon name="map" size={18} /> Xem bản đồ tuyến</a>
+        <a class="v2-btn" href="#thi-nghiem"><Icon name="flask" size={18} /> Phòng thí nghiệm</a>
+      </div>
+    </div>
+    <div class="h-visual">
+      <p class="h-note" aria-hidden="true">
+        <span>bấm vào đây để chấm điểm —<br />mạng nơ-ron đang học thật</span>
+        <svg width="54" height="40" viewBox="0 0 54 40"><path d="M4 6c18 0 34 6 42 26m0 0l-9-5m9 5l2-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+      </p>
+      <LiveNet client:visible />
+    </div>
+  </section>
+
+  <section class="h-facts v2-wrap" aria-label="Số liệu nhanh">
+    <dl>
+      <div><dt>ga trên bản đồ</dt><dd class="display">36</dd></div>
+      <div><dt>mô phỏng chạy trên máy em</dt><dd class="display">{labs.length}</dd></div>
+      <div><dt>phiếu học tập nộp bằng QR</dt><dd class="display">{worksheets.length}</dd></div>
+      <div><dt>tài khoản cần tạo</dt><dd class="display">0</dd></div>
+    </dl>
+  </section>
+
+  <div class="v2-wrap">
+    <MetroMap />
+  </div>
+
+  <section class="h-labs v2-wrap" aria-labelledby="thi-nghiem">
+    <div class="h-sec-head">
+      <p class="mono metro-kicker">Phòng thí nghiệm</p>
+      <h2 id="thi-nghiem" class="display">Đọc lí thuyết xong, thử ngay</h2>
+      <p class="muted">Mỗi mô phỏng nằm đúng chỗ trong bài học. Không cài đặt, không gửi dữ liệu đi đâu.</p>
+    </div>
+    <div class="h-bento">
+      <a class="h-lab h-lab-featured" href={`${lessonHref(featured.slug)}#lab-${featured.key}`} style={`--lc:var(--g${featured.lesson.grade})`}>
+        <div class="h-lab-poster"><LabPoster lab={featured.key} /></div>
+        <div class="h-lab-text">
+          <p class="mono h-lab-tag">Bài {featured.lesson.id} · Mô phỏng nổi bật</p>
+          <h3>{featured.title.split(': ')[1] ?? featured.title}</h3>
+          <p>{featured.description}</p>
+          <span class="h-lab-go">Mở trong bài <Icon name="arrow" size={16} /></span>
+        </div>
+      </a>
+      {
+        others.map((l) => (
+          <a class="h-lab" href={`${lessonHref(l.slug)}#lab-${l.key}`} style={`--lc:var(--g${l.lesson.grade})`}>
+            <div class="h-lab-poster">
+              <LabPoster lab={l.key} />
+            </div>
+            <div class="h-lab-text">
+              <p class="mono h-lab-tag">Bài {l.lesson.id}</p>
+              <h3>{l.title.split(': ')[1] ?? l.title}</h3>
+              <p>{l.description}</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="h-roles v2-wrap" aria-label="Cách dùng website">
+    <article class="h-role h-role-student">
+      <p class="mono">Dành cho em</p>
+      <h2 class="display">Ba bước mỗi bài</h2>
+      <ol>
+        <li><b>Đọc</b> đến các thẻ <em>Khái niệm</em> và <em>Dễ nhầm</em> thì dừng lại nghĩ một chút.</li>
+        <li><b>Thử</b> mô phỏng: kéo, bấm, huấn luyện, xem điều gì thay đổi.</li>
+        <li><b>Tự kiểm tra</b> bằng phiếu học tập, rồi đưa mã QR cho thầy cô.</li>
+      </ol>
+      <p class="small muted">Tiến độ của em hiện trên bản đồ và chỉ lưu trên máy này.</p>
+    </article>
+    <article class="h-role h-role-teacher">
+      <p class="mono">Dành cho thầy cô</p>
+      <h2 class="display">Lên lớp không cần chuẩn bị thêm</h2>
+      <ol>
+        <li>Bật chế độ <b>Giáo viên</b> để hiện tiến trình 45 phút, slide và phiếu ra cửa.</li>
+        <li>Chiếu mô phỏng cho cả lớp bằng chế độ trình chiếu.</li>
+        <li>Quét mã QR của học sinh ở trang <a href={url('giao-vien/tong-hop-phieu')}>Tổng hợp phiếu</a> để xem mức đạt từng mục tiêu.</li>
+      </ol>
+    </article>
+  </section>
+</BaseV2>
+
+<script>
+  import { loadProgress } from '../../features/progress/store';
+  import { continueTarget, lessonStatus } from '../../features/progress/progress';
+  import { lessonHref, readLessonOrder } from '../../features/progress/links';
+
+  const order = readLessonOrder();
+  const p = loadProgress();
+  const slug = continueTarget(p, order);
+  const item = order.find((o) => o.slug === slug);
+  if (item) {
+    const status = lessonStatus(p, item.slug, item.sections);
+    const done = order.filter((o) => lessonStatus(p, o.slug, o.sections) === 'done').length;
+    const q = <T extends HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
+    q('[data-cc-label]').textContent = `${status === 'started' ? 'Học tiếp' : 'Ga tiếp theo'} · đã qua ${done}/36 ga`;
+    q('[data-cc-num]').textContent = item.id;
+    q('[data-cc-title]').textContent = item.title;
+    q<HTMLAnchorElement>('[data-cc-link]').href = lessonHref(item.slug);
+  }
+</script>

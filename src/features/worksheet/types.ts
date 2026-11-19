@@ -97,3 +97,6 @@ export interface WorksheetResult {
   questions: QuestionResult[];
   objectives: ObjectiveResult[];
 }
+
+/** Bốn mức tự tin học sinh tự chọn cho mỗi mục tiêu. */
+export const CONFIDENCE = ['Chưa hiểu', 'Hiểu một phần', 'Hiểu', 'Giải thích được cho bạn'] as const;

@@ -1,0 +1,318 @@
+---
+// Áp phích động nhỏ cho từng mô phỏng (SVG thuần, tự dừng khi máy bật giảm chuyển động).
+import type { LabKey } from './registry';
+interface Props {
+  lab: LabKey;
+}
+const { lab } = Astro.props;
+---
+
+<svg class={`poster poster-${lab}`} viewBox="0 0 240 150" aria-hidden="true">
+  {
+    lab === 'traffic-light' && (
+      <g>
+        <rect x="96" y="14" width="48" height="122" rx="14" class="p-ink-fill" />
+        <circle cx="120" cy="40" r="13" class="p-light p-red" />
+        <circle cx="120" cy="75" r="13" class="p-light p-yellow" />
+        <circle cx="120" cy="110" r="13" class="p-light p-green" />
+        <g class="p-card p-card-1"><rect x="18" y="34" width="62" height="38" rx="6" /><path d="M28 48h40M28 58h26" /></g>
+        <g class="p-card p-card-2"><rect x="160" y="76" width="62" height="38" rx="6" /><path d="M170 90h40M170 100h26" /></g>
+      </g>
+    )
+  }
+  {
+    lab === 'recycling-station' && (
+      <g class="p-iso">
+        <path d="M120 22l60 30-60 30-60-30z" class="p-top" />
+        <path d="M60 52v40l60 30V82z" class="p-left" />
+        <path d="M180 52v40l-60 30V82z" class="p-right" />
+        <circle cx="120" cy="52" r="9" class="p-gear" />
+        <g class="p-drop"><rect x="114" y="-6" width="12" height="12" rx="3" /></g>
+        <rect x="28" y="112" width="34" height="26" rx="4" class="p-bin p-bin-a" />
+        <rect x="103" y="128" width="34" height="18" rx="4" class="p-bin p-bin-b" />
+        <rect x="178" y="112" width="34" height="26" rx="4" class="p-bin p-bin-c" />
+      </g>
+    )
+  }
+  {
+    lab === 'image-trainer' && (
+      <g>
+        <path d="M40 30h-16v16M200 30h16v16M40 120h-16v-16M200 120h16v-16" class="p-corner" />
+        <circle cx="96" cy="75" r="26" class="p-obj" />
+        <g class="p-bars">
+          <rect x="140" y="52" width="60" height="9" rx="4" class="p-bar p-bar-1" />
+          <rect x="140" y="70" width="60" height="9" rx="4" class="p-bar p-bar-2" />
+          <rect x="140" y="88" width="60" height="9" rx="4" class="p-bar p-bar-3" />
+        </g>
+        <circle cx="200" cy="24" r="5" class="p-rec" />
+      </g>
+    )
+  }
+  {
+    lab === 'neuron' && (
+      <g>
+        <path d="M30 35L120 75M30 75H120M30 115L120 75" class="p-wire" />
+        <path d="M30 35L120 75M30 75H120M30 115L120 75" class="p-signal" />
+        <circle cx="30" cy="35" r="10" class="p-in" />
+        <circle cx="30" cy="75" r="10" class="p-in p-in-off" />
+        <circle cx="30" cy="115" r="10" class="p-in" />
+        <circle cx="120" cy="75" r="26" class="p-soma" />
+        <text x="120" y="80" text-anchor="middle" class="p-sum">Σ ≥ 5</text>
+        <path d="M146 75H200" class="p-wire" />
+        <circle cx="210" cy="75" r="11" class="p-out" />
+      </g>
+    )
+  }
+  {
+    lab === 'network-playground' && (
+      <g>
+        <rect x="14" y="10" width="212" height="130" rx="10" class="p-field" />
+        <path d="M14 110C70 100 80 40 130 45S200 110 226 60V140H14z" class="p-region" />
+        {[
+          [40, 40, 0],
+          [70, 30, 0],
+          [190, 30, 0],
+          [160, 120, 1],
+          [60, 125, 1],
+          [120, 100, 1],
+          [205, 120, 1],
+          [100, 60, 0],
+        ].map(([x, y, l]) => (
+          <circle cx={x} cy={y} r="6" class={l ? 'p-pt-b' : 'p-pt-a'} />
+        ))}
+      </g>
+    )
+  }
+</svg>
+
+<style>
+  .poster {
+    display: block;
+    width: 100%;
+    height: auto;
+    --pa: var(--g10);
+    --pb: var(--accent);
+  }
+  .poster :global(*) {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .p-ink-fill {
+    fill: var(--ink);
+  }
+  .p-light {
+    opacity: 0.25;
+    animation: p-blink 3.6s infinite;
+  }
+  .p-red {
+    fill: #e5484d;
+    animation-delay: 2.4s;
+  }
+  .p-yellow {
+    fill: #f5b700;
+    animation-delay: 1.2s;
+  }
+  .p-green {
+    fill: #30a46c;
+  }
+  @keyframes p-blink {
+    0%,
+    30% {
+      opacity: 1;
+    }
+    34%,
+    100% {
+      opacity: 0.22;
+    }
+  }
+  .p-card rect,
+  .p-bin,
+  .p-field {
+    fill: var(--card);
+    stroke: var(--ink);
+    stroke-width: 1.5;
+  }
+  .p-card path {
+    stroke: var(--ink-3);
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+  .p-card-1 {
+    animation: p-float 4s ease-in-out infinite;
+  }
+  .p-card-2 {
+    animation: p-float 4s ease-in-out -2s infinite;
+  }
+  @keyframes p-float {
+    50% {
+      transform: translateY(-6px) rotate(-3deg);
+    }
+  }
+  .p-top {
+    fill: var(--card);
+    stroke: var(--ink);
+    stroke-width: 1.5;
+  }
+  .p-left {
+    fill: var(--pa);
+    opacity: 0.8;
+    stroke: var(--ink);
+    stroke-width: 1.5;
+  }
+  .p-right {
+    fill: var(--pa);
+    opacity: 0.55;
+    stroke: var(--ink);
+    stroke-width: 1.5;
+  }
+  .p-gear {
+    fill: none;
+    stroke: var(--pb);
+    stroke-width: 4;
+    stroke-dasharray: 4 3;
+    animation: p-spin 4s linear infinite;
+  }
+  @keyframes p-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .p-drop rect {
+    fill: var(--pb);
+  }
+  .p-drop {
+    animation: p-fall 2.4s var(--ease) infinite;
+  }
+  @keyframes p-fall {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    70%,
+    100% {
+      transform: translateY(46px);
+      opacity: 0;
+    }
+  }
+  .p-bin-b {
+    fill: var(--pb);
+  }
+  .p-corner,
+  .p-wire {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+  .p-obj {
+    fill: var(--pa);
+    opacity: 0.85;
+    stroke: var(--ink);
+    stroke-width: 1.5;
+  }
+  .p-bar {
+    fill: var(--pb);
+    transform-origin: left center;
+  }
+  .p-bar-1 {
+    animation: p-grow 3s var(--ease) infinite;
+  }
+  .p-bar-2 {
+    fill: var(--ink-3);
+    animation: p-shrink 3s var(--ease) infinite;
+  }
+  .p-bar-3 {
+    fill: var(--ink-3);
+    transform: scaleX(0.2);
+  }
+  @keyframes p-grow {
+    0% {
+      transform: scaleX(0.3);
+    }
+    60%,
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  @keyframes p-shrink {
+    0% {
+      transform: scaleX(0.7);
+    }
+    60%,
+    100% {
+      transform: scaleX(0.25);
+    }
+  }
+  .p-rec {
+    fill: #e5484d;
+    animation: p-blink 1.6s infinite;
+  }
+  .p-signal {
+    fill: none;
+    stroke: var(--pb);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 10 120;
+    animation: p-flow 1.8s linear infinite;
+  }
+  @keyframes p-flow {
+    from {
+      stroke-dashoffset: 130;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .p-in {
+    fill: var(--pb);
+    stroke: var(--ink);
+    stroke-width: 1.5;
+  }
+  .p-in-off {
+    fill: var(--card);
+  }
+  .p-soma {
+    fill: var(--card);
+    stroke: var(--ink);
+    stroke-width: 2;
+  }
+  .p-sum {
+    font-family: var(--f-mono);
+    font-size: 13px;
+    font-weight: 600;
+    fill: var(--ink);
+  }
+  .p-out {
+    fill: var(--pa);
+    stroke: var(--ink);
+    stroke-width: 1.5;
+    animation: p-blink 1.8s infinite;
+  }
+  .p-region {
+    fill: var(--pb);
+    opacity: 0.18;
+    animation: p-morph 5s ease-in-out infinite alternate;
+  }
+  @keyframes p-morph {
+    from {
+      transform: translateY(14px) scaleY(0.85);
+    }
+    to {
+      transform: none;
+    }
+  }
+  .p-pt-a,
+  .p-pt-b {
+    stroke: var(--ink);
+    stroke-width: 1.5;
+  }
+  .p-pt-a {
+    fill: var(--pa);
+  }
+  .p-pt-b {
+    fill: var(--pb);
+  }
+</style>

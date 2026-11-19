@@ -1,0 +1,278 @@
+.wsx {
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  border-radius: var(--r-3, 20px);
+  box-shadow: 8px 8px 0 var(--ink);
+  overflow: hidden;
+}
+.wsx-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px 24px;
+  padding: 20px 24px 16px;
+  border-bottom: 1px dashed var(--rule);
+  background:
+    linear-gradient(var(--paper-grid, rgb(0 0 0 / 5%)) 1px, transparent 1px) 0 0 / 100% 22px,
+    var(--card);
+}
+.wsx-kicker {
+  margin: 0;
+  color: var(--accent);
+}
+.wsx-title {
+  margin: 4px 0 0;
+  font-family: var(--f-display, inherit);
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  letter-spacing: -0.01em;
+}
+.wsx-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.wsx-dots button {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--ink-3, #888);
+  background: var(--card);
+  cursor: pointer;
+  transition: transform 160ms;
+}
+.wsx-dots button.is-part {
+  border-radius: 3px;
+}
+.wsx-dots button.is-done {
+  background: var(--ink-3, #888);
+}
+.wsx-dots button.is-at {
+  border-color: var(--accent);
+  transform: scale(1.35);
+}
+.wsx-dots button.is-at.is-done {
+  background: var(--accent);
+}
+
+.wsx-body {
+  padding: 22px 24px 8px;
+  min-height: 320px;
+  outline: none;
+  animation: wsx-in 260ms var(--ease, ease-out);
+}
+@keyframes wsx-in {
+  from {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+}
+.wsx-step {
+  margin: 0 0 10px;
+  color: var(--ink-3, #888);
+}
+.wsx-h {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+}
+.wsx-body .ws-q {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+.wsx-body .ws-q .ws-prompt {
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+.wsx-goals {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: grid;
+  gap: 6px;
+}
+.wsx-goals li {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 6px;
+}
+.wsx-goals .mono {
+  color: var(--accent);
+  font-weight: 600;
+  padding-top: 3px;
+}
+.wsx-review {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 6px;
+}
+.wsx-review button {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  font-size: 0.92rem;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px dashed var(--rule);
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+}
+.wsx-review li.is-done button {
+  border-style: solid;
+  background: color-mix(in srgb, var(--ok, green) 10%, var(--card));
+}
+.wsx-review em {
+  color: var(--accent);
+  font-style: normal;
+  font-size: 0.8rem;
+}
+.wsx-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 24px 20px;
+}
+.wsx-nav .v2-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+  transform: none;
+}
+
+/* ---------- thẻ thành tích ---------- */
+.wsx-card {
+  padding: 24px;
+  background:
+    repeating-linear-gradient(-45deg, transparent 0 14px, color-mix(in srgb, var(--accent) 6%, transparent) 14px 15px),
+    var(--card);
+  border-bottom: 1px dashed var(--rule);
+}
+.wsx-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.wsx-card-head p {
+  margin: 0;
+}
+.wsx-card-head .mono {
+  color: var(--accent);
+}
+.wsx-card-who {
+  font-weight: 700;
+}
+.wsx-stamps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.wsx-stamp {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+.wsx-seal {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border: 3px solid var(--sc);
+  color: var(--sc);
+  transform: rotate(-8deg);
+  box-shadow: inset 0 0 0 4px var(--card), inset 0 0 0 5.5px var(--sc);
+  animation: wsx-stamp 420ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+.wsx-stamp:nth-child(2) .wsx-seal {
+  animation-delay: 140ms;
+  transform: rotate(5deg);
+}
+.wsx-stamp:nth-child(3) .wsx-seal {
+  animation-delay: 280ms;
+  transform: rotate(-3deg);
+}
+@keyframes wsx-stamp {
+  from {
+    opacity: 0;
+    scale: 1.8;
+  }
+}
+.wsx-seal .mono {
+  font-size: 0.7rem;
+}
+.wsx-seal b {
+  font-size: 0.95rem;
+  line-height: 1.05;
+  max-width: 62px;
+  margin: 0 auto;
+}
+.wsx-stamp.is-tot {
+  --sc: var(--ok, #1f7a4a);
+}
+.wsx-stamp.is-tot .wsx-seal {
+  background: color-mix(in srgb, var(--sc) 12%, var(--card));
+}
+.wsx-stamp.is-dat {
+  --sc: var(--primary, #1d5f86);
+}
+.wsx-stamp.is-chua-dat {
+  --sc: var(--ink-3, #888);
+}
+.wsx-stamp.is-chua-dat .wsx-seal {
+  border-style: dashed;
+}
+.wsx-stamp-text {
+  display: grid;
+  gap: 2px;
+  line-height: 1.45;
+}
+.wsx-stamp-text .mono {
+  color: var(--ink-3, #888);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.wsx-card-foot {
+  margin: 18px 0 0;
+  font-size: 0.92rem;
+  color: var(--ink-2, #555);
+}
+.wsx .ws-result {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+}
+@media (max-width: 560px) {
+  .wsx-head,
+  .wsx-body,
+  .wsx-nav,
+  .wsx-card {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .wsx-stamp {
+    grid-template-columns: 72px 1fr;
+  }
+  .wsx-seal {
+    width: 72px;
+    height: 72px;
+  }
+  .wsx-seal b {
+    font-size: 0.86rem;
+  }
+}

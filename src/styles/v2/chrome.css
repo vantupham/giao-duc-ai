@@ -1,0 +1,325 @@
+/* Khung trang v2: nền giấy kẻ ô, đầu trang, thanh tab trên điện thoại, chân trang, thanh bản mẫu. */
+
+body.v2 {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--paper-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--paper-grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -1px -1px;
+  color: var(--ink);
+  font-family: var(--f-body);
+  padding-bottom: var(--tabbar-h);
+}
+
+body.v2 :focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+body.v2 h1,
+body.v2 h2,
+body.v2 .display {
+  font-family: var(--f-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+}
+
+.mono {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.v2-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 40px);
+}
+
+/* ---------- thanh bản mẫu ---------- */
+.proto-bar {
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.8rem;
+}
+.proto-bar .v2-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  min-height: 36px;
+  padding-block: 4px;
+}
+.proto-bar strong {
+  font-family: var(--f-mono);
+  letter-spacing: 0.08em;
+  color: var(--marker);
+}
+.proto-bar a,
+.proto-bar button {
+  color: inherit;
+  background: none;
+  border: 0;
+  font: inherit;
+  padding: 2px 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgb(255 255 255 / 35%);
+  text-underline-offset: 3px;
+}
+.proto-bar a[aria-current='page'] {
+  text-decoration-color: var(--marker);
+  font-weight: 700;
+}
+.proto-bar .spacer {
+  flex: 1;
+}
+
+/* ---------- đầu trang ---------- */
+.v2-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in srgb, var(--paper) 86%, transparent);
+  backdrop-filter: blur(10px) saturate(1.2);
+  border-bottom: 1px solid var(--rule);
+  view-transition-name: v2-header;
+}
+.v2-header .v2-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  height: 60px;
+}
+.v2-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 1.12rem;
+  letter-spacing: -0.02em;
+  margin-right: auto;
+}
+.v2-brand small {
+  display: block;
+  font-family: var(--f-mono);
+  font-weight: 500;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-top: -2px;
+}
+.v2-nav {
+  display: flex;
+  gap: 2px;
+}
+.v2-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  color: var(--ink-2);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.v2-nav a:hover {
+  background: var(--card-2);
+  color: var(--ink);
+}
+.v2-nav a[aria-current='page'] {
+  background: var(--ink);
+  color: var(--paper);
+}
+.line-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2.5px solid var(--lc, var(--ink));
+  background: var(--card);
+  flex: none;
+}
+.v2-tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform var(--dur) var(--ease), border-color var(--dur);
+}
+.icon-btn:hover {
+  border-color: var(--ink-3);
+  transform: rotate(-12deg);
+}
+.v2-mode {
+  display: inline-flex;
+  border: 1px solid var(--rule);
+  background: var(--card);
+  border-radius: 999px;
+  padding: 3px;
+  font-size: 0.82rem;
+}
+.v2-mode button {
+  border: 0;
+  background: none;
+  color: var(--ink-2);
+  font: inherit;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.v2-mode button[aria-pressed='true'] {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---------- thanh tab dưới đáy (điện thoại) ---------- */
+.v2-tabbar {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  body.v2 {
+    --tabbar-h: 66px;
+  }
+  .v2-nav {
+    display: none;
+  }
+  .v2-brand small {
+    display: none;
+  }
+  .v2-brand {
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+  .v2-mode button {
+    padding: 5px 9px;
+    white-space: nowrap;
+  }
+  .v2-tabbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 45;
+    height: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    background: color-mix(in srgb, var(--card) 92%, transparent);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--rule);
+    view-transition-name: v2-tabbar;
+  }
+  .v2-tabbar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    color: var(--ink-3);
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  .v2-tabbar a[aria-current='page'] {
+    color: var(--accent);
+  }
+}
+
+/* ---------- chân trang ---------- */
+.v2-footer {
+  margin-top: var(--s-7);
+  border-top: 1px dashed var(--rule);
+  padding: var(--s-6) 0 var(--s-6);
+  color: var(--ink-2);
+  font-size: 0.86rem;
+}
+.v2-footer .v2-wrap {
+  display: grid;
+  gap: var(--s-3);
+  grid-template-columns: 1fr auto;
+  align-items: end;
+}
+.v2-footer p {
+  margin: 0;
+}
+.v2-footer .stamp {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
+  padding: 6px 10px;
+  transform: rotate(-3deg);
+  color: var(--accent);
+}
+@media (max-width: 640px) {
+  .v2-footer .v2-wrap {
+    grid-template-columns: 1fr;
+  }
+  .v2-footer .stamp {
+    justify-self: start;
+  }
+}
+
+/* ---------- nút v2 ---------- */
+.v2-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--ink);
+  transition: transform 120ms var(--ease), box-shadow 120ms var(--ease);
+}
+.v2-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 var(--ink);
+}
+.v2-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 var(--ink);
+}
+.v2-btn-primary {
+  background: var(--accent);
+  border-color: var(--ink);
+  color: #fff;
+}
+.v2-btn .icon {
+  transition: transform var(--dur) var(--ease);
+}
+.v2-btn:hover .icon {
+  transform: translateX(3px);
+}
+
+.marker {
+  background: linear-gradient(transparent 55%, var(--marker) 55%, var(--marker) 92%, transparent 92%);
+  padding: 0 2px;
+}

@@ -1,0 +1,120 @@
+/* Hệ thiết kế v2 – "Sổ tay kĩ sư" (nền sáng) và "Bản vẽ kĩ thuật" (nền tối).
+   Áp dụng cho các trang có body.v2; ánh xạ lại biến cũ để mô phỏng và phiếu dùng chung màu. */
+
+body.v2 {
+  --paper: #f5f1e6;
+  --paper-grid: rgb(40 50 80 / 6%);
+  --card: #fffdf8;
+  --card-2: #f0ebdd;
+  --ink: #1a1f2b;
+  --ink-2: #4a5161;
+  --ink-3: #6f7686;
+  --rule: #dcd3bf;
+  --g10: #0f7f6f;
+  --g11: #4352c8;
+  --g12: #b8325f;
+  --accent: #d9581d;
+  --accent-soft: #fbe3d4;
+  --marker: #ffe27a;
+  --ok: #1f7a4a;
+  --focus: #2563eb;
+  --shadow-1: 0 1px 0 rgb(30 30 50 / 6%), 0 1px 3px rgb(30 30 50 / 8%);
+  --shadow-2: 0 2px 0 rgb(30 30 50 / 5%), 0 12px 32px -12px rgb(30 30 50 / 22%);
+
+  --f-display: 'Bricolage Grotesque', 'Be Vietnam Pro', system-ui, sans-serif;
+  --f-body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'Roboto Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  --r-1: 6px;
+  --r-2: 12px;
+  --r-3: 20px;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 40px;
+  --s-7: 64px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 220ms;
+  --tabbar-h: 0px;
+
+  /* biến của hệ cũ, để các mô phỏng và phiếu hiện đúng màu trên nền mới */
+  --bg: var(--paper);
+  --surface: var(--card);
+  --surface-2: var(--card-2);
+  --text: var(--ink);
+  --muted: var(--ink-2);
+  --line: var(--rule);
+  --primary: #1d5f86;
+  --primary-soft: #dfeef5;
+  --font: var(--f-body);
+  --shadow: var(--shadow-1);
+  --radius: var(--r-2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) body.v2 {
+    --paper: #0d1321;
+    --paper-grid: rgb(120 160 255 / 7%);
+    --card: #141c2e;
+    --card-2: #1b2539;
+    --ink: #e7ecf6;
+    --ink-2: #aab3c7;
+    --ink-3: #8790a5;
+    --rule: #28334c;
+    --g10: #3cc7b0;
+    --g11: #9aa5ff;
+    --g12: #f27aa3;
+    --accent: #ff8a4c;
+    --accent-soft: #3a2316;
+    --marker: rgb(255 214 90 / 28%);
+    --ok: #4ccf8a;
+    --focus: #7aa7ff;
+    --primary: #69c0e0;
+    --primary-soft: #16303c;
+    --shadow-1: 0 1px 0 rgb(0 0 0 / 30%);
+    --shadow-2: 0 18px 40px -18px rgb(0 0 0 / 70%);
+  }
+}
+
+:root[data-theme='dark'] body.v2 {
+  --paper: #0d1321;
+  --paper-grid: rgb(120 160 255 / 7%);
+  --card: #141c2e;
+  --card-2: #1b2539;
+  --ink: #e7ecf6;
+  --ink-2: #aab3c7;
+  --ink-3: #8790a5;
+  --rule: #28334c;
+  --g10: #3cc7b0;
+  --g11: #9aa5ff;
+  --g12: #f27aa3;
+  --accent: #ff8a4c;
+  --accent-soft: #3a2316;
+  --marker: rgb(255 214 90 / 28%);
+  --ok: #4ccf8a;
+  --focus: #7aa7ff;
+  --primary: #69c0e0;
+  --primary-soft: #16303c;
+  --shadow-1: 0 1px 0 rgb(0 0 0 / 30%);
+  --shadow-2: 0 18px 40px -18px rgb(0 0 0 / 70%);
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+  body.v2 *,
+  body.v2 *::before,
+  body.v2 *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

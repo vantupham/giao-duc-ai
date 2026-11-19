@@ -8,10 +8,12 @@ interface ResultPanelProps {
   result: WorksheetResult;
   code: string;
   onRetry: () => void;
+  /** Ẩn danh sách mức đạt khi nơi gọi đã hiện thẻ thành tích riêng. */
+  hideMastery?: boolean;
 }
 
 /** Kết quả theo mục tiêu + mã QR để nộp cho giáo viên. */
-export function ResultPanel({ ws, result, code, onRetry }: ResultPanelProps) {
+export function ResultPanel({ ws, result, code, onRetry, hideMastery = false }: ResultPanelProps) {
   const [qr, setQr] = useState<string | null>(null);
   const [qrError, setQrError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
@@ -37,6 +39,8 @@ export function ResultPanel({ ws, result, code, onRetry }: ResultPanelProps) {
 
   return (
     <section className="ws-result" aria-live="polite">
+      {!hideMastery && (
+        <>
       <h3>Kết quả của em</h3>
       <p className="muted small">
         Phần tổng hợp: đúng {result.summary.correct}/{result.summary.total} chỗ trống. Website không cho điểm; thầy cô xem mức đạt của từng mục tiêu.
@@ -55,6 +59,8 @@ export function ResultPanel({ ws, result, code, onRetry }: ResultPanelProps) {
           );
         })}
       </ul>
+        </>
+      )}
       {weak.length > 0 && (
         <p className="ws-advice">
           Em nên đọc lại phần kiến thức gắn với {weak.map((o) => o.id).join(', ')} và thử lại mô phỏng trong bài.

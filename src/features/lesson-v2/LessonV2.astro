@@ -1,0 +1,252 @@
+---
+// Trang bài học giao diện v2: vé tàu ở đầu bài, tuyến mục lục bên trái, ghi chú lề, thuật ngữ bấm được, phiếu từng bước.
+import Blocks from '../../components/content/Blocks.astro';
+import Inlines from '../../components/content/Inlines.astro';
+import TeacherPanel from '../../components/lesson/TeacherPanel.astro';
+import Icon from '../../components/v2/Icon.astro';
+import LabSlot from '../labs/LabSlot.astro';
+import WorksheetStepper from '../worksheet/WorksheetStepper';
+import { getGrade, glossary, lessonsOfGrade, neighbours, teaching, url } from '../../lib/content';
+import { labsFor } from '../labs/registry';
+import { getWorksheet } from '../worksheet/registry';
+import { trackableSections } from '../progress/trackable';
+import { termKey } from '../glossary/match';
+import type { Lesson, SectionKind } from '../../lib/types';
+import './lesson.css';
+
+interface Props {
+  lesson: Lesson;
+  /** Đường dẫn của một bài trong bản mẫu (bài chưa có bản mẫu thì dùng trang cũ). */
+  hrefOf: (slug: string) => string;
+}
+
+const { lesson, hrefOf } = Astro.props;
+const grade = getGrade(lesson.grade);
+const topic = grade.topics.find((t) => t.id === lesson.topicId);
+const { next } = neighbours(lesson.slug);
+const nextTopic = next ? getGrade(next.grade).topics.find((t) => t.id === next.topicId) : null;
+const labs = labsFor(lesson.slug);
+const worksheet = getWorksheet(lesson.slug);
+const info = teaching[lesson.slug];
+const gradeLessons = lessonsOfGrade(lesson.grade);
+const station = gradeLessons.findIndex((l) => l.slug === lesson.slug) + 1;
+const tracked = new Set(trackableSections(lesson).map((s) => s.id));
+
+const KICKER: Partial<Record<SectionKind, string>> = {
+  intro: 'Lưu ý',
+  warmup: 'Khởi động',
+  recall: 'Nhắc lại',
+  content: 'Kiến thức',
+  experience: 'Trải nghiệm',
+  remember: 'Ghi nhớ',
+  practice: 'Luyện tập',
+  apply: 'Vận dụng',
+  selfcheck: 'Tự đánh giá',
+  glossary: 'Thuật ngữ',
+};
+
+/** "1. Một nơ-ron…" → số mục và tiêu đề tách riêng để số nằm ngoài lề. */
+const splitNo = (title: string) => {
+  const m = title.match(/^(\d+)\.\s+(.*)$/);
+  return m ? { no: m[1], text: m[2] } : { no: null, text: title };
+};
+
+const labsAfter = (sectionId: string) => labs.filter((l) => sectionId.startsWith(l.afterSection));
+const placed = new Set(lesson.sections.flatMap((s) => labsAfter(s.id).map((l) => l.key)));
+const unplaced = labs.filter((l) => !placed.has(l.key));
+const tocSections = lesson.sections.filter((s) => s.title && s.kind !== 'answers');
+const minutes = info?.plan.reduce((s, p) => s + p.minutes, 0) || 45;
+
+// thuật ngữ: của bài này trước, rồi cùng khối, rồi các khối khác; mỗi thuật ngữ một định nghĩa
+const rank = (l: Lesson) => (l.slug === lesson.slug ? 0 : l.grade === lesson.grade ? 1 : 2);
+const terms = [...glossary()]
+  .sort((a, b) => rank(a.lesson) - rank(b.lesson))
+  .filter((e, i, arr) => arr.findIndex((x) => termKey(x.term) === termKey(e.term)) === i)
+  .map((e) => ({ term: e.term, def: e.definition, from: `Bài ${e.lesson.id}` }));
+---
+
+<div class="lx-progress" aria-hidden="true"><span data-read-bar></span></div>
+
+<div class="v2-wrap lx" style={`--lc:var(--g${lesson.grade})`} data-lesson={lesson.slug}>
+  <aside class="lx-rail" aria-label="Mục lục bài">
+    <nav class="lx-toc" data-toc>
+      <p class="mono lx-toc-head">Tuyến bài {lesson.id}</p>
+      <ol>
+        {
+          tocSections.map((s) => (
+            <>
+              <li>
+                <a href={`#${s.id}`} data-toc-link={s.id} class={tracked.has(s.id) ? 'is-tracked' : undefined}>
+                  <span class="lx-toc-dot" aria-hidden="true" />
+                  <span>{s.title}</span>
+                </a>
+              </li>
+              {labsAfter(s.id).map((l) => (
+                <li>
+                  <a href={`#lab-${l.key}`} class="lx-toc-lab" data-toc-lab={l.key}>
+                    <span class="lx-toc-dot" aria-hidden="true" />
+                    <span>{l.title.split(':')[0]}</span>
+                  </a>
+                </li>
+              ))}
+            </>
+          ))
+        }
+        {
+          worksheet && (
+            <li>
+              <a href="#phieu-hoc-tap" class="lx-toc-end">
+                <span class="lx-toc-dot" aria-hidden="true" />
+                <span>Phiếu học tập</span>
+              </a>
+            </li>
+          )
+        }
+      </ol>
+    </nav>
+  </aside>
+
+  <article class="lx-article">
+    <header class="lx-ticket">
+      <div class="lx-ticket-main">
+        <p class="mono lx-ticket-route">
+          <a href={url(`lop-${lesson.grade}`)}>Tuyến {lesson.grade}</a>
+          {topic && <> · Chuyên đề {topic.id}</>} · Ga {station}/{gradeLessons.length}
+        </p>
+        <h1 class="lx-title">{lesson.title}</h1>
+        {topic && <p class="lx-topic">{topic.title}</p>}
+      </div>
+      <div class="lx-ticket-stub">
+        <span class="mono">Bài</span>
+        <strong class="display">{lesson.id}</strong>
+        <ul class="lx-stub-facts">
+          {lesson.period && <li>Tiết {lesson.period.index}/{lesson.period.total}</li>}
+          <li>{minutes} phút</li>
+          {labs.length > 0 && <li class="is-lab">◆ {labs.length} mô phỏng</li>}
+          {worksheet && <li>▣ Phiếu QR</li>}
+        </ul>
+      </div>
+    </header>
+
+    <details class="lx-goals" open data-goals>
+      <summary>
+        <span class="mono">Mục tiêu</span>
+        <span>Sau bài này, em sẽ làm được {lesson.objectives.length} điều</span>
+        <span class="lx-goals-toggle" aria-hidden="true"></span>
+      </summary>
+      <ol>
+        {
+          lesson.objectives.map((o) => (
+            <li>
+              <Inlines inl={o} />
+            </li>
+          ))
+        }
+      </ol>
+      {
+        lesson.keywords.length > 0 && (
+          <p class="lx-keywords">
+            {lesson.keywords.map((k) => (
+              <span>{k}</span>
+            ))}
+          </p>
+        )
+      }
+    </details>
+
+    <TeacherPanel lesson={lesson} info={info} hasWorksheet={Boolean(worksheet)} />
+
+    <div class="lx-body" data-lesson-body>
+      {
+        lesson.sections.map((s) => {
+          if (s.kind === 'answers')
+            return (
+              <details class="fold" id={s.id}>
+                <summary>{s.title}</summary>
+                <Blocks blocks={s.blocks} grade={lesson.grade} />
+              </details>
+            );
+          const head = s.title ? splitNo(s.title) : null;
+          return (
+            <section class={`lx-sec lx-sec-${s.kind}`} aria-labelledby={head ? `${s.id}-h` : undefined} data-section={s.id} data-no-terms={s.kind === 'glossary' ? '' : undefined}>
+              {head && (
+                <header class="lx-sec-head">
+                  <p class="mono lx-kicker">
+                    {head.no && <span class="lx-no">§{head.no}</span>}
+                    {KICKER[s.kind] ?? ''}
+                  </p>
+                  <h2 id={s.id}>
+                    <span id={`${s.id}-h`}>{head.text}</span>
+                  </h2>
+                </header>
+              )}
+              <Blocks blocks={s.blocks} grade={lesson.grade} />
+              {tracked.has(s.id) && <span class="lx-sentinel" data-sentinel={s.id} aria-hidden="true" />}
+              {labsAfter(s.id).map((lab) => (
+                <div class="lx-lab" data-lab-key={lab.key}>
+                  <LabSlot lab={lab} />
+                </div>
+              ))}
+            </section>
+          );
+        })
+      }
+      {
+        unplaced.map((lab) => (
+          <div class="lx-lab" data-lab-key={lab.key}>
+            <LabSlot lab={lab} />
+          </div>
+        ))
+      }
+    </div>
+
+    <section id="phieu-hoc-tap" class="lx-ws" aria-label="Phiếu học tập">
+      {
+        worksheet ? (
+          <WorksheetStepper client:visible ws={worksheet} />
+        ) : (
+          <p class="muted">Phiếu học tập tương tác của bài này đang được biên soạn. Trong lúc chờ, em dùng phần Luyện tập và Tự đánh giá ở trên.</p>
+        )
+      }
+    </section>
+
+    {
+      next && (
+        <a class="lx-next" href={hrefOf(next.slug)} style={`--nc:var(--g${next.grade})`}>
+          <span class="mono lx-next-label">Ga tiếp theo{next.grade !== lesson.grade ? ` · đổi sang tuyến ${next.grade}` : ''}</span>
+          <span class="lx-next-id display">{next.id}</span>
+          <span class="lx-next-title">{next.title}</span>
+          {nextTopic?.lessonBlurbs[next.id] && <span class="lx-next-blurb">{nextTopic.lessonBlurbs[next.id]}</span>}
+          <span class="lx-next-go" aria-hidden="true">
+            <Icon name="arrow" size={28} />
+          </span>
+        </a>
+      )
+    }
+  </article>
+</div>
+
+<button type="button" class="lx-fab" data-toc-open aria-haspopup="dialog">
+  <Icon name="list" size={18} /> Mục lục
+</button>
+<dialog class="lx-sheet" data-toc-sheet aria-label="Mục lục bài" style={`--lc:var(--g${lesson.grade})`}>
+  <div class="lx-sheet-head">
+    <p class="mono">Mục lục · Bài {lesson.id}</p>
+    <button type="button" class="icon-btn" data-toc-close aria-label="Đóng mục lục"><Icon name="close" size={18} /></button>
+  </div>
+  <div data-toc-sheet-body></div>
+</dialog>
+
+<div class="lx-term-pop" role="dialog" aria-modal="false" aria-labelledby="term-pop-t" hidden data-term-pop>
+  <p class="mono lx-term-from" data-term-from></p>
+  <p class="lx-term-t" id="term-pop-t" data-term-t></p>
+  <p class="lx-term-d" data-term-d></p>
+  <a class="lx-term-more" href={url('tu-dien')}>Mở Từ điển AI →</a>
+</div>
+
+<script type="application/json" id="gdai-terms" set:html={JSON.stringify(terms)} />
+
+<script>
+  import { initLessonV2 } from './lesson-client';
+  initLessonV2();
+</script>

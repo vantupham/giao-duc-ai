@@ -1,0 +1,1 @@
+import{R as f}from"./RecyclingStation.CtMgQHjr.js";import"./preload-helper.Bhai3Lql.js";import"./jsx-runtime.D_zvdyIk.js";import"./index.BagoQglJ.js";import"./_commonjsHelpers.gnU0ypJ3.js";import"./webgl.CBDTmQFP.js";/* empty css                        */export{f as default};

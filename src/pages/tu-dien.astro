@@ -11,7 +11,7 @@ const firstLetter = (t: string) => foldVietnamese(t)[0]?.toUpperCase() ?? '#';
 const letters = [...new Set(entries.map((e) => firstLetter(e.term)))];
 ---
 
-<Base title="Từ điển AI" active="dict">
+<Base title="Từ điển AI" active="dict" og="tu-dien" description="Thuật ngữ trí tuệ nhân tạo của cả ba khối 10, 11, 12, tìm được cả khi gõ không dấu.">
   <div class="v2-wrap dict">
     <PageHead
       kicker={`Từ điển AI · ${entries.length} thuật ngữ`}

@@ -15,6 +15,6 @@ interface Props {
 const { lesson } = Astro.props;
 ---
 
-<Base title={`Bài ${lesson.id}. ${lesson.title}`} description={inlineText(lesson.objectives[0] ?? [])} active={String(lesson.grade)}>
+<Base title={`Bài ${lesson.id}. ${lesson.title}`} description={inlineText(lesson.objectives[0] ?? [])} active={String(lesson.grade)} og={lesson.slug}>
   <LessonV2 lesson={lesson} />
 </Base>

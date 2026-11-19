@@ -152,6 +152,15 @@
   position: sticky;
   top: 84px;
 }
+.gp-art {
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-2);
+  background:
+    radial-gradient(circle at 1px 1px, var(--paper-grid) 1.2px, transparent 0) 0 0 / 14px 14px,
+    color-mix(in srgb, var(--lc) 8%, var(--card));
+}
 .gp-topic-id {
   margin: 0 0 6px;
   color: var(--lc);
@@ -374,6 +383,9 @@
   }
   .gp-topic-side {
     position: static;
+  }
+  .gp-art {
+    max-width: 320px;
   }
 }
 @media (max-width: 560px) {

@@ -4,6 +4,7 @@ import Blocks from '../../components/content/Blocks.astro';
 import Inlines from '../../components/content/Inlines.astro';
 import TeacherPanel from '../../components/lesson/TeacherPanel.astro';
 import Icon from '../../components/v2/Icon.astro';
+import TopicArt from '../topic-art/TopicArt.astro';
 import LabSlot from '../labs/LabSlot.astro';
 import WorksheetStepper from '../worksheet/WorksheetStepper';
 import { getGrade, glossary, lessonsOfGrade, neighbours, teaching, url } from '../../lib/content';
@@ -115,6 +116,7 @@ const terms = [...glossary()]
         {topic && <p class="lx-topic">{topic.title}</p>}
       </div>
       <div class="lx-ticket-stub">
+        {lesson.topicId && <TopicArt id={lesson.topicId} class="lx-stub-art" />}
         <span class="mono">Bài</span>
         <strong class="display">{lesson.id}</strong>
         <ul class="lx-stub-facts">

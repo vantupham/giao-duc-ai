@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Icon from '../components/v2/Icon.astro';
+import TopicArt from '../features/topic-art/TopicArt.astro';
 import { GRADES, GRADE_TAGLINE, getGrade, lessonsOfGrade, lessonsOfTopic, url, inlineText } from '../lib/content';
 import { labsFor } from '../features/labs/registry';
 import { getWorksheet } from '../features/worksheet/registry';
@@ -17,7 +18,7 @@ const labCount = gradeLessons.reduce((n, l) => n + labsFor(l.slug).length, 0);
 const others = GRADES.filter((g) => g !== grade);
 ---
 
-<Base title={`Lớp ${grade}`} description={GRADE_TAGLINE[grade]} active={String(grade)}>
+<Base title={`Lớp ${grade}`} description={GRADE_TAGLINE[grade]} active={String(grade)} og={`lop-${grade}`}>
   <div class="v2-wrap gp" style={`--lc:var(--g${grade})`} data-grade-page>
     <header class="gp-hero">
       <div>
@@ -64,6 +65,7 @@ const others = GRADES.filter((g) => g !== grade);
       data.topics.map((t) => (
         <section class="gp-topic" id={`cd-${t.id.replace('.', '-')}`} aria-labelledby={`cd-${t.id.replace('.', '-')}-h`}>
           <div class="gp-topic-side">
+            <TopicArt id={t.id} class="gp-art" />
             <p class="mono gp-topic-id">Chuyên đề {t.id}</p>
             <h2 class="display" id={`cd-${t.id.replace('.', '-')}-h`}>
               {t.title}

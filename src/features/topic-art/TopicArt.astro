@@ -1,0 +1,21 @@
+---
+// Hình minh họa chuyên đề, màu theo tuyến (--lc) và giao diện sáng/tối.
+import { topicArtSvg, CSS_PALETTE } from './art';
+
+interface Props {
+  id: string;
+  class?: string;
+}
+const { id, class: cls } = Astro.props;
+const svg = topicArtSvg(id, CSS_PALETTE, 'aria-hidden="true" focusable="false"');
+---
+
+{svg && <div class:list={['topic-art', cls]} set:html={svg} />}
+
+<style>
+  .topic-art :global(svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>

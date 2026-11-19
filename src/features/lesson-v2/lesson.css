@@ -188,6 +188,9 @@
 .lx-ticket-stub::after {
   bottom: -11px;
 }
+.lx-stub-art {
+  margin: -6px -4px 10px;
+}
 .lx-ticket-stub > .mono {
   color: var(--ink-3);
 }
@@ -671,6 +674,9 @@
   }
   .lx-ticket-stub strong {
     font-size: 1.6rem;
+  }
+  .lx-stub-art {
+    display: none;
   }
   .lx-stub-facts {
     display: flex;

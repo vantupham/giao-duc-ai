@@ -1,10 +1,16 @@
 ---
 // Bộ sưu tập mô phỏng: áp phích động, mỗi thẻ dẫn thẳng tới mô phỏng trong bài học.
+// filters = true: hiện thanh lọc theo khối và theo cách tương tác (trang Phòng thí nghiệm).
 import Icon from '../../components/v2/Icon.astro';
 import LabPoster from './LabPoster.astro';
-import { LAB_PLACEMENTS } from './registry';
-import { lessons, url } from '../../lib/content';
+import { LAB_PLACEMENTS, LAB_KIND_LABEL, type LabKind } from './registry';
+import { GRADES, lessons, url } from '../../lib/content';
 import './gallery.css';
+
+interface Props {
+  filters?: boolean;
+}
+const { filters = false } = Astro.props;
 
 const FEATURED = 'network-playground';
 const labs = Object.entries(LAB_PLACEMENTS).flatMap(([slug, list]) => list.map((l) => ({ ...l, lesson: lessons.find((x) => x.slug === slug)! })));
@@ -12,38 +18,104 @@ const featured = labs.find((l) => l.key === FEATURED) ?? labs[0];
 const others = labs.filter((l) => l !== featured);
 const href = (l: (typeof labs)[number]) => url(`bai/${l.lesson.slug}#lab-${l.key}`);
 const shortTitle = (t: string) => t.split(': ')[1] ?? t;
+const kinds = [...new Set(labs.map((l) => l.kind))] as LabKind[];
+const gradesWithLabs = GRADES.filter((g) => labs.some((l) => l.lesson.grade === g));
 ---
 
-<div class="h-bento">
+<div class="lab-gallery" data-lab-gallery>
   {
-    featured && (
-      <a class="h-lab h-lab-featured" href={href(featured)} style={`--lc:var(--g${featured.lesson.grade})`}>
-        <div class="h-lab-poster">
-          <LabPoster lab={featured.key} />
+    filters && (
+      <div class="lg-filters" role="group" aria-label="Lọc mô phỏng">
+        <div class="lg-filter-row" data-filter="grade">
+          <span class="mono">Khối</span>
+          <button type="button" data-value="" aria-pressed="true">Tất cả</button>
+          {gradesWithLabs.map((g) => (
+            <button type="button" data-value={g} aria-pressed="false" style={`--lc:var(--g${g})`}>
+              Lớp {g}
+            </button>
+          ))}
         </div>
-        <div class="h-lab-text">
-          <p class="mono h-lab-tag">Bài {featured.lesson.id} · Mô phỏng nổi bật</p>
-          <h3>{shortTitle(featured.title)}</h3>
-          <p>{featured.description}</p>
-          <span class="h-lab-go">
-            Mở trong bài <Icon name="arrow" size={16} />
-          </span>
+        <div class="lg-filter-row" data-filter="kind">
+          <span class="mono">Cách chơi</span>
+          <button type="button" data-value="" aria-pressed="true">Tất cả</button>
+          {kinds.map((k) => (
+            <button type="button" data-value={k} aria-pressed="false">
+              {LAB_KIND_LABEL[k]}
+            </button>
+          ))}
         </div>
-      </a>
+        <p class="mono lg-count" aria-live="polite">
+          <span data-lab-count>{labs.length}</span> mô phỏng
+        </p>
+      </div>
     )
   }
-  {
-    others.map((l) => (
-      <a class="h-lab" href={href(l)} style={`--lc:var(--g${l.lesson.grade})`}>
-        <div class="h-lab-poster">
-          <LabPoster lab={l.key} />
-        </div>
-        <div class="h-lab-text">
-          <p class="mono h-lab-tag">Bài {l.lesson.id}</p>
-          <h3>{shortTitle(l.title)}</h3>
-          <p>{l.description}</p>
-        </div>
-      </a>
-    ))
-  }
+
+  <div class="h-bento">
+    {
+      featured && (
+        <a class="h-lab h-lab-featured" href={href(featured)} style={`--lc:var(--g${featured.lesson.grade})`} data-grade={featured.lesson.grade} data-kind={featured.kind}>
+          <div class="h-lab-poster">
+            <span class="mono lg-kind">{LAB_KIND_LABEL[featured.kind]}</span>
+            <LabPoster lab={featured.key} />
+          </div>
+          <div class="h-lab-text">
+            <p class="mono h-lab-tag">Bài {featured.lesson.id} · Mô phỏng nổi bật</p>
+            <h3>{shortTitle(featured.title)}</h3>
+            <p>{featured.description}</p>
+            <span class="h-lab-go">
+              Mở trong bài <Icon name="arrow" size={16} />
+            </span>
+          </div>
+        </a>
+      )
+    }
+    {
+      others.map((l) => (
+        <a class="h-lab" href={href(l)} style={`--lc:var(--g${l.lesson.grade})`} data-grade={l.lesson.grade} data-kind={l.kind}>
+          <div class="h-lab-poster">
+            <span class="mono lg-kind">{LAB_KIND_LABEL[l.kind]}</span>
+            <LabPoster lab={l.key} />
+          </div>
+          <div class="h-lab-text">
+            <p class="mono h-lab-tag">Bài {l.lesson.id}</p>
+            <h3>{shortTitle(l.title)}</h3>
+            <p>{l.description}</p>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+  {filters && <p class="lg-empty" hidden data-lab-empty>Chưa có mô phỏng nào khớp. Em thử bỏ bớt một điều kiện lọc.</p>}
 </div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-lab-gallery]').forEach((root) => {
+    const rows = root.querySelectorAll<HTMLElement>('[data-filter]');
+    if (!rows.length) return;
+    const chosen: Record<string, string> = { grade: '', kind: '' };
+    const apply = () => {
+      let shown = 0;
+      root.querySelectorAll<HTMLElement>('.h-lab').forEach((card) => {
+        const ok = (!chosen.grade || card.dataset.grade === chosen.grade) && (!chosen.kind || card.dataset.kind === chosen.kind);
+        card.hidden = !ok;
+        if (ok) shown += 1;
+      });
+      // khi đang lọc, thẻ nổi bật thu về cỡ thường cho lưới gọn
+      root.classList.toggle('is-filtered', Boolean(chosen.grade || chosen.kind));
+      root.querySelector('[data-lab-count]')!.textContent = String(shown);
+      root.querySelector<HTMLElement>('[data-lab-empty]')!.hidden = shown > 0;
+    };
+    rows.forEach((row) => {
+      const key = row.dataset.filter!;
+      const buttons = row.querySelectorAll<HTMLButtonElement>('button');
+      buttons.forEach((b) =>
+        b.addEventListener('click', () => {
+          chosen[key] = b.dataset.value ?? '';
+          buttons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+          apply();
+        }),
+      );
+    });
+  });
+</script>

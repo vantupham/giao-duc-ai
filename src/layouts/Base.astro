@@ -6,14 +6,21 @@ import '../styles/v2/chrome.css';
 import Icon from '../components/v2/Icon.astro';
 import { url, lessons } from '../lib/content';
 import { lessonOrder } from '../features/progress/trackable';
+import { DEFAULT_OG } from '../features/og/cards';
 
 interface Props {
   title: string;
   description?: string;
   active?: string;
+  /** Khóa ảnh xem trước khi chia sẻ link: /og/<og>.png */
+  og?: string;
 }
 
-const { title, description = 'Học và dạy trí tuệ nhân tạo cho học sinh THPT: bài học, mô phỏng, phiếu học tập.', active } = Astro.props;
+const { title, description = 'Học và dạy trí tuệ nhân tạo cho học sinh THPT: bài học, mô phỏng, phiếu học tập.', active, og = DEFAULT_OG } = Astro.props;
+const fullTitle = `${title} · Giáo dục AI`;
+const site = Astro.site ?? new URL('https://vantupham.github.io');
+const ogImage = new URL(url(`og/${og}.png`), site).href;
+const pageUrl = new URL(Astro.url.pathname, site).href;
 const isLessonPage = Astro.url.pathname.includes('/bai/');
 const nav = [
   { href: 'lop-10', label: 'Lớp 10', key: '10', line: 'var(--g10)' },
@@ -29,8 +36,22 @@ const nav = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>{title} · Giáo dục AI</title>
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={pageUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:site_name" content="Giáo dục AI" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#f5f1e6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d1321" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

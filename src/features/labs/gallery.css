@@ -88,3 +88,72 @@
     grid-row: auto;
   }
 }
+
+/* ---------- thanh lọc (Phòng thí nghiệm) ---------- */
+.lg-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 28px;
+  margin-bottom: var(--s-5);
+}
+.lg-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.lg-filter-row .mono {
+  color: var(--ink-3);
+  margin-right: 4px;
+}
+.lg-filter-row button {
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--rule);
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+}
+.lg-filter-row button[aria-pressed='true'] {
+  background: var(--lc, var(--ink));
+  border-color: var(--lc, var(--ink));
+  color: var(--card);
+}
+.lg-count {
+  margin: 0 0 0 auto;
+  color: var(--ink-3);
+}
+.lg-empty {
+  padding: var(--s-6) 0;
+  color: var(--ink-2);
+}
+.h-lab-poster {
+  position: relative;
+}
+.lg-kind {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.6rem;
+}
+.lab-gallery.is-filtered .h-lab-featured {
+  grid-column: auto;
+  grid-row: auto;
+  display: flex;
+}
+.lab-gallery.is-filtered .h-lab-featured .h-lab-poster {
+  padding: 14px 18px;
+}
+.lab-gallery.is-filtered .h-lab-featured h3 {
+  font-family: inherit;
+  font-size: 1.08rem;
+}

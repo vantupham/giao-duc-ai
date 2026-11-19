@@ -51,6 +51,10 @@ Khai báo trong `src/features/labs/registry.ts` (bài nào, chèn sau mục nào
 
 Hệ thiết kế "Sổ tay kĩ sư" nằm trong `src/styles/v2/`: `tokens.css` (màu, chữ, khoảng cách cho nền sáng và tối), `chrome.css` (đầu trang, thanh tab điện thoại, nút), và CSS riêng cho từng trang. Mỗi khối có một màu tuyến: `--g10`, `--g11`, `--g12`. Font: Bricolage Grotesque (tiêu đề), Be Vietnam Pro (thân bài), Roboto Mono (nhãn, số).
 
+Mỗi chuyên đề có một hình minh họa nét đơn (`src/features/topic-art/art.ts`), dùng trên trang khối, đầu bài và ảnh chia sẻ.
+
+**Ảnh xem trước khi chia sẻ link** (Zalo, Facebook…): lúc build, `src/pages/og/[key].png.ts` vẽ sẵn ảnh 1200×630 cho trang chủ, 3 khối, Phòng thí nghiệm, Từ điển và 36 bài, bằng `satori` + `@resvg/resvg-js`. Font Be Vietnam Pro dùng để vẽ ảnh nằm trong `scripts/og-fonts/` (giấy phép SIL OFL, xem `OFL.txt`). Muốn đổi nội dung ảnh, sửa `src/features/og/cards.ts`.
+
 ## Cấu trúc
 
 ```

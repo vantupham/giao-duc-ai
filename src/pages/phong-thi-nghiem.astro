@@ -17,14 +17,14 @@ const PLANNED = [
 const gradeOf = (id: string) => id.split('.')[0];
 ---
 
-<Base title="Phòng thí nghiệm" active="lab">
+<Base title="Phòng thí nghiệm" active="lab" og="phong-thi-nghiem" description="Mô phỏng AI chạy ngay trên trình duyệt: mô hình 3D, webcam, mạng nơ-ron học trực tiếp.">
   <div class="v2-wrap">
     <PageHead
       kicker={`Phòng thí nghiệm · ${count} mô phỏng`}
       title="Đọc lí thuyết xong, thử ngay"
       lead="Mọi mô phỏng chạy ngay trên trình duyệt, không cần cài đặt, không gửi dữ liệu đi đâu. Mỗi mô phỏng nằm đúng chỗ trong bài học để em đọc rồi thử liền."
     />
-    <LabGallery />
+    <LabGallery filters />
 
     <section class="lab-planned" aria-labelledby="planned-h">
       <p class="mono page-kicker">Bản vẽ · đang xây dựng</p>

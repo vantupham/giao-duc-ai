@@ -5,7 +5,9 @@ Website tĩnh cho chuyên đề Giáo dục trí tuệ nhân tạo lớp 10–12
 - **36 bài học** chuyển tự động từ tài liệu học tập (.docx) và slide (.pptx).
 - **Mô phỏng chạy trên trình duyệt**: đèn giao thông dùng AI (10.4), trạm phân loại rác 3D và phòng huấn luyện webcam (10.11), nơ-ron giấy và mạng nơ-ron 3D (11.10).
 - **Phiếu học tập cuối bài** chấm theo mục tiêu; học sinh nộp bằng **mã QR** (giáo viên quét ở trang *Tổng hợp phiếu*) hoặc gửi **link nộp phiếu**: bấm vào link, trang *Tổng hợp phiếu* mở ở tab mới và tự nhận phiếu. Mã phiếu nằm sau dấu `#` nên không được gửi lên máy chủ.
-- **Chế độ giáo viên**: tiến trình 45 phút, slide, phiếu ra cửa.
+- **Chế độ giáo viên**: tiến trình 45 phút, slide, phiếu ra cửa, và nút **Lên lớp**: bài học thành trình chiếu ngay trên trang (phím ← →, đồng hồ theo tiến trình, màn cuối có mã QR + link mở phiếu); mô phỏng vẫn dùng được khi chiếu.
+- **Tìm kiếm toàn site** (Ctrl+K hoặc phím /): 36 bài, từng mục, thuật ngữ, mô phỏng; gõ không dấu vẫn ra. Chỉ mục `search-index.json` tạo lúc build, chỉ tải khi mở hộp tìm.
+- **Tổng hợp phiếu**: bấm vào một lỗi hiểu sai để xem em nào mắc và tô nổi các em trên bản đồ nhiệt.
 - **Bản đồ tuyến** 36 ga và **sổ tiến độ** của học sinh (chỉ lưu trên máy), thuật ngữ bấm xem nghĩa, phiếu làm từng bước.
 - Không tài khoản, không máy chủ, không thu thập dữ liệu. Mọi thứ lưu trong trình duyệt của người dùng.
 
@@ -67,6 +69,8 @@ src/features/labs/       các mô phỏng và bộ sưu tập áp phích
 src/features/lesson-v2/  trang bài: mục lục tuyến, thuật ngữ bấm được, theo dõi tiến độ đọc
 src/features/metro/      bản đồ tuyến 36 ga
 src/features/progress/   sổ tiến độ của học sinh (localStorage)
+src/features/present/    chế độ lên lớp (trình chiếu, đồng hồ tiến trình)
+src/features/search/     tìm kiếm toàn site (chỉ mục + hộp Ctrl+K)
 src/pages/               các trang
 public/models/           mô hình MobileNet (Apache 2.0) cho phòng huấn luyện
 ```

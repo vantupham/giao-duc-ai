@@ -1,0 +1,255 @@
+/* Chế độ lên lớp: ẩn khung trang, mỗi lần hiện một phần với chữ cỡ lớn cho máy chiếu. */
+
+.present-only {
+  display: none;
+}
+
+html.is-present body {
+  padding-bottom: 96px;
+}
+html.is-present .v2-header,
+html.is-present .v2-footer,
+html.is-present .v2-tabbar,
+html.is-present .lx-rail,
+html.is-present .lx-progress,
+html.is-present .lx-fab,
+html.is-present .lx-next,
+html.is-present .teacher-panel,
+html.is-present .lx-body > details.fold,
+html.is-present .lx-term-pop {
+  display: none !important;
+}
+html.is-present .lx {
+  display: block;
+  max-width: 1280px;
+  padding-top: 32px;
+}
+html.is-present [data-slide] {
+  display: none;
+}
+html.is-present [data-slide].is-slide {
+  display: block;
+  animation: px-in 260ms var(--ease);
+}
+@keyframes px-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+}
+
+/* chữ to cho máy chiếu */
+html.is-present .lx-body {
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+  line-height: 1.6;
+}
+html.is-present .lx-body p,
+html.is-present .lx-body li {
+  max-width: 52ch;
+}
+html.is-present .lx-sec {
+  margin-top: 0;
+}
+html.is-present .lx-sec h2 {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+}
+html.is-present .lx-kicker {
+  font-size: 0.95rem;
+}
+html.is-present .lx-intro .lx-title {
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+}
+html.is-present .lx-goals {
+  font-size: 1.3rem;
+}
+html.is-present .lx-body .box-didyouknow {
+  float: none;
+  width: auto;
+  margin: 34px 0 24px;
+}
+
+/* ---------- màn kết thúc ---------- */
+html.is-present .lx-end.is-slide {
+  display: block;
+}
+.lx-end h2 {
+  margin: 0 0 24px;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+}
+.lx-end-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: start;
+}
+.lx-end-label {
+  margin: 0 0 12px;
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.lx-end-ticket {
+  margin: 0;
+  padding-left: 1.4em;
+  font-size: clamp(1.3rem, 1.8vw, 1.7rem);
+  line-height: 1.55;
+}
+.lx-end-ticket li + li {
+  margin-top: 14px;
+}
+.lx-end-qr {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: var(--r-3);
+  box-shadow: 8px 8px 0 var(--lc);
+}
+.lx-end-qr .lx-end-label {
+  color: #1a1f2b;
+}
+.lx-end-qr img {
+  width: min(34vw, 340px);
+  height: auto;
+  image-rendering: pixelated;
+}
+.lx-end-qr a {
+  max-width: 340px;
+  font-family: var(--f-mono);
+  font-size: 0.8rem;
+  color: #1d5f86;
+  word-break: break-all;
+  text-align: center;
+}
+
+/* ---------- thanh điều khiển ---------- */
+html.is-present .px-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(1100px, calc(100% - 24px));
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: #16203a;
+  color: #e7ecf6;
+  border: 1.5px solid #e7ecf6;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 35%);
+}
+.px-btn {
+  flex: none;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1.5px solid #e7ecf6;
+  background: transparent;
+  color: #e7ecf6;
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.px-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.px-btn:hover:not(:disabled) {
+  background: rgb(255 255 255 / 10%);
+}
+.px-next {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.px-text {
+  font-size: 0.82rem;
+}
+.px-exit {
+  font-size: 0.82rem;
+  border-color: #ffd75e;
+  color: #ffd75e;
+}
+.px-where {
+  display: grid;
+  min-width: 0;
+  flex: 1 1 220px;
+  line-height: 1.25;
+}
+.px-where .mono {
+  font-size: 0.66rem;
+  color: #aab3c7;
+}
+.px-title {
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.px-clock {
+  display: grid;
+  gap: 2px;
+  flex: 1 1 220px;
+  min-width: 0;
+}
+.px-time {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+.px-phase {
+  font-size: 0.76rem;
+  color: #aab3c7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.px-track {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: rgb(255 255 255 / 15%);
+  overflow: hidden;
+}
+.px-track span {
+  display: block;
+  height: 100%;
+  background: #ffd75e;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s linear;
+}
+.px-bar.is-over .px-time,
+.px-bar.is-over .px-phase {
+  color: #ff8a7a;
+}
+.px-bar.is-over .px-track span {
+  background: #ff8a7a;
+}
+
+@media (max-width: 820px) {
+  html.is-present .px-bar {
+    flex-wrap: wrap;
+    border-radius: var(--r-3);
+    bottom: 8px;
+  }
+  .px-clock {
+    order: 5;
+    flex-basis: 100%;
+  }
+  .lx-end-grid {
+    grid-template-columns: 1fr;
+  }
+  .lx-end-qr img {
+    width: min(70vw, 300px);
+  }
+}

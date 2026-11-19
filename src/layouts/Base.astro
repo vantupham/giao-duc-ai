@@ -7,6 +7,7 @@ import Icon from '../components/v2/Icon.astro';
 import { url, lessons } from '../lib/content';
 import { lessonOrder } from '../features/progress/trackable';
 import { DEFAULT_OG } from '../features/og/cards';
+import SearchDialog from '../features/search/SearchDialog.astro';
 
 interface Props {
   title: string;
@@ -96,6 +97,9 @@ const nav = [
           }
         </nav>
         <div class="v2-tools">
+          <button type="button" class="v2-search-btn" data-search-open aria-label="Tìm kiếm (Ctrl+K)">
+            <Icon name="search" size={18} /><span class="sx-label">Tìm</span><kbd class="sx-kbd">Ctrl K</kbd>
+          </button>
           <a class="icon-btn teacher-only" href={url('giao-vien/tong-hop-phieu')} aria-label="Tổng hợp phiếu học tập" title="Tổng hợp phiếu học tập" aria-current={active === 'teacher' ? 'page' : undefined}>
             <Icon name="teacher" size={18} />
           </a>
@@ -123,6 +127,8 @@ const nav = [
         <span class="stamp">Tài liệu lưu hành nội bộ</span>
       </div>
     </footer>
+
+    <SearchDialog />
 
     <nav class="v2-tabbar" aria-label="Điều hướng nhanh">
       <a href={url()} aria-current={active === 'home' ? 'page' : undefined}><Icon name="map" />Bản đồ</a>

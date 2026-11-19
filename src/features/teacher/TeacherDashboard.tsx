@@ -67,17 +67,24 @@ export default function TeacherDashboard() {
   // mở từ link nộp phiếu (…/tong-hop-phieu/#nop=GDAI1:…): nhận phiếu rồi xóa mã khỏi thanh địa chỉ
   useEffect(() => {
     setStore(readStore());
-    const fromLink = codeFromHash(window.location.hash);
-    if (fromLink) {
+    const takeFromHash = () => {
+      const fromLink = codeFromHash(window.location.hash);
+      if (!fromLink) return;
       receive(fromLink);
       history.replaceState(null, '', window.location.pathname + window.location.search);
-    }
+    };
+    takeFromHash();
+    // trang đã mở sẵn mà bấm thêm link khác: trình duyệt chỉ đổi phần #, không tải lại trang
+    window.addEventListener('hashchange', takeFromHash);
     // phiếu nhận ở tab khác cũng hiện ngay ở tab này
     const onStorage = (e: StorageEvent) => {
       if (e.key === STORE_KEY) setStore(readStore());
     };
     window.addEventListener('storage', onStorage);
-    return () => window.removeEventListener('storage', onStorage);
+    return () => {
+      window.removeEventListener('hashchange', takeFromHash);
+      window.removeEventListener('storage', onStorage);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- chỉ chạy một lần khi mở trang
   }, []);
 

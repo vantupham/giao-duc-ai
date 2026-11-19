@@ -1,0 +1,162 @@
+---
+// Hộp tìm kiếm toàn site (Ctrl+K hoặc phím /). Kết quả dựng bằng textContent, không chèn HTML.
+import Icon from '../../components/v2/Icon.astro';
+import './search.css';
+---
+
+<dialog class="sx" data-search aria-label="Tìm kiếm trong website">
+  <div class="sx-box">
+    <label class="sx-field">
+      <Icon name="search" size={20} />
+      <input type="search" placeholder="Tìm bài, mục, thuật ngữ, mô phỏng… (gõ không dấu cũng được)" aria-label="Từ khóa tìm kiếm" autocomplete="off" data-search-input />
+      <kbd class="sx-esc">Esc</kbd>
+    </label>
+    <p class="sx-status mono" data-search-status aria-live="polite">Gõ để tìm trong 36 bài, Từ điển và Phòng thí nghiệm.</p>
+    <ul class="sx-results" role="listbox" aria-label="Kết quả" data-search-results></ul>
+    <p class="sx-help mono">↑ ↓ chọn · Enter mở · Esc đóng</p>
+  </div>
+</dialog>
+
+<script>
+  import { prepareDocs, searchDocs, type PreparedDoc, type SearchDoc, type SearchHit } from './search';
+
+  const KIND_LABEL: Record<SearchDoc['k'], string> = { bai: 'Bài học', muc: 'Mục', tu: 'Thuật ngữ', lab: 'Mô phỏng' };
+  const DEBOUNCE_MS = 90;
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+  const dialog = document.querySelector<HTMLDialogElement>('[data-search]');
+  const input = document.querySelector<HTMLInputElement>('[data-search-input]');
+  const list = document.querySelector<HTMLUListElement>('[data-search-results]');
+  const status = document.querySelector<HTMLElement>('[data-search-status]');
+
+  let index: PreparedDoc[] | null = null;
+  let loading: Promise<PreparedDoc[]> | null = null;
+  let hits: SearchHit[] = [];
+  let active = 0;
+  let timer = 0;
+
+  const load = () => {
+    loading ??= fetch(`${base}/search-index.json`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json() as Promise<SearchDoc[]>;
+      })
+      .then((docs) => (index = prepareDocs(docs)))
+      .catch((err: unknown) => {
+        loading = null;
+        throw err;
+      });
+    return loading;
+  };
+
+  const el = <K extends keyof HTMLElementTagNameMap>(tag: K, cls: string, text?: string) => {
+    const n = document.createElement(tag);
+    n.className = cls;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  };
+
+  const render = () => {
+    if (!list || !status) return;
+    list.replaceChildren();
+    hits.forEach((h, i) => {
+      const li = el('li', 'sx-item');
+      li.setAttribute('role', 'option');
+      li.id = `sx-opt-${i}`;
+      li.setAttribute('aria-selected', String(i === active));
+      const a = el('a', 'sx-link') as HTMLAnchorElement;
+      a.href = `${base}/${h.doc.u}`;
+      if (h.doc.g) a.style.setProperty('--lc', `var(--g${h.doc.g})`);
+      const top = el('span', 'sx-top');
+      top.append(el('span', `sx-kind mono sx-kind-${h.doc.k}`, KIND_LABEL[h.doc.k]), el('span', 'sx-title', h.doc.t));
+      a.append(top, el('span', 'sx-sub', h.doc.s));
+      if (h.snippet && h.doc.k !== 'bai') {
+        const p = el('span', 'sx-snip');
+        p.append(h.snippet.before, el('mark', '', h.snippet.match), h.snippet.after);
+        a.append(p);
+      }
+      li.append(a);
+      list.append(li);
+    });
+    input?.setAttribute('aria-activedescendant', hits.length ? `sx-opt-${active}` : '');
+    list.querySelector('[aria-selected="true"]')?.scrollIntoView({ block: 'nearest' });
+  };
+
+  const run = async () => {
+    const q = input?.value ?? '';
+    if (!status) return;
+    if (!q.trim()) {
+      hits = [];
+      status.textContent = 'Gõ để tìm trong 36 bài, Từ điển và Phòng thí nghiệm.';
+      render();
+      return;
+    }
+    if (!index) {
+      status.textContent = 'Đang tải chỉ mục…';
+      try {
+        await load();
+      } catch {
+        status.textContent = 'Chưa tải được chỉ mục tìm kiếm. Em kiểm tra mạng rồi gõ lại nhé.';
+        return;
+      }
+    }
+    hits = searchDocs(index!, q, 30);
+    active = 0;
+    status.textContent = hits.length ? `${hits.length === 30 ? '30+' : hits.length} kết quả` : 'Không tìm thấy. Em thử từ ngắn hơn hoặc từ khác.';
+    render();
+  };
+
+  const open = () => {
+    if (!dialog || dialog.open) return;
+    dialog.showModal();
+    input?.select();
+    load().catch(() => {
+      /* báo lỗi khi em bắt đầu gõ */
+    });
+  };
+
+  document.querySelectorAll('[data-search-open]').forEach((b) => b.addEventListener('click', open));
+  document.addEventListener('keydown', (e) => {
+    const typing = e.target instanceof HTMLElement && (e.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName));
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      open();
+    } else if (e.key === '/' && !typing && !dialog?.open) {
+      e.preventDefault();
+      open();
+    }
+  });
+  input?.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = window.setTimeout(run, DEBOUNCE_MS);
+  });
+  input?.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!hits.length) return;
+      active = (active + (e.key === 'ArrowDown' ? 1 : hits.length - 1)) % hits.length;
+      render();
+    } else if (e.key === 'Enter' && hits[active]) {
+      e.preventDefault();
+      go(`${base}/${hits[active].doc.u}`);
+    }
+  });
+  /** Đóng hộp trước rồi mới chuyển trang, để hiệu ứng chuyển trang không vướng lớp hộp thoại. */
+  const go = (href: string) => {
+    dialog?.close();
+    requestAnimationFrame(() => {
+      window.location.href = href;
+    });
+  };
+  dialog?.addEventListener('click', (e) => {
+    if (e.target === dialog) {
+      dialog.close();
+      return;
+    }
+    const a = (e.target as HTMLElement).closest('a');
+    if (a && !e.ctrlKey && !e.metaKey && !e.shiftKey && e.button === 0) {
+      e.preventDefault();
+      go(a.href);
+    }
+  });
+</script>

@@ -43,6 +43,9 @@ describe('aggregate', () => {
     expect(q3).toMatchObject({ count: 2 });
     expect(q3?.text).toContain('viết thêm quy tắc');
     expect(agg.misconceptions[0]).toMatchObject({ count: 2, questionId: 'q1' });
+    expect(agg.misconceptions[0].students).toHaveLength(2);
+    expect(agg.misconceptions.every((m) => m.students.length === m.count)).toBe(true);
+    expect(agg.misconceptions[0].students.map((x) => x.studentNo)).toEqual([...agg.misconceptions[0].students.map((x) => x.studentNo)].sort((a, b) => a - b));
   });
 
   test('tính tỉ lệ đúng từng câu', () => {

@@ -106,6 +106,7 @@ const terms = [...glossary()]
   </aside>
 
   <article class="lx-article">
+    <div class="lx-intro" data-slide data-slide-title="Mở đầu">
     <header class="lx-ticket">
       <div class="lx-ticket-main">
         <p class="mono lx-ticket-route">
@@ -153,6 +154,7 @@ const terms = [...glossary()]
         )
       }
     </details>
+    </div>
 
     <TeacherPanel lesson={lesson} info={info} hasWorksheet={Boolean(worksheet)} />
 
@@ -168,7 +170,14 @@ const terms = [...glossary()]
             );
           const head = s.title ? splitNo(s.title) : null;
           return (
-            <section class={`lx-sec lx-sec-${s.kind}`} aria-labelledby={head ? `${s.id}-h` : undefined} data-section={s.id} data-no-terms={s.kind === 'glossary' ? '' : undefined}>
+            <section
+              class={`lx-sec lx-sec-${s.kind}`}
+              aria-labelledby={head ? `${s.id}-h` : undefined}
+              data-section={s.id}
+              data-no-terms={s.kind === 'glossary' ? '' : undefined}
+              data-slide
+              data-slide-title={head?.text ?? KICKER[s.kind] ?? 'Nội dung'}
+            >
               {head && (
                 <header class="lx-sec-head">
                   <p class="mono lx-kicker">
@@ -200,7 +209,7 @@ const terms = [...glossary()]
       }
     </div>
 
-    <section id="phieu-hoc-tap" class="lx-ws" aria-label="Phiếu học tập">
+    <section id="phieu-hoc-tap" class="lx-ws" aria-label="Phiếu học tập" data-slide data-slide-title="Phiếu học tập">
       {
         worksheet ? (
           <WorksheetStepper client:visible ws={worksheet} />
@@ -208,6 +217,38 @@ const terms = [...glossary()]
           <p class="muted">Phiếu học tập tương tác của bài này đang được biên soạn. Trong lúc chờ, em dùng phần Luyện tập và Tự đánh giá ở trên.</p>
         )
       }
+    </section>
+
+    <section class="lx-end present-only" data-slide data-slide-title="Kết thúc tiết" aria-label="Kết thúc tiết học">
+      <p class="mono lx-kicker">Cuối giờ · Bài {lesson.id}</p>
+      <h2>Trước khi ra về</h2>
+      <div class="lx-end-grid">
+        <div>
+          {
+            info && info.exitTicket.length > 0 ? (
+              <>
+                <p class="lx-end-label">Phiếu ra cửa</p>
+                <ol class="lx-end-ticket">
+                  {info.exitTicket.map((q) => (
+                    <li>{q}</li>
+                  ))}
+                </ol>
+              </>
+            ) : (
+              <p>Mỗi em viết một điều vừa học được và một điều còn băn khoăn.</p>
+            )
+          }
+        </div>
+        {
+          worksheet && (
+            <div class="lx-end-qr">
+              <p class="lx-end-label">Quét để mở phiếu học tập</p>
+              <img data-end-qr alt="Mã QR mở phiếu học tập của bài" width="300" height="300" />
+              <a data-end-link data-path={`bai/${lesson.slug}/#phieu-hoc-tap`} target="_blank" rel="noopener noreferrer"></a>
+            </div>
+          )
+        }
+      </div>
     </section>
 
     {
@@ -244,9 +285,29 @@ const terms = [...glossary()]
   <a class="lx-term-more" href={url('tu-dien')}>Mở Từ điển AI →</a>
 </div>
 
+<div class="px-bar present-only" role="toolbar" aria-label="Điều khiển trình chiếu" data-px-bar>
+  <button type="button" class="px-btn" data-px-prev aria-label="Phần trước (phím ←)">←</button>
+  <div class="px-where">
+    <span class="mono" data-px-pos></span>
+    <span class="px-title" data-px-title></span>
+  </div>
+  <button type="button" class="px-btn px-next" data-px-next aria-label="Phần sau (phím →)">→</button>
+  <div class="px-clock" aria-live="off">
+    <span class="mono px-time" data-px-clock>00:00</span>
+    <span class="px-phase" data-px-phase></span>
+    <span class="px-track" aria-hidden="true"><span data-px-fill></span></span>
+  </div>
+  <button type="button" class="px-btn px-text" data-px-pause>Dừng giờ</button>
+  <button type="button" class="px-btn px-text" data-px-full>Toàn màn hình</button>
+  <button type="button" class="px-btn px-exit" data-px-exit aria-label="Thoát trình chiếu (Esc)">Thoát</button>
+</div>
+<script type="application/json" id="gdai-plan" set:html={JSON.stringify(info?.plan ?? [])} />
+
 <script type="application/json" id="gdai-terms" set:html={JSON.stringify(terms)} />
 
 <script>
   import { initLessonV2 } from './lesson-client';
+  import { initPresent } from '../present/present-client';
   initLessonV2();
+  initPresent();
 </script>

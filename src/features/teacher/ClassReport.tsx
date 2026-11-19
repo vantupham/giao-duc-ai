@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { Worksheet } from '../worksheet/types';
 import { MASTERY_LABEL } from '../worksheet/types';
 import type { Aggregate } from './aggregate';
@@ -11,9 +12,13 @@ const pct = (v: number) => `${Math.round(v * 100)}%`;
 
 /** Báo cáo một lớp – một bài: phân bố mức đạt, bản đồ nhiệt, lỗi hiểu sai, câu khó, băn khoăn. */
 export function ClassReport({ ws, agg }: ClassReportProps) {
+  const [openMis, setOpenMis] = useState<string | null>(null);
   const n = agg.students.length;
   if (n === 0) return <p className="muted">Chưa có phiếu nào của lớp này cho bài đã chọn. Bật camera và cho học sinh đưa mã QR lên để bắt đầu.</p>;
   const hardest = [...agg.questions].sort((a, b) => a.correctRate - b.correctRate).slice(0, 3);
+  const misKey = (m: { questionId: string; text: string }) => `${m.questionId}|${m.text}`;
+  const picked = agg.misconceptions.find((m) => misKey(m) === openMis) ?? null;
+  const highlighted = new Set(picked?.students.map((x) => x.studentNo) ?? []);
 
   return (
     <div className="td-report">
@@ -48,18 +53,35 @@ export function ClassReport({ ws, agg }: ClassReportProps) {
           <ol className="td-mis">
             {agg.misconceptions.slice(0, 8).map((m) => {
               const qi = ws.questions.findIndex((q) => q.id === m.questionId);
+              const key = misKey(m);
+              const isOpen = openMis === key;
               return (
-                <li key={`${m.questionId}-${m.text}`}>
-                  <span className="td-mis-bar" style={{ width: pct(m.count / n) }} />
-                  <span className="td-mis-text">
-                    <strong>{pct(m.count / n)}</strong> ({m.count} em) · {m.text} <span className="muted small">· Câu {qi + 1}</span>
-                  </span>
+                <li key={key} className={isOpen ? 'is-open' : undefined}>
+                  <button type="button" className="td-mis-btn" aria-expanded={isOpen} onClick={() => setOpenMis(isOpen ? null : key)}>
+                    <span className="td-mis-bar" style={{ width: pct(m.count / n) }} />
+                    <span className="td-mis-text">
+                      <strong>{pct(m.count / n)}</strong> ({m.count} em) · {m.text} <span className="muted small">· Câu {qi + 1}</span>
+                    </span>
+                    <span className="td-mis-more small">{isOpen ? 'Ẩn' : 'Xem em nào'}</span>
+                  </button>
+                  {isOpen && (
+                    <p className="td-mis-who">
+                      {m.students.map((x) => (
+                        <span key={x.studentNo} className="td-who">
+                          Số {x.studentNo}
+                          {x.name ? ` · ${x.name}` : ''}
+                        </span>
+                      ))}
+                    </p>
+                  )}
                 </li>
               );
             })}
           </ol>
         )}
-        <p className="small muted">Gợi ý: dành 5 phút đầu tiết sau để sửa lỗi đứng đầu danh sách, dùng lại mô phỏng trong bài.</p>
+        <p className="small muted">
+          Gợi ý: dành 5 phút đầu tiết sau để sửa lỗi đứng đầu danh sách, dùng lại mô phỏng trong bài. Bấm vào một lỗi để xem những em mắc lỗi đó; các em được tô nổi trên bản đồ nhiệt.
+        </p>
       </section>
 
       <section>
@@ -79,7 +101,7 @@ export function ClassReport({ ws, agg }: ClassReportProps) {
             </thead>
             <tbody>
               {agg.students.map(({ sub, result }) => (
-                <tr key={sub.studentNo}>
+                <tr key={sub.studentNo} className={highlighted.has(sub.studentNo) ? 'td-row-hl' : undefined}>
                   <td>{sub.studentNo}</td>
                   <td>{sub.name}</td>
                   <td>

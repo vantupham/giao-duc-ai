@@ -21,11 +21,24 @@ export interface StudentRow {
   result: WorksheetResult;
 }
 
+export interface StudentRef {
+  studentNo: number;
+  name: string;
+}
+
+export interface Misconception {
+  text: string;
+  count: number;
+  questionId: string;
+  /** những em mắc lỗi này, theo số thứ tự */
+  students: StudentRef[];
+}
+
 export interface Aggregate {
   students: StudentRow[];
   objectives: ({ id: string } & Record<Mastery, number>)[];
   questions: { id: string; correctRate: number; answeredRate: number }[];
-  misconceptions: { text: string; count: number; questionId: string }[];
+  misconceptions: Misconception[];
   overconfident: { studentNo: number; name: string; objective: string }[];
   doubts: { studentNo: number; text: string }[];
 }
@@ -49,13 +62,14 @@ export function aggregate(ws: Worksheet, subs: readonly StoredSubmission[]): Agg
     answeredRate: students.filter((s) => s.result.questions[i].answered).length / n,
   }));
 
-  const mis = new Map<string, { text: string; count: number; questionId: string }>();
+  const mis = new Map<string, Misconception>();
   for (const s of students) {
+    const who: StudentRef = { studentNo: s.sub.studentNo, name: s.sub.name };
     for (const qr of s.result.questions) {
       for (const text of new Set(qr.misconceptions)) {
         const key = `${qr.id}|${text}`;
-        const cur = mis.get(key) ?? { text, count: 0, questionId: qr.id };
-        mis.set(key, { ...cur, count: cur.count + 1 });
+        const cur = mis.get(key) ?? { text, count: 0, questionId: qr.id, students: [] };
+        mis.set(key, { ...cur, count: cur.count + 1, students: [...cur.students, who] });
       }
     }
   }

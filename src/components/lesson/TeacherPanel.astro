@@ -45,6 +45,7 @@ const viewer = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURICo
     )
   }
   <div class="ws-actions" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+    <button class="btn btn-primary" type="button" data-present-start>▶ Lên lớp (trình chiếu bài này)</button>
     <a class="btn" href={slideHref} download>Tải slide (.pptx, {info?.slideCount ?? '?'} trang)</a>
     <button class="btn" type="button" data-viewer={viewer}>Xem slide trực tuyến</button>
     {hasWorksheet && <a class="btn" href="#phieu-hoc-tap">Đến phiếu học tập</a>}
